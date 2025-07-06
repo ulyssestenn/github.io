@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulix - Precision Tools for Modern Odysseys</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Colors from your logo */
+        :root {
+            --navy-blue: #1a2332;
+            --gold: #d4af37;
+            --cream: #f5f3f0;
+            --white: #ffffff;
+            --dark-text: #2c3e50;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--navy-blue) 0%, #243447 100%);
+            color: var(--cream);
+            padding: 80px 20px;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-container {
+            margin-bottom: 40px;
+        }
+
+        .main-logo {
+            width: 300px;
+            height: auto;
+            margin: 0 auto 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: var(--gold);
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .hero .tagline {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            color: var(--cream);
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .cta-button {
+            background: var(--gold);
+            color: var(--navy-blue);
+            padding: 15px 35px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background: #e6c04a;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Apps Section */
+        .apps-section {
+            background: var(--cream);
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--navy-blue);
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--dark-text);
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .app-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: var(--gold);
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 15px;
+            margin: 0 auto 25px;
+            object-fit: cover;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .status-live {
+            background: #3498db;
+            color: white;
+        }
+
+        .status-development {
+            background: #2c3e50;
+            color: white;
+        }
+
+        .app-card h3 {
+            font-size: 1.5rem;
+            color: var(--navy-blue);
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--navy-blue);
+            color: var(--cream);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+        }
+
+        .footer .tagline {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.1rem;
+            }
+
+            .apps-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="logo-container">
+            <img src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" alt="Ulix Logo" class="main-logo" style="display: none;">
+            <!-- Replace the src above with your actual Ulix logo image -->
+        </div>
+        <h1>ULIX</h1>
+        <p class="tagline">Precision Tools for Modern Odysseys</p>
+        <a href="#apps" class="cta-button">Explore Our Apps</a>
+    </section>
+
+    <!-- Apps Section -->
+    <section id="apps" class="apps-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Applications</h2>
+                <p>Tools, not traps. Ulix builds digital tools for physical lives. No ads. No logins. No data-harvesting. Just minimalist systems that maximize agency.</p>
+                <p style="font-size: 1rem; color: var(--dark-text); opacity: 0.7; margin-top: 10px;">
+                    Currently available on Android. iOS versions coming soon.
+                </p>
+            </div>
+
+            <div class="apps-grid">
+                <div class="app-card">
+                    <img src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" alt="Shelf Scan" class="app-icon" style="display: none;">
+                    <!-- Replace src with Image 2 - blue books with magnifying glass -->
+                    <div class="status-badge status-live">Live on Google Play</div>
+                    <h3>Shelf Scan</h3>
+                    <p style="color: var(--dark-text); margin: 15px 0; font-size: 1rem;">Find books, games, and discs fast. Shelf Scan is Ctrl-F for the physical world.</p>
+                    <p style="margin: 0;"><a href="https://play.google.com/store/apps/details?id=com.bhunt.shelfscan" target="_blank" style="color: var(--gold); text-decoration: none; font-weight: bold;">See it on Google Play.</a></p>
+                </div>
+
+                <div class="app-card">
+                    <img src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" alt="Loan It" class="app-icon" style="display: none;">
+                    <!-- Replace src with Image 3 - green handshake -->
+                    <div class="status-badge status-live">Live on Google Play</div>
+                    <h3>Loan It</h3>
+                    <p style="color: var(--dark-text); margin: 15px 0; font-size: 1rem;">Beautifully simple loan tracking. Effortlessly organize what you lend.</p>
+                    <p style="margin: 0;"><a href="https://play.google.com/store/apps/details?id=com.bhunt.loanit" target="_blank" style="color: var(--gold); text-decoration: none; font-weight: bold;">See it on Google Play.</a></p>
+                </div>
+
+                <div class="app-card">
+                    <img src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" alt="Track Analysis" class="app-icon" style="display: none;">
+                    <!-- Replace src with Image 4 - blue graph with checkmark -->
+                    <div class="status-badge status-development">In Closed Testing on Google Play</div>
+                    <h3>Track Analysis</h3>
+                    <p style="color: var(--dark-text); margin: 15px 0; font-size: 1rem;">Track food, sleep, symptoms, and more. Easily export data for analysis.</p>
+                    <p style="margin: 0;"><a href="https://play.google.com/store/apps/details?id=com.bhunt.trackanalysis" target="_blank" style="color: var(--gold); text-decoration: none; font-weight: bold;">See it on Google Play.</a></p>
+                </div>
+
+                <div class="app-card">
+                    <img src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" alt="Shelf Sleuth" class="app-icon" style="display: none;">
+                    <!-- Replace src with Image 5 - red books with magnifying glass -->
+                    <div class="status-badge status-development">In Development</div>
+                    <h3>Shelf Sleuth</h3>
+                </div>
+
+                <div class="app-card">
+                    <img src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" alt="Curious Air" class="app-icon" style="display: none;">
+                    <!-- Replace src with Image 6 - blue smartphone with radio waves -->
+                    <div class="status-badge status-development">In Development</div>
+                    <h3>Curious Air</h3>
+                </div>
+
+                <div class="app-card">
+                    <img src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" alt="Breaker of Horses" class="app-icon" style="display: none;">
+                    <!-- Replace src with Image 1 - orange trojan horse -->
+                    <div class="status-badge status-development">In Development</div>
+                    <h3>Breaker of Horses</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p><strong>Ulix</strong></p>
+            <p class="tagline">Precision Tools for Modern Odysseys</p>
+            <p>&copy; 2025 Ulix. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for the CTA button
+        document.querySelector('.cta-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#apps').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        // Add hover effects for app cards
+        const appCards = document.querySelectorAll('.app-card');
+        appCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
