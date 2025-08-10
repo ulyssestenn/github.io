@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shelf Scan — Find anything on your shelves in seconds</title>
+  <meta name="description" content="Point your camera at your shelves and search like CTRL+F. No organizing required. Works offline. One-time $1.99. Privacy-first." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Shelf Scan — Camera shelf search" />
+  <meta property="og:description" content="Find books, movies, and games instantly by pointing your camera at your shelves. No cataloging. Works offline. One-time $1.99." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ulix.app/shelfscan" />
+  <meta property="og:image" content="/assets/shelfscan-og.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shelf Scan — Camera shelf search" />
+  <meta name="twitter:description" content="Search your shelves like CTRL+F. Works offline. One-time $1.99." />
+  <meta name="twitter:image" content="/assets/shelfscan-og.jpg" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Shelf Scan",
+    "operatingSystem": "Android",
+    "applicationCategory": "UtilitiesApplication",
+    "offers": {"@type":"Offer","price":"1.99","priceCurrency":"USD"},
+    "url": "https://ulix.app/shelfscan",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.ulix.shelfscan",
+    "publisher": {"@type":"Organization","name":"Ulix LLC"},
+    "description": "Find books, movies, and games instantly by searching shelf text on-device. Works offline. 100% private."
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #FAFAFA;
+      --text: #1A1A1A;
+      --muted: #5A5A5A;
+      --card: #FFFFFF;
+      --primary: #1976D2; /* deep blue (trust) */
+      --secondary: #26A69A; /* teal (fresh) */
+      --accent: #FFB300; /* warm gold (value) */
+      --line: #E0E0E0;
+      --tint: #E3F2FD; /* light blue tint */
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.5;
+    }
+
+    .container { width: min(1080px, 92vw); margin: 0 auto; }
+
+    /* Hero */
+    .hero { padding: clamp(28px, 6vw, 64px) 0; }
+    .hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(20px, 4vw, 48px); align-items: center; }
+    @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
+
+    .eyebrow { color: var(--secondary); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; font-size: .85rem; }
+    h1 { font-size: clamp(1.9rem, 3.3vw, 3rem); margin: .35rem 0 1rem; line-height: 1.1; }
+    .subhead { font-size: clamp(1rem, 1.4vw, 1.2rem); color: var(--muted); margin: 0 0 1.25rem; }
+
+    .cta-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 10px; }
+    .price { background: var(--tint); color: var(--text); padding: 8px 12px; border-radius: 999px; font-weight: 600; border: 1px solid var(--line); }
+
+    .play-badge { display: inline-flex; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,.12); transition: transform .06s ease; }
+    .play-badge:hover { transform: translateY(-1px); }
+    .play-badge img { height: 54px; display: block; }
+
+    .hero-media { border-radius: 18px; overflow: hidden; background: var(--card); border: 1px solid var(--line); box-shadow: 0 10px 40px rgba(0,0,0,.08); }
+    .hero-media video, .hero-media img { display: block; width: 100%; height: auto; }
+
+    /* 3-step */
+    .steps { padding: clamp(24px, 4vw, 40px) 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #fff; }
+    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(14px, 3vw, 26px); }
+    @media (max-width: 900px) { .steps-grid { grid-template-columns: 1fr; } }
+    .step { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px; }
+    .step h3 { margin: .25rem 0 .35rem; font-size: 1.05rem; }
+    .step p { margin: 0; color: var(--muted); }
+
+    /* Differentiators */
+    .diff { padding: clamp(28px, 5vw, 56px) 0; }
+    .diff h2 { margin: 0 0 16px; font-size: clamp(1.4rem, 2.2vw, 2rem); }
+    .diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 3vw, 28px); }
+    @media (max-width: 900px) { .diff-grid { grid-template-columns: 1fr; } }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px; }
+    .card strong { color: var(--text); }
+    .kicker { color: var(--muted); margin-top: 6px; }
+
+    /* Social proof */
+    .proof { padding: clamp(24px, 4vw, 40px) 0; background: linear-gradient(180deg, #fff 0, #fff 60%, #f6fbff 100%); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    @media (max-width: 900px) { .quotes { grid-template-columns: 1fr; } }
+    blockquote { margin: 0; padding: 18px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; font-style: italic; color: var(--text); }
+    .stars { color: #F59E0B; font-size: 1rem; letter-spacing: .08em; }
+
+    /* FAQ / Objections */
+    .faq { padding: clamp(28px, 5vw, 56px) 0; }
+    details { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; }
+    details + details { margin-top: 10px; }
+    summary { font-weight: 600; cursor: pointer; }
+    summary::-webkit-details-marker { display: none; }
+
+    /* Bottom CTA */
+    .bottom-cta { text-align: center; padding: clamp(28px, 5vw, 48px) 0; }
+    .bottom-cta .tag { display: inline-block; background: var(--tint); border: 1px solid var(--line); color: var(--text); padding: 6px 10px; border-radius: 999px; font-weight: 600; margin-bottom: 10px; }
+
+    /* Sticky mobile CTA */
+    .sticky-cta { position: sticky; bottom: 0; z-index: 30; background: rgba(255,255,255,.9); backdrop-filter: blur(6px); border-top: 1px solid var(--line); padding: 10px 0; display: none; }
+    @media (max-width: 760px) {
+      .sticky-cta { display: block; }
+      .play-badge img { height: 48px; }
+    }
+
+    /* Accessibility: reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      video { animation: none !important; }
+    }
+
+    /* Small helpers */
+    .icon { width: 24px; height: 24px; color: var(--primary); }
+    .row { display: flex; align-items: center; gap: 10px; }
+    .muted { color: var(--muted); }
+  </style>
+</head>
+<body>
+
+  <header class="container hero" aria-label="Shelf Scan hero">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Privacy‑first • Works offline</div>
+        <h1>Find anything on your shelves in seconds — no organizing required.</h1>
+        <p class="subhead">Shelf Scan reads text on spines and covers so you can search your shelves like <strong>CTRL+F</strong>. Perfect for books, movies, games, and more.</p>
+        <div class="cta-row">
+          <a class="play-badge" aria-label="Get Shelf Scan on Google Play" href="https://play.google.com/store/apps/details?id=com.ulix.shelfscan" target="_blank" rel="noopener">
+            <img src="/assets/google-play-badge.png" alt="Get it on Google Play" width="180" height="54" loading="eager" />
+          </a>
+          <span class="price">One‑time $1.99 • No ads • No subscriptions</span>
+        </div>
+      </div>
+      <div class="hero-media" aria-label="Shelf Scan demo video">
+        <video autoplay loop muted playsinline poster="/assets/shelfscan-poster.jpg" width="960">
+          <source src="/assets/shelfscan-demo.webm" type="video/webm" />
+          <source src="/assets/shelfscan-demo.mp4" type="video/mp4" />
+          <!-- Fallback image if video can't play -->
+          Sorry, your browser doesn’t support embedded videos. Here’s a demo image instead.
+        </video>
+        <noscript>
+          <img src="/assets/shelfscan-demo.gif" alt="Shelf Scan demo" />
+        </noscript>
+      </div>
+    </div>
+  </header>
+
+  <section class="steps" aria-label="How it works">
+    <div class="container">
+      <div class="steps-grid">
+        <div class="step">
+          <div class="row">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect><line x1="8" y1="2" x2="16" y2="2"/></svg>
+            <h3>Open the app</h3>
+          </div>
+          <p>Camera view shows your shelf instantly — no setup, no cataloging.</p>
+        </div>
+        <div class="step">
+          <div class="row">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <h3>Type a keyword</h3>
+          </div>
+          <p>Search for a title, author, or any word that appears on the spine or cover.</p>
+        </div>
+        <div class="step">
+          <div class="row">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9"/><path d="m3 21 4.5-4.5a2.121 2.121 0 0 1 3 0L15 21"/><path d="M17 21l1.5-1.5a2.121 2.121 0 0 1 3 0L23 21"/></svg>
+            <h3>See it highlighted</h3>
+          </div>
+          <p>Matches light up right on your shelf so you can grab it immediately.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="diff" aria-label="Why it’s different">
+    <div class="container">
+      <h2>Why Shelf Scan is different</h2>
+      <div class="diff-grid">
+        <div class="card">
+          <strong>No organizing</strong>
+          <div class="kicker">Skip cataloging. Just point and search your real shelves.</div>
+        </div>
+        <div class="card">
+          <strong>Works 100% offline</strong>
+          <div class="kicker">Fast, reliable, and private. Nothing leaves your device.</div>
+        </div>
+        <div class="card">
+          <strong>Simple one‑time price</strong>
+          <div class="kicker">Just $1.99 — no ads, no subscriptions, no accounts.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="proof" aria-label="What people say">
+    <div class="container">
+      <div class="quotes">
+        <blockquote>
+          <div class="stars">★★★★★</div>
+          “I found a book in five seconds after searching for ten minutes.”
+        </blockquote>
+        <blockquote>
+          <div class="stars">★★★★★</div>
+          “It’s like CTRL+F for my living room.”
+        </blockquote>
+        <blockquote>
+          <div class="stars">★★★★★</div>
+          “I stopped dreading clean‑ups — I just scan and grab.”
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" aria-label="Questions">
+    <div class="container">
+      <details>
+        <summary>Does it work in stores and libraries?</summary>
+        <p class="muted">Yes — it reads visible text on spines and covers anywhere. Great for finding products on retail shelves and locating items in library stacks.</p>
+      </details>
+      <details>
+        <summary>How accurate is it?</summary>
+        <p class="muted">Very. It detects printed text quickly, even in mixed lighting. For best results, hold your phone steady and try short keywords first.</p>
+      </details>
+      <details>
+        <summary>Is my camera feed sent to a server?</summary>
+        <p class="muted">No. Shelf Scan works entirely on‑device. No accounts, no tracking, no data harvesting — ever.</p>
+      </details>
+      <details>
+        <summary>Refunds?</summary>
+        <p class="muted">Google Play’s refund window makes trying Shelf Scan risk‑free if it’s not for you.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="bottom-cta" aria-label="Download">
+    <div class="container">
+      <div class="tag">Ready to find it now?</div>
+      <h2>Download Shelf Scan and search your shelves in seconds.</h2>
+      <div class="cta-row" style="justify-content:center; margin-top:12px;">
+        <a class="play-badge" aria-label="Get Shelf Scan on Google Play" href="https://play.google.com/store/apps/details?id=com.ulix.shelfscan" target="_blank" rel="noopener">
+          <img src="/assets/google-play-badge.png" alt="Get it on Google Play" width="200" height="60" />
+        </a>
+        <span class="price">One‑time $1.99 • No ads • No subscriptions</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="sticky-cta" aria-hidden="false">
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:12px;">
+      <div class="row">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <strong>Find it in seconds</strong>
+        <span class="muted">— works offline</span>
+      </div>
+      <a class="play-badge" aria-label="Get Shelf Scan on Google Play" href="https://play.google.com/store/apps/details?id=com.ulix.shelfscan" target="_blank" rel="noopener">
+        <img src="/assets/google-play-badge.png" alt="Get it on Google Play" width="170" height="52" />
+      </a>
+    </div>
+  </div>
+
+  <footer class="container" style="padding:32px 0 56px; color:var(--muted); font-size:.9rem;">
+    Built by Ulix LLC • Privacy‑first software • <a href="/" style="color:var(--primary); text-underline-offset:2px;">ulix.app</a>
+  </footer>
+
+</body>
+</html>
