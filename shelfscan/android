@@ -142,7 +142,7 @@
         <p class="subhead">Shelf Scan reads text on spines and covers so you can search your shelves like <strong>CTRL+F</strong>. Perfect for books, movies, games, and more.</p>
         <div class="cta-row">
           <a class="play-badge" aria-label="Get Shelf Scan on Google Play" href="https://play.google.com/store/apps/details?id=com.ulix.shelfscan" target="_blank" rel="noopener">
-            <img src="/assets/google-play-badge.png" alt="Get it on Google Play" width="180" height="54" loading="eager" />
+            <img src="/google-play-badge.png" alt="Get it on Google Play" width="180" height="54" loading="eager" />
           </a>
           <span class="price">One‑time $1.99 • No ads • No subscriptions</span>
         </div>
@@ -150,12 +150,12 @@
       <div class="hero-media" aria-label="Shelf Scan demo video">
         <video autoplay loop muted playsinline poster="/assets/shelfscan-poster.jpg" width="960">
           <source src="/assets/shelfscan-demo.webm" type="video/webm" />
-          <source src="/assets/shelfscan-demo.mp4" type="video/mp4" />
+          <source src="/Compressed Hawking for Website (1).mp4" type="video/mp4" />
           <!-- Fallback image if video can't play -->
           Sorry, your browser doesn’t support embedded videos. Here’s a demo image instead.
         </video>
         <noscript>
-          <img src="/assets/shelfscan-demo.gif" alt="Shelf Scan demo" />
+          <img src="/Shelf Scan Landing Page Demo.gif" alt="Shelf Scan demo" />
         </noscript>
       </div>
     </div>
