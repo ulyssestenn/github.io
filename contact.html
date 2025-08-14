@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <title>Contact – Ulix</title>
+    <style>
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        margin: 0;
+        padding: 2rem;
+        line-height: 1.6;
+        background-color: #ffffff;
+        color: var(--navy-blue);
+      }
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--gold);
+      }
+    </style>
+  </head>
+  <body>
+    <div data-include="/partials/header.html"></div>
+    <main>
+      <h1>Contact</h1>
+      <p>
+        Reach us at <span id="email"></span>.
+        <noscript>hello [at] ulix [dot] app</noscript>
+      </p>
+    </main>
+    <div data-include="/partials/footer.html"></div>
+    <script src="/assets/include.js"></script>
+    <script>
+      (function () {
+        const user = String.fromCharCode(104, 101, 108, 108, 111);
+        const domain = String.fromCharCode(117, 108, 105, 120, 46, 97, 112, 112);
+        const email = `${user}@${domain}`;
+        const link = document.createElement('a');
+        link.href = `mailto:${email}`;
+        link.textContent = email;
+        link.style.color = 'var(--gold)';
+        document.getElementById('email').appendChild(link);
+      })();
+    </script>
+  </body>
+</html>

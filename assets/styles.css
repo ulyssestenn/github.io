@@ -2,3 +2,30 @@
   --navy-blue: #1a2332;
   --gold: #d4af37;
 }
+
+.site-header,
+.site-footer {
+  background: var(--navy-blue);
+  color: var(--gold);
+}
+
+.site-header nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.site-header a {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.site-header a:hover {
+  text-decoration: underline;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+}
