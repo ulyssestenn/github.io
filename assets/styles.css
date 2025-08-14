@@ -104,14 +104,13 @@ body {
   display: inline-block;
 }
 
-.cta-button:hover {
+.cta-button:hover,
+.cta-button:focus {
   background: #e6c04a;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
-}
-
-.hidden {
-  display: none;
+  outline: 2px solid var(--navy-blue);
+  outline-offset: 2px;
 }
 
 /* Apps Section */
