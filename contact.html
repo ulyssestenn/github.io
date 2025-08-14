@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/styles.css" />
-    <title>Contact – Ulix</title>
+    <title>Contact and Support – Ulix</title>
     <style>
       body {
         font-family:
@@ -30,10 +30,22 @@
   <body>
     <div data-include="/partials/header.html"></div>
     <main>
-      <h1>Contact</h1>
-      <p>Reach us at <a href="mailto:info@ulix.app" style="color: var(--gold);">info@ulix.app</a>.</p>
+      <h1>Contact and Support</h1>
+      <p>Reach us at <span id="email"></span>.</p>
     </main>
     <div data-include="/partials/footer.html"></div>
     <script src="/assets/include.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const user = String.fromCharCode(104, 101, 108, 108, 111);
+        const domain = String.fromCharCode(117, 108, 105, 120, 46, 97, 112, 112);
+        const email = `${user}@${domain}`;
+        const link = document.createElement('a');
+        link.href = `mailto:${email}`;
+        link.textContent = email;
+        link.style.color = 'var(--gold)';
+        document.getElementById('email').appendChild(link);
+      });
+    </script>
   </body>
 </html>
