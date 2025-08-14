@@ -1,8 +1,28 @@
+/* Brand Colors */
 :root {
   --navy-blue: #1a2332;
   --gold: #d4af37;
+  --cream: #f8f9fa;
+  --white: #ffffff;
+  --dark-text: #2c3e50;
+  --ulix-bg: #0b0d12;
+  --ulix-ink: #eaeef7;
 }
 
+/* Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Layout */
 .site-header,
 .site-footer {
   background: var(--navy-blue);
@@ -28,4 +48,319 @@
 .site-footer {
   text-align: center;
   padding: 2rem 1rem;
+}
+
+/* Hero Section */
+.hero {
+  background: #011530;
+  color: var(--cream);
+  padding: 20px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container {
+  margin-bottom: 40px;
+}
+
+.main-logo {
+  width: 40vw;
+  max-width: 500px;
+  min-width: 300px;
+  height: auto;
+  margin: 0 auto 20px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--gold);
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.hero .tagline {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  color: var(--cream);
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.cta-button {
+  background: var(--gold);
+  color: var(--navy-blue);
+  padding: 15px 35px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background: #e6c04a;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Apps Section */
+.apps-section {
+  background: var(--cream);
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--navy-blue);
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: var(--dark-text);
+}
+
+.app-note {
+  font-size: 1rem;
+  color: var(--dark-text);
+  opacity: 0.7;
+  margin-top: 10px;
+}
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.app-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.app-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: var(--gold);
+}
+
+.app-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  margin: 0 auto 25px;
+  object-fit: cover;
+  display: block;
+}
+
+.status-badge {
+  display: block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 0 auto 15px;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.status-live {
+  background: #3498db;
+  color: white;
+}
+
+.status-development {
+  background: #2c3e50;
+  color: white;
+}
+
+.app-card h3 {
+  font-size: 1.5rem;
+  color: var(--navy-blue);
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.app-description {
+  color: var(--dark-text);
+  margin: 15px 0;
+  font-size: 1rem;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.gold-link {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.gold-link:hover {
+  text-decoration: underline;
+}
+
+/* Newsletter */
+.newsletter {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.newsletter h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.newsletter p {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.newsletter iframe {
+  width: 100% !important;
+  height: 180px;
+  border: none;
+  margin-top: 1rem;
+}
+
+/* Footer (legacy) */
+.footer {
+  background: var(--navy-blue);
+  color: var(--cream);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer p {
+  margin-bottom: 10px;
+}
+
+.footer .tagline {
+  color: var(--gold);
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero .tagline {
+    font-size: 1.1rem;
+  }
+
+  .apps-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Shared Utility Classes */
+.ulix-bg {
+  background: var(--ulix-bg);
+}
+
+.ulix-ink {
+  color: var(--ulix-ink);
+}
+
+.ulix-muted {
+  color: #b7c0d1;
+}
+
+.ulix-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glow {
+  box-shadow: 0 8px 30px color-mix(in srgb, var(--gold), transparent 75%);
+}
+
+.video-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.video-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Privacy Pages */
+.privacy-page {
+  padding: 2rem;
+  background-color: #ffffff;
+  color: var(--navy-blue);
+}
+
+.privacy-page main {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.privacy-page h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--gold);
+}
+
+.privacy-page p {
+  margin-bottom: 1rem;
 }
