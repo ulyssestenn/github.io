@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ulix - Precision Tools for Modern Odysseys</title>
     <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/assets/styles.css">
     <style>
         * {
             margin: 0;
@@ -223,6 +224,7 @@
     </style>
 </head>
 <body>
+    <div data-include="/partials/header.html"></div>
     <!-- Hero Section -->
     <section class="hero">
         <div class="logo-container">
@@ -337,15 +339,9 @@
 
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p><strong>Ulix</strong></p>
-            <p class="tagline">Precision Tools for Modern Odysseys</p>
-            <p>&copy; 2025 Ulix. All rights reserved.</p>
-        </div>
-    </footer>
+    <div data-include="/partials/footer.html"></div>
 
+    <script src="/assets/include.js"></script>
     <script>
         // Smooth scrolling for the CTA button
         document.querySelector('.cta-button').addEventListener('click', function(e) {
