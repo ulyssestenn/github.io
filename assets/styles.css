@@ -345,8 +345,8 @@ html {
 /* Privacy Pages */
 .privacy-page {
   padding: 2rem;
-  background-color: #ffffff;
-  color: var(--navy-blue);
+  background-color: var(--ulix-bg);
+  color: var(--ulix-ink);
 }
 
 .privacy-page main {
