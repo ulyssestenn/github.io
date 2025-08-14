@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ulix - Precision Tools for Modern Odysseys</title>
-  <meta name="description" content="Ulix builds precision, privacy-first tools for modern odysseys—no ads, logins, or data harvesting.">
-  <link rel="icon" href="/favicon.png" type="image/png">
-  <link rel="stylesheet" href="/assets/styles.css">
-  
+---
+title: Ulix - Precision Tools for Modern Odysseys
+description: Ulix builds precision, privacy-first tools for modern odysseys—no ads, logins, or data harvesting.
+permalink: index.html
+---
+{% extends "base.njk" %}
+
+{% block head %}
 <link rel="canonical" href="https://ulix.app/">
 <meta property="og:title" content="Ulix - Precision Tools for Modern Odysseys">
 <meta property="og:description" content="Ulix builds precision, privacy-first tools for modern odysseys—no ads, logins, or data harvesting.">
@@ -18,19 +16,9 @@
 <meta name="twitter:description" content="Ulix builds precision, privacy-first tools for modern odysseys—no ads, logins, or data harvesting.">
 <meta name="twitter:image" content="https://ulix.app/ulix.png">
 <meta name="twitter:url" content="https://ulix.app/">
+{% endblock %}
 
-</head>
-<body>
-  <header class="site-header">
-  <nav>
-    <a href="/">Home</a>
-    <a href="/#apps">Apps</a>
-    <a href="/about.html">About</a>
-    <a href="/contact.html">Contact and Support</a>
-  </nav>
-</header>
-
-  
+{% block content %}
 <!-- Hero Section -->
 <section class="hero">
     <div class="logo-container">
@@ -122,17 +110,9 @@
       ></iframe>
     </div>
 </section>
+{% endblock %}
 
-  <footer class="site-footer">
-  <p>&copy; 2025 Ulix. Precision Tools for Modern Odysseys.</p>
-  <p>
-    <a href="https://x.com/ulixapp" target="_blank" rel="noopener noreferrer" class="gold-link">Twitter</a> |
-    <a href="https://www.facebook.com/profile.php?id=61578604255907" target="_blank" rel="noopener noreferrer" class="gold-link">Facebook</a> |
-    <a href="https://www.instagram.com/ulixapp/" target="_blank" rel="noopener noreferrer" class="gold-link">Instagram</a>
-  </p>
-</footer>
-
-  
+{% block scripts %}
 <script>
     // Smooth scrolling for the CTA button
     document.querySelector('.cta-button').addEventListener('click', function(e) {
@@ -154,6 +134,4 @@
         });
     });
 </script>
-
-</body>
-</html>
+{% endblock %}

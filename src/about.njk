@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About – Ulix</title>
-  <meta name="description" content="Ulix LLC creates precision, privacy-first tools for modern odysseys.">
-  <link rel="icon" href="/favicon.png" type="image/png">
-  <link rel="stylesheet" href="/assets/styles.css">
-  
+---
+title: About – Ulix
+description: Ulix LLC creates precision, privacy-first tools for modern odysseys.
+permalink: about.html
+bodyClass: ulix-bg ulix-ink antialiased
+---
+{% extends "base.njk" %}
+
+{% block head %}
 <meta property="og:title" content="About – Ulix">
 <meta property="og:description" content="Ulix LLC creates precision, privacy-first tools for modern odysseys.">
 <meta property="og:type" content="website">
@@ -18,19 +17,9 @@
 <meta name="twitter:description" content="Ulix LLC creates precision, privacy-first tools for modern odysseys.">
 <meta name="twitter:image" content="https://ulix.app/favicon.png">
 <script src="https://cdn.tailwindcss.com"></script>
+{% endblock %}
 
-</head>
-<body class="ulix-bg ulix-ink antialiased">
-  <header class="site-header">
-  <nav>
-    <a href="/">Home</a>
-    <a href="/#apps">Apps</a>
-    <a href="/about.html">About</a>
-    <a href="/contact.html">Contact and Support</a>
-  </nav>
-</header>
-
-  
+{% block content %}
 <section class="max-w-4xl mx-auto px-4 py-10 md:py-16">
   <h1 class="text-3xl md:text-5xl font-semibold leading-tight">About Ulix</h1>
   <p class="ulix-muted mt-4 text-lg">
@@ -67,16 +56,4 @@
     </a>
   </div>
 </section>
-
-  <footer class="site-footer">
-  <p>&copy; 2025 Ulix. Precision Tools for Modern Odysseys.</p>
-  <p>
-    <a href="https://x.com/ulixapp" target="_blank" rel="noopener noreferrer" class="gold-link">Twitter</a> |
-    <a href="https://www.facebook.com/profile.php?id=61578604255907" target="_blank" rel="noopener noreferrer" class="gold-link">Facebook</a> |
-    <a href="https://www.instagram.com/ulixapp/" target="_blank" rel="noopener noreferrer" class="gold-link">Instagram</a>
-  </p>
-</footer>
-
-  
-</body>
-</html>
+{% endblock %}
