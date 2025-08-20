@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
     <header className="site-header">
       <nav>
-        <a href="/">Home</a>
+        <Link to="/">Home</Link>
         <a href="#apps">Apps</a>
         <a href="/about.html">About</a>
         <a href="/contact.html">Contact and Support</a>

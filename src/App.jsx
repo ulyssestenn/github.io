@@ -1,19 +1,21 @@
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Apps from './components/Apps';
-import Newsletter from './components/Newsletter';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MainApp from './components/MainApp';
+import PrivacyPolicy from './components/PrivacyPolicy';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Hero />
-      <Apps />
-      <Newsletter />
-      <Footer />
+      <Router>
+        <Routes>
+          <Route path="/" element={<MainApp />} />
+          <Route path="/gutenprivacy.html" element={<PrivacyPolicy />} />
+          <Route path="/keepclipprivacypolicy.html" element={<PrivacyPolicy />} />
+          <Route path="/shelfscanprivacy.html" element={<PrivacyPolicy />} />
+          <Route path="/trackanalysisprivacy.html" element={<PrivacyPolicy />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
