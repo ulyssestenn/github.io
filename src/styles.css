@@ -22,6 +22,51 @@ body {
   margin: 0;
 }
 
+/* Privacy page specific styling */
+.privacy-page {
+  min-height: 100vh;
+  background: var(--ulix-bg);
+  color: var(--ulix-ink);
+}
+
+.privacy-page main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.privacy-page h1 {
+  color: var(--gold);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.privacy-page p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.privacy-page ul {
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+}
+
+.privacy-page li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.privacy-page strong {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* Layout */
 .site-header,
 .site-footer {
@@ -37,6 +82,24 @@ body {
   padding: 1rem;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+/* For privacy pages, center navigation */
+.privacy-page .site-header nav {
+  justify-content: center;
+  gap: 3rem;
+}
+
+.privacy-page .site-header nav a {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.privacy-page .site-header nav a:hover {
+  color: var(--cream);
+  text-decoration: underline;
 }
 
 .logo-link {
@@ -65,8 +128,15 @@ body {
 }
 
 .site-footer {
+  background: var(--navy-blue);
+  color: var(--cream);
   text-align: center;
   padding: 2rem 1rem;
+  margin-top: auto;
+}
+
+.site-footer p {
+  margin-bottom: 0.5rem;
 }
 
 /* Hero Section */

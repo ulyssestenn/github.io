@@ -1,0 +1,47 @@
+import React from 'react';
+import PrivacyPolicyLayout from './PrivacyPolicyLayout';
+
+const TrackAnalysisPrivacyPolicy = () => {
+  return (
+    <PrivacyPolicyLayout title="Track Analysis Privacy Policy">
+      <p>
+        <strong>Track Analysis</strong> is a personal logging app designed with
+        privacy in mind. Here's how your data is handled:
+      </p>
+      <ul>
+        <li>
+          All data you enter—such as event type, details, and timestamps—is
+          stored <strong>locally on your device</strong>.
+        </li>
+        <li>No data is collected, transmitted, or stored by us.</li>
+        <li>
+          The app includes
+          <strong> no advertising, no analytics, and no third-party integrations</strong>.
+        </li>
+        <li>
+          The only optional export is a CSV file saved in your app's private
+          storage. You may share it manually using Android's standard sharing
+          options.
+        </li>
+        <li>
+          The app does <strong>not</strong> request access to your location,
+          contacts, network, or other device features.
+        </li>
+        <li>
+          A disclaimer in the app reminds users that it is for personal use only
+          and is <strong>not medical advice</strong>.
+        </li>
+      </ul>
+      <p>
+        Android's built-in backup system may back up the local database to your Google account, depending on your device settings.
+      </p>
+      <p>
+        <a href="https://play.google.com/store/apps/details?id=com.ulix.trackanalysis" target="_blank" rel="noopener noreferrer" className="gold-link">Back to Track Analysis</a>
+        {" "}|{" "}
+        <a href="/" className="gold-link">Ulix Home</a>
+      </p>
+    </PrivacyPolicyLayout>
+  );
+};
+
+export default TrackAnalysisPrivacyPolicy;
