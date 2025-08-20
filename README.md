@@ -1,12 +1,44 @@
-# React + Vite
+# Ulix Website - React Version
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the React version of the Ulix website, built with React 19.1.1 and Vite for a modern development experience.
 
-Currently, two official plugins are available:
+## 🚀 Quick Start
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-## Expanding the ESLint configuration
+2. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. **Open in browser**
+   Navigate to `http://localhost:5173/`
+
+## 📁 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## 📚 Complete Guide
+
+For detailed instructions on viewing and working with this React site, see **[REACT-GUIDE.md](./REACT-GUIDE.md)**
+
+## 🌟 Features
+
+- **Modern React 19.1.1** with latest features
+- **Vite** for lightning-fast development
+- **Component-based architecture** for maintainability
+- **Hot Module Replacement** for instant updates
+- **Production-ready builds** with optimization
+
+## 🔧 Tech Stack
+
+- React 19.1.1
+- Vite 7.1.2
+- ESLint for code quality
+- Modern JavaScript (ES6+)
