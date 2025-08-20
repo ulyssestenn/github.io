@@ -1,0 +1,50 @@
+import React from 'react';
+import PrivacyPolicyLayout from './PrivacyPolicyLayout';
+
+const KeepClipPrivacyPolicy = () => {
+  return (
+    <PrivacyPolicyLayout title="Keep Clip Privacy Policy">
+      <p>
+        <strong>Keep Clip</strong> is a tool for collecting and organizing text
+        snippets with full respect for your privacy. Here's how your data is
+        handled:
+      </p>
+      <ul>
+        <li>
+          All clips, tags, and context you save are stored
+          <strong> locally</strong> on your device in a private database.
+        </li>
+        <li>
+          The app does <strong>not</strong> collect personal data or send your
+          clips to any server.
+        </li>
+        <li>
+          Keep Clip includes
+          <strong> no advertising, analytics, or third-party tracking libraries</strong>.
+        </li>
+        <li>
+          The app requests internet access only to fetch metadata (like page
+          titles) for links you choose to save.
+        </li>
+        <li>
+          Your data stays on your device unless you choose to
+          <strong> share or export</strong> it.
+        </li>
+        <li>
+          Android's built-in backup system may back up the local database to
+          your Google account, depending on your device settings.
+        </li>
+      </ul>
+      <p>
+        Keep Clip is designed to give you full control over your saved text,
+        with minimal permissions and no external data sharing.
+      </p>
+      <p>
+        <a href="/#apps" className="gold-link">Back to Keep Clip</a> |{" "}
+        <a href="/" className="gold-link">Ulix Home</a>
+      </p>
+    </PrivacyPolicyLayout>
+  );
+};
+
+export default KeepClipPrivacyPolicy;
