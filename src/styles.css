@@ -31,9 +31,27 @@ body {
 
 .site-header nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   gap: 2rem;
   padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  height: 40px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
 }
 
 .site-header a {
@@ -307,4 +325,64 @@ body {
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Icon Showcase Styles */
+.icon-showcase {
+  padding: 60px 0;
+  background: var(--cream);
+}
+
+.icon-showcase .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.icon-showcase h2 {
+  font-size: 2.5rem;
+  color: var(--navy-blue);
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.icon-showcase p {
+  font-size: 1.1rem;
+  color: var(--dark-text);
+  margin-bottom: 40px;
+}
+
+.icons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.icon-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.icon-card:hover {
+  transform: translateY(-5px);
+}
+
+.showcase-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.icon-card h4 {
+  font-size: 1.2rem;
+  color: var(--navy-blue);
+  margin: 0;
+  font-weight: bold;
 }
