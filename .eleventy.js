@@ -1,5 +1,6 @@
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("shelfscan");
   eleventyConfig.addPassthroughCopy({"*.png": "."});
   eleventyConfig.addPassthroughCopy({"*.mp4": "."});
   eleventyConfig.addPassthroughCopy({"*.gif": "."});
