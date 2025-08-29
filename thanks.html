@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ulix — Thanks</title>
+  <meta name="description" content="Ulix — Precision tools for modern odysseys. Privacy-first utilities; tools, not traps." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --ulix-primary: #00142F;
+      --ulix-accent:  #B49041;
+      --ulix-bg:      #F7F7F5;
+      --ulix-surface: #FFFFFF;
+    }
+    .u-container { max-width: 1120px; }
+    .u-card { box-shadow: 0 10px 25px rgba(0,0,0,.12); border-color: rgba(0,20,47,0.08); }
+    .u-btn { box-shadow: 0 6px 14px rgba(0,0,0,.12); }
+    .u-btn-primary { background: var(--ulix-accent); color: #111; border: 1.5px solid var(--ulix-accent); }
+    .u-btn-secondary { background: var(--ulix-bg); color: var(--ulix-primary); border: 1.5px solid var(--ulix-accent); }
+    .u-nav-bg { background: var(--ulix-primary); }
+  </style>
+</head>
+
+<body class="min-h-screen flex flex-col" style="background: var(--ulix-bg); color: #101418;">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 border-b border-white/10 u-nav-bg">
+    <div class="mx-auto u-container px-4 sm:px-6 flex h-16 items-center justify-between">
+      <div class="flex items-center gap-3 text-white">
+        <img src="./icons/favicon.png" class="h-9 w-9 rounded-lg" alt="Ulix mark" />
+        <span class="text-lg font-semibold tracking-wide">ULIX</span>
+      </div>
+      <nav class="hidden md:flex gap-7">
+        <a href="./index.html" class="text-sm font-medium text-white/80 hover:text-white">Home</a>
+        <a href="./apps.html" class="text-sm font-medium text-white/80 hover:text-white">Apps</a>
+        <a href="./blog.html" class="text-sm font-medium text-white/80 hover:text-white">Blog</a>
+        <a href="./about.html" class="text-sm font-medium text-white/80 hover:text-white">About</a>
+        <a href="./contact.html" class="text-sm font-medium text-white/80 hover:text-white">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="./apps.html" class="hidden md:inline-flex u-btn u-btn-primary rounded-xl px-4 py-2 text-sm font-semibold">Explore Apps</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow">
+    <section class="py-24">
+      <div class="mx-auto u-container px-4 sm:px-6 text-center">
+        <div class="u-card rounded-2xl border bg-white p-10 inline-block">
+          <h1 class="text-3xl font-semibold mb-4" style="color: var(--ulix-primary)">Thank you!</h1>
+          <p class="text-slate-700 mb-6">
+            Your message has been sent successfully. We’ll review it and get back to you at the email you provided.
+          </p>
+          <a href="./index.html" class="u-btn u-btn-primary rounded-xl px-6 py-3 text-sm font-semibold">Back to Home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t py-10" style="background: var(--ulix-primary); border-color: rgba(255,255,255,.1)">
+    <div class="mx-auto u-container px-4 sm:px-6">
+      <div class="grid gap-6 text-white/80 md:grid-cols-3">
+        <div class="flex items-start gap-3">
+          <img src="./icons/favicon.png" class="h-8 w-8 rounded-lg" alt="Ulix" />
+          <div>
+            <div class="mb-1 text-white">ULIX</div>
+            <p class="text-sm text-white/70">Precision tools for modern odysseys.</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-3 text-sm">
+          <a class="hover:text-white" href="./apps.html">Apps</a>
+          <a class="hover:text-white" href="./blog.html">Blog</a>
+          <a class="hover:text-white" href="./support.html">Support</a>
+          <a class="hover:text-white" href="./about.html">About</a>
+          <a class="hover:text-white" href="./contact.html">Contact</a>
+          <a class="hover:text-white" href="./terms.html">Terms</a>
+          <a class="hover:text-white" href="./privacy.html">Privacy</a>
+        </div>
+        <div>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/ulix" method="post" target="bd-subscribe" class="grid gap-2" aria-label="Email signup">
+            <label class="text-sm text-white/80">Get product updates</label>
+            <div class="flex gap-2">
+              <input type="email" name="email" placeholder="you@example.com" class="min-w-0 flex-1 rounded-xl border px-3 py-2" />
+              <button class="u-btn u-btn-secondary rounded-xl px-4 py-2 text-sm font-semibold">Subscribe</button>
+            </div>
+          </form>
+          <div class="mt-4 text-sm text-white/70">© 2025 Ulix LLC. All rights reserved.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

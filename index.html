@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ulix — Tools, Not Traps</title>
+  <meta name="description" content="Ulix — Precision tools for modern odysseys. Privacy-first utilities; tools, not traps." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --ulix-primary: #00142F;
+      --ulix-accent:  #B49041;
+      --ulix-bg:      #F7F7F5;
+      --ulix-surface: #FFFFFF;
+    }
+    .u-container { max-width: 1120px; }
+    .u-card { box-shadow: 0 10px 25px rgba(0,0,0,.12); border-color: rgba(0,20,47,0.08); }
+    .u-btn { box-shadow: 0 6px 14px rgba(0,0,0,.12); }
+    .u-btn-primary { background: var(--ulix-accent); color: #111; border: 1.5px solid var(--ulix-accent); }
+    .u-btn-secondary { background: var(--ulix-bg); color: var(--ulix-primary); border: 1.5px solid var(--ulix-accent); }
+    .u-nav-bg { background: var(--ulix-primary); }
+    .u-hero-bg { background: linear-gradient(180deg, #001227, var(--ulix-primary)); }
+    .u-carousel { height: 260px; }
+    .u-carousel-track { display: flex; width: 100%; height: 100%; }
+    .u-carousel-slide { min-width: 100%; height: 100%; display: flex; align-items: center; box-sizing: border-box; }
+    @media (max-width: 767px) { .u-carousel { height: 240px; } }
+  </style>
+</head>
+
+<body class="min-h-screen" style="background: var(--ulix-bg); color: #101418;">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 border-b border-white/10 u-nav-bg">
+    <div class="mx-auto u-container px-4 sm:px-6 flex h-16 items-center justify-between">
+      <div class="flex items-center gap-3 text-white">
+        <img src="./icons/favicon.png" alt="Ulix mark" class="h-9 w-9 rounded-lg" />
+        <span class="text-lg font-semibold tracking-wide">ULIX</span>
+      </div>
+      <nav class="hidden md:flex gap-7">
+        <a href="./index.html" class="text-sm font-medium text-white/80 hover:text-white">Home</a>
+        <a href="./apps.html" class="text-sm font-medium text-white/80 hover:text-white">Apps</a>
+        <a href="./blog.html" class="text-sm font-medium text-white/80 hover:text-white">Blog</a>
+        <a href="./about.html" class="text-sm font-medium text-white/80 hover:text-white">About</a>
+        <a href="./contact.html" class="text-sm font-medium text-white/80 hover:text-white">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button id="u-menu-btn" aria-label="Open menu" class="grid h-10 w-10 place-items-center rounded-lg border border-white/20 text-white md:hidden">
+          <span style="width:18px;height:2px;background:white;display:block;box-shadow:0 6px 0 0 white, 0 -6px 0 0 white"></span>
+        </button>
+        <a href="./apps.html" class="hidden md:inline-flex u-btn u-btn-primary rounded-xl px-4 py-2 text-sm font-semibold">Explore Apps</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero (brand-first with split content below) -->
+    <section class="u-hero-bg text-white py-16">
+      <div class="mx-auto u-container px-4 sm:px-6">
+        <!-- Big centered wordmark -->
+        <img src="./icons/ulixwordmarkclear.png" alt="Ulix wordmark"
+             class="mx-auto mb-12 h-28 md:h-40 lg:h-48 w-auto" />
+        
+
+        <!-- Split layout -->
+        <div class="grid items-center gap-10 md:grid-cols-2">
+          <!-- Left: tagline + CTAs -->
+          <div class="text-center md:text-left">
+            <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">Tools, Not Traps</h1>
+            <p class="mt-4 max-w-xl text-white/80 mx-auto md:mx-0">
+              Privacy-first utilities for everyday computing. Local-first and lightweight.
+              No intrusive permission requests, no accounts, no ads, no tracking, no attention hacking.
+            </p>
+            <div class="mt-6 flex flex-col gap-3 sm:flex-row justify-center md:justify-start">
+              <a href="./apps.html" class="u-btn u-btn-primary rounded-xl px-4 py-2 text-sm font-semibold">Explore Apps</a>
+              <a href="./about.html" class="u-btn u-btn-secondary rounded-xl px-4 py-2 text-sm font-semibold">Why Ulix?</a>
+            </div>
+          </div>
+
+          <!-- Right: carousel -->
+          <div>
+            <div class="u-carousel relative overflow-hidden rounded-2xl border shadow"
+                 style="border-color: rgba(255,255,255,.12); background: rgba(255,255,255,0.05)">
+              <div id="product-carousel-track" class="u-carousel-track transition-transform duration-500"></div>
+              <div id="product-carousel-dots" class="absolute bottom-3 left-0 right-0 flex justify-center gap-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Ulix -->
+   <!-- Why Ulix -->
+<section class="py-12" style="background: var(--ulix-bg)">
+  <div class="mx-auto u-container px-4 sm:px-6" style="max-width:1360px">
+    <div class="mx-auto max-w-8xl grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <div class="u-card rounded-2xl border bg-white p-5">
+        <h3 class="text-lg font-semibold" style="color: var(--ulix-primary)">Privacy First</h3>
+        <p class="mt-1 text-sm text-slate-600">
+          Local-first architecture with offline capability. No ads, tracking, or unnecessary accounts —
+          because your data should remain yours.
+        </p>
+      </div>
+
+      <div class="u-card rounded-2xl border bg-white p-5">
+        <h3 class="text-lg font-semibold" style="color: var(--ulix-primary)">Curated by Design</h3>
+        <p class="mt-1 text-sm text-slate-600">
+          Apps shaped by our founder's aesthetic vision. We build for those who share our particular
+          sensibilities and design philosophy.
+        </p>
+      </div>
+
+      <div class="u-card rounded-2xl border bg-white p-5">
+        <h3 class="text-lg font-semibold" style="color: var(--ulix-primary)">Focused Tools</h3>
+        <p class="mt-1 text-sm text-slate-600">
+          Clean, purposeful interfaces that enhance your life without demanding constant attention
+          or engagement.
+        </p>
+      </div>
+
+      <div class="u-card rounded-2xl border bg-white p-5">
+        <h3 class="text-lg font-semibold" style="color: var(--ulix-primary)">Built on Products, Not Data</h3>
+        <p class="mt-1 text-sm text-slate-600">
+          We build our revenue around our products, not your data. It's a deliberate choice that
+          shapes everything we create.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Featured apps -->
+    <section class="py-10">
+      <div class="mx-auto u-container px-4 sm:px-6">
+        <div class="mb-6 flex items-center justify-between">
+          <h2 class="text-2xl font-semibold" style="color: var(--ulix-primary)">Featured Apps</h2>
+          <a href="./apps.html" class="u-btn u-btn-secondary rounded-xl px-4 py-2 text-sm font-semibold">View All</a>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" id="featured-apps"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t py-10" style="background: var(--ulix-primary); border-color: rgba(255,255,255,.1)">
+    <div class="mx-auto u-container px-4 sm:px-6">
+      <div class="grid gap-6 text-white/80 md:grid-cols-3">
+        <div><div class="mb-1 text-white">ULIX</div><p class="text-sm text-white/70">Precision tools for modern odysseys.</p></div>
+        <div class="grid grid-cols-2 gap-3 text-sm">
+          <a class="hover:text-white" href="./apps.html">Apps</a>
+          <a class="hover:text-white" href="./blog.html">Blog</a>
+          <a class="hover:text-white" href="./support.html">Support</a>
+          <a class="hover:text-white" href="./about.html">About</a>
+          <a class="hover:text-white" href="./contact.html">Contact</a>
+          <a class="hover:text-white" href="./terms.html">Terms</a>
+          <a class="hover:text-white" href="./privacy.html">Privacy</a>
+        </div>
+        <div>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/ulix" method="post" target="bd-subscribe" class="grid gap-2" aria-label="Email signup">
+            <label class="text-sm text-white/80">Get product updates</label>
+            <div class="flex gap-2">
+              <input type="email" name="email" placeholder="you@example.com" class="min-w-0 flex-1 rounded-xl border px-3 py-2" />
+              <button class="u-btn u-btn-secondary rounded-xl px-4 py-2 text-sm font-semibold">Subscribe</button>
+            </div>
+          </form>
+          <div class="mt-4 text-sm text-white/70">© 2025 Ulix LLC. All rights reserved.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+  // Mobile menu
+  (function(){
+    const btn = document.getElementById("u-menu-btn");
+    const mobile = document.getElementById("u-mobile");
+    if (!btn || !mobile) return;
+    const closeAll = () => mobile.classList.add("hidden");
+    btn.addEventListener("click", ()=> mobile.classList.remove("hidden"));
+    mobile.querySelectorAll("[data-close]").forEach(el => el.addEventListener("click", closeAll));
+    document.addEventListener("keydown", (e)=>{ if(e.key === "Escape") closeAll(); });
+  })();
+
+  // Map slugs to icon filenames in /icons
+  const ICONS = {
+    "shelf-scan": "./icons/shelfscan.png",
+    "keep-clip": "./icons/keepclip.png",
+    "track-analysis": "./icons/trackanalysis.png",
+    "guten": "./icons/guten.png",
+    "loan-it": "./icons/loanit.png",
+    "curious-air": "./icons/curiousair.png"
+  };
+
+  const gp = `<span class="inline-flex items-center gap-2 rounded-lg border px-3 py-2 text-xs font-semibold"
+      style="background: white; color: #111; border-color: rgba(0,0,0,.15)">
+      <svg aria-hidden="true" width="16" height="16" viewBox="0 0 512 512">
+        <defs><linearGradient id="gpb" x1="0" x2="1"><stop offset="0%" stop-color="#34a853"/><stop offset="50%" stop-color="#fbbc04"/><stop offset="100%" stop-color="#ea4335"/></linearGradient></defs>
+        <path fill="url(#gpb)" d="M325 234L120 40c-7-6-20-1-20 10v412c0 11 13 16 20 10l205-194 61-44-61-44z"/>
+        <path fill="#4285f4" d="M390 190l-65 44 65 44c5 3 12-1 12-7v-74c0-6-7-10-12-7z"/>
+      </svg><span>Get it on Google Play</span></span>`;
+
+  const ULIX_APPS = [
+    { slug: "shelf-scan", name: "Shelf Scan", one: "Search shelves instantly.", tag: "CTRL+F your world. Find books, games, and movies fast.", platforms: ["Android"], coming: false, playUrl: "https://play.google.com/store/apps/details?id=com.ulix.shelfscan" },
+    { slug: "keep-clip", name: "Keep Clip", one: "Save text from anywhere. Organize. Export.", tag: "Your digital commonplace book. Search, filter, tag, export.", platforms: ["Android"], coming: false, playUrl: "https://play.google.com/store/apps/details?id=com.bhunt.keepclip" },
+    { slug: "track-analysis", name: "Track Analysis", one: "Wellness logging for analysis.", tag: "Log wellness data. Export in CSV.", platforms: ["Android"], coming: false, playUrl: "https://play.google.com/store/apps/details?id=com.ulix.trackanalysis" },
+    { slug: "guten", name: "Guten", one: "Beautiful reading of classics.", tag: "Project Gutenberg reader — elegant and fast.", platforms: ["Android"], coming: false },
+    { slug: "loan-it", name: "Loan It", one: "Snap a photo, add a name, never lose track.", tag: "Track what you loan and to whom.", platforms: ["Android"], coming: false },
+    { slug: "curious-air", name: "Curious Air", one: "See signals around you.", tag: "Explore the signal and sensor data your phone can detect.", platforms: ["Android"], coming: true }
+  ];
+
+  // Carousel
+  (function(){
+    const track = document.getElementById("product-carousel-track");
+    const dots  = document.getElementById("product-carousel-dots");
+    if (!track || !dots) return;
+
+    const makeSlide = (app) => {
+      const href = app.coming ? "#" : `./product-${app.slug}.html`;
+      const cta  = app.coming ? "Coming soon" : "Learn more";
+      const store = app.playUrl ? `<a href="${app.playUrl}" target="_blank" rel="noopener" class="ml-2">${gp}</a>` : "";
+      return `<div class="u-carousel-slide"><div class="mx-auto grid h-full max-w-[720px] grid-cols-5 items-center gap-4 px-5 text-white/90">
+        <div class="col-span-2 flex items-center justify-center">
+          <img src="${ICONS[app.slug] || './icons/favicon.png'}" alt="${app.name} icon" class="h-24 w-24 rounded-2xl border bg-white p-1"/>
+        </div>
+        <div class="col-span-3"><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-semibold" style="border-color: var(--ulix-accent); color: var(--ulix-accent)">${app.name}</span>
+          <h3 class="mt-2 text-xl font-semibold">${app.one}</h3>
+          <p class="mt-1 text-sm text-white/70">${app.tag}</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <!-- Learn More button commented out until product pages exist -->
+            <!-- <a href="${href}" class="inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold" style="background: var(--ulix-bg); color: var(--ulix-primary); border: 1.5px solid var(--ulix-accent); box-shadow: 0 6px 14px rgba(0,0,0,.12)">${cta}</a> -->
+            ${store}
+          </div></div></div></div>`;
+    };
+
+    track.innerHTML = ULIX_APPS.map(makeSlide).join("");
+    dots.innerHTML = ULIX_APPS.map((_,i)=>`<button class="h-2 w-2 rounded-full" data-dot="${i}" style="background: rgba(255,255,255,.5)"></button>`).join("");
+
+    let i = 0; const len = ULIX_APPS.length;
+    const update = () => {
+      track.style.transform = `translateX(-${i*100}%)`;
+      dots.querySelectorAll("[data-dot]").forEach((d,idx)=> d.style.background = idx===i ? "var(--ulix-accent)" : "rgba(255,255,255,.5)");
+    };
+    dots.querySelectorAll("[data-dot]").forEach((d,idx)=> d.addEventListener("click", ()=>{ i=idx; update(); }));
+    update();
+    setInterval(()=>{ i=(i+1)%len; update(); }, 6000);
+  })();
+
+  // Featured apps
+  (function(){
+    const grid = document.getElementById("featured-apps");
+    if (!grid) return;
+    const card = (app) => `<div class="u-card h-full rounded-2xl border bg-white p-5 text-center">
+      <img src="${ICONS[app.slug] || './icons/favicon.png'}" alt="${app.name} icon" class="mx-auto h-12 w-12 rounded-lg border bg-white p-1 mb-2"/>
+      <h3 class="text-lg font-semibold" style="color: var(--ulix-primary)">${app.name}</h3>
+      <p class="mt-1 text-sm text-slate-600">${app.one}</p>
+      <div class="mt-4 flex gap-2 flex-wrap justify-center">
+        <!-- Learn More button commented out until product pages exist -->
+        <!-- <a href="${app.coming ? "#" : "./product-"+app.slug+".html"}" class="inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold" style="background: var(--ulix-bg); color: var(--ulix-primary); border: 1.5px solid var(--ulix-accent); box-shadow: 0 6px 14px rgba(0,0,0,.12)">${app.coming ? "Coming soon" : "Learn more"}</a> -->
+        ${app.playUrl ? `<a href="${app.playUrl}" target="_blank" rel="noopener">${gp}</a>` : ""}
+      </div></div>`;
+    grid.innerHTML = ULIX_APPS.slice(0,3).map(card).join("");
+  })();
+  </script>
+</body>
+</html>
+
