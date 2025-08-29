@@ -60,31 +60,38 @@
              class="mx-auto mb-12 h-28 md:h-40 lg:h-48 w-auto" />
         
 
-        <!-- Split layout -->
-        <div class="grid items-center gap-10 md:grid-cols-2">
-          <!-- Left: tagline + CTAs -->
-          <div class="text-center md:text-left">
-            <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">Tools, Not Traps</h1>
-            <p class="mt-4 max-w-xl text-white/80 mx-auto md:mx-0">
-              Privacy-first utilities for everyday computing. Local-first and lightweight.
-              No intrusive permission requests, no accounts, no ads, no tracking, no attention hacking.
-            </p>
-            <div class="mt-6 flex flex-col gap-3 sm:flex-row justify-center md:justify-start">
-              <a href="./apps.html" class="u-btn u-btn-primary rounded-xl px-4 py-2 text-sm font-semibold">Explore Apps</a>
-              <a href="./about.html" class="u-btn u-btn-secondary rounded-xl px-4 py-2 text-sm font-semibold">Why Ulix?</a>
-            </div>
-          </div>
-
-          <!-- Right: carousel -->
-          <div>
-            <div class="u-carousel relative overflow-hidden rounded-2xl border shadow"
-                 style="border-color: rgba(255,255,255,.12); background: rgba(255,255,255,0.05)">
-              <div id="product-carousel-track" class="u-carousel-track transition-transform duration-500"></div>
-              <div id="product-carousel-dots" class="absolute bottom-3 left-0 right-0 flex justify-center gap-2"></div>
-            </div>
-          </div>
+      <!-- Split layout -->
+<section class="bg-[var(--ulix-primary)] text-white">
+  <!-- Mobile-only width cap; released at md+ -->
+  <div class="w-full mx-auto px-4 max-w-[42rem] md:max-w-screen-lg lg:max-w-screen-xl md:px-6 lg:px-8">
+    <div class="grid gap-8 md:gap-10 md:grid-cols-2 md:items-center">
+      
+      <!-- Left: tagline + CTAs -->
+      <div class="text-center md:text-left">
+        <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">Tools, Not Traps</h1>
+        <p class="mt-4 max-w-xl text-white/80 mx-auto md:mx-0">
+          Privacy-first utilities for everyday computing. Local-first and lightweight.
+          No intrusive permission requests, no accounts, no ads, no tracking, no attention hacking.
+        </p>
+        <div class="mt-6 flex flex-col gap-3 sm:flex-row justify-center md:justify-start">
+          <a href="./apps.html" class="u-btn u-btn-primary rounded-xl px-4 py-2 text-sm font-semibold">Explore Apps</a>
+          <a href="./about.html" class="u-btn u-btn-secondary rounded-xl px-4 py-2 text-sm font-semibold">Why Ulix?</a>
         </div>
       </div>
+
+      <!-- Right: carousel -->
+      <div>
+        <!-- Keep the carousel itself narrow on phones so it doesn't feel edge-to-edge -->
+        <div class="u-carousel relative overflow-hidden rounded-2xl border shadow mx-auto md:mx-0 max-w-[38rem] md:max-w-none"
+             style="border-color: rgba(255,255,255,.12); background: rgba(255,255,255,0.05)">
+          <div id="product-carousel-track" class="u-carousel-track transition-transform duration-500"></div>
+          <div id="product-carousel-dots" class="absolute bottom-3 left-0 right-0 flex justify-center gap-2"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
     </section>
 
     <!-- Why Ulix -->
