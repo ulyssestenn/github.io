@@ -69,28 +69,51 @@
       <div class="mx-auto u-container px-4 sm:px-6">
         <h1 class="text-3xl font-semibold" style="color: var(--ulix-primary)">Contact</h1>
         <div class="u-card rounded-2xl border bg-white p-5">
-          <form class="grid gap-4" onsubmit="return false">
-            <div class="grid gap-2">
-              <label class="text-sm font-medium">Name</label>
-              <input class="rounded-xl border p-2" placeholder="Jane Doe" />
-            </div>
-            <div class="grid gap-2">
-              <label class="text-sm font-medium">Email</label>
-              <input type="email" class="rounded-xl border p-2" placeholder="you@example.com" />
-            </div>
-            <div class="hidden"><input name="website" autocomplete="off" /></div>
-            <div class="grid gap-2">
-              <label class="text-sm font-medium">Message</label>
-              <textarea rows="5" class="rounded-xl border p-2" placeholder="How can we help?"></textarea>
-            </div>
-            <div><button class="u-btn u-btn-primary rounded-xl px-4 py-2 text-sm font-semibold">Send</button></div>
-            <div class="mt-2 text-sm text-slate-600">
-              Need help with a specific app? <a href="./support.html" class="underline decoration-[#B49041] underline-offset-4 hover:text-slate-800">Visit Support →</a>
-            </div>
-            <div class="mt-1 text-xs text-slate-500">
-              We don’t accept unsolicited ideas or proposals. By sending feedback, you agree to our <a href="./terms.html" class="underline">Terms of Service</a>.
-            </div>
-          </form>
+          <form class="grid gap-4"
+      action="https://formsubmit.co/hello@ulix.app"
+      method="POST" novalidate>
+
+  <!-- Name -->
+  <div class="grid gap-2">
+    <label class="text-sm font-medium" for="name">Name</label>
+    <input id="name" name="name" class="rounded-xl border p-2" placeholder="Jane Doe" autocomplete="name" required />
+  </div>
+
+  <!-- Email -->
+  <div class="grid gap-2">
+    <label class="text-sm font-medium" for="email">Email</label>
+    <input id="email" name="email" type="email" class="rounded-xl border p-2" placeholder="you@example.com" autocomplete="email" required />
+  </div>
+
+  <!-- Honeypots (spam traps) -->
+  <input type="text" id="website" name="website" autocomplete="off" class="hidden" />
+  <input type="text" name="_honey" class="hidden" />
+
+  <!-- Message -->
+  <div class="grid gap-2">
+    <label class="text-sm font-medium" for="message">Message</label>
+    <textarea id="message" name="message" rows="6" class="rounded-xl border p-2" placeholder="How can we help?" required></textarea>
+  </div>
+
+  <!-- Hidden fields -->
+  <input type="hidden" name="_subject" value="Ulix Contact Form" />
+  <input type="hidden" name="_next" value="https://ulix.app/thanks.html" />
+  <!-- Optional: disable FormSubmit captcha -->
+  <!-- <input type="hidden" name="_captcha" value="false" /> -->
+
+  <!-- Submit -->
+  <div>
+    <button class="u-btn u-btn-primary rounded-xl px-4 py-2 text-sm font-semibold">Send</button>
+  </div>
+
+  <div class="mt-2 text-sm text-slate-600">
+    Need help with a specific app? <a href="./support.html" class="underline decoration-[#B49041] underline-offset-4 hover:text-slate-800">Visit Support →</a>
+  </div>
+  <div class="mt-1 text-xs text-slate-500">
+    We don’t accept unsolicited ideas or proposals. By sending feedback, you agree to our <a href="./terms.html" class="underline">Terms of Service</a>.
+  </div>
+</form>
+
         </div>
       </div>
     </section>
