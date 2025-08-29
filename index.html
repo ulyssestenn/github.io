@@ -13,7 +13,7 @@
       --ulix-bg:      #F7F7F5;
       --ulix-surface: #FFFFFF;
     }
-    .u-container { max-width: 1120px; }
+    .u-container { max-width: 1280px; }
     .u-card { box-shadow: 0 10px 25px rgba(0,0,0,.12); border-color: rgba(0,20,47,0.08); }
     .u-btn { box-shadow: 0 6px 14px rgba(0,0,0,.12); }
     .u-btn-primary { background: var(--ulix-accent); color: #111; border: 1.5px solid var(--ulix-accent); }
@@ -23,6 +23,7 @@
     .u-carousel { height: 260px; }
     .u-carousel-track { display: flex; width: 100%; height: 100%; }
     .u-carousel-slide { min-width: 100%; height: 100%; display: flex; align-items: center; box-sizing: border-box; }
+    
     @media (max-width: 767px) { .u-carousel { height: 240px; } }
   </style>
 </head>
@@ -57,14 +58,15 @@
       <div class="mx-auto u-container px-4 sm:px-6">
         <!-- Big centered wordmark -->
         <img src="./icons/ulixwordmarkclear.png" alt="Ulix wordmark"
-             class="mx-auto mb-12 h-28 md:h-40 lg:h-48 w-auto" />
+             class="mx-auto mb-12 h-28 md:h-40 lg:h-52 w-auto" />
+</div>
         
 
       <!-- Split layout -->
 <section class="bg-[var(--ulix-primary)] text-white">
   <!-- Mobile-only width cap; released at md+ -->
 <!-- Split layout -->
-<div class="w-full">
+<div class="mx-auto px-4 sm:px-6 max-w-[40rem] md:max-w-screen-xl">
   <div class="grid items-center gap-10 md:grid-cols-2">
     <!-- Left: tagline + CTAs -->
     <div class="mx-auto px-4 sm:px-6 max-w-[42rem] md:max-w-none md:px-0 text-center md:text-left">
