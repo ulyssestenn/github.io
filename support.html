@@ -44,10 +44,34 @@
         <a href="./apps.html" class="hidden md:inline-flex u-btn u-btn-primary rounded-xl px-4 py-2 text-sm font-semibold">Explore Apps</a>
       </div>
     </div>
-  </header>
+    </header>
 
-  <!-- Support Form -->
-  <main>
+    <!-- Mobile drawer (added) -->
+    <nav id="u-mobile" class="fixed inset-0 z-50 hidden md:hidden">
+      <!-- backdrop -->
+      <div class="absolute inset-0 bg-black/50" data-close></div>
+      <!-- panel -->
+      <div class="ml-auto h-full w-80 max-w-[85vw] bg-[var(--ulix-primary)] text-white p-6 shadow-xl relative">
+        <div class="flex items-center justify-between mb-6">
+          <span class="text-lg font-semibold tracking-wide">Menu</span>
+          <button class="p-2 rounded-lg border border-white/20" aria-label="Close menu" data-close>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+        <ul class="space-y-4 text-base">
+          <li><a href="./index.html" class="block" data-close>Home</a></li>
+          <li><a href="./apps.html" class="block" data-close>Apps</a></li>
+          <li><a href="./blog.html" class="block" data-close>Blog</a></li>
+          <li><a href="./about.html" class="block" data-close>About</a></li>
+          <li><a href="./contact.html" class="block" data-close>Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Support Form -->
+    <main>
     <section class="py-14">
       <div class="mx-auto u-container px-4 sm:px-6">
         <h1 class="text-3xl font-semibold" style="color: var(--ulix-primary)">Support</h1>
@@ -151,6 +175,20 @@
       </div>
     </div>
   </footer>
+  <!-- Mobile menu script -->
+  <script>
+    // Mobile menu
+    (function(){
+      const btn = document.getElementById("u-menu-btn");
+      const mobile = document.getElementById("u-mobile");
+      if (!btn || !mobile) return;
+      const closeAll = () => mobile.classList.add("hidden");
+      btn.addEventListener("click", ()=> mobile.classList.remove("hidden"));
+      mobile.querySelectorAll("[data-close]").forEach(el => el.addEventListener("click", closeAll));
+      document.addEventListener("keydown", (e)=>{ if(e.key === "Escape") closeAll(); });
+    })();
+  </script>
+
 </body>
 </html>
 
