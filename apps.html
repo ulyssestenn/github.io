@@ -21,7 +21,6 @@
     .u-nav-bg { background: var(--ulix-primary); }
     .u-hero-bg { background: linear-gradient(180deg, #001227, var(--ulix-primary)); }
   </style>
-  <script defer src="./assets/site.js"></script>
 </head>
 
 <body class="min-h-screen" style="background: var(--ulix-bg); color: #101418;">
@@ -44,27 +43,34 @@
         </button>
         <a href="./apps.html" class="hidden md:inline-flex u-btn u-btn-primary rounded-xl px-4 py-2 text-sm font-semibold">Explore Apps</a>
       </div>
-    </div>
-    <div id="u-mobile" class="hidden fixed inset-0 z-50">
-      <div class="absolute inset-0 bg-black/40" data-close="true"></div>
-      <div class="absolute right-0 top-0 h-full w-72 bg-white p-5 shadow-xl">
-        <div class="mb-4 flex items-center justify-between">
-          <span class="font-semibold" style="color: var(--ulix-primary)">Menu</span>
-          <button aria-label="Close menu" data-close="true" class="h-8 w-8 rounded-md border" style="border-color: rgba(0,0,0,.12)">×</button>
-        </div>
-        <div class="grid gap-2">
-          <a href="./index.html" class="rounded-lg px-3 py-2 text-left hover:bg-black/5" style="color: var(--ulix-primary)">Home</a>
-          <a href="./apps.html" class="rounded-lg px-3 py-2 text-left hover:bg-black/5" style="color: var(--ulix-primary)">Apps</a>
-          <a href="./blog.html" class="rounded-lg px-3 py-2 text-left hover:bg-black/5" style="color: var(--ulix-primary)">Blog</a>
-          <a href="./about.html" class="rounded-lg px-3 py-2 text-left hover:bg-black/5" style="color: var(--ulix-primary)">About</a>
-          <a href="./contact.html" class="rounded-lg px-3 py-2 text-left hover:bg-black/5" style="color: var(--ulix-primary)">Contact</a>
-          <div class="pt-3"><a href="./apps.html" class="u-btn u-btn-primary inline-flex rounded-xl px-4 py-2 text-sm font-semibold">Explore Apps</a></div>
-        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
+    <!-- Mobile drawer (added) -->
+    <nav id="u-mobile" class="fixed inset-0 z-50 hidden md:hidden">
+      <!-- backdrop -->
+      <div class="absolute inset-0 bg-black/50" data-close></div>
+      <!-- panel -->
+      <div class="ml-auto h-full w-80 max-w-[85vw] bg-[var(--ulix-primary)] text-white p-6 shadow-xl relative">
+        <div class="flex items-center justify-between mb-6">
+          <span class="text-lg font-semibold tracking-wide">Menu</span>
+          <button class="p-2 rounded-lg border border-white/20" aria-label="Close menu" data-close>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+        <ul class="space-y-4 text-base">
+          <li><a href="./index.html" class="block" data-close>Home</a></li>
+          <li><a href="./apps.html" class="block" data-close>Apps</a></li>
+          <li><a href="./blog.html" class="block" data-close>Blog</a></li>
+          <li><a href="./about.html" class="block" data-close>About</a></li>
+          <li><a href="./contact.html" class="block" data-close>Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
 <section class="u-hero-bg text-white py-8 text-center">
   <div class="mx-auto max-w-3xl px-4 sm:px-6">
     <h1 class="text-4xl md:text-5xl font-semibold tracking-tight">Apps from Ulix</h1>
@@ -183,5 +189,19 @@
       </div>
     </div>
   </footer>
+  <!-- Mobile menu script -->
+  <script>
+    // Mobile menu
+    (function(){
+      const btn = document.getElementById("u-menu-btn");
+      const mobile = document.getElementById("u-mobile");
+      if (!btn || !mobile) return;
+      const closeAll = () => mobile.classList.add("hidden");
+      btn.addEventListener("click", ()=> mobile.classList.remove("hidden"));
+      mobile.querySelectorAll("[data-close]").forEach(el => el.addEventListener("click", closeAll));
+      document.addEventListener("keydown", (e)=>{ if(e.key === "Escape") closeAll(); });
+    })();
+  </script>
+
 </body>
 </html>
