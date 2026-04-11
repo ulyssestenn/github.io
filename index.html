@@ -259,7 +259,7 @@
     { slug: "shelf-scan", name: "Shelf Scan", one: "Search shelves instantly.", tag: "CTRL+F your world. Find books, games, and movies fast.", platforms: ["Android"], coming: false, playUrl: "https://play.google.com/store/apps/details?id=com.ulix.shelfscan" },
     { slug: "keep-clip", name: "Keep Clip", one: "Save text from anywhere. Organize. Export.", tag: "Your digital commonplace book. Search, filter, tag, export.", platforms: ["Android"], coming: false, playUrl: "https://play.google.com/store/apps/details?id=com.bhunt.keepclip" },
     { slug: "track-analysis", name: "Track Analysis", one: "Wellness logging for analysis.", tag: "Log wellness data. Export in CSV.", platforms: ["Android"], coming: false, playUrl: "https://play.google.com/store/apps/details?id=com.ulix.trackanalysis" },
-    { slug: "guten", name: "Guten", one: "Beautiful reading of classics.", tag: "Project Gutenberg reader — elegant and fast.", platforms: ["Android"], coming: false },
+    { slug: "guten", name: "Guten", one: "Beautiful reading of classics.", tag: "Project Gutenberg reader — now in Google Play testing.", platforms: ["Android"], coming: false, playUrl: "https://play.google.com/store/apps/details?id=com.bhunt.guten" },
     { slug: "loan-it", name: "Loan It", one: "Snap a photo, add a name, never lose track.", tag: "Track what you loan and to whom.", platforms: ["Android"], coming: false },
     { slug: "curious-air", name: "Curious Air", one: "See signals around you.", tag: "Explore the signal and sensor data your phone can detect.", platforms: ["Android"], coming: true }
   ];
@@ -314,7 +314,7 @@
         <!-- <a href="${app.coming ? "#" : "./product-"+app.slug+".html"}" class="inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold" style="background: var(--ulix-bg); color: var(--ulix-primary); border: 1.5px solid var(--ulix-accent); box-shadow: 0 6px 14px rgba(0,0,0,.12)">${app.coming ? "Coming soon" : "Learn more"}</a> -->
         ${app.playUrl ? `<a href="${app.playUrl}" target="_blank" rel="noopener">${gp}</a>` : ""}
       </div></div>`;
-    grid.innerHTML = ULIX_APPS.slice(0,3).map(card).join("");
+    grid.innerHTML = ULIX_APPS.filter(app => ["shelf-scan", "keep-clip", "guten"].includes(app.slug)).map(card).join("");
   })();
   </script>
 </body>
