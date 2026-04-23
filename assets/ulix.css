@@ -413,6 +413,7 @@ button { font: inherit; cursor: pointer; }
   .split__text { text-align: left; }
   .split__ctas { justify-content: flex-start; }
 }
+@media (min-width: 1024px) { .split__tagline { font-size: 2.75rem; } }
 
 .carousel {
   position: relative;
@@ -425,7 +426,7 @@ button { font: inherit; cursor: pointer; }
   box-shadow: var(--shadow-btn);
   overflow: hidden;
 }
-@media (min-width: 768px) { .carousel { max-width: 100%; } }
+@media (min-width: 768px) { .carousel { max-width: 36rem; } }
 
 .carousel__viewport { overflow: hidden; }
 .carousel__track {
@@ -495,7 +496,7 @@ button { font: inherit; cursor: pointer; }
   font-weight: 600;
 }
 @media (min-width: 1024px) {
-  .carousel__inner { grid-template-columns: 2fr 3fr; text-align: left; align-items: center; }
+  .carousel__inner { grid-template-columns: auto 1fr; column-gap: 1.25rem; text-align: left; align-items: center; }
   .carousel__icon { margin: 0; }
   .carousel__ctas { justify-content: flex-start; }
 }
