@@ -3,79 +3,82 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ulix — Privacy</title>
+  <title>Privacy — Ulix</title>
   <meta name="description" content="Ulix privacy overview and links to app-specific policies." />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    :root {
-      --ulix-primary: #00142F;
-      --ulix-accent:  #B49041;
-      --ulix-bg:      #F7F7F5;
-      --ulix-surface: #FFFFFF;
-    }
-    .u-container { max-width: 1120px; }
-    .u-card { box-shadow: 0 10px 25px rgba(0,0,0,.12); border-color: rgba(0,20,47,0.08); }
-    .u-btn { box-shadow: 0 6px 14px rgba(0,0,0,.12); }
-    .u-btn-primary { background: var(--ulix-accent); color: #111; border: 1.5px solid var(--ulix-accent); }
-    .u-btn-secondary { background: var(--ulix-bg); color: var(--ulix-primary); border: 1.5px solid var(--ulix-accent); }
-    .u-nav-bg { background: var(--ulix-primary); }
-  </style>
+  <link rel="canonical" href="https://ulix.app/privacy.html" />
+  <meta name="theme-color" content="#00142F" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ulix" />
+  <meta property="og:title" content="Privacy — Ulix" />
+  <meta property="og:description" content="Ulix privacy overview and links to app-specific policies." />
+  <meta property="og:url" content="https://ulix.app/privacy.html" />
+  <meta property="og:image" content="https://ulix.app/icons/favicon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Privacy — Ulix" />
+  <meta name="twitter:description" content="Ulix privacy overview and links to app-specific policies." />
+  <meta name="twitter:image" content="https://ulix.app/icons/favicon.png" />
+
+  <link rel="icon" href="./icons/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="./icons/favicon.png" />
+  <link rel="stylesheet" href="./assets/ulix.css" />
 </head>
 
-<body class="min-h-screen" style="background: var(--ulix-bg); color: #101418;">
-  <!-- Header -->
-  <header class="sticky top-0 z-40 border-b border-white/10 u-nav-bg">
-    <div class="mx-auto u-container px-4 sm:px-6 flex h-16 items-center justify-between">
-      <div class="flex items-center gap-3 text-white">
-        <img src="./icons/favicon.png" alt="Ulix mark" class="h-9 w-9 rounded-lg" />
-        <span class="text-lg font-semibold tracking-wide">ULIX</span>
-      </div>
-      <nav class="hidden md:flex gap-7">
-        <a href="./index.html" class="text-sm font-medium text-white/80 hover:text-white">Home</a>
-        <a href="./apps.html" class="text-sm font-medium text-white/80 hover:text-white">Apps</a>
-        <a href="./blog.html" class="text-sm font-medium text-white/80 hover:text-white">Blog</a>
-        <a href="./about.html" class="text-sm font-medium text-white/80 hover:text-white">About</a>
-        <a href="./contact.html" class="text-sm font-medium text-white/80 hover:text-white">Contact</a>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="./index.html" class="site-brand">
+        <img src="./icons/favicon.png" alt="" class="site-brand__logo" />
+        <span class="site-brand__name">ULIX</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="./index.html" class="site-nav__link">Home</a>
+        <a href="./apps.html" class="site-nav__link">Apps</a>
+        <a href="./blog.html" class="site-nav__link">Blog</a>
+        <a href="./about.html" class="site-nav__link">About</a>
+        <a href="./contact.html" class="site-nav__link">Contact</a>
       </nav>
-      <div class="flex items-center gap-3">
-        <button id="u-menu-btn" aria-label="Open menu" class="grid h-10 w-10 place-items-center rounded-lg border border-white/20 text-white md:hidden">
-          <span style="width:18px;height:2px;background:white;display:block;box-shadow:0 6px 0 0 white, 0 -6px 0 0 white"></span>
+      <div class="site-header__actions">
+        <button id="u-menu-btn" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="u-mobile">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="4" y1="7"  x2="20" y2="7"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="17" x2="20" y2="17"/>
+          </svg>
         </button>
-        <a href="./apps.html" class="hidden md:inline-flex u-btn u-btn-primary rounded-xl px-4 py-2 text-sm font-semibold">Explore Apps</a>
+        <a href="./apps.html" class="btn btn--primary btn--header">Explore Apps</a>
       </div>
     </div>
-    </header>
+  </header>
 
-    <!-- Mobile drawer (added) -->
-    <nav id="u-mobile" class="fixed inset-0 z-50 hidden md:hidden">
-      <!-- backdrop -->
-      <div class="absolute inset-0 bg-black/50" data-close></div>
-      <!-- panel -->
-      <div class="ml-auto h-full w-80 max-w-[85vw] bg-[var(--ulix-primary)] text-white p-6 shadow-xl relative">
-        <div class="flex items-center justify-between mb-6">
-          <span class="text-lg font-semibold tracking-wide">Menu</span>
-          <button class="p-2 rounded-lg border border-white/20" aria-label="Close menu" data-close>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-            </svg>
-          </button>
-        </div>
-        <ul class="space-y-4 text-base">
-          <li><a href="./index.html" class="block" data-close>Home</a></li>
-          <li><a href="./apps.html" class="block" data-close>Apps</a></li>
-          <li><a href="./blog.html" class="block" data-close>Blog</a></li>
-          <li><a href="./about.html" class="block" data-close>About</a></li>
-          <li><a href="./contact.html" class="block" data-close>Contact</a></li>
-        </ul>
+  <div id="u-mobile" class="drawer" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+    <div class="drawer__backdrop" data-close></div>
+    <div class="drawer__panel">
+      <div class="drawer__header">
+        <span class="drawer__title">Menu</span>
+        <button class="drawer__close" aria-label="Close menu" data-close>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
       </div>
-    </nav>
+      <ul class="drawer__list">
+        <li><a class="drawer__link" href="./index.html" data-close>Home</a></li>
+        <li><a class="drawer__link" href="./apps.html" data-close>Apps</a></li>
+        <li><a class="drawer__link" href="./blog.html" data-close>Blog</a></li>
+        <li><a class="drawer__link" href="./about.html" data-close>About</a></li>
+        <li><a class="drawer__link" href="./contact.html" data-close>Contact</a></li>
+      </ul>
+    </div>
+  </div>
 
-    <main>
-    <!-- Hero -->
-    <section class="u-hero-bg text-white py-8 text-center" style="background: linear-gradient(180deg, #001227, var(--ulix-primary));">
-      <div class="mx-auto u-container px-4 sm:px-6">
-        <h1 class="text-4xl md:text-5xl font-semibold tracking-tight">Privacy at Ulix</h1>
-        <p class="mt-3 text-white/80 max-w-2xl mx-auto">
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="page-hero__title">Privacy at Ulix</h1>
+        <p class="page-hero__subtitle">
           Ulix is privacy-first. We don’t run ads or sell personal data, and many apps do not require an account.
           Some apps may use limited third-party services for core functionality or reliability diagnostics as described in each app-specific policy.
           For details, see the app-specific policies below.
@@ -83,62 +86,54 @@
       </div>
     </section>
 
-    <!-- App-specific links -->
-    <section class="py-10">
-      <div class="mx-auto u-container px-4 sm:px-6 grid gap-6">
-        <div class="u-card rounded-2xl border bg-white p-6">
-          <h2 class="text-xl font-semibold" style="color: var(--ulix-primary)">App-Specific Privacy Policies</h2>
-          <ul class="mt-3 list-disc pl-5 text-sm text-slate-700">
-            <li><a class="underline" href="./gutenprivacy.html">Guten Privacy Policy</a></li>
-            <li><a class="underline" href="./shelfscanprivacy.html">Shelf Scan Privacy Policy</a></li>
-            <li><a class="underline" href="./keepclipprivacypolicy.html">Keep Clip Privacy Policy</a></li>
-            <li><a class="underline" href="./trackanalysisprivacy.html">Track Analysis Privacy Policy</a></li>
+    <section class="section">
+      <div class="container">
+        <div class="card">
+          <h2 class="card__title card__title--lg">App-Specific Privacy Policies</h2>
+          <ul class="prose" style="margin-top:0.75rem">
+            <li><a class="underline-accent" href="./gutenprivacy.html">Guten Privacy Policy</a></li>
+            <li><a class="underline-accent" href="./shelfscanprivacy.html">Shelf Scan Privacy Policy</a></li>
+            <li><a class="underline-accent" href="./keepclipprivacypolicy.html">Keep Clip Privacy Policy</a></li>
+            <li><a class="underline-accent" href="./trackanalysisprivacy.html">Track Analysis Privacy Policy</a></li>
           </ul>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="border-t py-10" style="background: var(--ulix-primary); border-color: rgba(255,255,255,.1)">
-    <div class="mx-auto u-container px-4 sm:px-6">
-      <div class="grid gap-6 text-white/80 md:grid-cols-3">
-        <div><div class="mb-1 text-white">ULIX</div><p class="text-sm text-white/70">Precision tools for modern odysseys.</p></div>
-        <div class="grid grid-cols-2 gap-3 text-sm">
-          <a class="hover:text-white" href="./apps.html">Apps</a>
-          <a class="hover:text-white" href="./blog.html">Blog</a>
-          <a class="hover:text-white" href="./support.html">Support</a>
-          <a class="hover:text-white" href="./about.html">About</a>
-          <a class="hover:text-white" href="./contact.html">Contact</a>
-          <a class="hover:text-white" href="./terms.html">Terms</a>
-          <a class="hover:text-white" href="./privacy.html">Privacy</a>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="./icons/favicon.png" alt="" width="32" height="32" style="border-radius:0.5rem" />
+          <div>
+            <div class="site-footer__brand-name">ULIX</div>
+            <p class="site-footer__tag">Precision tools for modern odysseys.</p>
+          </div>
+        </div>
+        <div class="site-footer__links">
+          <a href="./apps.html">Apps</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./support.html">Support</a>
+          <a href="./about.html">About</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./terms.html">Terms</a>
+          <a href="./privacy.html">Privacy</a>
         </div>
         <div>
-          <form action="https://buttondown.com/api/emails/embed-subscribe/ulix" method="post" target="bd-subscribe" class="grid gap-2" aria-label="Email signup">
-            <label class="text-sm text-white/80">Get product updates</label>
-            <div class="flex gap-2">
-              <input type="email" name="email" placeholder="you@example.com" class="min-w-0 flex-1 rounded-xl border px-3 py-2" />
-              <button class="u-btn u-btn-secondary rounded-xl px-4 py-2 text-sm font-semibold">Subscribe</button>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/ulix" method="post" target="bd-subscribe" class="newsletter" aria-label="Email signup">
+            <label for="nl-email" class="newsletter__label">Get product updates</label>
+            <div class="newsletter__row">
+              <input id="nl-email" class="newsletter__input" type="email" name="email" placeholder="you@example.com" />
+              <button class="btn btn--secondary">Subscribe</button>
             </div>
           </form>
-          <div class="mt-4 text-sm text-white/70">© 2025 Ulix LLC. All rights reserved.</div>
+          <div class="site-footer__copyright">© 2025 Ulix LLC. All rights reserved.</div>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Mobile menu script -->
-    <script>
-      // Mobile menu
-      (function(){
-      const btn = document.getElementById("u-menu-btn");
-      const mobile = document.getElementById("u-mobile");
-      if (!btn || !mobile) return;
-      const closeAll = () => mobile.classList.add("hidden");
-      btn.addEventListener("click", ()=> mobile.classList.remove("hidden"));
-      mobile.querySelectorAll("[data-close]").forEach(el => el.addEventListener("click", closeAll));
-        document.addEventListener("keydown", (e)=>{ if(e.key === "Escape") closeAll(); });
-      })();
-    </script>
-  </body>
-  </html>
+  <script src="./assets/ulix.js" defer></script>
+</body>
+</html>

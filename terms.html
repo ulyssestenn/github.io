@@ -1,243 +1,241 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Terms of Service — Ulix</title>
-  <meta name="description" content="Ulix — Precision tools for modern odysseys. Privacy-first utilities; tools, not traps."/>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    :root {
-      --ulix-primary: #00142F;
-      --ulix-accent:  #B49041;
-      --ulix-bg:      #F7F7F5;
-      --ulix-surface: #FFFFFF;
-    }
-    .u-container { max-width: 1120px; }
-    .u-card { box-shadow: 0 10px 25px rgba(0,0,0,.12); border-color: rgba(0,20,47,0.08); }
-    .u-btn { box-shadow: 0 6px 14px rgba(0,0,0,.12); }
-    .u-btn-primary { background: var(--ulix-accent); color: #111; border: 1.5px solid var(--ulix-accent); }
-    .u-btn-secondary { background: var(--ulix-bg); color: var(--ulix-primary); border: 1.5px solid var(--ulix-accent); }
-    .u-nav-bg { background: var(--ulix-primary); }
-  </style>
+  <meta name="description" content="Ulix Terms of Service: license, purchases, privacy, liability, and contact information." />
+  <link rel="canonical" href="https://ulix.app/terms.html" />
+  <meta name="theme-color" content="#00142F" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ulix" />
+  <meta property="og:title" content="Terms of Service — Ulix" />
+  <meta property="og:description" content="Ulix Terms of Service." />
+  <meta property="og:url" content="https://ulix.app/terms.html" />
+  <meta property="og:image" content="https://ulix.app/icons/favicon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Terms of Service — Ulix" />
+  <meta name="twitter:description" content="Ulix Terms of Service." />
+  <meta name="twitter:image" content="https://ulix.app/icons/favicon.png" />
+
+  <link rel="icon" href="./icons/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="./icons/favicon.png" />
+  <link rel="stylesheet" href="./assets/ulix.css" />
 </head>
 
-<body class="min-h-screen" style="background: var(--ulix-bg); color: #101418;">
-  <!-- Full Header -->
-  <header class="sticky top-0 z-40 border-b border-white/10 u-nav-bg">
-    <div class="mx-auto u-container px-4 sm:px-6 flex h-16 items-center justify-between">
-      <div class="flex items-center gap-3 text-white">
-        <img src="./icons/favicon.png" class="h-9 w-9 rounded-lg" alt="Ulix mark" />
-        <span class="text-lg font-semibold tracking-wide">ULIX</span>
-      </div>
-      <nav class="hidden md:flex gap-7">
-        <a href="./index.html" class="text-sm font-medium text-white/80 hover:text-white">Home</a>
-        <a href="./apps.html" class="text-sm font-medium text-white/80 hover:text-white">Apps</a>
-        <a href="./blog.html" class="text-sm font-medium text-white/80 hover:text-white">Blog</a>
-        <a href="./about.html" class="text-sm font-medium text-white/80 hover:text-white">About</a>
-        <a href="./contact.html" class="text-sm font-medium text-white/80 hover:text-white">Contact</a>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="./index.html" class="site-brand">
+        <img src="./icons/favicon.png" alt="" class="site-brand__logo" />
+        <span class="site-brand__name">ULIX</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="./index.html" class="site-nav__link">Home</a>
+        <a href="./apps.html" class="site-nav__link">Apps</a>
+        <a href="./blog.html" class="site-nav__link">Blog</a>
+        <a href="./about.html" class="site-nav__link">About</a>
+        <a href="./contact.html" class="site-nav__link">Contact</a>
       </nav>
-      <div class="flex items-center gap-3">
-        <button id="u-menu-btn" aria-label="Open menu" class="grid h-10 w-10 place-items-center rounded-lg border border-white/20 text-white md:hidden">
-          <span style="width:18px;height:2px;background:white;display:block;box-shadow:0 6px 0 0 white, 0 -6px 0 0 white"></span>
+      <div class="site-header__actions">
+        <button id="u-menu-btn" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="u-mobile">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="4" y1="7"  x2="20" y2="7"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="17" x2="20" y2="17"/>
+          </svg>
         </button>
-        <a href="./apps.html" class="hidden md:inline-flex u-btn u-btn-primary rounded-xl px-4 py-2 text-sm font-semibold">Explore Apps</a>
-      </div>
-      </div>
-    </header>
-
-    <!-- Mobile drawer (added) -->
-    <nav id="u-mobile" class="fixed inset-0 z-50 hidden md:hidden">
-      <!-- backdrop -->
-      <div class="absolute inset-0 bg-black/50" data-close></div>
-      <!-- panel -->
-      <div class="ml-auto h-full w-80 max-w-[85vw] bg-[var(--ulix-primary)] text-white p-6 shadow-xl relative">
-        <div class="flex items-center justify-between mb-6">
-          <span class="text-lg font-semibold tracking-wide">Menu</span>
-          <button class="p-2 rounded-lg border border-white/20" aria-label="Close menu" data-close>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-            </svg>
-          </button>
-        </div>
-        <ul class="space-y-4 text-base">
-          <li><a href="./index.html" class="block" data-close>Home</a></li>
-          <li><a href="./apps.html" class="block" data-close>Apps</a></li>
-          <li><a href="./blog.html" class="block" data-close>Blog</a></li>
-          <li><a href="./about.html" class="block" data-close>About</a></li>
-          <li><a href="./contact.html" class="block" data-close>Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <!-- Terms Content -->
-    <section class="py-14">
-    <div class="mx-auto max-w-[1120px] px-4 sm:px-6">
-      <h1 class="text-3xl font-semibold" style="color: var(--ulix-primary)">Terms of Service</h1>
-      <div class="text-sm text-slate-600">Last updated: 2025-08-16</div>
-
-      <div class="mt-6 grid gap-6">
-        <div class="h-full rounded-2xl border bg-white p-5 shadow u-card">
-          <h2 class="text-lg font-semibold" style="color: var(--ulix-primary)">Plain‑English summary</h2>
-          <ul class="mt-2 list-disc pl-5 text-sm text-slate-700">
-            <li>You can use Ulix apps under a personal, non‑transferable license.</li>
-            <li>Purchases and refunds are handled by the app store (e.g., Google Play).</li>
-            <li>We own the Ulix site/app content and trademarks; all rights reserved.</li>
-            <li>We don’t accept unsolicited ideas; if you send them, we may use similar ideas.</li>
-            <li>We provide the software "as is"; our liability is limited.</li>
-            <li>We respect privacy; see the Privacy Policy for details.</li>
-            <li>Arkansas law applies; venue is Washington County (Springdale), USA.</li>
-          </ul>
-        </div>
-
-        <div class="h-full rounded-2xl border bg-white p-5 shadow u-card">
-          <h3 class="font-semibold" style="color: var(--ulix-primary)">Acceptance of Terms</h3>
-          <p class="mt-2 text-sm text-slate-700">These Terms are an agreement between you and Ulix LLC ("Ulix"). By accessing the website or using any Ulix application (the "Services"), you agree to these Terms. If you do not agree, do not use the Services. We may update these Terms prospectively; changes are indicated by the date above.</p>
-        </div>
-
-        <div class="h-full rounded-2xl border bg-white p-5 shadow u-card">
-          <h3 class="font-semibold" style="color: var(--ulix-primary)">Eligibility</h3>
-          <p class="mt-2 text-sm text-slate-700">You must be able to form a binding contract in your jurisdiction. The Services are intended for personal use. Where applicable, you are responsible for compliance with local laws.</p>
-        </div>
-
-        <div class="h-full rounded-2xl border bg-white p-5 shadow u-card">
-          <h3 class="font-semibold" style="color: var(--ulix-primary)">License and Acceptable Use</h3>
-          <p class="mt-2 text-sm text-slate-700">Subject to these Terms, Ulix grants you a limited, non‑exclusive, non‑transferable, revocable license to install and use our apps for personal, non‑commercial purposes. You agree not to: (a) reverse engineer except as permitted by law; (b) sell or sublicense the Services; (c) access the Services to build a competing product; (d) disrupt or interfere with the Services; or (e) use the Services for unlawful purposes.</p>
-        </div>
-
-        <div class="h-full rounded-2xl border bg-white p-5 shadow u-card">
-          <h3 class="font-semibold" style="color: var(--ulix-primary)">Purchases and Refunds</h3>
-          <p class="mt-2 text-sm text-slate-700">If you purchase an Ulix app through a platform (e.g., Google Play), the platform’s terms govern billing, taxes, and refunds. Please refer to the store’s policies for refund eligibility and timelines. If you have an issue, please use our <a href="support.html" class="underline decoration-[#B49041] underline-offset-4 hover:text-slate-700">Support form</a>. <span class="text-xs block mt-1">You can also <button class="underline decoration-[#B49041] underline-offset-4 hover:text-slate-700" data-reveal-email>reveal our support email</button>.</span></p>
-        </div>
-
-        <div class="h-full rounded-2xl border bg-white p-5 shadow u-card">
-          <h3 class="font-semibold" style="color: var(--ulix-primary)">User Content</h3>
-          <p class="mt-2 text-sm text-slate-700">Ulix does not host accounts for most apps and aims for local‑first processing. If you submit content to us (e.g., via support email), you retain ownership of your content. You grant Ulix a limited license to use that content solely to provide support and operate or improve the Services.</p>
-        </div>
-
-        <div class="h-full rounded-2xl border bg-white p-5 shadow u-card">
-          <h3 class="font-semibold" style="color: var(--ulix-primary)">Intellectual Property</h3>
-          <p class="mt-2 text-sm text-slate-700">All rights, title, and interest in and to the Services—including software, text, graphics, UI, and design—are owned by Ulix or its licensors and are protected by copyright, trademark, and other laws. "ULIX" and related logos are trademarks of Ulix LLC. Third‑party names and marks are the property of their respective owners.</p>
-        </div>
-
-        <div class="h-full rounded-2xl border bg-white p-5 shadow u-card">
-          <h3 class="font-semibold" style="color: var(--ulix-primary)">Feedback and Unsolicited Ideas</h3>
-          <p class="mt-2 text-sm text-slate-700">Ulix does not accept or consider unsolicited ideas or proposals. If you nevertheless send any, you agree they are non‑confidential and non‑proprietary, we have no obligation to review or compensate you, and Ulix may already be developing similar products or features.</p>
-        </div>
-
-        <div class="h-full rounded-2xl border bg-white p-5 shadow u-card">
-          <h3 class="font-semibold" style="color: var(--ulix-primary)">Privacy</h3>
-          <p class="mt-2 text-sm text-slate-700">Your privacy matters. Our apps are designed to minimize data collection and favor on‑device processing. Please review our Privacy Policy for details on what we collect (if anything) and why.</p>
-        </div>
-
-        <div class="h-full rounded-2xl border bg-white p-5 shadow u-card">
-          <h3 class="font-semibold" style="color: var(--ulix-primary)">Third‑Party Services and Links</h3>
-          <p class="mt-2 text-sm text-slate-700">The Services may reference third‑party sites, stores, libraries, or services. Ulix is not responsible for third‑party content, policies, or practices. Your use of third‑party services is governed by their terms and policies.</p>
-        </div>
-
-        <div class="h-full rounded-2xl border bg-white p-5 shadow u-card">
-          <h3 class="font-semibold" style="color: var(--ulix-primary)">Disclaimers</h3>
-          <p class="mt-2 text-sm text-slate-700">TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON‑INFRINGEMENT. Ulix does not warrant that the Services will be uninterrupted, secure, or error‑free.</p>
-        </div>
-
-        <div class="h-full rounded-2xl border bg-white p-5 shadow u-card">
-          <h3 class="font-semibold" style="color: var(--ulix-primary)">Limitation of Liability</h3>
-          <p class="mt-2 text-sm text-slate-700">TO THE MAXIMUM EXTENT PERMITTED BY LAW, ULIX AND ITS AFFILIATES, OFFICERS, EMPLOYEES, AGENTS, AND PARTNERS WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, DATA, OR GOODWILL, ARISING OUT OF OR RELATED TO YOUR USE OF THE SERVICES. ULIX’S TOTAL LIABILITY FOR ANY CLAIMS RELATING TO THE SERVICES IS LIMITED TO THE AMOUNTS YOU PAID (IF ANY) FOR THE APPLICABLE APP IN THE TWELVE (12) MONTHS BEFORE THE EVENT GIVING RISE TO LIABILITY.</p>
-        </div>
-
-        <div class="h-full rounded-2xl border bg-white p-5 shadow u-card">
-          <h3 class="font-semibold" style="color: var(--ulix-primary)">Indemnification</h3>
-          <p class="mt-2 text-sm text-slate-700">You agree to defend, indemnify, and hold harmless Ulix from and against any claims, liabilities, damages, losses, and expenses (including reasonable attorneys’ fees) arising out of or related to (a) your use of the Services; (b) your violation of these Terms; or (c) your violation of any rights of another person or entity.</p>
-        </div>
-
-        <div class="h-full rounded-2xl border bg-white p-5 shadow u-card">
-          <h3 class="font-semibold" style="color: var(--ulix-primary)">Governing Law and Venue</h3>
-          <p class="mt-2 text-sm text-slate-700">These Terms are governed by the laws of the State of Arkansas, U.S.A., without regard to conflict‑of‑laws principles. You and Ulix agree to the exclusive jurisdiction and venue of the state and federal courts located in Washington County, Arkansas (Springdale).</p>
-        </div>
-
-        <div class="h-full rounded-2xl border bg-white p-5 shadow u-card">
-          <h3 class="font-semibold" style="color: var(--ulix-primary)">Miscellaneous</h3>
-          <p class="mt-2 text-sm text-slate-700">If any provision of these Terms is found unenforceable, it will be enforced to the maximum extent permissible and the remaining provisions will remain in full force. These Terms constitute the entire agreement between you and Ulix regarding the Services. We may assign these Terms; you may not assign them without our consent. Headings are for convenience only.</p>
-        </div>
-
-        <div class="h-full rounded-2xl border bg-white p-5 shadow u-card">
-          <h3 class="font-semibold" style="color: var(--ulix-primary)">Contact</h3>
-          <div class="mt-2 text-sm text-slate-700">
-            <div>Mailing address: <button class="underline decoration-[#B49041] underline-offset-4 hover:text-slate-700" data-reveal-address>Reveal mailing address</button></div>
-            <div class="mt-1">Email: <button class="underline decoration-[#B49041] underline-offset-4 hover:text-slate-700" data-reveal-email>Reveal email</button></div>
-            <div class="mt-2"><a href="support.html" class="underline decoration-[#B49041] underline-offset-4 hover:text-slate-700">Open Support form →</a></div>
-          </div>
-        </div>
+        <a href="./apps.html" class="btn btn--primary btn--header">Explore Apps</a>
       </div>
     </div>
-  </section>
+  </header>
 
- <!-- Full Footer -->
-  <footer class="border-t py-10" style="background: var(--ulix-primary); border-color: rgba(255,255,255,.1)">
-    <div class="mx-auto u-container px-4 sm:px-6">
-      <div class="grid gap-6 text-white/80 md:grid-cols-3">
-        <div class="flex items-start gap-3">
-          <img src="./icons/favicon.png" class="h-8 w-8 rounded-lg" alt="Ulix" />
+  <div id="u-mobile" class="drawer" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+    <div class="drawer__backdrop" data-close></div>
+    <div class="drawer__panel">
+      <div class="drawer__header">
+        <span class="drawer__title">Menu</span>
+        <button class="drawer__close" aria-label="Close menu" data-close>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <ul class="drawer__list">
+        <li><a class="drawer__link" href="./index.html" data-close>Home</a></li>
+        <li><a class="drawer__link" href="./apps.html" data-close>Apps</a></li>
+        <li><a class="drawer__link" href="./blog.html" data-close>Blog</a></li>
+        <li><a class="drawer__link" href="./about.html" data-close>About</a></li>
+        <li><a class="drawer__link" href="./contact.html" data-close>Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="section section--lg">
+      <div class="container">
+        <h1 style="font-size:1.875rem;font-weight:600;color:var(--ulix-primary)">Terms of Service</h1>
+        <div class="meta-date">Last updated: 2025-08-16</div>
+
+        <div class="stack" style="margin-top:1.5rem">
+
+          <div class="card">
+            <h2 class="card__title">Plain-English summary</h2>
+            <ul class="prose" style="margin-top:0.5rem">
+              <li>You can use Ulix apps under a personal, non-transferable license.</li>
+              <li>Purchases and refunds are handled by the app store (e.g., Google Play).</li>
+              <li>We own the Ulix site/app content and trademarks; all rights reserved.</li>
+              <li>We don’t accept unsolicited ideas; if you send them, we may use similar ideas.</li>
+              <li>We provide the software "as is"; our liability is limited.</li>
+              <li>We respect privacy; see the Privacy Policy for details.</li>
+              <li>Arkansas law applies; venue is Washington County (Springdale), USA.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Acceptance of Terms</h3>
+            <p class="card__text">These Terms are an agreement between you and Ulix LLC ("Ulix"). By accessing the website or using any Ulix application (the "Services"), you agree to these Terms. If you do not agree, do not use the Services. We may update these Terms prospectively; changes are indicated by the date above.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Eligibility</h3>
+            <p class="card__text">You must be able to form a binding contract in your jurisdiction. The Services are intended for personal use. Where applicable, you are responsible for compliance with local laws.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">License and Acceptable Use</h3>
+            <p class="card__text">Subject to these Terms, Ulix grants you a limited, non-exclusive, non-transferable, revocable license to install and use our apps for personal, non-commercial purposes. You agree not to: (a) reverse engineer except as permitted by law; (b) sell or sublicense the Services; (c) access the Services to build a competing product; (d) disrupt or interfere with the Services; or (e) use the Services for unlawful purposes.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Purchases and Refunds</h3>
+            <p class="card__text">If you purchase an Ulix app through a platform (e.g., Google Play), the platform’s terms govern billing, taxes, and refunds. Please refer to the store’s policies for refund eligibility and timelines. If you have an issue, please use our <a href="support.html" class="underline-accent">Support form</a>. You can also <button class="underline-accent" style="background:none;border:0;padding:0;color:inherit" data-reveal-email>reveal our support email</button>.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">User Content</h3>
+            <p class="card__text">Ulix does not host accounts for most apps and aims for local-first processing. If you submit content to us (e.g., via support email), you retain ownership of your content. You grant Ulix a limited license to use that content solely to provide support and operate or improve the Services.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Intellectual Property</h3>
+            <p class="card__text">All rights, title, and interest in and to the Services—including software, text, graphics, UI, and design—are owned by Ulix or its licensors and are protected by copyright, trademark, and other laws. "ULIX" and related logos are trademarks of Ulix LLC. Third-party names and marks are the property of their respective owners.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Feedback and Unsolicited Ideas</h3>
+            <p class="card__text">Ulix does not accept or consider unsolicited ideas or proposals. If you nevertheless send any, you agree they are non-confidential and non-proprietary, we have no obligation to review or compensate you, and Ulix may already be developing similar products or features.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Privacy</h3>
+            <p class="card__text">Your privacy matters. Our apps are designed to minimize data collection and favor on-device processing. Please review our Privacy Policy for details on what we collect (if anything) and why.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Third-Party Services and Links</h3>
+            <p class="card__text">The Services may reference third-party sites, stores, libraries, or services. Ulix is not responsible for third-party content, policies, or practices. Your use of third-party services is governed by their terms and policies.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Disclaimers</h3>
+            <p class="card__text">TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. Ulix does not warrant that the Services will be uninterrupted, secure, or error-free.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Limitation of Liability</h3>
+            <p class="card__text">TO THE MAXIMUM EXTENT PERMITTED BY LAW, ULIX AND ITS AFFILIATES, OFFICERS, EMPLOYEES, AGENTS, AND PARTNERS WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, DATA, OR GOODWILL, ARISING OUT OF OR RELATED TO YOUR USE OF THE SERVICES. ULIX’S TOTAL LIABILITY FOR ANY CLAIMS RELATING TO THE SERVICES IS LIMITED TO THE AMOUNTS YOU PAID (IF ANY) FOR THE APPLICABLE APP IN THE TWELVE (12) MONTHS BEFORE THE EVENT GIVING RISE TO LIABILITY.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Indemnification</h3>
+            <p class="card__text">You agree to defend, indemnify, and hold harmless Ulix from and against any claims, liabilities, damages, losses, and expenses (including reasonable attorneys’ fees) arising out of or related to (a) your use of the Services; (b) your violation of these Terms; or (c) your violation of any rights of another person or entity.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Governing Law and Venue</h3>
+            <p class="card__text">These Terms are governed by the laws of the State of Arkansas, U.S.A., without regard to conflict-of-laws principles. You and Ulix agree to the exclusive jurisdiction and venue of the state and federal courts located in Washington County, Arkansas (Springdale).</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Miscellaneous</h3>
+            <p class="card__text">If any provision of these Terms is found unenforceable, it will be enforced to the maximum extent permissible and the remaining provisions will remain in full force. These Terms constitute the entire agreement between you and Ulix regarding the Services. We may assign these Terms; you may not assign them without our consent. Headings are for convenience only.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Contact</h3>
+            <div class="card__text">
+              <div>Mailing address: <button class="underline-accent" style="background:none;border:0;padding:0;color:inherit" data-reveal-address>Reveal mailing address</button></div>
+              <div style="margin-top:0.25rem">Email: <button class="underline-accent" style="background:none;border:0;padding:0;color:inherit" data-reveal-email>Reveal email</button></div>
+              <div style="margin-top:0.5rem"><a href="support.html" class="underline-accent">Open Support form →</a></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="./icons/favicon.png" alt="" width="32" height="32" style="border-radius:0.5rem" />
           <div>
-            <div class="mb-1 text-white">ULIX</div>
-            <p class="text-sm text-white/70">Precision tools for modern odysseys.</p>
+            <div class="site-footer__brand-name">ULIX</div>
+            <p class="site-footer__tag">Precision tools for modern odysseys.</p>
           </div>
         </div>
-        <div class="grid grid-cols-2 gap-3 text-sm">
-          <a class="hover:text-white" href="./apps.html">Apps</a>
-          <a class="hover:text-white" href="./blog.html">Blog</a>
-          <a class="hover:text-white" href="./support.html">Support</a>
-          <a class="hover:text-white" href="./about.html">About</a>
-          <a class="hover:text-white" href="./contact.html">Contact</a>
-          <a class="hover:text-white" href="./terms.html">Terms</a>
-          <a class="hover:text-white" href="./privacy.html">Privacy</a>
+        <div class="site-footer__links">
+          <a href="./apps.html">Apps</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./support.html">Support</a>
+          <a href="./about.html">About</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./terms.html">Terms</a>
+          <a href="./privacy.html">Privacy</a>
         </div>
         <div>
-          <form action="https://buttondown.com/api/emails/embed-subscribe/ulix" method="post" target="bd-subscribe" class="grid gap-2" aria-label="Email signup">
-            <label class="text-sm text-white/80">Get product updates</label>
-            <div class="flex gap-2">
-              <input type="email" name="email" placeholder="you@example.com" class="min-w-0 flex-1 rounded-xl border px-3 py-2" />
-              <button class="u-btn u-btn-secondary rounded-xl px-4 py-2 text-sm font-semibold">Subscribe</button>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/ulix" method="post" target="bd-subscribe" class="newsletter" aria-label="Email signup">
+            <label for="nl-email" class="newsletter__label">Get product updates</label>
+            <div class="newsletter__row">
+              <input id="nl-email" class="newsletter__input" type="email" name="email" placeholder="you@example.com" />
+              <button class="btn btn--secondary">Subscribe</button>
             </div>
           </form>
-          <div class="mt-4 text-sm text-white/70">© 2025 Ulix LLC. All rights reserved.</div>
+          <div class="site-footer__copyright">© 2025 Ulix LLC. All rights reserved.</div>
         </div>
       </div>
     </div>
   </footer>
 
-
-  <!-- Mobile menu script -->
+  <script src="./assets/ulix.js" defer></script>
   <script>
-    // Mobile menu
-    (function(){
-      const btn = document.getElementById("u-menu-btn");
-      const mobile = document.getElementById("u-mobile");
-      if (!btn || !mobile) return;
-      const closeAll = () => mobile.classList.add("hidden");
-      btn.addEventListener("click", ()=> mobile.classList.remove("hidden"));
-      mobile.querySelectorAll("[data-close]").forEach(el => el.addEventListener("click", closeAll));
-      document.addEventListener("keydown", (e)=>{ if(e.key === "Escape") closeAll(); });
-    })();
+    // Reveal email / address on click — preserves the pattern from the old page
+    (function () {
+      var EMAIL = String.fromCharCode(115,117,112,112,111,114,116,64,117,108,105,120,46,97,112,112); // support@ulix.app
 
-    // Reveal email / address
-    (function(){
-      const emailBtns = document.querySelectorAll("[data-reveal-email]");
-      const addrBtns = document.querySelectorAll("[data-reveal-address]");
-      const email = String.fromCharCode(115,117,112,112,111,114,116,64,117,108,105,120,46,97,112,112); // support@ulix.app
-      emailBtns.forEach(btn => btn.addEventListener("click", ()=>{
-        const a = document.createElement("a");
-        a.href = "mailto:" + email;
-        a.textContent = email;
-        a.className = btn.className;
-        btn.replaceWith(a);
-      }));
-      addrBtns.forEach(btn => btn.addEventListener("click", ()=>{
-        const wrap = document.createElement("address");
-        wrap.className = "not-italic";
-        wrap.innerHTML = "<div>Ulix LLC</div><div>P.O. Box 132</div><div>Elm Springs, AR 72728</div><div>United States</div>";
-        btn.replaceWith(wrap);
-      }));
+      document.querySelectorAll('[data-reveal-email]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var a = document.createElement('a');
+          a.href = 'mailto:' + EMAIL;
+          a.textContent = EMAIL;
+          a.className = btn.className;
+          btn.replaceWith(a);
+        });
+      });
+
+      document.querySelectorAll('[data-reveal-address]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var wrap = document.createElement('address');
+          wrap.style.fontStyle = 'normal';
+          wrap.innerHTML = '<div>Ulix LLC</div><div>P.O. Box 132</div><div>Elm Springs, AR 72728</div><div>United States</div>';
+          btn.replaceWith(wrap);
+        });
+      });
     })();
   </script>
 </body>
