@@ -4,318 +4,220 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ulix — Tools, Not Traps</title>
-  <meta name="description" content="Ulix — Precision tools for modern odysseys. Privacy-first utilities; tools, not traps." />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    :root {
-      --ulix-primary: #00142F;
-      --ulix-accent:  #B49041;
-      --ulix-bg:      #F7F7F5;
-      --ulix-surface: #FFFFFF;
-    }
-    .u-container { max-width: 1280px; }
-    .u-card { box-shadow: 0 10px 25px rgba(0,0,0,.12); border-color: rgba(0,20,47,0.08); }
-    .u-btn { box-shadow: 0 6px 14px rgba(0,0,0,.12); }
-    .u-btn-primary { background: var(--ulix-accent); color: #111; border: 1.5px solid var(--ulix-accent); }
-    .u-btn-secondary { background: var(--ulix-bg); color: var(--ulix-primary); border: 1.5px solid var(--ulix-accent); }
-    .u-nav-bg { background: var(--ulix-primary); }
-    .u-hero-bg { background: linear-gradient(180deg, #001227, var(--ulix-primary)); }
-    .u-carousel { 
-      height: 260px; 
-      width: 100%;
-      max-width: 100%;
-    }
-    .u-carousel-track { display: flex; width: 100%; height: 100%; }
-    .u-carousel-slide {
-      min-width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      box-sizing: border-box;
-      padding: 0 0.75rem;
-    }
-    
-    /* Ensure buttons don't wrap awkwardly */
-    .u-carousel-slide .flex {
-      flex-wrap: nowrap;
-    }
-    
-    @media (max-width: 767px) {
-      .u-carousel { height: auto; }
-      .u-carousel-track { height: auto; }
-      .u-carousel-slide {
-        height: auto;
-        padding: 1rem 0.5rem;
-      }
-    }
-  </style>
+  <meta name="description" content="Ulix makes privacy-first Android apps. Free basic features, optional one-time premium purchases. No ads, no tracking, no data brokering." />
+  <link rel="canonical" href="https://ulix.app/" />
+  <meta name="theme-color" content="#00142F" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ulix" />
+  <meta property="og:title" content="Ulix — Tools, Not Traps" />
+  <meta property="og:description" content="Privacy-first Android apps. No ads, no tracking, no data brokering." />
+  <meta property="og:url" content="https://ulix.app/" />
+  <meta property="og:image" content="https://ulix.app/icons/favicon.png" />
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Ulix — Tools, Not Traps" />
+  <meta name="twitter:description" content="Privacy-first Android apps. No ads, no tracking, no data brokering." />
+  <meta name="twitter:image" content="https://ulix.app/icons/favicon.png" />
+
+  <link rel="icon" href="./icons/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="./icons/favicon.png" />
+  <link rel="stylesheet" href="./assets/ulix.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Ulix LLC",
+    "url": "https://ulix.app/",
+    "logo": "https://ulix.app/icons/favicon.png",
+    "sameAs": []
+  }
+  </script>
 </head>
 
-<body class="min-h-screen overflow-x-hidden" style="background: var(--ulix-bg); color: #101418;">
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
   <!-- Header -->
-  <header class="sticky top-0 z-40 border-b border-white/10 u-nav-bg">
-    <div class="mx-auto u-container px-4 sm:px-6 flex h-16 items-center justify-between">
-      <div class="flex items-center gap-3 text-white">
-        <img src="./icons/favicon.png" alt="Ulix mark" class="h-9 w-9 rounded-lg" />
-        <span class="text-lg font-semibold tracking-wide">ULIX</span>
-      </div>
-      <nav class="hidden md:flex gap-7">
-        <a href="./index.html" class="text-sm font-medium text-white/80 hover:text-white">Home</a>
-        <a href="./apps.html" class="text-sm font-medium text-white/80 hover:text-white">Apps</a>
-        <a href="./blog.html" class="text-sm font-medium text-white/80 hover:text-white">Blog</a>
-        <a href="./about.html" class="text-sm font-medium text-white/80 hover:text-white">About</a>
-        <a href="./contact.html" class="text-sm font-medium text-white/80 hover:text-white">Contact</a>
+  <header class="site-header">
+    <div class="container container--wide site-header__inner">
+      <a href="./index.html" class="site-brand">
+        <img src="./icons/favicon.png" alt="" class="site-brand__logo" />
+        <span class="site-brand__name">ULIX</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="./index.html" class="site-nav__link" aria-current="page">Home</a>
+        <a href="./apps.html" class="site-nav__link">Apps</a>
+        <a href="./blog.html" class="site-nav__link">Blog</a>
+        <a href="./about.html" class="site-nav__link">About</a>
+        <a href="./contact.html" class="site-nav__link">Contact</a>
       </nav>
-      <div class="flex items-center gap-3">
-        <button id="u-menu-btn" aria-label="Open menu" class="grid h-10 w-10 place-items-center rounded-lg border border-white/20 text-white md:hidden">
-          <span style="width:18px;height:2px;background:white;display:block;box-shadow:0 6px 0 0 white, 0 -6px 0 0 white"></span>
+      <div class="site-header__actions">
+        <button id="u-menu-btn" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="u-mobile">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="4" y1="7"  x2="20" y2="7"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="17" x2="20" y2="17"/>
+          </svg>
         </button>
-        <a href="./apps.html" class="hidden md:inline-flex u-btn u-btn-primary rounded-xl px-4 py-2 text-sm font-semibold">Explore Apps</a>
+        <a href="./apps.html" class="btn btn--primary btn--header">Explore Apps</a>
       </div>
     </div>
   </header>
 
-  <!-- Mobile drawer (added) -->
-  <nav id="u-mobile" class="fixed inset-0 z-50 hidden md:hidden">
-    <!-- backdrop -->
-    <div class="absolute inset-0 bg-black/50" data-close></div>
-    <!-- panel -->
-    <div class="ml-auto h-full w-80 max-w-[85vw] bg-[var(--ulix-primary)] text-white p-6 shadow-xl relative">
-      <div class="flex items-center justify-between mb-6">
-        <span class="text-lg font-semibold tracking-wide">Menu</span>
-        <button class="p-2 rounded-lg border border-white/20" aria-label="Close menu" data-close>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+  <!-- Mobile drawer -->
+  <div id="u-mobile" class="drawer" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+    <div class="drawer__backdrop" data-close></div>
+    <div class="drawer__panel">
+      <div class="drawer__header">
+        <span class="drawer__title">Menu</span>
+        <button class="drawer__close" aria-label="Close menu" data-close>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 18L18 6M6 6l12 12"/>
           </svg>
         </button>
       </div>
-      <ul class="space-y-4 text-base">
-        <li><a href="./index.html" class="block" data-close>Home</a></li>
-        <li><a href="./apps.html" class="block" data-close>Apps</a></li>
-        <li><a href="./blog.html" class="block" data-close>Blog</a></li>
-        <li><a href="./about.html" class="block" data-close>About</a></li>
-        <li><a href="./contact.html" class="block" data-close>Contact</a></li>
+      <ul class="drawer__list">
+        <li><a class="drawer__link" href="./index.html" data-close>Home</a></li>
+        <li><a class="drawer__link" href="./apps.html" data-close>Apps</a></li>
+        <li><a class="drawer__link" href="./blog.html" data-close>Blog</a></li>
+        <li><a class="drawer__link" href="./about.html" data-close>About</a></li>
+        <li><a class="drawer__link" href="./contact.html" data-close>Contact</a></li>
       </ul>
     </div>
-  </nav>
+  </div>
 
-  <main>
-    <!-- Hero (brand-first with split content below) -->
-    <section class="u-hero-bg text-white pt-16 pb-6">
-      <div class="mx-auto u-container px-4 sm:px-6">
-        <!-- Big centered wordmark -->
-        <img src="./icons/ulixwordmarkclear.png" alt="Ulix wordmark"
-             class="mx-auto mb-4 h-28 md:h-40 lg:h-52 w-auto" />
+  <main id="main">
+    <!-- Hero wordmark -->
+    <section class="hero">
+      <div class="container container--wide">
+        <img src="./icons/ulixwordmarkclear.png" alt="Ulix wordmark" class="hero__wordmark" />
       </div>
     </section>
 
-    <!-- Split layout -->
-    <section class="bg-[var(--ulix-primary)] text-white py-12">
-      <div class="mx-auto u-container px-4 sm:px-6">
-            <!-- NEW: mobile-narrow wrapper -->
-    <div class="mx-auto w-full max-w-[40rem] md:max-w-none">
-        <div class="grid w-full grid-cols-1 items-center gap-8 lg:grid-cols-2">
-          
-          <!-- Left: tagline + CTAs -->
-          <div class="text-center lg:text-left">
-            <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">Tools, Not Traps</h1>
-            <p class="mt-4 text-white/80">
-              Apps designed to serve you, not sell you. Elegant and distraction-free, with no ads, no tracking, no attention hacking, and no intrusive permissions.
+    <!-- Tagline + carousel -->
+    <section class="split">
+      <div class="container container--wide">
+        <div class="split__grid">
+          <div class="split__text">
+            <h1 class="split__tagline">Tools, Not Traps</h1>
+            <p class="split__lede">
+              Apps designed to serve you, not sell you. Elegant and distraction-free,
+              with no ads, no tracking, no attention hacking, and no intrusive permissions.
             </p>
-            <div class="mt-6 flex flex-col gap-3 sm:flex-row justify-center lg:justify-start">
-              <a href="./apps.html" class="u-btn u-btn-primary rounded-xl px-4 py-2 text-sm font-semibold">Explore Apps</a>
-              <a href="./about.html" class="u-btn u-btn-secondary rounded-xl px-4 py-2 text-sm font-semibold">Why Ulix?</a>
+            <div class="split__ctas">
+              <a href="./apps.html" class="btn btn--primary">Explore Apps</a>
+              <a href="./about.html" class="btn btn--secondary">Why Ulix?</a>
             </div>
           </div>
 
-          <!-- Right: carousel -->
-          <div class="w-full max-w-lg mx-auto lg:max-w-none">
-            <div
-              class="u-carousel relative overflow-hidden rounded-2xl border shadow w-full"
-              style="border-color: rgba(255,255,255,.12); background: rgba(255,255,255,0.05)">
-              <div id="product-carousel-track" class="u-carousel-track transition-transform duration-500 w-full"></div>
-              <div id="product-carousel-dots" class="absolute bottom-3 left-0 right-0 flex justify-center gap-2"></div>
+          <div>
+            <div class="carousel" data-carousel-region
+                 role="region" aria-roledescription="carousel" aria-label="Featured apps">
+              <div class="carousel__viewport">
+                <div id="product-carousel-track" class="carousel__track" aria-live="polite"></div>
+              </div>
+              <div class="carousel__controls">
+                <button type="button" class="carousel__btn" data-carousel-prev aria-label="Previous slide">
+                  <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M10 2L4 8l6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <div id="product-carousel-dots" class="carousel__dots" role="tablist" aria-label="Choose slide"></div>
+                <button type="button" class="carousel__btn" data-carousel-next aria-label="Next slide">
+                  <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M6 2l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <button type="button" class="carousel__btn" data-carousel-pause aria-label="Pause carousel" aria-pressed="false"></button>
+              </div>
             </div>
           </div>
-        </div>
-          
         </div>
       </div>
     </section>
 
     <!-- Why Ulix -->
-   <!-- Why Ulix -->
-<section class="py-12" style="background: var(--ulix-bg)">
-  <div class="mx-auto u-container px-4 sm:px-6" style="max-width:1360px">
-    <div class="mx-auto max-w-8xl grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-      <div class="u-card rounded-2xl border bg-white p-5">
-        <h3 class="text-lg font-semibold" style="color: var(--ulix-primary)">Privacy First</h3>
-        <p class="mt-1 text-sm text-slate-600">
-          Local-first architecture with offline capability. No ads, tracking, or unnecessary accounts —
-          because your data should remain yours.
-        </p>
+    <section class="section section--bg">
+      <div class="container container--wide">
+        <div class="grid grid--4">
+          <div class="card">
+            <h3 class="card__title">Privacy First</h3>
+            <p class="card__text">
+              Local-first architecture with offline capability. No ads, tracking, or unnecessary accounts —
+              because your data should remain yours.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="card__title">Curated by Design</h3>
+            <p class="card__text">
+              Apps shaped by our founder's aesthetic vision. We build for those who share our particular
+              sensibilities and design philosophy.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="card__title">Focused Tools</h3>
+            <p class="card__text">
+              Clean, purposeful interfaces that enhance your life without demanding constant attention
+              or engagement.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="card__title">Built on Products, Not Data</h3>
+            <p class="card__text">
+              We build our revenue around our products, not your data. It's a deliberate choice that
+              shapes everything we create.
+            </p>
+          </div>
+        </div>
       </div>
-
-      <div class="u-card rounded-2xl border bg-white p-5">
-        <h3 class="text-lg font-semibold" style="color: var(--ulix-primary)">Curated by Design</h3>
-        <p class="mt-1 text-sm text-slate-600">
-          Apps shaped by our founder's aesthetic vision. We build for those who share our particular
-          sensibilities and design philosophy.
-        </p>
-      </div>
-
-      <div class="u-card rounded-2xl border bg-white p-5">
-        <h3 class="text-lg font-semibold" style="color: var(--ulix-primary)">Focused Tools</h3>
-        <p class="mt-1 text-sm text-slate-600">
-          Clean, purposeful interfaces that enhance your life without demanding constant attention
-          or engagement.
-        </p>
-      </div>
-
-      <div class="u-card rounded-2xl border bg-white p-5">
-        <h3 class="text-lg font-semibold" style="color: var(--ulix-primary)">Built on Products, Not Data</h3>
-        <p class="mt-1 text-sm text-slate-600">
-          We build our revenue around our products, not your data. It's a deliberate choice that
-          shapes everything we create.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <!-- Featured apps -->
-    <section class="py-10">
-      <div class="mx-auto u-container px-4 sm:px-6">
-        <div class="mb-6 flex items-center justify-between">
-          <h2 class="text-2xl font-semibold" style="color: var(--ulix-primary)">Featured Apps</h2>
-          <a href="./apps.html" class="u-btn u-btn-secondary rounded-xl px-4 py-2 text-sm font-semibold">View All</a>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-head__title">Featured Apps</h2>
+          <a href="./apps.html" class="btn btn--secondary">View All</a>
         </div>
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" id="featured-apps"></div>
+        <div id="featured-apps" class="grid grid--3"></div>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="border-t py-10" style="background: var(--ulix-primary); border-color: rgba(255,255,255,.1)">
-    <div class="mx-auto u-container px-4 sm:px-6">
-      <div class="grid gap-6 text-white/80 md:grid-cols-3">
-        <div><div class="mb-1 text-white">ULIX</div><p class="text-sm text-white/70">Precision tools for modern odysseys.</p></div>
-        <div class="grid grid-cols-2 gap-3 text-sm">
-          <a class="hover:text-white" href="./apps.html">Apps</a>
-          <a class="hover:text-white" href="./blog.html">Blog</a>
-          <a class="hover:text-white" href="./support.html">Support</a>
-          <a class="hover:text-white" href="./about.html">About</a>
-          <a class="hover:text-white" href="./contact.html">Contact</a>
-          <a class="hover:text-white" href="./terms.html">Terms</a>
-          <a class="hover:text-white" href="./privacy.html">Privacy</a>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="./icons/favicon.png" alt="" width="32" height="32" style="border-radius:0.5rem" />
+          <div>
+            <div class="site-footer__brand-name">ULIX</div>
+            <p class="site-footer__tag">Precision tools for modern odysseys.</p>
+          </div>
+        </div>
+        <div class="site-footer__links">
+          <a href="./apps.html">Apps</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./support.html">Support</a>
+          <a href="./about.html">About</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./terms.html">Terms</a>
+          <a href="./privacy.html">Privacy</a>
         </div>
         <div>
-          <form action="https://buttondown.com/api/emails/embed-subscribe/ulix" method="post" target="bd-subscribe" class="grid gap-2" aria-label="Email signup">
-            <label class="text-sm text-white/80">Get product updates</label>
-            <div class="flex gap-2">
-              <input type="email" name="email" placeholder="you@example.com" class="min-w-0 flex-1 rounded-xl border px-3 py-2" />
-              <button class="u-btn u-btn-secondary rounded-xl px-4 py-2 text-sm font-semibold">Subscribe</button>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/ulix" method="post" target="bd-subscribe" class="newsletter" aria-label="Email signup">
+            <label for="nl-email" class="newsletter__label">Get product updates</label>
+            <div class="newsletter__row">
+              <input id="nl-email" class="newsletter__input" type="email" name="email" placeholder="you@example.com" />
+              <button class="btn btn--secondary">Subscribe</button>
             </div>
           </form>
-          <div class="mt-4 text-sm text-white/70">© 2025 Ulix LLC. All rights reserved.</div>
+          <div class="site-footer__copyright">© 2025 Ulix LLC. All rights reserved.</div>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- JS -->
-  <script>
-  // Mobile menu
-  (function(){
-    const btn = document.getElementById("u-menu-btn");
-    const mobile = document.getElementById("u-mobile");
-    if (!btn || !mobile) return;
-    const closeAll = () => mobile.classList.add("hidden");
-    btn.addEventListener("click", ()=> mobile.classList.remove("hidden"));
-    mobile.querySelectorAll("[data-close]").forEach(el => el.addEventListener("click", closeAll));
-    document.addEventListener("keydown", (e)=>{ if(e.key === "Escape") closeAll(); });
-  })();
-
-  // Map slugs to icon filenames in /icons
-  const ICONS = {
-    "shelf-scan": "./icons/shelfscan.png",
-    "keep-clip": "./icons/keepclip.png",
-    "track-analysis": "./icons/trackanalysis.png",
-    "guten": "./icons/guten.png",
-    "loan-it": "./icons/loanit.png",
-    "curious-air": "./icons/curiousair.png"
-  };
-
-  const gp = `<span class="inline-flex items-center gap-2 rounded-lg border px-3 py-2 text-xs font-semibold"
-      style="background: white; color: #111; border-color: rgba(0,0,0,.15)">
-      <svg aria-hidden="true" width="16" height="16" viewBox="0 0 512 512">
-        <defs><linearGradient id="gpb" x1="0" x2="1"><stop offset="0%" stop-color="#34a853"/><stop offset="50%" stop-color="#fbbc04"/><stop offset="100%" stop-color="#ea4335"/></linearGradient></defs>
-        <path fill="url(#gpb)" d="M325 234L120 40c-7-6-20-1-20 10v412c0 11 13 16 20 10l205-194 61-44-61-44z"/>
-        <path fill="#4285f4" d="M390 190l-65 44 65 44c5 3 12-1 12-7v-74c0-6-7-10-12-7z"/>
-      </svg><span>Get it on Google Play</span></span>`;
-
-  const ULIX_APPS = [
-    { slug: "shelf-scan", name: "Shelf Scan", one: "Search shelves instantly.", tag: "CTRL+F your world. Find books, games, and movies fast.", platforms: ["Android"], coming: false, playUrl: "https://play.google.com/store/apps/details?id=com.ulix.shelfscan" },
-    { slug: "keep-clip", name: "Keep Clip", one: "Save text from anywhere. Organize. Export.", tag: "Your digital commonplace book. Search, filter, tag, export.", platforms: ["Android"], coming: false, playUrl: "https://play.google.com/store/apps/details?id=com.bhunt.keepclip" },
-    { slug: "track-analysis", name: "Track Analysis", one: "Wellness logging for analysis.", tag: "Log wellness data. Export in CSV.", platforms: ["Android"], coming: false, playUrl: "https://play.google.com/store/apps/details?id=com.ulix.trackanalysis" },
-    { slug: "guten", name: "Guten", one: "Beautiful reading of classics.", tag: "Project Gutenberg reader — now in Google Play testing.", platforms: ["Android"], coming: false, playUrl: "https://play.google.com/store/apps/details?id=com.bhunt.guten" },
-    { slug: "loan-it", name: "Loan It", one: "Snap a photo, add a name, never lose track.", tag: "Track what you loan and to whom.", platforms: ["Android"], coming: false },
-    { slug: "curious-air", name: "Curious Air", one: "See signals around you.", tag: "Explore the signal and sensor data your phone can detect.", platforms: ["Android"], coming: true }
-  ];
-
-  // Carousel
-  (function(){
-    const track = document.getElementById("product-carousel-track");
-    const dots  = document.getElementById("product-carousel-dots");
-    if (!track || !dots) return;
-
-    const makeSlide = (app) => {
-      const href = app.coming ? "#" : `./product-${app.slug}.html`;
-      const cta  = app.coming ? "Coming soon" : "Learn more";
-      const store = app.playUrl ? `<a href="${app.playUrl}" target="_blank" rel="noopener" class="ml-2">${gp}</a>` : "";
-      return `<div class="u-carousel-slide"><div class="mx-auto grid h-full w-full max-w-full grid-cols-1 md:grid-cols-5 items-center gap-3 px-4 text-white/90">
-        <div class="col-span-2 flex items-center justify-center">
-          <img src="${ICONS[app.slug] || './icons/favicon.png'}" alt="${app.name} icon" class="h-24 w-24 rounded-2xl border bg-white p-1"/>
-        </div>
-        <div class="col-span-3"><span class="inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-semibold" style="border-color: var(--ulix-accent); color: var(--ulix-accent)">${app.name}</span>
-          <h3 class="mt-2 text-xl font-semibold">${app.one}</h3>
-          <p class="mt-1 text-sm text-white/70">${app.tag}</p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <!-- Learn More button commented out until product pages exist -->
-            <!-- <a href="${href}" class="inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold" style="background: var(--ulix-bg); color: var(--ulix-primary); border: 1.5px solid var(--ulix-accent); box-shadow: 0 6px 14px rgba(0,0,0,.12)">${cta}</a> -->
-            ${store}
-          </div></div></div></div>`;
-    };
-
-    track.innerHTML = ULIX_APPS.map(makeSlide).join("");
-    dots.innerHTML = ULIX_APPS.map((_,i)=>`<button class="h-2 w-2 rounded-full" data-dot="${i}" style="background: rgba(255,255,255,.5)"></button>`).join("");
-
-    let i = 0; const len = ULIX_APPS.length;
-    const update = () => {
-      track.style.transform = `translateX(-${i*100}%)`;
-      dots.querySelectorAll("[data-dot]").forEach((d,idx)=> d.style.background = idx===i ? "var(--ulix-accent)" : "rgba(255,255,255,.5)");
-    };
-    dots.querySelectorAll("[data-dot]").forEach((d,idx)=> d.addEventListener("click", ()=>{ i=idx; update(); }));
-    update();
-    setInterval(()=>{ i=(i+1)%len; update(); }, 6000);
-  })();
-
-  // Featured apps
-  (function(){
-    const grid = document.getElementById("featured-apps");
-    if (!grid) return;
-    const card = (app) => `<div class="u-card h-full rounded-2xl border bg-white p-5 text-center">
-      <img src="${ICONS[app.slug] || './icons/favicon.png'}" alt="${app.name} icon" class="mx-auto h-12 w-12 rounded-lg border bg-white p-1 mb-2"/>
-      <h3 class="text-lg font-semibold" style="color: var(--ulix-primary)">${app.name}</h3>
-      <p class="mt-1 text-sm text-slate-600">${app.one}</p>
-      <div class="mt-4 flex gap-2 flex-wrap justify-center">
-        <!-- Learn More button commented out until product pages exist -->
-        <!-- <a href="${app.coming ? "#" : "./product-"+app.slug+".html"}" class="inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold" style="background: var(--ulix-bg); color: var(--ulix-primary); border: 1.5px solid var(--ulix-accent); box-shadow: 0 6px 14px rgba(0,0,0,.12)">${app.coming ? "Coming soon" : "Learn more"}</a> -->
-        ${app.playUrl ? `<a href="${app.playUrl}" target="_blank" rel="noopener">${gp}</a>` : ""}
-      </div></div>`;
-    grid.innerHTML = ULIX_APPS.filter(app => ["shelf-scan", "keep-clip", "guten"].includes(app.slug)).map(card).join("");
-  })();
-  </script>
+  <script src="./assets/ulix.js" defer></script>
 </body>
 </html>
