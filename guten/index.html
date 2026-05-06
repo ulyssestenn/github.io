@@ -566,7 +566,7 @@
   }
   .guten-page .premium__grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px;
   }
   .guten-page .premium-card {
@@ -587,44 +587,13 @@
   .guten-page .premium-card__art {
     background: var(--card-bg);
     border-radius: 6px;
-    height: 320px;
+    height: 260px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     padding-top: 28px;
     overflow: hidden;
   }
-  .guten-page .premium-card__shelves {
-    background: var(--card-bg);
-    border-radius: 6px;
-    min-height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 36px;
-    text-align: center;
-  }
-  .guten-page .shelves-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    max-width: 280px;
-  }
-  .guten-page .shelf-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 14px 18px;
-    border: 1px solid var(--rule);
-    border-radius: 6px;
-    font-family: var(--serif);
-    font-size: 16px;
-    color: var(--fg);
-  }
-  .guten-page .shelf-row__num { color: var(--accent); margin-right: 10px; font-style: italic; }
-  .guten-page .shelf-row__count { font-size: 12px; color: var(--muted); }
   .guten-page .premium-card__title {
     font-family: var(--serif);
     font-weight: 500;
@@ -703,7 +672,7 @@
     .guten-page .premium { padding: 60px 24px; }
     .guten-page .premium__title { font-size: 40px; }
     .guten-page .premium__grid { grid-template-columns: 1fr; gap: 20px; }
-    .guten-page .premium-card__art { height: 260px; }
+    .guten-page .premium-card__art { height: 240px; }
 
     .guten-page .g-cta { padding: 72px 24px; }
     .guten-page .g-cta__title { font-size: 48px; }
@@ -1040,22 +1009,6 @@
             <div>
               <h3 class="premium-card__title">Notes &amp; export</h3>
               <p class="premium-card__body">Search, filter, and bulk-export every highlight and note across your library — Markdown (Wikilinks or standard), CSV, JSON, or plain text.</p>
-            </div>
-          </div>
-
-          <div class="premium-card">
-            <div class="premium-card__num">iv</div>
-            <div class="premium-card__shelves">
-              <div class="shelves-list">
-                <div class="shelf-row"><span><span class="shelf-row__num">i</span>To Read</span><span class="shelf-row__count">12</span></div>
-                <div class="shelf-row"><span><span class="shelf-row__num">ii</span>Favorites</span><span class="shelf-row__count">7</span></div>
-                <div class="shelf-row"><span><span class="shelf-row__num">iii</span>Stoics</span><span class="shelf-row__count">4</span></div>
-                <div class="shelf-row"><span><span class="shelf-row__num">iv</span>Re-read</span><span class="shelf-row__count">3</span></div>
-              </div>
-            </div>
-            <div>
-              <h3 class="premium-card__title">Collections</h3>
-              <p class="premium-card__body">Organize your library into custom shelves like &ldquo;To Read,&rdquo; &ldquo;Favorites,&rdquo; or &ldquo;Stoics.&rdquo;</p>
             </div>
           </div>
         </div>
