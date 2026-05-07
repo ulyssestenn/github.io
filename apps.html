@@ -6,7 +6,7 @@
   <title>Apps — Ulix</title>
   <meta name="description" content="Privacy-first Android apps from Ulix: Shelf Scan, Keep Clip, Track Analysis, Guten, and more. No accounts, no ads, no tracking." />
   <link rel="canonical" href="https://ulix.app/apps.html" />
-  <meta name="theme-color" content="#00142F" />
+  <meta name="theme-color" content="#0F0E0C" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ulix" />
@@ -22,13 +22,17 @@
   <link rel="icon" href="./icons/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="./icons/favicon.png" />
   <link rel="stylesheet" href="./assets/ulix.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
 </head>
 
-<body>
+<body class="theme-warm">
   <a href="#main" class="skip-link">Skip to content</a>
 
   <header class="site-header">
-    <div class="container site-header__inner">
+    <div class="container container--wide site-header__inner">
       <a href="./index.html" class="site-brand">
         <img src="./icons/favicon.png" alt="" class="site-brand__logo" />
         <span class="site-brand__name">ULIX</span>
@@ -48,7 +52,7 @@
             <line x1="4" y1="17" x2="20" y2="17"/>
           </svg>
         </button>
-        <a href="./apps.html" class="btn btn--primary btn--header">Explore Apps</a>
+        <a href="./guten/" class="btn btn--primary btn--header">Get Guten</a>
       </div>
     </div>
   </header>
@@ -75,84 +79,323 @@
   </div>
 
   <main id="main">
-    <section class="page-hero">
-      <div class="container">
-        <h1 class="page-hero__title">Apps from Ulix</h1>
-        <p class="page-hero__subtitle">Privacy-first apps. No accounts, no ads, no tracking. On Android today. iOS coming soon.</p>
-      </div>
-    </section>
+    <div class="page-wrap">
 
-    <section class="section">
-      <div class="container">
-        <div class="grid grid--3">
-
-          <article class="card app-card">
-            <img src="./icons/shelfscan.png" alt="" class="app-card__icon" />
-            <h2 class="app-card__title">Shelf Scan</h2>
-            <p class="app-card__body">
-              Find books, movies, and games instantly by pointing your camera at your shelves.
-              Reads text on spines and covers — like CTRL+F for the physical world. 100% private,
-              offline, and ad-free. Great for home libraries, classrooms, and store shelf checks.
-            </p>
-            <a href="https://play.google.com/store/apps/details?id=com.ulix.shelfscan" target="_blank" rel="noopener"
-               class="btn btn--primary app-card__cta">Get it on Google Play</a>
-          </article>
-
-          <article class="card app-card">
-            <img src="./icons/keepclip.png" alt="" class="app-card__icon" />
-            <h2 class="app-card__title">Keep Clip</h2>
-            <p class="app-card__body">
-              Private note-taking and bookmarking from almost any app. Save text, quotes, highlights,
-              and links offline with no accounts or tracking. Organize with tags, search instantly,
-              and export to Markdown, CSV, TXT, RTF, or HTML for PKM workflows.
-            </p>
-            <a href="https://play.google.com/store/apps/details?id=com.bhunt.keepclip" target="_blank" rel="noopener"
-               class="btn btn--primary app-card__cta">Get it on Google Play</a>
-          </article>
-
-          <article class="card app-card">
-            <img src="./icons/trackanalysis.png" alt="" class="app-card__icon" />
-            <h2 class="app-card__title">Track Analysis</h2>
-            <p class="app-card__body">
-              Simple, private wellness logging. Record symptoms, meds, food, sleep, activity, and more
-              using free-text notes — no complex forms. 100% offline with clean CSV export for your own
-              review or analysis. Not medical advice; personal organization only.
-            </p>
-            <a href="https://play.google.com/store/apps/details?id=com.ulix.trackanalysis" target="_blank" rel="noopener"
-               class="btn btn--primary app-card__cta">Get it on Google Play</a>
-          </article>
-
-          <article class="card app-card">
-            <img src="./icons/guten.png" alt="" class="app-card__icon" />
-            <h2 class="app-card__title">Guten</h2>
-            <p class="app-card__body">
-              Read thousands of classic books from Project Gutenberg in a clean, distraction-free reader.
-              Gutenberg is currently in testing on Google Play.
-            </p>
-            <a href="./guten/" class="btn btn--primary app-card__cta">Learn more</a>
-          </article>
-
-          <article class="card app-card">
-            <img src="./icons/loanit.png" alt="" class="app-card__icon" />
-            <h2 class="app-card__title">Loan It</h2>
-            <p class="app-card__body">
-              Snap a photo, add a name, and never lose track of borrowed items again.
-            </p>
-            <span class="btn btn--secondary app-card__cta" aria-disabled="true">Coming soon</span>
-          </article>
-
-          <article class="card app-card">
-            <img src="./icons/curiousair.png" alt="" class="app-card__icon" />
-            <h2 class="app-card__title">Curious Air</h2>
-            <p class="app-card__body">
-              Explore nearby Bluetooth, Wi-Fi, and device signals with a clean, privacy-first UI.
-            </p>
-            <span class="btn btn--secondary app-card__cta" aria-disabled="true">Coming soon</span>
-          </article>
-
+      <!-- ============ HERO ============ -->
+      <section class="gh-hero accent-gold">
+        <div class="gh-hero__glow"></div>
+        <div class="gh-hero__inner">
+          <span class="eyebrow">Ulix · Apps</span>
+          <h1 class="gh-hero__title">Tools, not <em>traps</em>.</h1>
+          <p class="gh-hero__lede">
+            Privacy-first Android apps. No accounts, no ads, no tracking, no attention hacking. Free basics. Optional one-time premium. Built to serve you, not sell you.
+          </p>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- ============ GUTEN ============ -->
+      <section class="app-row accent-gold">
+        <div class="app-row__art">
+          <div class="app-row__glow"></div>
+          <div style="position:relative; left:40px; z-index:1;">
+            <div class="phone" style="--s:0.65; --r:-5deg">
+              <div class="phone-screen"><img src="./assets/screenshots/guten/library.png" alt="Guten library" /></div>
+            </div>
+          </div>
+          <div style="position:relative; left:-40px; z-index:2;">
+            <div class="phone" style="--s:0.65; --r:4deg">
+              <div class="phone-screen"><img src="./assets/screenshots/guten/home.png" alt="Guten home" /></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="eyebrow">Guten · Reading</span>
+          <h2 class="app-row__title">A reader for the <em>classics</em>.</h2>
+          <p class="app-row__body">
+            Free Android ereader for 70,000+ public-domain books from Project Gutenberg. Search the catalog, read offline, take notes, build a daily habit. No account. No ads.
+          </p>
+          <div class="app-row__chips">
+            <span class="chip">70,000+ books</span>
+            <span class="chip">Offline</span>
+            <span class="chip">Highlights &amp; notes</span>
+            <span class="chip">Read aloud</span>
+          </div>
+          <div class="app-row__cta">
+            <a href="./guten/" class="play-badge">
+              <svg width="20" height="22" viewBox="0 0 20 22" fill="none" aria-hidden="true">
+                <path d="M1 1.5v19l10-9.5L1 1.5z" fill="#E5B83A" opacity="0.95"/>
+                <path d="M1 1.5l10 9.5 3-3L2.5 1 1 1.5z" fill="#E5B83A" opacity="0.7"/>
+                <path d="M1 20.5l10-9.5 3 3L2.5 21 1 20.5z" fill="#E5B83A" opacity="0.55"/>
+                <path d="M11 11l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 3v16l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 11z" fill="#E5B83A" opacity="0.4"/>
+              </svg>
+              <span class="play-badge__text">
+                <span class="play-badge__sub">Get it on</span>
+                <span class="play-badge__main">Google Play</span>
+              </span>
+            </a>
+            <a href="./guten/" class="secondary-link">Learn more →</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- ============ SHELF SCAN ============ -->
+      <section class="app-row app-row--reverse accent-blue">
+        <div class="app-row__art">
+          <div class="app-row__glow"></div>
+          <div style="position:relative; left:40px; z-index:1;">
+            <div class="phone" style="--s:0.65; --r:-5deg">
+              <div class="phone-screen"><img src="./assets/screenshots/shelfscan/library.png" alt="Shelf Scan library" /></div>
+            </div>
+          </div>
+          <div style="position:relative; left:-40px; z-index:2;">
+            <div class="phone" style="--s:0.65; --r:4deg">
+              <div class="phone-screen"><img src="./assets/screenshots/shelfscan/live_total.png" alt="Shelf Scan live mode" /></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="eyebrow">Shelf Scan · Cataloging</span>
+          <h2 class="app-row__title"><em>See</em> what&rsquo;s on your shelf.</h2>
+          <p class="app-row__body">
+            Point your phone at a shelf and Shelf Scan reads spines and covers. Like CTRL+F for the physical world. Books, movies, games. Home libraries, classrooms, store checks.
+          </p>
+          <div class="app-row__chips">
+            <span class="chip">Camera OCR</span>
+            <span class="chip">Live mode</span>
+            <span class="chip">Offline</span>
+            <span class="chip">CSV export</span>
+          </div>
+          <div class="app-row__cta">
+            <a href="https://play.google.com/store/apps/details?id=com.ulix.shelfscan" target="_blank" rel="noopener" class="play-badge">
+              <svg width="20" height="22" viewBox="0 0 20 22" fill="none" aria-hidden="true">
+                <path d="M1 1.5v19l10-9.5L1 1.5z" fill="#5BA3F5" opacity="0.95"/>
+                <path d="M1 1.5l10 9.5 3-3L2.5 1 1 1.5z" fill="#5BA3F5" opacity="0.7"/>
+                <path d="M1 20.5l10-9.5 3 3L2.5 21 1 20.5z" fill="#5BA3F5" opacity="0.55"/>
+                <path d="M11 11l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 3v16l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 11z" fill="#5BA3F5" opacity="0.4"/>
+              </svg>
+              <span class="play-badge__text">
+                <span class="play-badge__sub">Get it on</span>
+                <span class="play-badge__main">Google Play</span>
+              </span>
+            </a>
+            <a href="./shelfscan/android.html" class="secondary-link">Learn more →</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- ============ KEEP CLIP ============ -->
+      <section class="app-row accent-blue">
+        <div class="app-row__art">
+          <div class="app-row__glow"></div>
+          <div style="position:relative; left:40px; z-index:1;">
+            <div class="phone" style="--s:0.65; --r:-5deg">
+              <div class="phone-screen"><img src="./assets/screenshots/keepclip/keepclipmain.png" alt="Keep Clip main" /></div>
+            </div>
+          </div>
+          <div style="position:relative; left:-40px; z-index:2;">
+            <div class="phone" style="--s:0.65; --r:4deg">
+              <div class="phone-screen"><img src="./assets/screenshots/keepclip/keepclipfilter.png" alt="Keep Clip filter" /></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="eyebrow">Keep Clip · Notes</span>
+          <h2 class="app-row__title">Capture the <em>good</em> stuff.</h2>
+          <p class="app-row__body">
+            Private clipping and note-taking from any app. Save text, quotes, highlights, and links offline with no accounts. Tag, search, and export to Markdown, CSV, TXT, RTF, or HTML.
+          </p>
+          <div class="app-row__chips">
+            <span class="chip">Tags</span>
+            <span class="chip">Markdown</span>
+            <span class="chip">CSV / RTF / HTML</span>
+            <span class="chip">Offline</span>
+          </div>
+          <div class="app-row__cta">
+            <a href="https://play.google.com/store/apps/details?id=com.bhunt.keepclip" target="_blank" rel="noopener" class="play-badge">
+              <svg width="20" height="22" viewBox="0 0 20 22" fill="none" aria-hidden="true">
+                <path d="M1 1.5v19l10-9.5L1 1.5z" fill="#5BA3F5" opacity="0.95"/>
+                <path d="M1 1.5l10 9.5 3-3L2.5 1 1 1.5z" fill="#5BA3F5" opacity="0.7"/>
+                <path d="M1 20.5l10-9.5 3 3L2.5 21 1 20.5z" fill="#5BA3F5" opacity="0.55"/>
+                <path d="M11 11l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 3v16l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 11z" fill="#5BA3F5" opacity="0.4"/>
+              </svg>
+              <span class="play-badge__text">
+                <span class="play-badge__sub">Get it on</span>
+                <span class="play-badge__main">Google Play</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- ============ TRACK ANALYSIS ============ -->
+      <section class="app-row app-row--reverse accent-blue">
+        <div class="app-row__art">
+          <div class="app-row__glow"></div>
+          <div style="position:relative; left:40px; z-index:1;">
+            <div class="phone" style="--s:0.65; --r:-5deg">
+              <div class="phone-screen"><img src="./assets/screenshots/trackanalysis/mainlogging.png" alt="Track Analysis main logging" /></div>
+            </div>
+          </div>
+          <div style="position:relative; left:-40px; z-index:2;">
+            <div class="phone" style="--s:0.65; --r:4deg">
+              <div class="phone-screen"><img src="./assets/screenshots/trackanalysis/history.png" alt="Track Analysis history" /></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="eyebrow">Track Analysis · Wellness</span>
+          <h2 class="app-row__title"><em>Quiet</em> logging.</h2>
+          <p class="app-row__body">
+            Free-text wellness logging — symptoms, meds, food, sleep, activity. No complex forms. 100% offline. Clean CSV export for your own review.
+          </p>
+          <div class="app-row__chips">
+            <span class="chip">Free-text</span>
+            <span class="chip">Offline</span>
+            <span class="chip">CSV export</span>
+            <span class="chip">No account</span>
+          </div>
+          <div class="app-row__cta">
+            <a href="https://play.google.com/store/apps/details?id=com.ulix.trackanalysis" target="_blank" rel="noopener" class="play-badge">
+              <svg width="20" height="22" viewBox="0 0 20 22" fill="none" aria-hidden="true">
+                <path d="M1 1.5v19l10-9.5L1 1.5z" fill="#5BA3F5" opacity="0.95"/>
+                <path d="M1 1.5l10 9.5 3-3L2.5 1 1 1.5z" fill="#5BA3F5" opacity="0.7"/>
+                <path d="M1 20.5l10-9.5 3 3L2.5 21 1 20.5z" fill="#5BA3F5" opacity="0.55"/>
+                <path d="M11 11l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 3v16l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 11z" fill="#5BA3F5" opacity="0.4"/>
+              </svg>
+              <span class="play-badge__text">
+                <span class="play-badge__sub">Get it on</span>
+                <span class="play-badge__main">Google Play</span>
+              </span>
+            </a>
+          </div>
+          <p class="app-row__note">Personal organization only — not medical advice.</p>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- ============ LOAN IT (coming soon) ============ -->
+      <section class="app-row accent-gold">
+        <div class="app-row__art">
+          <div class="app-row__glow"></div>
+          <div class="icon-card icon-card--soon">
+            <img src="./icons/loanit.png" alt="Loan It icon" />
+          </div>
+        </div>
+        <div>
+          <span class="eyebrow">Loan It · Lending</span>
+          <h2 class="app-row__title">Never <em>lose</em> a borrowed book.</h2>
+          <p class="app-row__body">
+            Snap a photo, add a name. Loan It quietly tracks who has what, so a generous shelf doesn&rsquo;t become a missing one.
+          </p>
+          <div class="app-row__chips">
+            <span class="chip">Photo log</span>
+            <span class="chip">Reminders</span>
+            <span class="chip">Offline</span>
+          </div>
+          <div class="app-row__cta">
+            <span class="secondary-link" aria-disabled="true">Coming soon</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- ============ CURIOUS AIR (coming soon) ============ -->
+      <section class="app-row app-row--reverse accent-blue">
+        <div class="app-row__art">
+          <div class="app-row__glow"></div>
+          <div class="icon-card icon-card--soon">
+            <img src="./icons/curiousair.png" alt="Curious Air icon" />
+          </div>
+        </div>
+        <div>
+          <span class="eyebrow">Curious Air · Signals</span>
+          <h2 class="app-row__title"><em>Listen</em> to the airwaves.</h2>
+          <p class="app-row__body">
+            A privacy-first explorer for nearby Bluetooth, Wi-Fi, and device signals. No accounts, no telemetry. Just a clean window onto the spectrum around you.
+          </p>
+          <div class="app-row__chips">
+            <span class="chip">Bluetooth</span>
+            <span class="chip">Wi-Fi</span>
+            <span class="chip">Privacy-first</span>
+          </div>
+          <div class="app-row__cta">
+            <span class="secondary-link" aria-disabled="true">Coming soon</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- ============ PRINCIPLES ============ -->
+      <section class="principles">
+        <div class="principles__header">
+          <div>
+            <span class="eyebrow">What we believe</span>
+            <h2 class="principles__title">Built on <em>products</em>, not data.</h2>
+          </div>
+          <p class="principles__support">
+            One promise across every Ulix app. Local-first by default. Sustained by people who like the work, not by selling what you do inside it.
+          </p>
+        </div>
+
+        <div class="principles__grid">
+          <div class="principle">
+            <div class="principle__num">i</div>
+            <h3 class="principle__title">Privacy first</h3>
+            <p class="principle__body">Local-first architecture with offline capability. No ads, tracking, or unnecessary accounts. Permissions only when essential.</p>
+          </div>
+          <div class="principle">
+            <div class="principle__num">ii</div>
+            <h3 class="principle__title">No subscriptions</h3>
+            <p class="principle__body">Free basics stay free. When something is worth paying for, it&rsquo;s a one-time purchase — not a treadmill.</p>
+          </div>
+          <div class="principle">
+            <div class="principle__num">iii</div>
+            <h3 class="principle__title">Focused tools</h3>
+            <p class="principle__body">Clean, purposeful interfaces that enhance your day without demanding constant attention. No engagement loops.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- ============ CLOSING CTA ============ -->
+      <section class="closing-cta accent-gold">
+        <span class="eyebrow">Free basics · No accounts · Android</span>
+        <h2 class="closing-cta__title">
+          Find the tool that <em>fits</em>.
+        </h2>
+        <p class="closing-cta__body">
+          Six apps, one philosophy. Start with Guten, pick up a scanner for your shelves, or watch this space — more on the way.
+        </p>
+        <div class="closing-cta__action">
+          <a href="./guten/" class="play-badge play-badge--lg">
+            <svg width="22" height="24.2" viewBox="0 0 20 22" fill="none" aria-hidden="true">
+              <path d="M1 1.5v19l10-9.5L1 1.5z" fill="#E5B83A" opacity="0.95"/>
+              <path d="M1 1.5l10 9.5 3-3L2.5 1 1 1.5z" fill="#E5B83A" opacity="0.7"/>
+              <path d="M1 20.5l10-9.5 3 3L2.5 21 1 20.5z" fill="#E5B83A" opacity="0.55"/>
+              <path d="M11 11l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 3v16l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 11z" fill="#E5B83A" opacity="0.4"/>
+            </svg>
+            <span class="play-badge__text">
+              <span class="play-badge__sub">Start with</span>
+              <span class="play-badge__main">Guten</span>
+            </span>
+          </a>
+          <a href="./about.html" class="secondary-link">Why Ulix? →</a>
+        </div>
+      </section>
+
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -182,7 +425,7 @@
               <button class="btn btn--secondary">Subscribe</button>
             </div>
           </form>
-          <div class="site-footer__copyright">© 2025 Ulix LLC. All rights reserved.</div>
+          <div class="site-footer__copyright">© 2026 Ulix LLC. All rights reserved.</div>
         </div>
       </div>
     </div>
