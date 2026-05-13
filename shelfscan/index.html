@@ -579,7 +579,7 @@
   .shelf-page .quotes__grid {
     margin-top: 48px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
   }
   .shelf-page .quote {
@@ -678,6 +678,9 @@
 
     .shelf-page .demo { padding: 64px 24px 16px; }
     .shelf-page .quotes { padding: 64px 24px 16px; }
+    .shelf-page .quotes__grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
     .shelf-page .quotes__grid { grid-template-columns: 1fr; }
 
     .shelf-page .s-cta { padding: 72px 24px; }
@@ -750,7 +753,7 @@
               <em>instantly.</em>
             </h1>
             <p class="s-hero__lede">
-              Shelf Scan finds books, movies, and games on your shelves using your camera. On-device OCR reads spines and covers in real time — works fully offline and keeps your data private.
+              Find books, movies, and games on your shelves by pointing your camera. Shelf Scan reads spines and covers in real time — like CTRL+F for the physical world. No cataloging, no setup, no hassle.
             </p>
             <div class="s-hero__ctas">
               <a href="https://play.google.com/store/apps/details?id=com.ulix.shelfscan" target="_blank" rel="noopener" class="play-badge">
@@ -914,6 +917,7 @@
       <section class="uses">
         <span class="eyebrow" style="justify-content:center;">For every shelf</span>
         <h2 class="section-title" style="margin-top:16px;">Built for any <em>collection</em>.</h2>
+        <p class="demo__body" style="margin-top:16px;">Books, DVDs, Blu-rays, video games, board games — anything with readable text on a spine or cover.</p>
         <div class="uses__grid">
           <div class="use-card">
             <svg class="use-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -921,15 +925,15 @@
               <polyline points="9 22 9 12 15 12 15 22"/>
             </svg>
             <div class="use-card__title">Home libraries</div>
-            <p class="use-card__body">Find any book or movie in seconds, without a spreadsheet.</p>
+            <p class="use-card__body">Find anything in seconds — and stop rebuying what you already own.</p>
           </div>
           <div class="use-card">
             <svg class="use-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
               <line x1="7" y1="7" x2="7.01" y2="7"/>
             </svg>
-            <div class="use-card__title">Stores &amp; rentals</div>
-            <p class="use-card__body">Staff can locate inventory on the floor faster.</p>
+            <div class="use-card__title">Stores &amp; bargains</div>
+            <p class="use-card__body">Locate inventory faster and spot deals on used shelves.</p>
           </div>
           <div class="use-card">
             <svg class="use-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -949,6 +953,7 @@
             <p class="use-card__body">Organize and manage large collections with ease.</p>
           </div>
         </div>
+        <p class="demo__body" style="margin-top:40px; font-size:14px; color:var(--subtle);">Also handy on documents, posters, maps, and grocery shelves — anywhere you need to find a word fast.</p>
       </section>
 
       <!-- ============ PRIVACY ============ -->
@@ -992,22 +997,24 @@
 
       <!-- ============ TESTIMONIALS ============ -->
       <section class="quotes">
-        <h2 class="section-title">What users are saying</h2>
+        <span class="eyebrow" style="justify-content:center;">Early adopters</span>
+        <h2 class="section-title" style="margin-top:16px;">What people are saying</h2>
         <div class="quotes__grid">
           <div class="quote">
             <div class="quote__stars">★★★★★</div>
-            <p class="quote__body">"This app is so easy to use and totally works offline. I love it!"</p>
-            <div class="quote__author">— Beckie B.</div>
+            <p class="quote__body">"This is amazing!"</p>
           </div>
           <div class="quote">
             <div class="quote__stars">★★★★★</div>
-            <p class="quote__body">"It found exactly what I was looking for with impressive accuracy!"</p>
-            <div class="quote__author">— Dea01</div>
+            <p class="quote__body">"Ok, that is the coolest thing ever!!! Thank you!"</p>
           </div>
           <div class="quote">
             <div class="quote__stars">★★★★★</div>
-            <p class="quote__body">"Finally, an app that can find the thing I want in my huge video library."</p>
-            <div class="quote__author">— bubiwankenobi</div>
+            <p class="quote__body">"I have been using this the past week and it is so helpful!"</p>
+          </div>
+          <div class="quote">
+            <div class="quote__stars">★★★★★</div>
+            <p class="quote__body">"Now if only you could help me find everything else I lose every day…"</p>
           </div>
         </div>
       </section>
@@ -1016,10 +1023,10 @@
       <section class="s-cta">
         <span class="eyebrow" style="margin-bottom:24px; justify-content:center;">Free · No accounts · Works offline</span>
         <h2 class="s-cta__title" style="margin-top:16px;">
-          Ready to find anything<br>on your <em>shelves</em>?
+          Organize your library<br>without <em>organizing it</em>.
         </h2>
         <p class="s-cta__body">
-          Download Shelf Scan and take control of your collection.
+          CTRL+F the World. Download Shelf Scan free on Google Play.
         </p>
         <div class="s-cta__action">
           <a href="https://play.google.com/store/apps/details?id=com.ulix.shelfscan" target="_blank" rel="noopener" class="play-badge play-badge--lg">
