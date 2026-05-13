@@ -104,28 +104,37 @@
 
   // The list of apps shown in the carousel.
   var APPS = [
-    { slug: 'shelf-scan',     name: 'Shelf Scan',     one: 'Search shelves instantly.',                  tag: 'CTRL+F your world. Find books, games, and movies fast.', playUrl: 'https://play.google.com/store/apps/details?id=com.ulix.shelfscan' },
+    { slug: 'shelf-scan',     name: 'Shelf Scan',     one: 'Search shelves instantly.',                  tag: 'CTRL+F your world. Find books, games, and movies fast.', playUrl: 'https://play.google.com/store/apps/details?id=com.ulix.shelfscan', landingUrl: './shelfscan/' },
     { slug: 'keep-clip',      name: 'Keep Clip',      one: 'Save text from anywhere. Organize. Export.',  tag: 'Your digital commonplace book. Search, filter, tag, export.', playUrl: 'https://play.google.com/store/apps/details?id=com.bhunt.keepclip' },
     { slug: 'track-analysis', name: 'Track Analysis', one: 'Wellness logging for analysis.',              tag: 'Log wellness data. Export in CSV.', playUrl: 'https://play.google.com/store/apps/details?id=com.ulix.trackanalysis' },
-    { slug: 'guten',          name: 'Guten',          one: 'Beautiful reading of classics.',              tag: 'Project Gutenberg reader — now in Google Play testing.', playUrl: 'https://play.google.com/store/apps/details?id=com.bhunt.guten' },
+    { slug: 'guten',          name: 'Guten',          one: 'Beautiful reading of classics.',              tag: 'Project Gutenberg reader. Now in Google Play testing.', playUrl: 'https://play.google.com/store/apps/details?id=com.bhunt.guten', landingUrl: './guten/' },
     { slug: 'loan-it',        name: 'Loan It',        one: 'Snap a photo, add a name, never lose track.', tag: 'Track what you loan and to whom.', coming: true },
     { slug: 'curious-air',    name: 'Curious Air',    one: 'See signals around you.',                     tag: 'Explore the signal and sensor data your phone can detect.', coming: true }
   ];
 
   function slideMarkup(app) {
     var icon  = ICONS[app.slug] || './icons/favicon.png';
-    var cta   = app.playUrl
-      ? '<a href="' + app.playUrl + '" target="_blank" rel="noopener">' + PLAY_BADGE + '</a>'
-      : '<span class="carousel__coming">Coming soon</span>';
+    var name  = app.landingUrl
+      ? '<a href="' + app.landingUrl + '" class="carousel__tag-link">' + app.name + '</a>'
+      : app.name;
+    var ctas  = '';
+    if (app.playUrl) {
+      ctas += '<a href="' + app.playUrl + '" target="_blank" rel="noopener">' + PLAY_BADGE + '</a>';
+    } else {
+      ctas += '<span class="carousel__coming">Coming soon</span>';
+    }
+    if (app.landingUrl) {
+      ctas += '<a href="' + app.landingUrl + '" class="carousel__learn-more">Learn more</a>';
+    }
     return (
       '<div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="' + app.name + '">' +
         '<div class="carousel__inner">' +
           '<img src="' + icon + '" alt="' + app.name + ' icon" class="carousel__icon" />' +
           '<div>' +
-            '<span class="carousel__tag">' + app.name + '</span>' +
+            '<span class="carousel__tag">' + name + '</span>' +
             '<h3 class="carousel__title">' + app.one + '</h3>' +
             '<p class="carousel__desc">' + app.tag + '</p>' +
-            '<div class="carousel__ctas">' + cta + '</div>' +
+            '<div class="carousel__ctas">' + ctas + '</div>' +
           '</div>' +
         '</div>' +
       '</div>'
@@ -236,9 +245,9 @@
   };
 
   var APPS = [
-    { slug: 'shelf-scan', name: 'Shelf Scan', one: 'Search shelves instantly.',          playUrl: 'https://play.google.com/store/apps/details?id=com.ulix.shelfscan' },
+    { slug: 'shelf-scan', name: 'Shelf Scan', one: 'Search shelves instantly.',          playUrl: 'https://play.google.com/store/apps/details?id=com.ulix.shelfscan', landingUrl: './shelfscan/' },
     { slug: 'keep-clip',  name: 'Keep Clip',  one: 'Save text from anywhere. Organize.', playUrl: 'https://play.google.com/store/apps/details?id=com.bhunt.keepclip' },
-    { slug: 'guten',      name: 'Guten',      one: 'Beautiful reading of classics.',     playUrl: 'https://play.google.com/store/apps/details?id=com.bhunt.guten' }
+    { slug: 'guten',      name: 'Guten',      one: 'Beautiful reading of classics.',     playUrl: 'https://play.google.com/store/apps/details?id=com.bhunt.guten', landingUrl: './guten/' }
   ];
 
   var PLAY_BADGE =
@@ -256,13 +265,20 @@
     '</span>';
 
   grid.innerHTML = APPS.map(function (app) {
+    var name = app.landingUrl
+      ? '<a href="' + app.landingUrl + '">' + app.name + '</a>'
+      : app.name;
+    var learn = app.landingUrl
+      ? '<a href="' + app.landingUrl + '" class="featured-card__learn-more">Learn more</a>'
+      : '';
     return (
       '<div class="card featured-card">' +
         '<img src="' + ICONS[app.slug] + '" alt="' + app.name + ' icon" class="featured-card__icon" />' +
-        '<h3 class="card__title">' + app.name + '</h3>' +
+        '<h3 class="card__title">' + name + '</h3>' +
         '<p class="card__text">' + app.one + '</p>' +
         '<div class="featured-card__actions">' +
           '<a href="' + app.playUrl + '" target="_blank" rel="noopener">' + PLAY_BADGE + '</a>' +
+          learn +
         '</div>' +
       '</div>'
     );

@@ -1,255 +1,1171 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Shelf Scan – Find books fast. No organizing required.</title>
-    <meta
-      name="description"
-      content="Shelf Scan lets you search your shelves like CTRL+F. Find books, movies, and games instantly by reading spine and cover text on-device. Private, offline, no accounts."
-    />
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/assets/styles.css" />
-    <meta
-      property="og:title"
-      content="Shelf Scan – Find books fast. No organizing required."
-    />
-    <meta
-      property="og:description"
-      content="Search your shelves instantly. Works offline. 100% private. No setup, no accounts, no ads."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ulix.app/shelfscan" />
-    <meta property="og:image" content="https://ulix.app/favicon.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Shelf Scan – Find books fast. No organizing required."
-    />
-    <meta
-      name="twitter:description"
-      content="Search your shelves instantly. Works offline. 100% private."
-    />
-    <meta name="twitter:image" content="https://ulix.app/favicon.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Shelf Scan",
-        "operatingSystem": "Android",
-        "applicationCategory": "http://schema.org/UtilitiesApplication",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "url": "https://ulix.app/shelfscan",
-        "downloadUrl": "https://play.google.com/store/apps/details?id=com.ulix.shelfscan",
-        "publisher": { "@type": "Organization", "name": "Ulix LLC" },
-        "description": "Find books, movies, and games instantly by searching shelf text on-device. Works offline. No accounts, no ads.",
-        "screenshot": [
-          "https://ulix.app/shelfscan/screen-1.png",
-          "https://ulix.app/shelfscan/screen-2.png",
-          "https://ulix.app/shelfscan/screen-3.png"
-        ]
-      }
-    </script>
-  </head>
-  <body class="ulix-bg ulix-ink antialiased">
-    <div data-include="/partials/header.html"></div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shelf Scan: Search Shelves Instantly</title>
+  <meta name="description" content="Shelf Scan finds books, movies, and games on your shelves by reading spines with your camera. On-device OCR, fully offline, private by design. $1.99 one-time on Google Play." />
+  <link rel="canonical" href="https://ulix.app/shelfscan/" />
+  <meta name="theme-color" content="#070C1A" />
 
-    <!-- Hero -->
-    <section class="max-w-6xl mx-auto px-4 pt-4 pb-10 md:pb-16">
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h1 class="text-3xl md:text-5xl font-semibold leading-tight">
-            Find your books fast.
-            <span class="text-[var(--gold)]">No organizing required.</span>
-          </h1>
-          <p class="ulix-muted mt-4 text-lg">
-            Shelf Scan lets you search your shelves like
-            <span class="font-semibold">CTRL+F</span>—instantly locating books,
-            movies, and games by reading spine and cover text
-            <span class="font-semibold">entirely on your device</span>.
-          </p>
-          <div class="flex flex-wrap items-center gap-4 mt-6">
-            <a
-              href="https://play.google.com/store/apps/details?id=com.ulix.shelfscan"
-              class="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-white/10 hover:bg-white/15 transition glow"
-            >
-              <svg aria-hidden="true" viewBox="0 0 24 24" class="w-5 h-5">
-                <path
-                  fill="currentColor"
-                  d="M1.5 3.75a.75.75 0 0 1 .75-.75h11.25a.75.75 0 0 1 .75.75v5.25h7.5a.75.75 0 0 1 .53 1.28l-9 9a.75.75 0 0 1-1.28-.53V12H2.25a.75.75 0 0 1-.75-.75V3.75Z"
-                />
-              </svg>
-              <span class="font-medium">Get it on Google Play</span>
-            </a>
-          </div>
-          <p class="mt-4 text-sm ulix-muted">
-            Works completely offline • 100% private • No accounts, no ads
-          </p>
-        </div>
-        <div>
-          <div class="video-wrap ulix-card">
-            <iframe
-              src="https://www.youtube.com/embed/BnrCHmJDmOI"
-              title="Shelf Scan Demo"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ulix" />
+  <meta property="og:title" content="Shelf Scan: Search Shelves Instantly" />
+  <meta property="og:description" content="Find books, movies, and games on shelves with your camera. On-device, offline, private." />
+  <meta property="og:url" content="https://ulix.app/shelfscan/" />
+  <meta property="og:image" content="https://ulix.app/assets/screenshots/shelfscan/Shelf%20Scan%20Live%20Mode%20Whiplash.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shelf Scan: Search Shelves Instantly" />
+  <meta name="twitter:description" content="Find books, movies, and games on shelves with your camera. On-device, offline, private." />
+  <meta name="twitter:image" content="https://ulix.app/assets/screenshots/shelfscan/Shelf%20Scan%20Live%20Mode%20Whiplash.png" />
 
-    <!-- Key Benefits -->
-    <section class="max-w-6xl mx-auto px-4 py-10 md:py-14">
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="ulix-card rounded-2xl p-6">
-          <h3 class="text-xl font-semibold">Instant search</h3>
-          <p class="ulix-muted mt-2">
-            Point your camera at your shelves and type a keyword. Find titles in
-            seconds without cataloging first.
-          </p>
-        </div>
-        <div class="ulix-card rounded-2xl p-6">
-          <h3 class="text-xl font-semibold">Private & offline</h3>
-          <p class="ulix-muted mt-2">
-            All text processing happens on your device. Nothing is uploaded,
-            stored, or shared.
-          </p>
-        </div>
-        <div class="ulix-card rounded-2xl p-6">
-          <h3 class="text-xl font-semibold">Zero setup</h3>
-          <p class="ulix-muted mt-2">
-            No accounts, no spreadsheets, no barcode scanners. Just open the app
-            and search.
-          </p>
-        </div>
-      </div>
-    </section>
+  <link rel="icon" href="../icons/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="../icons/favicon.png" />
+  <link rel="stylesheet" href="../assets/ulix.css" />
 
-    <!-- How it works -->
-    <section class="max-w-6xl mx-auto px-4 py-10 md:py-14">
-      <h2 class="text-2xl md:text-3xl font-semibold">How it works</h2>
-      <div class="grid md:grid-cols-3 gap-6 mt-6">
-        <div class="ulix-card rounded-2xl p-6">
-          <p class="text-sm uppercase tracking-wide ulix-muted">Step 1</p>
-          <h3 class="text-lg font-semibold mt-1">Open & point</h3>
-          <p class="ulix-muted mt-2">
-            Open Shelf Scan and point your camera at your shelves.
-          </p>
-        </div>
-        <div class="ulix-card rounded-2xl p-6">
-          <p class="text-sm uppercase tracking-wide ulix-muted">Step 2</p>
-          <h3 class="text-lg font-semibold mt-1">Type a keyword</h3>
-          <p class="ulix-muted mt-2">
-            Enter a title, author, or unique word you remember.
-          </p>
-        </div>
-        <div class="ulix-card rounded-2xl p-6">
-          <p class="text-sm uppercase tracking-wide ulix-muted">Step 3</p>
-          <h3 class="text-lg font-semibold mt-1">Find instantly</h3>
-          <p class="ulix-muted mt-2">
-            Results highlight where to look so you can grab the right item fast.
-          </p>
-        </div>
-      </div>
-    </section>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/geist-latin.woff2" crossorigin />
+  <style>
+    @font-face {
+      font-family: 'Geist';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url('../assets/fonts/geist-latin.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+      font-family: 'Geist';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url('../assets/fonts/geist-latin-ext.woff2') format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+  </style>
 
-    <!-- Screenshots -->
-    <section class="max-w-6xl mx-auto px-4 py-10 md:py-14">
-      <h2 class="text-2xl md:text-3xl font-semibold">See it in action</h2>
-      <div class="grid md:grid-cols-3 gap-6 mt-6">
-        <img
-          src="/shelfscan/screen-1.png"
-          alt="Search screen"
-          class="rounded-xl ulix-card"
-        />
-        <img
-          src="/shelfscan/screen-2.png"
-          alt="Highlighted result"
-          class="rounded-xl ulix-card"
-        />
-        <img
-          src="/shelfscan/screen-3.png"
-          alt="Find by keyword"
-          class="rounded-xl ulix-card"
-        />
-      </div>
-    </section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["SoftwareApplication", "MobileApplication"],
+      "@id": "https://ulix.app/shelfscan/#app",
+      "name": "Shelf Scan",
+      "description": "Shelf Scan finds books, movies, and games on physical shelves using your phone's camera. On-device OCR works fully offline. No accounts, no data collection.",
+      "url": "https://ulix.app/shelfscan/",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.ulix.shelfscan",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.ulix.shelfscan",
+      "operatingSystem": "Android 7.0+",
+      "applicationCategory": "UtilitiesApplication",
+      "applicationSubCategory": "Visual search",
+      "isAccessibleForFree": false,
+      "inLanguage": "en",
+      "permissions": "Camera",
+      "datePublished": "2026-05-13",
+      "dateModified": "2026-05-13",
+      "image": "https://ulix.app/icons/shelfscan.png",
+      "screenshot": [
+        "https://ulix.app/assets/screenshots/shelfscan/Shelf%20Scan%20Live%20Mode%20Whiplash.png",
+        "https://ulix.app/assets/screenshots/shelfscan/Shelf%20Scan%20Live%20Mode%20Space.png",
+        "https://ulix.app/assets/screenshots/shelfscan/Shelf%20Scan%20Live%20Mode%20Spy.png",
+        "https://ulix.app/assets/screenshots/shelfscan/Shelf%20Scan%20Live%20Mode%20Total.png",
+        "https://ulix.app/assets/screenshots/shelfscan/Shelf%20Scan%20Library.png"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "1.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://play.google.com/store/apps/details?id=com.ulix.shelfscan"
+      },
+      "featureList": [
+        "On-device OCR for shelf text",
+        "Live Mode camera search",
+        "Highlights matches in real time",
+        "Library of saved shelf photos",
+        "Works fully offline",
+        "No accounts or data collection"
+      ],
+      "keywords": [
+        "shelf scan",
+        "camera shelf search",
+        "OCR shelf finder",
+        "find books on shelves",
+        "offline OCR",
+        "private camera search",
+        "Android utility",
+        "library inventory"
+      ],
+      "publisher": { "@id": "https://ulix.app/#org" },
+      "author": { "@id": "https://ulix.app/#org" },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewBody": "This is amazing!",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Beta tester" }
+        },
+        {
+          "@type": "Review",
+          "reviewBody": "Ok, that is the coolest thing ever!!! Thank you!",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Beta tester" }
+        },
+        {
+          "@type": "Review",
+          "reviewBody": "I have been using this the past week and it is so helpful!",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Beta tester" }
+        },
+        {
+          "@type": "Review",
+          "reviewBody": "Now if only you could help me find everything else I lose every day.",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Beta tester" }
+        }
+      ],
+      "video": { "@id": "https://ulix.app/shelfscan/#demo-video" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://ulix.app/#org",
+      "name": "Ulix LLC",
+      "url": "https://ulix.app/",
+      "logo": "https://ulix.app/icons/favicon.png"
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://ulix.app/shelfscan/#demo-video",
+      "name": "Shelf Scan full demo",
+      "description": "A quick tour of Live Mode, the Library, and how Shelf Scan handles a packed shelf.",
+      "thumbnailUrl": "https://i.ytimg.com/vi/kf6yH4qhzdI/maxresdefault.jpg",
+      "uploadDate": "2026-05-13",
+      "contentUrl": "https://www.youtube.com/watch?v=kf6yH4qhzdI",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/kf6yH4qhzdI"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ulix.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Apps", "item": "https://ulix.app/apps.html" },
+        { "@type": "ListItem", "position": 3, "name": "Shelf Scan", "item": "https://ulix.app/shelfscan/" }
+      ]
+    }
+  ]
+}
+</script>
 
-    <!-- Privacy -->
-    <section class="max-w-6xl mx-auto px-4 py-10 md:py-14">
-      <div class="ulix-card rounded-2xl p-6 md:p-8">
-        <h2 class="text-2xl md:text-3xl font-semibold">Private by design</h2>
-        <p class="ulix-muted mt-2">
-          Shelf Scan processes text locally on your device. We don’t collect
-          analytics, use trackers, or require accounts. Your shelves stay yours.
-        </p>
-      </div>
-    </section>
+  <style>
+  /* ==========================================================================
+     Shelf Scan landing page — scoped to .shelf-page
+     Loaded after ulix.css so these rules win on specificity within the wrapper.
+     ========================================================================== */
 
-    <!-- FAQ -->
-    <section class="max-w-6xl mx-auto px-4 py-10 md:py-14">
-      <h2 class="text-2xl md:text-3xl font-semibold">Frequently asked</h2>
-      <div class="mt-6 grid md:grid-cols-2 gap-6">
-        <div class="ulix-card rounded-2xl p-6">
-          <h3 class="font-semibold">Does it work in libraries and stores?</h3>
-          <p class="ulix-muted mt-2">
-            Yes. Shelf Scan works anywhere there’s shelf text—your home,
-            libraries, or retail aisles.
-          </p>
-        </div>
-        <div class="ulix-card rounded-2xl p-6">
-          <h3 class="font-semibold">Does it need internet?</h3>
-          <p class="ulix-muted mt-2">
-            No. It works offline. An internet connection is only needed to
-            download the app from Google Play.
-          </p>
-        </div>
-        <div class="ulix-card rounded-2xl p-6">
-          <h3 class="font-semibold">What about privacy?</h3>
-          <p class="ulix-muted mt-2">
-            We don’t collect or transmit your data. Everything stays local to
-            your device.
-          </p>
-        </div>
-        <div class="ulix-card rounded-2xl p-6">
-          <h3 class="font-semibold">What devices are supported?</h3>
-          <p class="ulix-muted mt-2">
-            Android 7.0 (Nougat) and up. iOS is planned.
-          </p>
-        </div>
-      </div>
-    </section>
+  .shelf-page {
+    --bg: #070C1A;
+    --bg-2: #0B1326;
+    --fg: #F1F5FB;
+    --muted: rgba(241,245,251,0.7);
+    --subtle: rgba(241,245,251,0.45);
+    --card-bg: #0E1730;
+    --card-bg-2: #131E3D;
+    --rule: rgba(241,245,251,0.1);
+    --accent: #3B82F6;
+    --accent-soft: rgba(59,130,246,0.18);
+    --sans: Geist, system-ui, sans-serif;
 
-    <!-- CTA -->
-    <section class="max-w-6xl mx-auto px-4 py-10 md:py-16">
-      <div
-        class="ulix-card rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6"
-      >
-        <div>
-          <h2 class="text-2xl md:text-3xl font-semibold">
-            Ready to find things faster?
-          </h2>
-          <p class="ulix-muted mt-2">Grab Shelf Scan on Google Play.</p>
-        </div>
-        <a
-          href="https://play.google.com/store/apps/details?id=com.ulix.shelfscan"
-          class="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-white/10 hover:bg-white/15 transition glow"
-        >
-          <svg aria-hidden="true" viewBox="0 0 24 24" class="w-5 h-5">
-            <path
-              fill="currentColor"
-              d="M1.5 3.75a.75.75 0 0 1 .75-.75h11.25a.75.75 0 0 1 .75.75v5.25h7.5a.75.75 0 0 1 .53 1.28l-9 9a.75.75 0 0 1-1.28-.53V12H2.25a.75.75 0 0 1-.75-.75V3.75Z"
-            />
+    --ulix-primary: #070C1A;
+    --ulix-primary-dark: #070C1A;
+    --ulix-accent: #3B82F6;
+    --ulix-bg: #070C1A;
+    --ulix-ink: #F1F5FB;
+
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .shelf-page .site-header { border-bottom-color: rgba(241,245,251,0.08); background: var(--bg); }
+  .shelf-page .btn--primary { background: var(--accent); color: #fff; }
+  .shelf-page .site-footer { border-top-color: rgba(241,245,251,0.1); color: rgba(241,245,251,0.7); background: var(--bg); }
+  .shelf-page .site-footer__tag,
+  .shelf-page .site-footer__copyright,
+  .shelf-page .site-footer__links a { color: rgba(241,245,251,0.7); }
+  .shelf-page .site-footer__brand-name,
+  .shelf-page .site-footer__links a:hover { color: var(--fg); }
+
+  .shelf-page a { color: inherit; text-decoration: none; }
+  .shelf-page img { display: block; user-select: none; -webkit-user-drag: none; }
+  .shelf-page h1, .shelf-page h2, .shelf-page h3 { margin: 0; color: var(--fg); }
+  .shelf-page p, .shelf-page ul, .shelf-page figure { margin: 0; }
+  .shelf-page ul { list-style: none; padding: 0; }
+
+  .shelf-page .page { max-width: 1240px; margin: 0 auto; }
+
+  /* ---------- Phone frame ---------- */
+  .shelf-page .phone {
+    width: calc(280px * var(--s, 1));
+    height: calc(580px * var(--s, 1));
+    border-radius: calc(40px * var(--s, 1));
+    padding: calc(8px * var(--s, 1));
+    background: linear-gradient(180deg, #1d2236 0%, #050811 100%);
+    box-shadow:
+      0 calc(30px * var(--s, 1)) calc(80px * var(--s, 1)) rgba(0,0,0,0.45),
+      0 calc(4px * var(--s, 1)) calc(12px * var(--s, 1)) rgba(0,0,0,0.25),
+      inset 0 0 0 1px rgba(255,255,255,0.06);
+    transform: rotate(var(--r, 0deg));
+    flex-shrink: 0;
+    position: relative;
+  }
+  .shelf-page .phone-screen {
+    width: 100%;
+    height: 100%;
+    border-radius: calc(32px * var(--s, 1));
+    overflow: hidden;
+    background: #000;
+  }
+  .shelf-page .phone-screen img,
+  .shelf-page .phone-screen video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  /* ---------- Eyebrow ---------- */
+  .shelf-page .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(241,245,251,0.6);
+    font-weight: 500;
+  }
+  .shelf-page .eyebrow::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+    opacity: 0.9;
+    flex-shrink: 0;
+  }
+
+  /* ---------- Section divider ---------- */
+  .shelf-page .divider {
+    height: 1px;
+    background: var(--rule);
+    margin: 0 80px;
+  }
+
+  /* ---------- Play badge ---------- */
+  .shelf-page .play-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--accent);
+    color: #fff;
+    padding: 14px 22px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 8px 24px rgba(59,130,246,0.28);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .shelf-page .play-badge:hover { transform: translateY(-1px); box-shadow: 0 12px 32px rgba(59,130,246,0.36); }
+  .shelf-page .play-badge--lg { padding: 16px 26px; gap: 14px; font-size: 17px; }
+  .shelf-page .play-badge__text { display: flex; flex-direction: column; line-height: 1.1; text-align: left; }
+  .shelf-page .play-badge__sub { font-size: 10px; opacity: 0.85; letter-spacing: 0.08em; text-transform: uppercase; }
+  .shelf-page .play-badge__main { font-size: 17px; font-weight: 600; letter-spacing: -0.02em; }
+  .shelf-page .play-badge--lg .play-badge__sub { font-size: 11px; }
+  .shelf-page .play-badge--lg .play-badge__main { font-size: 19px; }
+
+  /* ---------- Secondary CTA ---------- */
+  .shelf-page .ghost-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 20px;
+    border-radius: 999px;
+    border: 1px solid rgba(241,245,251,0.18);
+    color: var(--fg);
+    font-size: 15px;
+    font-weight: 500;
+    background: transparent;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .shelf-page .ghost-btn:hover { background: rgba(241,245,251,0.06); border-color: rgba(241,245,251,0.32); }
+
+  /* ---------- Hero ---------- */
+  .shelf-page .s-hero {
+    padding: 56px 80px 96px;
+    position: relative;
+    overflow: hidden;
+  }
+  .shelf-page .s-hero__grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .shelf-page .s-hero__title {
+    font-size: 88px;
+    font-weight: 600;
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+    color: var(--fg);
+  }
+  .shelf-page .s-hero__title em {
+    font-style: normal;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .shelf-page .s-hero__lede {
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--muted);
+    margin-top: 24px;
+    max-width: 500px;
+    font-weight: 400;
+  }
+  .shelf-page .s-hero__ctas {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .shelf-page .s-hero__art {
+    position: relative;
+    height: 660px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .shelf-page .s-hero__glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(50% 50% at 50% 40%, rgba(59,130,246,0.28), transparent 70%);
+    filter: blur(40px);
+    pointer-events: none;
+  }
+  .shelf-page .s-hero__phone { position: relative; z-index: 1; }
+
+  /* ---------- Benefits strip ---------- */
+  .shelf-page .benefits {
+    margin: 0 80px 24px;
+    border: 1px solid var(--rule);
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(20,30,60,0.55), rgba(11,19,38,0.55));
+    padding: 36px 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+  .shelf-page .benefit { text-align: center; }
+  .shelf-page .benefit__icon {
+    width: 34px;
+    height: 34px;
+    color: var(--accent);
+    margin: 0 auto 14px;
+  }
+  .shelf-page .benefit__title {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--fg);
+  }
+  .shelf-page .benefit__body {
+    margin-top: 8px;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+
+  /* ---------- How it works ---------- */
+  .shelf-page .how {
+    padding: 96px 80px 32px;
+    text-align: center;
+  }
+  .shelf-page .section-title {
+    font-size: 44px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    color: var(--fg);
+    text-wrap: balance;
+  }
+  .shelf-page .section-title em { color: var(--accent); font-style: normal; }
+  .shelf-page .how__row {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    gap: 24px;
+    align-items: center;
+  }
+  .shelf-page .how-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+  }
+  .shelf-page .how-step__head {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .shelf-page .how-step__num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .shelf-page .how-step__icon {
+    width: 40px;
+    height: 40px;
+    color: var(--accent);
+  }
+  .shelf-page .how-step__title {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--fg);
+  }
+  .shelf-page .how-step__body {
+    max-width: 240px;
+    font-size: 14.5px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+  .shelf-page .how__arrow {
+    color: var(--subtle);
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  /* ---------- Feature blocks (Live Mode / Library) ---------- */
+  .shelf-page .feature-blocks {
+    padding: 64px 80px 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+  .shelf-page .fb {
+    background: var(--card-bg);
+    border: 1px solid var(--rule);
+    border-radius: 24px;
+    padding: 36px 36px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: end;
+    overflow: hidden;
+    min-height: 460px;
+  }
+  .shelf-page .fb__head { padding-bottom: 36px; }
+  .shelf-page .fb__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--fg);
+    margin-bottom: 18px;
+  }
+  .shelf-page .fb__pill .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22C55E;
+    display: inline-block;
+  }
+  .shelf-page .fb__pill .dot--blue { background: var(--accent); }
+  .shelf-page .fb__title {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--fg);
+  }
+  .shelf-page .fb__body {
+    margin-top: 14px;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+  .shelf-page .fb__list {
+    margin-top: 22px;
+    font-size: 14.5px;
+    line-height: 1.9;
+    color: var(--fg);
+  }
+  .shelf-page .fb__list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .shelf-page .fb__list svg {
+    width: 18px;
+    height: 18px;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+  .shelf-page .fb__art {
+    align-self: end;
+    display: flex;
+    justify-content: center;
+  }
+  .shelf-page .fb__art .phone { margin-bottom: -120px; }
+
+  /* ---------- Use cases ---------- */
+  .shelf-page .uses {
+    padding: 96px 80px 32px;
+    text-align: center;
+  }
+  .shelf-page .uses__grid {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 36px;
+    position: relative;
+  }
+  .shelf-page .use-card {
+    padding: 0 8px;
+    text-align: center;
+    position: relative;
+  }
+  .shelf-page .use-card + .use-card::before {
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: var(--rule);
+  }
+  .shelf-page .use-card__icon {
+    width: 44px;
+    height: 44px;
+    color: var(--accent);
+    margin: 0 auto 18px;
+  }
+  .shelf-page .use-card__title {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--fg);
+  }
+  .shelf-page .use-card__body {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+
+  /* ---------- Privacy block ---------- */
+  .shelf-page .privacy {
+    margin: 64px 80px 32px;
+    padding: 48px 56px;
+    background: linear-gradient(180deg, rgba(20,30,60,0.7), rgba(11,19,38,0.7));
+    border: 1px solid var(--rule);
+    border-radius: 24px;
+    display: grid;
+    grid-template-columns: auto 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .shelf-page .privacy__shield {
+    width: 90px;
+    height: 90px;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+  .shelf-page .privacy__title {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--fg);
+  }
+  .shelf-page .privacy__body {
+    margin-top: 12px;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+  .shelf-page .privacy__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 24px;
+    font-size: 14px;
+    color: var(--fg);
+  }
+  .shelf-page .privacy__list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .shelf-page .privacy__list svg {
+    width: 18px;
+    height: 18px;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  /* ---------- Demo (YouTube) ---------- */
+  .shelf-page .demo {
+    padding: 96px 80px 32px;
+    text-align: center;
+  }
+  .shelf-page .demo__frame {
+    margin: 48px auto 0;
+    max-width: 960px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+    background: #000;
+    aspect-ratio: 16 / 9;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+  }
+  .shelf-page .demo__frame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+  .shelf-page .demo__body {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--muted);
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ---------- Testimonials ---------- */
+  .shelf-page .quotes {
+    padding: 96px 80px 32px;
+    text-align: center;
+  }
+  .shelf-page .quotes__grid {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .shelf-page .quote {
+    background: var(--card-bg);
+    border: 1px solid var(--rule);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: left;
+  }
+  .shelf-page .quote__stars {
+    color: var(--accent);
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+  .shelf-page .quote__body {
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--fg);
+  }
+  .shelf-page .quote__author {
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--subtle);
+  }
+
+  /* ---------- Bottom CTA ---------- */
+  .shelf-page .s-cta {
+    padding: 112px 80px;
+    text-align: center;
+  }
+  .shelf-page .s-cta__title {
+    font-size: 56px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    text-wrap: balance;
+    color: var(--fg);
+  }
+  .shelf-page .s-cta__title em { color: var(--accent); font-style: normal; }
+  .shelf-page .s-cta__body {
+    font-size: 17px;
+    color: var(--muted);
+    margin: 20px auto 0;
+    max-width: 560px;
+    line-height: 1.55;
+  }
+  .shelf-page .s-cta__action {
+    margin-top: 36px;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 960px) {
+    .shelf-page .divider { margin: 0 24px; }
+    .shelf-page .s-hero { padding: 32px 24px 56px; }
+    .shelf-page .s-hero__grid { grid-template-columns: 1fr; gap: 40px; }
+    .shelf-page .s-hero__title { font-size: 48px; }
+    .shelf-page .s-hero__lede { font-size: 17px; }
+    .shelf-page .s-hero__art { height: 540px; }
+
+    .shelf-page .benefits {
+      margin: 0 24px 16px;
+      padding: 24px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .shelf-page .how { padding: 64px 24px 16px; }
+    .shelf-page .section-title { font-size: 32px; }
+    .shelf-page .how__row {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .shelf-page .how__arrow { display: none; }
+
+    .shelf-page .feature-blocks { padding: 40px 24px 16px; grid-template-columns: 1fr; gap: 20px; }
+    .shelf-page .fb { grid-template-columns: 1fr; min-height: 0; padding: 28px 28px 0; }
+    .shelf-page .fb__head { padding-bottom: 8px; }
+    .shelf-page .fb__art .phone { margin-bottom: -80px; }
+
+    .shelf-page .uses { padding: 64px 24px 16px; }
+    .shelf-page .uses__grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    .shelf-page .use-card + .use-card::before { display: none; }
+
+    .shelf-page .privacy {
+      margin: 40px 24px 16px;
+      padding: 32px 24px;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      text-align: center;
+    }
+    .shelf-page .privacy__shield { margin: 0 auto; width: 64px; height: 64px; }
+    .shelf-page .privacy__list { grid-template-columns: 1fr; justify-items: start; max-width: 280px; margin: 0 auto; }
+
+    .shelf-page .demo { padding: 64px 24px 16px; }
+    .shelf-page .quotes { padding: 64px 24px 16px; }
+    .shelf-page .quotes__grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    .shelf-page .quotes__grid { grid-template-columns: 1fr; }
+
+    .shelf-page .s-cta { padding: 72px 24px; }
+    .shelf-page .s-cta__title { font-size: 36px; }
+    .shelf-page .s-cta__body { font-size: 15px; }
+  }
+  </style>
+</head>
+
+<body class="shelf-page">
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container container--wide site-header__inner">
+      <a href="../index.html" class="site-brand">
+        <img src="../icons/favicon.png" alt="" class="site-brand__logo" />
+        <span class="site-brand__name">ULIX</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../index.html" class="site-nav__link">Home</a>
+        <a href="../apps.html" class="site-nav__link" aria-current="page">Apps</a>
+        <a href="../blog.html" class="site-nav__link">Blog</a>
+        <a href="../about.html" class="site-nav__link">About</a>
+        <a href="../contact.html" class="site-nav__link">Contact</a>
+      </nav>
+      <div class="site-header__actions">
+        <button id="u-menu-btn" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="u-mobile">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="4" y1="7"  x2="20" y2="7"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="17" x2="20" y2="17"/>
           </svg>
-          <span class="font-medium">Get it on Google Play</span>
-        </a>
+        </button>
+        <a href="https://play.google.com/store/apps/details?id=com.ulix.shelfscan" target="_blank" rel="noopener" class="btn btn--primary btn--header">Get Shelf Scan</a>
       </div>
-    </section>
+    </div>
+  </header>
 
-    <div data-include="/partials/footer.html"></div>
-    <script src="/assets/include.js"></script>
-  </body>
+  <div id="u-mobile" class="drawer" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+    <div class="drawer__backdrop" data-close></div>
+    <div class="drawer__panel">
+      <div class="drawer__header">
+        <span class="drawer__title">Menu</span>
+        <button class="drawer__close" aria-label="Close menu" data-close>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <ul class="drawer__list">
+        <li><a class="drawer__link" href="../index.html" data-close>Home</a></li>
+        <li><a class="drawer__link" href="../apps.html" data-close>Apps</a></li>
+        <li><a class="drawer__link" href="../blog.html" data-close>Blog</a></li>
+        <li><a class="drawer__link" href="../about.html" data-close>About</a></li>
+        <li><a class="drawer__link" href="../contact.html" data-close>Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="main">
+    <div class="page">
+
+      <!-- ============ HERO ============ -->
+      <section class="s-hero">
+        <div class="s-hero__grid">
+          <div>
+            <span class="eyebrow" style="margin-bottom:24px; display:inline-flex;">Free · No accounts · Works offline</span>
+            <h1 class="s-hero__title" style="margin-top:18px;">
+              Search shelves<br>
+              <em>instantly.</em>
+            </h1>
+            <p class="s-hero__lede">
+              Find books, movies, and games on your shelves by pointing your camera. Shelf Scan reads spines and covers in real time, like CTRL+F for the physical world. No cataloging, no setup, no hassle.
+            </p>
+            <div class="s-hero__ctas">
+              <a href="https://play.google.com/store/apps/details?id=com.ulix.shelfscan" target="_blank" rel="noopener" class="play-badge">
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" aria-hidden="true">
+                  <path d="M1 1.5v19l10-9.5L1 1.5z" fill="#fff" opacity="0.95"/>
+                  <path d="M1 1.5l10 9.5 3-3L2.5 1 1 1.5z" fill="#fff" opacity="0.75"/>
+                  <path d="M1 20.5l10-9.5 3 3L2.5 21 1 20.5z" fill="#fff" opacity="0.6"/>
+                  <path d="M11 11l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 3v16l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 11z" fill="#fff" opacity="0.45"/>
+                </svg>
+                <span class="play-badge__text">
+                  <span class="play-badge__sub">Get it on</span>
+                  <span class="play-badge__main">Google Play</span>
+                </span>
+              </a>
+              <a href="#how" class="ghost-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/>
+                </svg>
+                See how it works
+              </a>
+            </div>
+          </div>
+          <div class="s-hero__art">
+            <div class="s-hero__glow"></div>
+            <div class="s-hero__phone">
+              <div class="phone" style="--s:1.05">
+                <div class="phone-screen">
+                  <video autoplay muted loop playsinline preload="metadata" poster="../assets/screenshots/shelfscan/Shelf%20Scan%20Live%20Mode%20Whiplash.png">
+                    <source src="../assets/shelfscan/Websiteloop.mp4" type="video/mp4" />
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ BENEFITS STRIP ============ -->
+      <section class="benefits" aria-label="Key benefits">
+        <div class="benefit">
+          <svg class="benefit__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+            <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22 22 0 0 1-4 2z"/>
+            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+          </svg>
+          <h3 class="benefit__title">No setup</h3>
+          <div class="benefit__body">Open the app and start scanning right away.</div>
+        </div>
+        <div class="benefit">
+          <svg class="benefit__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M17.5 19a4.5 4.5 0 1 0-1.4-8.78A7 7 0 1 0 7 18"/>
+            <line x1="3" y1="3" x2="21" y2="21"/>
+          </svg>
+          <h3 class="benefit__title">Works offline</h3>
+          <div class="benefit__body">No internet needed. Ever.</div>
+        </div>
+        <div class="benefit">
+          <svg class="benefit__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="4" y="11" width="16" height="10" rx="2"/>
+            <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+          </svg>
+          <h3 class="benefit__title">Private by design</h3>
+          <div class="benefit__body">Everything happens on your device.</div>
+        </div>
+        <div class="benefit">
+          <svg class="benefit__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+          <h3 class="benefit__title">Find things fast</h3>
+          <div class="benefit__body">Powerful OCR gets you exact matches.</div>
+        </div>
+      </section>
+
+      <!-- ============ HOW IT WORKS ============ -->
+      <section id="how" class="how">
+        <span class="eyebrow" style="justify-content:center;">In three steps</span>
+        <h2 class="section-title" style="margin-top:16px;">How it works</h2>
+        <div class="how__row">
+          <div class="how-step">
+            <div class="how-step__head">
+              <div class="how-step__num">1</div>
+              <svg class="how-step__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="6" y="2" width="12" height="20" rx="3"/>
+                <line x1="11" y1="18" x2="13" y2="18"/>
+              </svg>
+            </div>
+            <h3 class="how-step__title">Point</h3>
+            <p class="how-step__body">Open Live Mode and point your camera at the shelf.</p>
+          </div>
+          <div class="how__arrow" aria-hidden="true">›</div>
+          <div class="how-step">
+            <div class="how-step__head">
+              <div class="how-step__num">2</div>
+              <svg class="how-step__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="7"/>
+                <line x1="21" y1="21" x2="16" y2="16"/>
+              </svg>
+            </div>
+            <h3 class="how-step__title">Search</h3>
+            <p class="how-step__body">Type what you're looking for: title, author, or keyword.</p>
+          </div>
+          <div class="how__arrow" aria-hidden="true">›</div>
+          <div class="how-step">
+            <div class="how-step__head">
+              <div class="how-step__num">3</div>
+              <svg class="how-step__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="8 12 11 15 16 9"/>
+              </svg>
+            </div>
+            <h3 class="how-step__title">Find</h3>
+            <p class="how-step__body">Shelf Scan highlights matches instantly. Done.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FEATURE BLOCKS ============ -->
+      <section class="feature-blocks">
+        <div class="fb">
+          <div class="fb__head">
+            <div class="fb__pill"><span class="dot"></span> Live Mode</div>
+            <h3 class="fb__title">Highlights matches as you search.</h3>
+            <p class="fb__body">Real-time OCR scans shelf spines and covers, lighting up the exact items that match your query.</p>
+            <ul class="fb__list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Instant results</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Works offline</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> On-screen highlights</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Save to your Library</li>
+            </ul>
+          </div>
+          <div class="fb__art">
+            <div class="phone" style="--s:0.78">
+              <div class="phone-screen"><img src="../assets/screenshots/shelfscan/Shelf%20Scan%20Live%20Mode%20Whiplash.png" alt="Shelf Scan Live Mode highlighting the spine of the movie Whiplash on a shelf" loading="lazy" width="280" height="580" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="fb">
+          <div class="fb__head">
+            <div class="fb__pill"><span class="dot dot--blue"></span> Library</div>
+            <h3 class="fb__title">Save shelves, search them anytime.</h3>
+            <p class="fb__body">Snap photos of your shelves and save them to your Library. Can't remember if you already own that book, disc, or game at the store? Search your Library anytime.</p>
+            <ul class="fb__list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Save shelf photos</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Add notes</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Backup &amp; restore</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Search your Library</li>
+            </ul>
+          </div>
+          <div class="fb__art">
+            <div class="phone" style="--s:0.78">
+              <div class="phone-screen"><img src="../assets/screenshots/shelfscan/Shelf%20Scan%20Library.png" alt="Shelf Scan Library screen listing saved shelf photos for later search" loading="lazy" width="280" height="580" /></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ USE CASES ============ -->
+      <section class="uses">
+        <span class="eyebrow" style="justify-content:center;">For every shelf</span>
+        <h2 class="section-title" style="margin-top:16px;">Built for any <em>collection</em>.</h2>
+        <p class="demo__body" style="margin-top:16px;">Books, DVDs, Blu-rays, video games, board games, or anything with readable text on a spine or cover.</p>
+        <div class="uses__grid">
+          <div class="use-card">
+            <svg class="use-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+            <h3 class="use-card__title">Home libraries</h3>
+            <p class="use-card__body">Find anything in seconds, and stop rebuying what you already own.</p>
+          </div>
+          <div class="use-card">
+            <svg class="use-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+              <line x1="7" y1="7" x2="7.01" y2="7"/>
+            </svg>
+            <h3 class="use-card__title">Stores &amp; bargains</h3>
+            <p class="use-card__body">Locate inventory faster and spot deals on used shelves.</p>
+          </div>
+          <div class="use-card">
+            <svg class="use-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+            <h3 class="use-card__title">Classrooms &amp; libraries</h3>
+            <p class="use-card__body">Quickly find resources for students and patrons.</p>
+          </div>
+          <div class="use-card">
+            <svg class="use-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <ellipse cx="12" cy="5" rx="9" ry="3"/>
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+            </svg>
+            <h3 class="use-card__title">Media collectors</h3>
+            <p class="use-card__body">Search a packed shelf without pulling everything off it.</p>
+          </div>
+        </div>
+        <p class="demo__body" style="margin-top:40px; font-size:14px; color:var(--subtle);">Also handy on documents, posters, maps, and grocery shelves, anywhere you need to find a word fast.</p>
+      </section>
+
+      <!-- ============ PRIVACY ============ -->
+      <section class="privacy">
+        <svg class="privacy__shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <polyline points="9 12 11 14 15 10"/>
+        </svg>
+        <div>
+          <h2 class="privacy__title">Private. Offline. On-device.</h2>
+          <p class="privacy__body">
+            Shelf Scan works entirely on your device using on-device OCR. Your scans, searches, and saved shelf photos never leave your phone.
+          </p>
+          <p class="privacy__body" style="margin-top:8px;">
+            <a href="../shelfscanprivacy.html" style="color:var(--accent); border-bottom:1px solid var(--accent-soft);">Read the full privacy policy →</a>
+          </p>
+        </div>
+        <ul class="privacy__list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> No internet permission</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> No data collection</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> No accounts or sign-ins</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> No ads or tracking</li>
+        </ul>
+      </section>
+
+      <!-- ============ DEMO VIDEO ============ -->
+      <section class="demo">
+        <span class="eyebrow" style="justify-content:center;">Watch a full walkthrough</span>
+        <h2 class="section-title" style="margin-top:16px;">See Shelf Scan in <em>action</em>.</h2>
+        <p class="demo__body">A quick tour of Live Mode, the Library, and how Shelf Scan handles a packed shelf.</p>
+        <div class="demo__frame">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/kf6yH4qhzdI"
+            title="Shelf Scan full demo"
+            loading="lazy"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
+      </section>
+
+      <!-- ============ TESTIMONIALS ============ -->
+      <section class="quotes">
+        <span class="eyebrow" style="justify-content:center;">Early adopters</span>
+        <h2 class="section-title" style="margin-top:16px;">What people are saying</h2>
+        <div class="quotes__grid">
+          <div class="quote">
+            <div class="quote__stars">★★★★★</div>
+            <p class="quote__body">"This is amazing!"</p>
+          </div>
+          <div class="quote">
+            <div class="quote__stars">★★★★★</div>
+            <p class="quote__body">"Ok, that is the coolest thing ever!!! Thank you!"</p>
+          </div>
+          <div class="quote">
+            <div class="quote__stars">★★★★★</div>
+            <p class="quote__body">"I have been using this the past week and it is so helpful!"</p>
+          </div>
+          <div class="quote">
+            <div class="quote__stars">★★★★★</div>
+            <p class="quote__body">"Now if only you could help me find everything else I lose every day…"</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ BOTTOM CTA ============ -->
+      <section class="s-cta">
+        <span class="eyebrow" style="margin-bottom:24px; justify-content:center;">Free · No accounts · Works offline</span>
+        <h2 class="s-cta__title" style="margin-top:16px;">
+          Organize your library<br>without <em>organizing it</em>.
+        </h2>
+        <p class="s-cta__body">
+          CTRL+F the World. Download Shelf Scan free on Google Play.
+        </p>
+        <div class="s-cta__action">
+          <a href="https://play.google.com/store/apps/details?id=com.ulix.shelfscan" target="_blank" rel="noopener" class="play-badge play-badge--lg">
+            <svg width="22" height="24" viewBox="0 0 20 22" fill="none" aria-hidden="true">
+              <path d="M1 1.5v19l10-9.5L1 1.5z" fill="#fff" opacity="0.95"/>
+              <path d="M1 1.5l10 9.5 3-3L2.5 1 1 1.5z" fill="#fff" opacity="0.75"/>
+              <path d="M1 20.5l10-9.5 3 3L2.5 21 1 20.5z" fill="#fff" opacity="0.6"/>
+              <path d="M11 11l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 3v16l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 11z" fill="#fff" opacity="0.45"/>
+            </svg>
+            <span class="play-badge__text">
+              <span class="play-badge__sub">Get it on</span>
+              <span class="play-badge__main">Google Play</span>
+            </span>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="../icons/favicon.png" alt="" width="32" height="32" style="border-radius:0.5rem" />
+          <div>
+            <div class="site-footer__brand-name">ULIX</div>
+            <p class="site-footer__tag">Precision tools for modern odysseys.</p>
+          </div>
+        </div>
+        <div class="site-footer__links">
+          <a href="../apps.html">Apps</a>
+          <a href="../blog.html">Blog</a>
+          <a href="../support.html">Support</a>
+          <a href="../about.html">About</a>
+          <a href="../contact.html">Contact</a>
+          <a href="../terms.html">Terms</a>
+          <a href="../privacy.html">Privacy</a>
+          <a href="../shelfscanprivacy.html">Shelf Scan Privacy</a>
+        </div>
+        <div>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/ulix" method="post" target="bd-subscribe" class="newsletter" aria-label="Email signup">
+            <label for="nl-email" class="newsletter__label">Get product updates</label>
+            <div class="newsletter__row">
+              <input id="nl-email" class="newsletter__input" type="email" name="email" placeholder="you@example.com" />
+              <button class="btn btn--secondary">Subscribe</button>
+            </div>
+          </form>
+          <div class="site-footer__copyright">© 2026 Ulix LLC.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/ulix.js" defer></script>
+</body>
 </html>

@@ -498,6 +498,36 @@ button { font: inherit; cursor: pointer; }
   font-size: 0.75rem;
   font-weight: 600;
 }
+.carousel__tag-link {
+  color: inherit;
+  text-decoration: none;
+}
+.carousel__tag-link:hover { text-decoration: underline; }
+.carousel__learn-more,
+.featured-card__learn-more {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.875rem;
+  color: var(--ulix-accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--ulix-accent);
+  border-radius: var(--radius-md);
+}
+.carousel__learn-more:hover,
+.featured-card__learn-more:hover {
+  background: rgba(180, 144, 65, 0.08);
+}
+.app-card__title a,
+.card__title a {
+  color: inherit;
+  text-decoration: none;
+}
+.app-card__title a:hover,
+.card__title a:hover {
+  text-decoration: underline;
+}
 @media (min-width: 1024px) {
   .carousel__inner { grid-template-columns: auto 1fr; column-gap: 1.25rem; text-align: left; align-items: center; }
   .carousel__icon { margin: 0; }
