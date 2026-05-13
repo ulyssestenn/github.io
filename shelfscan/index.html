@@ -30,36 +30,112 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": ["SoftwareApplication", "MobileApplication"],
-  "@id": "https://ulix.app/shelfscan/#app",
-  "name": "Shelf Scan",
-  "description": "Shelf Scan finds books, movies, and games on physical shelves using your phone's camera. On-device OCR works fully offline. No accounts, no data collection.",
-  "url": "https://ulix.app/shelfscan/",
-  "downloadUrl": "https://play.google.com/store/apps/details?id=com.ulix.shelfscan",
-  "installUrl": "https://play.google.com/store/apps/details?id=com.ulix.shelfscan",
-  "operatingSystem": "Android",
-  "applicationCategory": "UtilitiesApplication",
-  "isAccessibleForFree": true,
-  "inLanguage": "en",
-  "screenshot": [
-    "https://ulix.app/assets/screenshots/shelfscan/Shelf%20Scan%20Live%20Mode%20Whiplash.png",
-    "https://ulix.app/assets/screenshots/shelfscan/Shelf%20Scan%20Live%20Mode%20Space.png",
-    "https://ulix.app/assets/screenshots/shelfscan/Shelf%20Scan%20Library.png"
-  ],
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "featureList": [
-    "On-device OCR for shelf text",
-    "Live Mode camera search",
-    "Highlights matches in real time",
-    "Library of saved shelf photos",
-    "Works fully offline",
-    "No accounts or data collection"
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Ulix LLC",
-    "url": "https://ulix.app/"
-  }
+  "@graph": [
+    {
+      "@type": ["SoftwareApplication", "MobileApplication"],
+      "@id": "https://ulix.app/shelfscan/#app",
+      "name": "Shelf Scan",
+      "description": "Shelf Scan finds books, movies, and games on physical shelves using your phone's camera. On-device OCR works fully offline. No accounts, no data collection.",
+      "url": "https://ulix.app/shelfscan/",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.ulix.shelfscan",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.ulix.shelfscan",
+      "operatingSystem": "Android 7.0+",
+      "applicationCategory": "UtilitiesApplication",
+      "applicationSubCategory": "Visual search",
+      "isAccessibleForFree": false,
+      "inLanguage": "en",
+      "permissions": "Camera",
+      "datePublished": "2026-05-13",
+      "dateModified": "2026-05-13",
+      "image": "https://ulix.app/icons/shelfscan.png",
+      "screenshot": [
+        "https://ulix.app/assets/screenshots/shelfscan/Shelf%20Scan%20Live%20Mode%20Whiplash.png",
+        "https://ulix.app/assets/screenshots/shelfscan/Shelf%20Scan%20Live%20Mode%20Space.png",
+        "https://ulix.app/assets/screenshots/shelfscan/Shelf%20Scan%20Live%20Mode%20Spy.png",
+        "https://ulix.app/assets/screenshots/shelfscan/Shelf%20Scan%20Live%20Mode%20Total.png",
+        "https://ulix.app/assets/screenshots/shelfscan/Shelf%20Scan%20Library.png"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "1.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://play.google.com/store/apps/details?id=com.ulix.shelfscan"
+      },
+      "featureList": [
+        "On-device OCR for shelf text",
+        "Live Mode camera search",
+        "Highlights matches in real time",
+        "Library of saved shelf photos",
+        "Works fully offline",
+        "No accounts or data collection"
+      ],
+      "keywords": [
+        "shelf scan",
+        "camera shelf search",
+        "OCR shelf finder",
+        "find books on shelves",
+        "offline OCR",
+        "private camera search",
+        "Android utility",
+        "library inventory"
+      ],
+      "publisher": { "@id": "https://ulix.app/#org" },
+      "author": { "@id": "https://ulix.app/#org" },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewBody": "This is amazing!",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Beta tester" }
+        },
+        {
+          "@type": "Review",
+          "reviewBody": "Ok, that is the coolest thing ever!!! Thank you!",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Beta tester" }
+        },
+        {
+          "@type": "Review",
+          "reviewBody": "I have been using this the past week and it is so helpful!",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Beta tester" }
+        },
+        {
+          "@type": "Review",
+          "reviewBody": "Now if only you could help me find everything else I lose every day.",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Beta tester" }
+        }
+      ],
+      "video": { "@id": "https://ulix.app/shelfscan/#demo-video" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://ulix.app/#org",
+      "name": "Ulix LLC",
+      "url": "https://ulix.app/",
+      "logo": "https://ulix.app/icons/favicon.png"
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://ulix.app/shelfscan/#demo-video",
+      "name": "Shelf Scan full demo",
+      "description": "A quick tour of Live Mode, the Library, and how Shelf Scan handles a packed shelf.",
+      "thumbnailUrl": "https://i.ytimg.com/vi/kf6yH4qhzdI/maxresdefault.jpg",
+      "uploadDate": "2026-05-13",
+      "contentUrl": "https://www.youtube.com/watch?v=kf6yH4qhzdI",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/kf6yH4qhzdI"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ulix.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Apps", "item": "https://ulix.app/apps.html" },
+        { "@type": "ListItem", "position": 3, "name": "Shelf Scan", "item": "https://ulix.app/shelfscan/" }
+      ]
+    }
+  ]
 }
 </script>
 
