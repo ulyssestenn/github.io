@@ -220,6 +220,20 @@
   .guten-page .play-badge__main { font-size: 17px; font-weight: 600; letter-spacing: -0.02em; }
   .guten-page .play-badge--lg .play-badge__sub { font-size: 11px; }
   .guten-page .play-badge--lg .play-badge__main { font-size: 18.7px; }
+  .guten-page .play-badge-wrap {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .guten-page .play-badge__caption {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+  }
 
   /* ---------- Secondary link ---------- */
   .guten-page .secondary-link {
@@ -270,6 +284,19 @@
     margin-top: 28px;
     max-width: 480px;
     font-weight: 300;
+  }
+  .guten-page .g-hero__sublede {
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(244,239,230,0.6);
+    margin-top: 16px;
+    max-width: 480px;
+    font-weight: 500;
+  }
+  .guten-page .g-hero__free-chip {
+    margin-bottom: 24px;
+    color: var(--accent);
   }
   .guten-page .g-hero__ctas {
     margin-top: 36px;
@@ -778,6 +805,7 @@
         <span class="eyebrow">Ulix · Reading</span>
         <div class="g-hero__grid">
           <div>
+            <span class="eyebrow g-hero__free-chip">Free · No account · 70,000+ books</span>
             <h1 class="g-hero__title">
               Read more.<br>
               <em>Scroll less.</em>
@@ -785,19 +813,25 @@
             <p class="g-hero__lede">
               Guten is a free Android ereader for 70,000+ public-domain books from Project Gutenberg. Search the catalog, download books, read offline, and take notes. No account. No ads. Just books.
             </p>
+            <p class="g-hero__sublede">
+              Free to download — premium is a one-time purchase, never a subscription.
+            </p>
             <div class="g-hero__ctas">
-              <a href="https://play.google.com/store/apps/details?id=com.bhunt.guten" target="_blank" rel="noopener" class="play-badge">
-                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" aria-hidden="true">
-                  <path d="M1 1.5v19l10-9.5L1 1.5z" fill="#E5B83A" opacity="0.95"/>
-                  <path d="M1 1.5l10 9.5 3-3L2.5 1 1 1.5z" fill="#E5B83A" opacity="0.7"/>
-                  <path d="M1 20.5l10-9.5 3 3L2.5 21 1 20.5z" fill="#E5B83A" opacity="0.55"/>
-                  <path d="M11 11l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 3v16l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 11z" fill="#E5B83A" opacity="0.4"/>
-                </svg>
-                <span class="play-badge__text">
-                  <span class="play-badge__sub">Get it on</span>
-                  <span class="play-badge__main">Google Play</span>
-                </span>
-              </a>
+              <div class="play-badge-wrap">
+                <a href="https://play.google.com/store/apps/details?id=com.bhunt.guten" target="_blank" rel="noopener" class="play-badge">
+                  <svg width="20" height="22" viewBox="0 0 20 22" fill="none" aria-hidden="true">
+                    <path d="M1 1.5v19l10-9.5L1 1.5z" fill="#E5B83A" opacity="0.95"/>
+                    <path d="M1 1.5l10 9.5 3-3L2.5 1 1 1.5z" fill="#E5B83A" opacity="0.7"/>
+                    <path d="M1 20.5l10-9.5 3 3L2.5 21 1 20.5z" fill="#E5B83A" opacity="0.55"/>
+                    <path d="M11 11l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 3v16l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 11z" fill="#E5B83A" opacity="0.4"/>
+                  </svg>
+                  <span class="play-badge__text">
+                    <span class="play-badge__sub">Get it on</span>
+                    <span class="play-badge__main">Google Play</span>
+                  </span>
+                </a>
+                <span class="play-badge__caption">Free download · No ads</span>
+              </div>
               <a href="#features" class="secondary-link">See features →</a>
             </div>
             <div class="g-hero__stats">
