@@ -140,7 +140,7 @@
   .keepclip-page p, .keepclip-page ul, .keepclip-page figure { margin: 0; }
   .keepclip-page ul { list-style: none; padding: 0; }
 
-  .keepclip-page .page { max-width: 1240px; margin: 0 auto; }
+  .keepclip-page .page { max-width: 1440px; margin: 0 auto; }
 
   /* ---------- Buttons ---------- */
   .keepclip-page .play-btn {
@@ -192,7 +192,7 @@
   /* ---------- Phone frame ---------- */
   .keepclip-page .phone {
     width: calc(280px * var(--s, 1));
-    height: calc(580px * var(--s, 1));
+    height: calc(590px * var(--s, 1));
     border-radius: calc(36px * var(--s, 1));
     padding: calc(8px * var(--s, 1));
     background: linear-gradient(180deg, #1F2937 0%, #0B1220 100%);
@@ -216,18 +216,6 @@
     height: 100%;
     object-fit: cover;
     object-position: top;
-  }
-  /* Fallback when no screenshot is supplied yet */
-  .keepclip-page .phone-screen.phone-screen--placeholder {
-    background:
-      linear-gradient(180deg, #F8FAFF 0%, #EEF2FB 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--subtle);
-    font-size: 12px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
   }
 
   /* ---------- Eyebrow ---------- */
@@ -255,26 +243,27 @@
   .keepclip-page .divider {
     height: 1px;
     background: var(--rule);
-    margin: 0 80px;
+    margin: 0 64px;
   }
 
   /* ---------- Hero ---------- */
   .keepclip-page .k-hero {
-    padding: 56px 80px 80px;
+    padding: 48px 64px 56px;
     position: relative;
     overflow: hidden;
   }
   .keepclip-page .k-hero__grid {
     display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    gap: 60px;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
     align-items: center;
+    min-height: 620px;
   }
   .keepclip-page .k-hero__title {
-    font-size: 76px;
+    font-size: 80px;
     font-weight: 700;
     line-height: 1.02;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.035em;
     text-wrap: balance;
     color: var(--fg);
     margin-top: 24px;
@@ -283,14 +272,14 @@
     font-size: 18px;
     line-height: 1.55;
     color: var(--muted);
-    margin-top: 24px;
-    max-width: 500px;
+    margin-top: 20px;
+    max-width: 520px;
   }
   .keepclip-page .k-hero__chips {
-    margin-top: 28px;
+    margin-top: 24px;
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
   }
   .keepclip-page .trust-chip {
     display: inline-flex;
@@ -324,29 +313,29 @@
   .keepclip-page .k-hero__glow {
     position: absolute;
     inset: 0;
-    background: radial-gradient(45% 50% at 60% 45%, rgba(30,64,175,0.10), transparent 70%);
+    background: radial-gradient(45% 50% at 55% 50%, rgba(30,64,175,0.10), transparent 70%);
     filter: blur(40px);
     pointer-events: none;
   }
   .keepclip-page .k-hero__phone-1 {
     position: absolute;
-    left: 12%;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-  }
-  .keepclip-page .k-hero__phone-2 {
-    position: absolute;
-    right: 0;
+    left: 4%;
     top: 50%;
     transform: translateY(-50%);
     z-index: 2;
   }
+  .keepclip-page .k-hero__phone-2 {
+    position: absolute;
+    right: 4%;
+    top: calc(50% + 24px);
+    transform: translateY(-50%);
+    z-index: 1;
+  }
 
   /* ---------- Trust strip (under hero, like the mockup's icon row) ---------- */
   .keepclip-page .trust-strip {
-    margin: 0 80px;
-    padding: 28px 0;
+    margin: 0 64px;
+    padding: 22px 0;
     border-top: 1px solid var(--rule);
     border-bottom: 1px solid var(--rule);
     display: grid;
@@ -384,10 +373,10 @@
 
   /* ---------- Problem section ---------- */
   .keepclip-page .problem {
-    padding: 100px 80px;
+    padding: 72px 64px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 56px;
     align-items: center;
   }
   .keepclip-page .problem__col p { margin-top: 16px; }
@@ -425,25 +414,35 @@
 
   /* ---------- How it works ---------- */
   .keepclip-page .how {
-    padding: 96px 80px;
+    padding: 72px 64px;
     background: var(--bg-soft);
     border-top: 1px solid var(--rule);
     border-bottom: 1px solid var(--rule);
   }
-  .keepclip-page .how__head { text-align: center; max-width: 720px; margin: 0 auto 56px; }
+  .keepclip-page .how__head { text-align: center; max-width: 720px; margin: 0 auto 40px; }
+  .keepclip-page .how__row {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .keepclip-page .how__phone {
+    display: flex;
+    justify-content: center;
+  }
   .keepclip-page .how__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
   .keepclip-page .how-step {
     background: #fff;
     border: 1px solid var(--rule);
-    border-radius: 16px;
-    padding: 28px 24px;
+    border-radius: 14px;
+    padding: 22px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 10px;
   }
   .keepclip-page .how-step__num {
     width: 32px;
@@ -471,79 +470,79 @@
 
   /* ---------- Feature grid ---------- */
   .keepclip-page .features {
-    padding: 96px 80px;
+    padding: 72px 64px;
   }
-  .keepclip-page .features__head { text-align: center; max-width: 720px; margin: 0 auto 56px; }
+  .keepclip-page .features__head { text-align: center; max-width: 720px; margin: 0 auto 40px; }
   .keepclip-page .features__head .section-lede { margin-left: auto; margin-right: auto; }
   .keepclip-page .features__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
   }
   .keepclip-page .feature-card {
     background: #fff;
     border: 1px solid var(--rule);
-    border-radius: 16px;
-    padding: 28px;
+    border-radius: 14px;
+    padding: 22px 20px;
     box-shadow: var(--card-shadow);
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 12px;
   }
   .keepclip-page .feature-card__icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
     background: var(--accent-soft);
     color: var(--accent);
     display: inline-flex;
     align-items: center;
     justify-content: center;
   }
-  .keepclip-page .feature-card__icon svg { width: 22px; height: 22px; }
+  .keepclip-page .feature-card__icon svg { width: 20px; height: 20px; }
   .keepclip-page .feature-card__title {
-    font-size: 19px;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: -0.01em;
     color: var(--fg);
   }
   .keepclip-page .feature-card__body {
-    font-size: 14.5px;
-    line-height: 1.55;
+    font-size: 13.5px;
+    line-height: 1.5;
     color: var(--muted);
   }
 
   /* ---------- Use cases ---------- */
   .keepclip-page .uses {
-    padding: 96px 80px;
+    padding: 72px 64px;
     background: var(--bg-soft);
     border-top: 1px solid var(--rule);
     border-bottom: 1px solid var(--rule);
   }
-  .keepclip-page .uses__head { text-align: center; max-width: 720px; margin: 0 auto 56px; }
+  .keepclip-page .uses__head { text-align: center; max-width: 720px; margin: 0 auto 40px; }
   .keepclip-page .uses__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 16px;
   }
   .keepclip-page .persona {
     background: #fff;
     border: 1px solid var(--rule);
-    border-radius: 16px;
-    padding: 28px;
+    border-radius: 14px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
   }
   .keepclip-page .persona__icon {
-    width: 56px;
-    height: 56px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
   }
-  .keepclip-page .persona__icon svg { width: 26px; height: 26px; }
+  .keepclip-page .persona__icon svg { width: 24px; height: 24px; }
   .keepclip-page .persona--readers .persona__icon { background: #E0E7FF; color: #3730A3; }
   .keepclip-page .persona--researchers .persona__icon { background: #DCFCE7; color: #166534; }
   .keepclip-page .persona--writers .persona__icon { background: #FCE7F3; color: #9D174D; }
@@ -560,11 +559,11 @@
   }
 
   .keepclip-page .uses__bullets {
-    margin-top: 48px;
+    margin-top: 36px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px 32px;
-    max-width: 900px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px 32px;
+    max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -580,10 +579,10 @@
 
   /* ---------- PKM section ---------- */
   .keepclip-page .pkm {
-    padding: 96px 80px;
+    padding: 72px 64px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 56px;
     align-items: center;
   }
   .keepclip-page .pkm__art {
@@ -633,14 +632,14 @@
 
   /* ---------- Privacy section ---------- */
   .keepclip-page .privacy {
-    margin: 0 80px;
-    padding: 56px 56px;
+    margin: 0 64px;
+    padding: 44px 48px;
     background: linear-gradient(180deg, #F2F6FF 0%, #EAF1FF 100%);
     border: 1px solid #D7E2F8;
-    border-radius: 24px;
+    border-radius: 22px;
     display: grid;
     grid-template-columns: auto 1.1fr 0.9fr;
-    gap: 48px;
+    gap: 40px;
     align-items: center;
   }
   .keepclip-page .privacy__shield {
@@ -680,21 +679,27 @@
   }
 
   /* ---------- Comparison section ---------- */
-  .keepclip-page .compare { padding: 96px 80px; }
-  .keepclip-page .compare__head { max-width: 720px; margin-bottom: 48px; }
+  .keepclip-page .compare { padding: 72px 64px; }
+  .keepclip-page .compare__head { max-width: 720px; margin-bottom: 36px; }
   .keepclip-page .compare__grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
   }
   .keepclip-page .compare-card {
     background: #fff;
     border: 1px solid var(--rule);
-    border-radius: 16px;
-    padding: 28px;
+    border-radius: 14px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
     gap: 8px;
+  }
+  .keepclip-page .compare-card__title {
+    font-size: 17px;
+  }
+  .keepclip-page .compare-card__body {
+    font-size: 14px;
   }
   .keepclip-page .compare-card__label {
     font-size: 12px;
@@ -719,7 +724,7 @@
 
   /* ---------- Bottom CTA ---------- */
   .keepclip-page .k-cta {
-    padding: 112px 80px;
+    padding: 88px 64px;
     text-align: center;
   }
   .keepclip-page .k-cta__title {
@@ -750,15 +755,21 @@
   }
 
   /* ---------- Responsive ---------- */
+  @media (max-width: 1200px) {
+    .keepclip-page .features__grid { grid-template-columns: repeat(3, 1fr); }
+    .keepclip-page .compare__grid { grid-template-columns: repeat(2, 1fr); }
+    .keepclip-page .how__row { grid-template-columns: 1fr; gap: 32px; }
+    .keepclip-page .how__phone { display: none; }
+  }
   @media (max-width: 960px) {
     .keepclip-page .divider { margin: 0 24px; }
-    .keepclip-page .k-hero { padding: 32px 24px 56px; }
-    .keepclip-page .k-hero__grid { grid-template-columns: 1fr; gap: 40px; }
+    .keepclip-page .k-hero { padding: 32px 24px 48px; }
+    .keepclip-page .k-hero__grid { grid-template-columns: 1fr; gap: 40px; min-height: 0; }
     .keepclip-page .k-hero__title { font-size: 44px; }
     .keepclip-page .k-hero__lede { font-size: 16px; }
     .keepclip-page .k-hero__art { height: 540px; }
     .keepclip-page .k-hero__phone-1 { left: 0; }
-    .keepclip-page .k-hero__phone-2 { right: 0; }
+    .keepclip-page .k-hero__phone-2 { right: 0; top: calc(50% + 16px); }
 
     .keepclip-page .trust-strip {
       margin: 0 24px;
@@ -770,18 +781,18 @@
 
     .keepclip-page .section-title { font-size: 32px; }
 
-    .keepclip-page .problem { padding: 64px 24px; grid-template-columns: 1fr; gap: 32px; }
-    .keepclip-page .how { padding: 64px 24px; }
+    .keepclip-page .problem { padding: 56px 24px; grid-template-columns: 1fr; gap: 28px; }
+    .keepclip-page .how { padding: 56px 24px; }
     .keepclip-page .how__grid { grid-template-columns: 1fr 1fr; }
 
-    .keepclip-page .features { padding: 64px 24px; }
-    .keepclip-page .features__grid { grid-template-columns: 1fr; }
+    .keepclip-page .features { padding: 56px 24px; }
+    .keepclip-page .features__grid { grid-template-columns: 1fr 1fr; }
 
-    .keepclip-page .uses { padding: 64px 24px; }
+    .keepclip-page .uses { padding: 56px 24px; }
     .keepclip-page .uses__grid { grid-template-columns: 1fr 1fr; }
     .keepclip-page .uses__bullets { grid-template-columns: 1fr; }
 
-    .keepclip-page .pkm { padding: 64px 24px; grid-template-columns: 1fr; gap: 32px; }
+    .keepclip-page .pkm { padding: 56px 24px; grid-template-columns: 1fr; gap: 32px; }
     .keepclip-page .pkm__art { padding: 24px; }
 
     .keepclip-page .privacy {
@@ -794,16 +805,18 @@
     .keepclip-page .privacy__shield { margin: 0 auto; width: 64px; height: 64px; }
     .keepclip-page .privacy__list { grid-template-columns: 1fr; justify-items: start; max-width: 280px; margin: 0 auto; }
 
-    .keepclip-page .compare { padding: 64px 24px; }
-    .keepclip-page .compare__grid { grid-template-columns: 1fr; }
+    .keepclip-page .compare { padding: 56px 24px; }
+    .keepclip-page .compare__grid { grid-template-columns: 1fr 1fr; }
 
-    .keepclip-page .k-cta { padding: 72px 24px; }
+    .keepclip-page .k-cta { padding: 64px 24px; }
     .keepclip-page .k-cta__title { font-size: 36px; }
     .keepclip-page .k-cta__body { font-size: 15px; }
   }
   @media (max-width: 600px) {
     .keepclip-page .how__grid { grid-template-columns: 1fr; }
     .keepclip-page .uses__grid { grid-template-columns: 1fr; }
+    .keepclip-page .features__grid { grid-template-columns: 1fr; }
+    .keepclip-page .compare__grid { grid-template-columns: 1fr; }
     .keepclip-page .pkm__art { grid-template-columns: 1fr; }
   }
   </style>
@@ -926,16 +939,16 @@
           <div class="k-hero__art">
             <div class="k-hero__glow"></div>
             <div class="k-hero__phone-1">
-              <div class="phone" style="--s:0.85; --r:-3deg">
-                <div class="phone-screen phone-screen--placeholder">
-                  <img src="../assets/screenshots/keepclip/list.png" alt="Keep Clip list of saved clips" onerror="this.style.display='none'; this.parentElement.textContent='Clip list';" />
+              <div class="phone" style="--s:1">
+                <div class="phone-screen">
+                  <img src="../assets/screenshots/keepclip/keepclipmain.png" alt="Keep Clip main screen with saved quotes from Bartleby, Heart of Darkness, and The Iliad" width="280" height="590" />
                 </div>
               </div>
             </div>
             <div class="k-hero__phone-2">
-              <div class="phone" style="--s:0.95; --r:3deg">
-                <div class="phone-screen phone-screen--placeholder">
-                  <img src="../assets/screenshots/keepclip/export.png" alt="Keep Clip export menu" onerror="this.style.display='none'; this.parentElement.textContent='Export menu';" />
+              <div class="phone" style="--s:1">
+                <div class="phone-screen">
+                  <img src="../assets/screenshots/keepclip/keepclipexport.png" alt="Keep Clip export menu showing CSV, HTML, TXT, DOCX, and Markdown options" width="280" height="590" />
                 </div>
               </div>
             </div>
@@ -1015,26 +1028,35 @@
             From <em>anywhere</em> to one place.
           </h2>
         </div>
-        <div class="how__grid">
-          <div class="how-step">
-            <div class="how-step__num">1</div>
-            <h3 class="how-step__title">Clip from almost any app</h3>
-            <p class="how-step__body">Use Android’s Share menu to send selected text, links, quotes, and excerpts to Keep Clip. In apps like Kindle, copy the text first, then use the share pop-up.</p>
+        <div class="how__row">
+          <div class="how__phone">
+            <div class="phone" style="--s:0.95">
+              <div class="phone-screen">
+                <img src="../assets/screenshots/keepclip/keepclipclip.png" alt="Keep Clip edit-clip screen with title, author, source, and source URL fields" width="280" height="590" loading="lazy" />
+              </div>
+            </div>
           </div>
-          <div class="how-step">
-            <div class="how-step__num">2</div>
-            <h3 class="how-step__title">Add context while it’s fresh</h3>
-            <p class="how-step__body">Save a title, source app, source URL, tags, notes, and a custom clip name. Keep the quote and the reason you saved it together.</p>
-          </div>
-          <div class="how-step">
-            <div class="how-step__num">3</div>
-            <h3 class="how-step__title">Find it later</h3>
-            <p class="how-step__body">Search saved clips by keyword. Filter by favorites, tags, or date. Built for quick retrieval, not endless fussing.</p>
-          </div>
-          <div class="how-step">
-            <div class="how-step__num">4</div>
-            <h3 class="how-step__title">Export when you need it</h3>
-            <p class="how-step__body">Move your notes into your larger system with Markdown, CSV, TXT, RTF, or HTML exports.</p>
+          <div class="how__grid">
+            <div class="how-step">
+              <div class="how-step__num">1</div>
+              <h3 class="how-step__title">Clip from almost any app</h3>
+              <p class="how-step__body">Use Android’s Share menu to send selected text, links, quotes, and excerpts to Keep Clip. In apps like Kindle, copy the text first, then use the share pop-up.</p>
+            </div>
+            <div class="how-step">
+              <div class="how-step__num">2</div>
+              <h3 class="how-step__title">Add context while it’s fresh</h3>
+              <p class="how-step__body">Save a title, author, source, source URL, tags, notes, and a custom clip name. Keep the quote and the reason you saved it together.</p>
+            </div>
+            <div class="how-step">
+              <div class="how-step__num">3</div>
+              <h3 class="how-step__title">Find it later</h3>
+              <p class="how-step__body">Search saved clips by keyword. Filter by favorites, tags, or date. Built for quick retrieval, not endless fussing.</p>
+            </div>
+            <div class="how-step">
+              <div class="how-step__num">4</div>
+              <h3 class="how-step__title">Export when you need it</h3>
+              <p class="how-step__body">Move your notes into your larger system with Markdown, CSV, TXT, RTF, or HTML exports.</p>
+            </div>
           </div>
         </div>
       </section>
