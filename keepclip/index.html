@@ -1,0 +1,1358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Keep Clip — Private Android App for Saving Text, Quotes &amp; Links</title>
+  <meta name="description" content="Keep Clip is a private Android clipping app for saving notes, quotes, highlights, excerpts, and links offline. Search, tag, favorite, and export to Markdown, CSV, TXT, RTF, or HTML." />
+  <link rel="canonical" href="https://ulix.app/keepclip/" />
+  <meta name="theme-color" content="#FFFFFF" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ulix" />
+  <meta property="og:title" content="Keep Clip — Save the text you don’t want to lose." />
+  <meta property="og:description" content="Private Android app for saving notes, quotes, highlights, excerpts, and links. Offline. No accounts. No ads. Export to Markdown, CSV, TXT, RTF, or HTML." />
+  <meta property="og:url" content="https://ulix.app/keepclip/" />
+  <meta property="og:image" content="https://ulix.app/icons/keepclip.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Keep Clip — Save the text you don’t want to lose." />
+  <meta name="twitter:description" content="Private Android app for saving notes, quotes, highlights, excerpts, and links. Offline. No accounts. No ads. Export to Markdown, CSV, TXT, RTF, or HTML." />
+  <meta name="twitter:image" content="https://ulix.app/icons/keepclip.png" />
+
+  <link rel="icon" href="../icons/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="../icons/favicon.png" />
+  <link rel="stylesheet" href="../assets/ulix.css" />
+
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/geist-latin.woff2" crossorigin />
+  <style>
+    @font-face {
+      font-family: 'Geist';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url('../assets/fonts/geist-latin.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+      font-family: 'Geist';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url('../assets/fonts/geist-latin-ext.woff2') format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+  </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["SoftwareApplication", "MobileApplication"],
+      "@id": "https://ulix.app/keepclip/#app",
+      "name": "Keep Clip",
+      "description": "Keep Clip is a private Android app for saving notes, quotes, highlights, excerpts, and links from almost any app. Works offline. No accounts. No ads. Export to Markdown, CSV, TXT, RTF, or HTML.",
+      "url": "https://ulix.app/keepclip/",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.bhunt.keepclip",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.bhunt.keepclip",
+      "operatingSystem": "Android",
+      "applicationCategory": "ProductivityApplication",
+      "applicationSubCategory": "Notes & clipping",
+      "isAccessibleForFree": false,
+      "inLanguage": "en",
+      "image": "https://ulix.app/icons/keepclip.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "1.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://play.google.com/store/apps/details?id=com.bhunt.keepclip"
+      },
+      "featureList": [
+        "Save text from almost any Android app via Share menu",
+        "Save quotes, highlights, excerpts, and links",
+        "Add tags, favorites, notes, and source context",
+        "Full-text search across saved clips",
+        "Filter by tags, favorites, and date",
+        "Export to Markdown, CSV, TXT, RTF, or HTML",
+        "Offline-first, local storage",
+        "No accounts, no ads, no tracking"
+      ],
+      "publisher": { "@id": "https://ulix.app/#org" },
+      "author": { "@id": "https://ulix.app/#org" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://ulix.app/#org",
+      "name": "Ulix LLC",
+      "url": "https://ulix.app/",
+      "logo": "https://ulix.app/icons/favicon.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ulix.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Apps", "item": "https://ulix.app/apps.html" },
+        { "@type": "ListItem", "position": 3, "name": "Keep Clip", "item": "https://ulix.app/keepclip/" }
+      ]
+    }
+  ]
+}
+</script>
+
+  <style>
+  /* ==========================================================================
+     Keep Clip landing page — scoped to .keepclip-page
+     Light theme with blue accent, designed around the mockup direction.
+     Site header/footer styled separately to match other Ulix app pages.
+     ========================================================================== */
+
+  .keepclip-page {
+    --bg: #FFFFFF;
+    --bg-soft: #F7F8FB;
+    --fg: #0B1220;
+    --muted: #475569;
+    --subtle: #64748B;
+    --rule: #E5E8EE;
+    --card-bg: #FFFFFF;
+    --card-shadow: 0 1px 2px rgba(15,23,42,0.04), 0 6px 16px rgba(15,23,42,0.04);
+    --accent: #1E40AF;        /* deep royal blue, matching the mockup CTA */
+    --accent-soft: #DCE5FA;
+    --accent-ink: #1E3A8A;
+    --sans: Geist, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ---------- Site chrome tweaks ---------- */
+  .keepclip-page .btn--primary {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .keepclip-page a { color: inherit; text-decoration: none; }
+  .keepclip-page img { display: block; user-select: none; -webkit-user-drag: none; }
+  .keepclip-page h1, .keepclip-page h2, .keepclip-page h3 { margin: 0; color: var(--fg); }
+  .keepclip-page p, .keepclip-page ul, .keepclip-page figure { margin: 0; }
+  .keepclip-page ul { list-style: none; padding: 0; }
+
+  .keepclip-page .page { max-width: 1240px; margin: 0 auto; }
+
+  /* ---------- Buttons ---------- */
+  .keepclip-page .play-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--accent);
+    color: #fff;
+    padding: 16px 28px;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    box-shadow: 0 8px 20px rgba(30,64,175,0.22);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .keepclip-page .play-btn:hover { transform: translateY(-1px); box-shadow: 0 12px 28px rgba(30,64,175,0.28); }
+  .keepclip-page .play-btn--lg { padding: 18px 32px; font-size: 17px; }
+
+  .keepclip-page .ghost-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 22px;
+    border-radius: 14px;
+    border: 1px solid var(--rule);
+    background: #fff;
+    color: var(--accent);
+    font-size: 15px;
+    font-weight: 600;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .keepclip-page .ghost-btn:hover { background: var(--bg-soft); border-color: #CBD5E1; }
+
+  .keepclip-page .android-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--rule);
+    background: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--fg);
+  }
+  .keepclip-page .android-chip svg { color: #3DDC84; width: 16px; height: 16px; }
+
+  /* ---------- Phone frame ---------- */
+  .keepclip-page .phone {
+    width: calc(280px * var(--s, 1));
+    height: calc(580px * var(--s, 1));
+    border-radius: calc(36px * var(--s, 1));
+    padding: calc(8px * var(--s, 1));
+    background: linear-gradient(180deg, #1F2937 0%, #0B1220 100%);
+    box-shadow:
+      0 calc(30px * var(--s, 1)) calc(80px * var(--s, 1)) rgba(15,23,42,0.18),
+      0 calc(4px * var(--s, 1)) calc(12px * var(--s, 1)) rgba(15,23,42,0.10),
+      inset 0 0 0 1px rgba(255,255,255,0.06);
+    transform: rotate(var(--r, 0deg));
+    flex-shrink: 0;
+    position: relative;
+  }
+  .keepclip-page .phone-screen {
+    width: 100%;
+    height: 100%;
+    border-radius: calc(28px * var(--s, 1));
+    overflow: hidden;
+    background: #fff;
+  }
+  .keepclip-page .phone-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+  /* Fallback when no screenshot is supplied yet */
+  .keepclip-page .phone-screen.phone-screen--placeholder {
+    background:
+      linear-gradient(180deg, #F8FAFF 0%, #EEF2FB 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--subtle);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  /* ---------- Eyebrow ---------- */
+  .keepclip-page .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--subtle);
+    font-weight: 600;
+  }
+  .keepclip-page .eyebrow::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+    opacity: 0.9;
+    flex-shrink: 0;
+  }
+
+  /* ---------- Section divider ---------- */
+  .keepclip-page .divider {
+    height: 1px;
+    background: var(--rule);
+    margin: 0 80px;
+  }
+
+  /* ---------- Hero ---------- */
+  .keepclip-page .k-hero {
+    padding: 56px 80px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .keepclip-page .k-hero__grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .keepclip-page .k-hero__title {
+    font-size: 76px;
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+    color: var(--fg);
+    margin-top: 24px;
+  }
+  .keepclip-page .k-hero__lede {
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--muted);
+    margin-top: 24px;
+    max-width: 500px;
+  }
+  .keepclip-page .k-hero__chips {
+    margin-top: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .keepclip-page .trust-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border-radius: 14px;
+    border: 1px solid var(--rule);
+    background: #fff;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--fg);
+    line-height: 1.3;
+  }
+  .keepclip-page .trust-chip svg { color: var(--accent); width: 18px; height: 18px; flex-shrink: 0; }
+  .keepclip-page .k-hero__ctas {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .keepclip-page .k-hero__art {
+    position: relative;
+    height: 660px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .keepclip-page .k-hero__glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(45% 50% at 60% 45%, rgba(30,64,175,0.10), transparent 70%);
+    filter: blur(40px);
+    pointer-events: none;
+  }
+  .keepclip-page .k-hero__phone-1 {
+    position: absolute;
+    left: 12%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  .keepclip-page .k-hero__phone-2 {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  /* ---------- Trust strip (under hero, like the mockup's icon row) ---------- */
+  .keepclip-page .trust-strip {
+    margin: 0 80px;
+    padding: 28px 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+  }
+  .keepclip-page .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 500;
+    justify-content: center;
+  }
+  .keepclip-page .trust-item svg { color: var(--accent); width: 20px; height: 20px; flex-shrink: 0; }
+
+  /* ---------- Generic section title ---------- */
+  .keepclip-page .section-title {
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.08;
+    color: var(--fg);
+    text-wrap: balance;
+  }
+  .keepclip-page .section-title em { color: var(--accent); font-style: normal; }
+  .keepclip-page .section-lede {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--muted);
+    max-width: 640px;
+    margin-top: 16px;
+  }
+
+  /* ---------- Problem section ---------- */
+  .keepclip-page .problem {
+    padding: 100px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .keepclip-page .problem__col p { margin-top: 16px; }
+  .keepclip-page .problem__list {
+    margin-top: 24px;
+    display: grid;
+    gap: 10px;
+    color: var(--fg);
+    font-size: 15.5px;
+  }
+  .keepclip-page .problem__list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    background: #fff;
+  }
+  .keepclip-page .problem__list li::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-top: 8px;
+    flex-shrink: 0;
+  }
+  .keepclip-page .problem__closer {
+    margin-top: 24px;
+    font-size: 17px;
+    color: var(--fg);
+    font-weight: 500;
+  }
+
+  /* ---------- How it works ---------- */
+  .keepclip-page .how {
+    padding: 96px 80px;
+    background: var(--bg-soft);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .keepclip-page .how__head { text-align: center; max-width: 720px; margin: 0 auto 56px; }
+  .keepclip-page .how__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .keepclip-page .how-step {
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 16px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .keepclip-page .how-step__num {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .keepclip-page .how-step__title {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--fg);
+  }
+  .keepclip-page .how-step__body {
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+
+  /* ---------- Feature grid ---------- */
+  .keepclip-page .features {
+    padding: 96px 80px;
+  }
+  .keepclip-page .features__head { text-align: center; max-width: 720px; margin: 0 auto 56px; }
+  .keepclip-page .features__head .section-lede { margin-left: auto; margin-right: auto; }
+  .keepclip-page .features__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .keepclip-page .feature-card {
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .keepclip-page .feature-card__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .keepclip-page .feature-card__icon svg { width: 22px; height: 22px; }
+  .keepclip-page .feature-card__title {
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--fg);
+  }
+  .keepclip-page .feature-card__body {
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+
+  /* ---------- Use cases ---------- */
+  .keepclip-page .uses {
+    padding: 96px 80px;
+    background: var(--bg-soft);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .keepclip-page .uses__head { text-align: center; max-width: 720px; margin: 0 auto 56px; }
+  .keepclip-page .uses__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .keepclip-page .persona {
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 16px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .keepclip-page .persona__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .keepclip-page .persona__icon svg { width: 26px; height: 26px; }
+  .keepclip-page .persona--readers .persona__icon { background: #E0E7FF; color: #3730A3; }
+  .keepclip-page .persona--researchers .persona__icon { background: #DCFCE7; color: #166534; }
+  .keepclip-page .persona--writers .persona__icon { background: #FCE7F3; color: #9D174D; }
+  .keepclip-page .persona--pkm .persona__icon { background: #FEF3C7; color: #92400E; }
+  .keepclip-page .persona__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--fg);
+  }
+  .keepclip-page .persona__body {
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+
+  .keepclip-page .uses__bullets {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 32px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .keepclip-page .uses__bullets li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    color: var(--fg);
+    line-height: 1.5;
+  }
+  .keepclip-page .uses__bullets svg { color: var(--accent); width: 18px; height: 18px; flex-shrink: 0; margin-top: 3px; }
+
+  /* ---------- PKM section ---------- */
+  .keepclip-page .pkm {
+    padding: 96px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .keepclip-page .pkm__art {
+    background: var(--bg-soft);
+    border: 1px solid var(--rule);
+    border-radius: 24px;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .keepclip-page .format-tile {
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 1px 2px rgba(15,23,42,0.03);
+  }
+  .keepclip-page .format-tile__chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+  }
+  .keepclip-page .format-tile__title {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--fg);
+  }
+  .keepclip-page .format-tile__body {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 2px;
+    line-height: 1.4;
+  }
+
+  /* ---------- Privacy section ---------- */
+  .keepclip-page .privacy {
+    margin: 0 80px;
+    padding: 56px 56px;
+    background: linear-gradient(180deg, #F2F6FF 0%, #EAF1FF 100%);
+    border: 1px solid #D7E2F8;
+    border-radius: 24px;
+    display: grid;
+    grid-template-columns: auto 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .keepclip-page .privacy__shield {
+    width: 80px;
+    height: 80px;
+    color: var(--accent);
+  }
+  .keepclip-page .privacy__title {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--fg);
+  }
+  .keepclip-page .privacy__body {
+    margin-top: 12px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+  .keepclip-page .privacy__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 24px;
+    font-size: 14.5px;
+    color: var(--fg);
+  }
+  .keepclip-page .privacy__list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .keepclip-page .privacy__list svg {
+    width: 18px;
+    height: 18px;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  /* ---------- Comparison section ---------- */
+  .keepclip-page .compare { padding: 96px 80px; }
+  .keepclip-page .compare__head { max-width: 720px; margin-bottom: 48px; }
+  .keepclip-page .compare__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .keepclip-page .compare-card {
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 16px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .keepclip-page .compare-card__label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--subtle);
+  }
+  .keepclip-page .compare-card__title {
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--fg);
+    letter-spacing: -0.01em;
+  }
+  .keepclip-page .compare-card__title em { color: var(--accent); font-style: normal; }
+  .keepclip-page .compare-card__body {
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  /* ---------- Bottom CTA ---------- */
+  .keepclip-page .k-cta {
+    padding: 112px 80px;
+    text-align: center;
+  }
+  .keepclip-page .k-cta__title {
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    text-wrap: balance;
+    color: var(--fg);
+  }
+  .keepclip-page .k-cta__title em { color: var(--accent); font-style: normal; }
+  .keepclip-page .k-cta__body {
+    font-size: 17px;
+    color: var(--muted);
+    margin: 20px auto 0;
+    max-width: 560px;
+    line-height: 1.55;
+  }
+  .keepclip-page .k-cta__action {
+    margin-top: 36px;
+    display: flex;
+    justify-content: center;
+  }
+  .keepclip-page .k-cta__sub {
+    margin-top: 24px;
+    font-size: 13.5px;
+    color: var(--subtle);
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 960px) {
+    .keepclip-page .divider { margin: 0 24px; }
+    .keepclip-page .k-hero { padding: 32px 24px 56px; }
+    .keepclip-page .k-hero__grid { grid-template-columns: 1fr; gap: 40px; }
+    .keepclip-page .k-hero__title { font-size: 44px; }
+    .keepclip-page .k-hero__lede { font-size: 16px; }
+    .keepclip-page .k-hero__art { height: 540px; }
+    .keepclip-page .k-hero__phone-1 { left: 0; }
+    .keepclip-page .k-hero__phone-2 { right: 0; }
+
+    .keepclip-page .trust-strip {
+      margin: 0 24px;
+      padding: 20px 0;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .keepclip-page .trust-item { justify-content: flex-start; font-size: 13.5px; }
+
+    .keepclip-page .section-title { font-size: 32px; }
+
+    .keepclip-page .problem { padding: 64px 24px; grid-template-columns: 1fr; gap: 32px; }
+    .keepclip-page .how { padding: 64px 24px; }
+    .keepclip-page .how__grid { grid-template-columns: 1fr 1fr; }
+
+    .keepclip-page .features { padding: 64px 24px; }
+    .keepclip-page .features__grid { grid-template-columns: 1fr; }
+
+    .keepclip-page .uses { padding: 64px 24px; }
+    .keepclip-page .uses__grid { grid-template-columns: 1fr 1fr; }
+    .keepclip-page .uses__bullets { grid-template-columns: 1fr; }
+
+    .keepclip-page .pkm { padding: 64px 24px; grid-template-columns: 1fr; gap: 32px; }
+    .keepclip-page .pkm__art { padding: 24px; }
+
+    .keepclip-page .privacy {
+      margin: 0 24px;
+      padding: 32px 24px;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      text-align: center;
+    }
+    .keepclip-page .privacy__shield { margin: 0 auto; width: 64px; height: 64px; }
+    .keepclip-page .privacy__list { grid-template-columns: 1fr; justify-items: start; max-width: 280px; margin: 0 auto; }
+
+    .keepclip-page .compare { padding: 64px 24px; }
+    .keepclip-page .compare__grid { grid-template-columns: 1fr; }
+
+    .keepclip-page .k-cta { padding: 72px 24px; }
+    .keepclip-page .k-cta__title { font-size: 36px; }
+    .keepclip-page .k-cta__body { font-size: 15px; }
+  }
+  @media (max-width: 600px) {
+    .keepclip-page .how__grid { grid-template-columns: 1fr; }
+    .keepclip-page .uses__grid { grid-template-columns: 1fr; }
+    .keepclip-page .pkm__art { grid-template-columns: 1fr; }
+  }
+  </style>
+</head>
+
+<body class="keepclip-page">
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container container--wide site-header__inner">
+      <a href="../index.html" class="site-brand">
+        <img src="../icons/favicon.png" alt="" class="site-brand__logo" />
+        <span class="site-brand__name">ULIX</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../index.html" class="site-nav__link">Home</a>
+        <a href="../apps.html" class="site-nav__link" aria-current="page">Apps</a>
+        <a href="../blog.html" class="site-nav__link">Blog</a>
+        <a href="../about.html" class="site-nav__link">About</a>
+        <a href="../contact.html" class="site-nav__link">Contact</a>
+      </nav>
+      <div class="site-header__actions">
+        <button id="u-menu-btn" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="u-mobile">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="4" y1="7"  x2="20" y2="7"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="17" x2="20" y2="17"/>
+          </svg>
+        </button>
+        <a href="https://play.google.com/store/apps/details?id=com.bhunt.keepclip" target="_blank" rel="noopener" class="btn btn--primary btn--header">Get Keep Clip</a>
+      </div>
+    </div>
+  </header>
+
+  <div id="u-mobile" class="drawer" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+    <div class="drawer__backdrop" data-close></div>
+    <div class="drawer__panel">
+      <div class="drawer__header">
+        <span class="drawer__title">Menu</span>
+        <button class="drawer__close" aria-label="Close menu" data-close>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <ul class="drawer__list">
+        <li><a class="drawer__link" href="../index.html" data-close>Home</a></li>
+        <li><a class="drawer__link" href="../apps.html" data-close>Apps</a></li>
+        <li><a class="drawer__link" href="../blog.html" data-close>Blog</a></li>
+        <li><a class="drawer__link" href="../about.html" data-close>About</a></li>
+        <li><a class="drawer__link" href="../contact.html" data-close>Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="main">
+    <div class="page">
+
+      <!-- ============ HERO ============ -->
+      <section class="k-hero">
+        <div class="k-hero__grid">
+          <div>
+            <span class="android-chip">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M6.4 8.2 5.1 5.9a.5.5 0 0 1 .87-.5l1.32 2.3A7.94 7.94 0 0 1 12 7c1.66 0 3.21.41 4.7 1.2l1.32-2.3a.5.5 0 0 1 .87.5l-1.29 2.3A7.6 7.6 0 0 1 20 14H4a7.6 7.6 0 0 1 2.4-5.8ZM9 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm6 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"/>
+              </svg>
+              Android app
+            </span>
+            <h1 class="k-hero__title">Save the text you don’t want to lose.</h1>
+            <p class="k-hero__lede">
+              Keep Clip is a private Android app for saving notes, quotes, highlights, excerpts, and links from almost anywhere. Clip from websites, ebooks, documents, chats, and other apps. Add context, search later, and export your collection whenever you need it.
+            </p>
+
+            <div class="k-hero__chips">
+              <span class="trust-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+                  <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+                  <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+                  <line x1="12" y1="20" x2="12.01" y2="20"/>
+                </svg>
+                Works offline
+              </span>
+              <span class="trust-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <polyline points="9 12 11 14 15 10"/>
+                </svg>
+                No accounts, ads, or tracking
+              </span>
+              <span class="trust-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                </svg>
+                Export to Markdown, CSV, TXT, RTF, HTML
+              </span>
+            </div>
+
+            <div class="k-hero__ctas">
+              <a href="https://play.google.com/store/apps/details?id=com.bhunt.keepclip" target="_blank" rel="noopener" class="play-btn">
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" aria-hidden="true">
+                  <path d="M1 1.5v19l10-9.5L1 1.5z" fill="#fff" opacity="0.95"/>
+                  <path d="M1 1.5l10 9.5 3-3L2.5 1 1 1.5z" fill="#fff" opacity="0.75"/>
+                  <path d="M1 20.5l10-9.5 3 3L2.5 21 1 20.5z" fill="#fff" opacity="0.6"/>
+                  <path d="M11 11l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 3v16l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 11z" fill="#fff" opacity="0.45"/>
+                </svg>
+                Get it on Google Play
+              </a>
+              <a href="#how" class="ghost-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/>
+                </svg>
+                See how it works
+              </a>
+            </div>
+          </div>
+
+          <div class="k-hero__art">
+            <div class="k-hero__glow"></div>
+            <div class="k-hero__phone-1">
+              <div class="phone" style="--s:0.85; --r:-3deg">
+                <div class="phone-screen phone-screen--placeholder">
+                  <img src="../assets/screenshots/keepclip/list.png" alt="Keep Clip list of saved clips" onerror="this.style.display='none'; this.parentElement.textContent='Clip list';" />
+                </div>
+              </div>
+            </div>
+            <div class="k-hero__phone-2">
+              <div class="phone" style="--s:0.95; --r:3deg">
+                <div class="phone-screen phone-screen--placeholder">
+                  <img src="../assets/screenshots/keepclip/export.png" alt="Keep Clip export menu" onerror="this.style.display='none'; this.parentElement.textContent='Export menu';" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ TRUST STRIP ============ -->
+      <section class="trust-strip" aria-label="At a glance">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+            <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+            <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+            <line x1="12" y1="20" x2="12.01" y2="20"/>
+          </svg>
+          Works offline
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M4 4l16 16"/>
+          </svg>
+          No accounts
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M5 5l14 14"/>
+          </svg>
+          No ads
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M2 12s4-8 10-8 10 8 10 8-4 8-10 8S2 12 2 12z"/>
+            <circle cx="12" cy="12" r="3"/>
+            <line x1="3" y1="3" x2="21" y2="21"/>
+          </svg>
+          No tracking
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M6.4 8.2 5.1 5.9a.5.5 0 0 1 .87-.5l1.32 2.3A7.94 7.94 0 0 1 12 7c1.66 0 3.21.41 4.7 1.2l1.32-2.3a.5.5 0 0 1 .87.5l-1.29 2.3A7.6 7.6 0 0 1 20 14H4a7.6 7.6 0 0 1 2.4-5.8ZM9 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm6 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"/>
+          </svg>
+          Made for Android
+        </div>
+      </section>
+
+      <!-- ============ PROBLEM ============ -->
+      <section class="problem">
+        <div class="problem__col">
+          <span class="eyebrow">The problem</span>
+          <h2 class="section-title" style="margin-top:18px;">
+            Useful text <em>disappears</em> everywhere.
+          </h2>
+          <p class="section-lede">
+            You read something worth keeping. Then it vanishes into screenshots, browser tabs, messaging apps, bookmarks, note apps, or your memory.
+          </p>
+          <p class="problem__closer">
+            Keep Clip gives you one quiet place to put it.
+          </p>
+        </div>
+        <ul class="problem__list">
+          <li>A passage in an ebook.</li>
+          <li>A quote in an article.</li>
+          <li>A link you want to revisit.</li>
+          <li>A useful answer in a chat.</li>
+          <li>A paragraph from a document.</li>
+        </ul>
+      </section>
+
+      <!-- ============ HOW IT WORKS ============ -->
+      <section id="how" class="how">
+        <div class="how__head">
+          <span class="eyebrow" style="justify-content:center;">How it works</span>
+          <h2 class="section-title" style="margin-top:16px;">
+            From <em>anywhere</em> to one place.
+          </h2>
+        </div>
+        <div class="how__grid">
+          <div class="how-step">
+            <div class="how-step__num">1</div>
+            <h3 class="how-step__title">Clip from almost any app</h3>
+            <p class="how-step__body">Use Android’s Share menu to send selected text, links, quotes, and excerpts to Keep Clip. In apps like Kindle, copy the text first, then use the share pop-up.</p>
+          </div>
+          <div class="how-step">
+            <div class="how-step__num">2</div>
+            <h3 class="how-step__title">Add context while it’s fresh</h3>
+            <p class="how-step__body">Save a title, source app, source URL, tags, notes, and a custom clip name. Keep the quote and the reason you saved it together.</p>
+          </div>
+          <div class="how-step">
+            <div class="how-step__num">3</div>
+            <h3 class="how-step__title">Find it later</h3>
+            <p class="how-step__body">Search saved clips by keyword. Filter by favorites, tags, or date. Built for quick retrieval, not endless fussing.</p>
+          </div>
+          <div class="how-step">
+            <div class="how-step__num">4</div>
+            <h3 class="how-step__title">Export when you need it</h3>
+            <p class="how-step__body">Move your notes into your larger system with Markdown, CSV, TXT, RTF, or HTML exports.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FEATURES ============ -->
+      <section class="features">
+        <div class="features__head">
+          <span class="eyebrow" style="justify-content:center;">Features</span>
+          <h2 class="section-title" style="margin-top:16px;">
+            A focused tool for <em>collecting text</em>.
+          </h2>
+          <p class="section-lede">
+            Six things Keep Clip does well, instead of fifty things half-done.
+          </p>
+        </div>
+        <div class="features__grid">
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 21l-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Capture</h3>
+            <p class="feature-card__body">Save notes, quotes, highlights, article excerpts, links, and manual entries.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+                <line x1="7" y1="7" x2="7.01" y2="7"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Organize</h3>
+            <p class="feature-card__body">Use tags, favorites, clip names, source fields, notes, and context labels.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="7"/>
+                <line x1="21" y1="21" x2="16" y2="16"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Search</h3>
+            <p class="feature-card__body">Find saved clips and links instantly by keyword.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Export</h3>
+            <p class="feature-card__body">Export to Markdown, CSV, TXT, RTF, or HTML for Obsidian, Notion, spreadsheets, archives, and personal knowledge systems.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <polyline points="9 12 11 14 15 10"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Private by design</h3>
+            <p class="feature-card__body">No account. No ads. No tracking. Your clips stay local on your device unless you export or share them.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Lightweight</h3>
+            <p class="feature-card__body">For collecting useful material quickly, without turning note-taking into another project.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ USE CASES ============ -->
+      <section class="uses">
+        <div class="uses__head">
+          <span class="eyebrow" style="justify-content:center;">Use cases</span>
+          <h2 class="section-title" style="margin-top:16px;">
+            Built for <em>readers, researchers, writers</em>, and link hoarders.
+          </h2>
+        </div>
+        <div class="uses__grid">
+          <div class="persona persona--readers">
+            <div class="persona__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+            </div>
+            <h3 class="persona__title">Readers</h3>
+            <p class="persona__body">Save quotes and passages from eBooks, articles, and blogs. Build a personal library of great ideas.</p>
+          </div>
+          <div class="persona persona--researchers">
+            <div class="persona__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+              </svg>
+            </div>
+            <h3 class="persona__title">Researchers</h3>
+            <p class="persona__body">Collect references, quotes, and links while you research. Keep notes organized and easy to export.</p>
+          </div>
+          <div class="persona persona--writers">
+            <div class="persona__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                <line x1="2" y1="2" x2="7.586" y2="7.586"/>
+                <circle cx="11" cy="11" r="2"/>
+              </svg>
+            </div>
+            <h3 class="persona__title">Writers</h3>
+            <p class="persona__body">Capture inspiration, snippets, and links. A reliable notebook for ideas on the go.</p>
+          </div>
+          <div class="persona persona--pkm">
+            <div class="persona__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="3"/>
+                <circle cx="4" cy="6" r="2"/>
+                <circle cx="20" cy="6" r="2"/>
+                <circle cx="4" cy="18" r="2"/>
+                <circle cx="20" cy="18" r="2"/>
+                <line x1="6" y1="7" x2="10" y2="11"/>
+                <line x1="18" y1="7" x2="14" y2="11"/>
+                <line x1="6" y1="17" x2="10" y2="13"/>
+                <line x1="18" y1="17" x2="14" y2="13"/>
+              </svg>
+            </div>
+            <h3 class="persona__title">PKM users</h3>
+            <p class="persona__body">Feed your knowledge base with clean, structured content that’s easy to find and build on.</p>
+          </div>
+        </div>
+
+        <ul class="uses__bullets">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Save quotes from books and articles.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Collect research notes for essays, videos, sermons, papers, or projects.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Keep links with notes attached.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Build a private commonplace book.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Capture useful passages from chats and documents.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Export notes into Obsidian, Notion, Markdown folders, or spreadsheets.</li>
+        </ul>
+      </section>
+
+      <!-- ============ PKM ============ -->
+      <section class="pkm">
+        <div>
+          <span class="eyebrow">For your PKM stack</span>
+          <h2 class="section-title" style="margin-top:18px;">
+            A better <em>inbox</em> for your knowledge system.
+          </h2>
+          <p class="section-lede">
+            Keep Clip isn’t trying to replace your whole PKM setup. It gives you a simple Android capture layer.
+          </p>
+          <p class="section-lede" style="margin-top:14px;">
+            Save useful text on your phone, tag it lightly, then export it into the system you actually use.
+          </p>
+        </div>
+        <div class="pkm__art" aria-hidden="true">
+          <div class="format-tile">
+            <span class="format-tile__chip">.MD</span>
+            <div>
+              <div class="format-tile__title">Markdown</div>
+              <div class="format-tile__body">Obsidian, Logseq, plain text vaults.</div>
+            </div>
+          </div>
+          <div class="format-tile">
+            <span class="format-tile__chip">.CSV</span>
+            <div>
+              <div class="format-tile__title">CSV</div>
+              <div class="format-tile__body">Spreadsheets &amp; databases.</div>
+            </div>
+          </div>
+          <div class="format-tile">
+            <span class="format-tile__chip">.TXT</span>
+            <div>
+              <div class="format-tile__title">Plain Text</div>
+              <div class="format-tile__body">Universal, future-proof archives.</div>
+            </div>
+          </div>
+          <div class="format-tile">
+            <span class="format-tile__chip">.RTF</span>
+            <div>
+              <div class="format-tile__title">Rich Text</div>
+              <div class="format-tile__body">Word, Pages, formatted docs.</div>
+            </div>
+          </div>
+          <div class="format-tile" style="grid-column: 1 / -1;">
+            <span class="format-tile__chip">.HTML</span>
+            <div>
+              <div class="format-tile__title">HTML</div>
+              <div class="format-tile__body">Web-ready exports for any browser or static site.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PRIVACY ============ -->
+      <section class="privacy">
+        <svg class="privacy__shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <polyline points="9 12 11 14 15 10"/>
+        </svg>
+        <div>
+          <h2 class="privacy__title">Your notes are not bait.</h2>
+          <p class="privacy__body">
+            Keep Clip does not require an account, run ads, or track you. Clips are stored locally on your device, with optional Android Auto Backup depending on your device settings. The Play listing declares no data collected and no data shared with third parties.
+          </p>
+          <p class="privacy__body" style="margin-top:8px;">
+            <a href="../keepclipprivacypolicy.html" style="color:var(--accent); border-bottom:1px solid rgba(30,64,175,0.25);">Read the full privacy policy →</a>
+          </p>
+        </div>
+        <ul class="privacy__list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> No accounts</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> No data collection</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> No ads</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> No tracking</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Local storage</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Export-friendly</li>
+        </ul>
+      </section>
+
+      <!-- ============ COMPARISON ============ -->
+      <section class="compare">
+        <div class="compare__head">
+          <span class="eyebrow">Compared</span>
+          <h2 class="section-title" style="margin-top:16px;">
+            Why not just use bookmarks, screenshots, or a notes app?
+          </h2>
+        </div>
+        <div class="compare__grid">
+          <div class="compare-card">
+            <span class="compare-card__label">Bookmarks</span>
+            <h3 class="compare-card__title">Save pages. Keep Clip saves <em>passages</em>.</h3>
+            <p class="compare-card__body">Bookmarks point at a page. Keep Clip saves the exact passage and your note about why it mattered.</p>
+          </div>
+          <div class="compare-card">
+            <span class="compare-card__label">Screenshots</span>
+            <h3 class="compare-card__title">Hard to search. Keep Clip is <em>text</em>.</h3>
+            <p class="compare-card__body">Screenshots are unsearchable. Keep Clip saves real text you can search, tag, favorite, and export.</p>
+          </div>
+          <div class="compare-card">
+            <span class="compare-card__label">Big notes apps</span>
+            <h3 class="compare-card__title">Want your workspace. Keep Clip is <em>focused</em>.</h3>
+            <p class="compare-card__body">Big notes apps want to become your whole workspace. Keep Clip is a focused capture tool for your phone.</p>
+          </div>
+          <div class="compare-card">
+            <span class="compare-card__label">Cloud tools</span>
+            <h3 class="compare-card__title">Trade control for convenience. Keep Clip is <em>local-first</em>.</h3>
+            <p class="compare-card__body">Cloud tools often trade convenience for control. Keep Clip is local-first and export-friendly.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ BOTTOM CTA ============ -->
+      <section class="k-cta">
+        <span class="eyebrow" style="margin-bottom:24px; justify-content:center;">Get Keep Clip</span>
+        <h2 class="k-cta__title" style="margin-top:16px;">
+          Keep the <em>good bits</em>.
+        </h2>
+        <p class="k-cta__body">
+          Save useful text and links from your Android phone. Search them later. Export them when you need them.
+        </p>
+        <div class="k-cta__action">
+          <a href="https://play.google.com/store/apps/details?id=com.bhunt.keepclip" target="_blank" rel="noopener" class="play-btn play-btn--lg">
+            <svg width="22" height="24" viewBox="0 0 20 22" fill="none" aria-hidden="true">
+              <path d="M1 1.5v19l10-9.5L1 1.5z" fill="#fff" opacity="0.95"/>
+              <path d="M1 1.5l10 9.5 3-3L2.5 1 1 1.5z" fill="#fff" opacity="0.75"/>
+              <path d="M1 20.5l10-9.5 3 3L2.5 21 1 20.5z" fill="#fff" opacity="0.6"/>
+              <path d="M11 11l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 3v16l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 11z" fill="#fff" opacity="0.45"/>
+            </svg>
+            Get it on Google Play
+          </a>
+        </div>
+        <p class="k-cta__sub">$1.99 · Android · Offline-first · No accounts · No ads · No tracking</p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="../icons/favicon.png" alt="" width="32" height="32" style="border-radius:0.5rem" />
+          <div>
+            <div class="site-footer__brand-name">ULIX</div>
+            <p class="site-footer__tag">Precision tools for modern odysseys.</p>
+          </div>
+        </div>
+        <div class="site-footer__links">
+          <a href="../apps.html">Apps</a>
+          <a href="../blog.html">Blog</a>
+          <a href="../support.html">Support</a>
+          <a href="../about.html">About</a>
+          <a href="../contact.html">Contact</a>
+          <a href="../terms.html">Terms</a>
+          <a href="../privacy.html">Privacy</a>
+          <a href="../keepclipprivacypolicy.html">Keep Clip Privacy</a>
+        </div>
+        <div>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/ulix" method="post" target="bd-subscribe" class="newsletter" aria-label="Email signup">
+            <label for="nl-email" class="newsletter__label">Get product updates</label>
+            <div class="newsletter__row">
+              <input id="nl-email" class="newsletter__input" type="email" name="email" placeholder="you@example.com" />
+              <button class="btn btn--secondary">Subscribe</button>
+            </div>
+          </form>
+          <div class="site-footer__copyright">© 2026 Ulix LLC.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/ulix.js" defer></script>
+</body>
+</html>
