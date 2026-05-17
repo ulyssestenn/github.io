@@ -24,6 +24,9 @@
   <link rel="stylesheet" href="../assets/ulix.css" />
 
   <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/geist-latin.woff2" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;1,14..32,500;1,14..32,600;1,14..32,700&display=swap" rel="stylesheet" />
   <style>
     @font-face {
       font-family: 'Geist';
@@ -119,13 +122,21 @@
     --bad:       #F87171;
     --gold:      #E7B770;
     --gold-soft: rgba(231, 183, 112, 0.16);
-    --sans: Geist, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    --sans: 'Inter', Geist, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 
     background: var(--bg);
     color: var(--fg);
     font-family: var(--sans);
+    font-feature-settings: 'cv11', 'ss01', 'ss03';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+  .ta-page h1, .ta-page h2, .ta-page h3,
+  .ta-page .panel__title,
+  .ta-page .ta-cta__title,
+  .ta-page .section-title {
+    font-family: var(--sans);
+    font-optical-sizing: auto;
   }
 
   .ta-page a { color: inherit; text-decoration: none; }
@@ -204,16 +215,12 @@
     background: var(--panel);
     border: 1px solid var(--rule);
   }
-  .ta-page .brand-line__icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 8px;
-    background: var(--accent-soft);
-    color: var(--accent);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+  .ta-page .brand-line__logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 9px;
     flex-shrink: 0;
+    display: block;
   }
   .ta-page .brand-line__text {
     display: flex;
@@ -332,7 +339,16 @@
     filter: blur(40px);
     pointer-events: none;
   }
-  .ta-page .ta-phone-wrap { position: relative; z-index: 2; display: flex; justify-content: center; }
+  .ta-page .ta-phone-wrap {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1200px;
+    perspective-origin: 100% 50%;
+    padding: 30px 0;
+  }
   .ta-page .ta-phone {
     width: 280px;
     height: 590px;
@@ -340,11 +356,14 @@
     padding: 8px;
     background: linear-gradient(180deg, #1F2937 0%, #0B1220 100%);
     box-shadow:
-      0 30px 80px rgba(0,0,0,0.45),
-      0 4px 12px rgba(0,0,0,0.30),
+      0 40px 90px rgba(0,0,0,0.60),
+      0 12px 28px rgba(0,0,0,0.45),
       inset 0 0 0 1px rgba(255,255,255,0.06);
     flex-shrink: 0;
     position: relative;
+    transform: rotateY(-18deg) rotateX(4deg) rotateZ(-4deg);
+    transform-origin: center center;
+    transform-style: preserve-3d;
   }
   .ta-page .ta-phone-screen {
     width: 100%;
@@ -360,39 +379,23 @@
     object-position: top;
   }
 
-  /* Flow diagram on the right of the hero — angled 3D cascade */
+  /* Flow diagram on the right of the hero */
   .ta-page .ta-flow {
     position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    perspective: 1100px;
-    perspective-origin: 0% 50%;
-    transform-style: preserve-3d;
-    padding-left: 8px;
+    gap: 12px;
   }
   .ta-page .flow-card {
     background: var(--panel);
     border: 1px solid var(--rule);
     border-radius: 14px;
     padding: 14px 16px;
-    box-shadow:
-      0 24px 48px rgba(0,0,0,0.50),
-      0 4px 16px rgba(0,0,0,0.28);
-    transform-origin: left center;
-    transform: rotateY(-20deg) rotateX(2deg) rotateZ(-1.5deg);
-    backface-visibility: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.20);
   }
   .ta-page .flow-card--csv {
-    transform: rotateY(-22deg) rotateX(3deg) rotateZ(-2.5deg);
     background: linear-gradient(180deg, #142146 0%, #101B3A 100%);
-  }
-  .ta-page .flow-card--llm {
-    transform: rotateY(-19deg) rotateX(1deg) rotateZ(-1deg) translateX(22px);
-  }
-  .ta-page .flow-card--insights {
-    transform: rotateY(-17deg) rotateX(0deg) rotateZ(-0.5deg) translateX(32px);
   }
   .ta-page .flow-card__head {
     display: flex;
@@ -424,12 +427,10 @@
   .ta-page .flow-csv__row b { color: var(--fg); font-weight: 600; }
 
   .ta-page .flow-arrow {
-    align-self: flex-start;
-    margin-left: 32px;
+    align-self: center;
     color: var(--subtle);
-    opacity: 0.55;
+    opacity: 0.7;
     display: block;
-    transform: rotateY(-10deg) translateX(8px);
   }
 
   .ta-page .flow-llms {
@@ -835,11 +836,8 @@
     .ta-page .ta-hero__art { grid-template-columns: 1fr; min-height: 0; gap: 20px; }
     .ta-page .ta-hero__chips { max-width: none; }
     .ta-page .ta-hero__title { font-size: 48px; }
-    .ta-page .ta-flow { perspective: none; padding-left: 0; }
-    .ta-page .flow-card,
-    .ta-page .flow-card--csv,
-    .ta-page .flow-card--llm,
-    .ta-page .flow-card--insights { transform: none; }
+    .ta-page .ta-phone-wrap { perspective: none; padding: 0; }
+    .ta-page .ta-phone { transform: none; }
 
     .ta-page .compare-section { padding: 48px 32px 16px; }
     .ta-page .compare-grid { grid-template-columns: 1fr; }
@@ -935,14 +933,7 @@
         <div class="ta-hero__grid">
           <div>
             <span class="brand-line">
-              <span class="brand-line__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <line x1="4" y1="20" x2="4" y2="10"/>
-                  <line x1="10" y1="20" x2="10" y2="4"/>
-                  <line x1="16" y1="20" x2="16" y2="14"/>
-                  <line x1="22" y1="20" x2="22" y2="7"/>
-                </svg>
-              </span>
+              <img src="../icons/trackanalysis.png" alt="" class="brand-line__logo" width="40" height="40" />
               <span class="brand-line__text">
                 <span class="brand-line__name">Track Analysis</span>
                 <span class="brand-line__sub">by <b>ULIX</b></span>
