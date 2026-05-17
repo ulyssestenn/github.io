@@ -1,0 +1,1383 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Track Analysis — Freeform Wellness Tracking for Self-Experimentation</title>
+  <meta name="description" content="Track Analysis is a private Android app for freeform wellness logging. Capture food, symptoms, supplements, sleep, activity, and energy in plain English. Export clean CSV for your favorite LLM." />
+  <link rel="canonical" href="https://ulix.app/trackanalysis/" />
+  <meta name="theme-color" content="#0A1426" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ulix" />
+  <meta property="og:title" content="Track Analysis — Freeform tracking for self-experimentation." />
+  <meta property="og:description" content="Private Android app for plain-English wellness logging. Export clean CSV for your favorite LLM. No accounts. No subscriptions." />
+  <meta property="og:url" content="https://ulix.app/trackanalysis/" />
+  <meta property="og:image" content="https://ulix.app/icons/trackanalysis.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Track Analysis — Freeform tracking for self-experimentation." />
+  <meta name="twitter:description" content="Private Android app for plain-English wellness logging. Export clean CSV for your favorite LLM. No accounts. No subscriptions." />
+  <meta name="twitter:image" content="https://ulix.app/icons/trackanalysis.png" />
+
+  <link rel="icon" href="../icons/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="../icons/favicon.png" />
+  <link rel="stylesheet" href="../assets/ulix.css" />
+
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/geist-latin.woff2" crossorigin />
+  <style>
+    @font-face {
+      font-family: 'Geist';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url('../assets/fonts/geist-latin.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+      font-family: 'Geist';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url('../assets/fonts/geist-latin-ext.woff2') format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["SoftwareApplication", "MobileApplication"],
+        "@id": "https://ulix.app/trackanalysis/#app",
+        "name": "Track Analysis",
+        "description": "Track Analysis is a private Android app for freeform wellness logging. Capture food, symptoms, supplements, sleep, activity, medications, and energy in plain English. Export a clean CSV for review or analysis with your favorite LLM. No accounts. No tracking. One-time Pro unlock.",
+        "url": "https://ulix.app/trackanalysis/",
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.ulix.trackanalysis",
+        "installUrl": "https://play.google.com/store/apps/details?id=com.ulix.trackanalysis",
+        "operatingSystem": "Android",
+        "applicationCategory": "HealthApplication",
+        "applicationSubCategory": "Wellness tracking",
+        "isAccessibleForFree": true,
+        "inLanguage": "en",
+        "image": "https://ulix.app/icons/trackanalysis.png",
+        "featureList": [
+          "Freeform plain-English event logging",
+          "Categories for food, drink, supplement, activity, sleep, energy, symptom, medication",
+          "Searchable history with filters by date and event",
+          "CSV export with header summary and breakdown",
+          "One-tap stacks for grouping related entries (Pro)",
+          "Advanced filters across time and tags (Pro)",
+          "Offline-first, local storage",
+          "No accounts, no ads, no tracking",
+          "One-time Pro unlock — no subscription"
+        ],
+        "publisher": { "@id": "https://ulix.app/#org" },
+        "author": { "@id": "https://ulix.app/#org" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://ulix.app/#org",
+        "name": "Ulix LLC",
+        "url": "https://ulix.app/",
+        "logo": "https://ulix.app/icons/favicon.png"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ulix.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Apps", "item": "https://ulix.app/apps.html" },
+          { "@type": "ListItem", "position": 3, "name": "Track Analysis", "item": "https://ulix.app/trackanalysis/" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+  /* ==========================================================================
+     Track Analysis landing page — scoped to .ta-page
+     Dark theme with blue accent, modeled on the design mockup.
+     Site header/footer styled separately to match other Ulix app pages.
+     ========================================================================== */
+
+  .ta-page {
+    --bg:        #0A1426;
+    --bg-soft:   #0F1B33;
+    --panel:     #122042;
+    --panel-2:   #16264D;
+    --fg:        #EAF1FF;
+    --muted:     #9FB0CC;
+    --subtle:    #6F84A8;
+    --rule:      rgba(255, 255, 255, 0.08);
+    --rule-2:    rgba(255, 255, 255, 0.14);
+    --accent:    #5FA8FF;        /* light cornflower blue, matching the mockup */
+    --accent-2:  #3B82F6;
+    --accent-ink:#1E40AF;
+    --accent-soft: rgba(95, 168, 255, 0.14);
+    --good:      #34D399;
+    --bad:       #F87171;
+    --gold:      #E7B770;
+    --gold-soft: rgba(231, 183, 112, 0.16);
+    --sans: Geist, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .ta-page a { color: inherit; text-decoration: none; }
+  .ta-page img { display: block; user-select: none; -webkit-user-drag: none; }
+  .ta-page h1, .ta-page h2, .ta-page h3 { margin: 0; color: var(--fg); }
+  .ta-page p, .ta-page ul, .ta-page figure { margin: 0; }
+  .ta-page ul { list-style: none; padding: 0; }
+
+  .ta-page .page { max-width: 1280px; margin: 0 auto; }
+
+  /* Header tweaks so the standard chrome blends with the page */
+  .ta-page .site-header { background: var(--bg); border-bottom-color: var(--rule); }
+  .ta-page .btn--primary { background: var(--accent); color: #0A1426; }
+  .ta-page .btn--primary:hover { background: #80BCFF; }
+
+  /* ---------- Buttons ---------- */
+  .ta-page .btn-blue {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--accent);
+    color: #0A1426;
+    padding: 14px 22px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    box-shadow: 0 8px 20px rgba(59,130,246,0.22);
+    transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+    border: none;
+    cursor: pointer;
+  }
+  .ta-page .btn-blue:hover { transform: translateY(-1px); background: #80BCFF; box-shadow: 0 12px 28px rgba(59,130,246,0.30); }
+  .ta-page .btn-blue--lg { padding: 16px 26px; font-size: 16px; }
+
+  .ta-page .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 20px;
+    border-radius: 12px;
+    border: 1px solid var(--rule-2);
+    background: transparent;
+    color: var(--fg);
+    font-size: 14.5px;
+    font-weight: 500;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .ta-page .btn-ghost:hover { background: var(--panel); border-color: rgba(255,255,255,0.22); }
+
+  .ta-page .btn-gold {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--gold);
+    color: #2A1A04;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-size: 15.5px;
+    font-weight: 700;
+    letter-spacing: -0.005em;
+    box-shadow: 0 8px 20px rgba(231,183,112,0.24);
+    transition: transform 0.15s, box-shadow 0.15s;
+    border: none;
+    cursor: pointer;
+  }
+  .ta-page .btn-gold:hover { transform: translateY(-1px); box-shadow: 0 12px 28px rgba(231,183,112,0.32); }
+
+  /* ---------- Eyebrow / brand line ---------- */
+  .ta-page .brand-line {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 14px;
+    border-radius: 14px;
+    background: var(--panel);
+    border: 1px solid var(--rule);
+  }
+  .ta-page .brand-line__icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .ta-page .brand-line__text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+  .ta-page .brand-line__name {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--fg);
+  }
+  .ta-page .brand-line__sub {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--subtle);
+    margin-top: 4px;
+  }
+  .ta-page .brand-line__sub b { color: var(--accent); font-weight: 600; }
+
+  /* ---------- Hero ---------- */
+  .ta-page .ta-hero {
+    padding: 48px 64px 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .ta-page .ta-hero__grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 48px;
+    align-items: center;
+    min-height: 620px;
+  }
+  .ta-page .ta-hero__title {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+    color: var(--fg);
+    margin-top: 28px;
+  }
+  .ta-page .ta-hero__title em {
+    font-style: normal;
+    color: var(--accent);
+  }
+  .ta-page .ta-hero__lede {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin-top: 22px;
+    max-width: 520px;
+  }
+  .ta-page .ta-hero__lede + .ta-hero__lede { margin-top: 14px; }
+  .ta-page .ta-hero__ctas {
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .ta-page .ta-hero__chips {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    max-width: 600px;
+  }
+  .ta-page .ta-chip {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px 14px;
+    border-radius: 12px;
+    background: var(--panel);
+    border: 1px solid var(--rule);
+  }
+  .ta-page .ta-chip__icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ta-page .ta-chip__icon svg { width: 14px; height: 14px; }
+  .ta-page .ta-chip__title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--fg);
+    line-height: 1.2;
+  }
+  .ta-page .ta-chip__body {
+    font-size: 12px;
+    color: var(--subtle);
+    line-height: 1.3;
+  }
+
+  /* ---------- Hero art (phone + workflow) ---------- */
+  .ta-page .ta-hero__art {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 24px;
+    align-items: center;
+    min-height: 660px;
+  }
+  .ta-page .ta-hero__glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(45% 50% at 60% 50%, rgba(95,168,255,0.10), transparent 70%);
+    filter: blur(40px);
+    pointer-events: none;
+  }
+  .ta-page .ta-phone-wrap { position: relative; z-index: 2; display: flex; justify-content: center; }
+  .ta-page .ta-phone {
+    width: 280px;
+    height: 590px;
+    border-radius: 36px;
+    padding: 8px;
+    background: linear-gradient(180deg, #1F2937 0%, #0B1220 100%);
+    box-shadow:
+      0 30px 80px rgba(0,0,0,0.45),
+      0 4px 12px rgba(0,0,0,0.30),
+      inset 0 0 0 1px rgba(255,255,255,0.06);
+    flex-shrink: 0;
+    position: relative;
+  }
+  .ta-page .ta-phone-screen {
+    width: 100%;
+    height: 100%;
+    border-radius: 28px;
+    overflow: hidden;
+    background: #0A0F1C;
+  }
+  .ta-page .ta-phone-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  /* Flow diagram on the right of the hero — angled 3D cascade */
+  .ta-page .ta-flow {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    perspective: 1100px;
+    perspective-origin: 0% 50%;
+    transform-style: preserve-3d;
+    padding-left: 8px;
+  }
+  .ta-page .flow-card {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 14px 16px;
+    box-shadow:
+      0 24px 48px rgba(0,0,0,0.50),
+      0 4px 16px rgba(0,0,0,0.28);
+    transform-origin: left center;
+    transform: rotateY(-20deg) rotateX(2deg) rotateZ(-1.5deg);
+    backface-visibility: hidden;
+  }
+  .ta-page .flow-card--csv {
+    transform: rotateY(-22deg) rotateX(3deg) rotateZ(-2.5deg);
+    background: linear-gradient(180deg, #142146 0%, #101B3A 100%);
+  }
+  .ta-page .flow-card--llm {
+    transform: rotateY(-19deg) rotateX(1deg) rotateZ(-1deg) translateX(22px);
+  }
+  .ta-page .flow-card--insights {
+    transform: rotateY(-17deg) rotateX(0deg) rotateZ(-0.5deg) translateX(32px);
+  }
+  .ta-page .flow-card__head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--fg);
+  }
+  .ta-page .flow-card__head svg { width: 16px; height: 16px; color: var(--accent); }
+  .ta-page .flow-card__sub {
+    font-size: 11.5px;
+    color: var(--subtle);
+    margin-top: 2px;
+    margin-left: 26px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  .ta-page .flow-csv {
+    margin-top: 10px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 10.5px;
+    color: var(--muted);
+    line-height: 1.5;
+    border-top: 1px solid var(--rule);
+    padding-top: 10px;
+  }
+  .ta-page .flow-csv__row { display: grid; grid-template-columns: 1.1fr 0.7fr 1.6fr; gap: 8px; padding: 2px 0; }
+  .ta-page .flow-csv__row--head { color: var(--subtle); font-size: 10px; letter-spacing: 0.04em; }
+  .ta-page .flow-csv__row b { color: var(--fg); font-weight: 600; }
+
+  .ta-page .flow-arrow {
+    align-self: flex-start;
+    margin-left: 32px;
+    color: var(--subtle);
+    opacity: 0.55;
+    display: block;
+    transform: rotateY(-10deg) translateX(8px);
+  }
+
+  .ta-page .flow-llms {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 8px;
+    padding-left: 26px;
+    color: var(--muted);
+  }
+  .ta-page .flow-llms svg { width: 22px; height: 22px; }
+
+  .ta-page .flow-question {
+    margin-top: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: var(--bg-soft);
+    border: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 12.5px;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .ta-page .flow-question__send {
+    margin-left: auto;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  /* ---------- Generic section title ---------- */
+  .ta-page .section-title {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    color: var(--fg);
+    text-align: center;
+    text-wrap: balance;
+  }
+  .ta-page .section-lede {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--muted);
+    max-width: 640px;
+    margin: 14px auto 0;
+    text-align: center;
+  }
+
+  /* ---------- "Why freeform wins" ---------- */
+  .ta-page .compare-section {
+    padding: 56px 64px 24px;
+  }
+  .ta-page .compare-grid {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ta-page .compare-card {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 16px;
+    padding: 24px 26px;
+  }
+  .ta-page .compare-card__head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--fg);
+  }
+  .ta-page .compare-card__head svg { width: 20px; height: 20px; color: var(--muted); }
+  .ta-page .compare-card__list {
+    margin-top: 18px;
+    display: grid;
+    gap: 12px;
+  }
+  .ta-page .compare-card__list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14.5px;
+    line-height: 1.45;
+    color: var(--muted);
+  }
+  .ta-page .compare-card__list li svg { width: 16px; height: 16px; flex-shrink: 0; margin-top: 3px; }
+  .ta-page .compare-card--bad .compare-card__list li svg { color: var(--bad); }
+  .ta-page .compare-card--good .compare-card__list li svg { color: var(--good); }
+
+  /* ---------- "A better workflow" ---------- */
+  .ta-page .workflow-section {
+    padding: 56px 64px;
+  }
+  .ta-page .workflow-grid {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: 1fr 24px 1fr 24px 1fr;
+    gap: 20px;
+    align-items: stretch;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ta-page .wf-step__head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .ta-page .wf-step__num {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+  .ta-page .wf-step__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--fg);
+    letter-spacing: -0.01em;
+  }
+  .ta-page .wf-step__sub {
+    margin-top: 6px;
+    margin-left: 44px;
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .ta-page .wf-step__demo {
+    margin-top: 18px;
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 16px;
+    min-height: 130px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+  .ta-page .wf-step__caption {
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--subtle);
+  }
+  .ta-page .wf-arrow {
+    align-self: center;
+    justify-self: center;
+    color: var(--subtle);
+  }
+  .ta-page .wf-arrow svg { width: 24px; height: 24px; }
+
+  .ta-page .wf-csv-row {
+    display: grid;
+    grid-template-columns: 1.1fr 0.7fr 1.4fr;
+    gap: 8px;
+    padding: 3px 0;
+  }
+  .ta-page .wf-csv-row--head {
+    color: var(--subtle);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px;
+    margin-bottom: 4px;
+  }
+  .ta-page .wf-csv-row b { color: var(--fg); font-weight: 600; }
+  .ta-page .wf-question {
+    color: var(--muted);
+    font-size: 13.5px;
+    line-height: 1.55;
+    font-family: var(--sans);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .ta-page .wf-question__send { color: var(--accent); flex-shrink: 0; }
+
+  /* ---------- Two-column: Privacy + Pro ---------- */
+  .ta-page .duo-section {
+    padding: 48px 64px;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 20px;
+    align-items: stretch;
+  }
+  .ta-page .panel {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 18px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .ta-page .panel--privacy {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .ta-page .panel--privacy .panel__head {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .ta-page .panel__icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .ta-page .panel__icon svg { width: 32px; height: 32px; }
+  .ta-page .panel__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--fg);
+    letter-spacing: -0.015em;
+  }
+  .ta-page .panel--pro .panel__title { color: var(--gold); }
+  .ta-page .panel__list {
+    display: grid;
+    gap: 12px;
+  }
+  .ta-page .panel__list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14.5px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .ta-page .panel__list li svg {
+    width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px; color: var(--accent);
+  }
+  .ta-page .panel__foot {
+    margin-top: 4px;
+    font-size: 13px;
+    color: var(--subtle);
+    line-height: 1.5;
+  }
+
+  .ta-page .panel--pro {
+    background: linear-gradient(180deg, #1A1A2E 0%, #161630 100%);
+    border-color: rgba(231,183,112,0.20);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: start;
+  }
+  .ta-page .panel--pro .panel__head {
+    grid-column: 1;
+  }
+  .ta-page .pro-features {
+    grid-column: 1;
+    display: grid;
+    gap: 16px;
+  }
+  .ta-page .pro-feature {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 12px;
+    align-items: start;
+  }
+  .ta-page .pro-feature__icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: var(--gold-soft);
+    color: var(--gold);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ta-page .pro-feature__icon svg { width: 18px; height: 18px; }
+  .ta-page .pro-feature__title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--gold);
+  }
+  .ta-page .pro-feature__body {
+    margin-top: 2px;
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .ta-page .pro-phone {
+    grid-row: span 2;
+    grid-column: 2;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ta-page .pro-phone .ta-phone {
+    width: 220px;
+    height: 470px;
+    border-radius: 30px;
+  }
+  .ta-page .pro-phone .ta-phone-screen { border-radius: 22px; }
+
+  /* ---------- Bottom CTA ---------- */
+  .ta-page .ta-cta {
+    margin: 0 64px 64px;
+    padding: 36px 40px;
+    background: linear-gradient(180deg, #1A2444 0%, #14203F 100%);
+    border: 1px solid var(--rule-2);
+    border-radius: 18px;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 32px;
+    align-items: center;
+  }
+  .ta-page .ta-cta__lock {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--gold-soft);
+    color: var(--gold);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .ta-page .ta-cta__lock svg { width: 32px; height: 32px; }
+  .ta-page .ta-cta__title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--fg);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+  .ta-page .ta-cta__title em {
+    font-style: normal;
+    color: var(--accent);
+    display: block;
+  }
+  .ta-page .ta-cta__list {
+    display: grid;
+    gap: 8px;
+  }
+  .ta-page .ta-cta__list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .ta-page .ta-cta__list svg { width: 16px; height: 16px; color: var(--accent); }
+  .ta-page .ta-cta__buy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .ta-page .ta-cta__buy small {
+    font-size: 12px;
+    color: var(--subtle);
+  }
+
+  /* ---------- Disclaimer ---------- */
+  .ta-page .disclaimer {
+    margin: 0 64px 48px;
+    padding: 18px 22px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    border-top: 1px solid var(--rule);
+    padding-top: 24px;
+  }
+  .ta-page .disclaimer__icon {
+    width: 24px;
+    height: 24px;
+    color: var(--subtle);
+    flex-shrink: 0;
+  }
+  .ta-page .disclaimer__text {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--subtle);
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 1100px) {
+    .ta-page .ta-hero { padding: 40px 32px 24px; }
+    .ta-page .ta-hero__grid { grid-template-columns: 1fr; gap: 32px; min-height: 0; }
+    .ta-page .ta-hero__art { grid-template-columns: 1fr; min-height: 0; gap: 20px; }
+    .ta-page .ta-hero__chips { max-width: none; }
+    .ta-page .ta-hero__title { font-size: 48px; }
+    .ta-page .ta-flow { perspective: none; padding-left: 0; }
+    .ta-page .flow-card,
+    .ta-page .flow-card--csv,
+    .ta-page .flow-card--llm,
+    .ta-page .flow-card--insights { transform: none; }
+
+    .ta-page .compare-section { padding: 48px 32px 16px; }
+    .ta-page .compare-grid { grid-template-columns: 1fr; }
+
+    .ta-page .workflow-section { padding: 48px 32px; }
+    .ta-page .workflow-grid { grid-template-columns: 1fr; }
+    .ta-page .wf-arrow { transform: rotate(90deg); }
+
+    .ta-page .duo-section { padding: 32px 32px; grid-template-columns: 1fr; }
+
+    .ta-page .panel--pro { grid-template-columns: 1fr; }
+    .ta-page .pro-phone { grid-row: auto; grid-column: 1; }
+
+    .ta-page .ta-cta { margin: 0 32px 48px; padding: 28px; grid-template-columns: 1fr; gap: 20px; text-align: left; }
+    .ta-page .ta-cta__lock { width: 56px; height: 56px; }
+    .ta-page .ta-cta__title { font-size: 26px; }
+
+    .ta-page .disclaimer { margin: 0 32px 32px; }
+  }
+
+  @media (max-width: 700px) {
+    .ta-page .ta-hero { padding: 32px 20px 16px; }
+    .ta-page .ta-hero__title { font-size: 38px; }
+    .ta-page .ta-hero__chips { grid-template-columns: 1fr 1fr; }
+    .ta-page .section-title { font-size: 28px; }
+
+    .ta-page .compare-section { padding: 40px 20px 8px; }
+    .ta-page .workflow-section { padding: 40px 20px; }
+    .ta-page .duo-section { padding: 24px 20px; }
+    .ta-page .panel { padding: 24px; }
+    .ta-page .panel--privacy { grid-template-columns: 1fr; }
+    .ta-page .ta-cta { margin: 0 20px 40px; padding: 24px; }
+    .ta-page .disclaimer { margin: 0 20px 24px; }
+  }
+  </style>
+</head>
+
+<body class="ta-page">
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container container--wide site-header__inner">
+      <a href="../index.html" class="site-brand">
+        <img src="../icons/favicon.png" alt="" class="site-brand__logo" />
+        <span class="site-brand__name">ULIX</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../index.html" class="site-nav__link">Home</a>
+        <a href="../apps.html" class="site-nav__link" aria-current="page">Apps</a>
+        <a href="../blog.html" class="site-nav__link">Blog</a>
+        <a href="../about.html" class="site-nav__link">About</a>
+        <a href="../contact.html" class="site-nav__link">Contact</a>
+      </nav>
+      <div class="site-header__actions">
+        <button id="u-menu-btn" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="u-mobile">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="4" y1="7"  x2="20" y2="7"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="17" x2="20" y2="17"/>
+          </svg>
+        </button>
+        <a href="https://play.google.com/store/apps/details?id=com.ulix.trackanalysis" target="_blank" rel="noopener" class="btn btn--primary btn--header">Get Track Analysis</a>
+      </div>
+    </div>
+  </header>
+
+  <div id="u-mobile" class="drawer" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+    <div class="drawer__backdrop" data-close></div>
+    <div class="drawer__panel">
+      <div class="drawer__header">
+        <span class="drawer__title">Menu</span>
+        <button class="drawer__close" aria-label="Close menu" data-close>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <ul class="drawer__list">
+        <li><a class="drawer__link" href="../index.html" data-close>Home</a></li>
+        <li><a class="drawer__link" href="../apps.html" data-close>Apps</a></li>
+        <li><a class="drawer__link" href="../blog.html" data-close>Blog</a></li>
+        <li><a class="drawer__link" href="../about.html" data-close>About</a></li>
+        <li><a class="drawer__link" href="../contact.html" data-close>Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="main">
+    <div class="page">
+
+      <!-- ============ HERO ============ -->
+      <section class="ta-hero">
+        <div class="ta-hero__grid">
+          <div>
+            <span class="brand-line">
+              <span class="brand-line__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="4" y1="20" x2="4" y2="10"/>
+                  <line x1="10" y1="20" x2="10" y2="4"/>
+                  <line x1="16" y1="20" x2="16" y2="14"/>
+                  <line x1="22" y1="20" x2="22" y2="7"/>
+                </svg>
+              </span>
+              <span class="brand-line__text">
+                <span class="brand-line__name">Track Analysis</span>
+                <span class="brand-line__sub">by <b>ULIX</b></span>
+              </span>
+            </span>
+
+            <h1 class="ta-hero__title">
+              Freeform tracking for a new era of <em>self-experimentation.</em>
+            </h1>
+
+            <p class="ta-hero__lede">
+              Ditch rigid categories. Log life in plain English — food, symptoms, supplements, sleep, activity, energy — exactly how you experience it.
+            </p>
+            <p class="ta-hero__lede">
+              Export a clean CSV and use your favorite LLM to find patterns that matter to you.
+            </p>
+
+            <div class="ta-hero__ctas">
+              <a href="https://play.google.com/store/apps/details?id=com.ulix.trackanalysis" target="_blank" rel="noopener" class="btn-blue">
+                Get Track Analysis
+                <svg width="16" height="18" viewBox="0 0 20 22" fill="none" aria-hidden="true">
+                  <path d="M1 1.5v19l10-9.5L1 1.5z" fill="currentColor" opacity="0.95"/>
+                  <path d="M1 1.5l10 9.5 3-3L2.5 1 1 1.5z" fill="currentColor" opacity="0.75"/>
+                  <path d="M1 20.5l10-9.5 3 3L2.5 21 1 20.5z" fill="currentColor" opacity="0.6"/>
+                  <path d="M11 11l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 3v16l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 11z" fill="currentColor" opacity="0.45"/>
+                </svg>
+              </a>
+              <a href="#how" class="btn-ghost">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/>
+                </svg>
+                See how it works
+              </a>
+            </div>
+
+            <div class="ta-hero__chips">
+              <div class="ta-chip">
+                <span class="ta-chip__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                    <line x1="2" y1="2" x2="7.586" y2="7.586"/>
+                  </svg>
+                </span>
+                <div>
+                  <div class="ta-chip__title">Flexible logging</div>
+                  <div class="ta-chip__body">No rigid categories</div>
+                </div>
+              </div>
+              <div class="ta-chip">
+                <span class="ta-chip__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+                    <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+                    <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+                    <line x1="12" y1="20" x2="12.01" y2="20"/>
+                  </svg>
+                </span>
+                <div>
+                  <div class="ta-chip__title">Works offline</div>
+                  <div class="ta-chip__body">Always with you</div>
+                </div>
+              </div>
+              <div class="ta-chip">
+                <span class="ta-chip__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                  </svg>
+                </span>
+                <div>
+                  <div class="ta-chip__title">Private by design</div>
+                  <div class="ta-chip__body">Your data stays yours</div>
+                </div>
+              </div>
+              <div class="ta-chip">
+                <span class="ta-chip__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.5 0-2.5 1-2.5 2 0 2.5 5 1.5 5 4 0 1-1 2-2.5 2-1 0-2-.5-2.5-1.5"/>
+                    <line x1="12" y1="7" x2="12" y2="8"/>
+                    <line x1="12" y1="16" x2="12" y2="17"/>
+                  </svg>
+                </span>
+                <div>
+                  <div class="ta-chip__title">One-time Pro unlock</div>
+                  <div class="ta-chip__body">No subscription</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ta-hero__art">
+            <div class="ta-hero__glow"></div>
+            <div class="ta-phone-wrap">
+              <div class="ta-phone">
+                <div class="ta-phone-screen">
+                  <img src="../assets/screenshots/trackanalysis/trackanalysis-history-dark.png" alt="Track Analysis history view with searchable timeline of supplements, drinks, sleep, food, and other events" width="280" height="590" />
+                </div>
+              </div>
+            </div>
+
+            <div class="ta-flow" aria-hidden="true">
+              <div class="flow-card flow-card--csv">
+                <div class="flow-card__head">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  Exported CSV
+                </div>
+                <div class="flow-card__sub">track_analysis.csv</div>
+                <div class="flow-csv">
+                  <div class="flow-csv__row flow-csv__row--head"><span>timestamp</span><span>type</span><span>entry</span></div>
+                  <div class="flow-csv__row"><span>2026-05-17 09:00</span><span><b>supplement</b></span><span>Creatine 5g, B-complex</span></div>
+                  <div class="flow-csv__row"><span>2026-05-17 08:45</span><span><b>drink</b></span><span>Matcha latte, oat milk</span></div>
+                  <div class="flow-csv__row"><span>2026-05-17 08:20</span><span><b>sleep</b></span><span>8h 35m, deep, no wakes</span></div>
+                  <div class="flow-csv__row"><span>2026-05-16 18:45</span><span><b>activity</b></span><span>30 min easy bike</span></div>
+                </div>
+              </div>
+
+              <svg class="flow-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+
+              <div class="flow-card flow-card--llm">
+                <div class="flow-card__head">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                  Your external LLM
+                </div>
+                <div class="flow-llms">
+                  <span title="ChatGPT">ChatGPT</span>
+                  <span title="Gemini">Gemini</span>
+                  <span title="Claude">Claude</span>
+                </div>
+
+                <div class="flow-question">
+                  <span>What patterns do you see between food, symptoms, sleep, and energy in this data?</span>
+                  <svg class="flow-question__send" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </div>
+              </div>
+
+              <svg class="flow-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+
+              <div class="flow-card flow-card--insights">
+                <div class="flow-card__head">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="20" x2="4" y2="10"/><line x1="10" y1="20" x2="10" y2="4"/><line x1="16" y1="20" x2="16" y2="14"/></svg>
+                  Insights come from you
+                </div>
+                <div class="flow-card__sub" style="font-family: var(--sans); font-size: 12px;">You stay in control of your data and your conclusions.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ WHY FREEFORM WINS ============ -->
+      <section class="compare-section">
+        <h2 class="section-title">Why freeform wins</h2>
+
+        <div class="compare-grid">
+          <div class="compare-card compare-card--bad">
+            <div class="compare-card__head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+              Rigid trackers
+            </div>
+            <ul class="compare-card__list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                Predefined categories miss what matters
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                Forced choices create friction
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                Important context gets lost
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                Hard to adapt to your unique life
+              </li>
+            </ul>
+          </div>
+
+          <div class="compare-card compare-card--good">
+            <div class="compare-card__head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><line x1="2" y1="2" x2="7.586" y2="7.586"/></svg>
+              Natural-language logs
+            </div>
+            <ul class="compare-card__list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Capture nuance in your own words
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Log anything, anytime — no friction
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Rich context for better pattern detection
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Adaptable to every season of life
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ A BETTER WORKFLOW ============ -->
+      <section id="how" class="workflow-section">
+        <h2 class="section-title">A better workflow</h2>
+
+        <div class="workflow-grid">
+          <div>
+            <div class="wf-step__head">
+              <div class="wf-step__num">1</div>
+              <div class="wf-step__title">Write it down</div>
+            </div>
+            <p class="wf-step__sub">Log life events in plain English.</p>
+            <div class="wf-step__demo">
+              Had bloating after lunch.<br/>
+              Took magnesium glycinate.<br/>
+              Slept poorly. Woke up tired.<br/>
+              Felt more anxious today.
+            </div>
+            <p class="wf-step__caption">Anything. Anytime.</p>
+          </div>
+
+          <div class="wf-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+
+          <div>
+            <div class="wf-step__head">
+              <div class="wf-step__num">2</div>
+              <div class="wf-step__title">Export clean CSV</div>
+            </div>
+            <p class="wf-step__sub">One tap. Structured. Portable.</p>
+            <div class="wf-step__demo">
+              <div class="wf-csv-row wf-csv-row--head"><span>timestamp</span><span>type</span><span>entry</span></div>
+              <div class="wf-csv-row"><span>2026-05-17 09:00</span><span><b>supplement</b></span><span>Creatine 5g…</span></div>
+              <div class="wf-csv-row"><span>2026-05-17 08:45</span><span><b>drink</b></span><span>Matcha latte…</span></div>
+              <div class="wf-csv-row"><span>2026-05-17 08:20</span><span><b>sleep</b></span><span>8h 35m, deep…</span></div>
+            </div>
+            <p class="wf-step__caption">Your data. Your format.</p>
+          </div>
+
+          <div class="wf-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+
+          <div>
+            <div class="wf-step__head">
+              <div class="wf-step__num">3</div>
+              <div class="wf-step__title">Ask better questions</div>
+            </div>
+            <p class="wf-step__sub">Use any LLM you trust.</p>
+            <div class="wf-step__demo">
+              <div class="wf-question">
+                <span>What patterns do you see between food, symptoms, sleep, and energy in this data?</span>
+                <svg class="wf-question__send" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </div>
+            </div>
+            <p class="wf-step__caption">Better questions. Better insights.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PRIVACY + PRO ============ -->
+      <section class="duo-section">
+        <div class="panel panel--privacy">
+          <div class="panel__head">
+            <div class="panel__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <rect x="9" y="11" width="6" height="5" rx="1"/>
+                <path d="M10 11V9a2 2 0 0 1 4 0v2"/>
+              </svg>
+            </div>
+            <h2 class="panel__title">Privacy by design</h2>
+          </div>
+          <ul class="panel__list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><polyline points="9 12 11 14 15 10"/></svg>
+              All data stays on your device
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="5" y1="5" x2="19" y2="19"/></svg>
+              No accounts. No cloud. No tracking.
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Export only when you choose
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/></svg>
+              You own your data — always
+            </li>
+          </ul>
+          <p class="panel__foot">Track Analysis is built for privacy-conscious people who value control.</p>
+        </div>
+
+        <div class="panel panel--pro">
+          <div class="panel__head">
+            <h2 class="panel__title">Track Analysis Pro</h2>
+          </div>
+          <div class="pro-features">
+            <div class="pro-feature">
+              <span class="pro-feature__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+              </span>
+              <div>
+                <div class="pro-feature__title">One-tap stacks</div>
+                <div class="pro-feature__body">Group related entries for faster logging.</div>
+              </div>
+            </div>
+            <div class="pro-feature">
+              <span class="pro-feature__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+              </span>
+              <div>
+                <div class="pro-feature__title">Advanced filters</div>
+                <div class="pro-feature__body">Find what matters across time and tags.</div>
+              </div>
+            </div>
+            <div class="pro-feature">
+              <span class="pro-feature__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg>
+              </span>
+              <div>
+                <div class="pro-feature__title">CSV export</div>
+                <div class="pro-feature__body">Clean, structured, LLM-ready data.</div>
+              </div>
+            </div>
+          </div>
+          <div class="pro-phone">
+            <div class="ta-phone">
+              <div class="ta-phone-screen">
+                <img src="../assets/screenshots/trackanalysis/trackanalysis-main-dark.png" alt="Track Analysis main screen showing event-type chooser with Food, Drink, Supplement, Activity, Sleep, Energy, Symptom, Medication, and Other categories" width="220" height="470" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ BOTTOM CTA ============ -->
+      <section class="ta-cta">
+        <div class="ta-cta__lock">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+        </div>
+        <div>
+          <h2 class="ta-cta__title">
+            Buy once. Yours forever.
+            <em>No subscription.</em>
+          </h2>
+        </div>
+        <ul class="ta-cta__list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            One-time Pro unlock
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            All future updates included
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Use it on all your Android devices
+          </li>
+        </ul>
+        <div class="ta-cta__buy">
+          <a href="https://play.google.com/store/apps/details?id=com.ulix.trackanalysis" target="_blank" rel="noopener" class="btn-gold">
+            Unlock Pro
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="11" width="18" height="11" rx="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </a>
+          <small>One-time payment</small>
+        </div>
+      </section>
+
+      <!-- ============ DISCLAIMER ============ -->
+      <div class="disclaimer">
+        <svg class="disclaimer__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <p class="disclaimer__text">
+          Track Analysis is a general wellness tool for self-experimentation and reflection. It is not medical advice and is not intended to diagnose, treat, cure, or prevent any disease. Always consult a qualified healthcare professional for medical concerns.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="../icons/favicon.png" alt="" width="32" height="32" style="border-radius:0.5rem" />
+          <div>
+            <div class="site-footer__brand-name">ULIX</div>
+            <p class="site-footer__tag">Precision tools for modern odysseys.</p>
+          </div>
+        </div>
+        <div class="site-footer__links">
+          <a href="../apps.html">Apps</a>
+          <a href="../blog.html">Blog</a>
+          <a href="../support.html">Support</a>
+          <a href="../about.html">About</a>
+          <a href="../contact.html">Contact</a>
+          <a href="../terms.html">Terms</a>
+          <a href="../privacy.html">Privacy</a>
+          <a href="../trackanalysisprivacy.html">Track Analysis Privacy</a>
+        </div>
+        <div>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/ulix" method="post" target="bd-subscribe" class="newsletter" aria-label="Email signup">
+            <label for="nl-email" class="newsletter__label">Get product updates</label>
+            <div class="newsletter__row">
+              <input id="nl-email" class="newsletter__input" type="email" name="email" placeholder="you@example.com" />
+              <button class="btn btn--secondary">Subscribe</button>
+            </div>
+          </form>
+          <div class="site-footer__copyright">© 2026 Ulix LLC.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/ulix.js" defer></script>
+</body>
+</html>
