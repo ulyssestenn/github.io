@@ -4,20 +4,34 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Track Analysis — Freeform Wellness Tracking for Self-Experimentation</title>
-  <meta name="description" content="Track Analysis is a private Android app for freeform wellness logging. Capture food, symptoms, supplements, sleep, activity, and energy in plain English. Export clean CSV for your favorite LLM." />
+  <meta name="description" content="Track Analysis is a private Android app for freeform wellness logging. Capture food, symptoms, supplements, sleep, activity, and energy in plain English. Export clean CSV for your favorite LLM. No accounts. No subscriptions." />
   <link rel="canonical" href="https://ulix.app/trackanalysis/" />
   <meta name="theme-color" content="#0A1426" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="author" content="Ulix LLC" />
+  <meta name="publisher" content="Ulix LLC" />
+  <meta name="application-name" content="Track Analysis" />
+  <meta name="apple-mobile-web-app-title" content="Track Analysis" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="keywords" content="track analysis, freeform tracking, wellness tracking, self-experimentation, symptom tracker, food log, supplement tracker, sleep log, energy log, CSV export, LLM data analysis, private health app, offline tracking, Android wellness app, no subscription wellness app" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ulix" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="Track Analysis — Freeform tracking for self-experimentation." />
-  <meta property="og:description" content="Private Android app for plain-English wellness logging. Export clean CSV for your favorite LLM. No accounts. No subscriptions." />
+  <meta property="og:description" content="Private Android app for plain-English wellness logging. Export clean CSV and use your favorite LLM to find patterns. No accounts. No subscriptions." />
   <meta property="og:url" content="https://ulix.app/trackanalysis/" />
   <meta property="og:image" content="https://ulix.app/icons/trackanalysis.png" />
+  <meta property="og:image:alt" content="Track Analysis app icon — a cream line chart with a checkmark on a dark blue background." />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ulixapp" />
   <meta name="twitter:title" content="Track Analysis — Freeform tracking for self-experimentation." />
-  <meta name="twitter:description" content="Private Android app for plain-English wellness logging. Export clean CSV for your favorite LLM. No accounts. No subscriptions." />
+  <meta name="twitter:description" content="Private Android app for plain-English wellness logging. Export clean CSV and use your favorite LLM to find patterns. No accounts. No subscriptions." />
   <meta name="twitter:image" content="https://ulix.app/icons/trackanalysis.png" />
+  <meta name="twitter:image:alt" content="Track Analysis app icon — a cream line chart with a checkmark on a dark blue background." />
 
   <link rel="icon" href="../icons/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="../icons/favicon.png" />
@@ -26,7 +40,7 @@
   <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/geist-latin.woff2" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;1,14..32,500;1,14..32,600;1,14..32,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     @font-face {
       font-family: 'Geist';
@@ -51,46 +65,198 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": ["SoftwareApplication", "MobileApplication"],
-        "@id": "https://ulix.app/trackanalysis/#app",
-        "name": "Track Analysis",
-        "description": "Track Analysis is a private Android app for freeform wellness logging. Capture food, symptoms, supplements, sleep, activity, medications, and energy in plain English. Export a clean CSV for review or analysis with your favorite LLM. No accounts. No tracking. One-time Pro unlock.",
-        "url": "https://ulix.app/trackanalysis/",
-        "downloadUrl": "https://play.google.com/store/apps/details?id=com.ulix.trackanalysis",
-        "installUrl": "https://play.google.com/store/apps/details?id=com.ulix.trackanalysis",
-        "operatingSystem": "Android",
-        "applicationCategory": "HealthApplication",
-        "applicationSubCategory": "Wellness tracking",
-        "isAccessibleForFree": true,
-        "inLanguage": "en",
-        "image": "https://ulix.app/icons/trackanalysis.png",
-        "featureList": [
-          "Freeform plain-English event logging",
-          "Categories for food, drink, supplement, activity, sleep, energy, symptom, medication",
-          "Searchable history with filters by date and event",
-          "CSV export with header summary and breakdown",
-          "One-tap stacks for grouping related entries (Pro)",
-          "Advanced filters across time and tags (Pro)",
-          "Offline-first, local storage",
-          "No accounts, no ads, no tracking",
-          "One-time Pro unlock — no subscription"
-        ],
-        "publisher": { "@id": "https://ulix.app/#org" },
-        "author": { "@id": "https://ulix.app/#org" }
-      },
-      {
         "@type": "Organization",
         "@id": "https://ulix.app/#org",
         "name": "Ulix LLC",
+        "alternateName": "Ulix",
         "url": "https://ulix.app/",
-        "logo": "https://ulix.app/icons/favicon.png"
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ulix.app/icons/favicon.png",
+          "width": 512,
+          "height": 512
+        },
+        "sameAs": [
+          "https://play.google.com/store/apps/developer?id=Ulix+LLC"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://ulix.app/#website",
+        "url": "https://ulix.app/",
+        "name": "Ulix",
+        "description": "Privacy-first Android apps from Ulix LLC. No accounts, no ads, no tracking.",
+        "publisher": { "@id": "https://ulix.app/#org" },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://ulix.app/trackanalysis/#webpage",
+        "url": "https://ulix.app/trackanalysis/",
+        "name": "Track Analysis — Freeform Wellness Tracking for Self-Experimentation",
+        "description": "Track Analysis is a private Android app for freeform wellness logging. Capture food, symptoms, supplements, sleep, activity, and energy in plain English. Export clean CSV for your favorite LLM.",
+        "isPartOf": { "@id": "https://ulix.app/#website" },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://ulix.app/icons/trackanalysis.png",
+          "width": 512,
+          "height": 512
+        },
+        "about": { "@id": "https://ulix.app/trackanalysis/#app" },
+        "mainEntity": { "@id": "https://ulix.app/trackanalysis/#app" },
+        "breadcrumb": { "@id": "https://ulix.app/trackanalysis/#breadcrumb" },
+        "inLanguage": "en-US",
+        "datePublished": "2026-05-17",
+        "dateModified": "2026-05-17"
       },
       {
         "@type": "BreadcrumbList",
+        "@id": "https://ulix.app/trackanalysis/#breadcrumb",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ulix.app/" },
           { "@type": "ListItem", "position": 2, "name": "Apps", "item": "https://ulix.app/apps.html" },
           { "@type": "ListItem", "position": 3, "name": "Track Analysis", "item": "https://ulix.app/trackanalysis/" }
+        ]
+      },
+      {
+        "@type": ["SoftwareApplication", "MobileApplication"],
+        "@id": "https://ulix.app/trackanalysis/#app",
+        "name": "Track Analysis",
+        "alternateName": "Track Analysis by Ulix",
+        "description": "Track Analysis is a private Android app for freeform wellness logging. Capture food, symptoms, supplements, sleep, activity, medications, and energy in plain English. Export a clean CSV for review or analysis with your favorite LLM. Offline-first, no accounts, no ads, no tracking. One-time Pro unlock — no subscription.",
+        "url": "https://ulix.app/trackanalysis/",
+        "sameAs": "https://play.google.com/store/apps/details?id=com.ulix.trackanalysis",
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.ulix.trackanalysis",
+        "installUrl": "https://play.google.com/store/apps/details?id=com.ulix.trackanalysis",
+        "operatingSystem": "Android 8.0+",
+        "applicationCategory": "HealthApplication",
+        "applicationSubCategory": "Wellness tracking",
+        "softwareVersion": "1.0",
+        "softwareRequirements": "Android 8.0 (Oreo) or later",
+        "memoryRequirements": "20MB",
+        "permissions": "No special permissions required — no network, no location, no contacts.",
+        "isAccessibleForFree": true,
+        "inLanguage": "en",
+        "datePublished": "2026-05-17",
+        "dateModified": "2026-05-17",
+        "image": [
+          "https://ulix.app/icons/trackanalysis.png",
+          "https://ulix.app/assets/screenshots/trackanalysis/trackanalysis-main-dark.png",
+          "https://ulix.app/assets/screenshots/trackanalysis/trackanalysis-history-dark.png"
+        ],
+        "screenshot": [
+          {
+            "@type": "ImageObject",
+            "url": "https://ulix.app/assets/screenshots/trackanalysis/trackanalysis-main-dark.png",
+            "caption": "Choose an event type and log it in plain English — food, drink, supplement, activity, sleep, energy, symptom, medication, or other."
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://ulix.app/assets/screenshots/trackanalysis/trackanalysis-history-dark.png",
+            "caption": "Searchable history view with filters by date and event type."
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://ulix.app/assets/screenshots/trackanalysis/trackanalysis-history-light.png",
+            "caption": "Light theme of the searchable history view."
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://ulix.app/assets/screenshots/trackanalysis/trackanalysis-export.png",
+            "caption": "Clean CSV export with a header summary, event breakdown, timestamps, types, and freeform entries."
+          }
+        ],
+        "featureList": [
+          "Freeform plain-English event logging",
+          "Categories for food, drink, supplement, activity, sleep, energy, symptom, medication, and other",
+          "Searchable history with filters by date and event",
+          "CSV export with header summary and event-type breakdown",
+          "One-tap stacks for grouping related entries (Pro)",
+          "Advanced filters across time and tags (Pro)",
+          "Offline-first, local storage on your device",
+          "No accounts, no ads, no tracking, no analytics",
+          "One-time Pro unlock — no subscription",
+          "All future updates included"
+        ],
+        "keywords": "freeform tracking, wellness tracking, self-experimentation, symptom log, food log, supplement tracker, sleep tracking, energy log, CSV export, LLM data analysis, private health app, offline tracking, no subscription, Android wellness",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Track Analysis (free download)",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://play.google.com/store/apps/details?id=com.ulix.trackanalysis"
+          },
+          {
+            "@type": "Offer",
+            "name": "Track Analysis Pro (one-time unlock)",
+            "category": "In-App Purchase",
+            "description": "One-time Pro unlock for one-tap stacks, advanced filters, and CSV export. No subscription. All future updates included.",
+            "availability": "https://schema.org/InStock",
+            "url": "https://play.google.com/store/apps/details?id=com.ulix.trackanalysis"
+          }
+        ],
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "Adults interested in self-experimentation, wellness tracking, and personal data analysis"
+        },
+        "publisher": { "@id": "https://ulix.app/#org" },
+        "author": { "@id": "https://ulix.app/#org" },
+        "creator": { "@id": "https://ulix.app/#org" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ulix.app/trackanalysis/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Track Analysis free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The app is a free download on Google Play. Track Analysis Pro is an optional one-time unlock — no subscription — that adds one-tap stacks, advanced filters, and CSV export. All future updates are included."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where is my data stored?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "All data stays on your device. There are no accounts, no cloud sync, and no analytics. The only time data leaves your phone is if you choose to export it as CSV or share it. Android's built-in backup may include the local database depending on your device settings."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I have to use fixed categories?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Track Analysis is freeform. Pick a broad event type (food, drink, supplement, activity, sleep, energy, symptom, medication, or other) and then log what happened in your own words — just like writing a note."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the LLM workflow work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Export your data as a clean CSV with one tap, then paste it into your preferred LLM (ChatGPT, Gemini, Claude, or any other) and ask questions like \"What patterns do you see between food, symptoms, sleep, and energy in this data?\" Track Analysis doesn't talk to any LLM itself — you choose the tool you trust."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Track Analysis medical advice?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Track Analysis is a general wellness tool for self-experimentation and reflection. It is not medical advice and is not intended to diagnose, treat, cure, or prevent any disease. Always consult a qualified healthcare professional for medical concerns."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Track Analysis work offline?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Track Analysis is offline-first. It does not require network access to log events, search your history, or export to CSV."
+            }
+          }
         ]
       }
     ]
@@ -122,21 +288,38 @@
     --bad:       #F87171;
     --gold:      #E7B770;
     --gold-soft: rgba(231, 183, 112, 0.16);
-    --sans: 'Inter', Geist, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    --sans:    'Inter', Geist, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    --display: 'Cormorant Garamond', 'EB Garamond', Georgia, 'Times New Roman', serif;
 
     background: var(--bg);
     color: var(--fg);
     font-family: var(--sans);
-    font-feature-settings: 'cv11', 'ss01', 'ss03';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   .ta-page h1, .ta-page h2, .ta-page h3,
   .ta-page .panel__title,
   .ta-page .ta-cta__title,
-  .ta-page .section-title {
-    font-family: var(--sans);
-    font-optical-sizing: auto;
+  .ta-page .section-title,
+  .ta-page .ta-hero__title,
+  .ta-page .compare-card__head,
+  .ta-page .wf-step__title,
+  .ta-page .pro-feature__title {
+    font-family: var(--display);
+    font-weight: 500;
+    letter-spacing: -0.005em;
+  }
+  .ta-page .ta-hero__title,
+  .ta-page .section-title,
+  .ta-page .ta-cta__title,
+  .ta-page .panel__title {
+    font-weight: 500;
+  }
+  .ta-page .ta-hero__title em,
+  .ta-page .section-title em,
+  .ta-page .ta-cta__title em {
+    font-style: italic;
+    font-weight: 500;
   }
 
   .ta-page a { color: inherit; text-decoration: none; }
@@ -257,16 +440,16 @@
     min-height: 620px;
   }
   .ta-page .ta-hero__title {
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 1.05;
-    letter-spacing: -0.03em;
+    font-size: 72px;
+    font-weight: 500;
+    line-height: 1.04;
+    letter-spacing: -0.015em;
     text-wrap: balance;
     color: var(--fg);
     margin-top: 28px;
   }
   .ta-page .ta-hero__title em {
-    font-style: normal;
+    font-style: italic;
     color: var(--accent);
   }
   .ta-page .ta-hero__lede {
@@ -345,8 +528,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    perspective: 1200px;
-    perspective-origin: 100% 50%;
     padding: 30px 0;
   }
   .ta-page .ta-phone {
@@ -356,12 +537,12 @@
     padding: 8px;
     background: linear-gradient(180deg, #1F2937 0%, #0B1220 100%);
     box-shadow:
-      0 40px 90px rgba(0,0,0,0.60),
-      0 12px 28px rgba(0,0,0,0.45),
+      0 40px 90px rgba(0,0,0,0.55),
+      0 12px 28px rgba(0,0,0,0.40),
       inset 0 0 0 1px rgba(255,255,255,0.06);
     flex-shrink: 0;
     position: relative;
-    transform: rotateY(-18deg) rotateX(4deg) rotateZ(-4deg);
+    transform: perspective(1200px) rotateY(-10deg) rotateX(3deg) rotateZ(-3deg);
     transform-origin: center center;
     transform-style: preserve-3d;
   }
@@ -464,9 +645,9 @@
 
   /* ---------- Generic section title ---------- */
   .ta-page .section-title {
-    font-size: 36px;
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    font-size: 44px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
     line-height: 1.1;
     color: var(--fg);
     text-align: center;
@@ -661,10 +842,10 @@
   }
   .ta-page .panel__icon svg { width: 32px; height: 32px; }
   .ta-page .panel__title {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 30px;
+    font-weight: 500;
     color: var(--fg);
-    letter-spacing: -0.015em;
+    letter-spacing: -0.005em;
   }
   .ta-page .panel--pro .panel__title { color: var(--gold); }
   .ta-page .panel__list {
@@ -773,11 +954,11 @@
   }
   .ta-page .ta-cta__lock svg { width: 32px; height: 32px; }
   .ta-page .ta-cta__title {
-    font-size: 32px;
-    font-weight: 700;
+    font-size: 40px;
+    font-weight: 500;
     color: var(--fg);
-    letter-spacing: -0.02em;
-    line-height: 1.15;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
   }
   .ta-page .ta-cta__title em {
     font-style: normal;
@@ -835,8 +1016,11 @@
     .ta-page .ta-hero__grid { grid-template-columns: 1fr; gap: 32px; min-height: 0; }
     .ta-page .ta-hero__art { grid-template-columns: 1fr; min-height: 0; gap: 20px; }
     .ta-page .ta-hero__chips { max-width: none; }
-    .ta-page .ta-hero__title { font-size: 48px; }
-    .ta-page .ta-phone-wrap { perspective: none; padding: 0; }
+    .ta-page .ta-hero__title { font-size: 56px; }
+    .ta-page .section-title { font-size: 36px; }
+    .ta-page .ta-cta__title { font-size: 32px; }
+    .ta-page .panel__title { font-size: 26px; }
+    .ta-page .ta-phone-wrap { padding: 0; }
     .ta-page .ta-phone { transform: none; }
 
     .ta-page .compare-section { padding: 48px 32px 16px; }
