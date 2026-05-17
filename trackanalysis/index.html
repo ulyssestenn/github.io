@@ -360,20 +360,39 @@
     object-position: top;
   }
 
-  /* Flow diagram on the right of the hero */
+  /* Flow diagram on the right of the hero — angled 3D cascade */
   .ta-page .ta-flow {
     position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
+    perspective: 1100px;
+    perspective-origin: 0% 50%;
+    transform-style: preserve-3d;
+    padding-left: 8px;
   }
   .ta-page .flow-card {
     background: var(--panel);
     border: 1px solid var(--rule);
     border-radius: 14px;
     padding: 14px 16px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.20);
+    box-shadow:
+      0 24px 48px rgba(0,0,0,0.50),
+      0 4px 16px rgba(0,0,0,0.28);
+    transform-origin: left center;
+    transform: rotateY(-20deg) rotateX(2deg) rotateZ(-1.5deg);
+    backface-visibility: hidden;
+  }
+  .ta-page .flow-card--csv {
+    transform: rotateY(-22deg) rotateX(3deg) rotateZ(-2.5deg);
+    background: linear-gradient(180deg, #142146 0%, #101B3A 100%);
+  }
+  .ta-page .flow-card--llm {
+    transform: rotateY(-19deg) rotateX(1deg) rotateZ(-1deg) translateX(22px);
+  }
+  .ta-page .flow-card--insights {
+    transform: rotateY(-17deg) rotateX(0deg) rotateZ(-0.5deg) translateX(32px);
   }
   .ta-page .flow-card__head {
     display: flex;
@@ -405,9 +424,12 @@
   .ta-page .flow-csv__row b { color: var(--fg); font-weight: 600; }
 
   .ta-page .flow-arrow {
-    align-self: center;
+    align-self: flex-start;
+    margin-left: 32px;
     color: var(--subtle);
+    opacity: 0.55;
     display: block;
+    transform: rotateY(-10deg) translateX(8px);
   }
 
   .ta-page .flow-llms {
@@ -813,6 +835,11 @@
     .ta-page .ta-hero__art { grid-template-columns: 1fr; min-height: 0; gap: 20px; }
     .ta-page .ta-hero__chips { max-width: none; }
     .ta-page .ta-hero__title { font-size: 48px; }
+    .ta-page .ta-flow { perspective: none; padding-left: 0; }
+    .ta-page .flow-card,
+    .ta-page .flow-card--csv,
+    .ta-page .flow-card--llm,
+    .ta-page .flow-card--insights { transform: none; }
 
     .ta-page .compare-section { padding: 48px 32px 16px; }
     .ta-page .compare-grid { grid-template-columns: 1fr; }
@@ -1020,7 +1047,7 @@
             </div>
 
             <div class="ta-flow" aria-hidden="true">
-              <div class="flow-card">
+              <div class="flow-card flow-card--csv">
                 <div class="flow-card__head">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
                   Exported CSV
@@ -1037,7 +1064,7 @@
 
               <svg class="flow-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
 
-              <div class="flow-card">
+              <div class="flow-card flow-card--llm">
                 <div class="flow-card__head">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
                   Your external LLM
@@ -1056,7 +1083,7 @@
 
               <svg class="flow-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
 
-              <div class="flow-card">
+              <div class="flow-card flow-card--insights">
                 <div class="flow-card__head">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="20" x2="4" y2="10"/><line x1="10" y1="20" x2="10" y2="4"/><line x1="16" y1="20" x2="16" y2="14"/></svg>
                   Insights come from you
