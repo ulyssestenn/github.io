@@ -434,7 +434,7 @@
   }
   .ta-page .ta-hero__grid {
     display: grid;
-    grid-template-columns: 1fr 1.1fr;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
     gap: 48px;
     align-items: center;
     min-height: 620px;
@@ -468,42 +468,50 @@
     flex-wrap: wrap;
   }
   .ta-page .ta-hero__chips {
-    margin-top: 28px;
+    margin-top: 32px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-    max-width: 600px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
   }
   .ta-page .ta-chip {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 10px;
-    padding: 14px 14px;
+    padding: 13px 12px 15px;
     border-radius: 12px;
-    background: var(--panel);
-    border: 1px solid var(--rule);
+    background: transparent;
+    border: 1px solid var(--rule-2);
   }
   .ta-page .ta-chip__icon {
-    width: 28px;
-    height: 28px;
-    border-radius: 7px;
-    background: var(--accent-soft);
-    color: var(--accent);
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: transparent;
+    border: 1px solid var(--rule-2);
+    color: var(--fg);
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
   }
-  .ta-page .ta-chip__icon svg { width: 14px; height: 14px; }
+  .ta-page .ta-chip__icon svg { width: 16px; height: 16px; }
   .ta-page .ta-chip__title {
-    font-size: 13px;
+    font-family: var(--sans);
+    font-size: 12px;
     font-weight: 600;
     color: var(--fg);
-    line-height: 1.2;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
   }
   .ta-page .ta-chip__body {
-    font-size: 12px;
+    font-family: var(--sans);
+    font-size: 11px;
     color: var(--subtle);
-    line-height: 1.3;
+    line-height: 1.35;
+    margin-top: 2px;
+    white-space: nowrap;
   }
 
   /* ---------- Hero art (phone + workflow) ---------- */
@@ -542,7 +550,7 @@
       inset 0 0 0 1px rgba(255,255,255,0.06);
     flex-shrink: 0;
     position: relative;
-    transform: perspective(1200px) rotateY(-10deg) rotateX(3deg) rotateZ(-3deg);
+    transform: perspective(1200px) rotateY(10deg) rotateX(3deg) rotateZ(3deg);
     transform-origin: center center;
     transform-style: preserve-3d;
   }
@@ -1157,56 +1165,47 @@
             <div class="ta-hero__chips">
               <div class="ta-chip">
                 <span class="ta-chip__icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M12 19l7-7 3 3-7 7-3-3z"/>
-                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
-                    <line x1="2" y1="2" x2="7.586" y2="7.586"/>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 20h9"/>
+                    <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
                   </svg>
                 </span>
-                <div>
-                  <div class="ta-chip__title">Flexible logging</div>
-                  <div class="ta-chip__body">No rigid categories</div>
-                </div>
+                <div class="ta-chip__title">Flexible logging</div>
+                <div class="ta-chip__body">No rigid categories</div>
               </div>
               <div class="ta-chip">
                 <span class="ta-chip__icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
                     <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
                     <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
                     <line x1="12" y1="20" x2="12.01" y2="20"/>
                   </svg>
                 </span>
-                <div>
-                  <div class="ta-chip__title">Works offline</div>
-                  <div class="ta-chip__body">Always with you</div>
-                </div>
+                <div class="ta-chip__title">Works offline</div>
+                <div class="ta-chip__body">Always with you</div>
               </div>
               <div class="ta-chip">
                 <span class="ta-chip__icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
                     <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
                   </svg>
                 </span>
-                <div>
-                  <div class="ta-chip__title">Private by design</div>
-                  <div class="ta-chip__body">Your data stays yours</div>
-                </div>
+                <div class="ta-chip__title">Private by design</div>
+                <div class="ta-chip__body">Your data stays yours</div>
               </div>
               <div class="ta-chip">
                 <span class="ta-chip__icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <circle cx="12" cy="12" r="10"/>
                     <path d="M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.5 0-2.5 1-2.5 2 0 2.5 5 1.5 5 4 0 1-1 2-2.5 2-1 0-2-.5-2.5-1.5"/>
                     <line x1="12" y1="7" x2="12" y2="8"/>
                     <line x1="12" y1="16" x2="12" y2="17"/>
                   </svg>
                 </span>
-                <div>
-                  <div class="ta-chip__title">One-time Pro unlock</div>
-                  <div class="ta-chip__body">No subscription</div>
-                </div>
+                <div class="ta-chip__title">One-time Pro unlock</div>
+                <div class="ta-chip__body">No subscription</div>
               </div>
             </div>
           </div>
