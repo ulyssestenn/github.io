@@ -121,6 +121,19 @@
   .home-page .site-footer__brand-name,
   .home-page .site-footer__links a:hover { color: var(--fg); }
   .home-page .newsletter__label { color: rgba(244,239,230,0.8); }
+  .home-page .footer-wordmark { height: 70px; width: auto; opacity: 0.92; }
+  .home-page .footer-credo {
+    text-align: center;
+    font-family: var(--serif);
+    font-size: clamp(15px, 1.7vw, 19px);
+    line-height: 1.5;
+    color: var(--muted);
+    padding-bottom: 28px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .home-page .footer-credo b { color: var(--fg); font-weight: 400; }
+  .home-page .footer-credo .sep { color: var(--accent); padding: 0 4px; }
 
   .home-page a { color: inherit; text-decoration: none; }
   .home-page img { display: block; user-select: none; -webkit-user-drag: none; }
@@ -381,6 +394,18 @@
   }
   .home-page .coming-chip::before {
     content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0;
+  }
+
+  /* ---------- Utility feature list (per-card brand accent) ---------- */
+  .home-page .app-card--util { --util-accent: var(--accent); }
+  .home-page .util-feature-list { display: flex; flex-direction: column; gap: 11px; margin-top: 4px; }
+  .home-page .util-feature-list li {
+    display: flex; align-items: center; gap: 11px;
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.11em; text-transform: uppercase; color: var(--muted);
+  }
+  .home-page .util-feature-list li::before {
+    content: ""; width: 7px; height: 7px; flex-shrink: 0; background: var(--util-accent);
   }
 
   /* =========================== CLOSING CTA =========================== */
@@ -688,19 +713,18 @@
               <span class="sec-eyebrow__label">The utilities</span>
             </div>
             <!-- EDIT: section title -->
-            <h2 class="sec__title">Three more, <em>smaller</em> in scope.</h2>
+            <h2 class="sec__title">Ulix <em>utilities</em>.</h2>
           </div>
           <!-- EDIT: section support -->
           <p class="sec__support">
-            Small, friendly tools for very specific kinds of information.
-            Two are still in the workshop.
+            Tools for specific kinds of information. Two are still in the workshop.
           </p>
         </div>
 
         <div class="cards cards--utility">
 
           <!-- Track Analysis -->
-          <article class="app-card">
+          <article class="app-card app-card--util" style="--util-accent:#5BA3F5;">
             <div class="app-card__head">
               <img src="./icons/trackanalysis.png" alt="" class="app-card__icon" />
               <div>
@@ -709,10 +733,16 @@
               </div>
             </div>
             <h4 class="app-card__headline">A private record of how you feel.</h4>
-            <p class="app-card__body">Private health logging, then export.</p>
-            <div class="app-card__art app-card__art--sm">
-              <div class="phone" style="--s:0.6"><div class="phone-screen"><img src="./assets/screenshots/trackanalysis/trackanalysis-main-dark.png" alt="Track Analysis logging screen" /></div></div>
-            </div>
+            <p class="app-card__body">
+              Plain-English logs. CSV export. Pattern finding with the LLM you choose.
+              For people who want a wellness journal that's actually theirs.
+            </p>
+            <ul class="util-feature-list">
+              <li>Free-text notes · No forms</li>
+              <li>CSV export · Plain text</li>
+              <li>BYO-LLM analysis</li>
+              <li>100% offline</li>
+            </ul>
             <div class="app-card__foot">
               <a href="https://play.google.com/store/apps/details?id=com.ulix.trackanalysis" target="_blank" rel="noopener" class="play-badge">
                 <svg width="18" height="20" viewBox="0 0 20 22" fill="none" aria-hidden="true">
@@ -731,7 +761,7 @@
           </article>
 
           <!-- Curious Air -->
-          <article class="app-card">
+          <article class="app-card app-card--util" style="--util-accent:#5AC8E0;">
             <div class="app-card__head">
               <img src="./icons/curiousair.png" alt="" class="app-card__icon" />
               <div>
@@ -740,16 +770,16 @@
               </div>
             </div>
             <h4 class="app-card__headline">See what's broadcasting.</h4>
-            <p class="app-card__body">Explore the signals around you.</p>
-            <div class="app-card__art app-card__art--sm">
-              <div class="phone" style="--s:0.6">
-                <div class="phone-screen phone-screen--soon">
-                  <img src="./icons/curiousair.png" alt="" />
-                  <span class="soon-screen__name">Curious Air</span>
-                  <span class="soon-screen__label">Coming this year</span>
-                </div>
-              </div>
-            </div>
+            <p class="app-card__body">
+              Inspect the signals your device can detect: Bluetooth, Wi-Fi, and nearby
+              device traces. For the curious — not the paranoid.
+            </p>
+            <ul class="util-feature-list">
+              <li>BLE · Wi-Fi · Device traces</li>
+              <li>Signal strength · Proximity</li>
+              <li>Read-only · No scans broadcast</li>
+              <li>Local CSV export</li>
+            </ul>
             <div class="app-card__foot">
               <span class="coming-chip">Coming this year</span>
               <a href="./apps.html" class="more-link more-link--gold">Details →</a>
@@ -757,7 +787,7 @@
           </article>
 
           <!-- Loan It -->
-          <article class="app-card">
+          <article class="app-card app-card--util" style="--util-accent:#52C07A;">
             <div class="app-card__head">
               <img src="./icons/loanit.png" alt="" class="app-card__icon" />
               <div>
@@ -766,16 +796,16 @@
               </div>
             </div>
             <h4 class="app-card__headline">Get your stuff back.</h4>
-            <p class="app-card__body">Track what you've lent out.</p>
-            <div class="app-card__art app-card__art--sm">
-              <div class="phone" style="--s:0.6">
-                <div class="phone-screen phone-screen--soon">
-                  <img src="./icons/loanit.png" alt="" />
-                  <span class="soon-screen__name">Loan It</span>
-                  <span class="soon-screen__label">Coming this year</span>
-                </div>
-              </div>
-            </div>
+            <p class="app-card__body">
+              Track what you lent, who has it, and what needs to come back.
+              Snap a photo, add a name, get on with your life.
+            </p>
+            <ul class="util-feature-list">
+              <li>Photo + person + date</li>
+              <li>Return reminders</li>
+              <li>Books · Tools · Anything</li>
+              <li>No accounts</li>
+            </ul>
             <div class="app-card__foot">
               <span class="coming-chip">Coming this year</span>
               <a href="./apps.html" class="more-link more-link--gold">Details →</a>
@@ -791,12 +821,12 @@
       <section class="home-cta">
         <div class="sec-eyebrow" style="align-items:center; display:inline-flex;">
           <span class="sec-eyebrow__num">03</span>
-          <span class="sec-eyebrow__label">All six apps</span>
+          <span class="sec-eyebrow__label">Ulix — Precision tools for modern odysseys</span>
         </div>
         <!-- EDIT: closing title + body -->
         <h2 class="home-cta__title">Find the app for the <em>information</em> you keep.</h2>
         <p class="home-cta__body">
-          Free to start. No accounts. Built for Android, by a small team that uses every one of them.
+          No accounts. No ads. Built for Android by someone who uses every one of them.
         </p>
         <div class="home-cta__ctas">
           <a href="./apps.html" class="btn btn--primary">Browse all six apps</a>
@@ -818,13 +848,10 @@
   <!-- Footer (shared site chrome) -->
   <footer class="site-footer">
     <div class="container">
+      <p class="footer-credo">Find the <b>book</b> <span class="sep">·</span> Save the <b>passage</b> <span class="sep">·</span> Read the <b>classic</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p>
       <div class="site-footer__grid">
         <div class="site-footer__brand">
-          <img src="./icons/favicon.png" alt="" width="32" height="32" style="border-radius:0.5rem" />
-          <div>
-            <div class="site-footer__brand-name">ULIX</div>
-            <p class="site-footer__tag">Precision tools for modern odysseys.</p>
-          </div>
+          <img src="./icons/ulixwordmarkclear.png" alt="Ulix — Precision tools for modern odysseys" class="footer-wordmark" />
         </div>
         <div class="site-footer__links">
           <a href="./apps.html">Apps</a>
