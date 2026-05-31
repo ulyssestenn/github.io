@@ -400,12 +400,12 @@
   .home-page .app-card--util { --util-accent: var(--accent); }
   .home-page .util-feature-list { display: flex; flex-direction: column; gap: 11px; margin-top: 4px; }
   .home-page .util-feature-list li {
-    display: flex; align-items: center; gap: 11px;
+    display: flex; align-items: flex-start; gap: 11px;
     font-family: var(--sans); font-size: 11px; font-weight: 500;
-    letter-spacing: 0.11em; text-transform: uppercase; color: var(--muted);
+    letter-spacing: 0.11em; line-height: 1.5; text-transform: uppercase; color: var(--muted);
   }
   .home-page .util-feature-list li::before {
-    content: ""; width: 7px; height: 7px; flex-shrink: 0; background: var(--util-accent);
+    content: ""; width: 7px; height: 7px; margin-top: 4px; flex-shrink: 0; background: var(--util-accent);
   }
 
   /* =========================== CLOSING CTA =========================== */
@@ -732,14 +732,13 @@
                 <div class="app-card__tags"><span class="app-tag">Utility</span></div>
               </div>
             </div>
-            <h4 class="app-card__headline">A private record of how you feel.</h4>
+            <h4 class="app-card__headline">Tracking for analysis.</h4>
             <p class="app-card__body">
               Plain-English logs. CSV export. Pattern finding with the LLM you choose.
-              For people who want a wellness journal that's actually theirs.
             </p>
             <ul class="util-feature-list">
               <li>Free-text notes · No forms</li>
-              <li>CSV export · Plain text</li>
+              <li>CSV export</li>
               <li>BYO-LLM analysis</li>
               <li>100% offline</li>
             </ul>
@@ -771,13 +770,11 @@
             </div>
             <h4 class="app-card__headline">See what's broadcasting.</h4>
             <p class="app-card__body">
-              Inspect the signals your device can detect: Bluetooth, Wi-Fi, and nearby
-              device traces. For the curious — not the paranoid.
+              Explore the signals in the air around you. Wi-Fi, Cellular, Bluetooth,
+              satellites, and more.
             </p>
             <ul class="util-feature-list">
-              <li>BLE · Wi-Fi · Device traces</li>
-              <li>Signal strength · Proximity</li>
-              <li>Read-only · No scans broadcast</li>
+              <li>BLE · Wi-Fi · Cellular · GNSS · GPS · Signal Strength</li>
               <li>Local CSV export</li>
             </ul>
             <div class="app-card__foot">
