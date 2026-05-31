@@ -445,10 +445,30 @@
     .home-page .divider { margin: 0 24px; }
     .home-page .home-hero { padding: 40px 24px 56px; }
     .home-page .home-hero__pills { gap: 10px 20px; }
-    .home-page .hero-phones { margin-top: 48px; min-height: 0; }
-    .home-page .hero-phones__row .phone { margin: 0 -10px; }
+    .home-page .hero-phones { margin-top: 44px; min-height: 0; }
+    /* Mobile: swipeable carousel of all five screens (instead of one) */
+    .home-page .hero-phones__row {
+      width: 100%;
+      justify-content: flex-start;
+      gap: 12px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding: 8px calc(50% - 105px);
+    }
+    .home-page .hero-phones__row::-webkit-scrollbar { display: none; }
+    .home-page .hero-phones__row .phone {
+      margin: 0;
+      transform: none;
+      scroll-snap-align: center;
+      --s: 0.75 !important;
+    }
+    .home-page .hero-phones__row .phone:nth-child(1),
     .home-page .hero-phones__row .phone:nth-child(2),
-    .home-page .hero-phones__row .phone:nth-child(4) { display: none; }
+    .home-page .hero-phones__row .phone:nth-child(4),
+    .home-page .hero-phones__row .phone:nth-child(5) { display: block; }
+    .home-page .hero-phones__row .phone:nth-child(3) { order: -1; }
 
     .home-page .sec { padding: 60px 24px; }
     .home-page .sec__head { grid-template-columns: 1fr; gap: 16px; margin-bottom: 40px; }
