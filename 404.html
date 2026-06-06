@@ -5,18 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Page not found — Ulix</title>
   <meta name="description" content="The page you were looking for doesn’t exist. Head back to Ulix." />
-  <meta name="theme-color" content="#00142F" />
+  <meta name="theme-color" content="#0F0E0C" />
   <meta name="robots" content="noindex" />
   <link rel="icon" href="/icons/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="/icons/favicon.png" />
   <link rel="stylesheet" href="/assets/ulix.css" />
+
+  <!-- Fonts: Geist (self-hosted) + Newsreader (display serif). Matches the homepage. -->
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/geist-latin.woff2" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+  <!-- Shared warm-dark editorial design system (same as the homepage) -->
+  <link rel="stylesheet" href="/assets/home.css" />
 </head>
 
-<body>
+<body class="home-page">
   <a href="#main" class="skip-link">Skip to content</a>
 
+  <!-- Header (shared site chrome) -->
   <header class="site-header">
-    <div class="container site-header__inner">
+    <div class="container container--wide site-header__inner">
       <a href="/" class="site-brand">
         <img src="/icons/favicon.png" alt="" class="site-brand__logo" />
         <span class="site-brand__name">ULIX</span>
@@ -36,11 +45,12 @@
             <line x1="4" y1="17" x2="20" y2="17"/>
           </svg>
         </button>
-        <a href="/apps.html" class="btn btn--primary btn--header">Explore Apps</a>
+        <a href="/apps.html" class="btn btn--primary btn--header">Browse all apps →</a>
       </div>
     </div>
   </header>
 
+  <!-- Mobile drawer -->
   <div id="u-mobile" class="drawer" role="dialog" aria-modal="true" aria-label="Menu" hidden>
     <div class="drawer__backdrop" data-close></div>
     <div class="drawer__panel">
@@ -63,31 +73,25 @@
   </div>
 
   <main id="main">
-    <section class="section section--lg">
-      <div class="container text-center">
-        <div class="card card--lg" style="display:inline-block;max-width:32rem">
-          <h1 style="font-size:2rem;font-weight:600;color:var(--ulix-primary);margin-bottom:0.5rem">Page not found</h1>
-          <p class="card__text card__text--base" style="margin-bottom:1.5rem">
-            Sorry — we couldn’t find that page. Let’s get you back on course.
-          </p>
-          <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap">
-            <a href="/" class="btn btn--primary">Home</a>
-            <a href="/apps.html" class="btn btn--secondary">Apps</a>
-          </div>
+    <div class="doc doc--narrow">
+      <div class="prose-card prose-card--center">
+        <h1 class="status-title">Page not found</h1>
+        <p class="lead">Sorry — we couldn’t find that page. Let’s get you back on course.</p>
+        <div class="status-actions">
+          <a href="/" class="btn btn--primary">Home</a>
+          <a href="/apps.html" class="btn btn--secondary">Apps</a>
         </div>
       </div>
-    </section>
+    </div>
   </main>
 
+  <!-- Footer (shared site chrome) -->
   <footer class="site-footer">
     <div class="container">
+      <p class="footer-credo">Find the <b>book</b> <span class="sep">·</span> Save the <b>passage</b> <span class="sep">·</span> Read the <b>classic</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p>
       <div class="site-footer__grid">
         <div class="site-footer__brand">
-          <img src="/icons/favicon.png" alt="" width="32" height="32" style="border-radius:0.5rem" />
-          <div>
-            <div class="site-footer__brand-name">ULIX</div>
-            <p class="site-footer__tag">Precision tools for modern odysseys.</p>
-          </div>
+          <img src="/icons/ulixwordmarkclear.png" alt="Ulix — Precision tools for modern odysseys" class="footer-wordmark" />
         </div>
         <div class="site-footer__links">
           <a href="/apps.html">Apps</a>
@@ -106,7 +110,7 @@
               <button class="btn btn--secondary">Subscribe</button>
             </div>
           </form>
-          <div class="site-footer__copyright">© 2025 Ulix LLC. All rights reserved.</div>
+          <div class="site-footer__copyright">© 2026 Ulix LLC. All rights reserved.</div>
         </div>
       </div>
     </div>
