@@ -441,3 +441,100 @@
   .home-page .home-cta__icons { gap: 14px; }
   .home-page .home-cta__icons img { width: 46px; height: 46px; }
 }
+
+/* ==========================================================================
+   Long-form document pages (privacy, policies) — the "prose card"
+   --------------------------------------------------------------------------
+   The light theme's nice shadowed .card, re-imagined for the warm-dark palette:
+   a lifted, bordered surface that wraps long-form copy. Used by the privacy
+   pages; reusable by terms / support / any document page.
+   ========================================================================== */
+.home-page .doc { max-width: 860px; margin: 0 auto; padding: 64px 24px 96px; }
+
+.home-page .doc-hero { text-align: center; margin-bottom: 36px; }
+.home-page .doc-hero__title {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(34px, 5.2vw, 56px);
+  line-height: 1.03;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  color: var(--fg);
+}
+.home-page .doc-hero__title em { font-style: italic; color: var(--accent); }
+.home-page .doc-hero__lede {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(16px, 1.9vw, 20px);
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 680px;
+  margin: 20px auto 0;
+}
+.home-page .doc-hero__meta {
+  margin-top: 14px;
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--subtle);
+}
+
+.home-page .prose-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.035), transparent 55%), var(--card-bg);
+  border: 1px solid var(--rule);
+  border-radius: 18px;
+  padding: clamp(24px, 4.2vw, 44px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.38), 0 2px 6px rgba(0,0,0,0.22);
+}
+.home-page .prose-card > :first-child { margin-top: 0; }
+
+.home-page .prose-card p {
+  font-family: var(--sans);
+  font-size: 15.5px;
+  line-height: 1.72;
+  color: var(--muted);
+  margin-top: 16px;
+}
+.home-page .prose-card p.lead {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(18px, 2.1vw, 21px);
+  line-height: 1.5;
+  color: var(--fg);
+}
+.home-page .prose-card h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.2;
+  color: var(--fg);
+  margin-top: 34px;
+}
+.home-page .prose-card ul { margin-top: 14px; display: flex; flex-direction: column; gap: 11px; }
+.home-page .prose-card li {
+  position: relative;
+  padding-left: 22px;
+  font-family: var(--sans);
+  font-size: 15.5px;
+  line-height: 1.62;
+  color: var(--muted);
+}
+.home-page .prose-card li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.62em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.home-page .prose-card a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(91,163,245,0.45);
+}
+.home-page .prose-card a:hover { border-bottom-color: var(--accent); }
+
+@media (max-width: 760px) {
+  .home-page .doc { padding: 40px 18px 64px; }
+}

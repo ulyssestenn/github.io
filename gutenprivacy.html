@@ -6,17 +6,26 @@
   <title>Guten — Privacy — Ulix</title>
   <meta name="description" content="How Guten handles your data: local-first reading, minimal diagnostics, no ads, no behavioral tracking." />
   <link rel="canonical" href="https://ulix.app/gutenprivacy.html" />
-  <meta name="theme-color" content="#00142F" />
+  <meta name="theme-color" content="#0F0E0C" />
   <link rel="icon" href="./icons/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="./icons/favicon.png" />
   <link rel="stylesheet" href="./assets/ulix.css" />
+
+  <!-- Fonts: Geist (self-hosted) + Newsreader (display serif). Matches the homepage. -->
+  <link rel="preload" as="font" type="font/woff2" href="./assets/fonts/geist-latin.woff2" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+  <!-- Shared warm-dark editorial design system (same as the homepage) -->
+  <link rel="stylesheet" href="./assets/home.css" />
 </head>
 
-<body>
+<body class="home-page">
   <a href="#main" class="skip-link">Skip to content</a>
 
+  <!-- Header (shared site chrome) -->
   <header class="site-header">
-    <div class="container site-header__inner">
+    <div class="container container--wide site-header__inner">
       <a href="./index.html" class="site-brand">
         <img src="./icons/favicon.png" alt="" class="site-brand__logo" />
         <span class="site-brand__name">ULIX</span>
@@ -36,11 +45,12 @@
             <line x1="4" y1="17" x2="20" y2="17"/>
           </svg>
         </button>
-        <a href="./apps.html" class="btn btn--primary btn--header">Explore Apps</a>
+        <a href="./apps.html" class="btn btn--primary btn--header">Browse all apps →</a>
       </div>
     </div>
   </header>
 
+  <!-- Mobile drawer -->
   <div id="u-mobile" class="drawer" role="dialog" aria-modal="true" aria-label="Menu" hidden>
     <div class="drawer__backdrop" data-close></div>
     <div class="drawer__panel">
@@ -63,66 +73,54 @@
   </div>
 
   <main id="main">
-    <section class="section section--lg section--bg">
-      <div class="container">
-        <h1 style="font-size:1.875rem;font-weight:600;color:var(--ulix-primary)">Guten — Privacy Policy</h1>
-        <div class="meta-date">Last updated: April 7, 2026</div>
-
-        <div class="card" style="margin-top:1.5rem">
-          <p class="card__text card__text--base">Guten is a reading app for public-domain books, designed to minimize data collection and keep your reading data under your control.</p>
-
-          <h2 class="card__title" style="margin-top:1.25rem">What Guten uses the internet for</h2>
-          <p class="card__text card__text--base" style="margin-top:0.5rem">Guten uses network access to fetch book listings, metadata, and downloadable book files from third-party public-domain sources, including Gutendex and Project Gutenberg.</p>
-
-          <h2 class="card__title" style="margin-top:1.25rem">What Guten does not do</h2>
-          <ul class="prose" style="margin-top:0.5rem">
-            <li>No ads</li>
-            <li>No sale of personal data</li>
-            <li>No account required to read books</li>
-          </ul>
-
-          <h2 class="card__title" style="margin-top:1.25rem">Crash and reliability diagnostics (Sentry)</h2>
-          <p class="card__text card__text--base" style="margin-top:0.5rem">Guten uses Sentry only to help detect, investigate, and fix crashes or other stability issues so the app stays reliable.</p>
-          <p class="card__text card__text--base" style="margin-top:0.5rem">Diagnostics typically include technical details such as app version, operating system version, device model, stack traces, and event timestamps.</p>
-          <p class="card__text card__text--base" style="margin-top:0.5rem">Guten’s crash diagnostics are configured to exclude your book library contents and highlights/notes text.</p>
-          <p class="card__text card__text--base" style="margin-top:0.5rem">As part of standard internet request handling, Sentry may process technical identifiers such as IP address. See the <a class="underline-accent" href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">Sentry Privacy Policy</a> for more detail.</p>
-
-          <h2 class="card__title" style="margin-top:1.25rem">Data stored on your device</h2>
-          <p class="card__text card__text--base" style="margin-top:0.5rem">Your downloaded books and reading data (such as bookmarks, highlights, notes, and reading progress) are stored locally on your device.</p>
-
-          <h2 class="card__title" style="margin-top:1.25rem">When data may leave your device</h2>
-          <p class="card__text card__text--base" style="margin-top:0.5rem">Data leaves your device only when you take an explicit action, such as:</p>
-          <ul class="prose" style="margin-top:0.5rem">
-            <li>opening external links,</li>
-            <li>sharing content through the system share menu, or</li>
-            <li>exporting/backing up your data.</li>
-          </ul>
-
-          <h2 class="card__title" style="margin-top:1.25rem">Your controls</h2>
-          <p class="card__text card__text--base" style="margin-top:0.5rem">Guten does not use diagnostics for advertising, cross-app profiling, or behavioral marketing. Diagnostic data is limited to reliability and crash troubleshooting.</p>
-
-          <h2 class="card__title" style="margin-top:1.25rem">Third-party services</h2>
-          <p class="card__text card__text--base" style="margin-top:0.5rem">Guten uses the following third-party services: Gutendex and Project Gutenberg (for catalog and book content), Sentry (for crash and reliability diagnostics), and Google Play Billing (for optional premium purchases). These services may receive standard technical request data (such as IP address and request headers) as part of normal internet communication. Their privacy policies apply to that processing.</p>
-
-          <h2 class="card__title" style="margin-top:1.25rem">Premium features</h2>
-          <p class="card__text card__text--base" style="margin-top:0.5rem">Guten offers optional premium features (such as text-to-speech, note export, and collections) available as a one-time in-app purchase. Purchases and purchase verification are handled entirely by Google Play Billing. Guten never sees your payment details. When you buy or restore a purchase, Google Play confirms your purchase status to the app; that confirmation is then stored locally on your device. Google's handling of your payment information and purchase history is governed by the Google Play privacy policy.</p>
-
-          <h2 class="card__title" style="margin-top:1.25rem">External websites</h2>
-          <p class="card__text card__text--base" style="margin-top:0.5rem">If you open links to third-party websites, those sites operate under their own privacy policies, independent of Guten.</p>
-        </div>
+    <div class="doc">
+      <div class="doc-hero">
+        <h1 class="doc-hero__title">Guten — Privacy Policy</h1>
+        <div class="doc-hero__meta">Last updated: April 7, 2026</div>
       </div>
-    </section>
+      <div class="prose-card">
+        <p class="lead">Guten is a reading app for public-domain books, designed to minimize data collection and keep your reading data under your control.</p>
+        <h2>What Guten uses the internet for</h2>
+        <p>Guten uses network access to fetch book listings, metadata, and downloadable book files from third-party public-domain sources, including Gutendex and Project Gutenberg.</p>
+        <h2>What Guten does not do</h2>
+        <ul>
+          <li>No ads</li>
+          <li>No sale of personal data</li>
+          <li>No account required to read books</li>
+        </ul>
+        <h2>Crash and reliability diagnostics (Sentry)</h2>
+        <p>Guten uses Sentry only to help detect, investigate, and fix crashes or other stability issues so the app stays reliable.</p>
+        <p>Diagnostics typically include technical details such as app version, operating system version, device model, stack traces, and event timestamps.</p>
+        <p>Guten’s crash diagnostics are configured to exclude your book library contents and highlights/notes text.</p>
+        <p>As part of standard internet request handling, Sentry may process technical identifiers such as IP address. See the <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">Sentry Privacy Policy</a> for more detail.</p>
+        <h2>Data stored on your device</h2>
+        <p>Your downloaded books and reading data (such as bookmarks, highlights, notes, and reading progress) are stored locally on your device.</p>
+        <h2>When data may leave your device</h2>
+        <p>Data leaves your device only when you take an explicit action, such as:</p>
+        <ul>
+          <li>opening external links,</li>
+          <li>sharing content through the system share menu, or</li>
+          <li>exporting/backing up your data.</li>
+        </ul>
+        <h2>Your controls</h2>
+        <p>Guten does not use diagnostics for advertising, cross-app profiling, or behavioral marketing. Diagnostic data is limited to reliability and crash troubleshooting.</p>
+        <h2>Third-party services</h2>
+        <p>Guten uses the following third-party services: Gutendex and Project Gutenberg (for catalog and book content), Sentry (for crash and reliability diagnostics), and Google Play Billing (for optional premium purchases). These services may receive standard technical request data (such as IP address and request headers) as part of normal internet communication. Their privacy policies apply to that processing.</p>
+        <h2>Premium features</h2>
+        <p>Guten offers optional premium features (such as text-to-speech, note export, and collections) available as a one-time in-app purchase. Purchases and purchase verification are handled entirely by Google Play Billing. Guten never sees your payment details. When you buy or restore a purchase, Google Play confirms your purchase status to the app; that confirmation is then stored locally on your device. Google's handling of your payment information and purchase history is governed by the Google Play privacy policy.</p>
+        <h2>External websites</h2>
+        <p>If you open links to third-party websites, those sites operate under their own privacy policies, independent of Guten.</p>
+      </div>
+    </div>
   </main>
 
+  <!-- Footer (shared site chrome) -->
   <footer class="site-footer">
     <div class="container">
+      <p class="footer-credo">Find the <b>book</b> <span class="sep">·</span> Save the <b>passage</b> <span class="sep">·</span> Read the <b>classic</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p>
       <div class="site-footer__grid">
         <div class="site-footer__brand">
-          <img src="./icons/favicon.png" alt="" width="32" height="32" style="border-radius:0.5rem" />
-          <div>
-            <div class="site-footer__brand-name">ULIX</div>
-            <p class="site-footer__tag">Precision tools for modern odysseys.</p>
-          </div>
+          <img src="./icons/ulixwordmarkclear.png" alt="Ulix — Precision tools for modern odysseys" class="footer-wordmark" />
         </div>
         <div class="site-footer__links">
           <a href="./apps.html">Apps</a>
@@ -141,7 +139,7 @@
               <button class="btn btn--secondary">Subscribe</button>
             </div>
           </form>
-          <div class="site-footer__copyright">© 2025 Ulix LLC. All rights reserved.</div>
+          <div class="site-footer__copyright">© 2026 Ulix LLC. All rights reserved.</div>
         </div>
       </div>
     </div>
