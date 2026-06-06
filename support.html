@@ -6,7 +6,7 @@
   <title>Support — Ulix</title>
   <meta name="description" content="Get help with a Ulix app. Tell us what’s happening and we’ll get back to you." />
   <link rel="canonical" href="https://ulix.app/support.html" />
-  <meta name="theme-color" content="#00142F" />
+  <meta name="theme-color" content="#0F0E0C" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ulix" />
@@ -22,13 +22,22 @@
   <link rel="icon" href="./icons/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="./icons/favicon.png" />
   <link rel="stylesheet" href="./assets/ulix.css" />
+
+  <!-- Fonts: Geist (self-hosted) + Newsreader (display serif). Matches the homepage. -->
+  <link rel="preload" as="font" type="font/woff2" href="./assets/fonts/geist-latin.woff2" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+  <!-- Shared warm-dark editorial design system (same as the homepage) -->
+  <link rel="stylesheet" href="./assets/home.css" />
 </head>
 
-<body>
+<body class="home-page">
   <a href="#main" class="skip-link">Skip to content</a>
 
+  <!-- Header (shared site chrome) -->
   <header class="site-header">
-    <div class="container site-header__inner">
+    <div class="container container--wide site-header__inner">
       <a href="./index.html" class="site-brand">
         <img src="./icons/favicon.png" alt="" class="site-brand__logo" />
         <span class="site-brand__name">ULIX</span>
@@ -48,11 +57,12 @@
             <line x1="4" y1="17" x2="20" y2="17"/>
           </svg>
         </button>
-        <a href="./apps.html" class="btn btn--primary btn--header">Explore Apps</a>
+        <a href="./apps.html" class="btn btn--primary btn--header">Browse all apps →</a>
       </div>
     </div>
   </header>
 
+  <!-- Mobile drawer -->
   <div id="u-mobile" class="drawer" role="dialog" aria-modal="true" aria-label="Menu" hidden>
     <div class="drawer__backdrop" data-close></div>
     <div class="drawer__panel">
@@ -75,73 +85,68 @@
   </div>
 
   <main id="main">
-    <section class="section section--bg">
-      <div class="container">
-        <h1 style="font-size:1.875rem;font-weight:600;color:var(--ulix-primary)">Support</h1>
-        <div class="card" style="margin-top:1.5rem">
-          <p class="card__text card__text--base" style="margin-top:0;margin-bottom:1rem">
-            Use this form to reach Ulix support. We’ll get back to you at the email address you provide.
-          </p>
-
-          <form class="form" action="https://formsubmit.co/support@ulix.app" method="POST" novalidate>
-
-            <div class="form-field">
-              <label class="form-label" for="name">Name</label>
-              <input id="name" name="name" class="form-input" placeholder="Jane Doe" autocomplete="name" required />
-            </div>
-
-            <div class="form-field">
-              <label class="form-label" for="email">Email</label>
-              <input id="email" name="email" type="email" class="form-input" placeholder="you@example.com" autocomplete="email" required />
-            </div>
-
-            <input type="text" id="website" name="website" autocomplete="off" tabindex="-1" aria-hidden="true" class="honeypot" />
-            <input type="text" name="_honey" autocomplete="off" tabindex="-1" aria-hidden="true" class="honeypot" />
-
-            <div class="form-field">
-              <label class="form-label" for="app">Which app?</label>
-              <select id="app" name="app" class="form-select">
-                <option>General</option>
-                <option>Shelf Scan</option>
-                <option>Keep Clip</option>
-                <option>Guten</option>
-                <option>Loan It</option>
-                <option>Track Analysis</option>
-                <option>Curious Air</option>
-              </select>
-            </div>
-
-            <div class="form-field">
-              <label class="form-label" for="issue">Describe the issue</label>
-              <textarea id="issue" name="issue" rows="6" class="form-textarea" placeholder="What happened? Steps to reproduce? Device/OS version?" required></textarea>
-            </div>
-
-            <input type="hidden" name="_subject" value="Ulix Support Request" />
-            <input type="hidden" name="_next" value="https://ulix.app/thanks.html" />
-
-            <div>
-              <button class="btn btn--primary" type="submit">Send</button>
-            </div>
-
-            <div class="form-note">
-              We don’t accept unsolicited ideas or proposals. By sending feedback, you agree to our
-              <a class="underline-accent" href="./terms.html">Terms of Service</a>.
-            </div>
-          </form>
-        </div>
+    <div class="doc">
+      <div class="doc-hero">
+        <h1 class="doc-hero__title">Support</h1>
       </div>
-    </section>
+      <div class="prose-card">
+        <p class="lead">Use this form to reach Ulix support. We’ll get back to you at the email address you provide.</p>
+        <form class="form" action="https://formsubmit.co/support@ulix.app" method="POST" novalidate>
+
+          <div class="form-field">
+            <label class="form-label" for="name">Name</label>
+            <input id="name" name="name" class="form-input" placeholder="Jane Doe" autocomplete="name" required />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="email">Email</label>
+            <input id="email" name="email" type="email" class="form-input" placeholder="you@example.com" autocomplete="email" required />
+          </div>
+
+          <input type="text" id="website" name="website" autocomplete="off" tabindex="-1" aria-hidden="true" class="honeypot" />
+          <input type="text" name="_honey" autocomplete="off" tabindex="-1" aria-hidden="true" class="honeypot" />
+
+          <div class="form-field">
+            <label class="form-label" for="app">Which app?</label>
+            <select id="app" name="app" class="form-select">
+              <option>General</option>
+              <option>Shelf Scan</option>
+              <option>Keep Clip</option>
+              <option>Guten</option>
+              <option>Loan It</option>
+              <option>Track Analysis</option>
+              <option>Curious Air</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="issue">Describe the issue</label>
+            <textarea id="issue" name="issue" rows="6" class="form-textarea" placeholder="What happened? Steps to reproduce? Device/OS version?" required></textarea>
+          </div>
+
+          <input type="hidden" name="_subject" value="Ulix Support Request" />
+          <input type="hidden" name="_next" value="https://ulix.app/thanks.html" />
+
+          <div>
+            <button class="btn btn--primary" type="submit">Send</button>
+          </div>
+
+          <div class="form-note">
+            We don’t accept unsolicited ideas or proposals. By sending feedback, you agree to our
+            <a href="./terms.html">Terms of Service</a>.
+          </div>
+        </form>
+      </div>
+    </div>
   </main>
 
+  <!-- Footer (shared site chrome) -->
   <footer class="site-footer">
     <div class="container">
+      <p class="footer-credo">Find the <b>book</b> <span class="sep">·</span> Save the <b>passage</b> <span class="sep">·</span> Read the <b>classic</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p>
       <div class="site-footer__grid">
         <div class="site-footer__brand">
-          <img src="./icons/favicon.png" alt="" width="32" height="32" style="border-radius:0.5rem" />
-          <div>
-            <div class="site-footer__brand-name">ULIX</div>
-            <p class="site-footer__tag">Precision tools for modern odysseys.</p>
-          </div>
+          <img src="./icons/ulixwordmarkclear.png" alt="Ulix — Precision tools for modern odysseys" class="footer-wordmark" />
         </div>
         <div class="site-footer__links">
           <a href="./apps.html">Apps</a>
@@ -160,7 +165,7 @@
               <button class="btn btn--secondary">Subscribe</button>
             </div>
           </form>
-          <div class="site-footer__copyright">© 2025 Ulix LLC. All rights reserved.</div>
+          <div class="site-footer__copyright">© 2026 Ulix LLC. All rights reserved.</div>
         </div>
       </div>
     </div>
