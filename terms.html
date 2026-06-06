@@ -6,7 +6,7 @@
   <title>Terms of Service — Ulix</title>
   <meta name="description" content="Ulix Terms of Service: license, purchases, privacy, liability, and contact information." />
   <link rel="canonical" href="https://ulix.app/terms.html" />
-  <meta name="theme-color" content="#00142F" />
+  <meta name="theme-color" content="#0F0E0C" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ulix" />
@@ -22,13 +22,22 @@
   <link rel="icon" href="./icons/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="./icons/favicon.png" />
   <link rel="stylesheet" href="./assets/ulix.css" />
+
+  <!-- Fonts: Geist (self-hosted) + Newsreader (display serif). Matches the homepage. -->
+  <link rel="preload" as="font" type="font/woff2" href="./assets/fonts/geist-latin.woff2" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+  <!-- Shared warm-dark editorial design system (same as the homepage) -->
+  <link rel="stylesheet" href="./assets/home.css" />
 </head>
 
-<body>
+<body class="home-page">
   <a href="#main" class="skip-link">Skip to content</a>
 
+  <!-- Header (shared site chrome) -->
   <header class="site-header">
-    <div class="container site-header__inner">
+    <div class="container container--wide site-header__inner">
       <a href="./index.html" class="site-brand">
         <img src="./icons/favicon.png" alt="" class="site-brand__logo" />
         <span class="site-brand__name">ULIX</span>
@@ -48,11 +57,12 @@
             <line x1="4" y1="17" x2="20" y2="17"/>
           </svg>
         </button>
-        <a href="./apps.html" class="btn btn--primary btn--header">Explore Apps</a>
+        <a href="./apps.html" class="btn btn--primary btn--header">Browse all apps →</a>
       </div>
     </div>
   </header>
 
+  <!-- Mobile drawer -->
   <div id="u-mobile" class="drawer" role="dialog" aria-modal="true" aria-label="Menu" hidden>
     <div class="drawer__backdrop" data-close></div>
     <div class="drawer__panel">
@@ -75,119 +85,67 @@
   </div>
 
   <main id="main">
-    <section class="section section--lg">
-      <div class="container">
-        <h1 style="font-size:1.875rem;font-weight:600;color:var(--ulix-primary)">Terms of Service</h1>
-        <div class="meta-date">Last updated: 2025-08-16</div>
-
-        <div class="stack" style="margin-top:1.5rem">
-
-          <div class="card">
-            <h2 class="card__title">Plain-English summary</h2>
-            <ul class="prose" style="margin-top:0.5rem">
-              <li>You can use Ulix apps under a personal, non-transferable license.</li>
-              <li>Purchases and refunds are handled by the app store (e.g., Google Play).</li>
-              <li>We own the Ulix site/app content and trademarks; all rights reserved.</li>
-              <li>We don’t accept unsolicited ideas; if you send them, we may use similar ideas.</li>
-              <li>We provide the software "as is"; our liability is limited.</li>
-              <li>We respect privacy; see the Privacy Policy for details.</li>
-              <li>Arkansas law applies; venue is Washington County (Springdale), USA.</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3 class="card__title">Acceptance of Terms</h3>
-            <p class="card__text">These Terms are an agreement between you and Ulix LLC ("Ulix"). By accessing the website or using any Ulix application (the "Services"), you agree to these Terms. If you do not agree, do not use the Services. We may update these Terms prospectively; changes are indicated by the date above.</p>
-          </div>
-
-          <div class="card">
-            <h3 class="card__title">Eligibility</h3>
-            <p class="card__text">You must be able to form a binding contract in your jurisdiction. The Services are intended for personal use. Where applicable, you are responsible for compliance with local laws.</p>
-          </div>
-
-          <div class="card">
-            <h3 class="card__title">License and Acceptable Use</h3>
-            <p class="card__text">Subject to these Terms, Ulix grants you a limited, non-exclusive, non-transferable, revocable license to install and use our apps for personal, non-commercial purposes. You agree not to: (a) reverse engineer except as permitted by law; (b) sell or sublicense the Services; (c) access the Services to build a competing product; (d) disrupt or interfere with the Services; or (e) use the Services for unlawful purposes.</p>
-          </div>
-
-          <div class="card">
-            <h3 class="card__title">Purchases and Refunds</h3>
-            <p class="card__text">If you purchase an Ulix app through a platform (e.g., Google Play), the platform’s terms govern billing, taxes, and refunds. Please refer to the store’s policies for refund eligibility and timelines. If you have an issue, please use our <a href="support.html" class="underline-accent">Support form</a>. You can also <button class="underline-accent" style="background:none;border:0;padding:0;color:inherit" data-reveal-email>reveal our support email</button>.</p>
-          </div>
-
-          <div class="card">
-            <h3 class="card__title">User Content</h3>
-            <p class="card__text">Ulix does not host accounts for most apps and aims for local-first processing. If you submit content to us (e.g., via support email), you retain ownership of your content. You grant Ulix a limited license to use that content solely to provide support and operate or improve the Services.</p>
-          </div>
-
-          <div class="card">
-            <h3 class="card__title">Intellectual Property</h3>
-            <p class="card__text">All rights, title, and interest in and to the Services—including software, text, graphics, UI, and design—are owned by Ulix or its licensors and are protected by copyright, trademark, and other laws. "ULIX" and related logos are trademarks of Ulix LLC. Third-party names and marks are the property of their respective owners.</p>
-          </div>
-
-          <div class="card">
-            <h3 class="card__title">Feedback and Unsolicited Ideas</h3>
-            <p class="card__text">Ulix does not accept or consider unsolicited ideas or proposals. If you nevertheless send any, you agree they are non-confidential and non-proprietary, we have no obligation to review or compensate you, and Ulix may already be developing similar products or features.</p>
-          </div>
-
-          <div class="card">
-            <h3 class="card__title">Privacy</h3>
-            <p class="card__text">Your privacy matters. Our apps are designed to minimize data collection and favor on-device processing. Please review our Privacy Policy for details on what we collect (if anything) and why.</p>
-          </div>
-
-          <div class="card">
-            <h3 class="card__title">Third-Party Services and Links</h3>
-            <p class="card__text">The Services may reference third-party sites, stores, libraries, or services. Ulix is not responsible for third-party content, policies, or practices. Your use of third-party services is governed by their terms and policies.</p>
-          </div>
-
-          <div class="card">
-            <h3 class="card__title">Disclaimers</h3>
-            <p class="card__text">TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. Ulix does not warrant that the Services will be uninterrupted, secure, or error-free.</p>
-          </div>
-
-          <div class="card">
-            <h3 class="card__title">Limitation of Liability</h3>
-            <p class="card__text">TO THE MAXIMUM EXTENT PERMITTED BY LAW, ULIX AND ITS AFFILIATES, OFFICERS, EMPLOYEES, AGENTS, AND PARTNERS WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, DATA, OR GOODWILL, ARISING OUT OF OR RELATED TO YOUR USE OF THE SERVICES. ULIX’S TOTAL LIABILITY FOR ANY CLAIMS RELATING TO THE SERVICES IS LIMITED TO THE AMOUNTS YOU PAID (IF ANY) FOR THE APPLICABLE APP IN THE TWELVE (12) MONTHS BEFORE THE EVENT GIVING RISE TO LIABILITY.</p>
-          </div>
-
-          <div class="card">
-            <h3 class="card__title">Indemnification</h3>
-            <p class="card__text">You agree to defend, indemnify, and hold harmless Ulix from and against any claims, liabilities, damages, losses, and expenses (including reasonable attorneys’ fees) arising out of or related to (a) your use of the Services; (b) your violation of these Terms; or (c) your violation of any rights of another person or entity.</p>
-          </div>
-
-          <div class="card">
-            <h3 class="card__title">Governing Law and Venue</h3>
-            <p class="card__text">These Terms are governed by the laws of the State of Arkansas, U.S.A., without regard to conflict-of-laws principles. You and Ulix agree to the exclusive jurisdiction and venue of the state and federal courts located in Washington County, Arkansas (Springdale).</p>
-          </div>
-
-          <div class="card">
-            <h3 class="card__title">Miscellaneous</h3>
-            <p class="card__text">If any provision of these Terms is found unenforceable, it will be enforced to the maximum extent permissible and the remaining provisions will remain in full force. These Terms constitute the entire agreement between you and Ulix regarding the Services. We may assign these Terms; you may not assign them without our consent. Headings are for convenience only.</p>
-          </div>
-
-          <div class="card">
-            <h3 class="card__title">Contact</h3>
-            <div class="card__text">
-              <div>Mailing address: <button class="underline-accent" style="background:none;border:0;padding:0;color:inherit" data-reveal-address>Reveal mailing address</button></div>
-              <div style="margin-top:0.25rem">Email: <button class="underline-accent" style="background:none;border:0;padding:0;color:inherit" data-reveal-email>Reveal email</button></div>
-              <div style="margin-top:0.5rem"><a href="support.html" class="underline-accent">Open Support form →</a></div>
-            </div>
-          </div>
-
+    <div class="doc">
+      <div class="doc-hero">
+        <h1 class="doc-hero__title">Terms of Service</h1>
+        <div class="doc-hero__meta">Last updated: 2025-08-16</div>
+      </div>
+      <div class="prose-card">
+        <h2>Plain-English summary</h2>
+        <ul>
+          <li>You can use Ulix apps under a personal, non-transferable license.</li>
+          <li>Purchases and refunds are handled by the app store (e.g., Google Play).</li>
+          <li>We own the Ulix site/app content and trademarks; all rights reserved.</li>
+          <li>We don’t accept unsolicited ideas; if you send them, we may use similar ideas.</li>
+          <li>We provide the software "as is"; our liability is limited.</li>
+          <li>We respect privacy; see the Privacy Policy for details.</li>
+          <li>Arkansas law applies; venue is Washington County (Springdale), USA.</li>
+        </ul>
+        <h2>Acceptance of Terms</h2>
+        <p>These Terms are an agreement between you and Ulix LLC ("Ulix"). By accessing the website or using any Ulix application (the "Services"), you agree to these Terms. If you do not agree, do not use the Services. We may update these Terms prospectively; changes are indicated by the date above.</p>
+        <h2>Eligibility</h2>
+        <p>You must be able to form a binding contract in your jurisdiction. The Services are intended for personal use. Where applicable, you are responsible for compliance with local laws.</p>
+        <h2>License and Acceptable Use</h2>
+        <p>Subject to these Terms, Ulix grants you a limited, non-exclusive, non-transferable, revocable license to install and use our apps for personal, non-commercial purposes. You agree not to: (a) reverse engineer except as permitted by law; (b) sell or sublicense the Services; (c) access the Services to build a competing product; (d) disrupt or interfere with the Services; or (e) use the Services for unlawful purposes.</p>
+        <h2>Purchases and Refunds</h2>
+        <p>If you purchase an Ulix app through a platform (e.g., Google Play), the platform’s terms govern billing, taxes, and refunds. Please refer to the store’s policies for refund eligibility and timelines. If you have an issue, please use our <a href="support.html">Support form</a>. You can also <button style="background:none;border:0;padding:0;color:var(--accent);font:inherit;cursor:pointer;text-decoration:underline" data-reveal-email>reveal our support email</button>.</p>
+        <h2>User Content</h2>
+        <p>Ulix does not host accounts for most apps and aims for local-first processing. If you submit content to us (e.g., via support email), you retain ownership of your content. You grant Ulix a limited license to use that content solely to provide support and operate or improve the Services.</p>
+        <h2>Intellectual Property</h2>
+        <p>All rights, title, and interest in and to the Services—including software, text, graphics, UI, and design—are owned by Ulix or its licensors and are protected by copyright, trademark, and other laws. "ULIX" and related logos are trademarks of Ulix LLC. Third-party names and marks are the property of their respective owners.</p>
+        <h2>Feedback and Unsolicited Ideas</h2>
+        <p>Ulix does not accept or consider unsolicited ideas or proposals. If you nevertheless send any, you agree they are non-confidential and non-proprietary, we have no obligation to review or compensate you, and Ulix may already be developing similar products or features.</p>
+        <h2>Privacy</h2>
+        <p>Your privacy matters. Our apps are designed to minimize data collection and favor on-device processing. Please review our Privacy Policy for details on what we collect (if anything) and why.</p>
+        <h2>Third-Party Services and Links</h2>
+        <p>The Services may reference third-party sites, stores, libraries, or services. Ulix is not responsible for third-party content, policies, or practices. Your use of third-party services is governed by their terms and policies.</p>
+        <h2>Disclaimers</h2>
+        <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. Ulix does not warrant that the Services will be uninterrupted, secure, or error-free.</p>
+        <h2>Limitation of Liability</h2>
+        <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, ULIX AND ITS AFFILIATES, OFFICERS, EMPLOYEES, AGENTS, AND PARTNERS WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, DATA, OR GOODWILL, ARISING OUT OF OR RELATED TO YOUR USE OF THE SERVICES. ULIX’S TOTAL LIABILITY FOR ANY CLAIMS RELATING TO THE SERVICES IS LIMITED TO THE AMOUNTS YOU PAID (IF ANY) FOR THE APPLICABLE APP IN THE TWELVE (12) MONTHS BEFORE THE EVENT GIVING RISE TO LIABILITY.</p>
+        <h2>Indemnification</h2>
+        <p>You agree to defend, indemnify, and hold harmless Ulix from and against any claims, liabilities, damages, losses, and expenses (including reasonable attorneys’ fees) arising out of or related to (a) your use of the Services; (b) your violation of these Terms; or (c) your violation of any rights of another person or entity.</p>
+        <h2>Governing Law and Venue</h2>
+        <p>These Terms are governed by the laws of the State of Arkansas, U.S.A., without regard to conflict-of-laws principles. You and Ulix agree to the exclusive jurisdiction and venue of the state and federal courts located in Washington County, Arkansas (Springdale).</p>
+        <h2>Miscellaneous</h2>
+        <p>If any provision of these Terms is found unenforceable, it will be enforced to the maximum extent permissible and the remaining provisions will remain in full force. These Terms constitute the entire agreement between you and Ulix regarding the Services. We may assign these Terms; you may not assign them without our consent. Headings are for convenience only.</p>
+        <h2>Contact</h2>
+        <div class="reveal-list">
+          <div>Mailing address: <button style="background:none;border:0;padding:0;color:var(--accent);font:inherit;cursor:pointer;text-decoration:underline" data-reveal-address>Reveal mailing address</button></div>
+              <div style="margin-top:0.25rem">Email: <button style="background:none;border:0;padding:0;color:var(--accent);font:inherit;cursor:pointer;text-decoration:underline" data-reveal-email>Reveal email</button></div>
+              <div style="margin-top:0.5rem"><a href="support.html">Open Support form →</a></div>
         </div>
       </div>
-    </section>
+    </div>
   </main>
 
+  <!-- Footer (shared site chrome) -->
   <footer class="site-footer">
     <div class="container">
+      <p class="footer-credo">Find the <b>book</b> <span class="sep">·</span> Save the <b>passage</b> <span class="sep">·</span> Read the <b>classic</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p>
       <div class="site-footer__grid">
         <div class="site-footer__brand">
-          <img src="./icons/favicon.png" alt="" width="32" height="32" style="border-radius:0.5rem" />
-          <div>
-            <div class="site-footer__brand-name">ULIX</div>
-            <p class="site-footer__tag">Precision tools for modern odysseys.</p>
-          </div>
+          <img src="./icons/ulixwordmarkclear.png" alt="Ulix — Precision tools for modern odysseys" class="footer-wordmark" />
         </div>
         <div class="site-footer__links">
           <a href="./apps.html">Apps</a>
@@ -206,7 +164,7 @@
               <button class="btn btn--secondary">Subscribe</button>
             </div>
           </form>
-          <div class="site-footer__copyright">© 2025 Ulix LLC. All rights reserved.</div>
+          <div class="site-footer__copyright">© 2026 Ulix LLC. All rights reserved.</div>
         </div>
       </div>
     </div>

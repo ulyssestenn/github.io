@@ -6,7 +6,7 @@
   <title>About — Ulix</title>
   <meta name="description" content="Why Ulix: privacy-first design, focused tools, built on products not data." />
   <link rel="canonical" href="https://ulix.app/about.html" />
-  <meta name="theme-color" content="#00142F" />
+  <meta name="theme-color" content="#0F0E0C" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ulix" />
@@ -22,13 +22,22 @@
   <link rel="icon" href="./icons/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="./icons/favicon.png" />
   <link rel="stylesheet" href="./assets/ulix.css" />
+
+  <!-- Fonts: Geist (self-hosted) + Newsreader (display serif). Matches the homepage. -->
+  <link rel="preload" as="font" type="font/woff2" href="./assets/fonts/geist-latin.woff2" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+  <!-- Shared warm-dark editorial design system (same as the homepage) -->
+  <link rel="stylesheet" href="./assets/home.css" />
 </head>
 
-<body>
+<body class="home-page">
   <a href="#main" class="skip-link">Skip to content</a>
 
+  <!-- Header (shared site chrome) -->
   <header class="site-header">
-    <div class="container site-header__inner">
+    <div class="container container--wide site-header__inner">
       <a href="./index.html" class="site-brand">
         <img src="./icons/favicon.png" alt="" class="site-brand__logo" />
         <span class="site-brand__name">ULIX</span>
@@ -37,7 +46,7 @@
         <a href="./index.html" class="site-nav__link">Home</a>
         <a href="./apps.html" class="site-nav__link">Apps</a>
         <a href="./blog.html" class="site-nav__link">Blog</a>
-        <a href="./about.html" class="site-nav__link" aria-current="page">About</a>
+        <a href="./about.html" class="site-nav__link">About</a>
         <a href="./contact.html" class="site-nav__link">Contact</a>
       </nav>
       <div class="site-header__actions">
@@ -48,11 +57,12 @@
             <line x1="4" y1="17" x2="20" y2="17"/>
           </svg>
         </button>
-        <a href="./apps.html" class="btn btn--primary btn--header">Explore Apps</a>
+        <a href="./apps.html" class="btn btn--primary btn--header">Browse all apps →</a>
       </div>
     </div>
   </header>
 
+  <!-- Mobile drawer -->
   <div id="u-mobile" class="drawer" role="dialog" aria-modal="true" aria-label="Menu" hidden>
     <div class="drawer__backdrop" data-close></div>
     <div class="drawer__panel">
@@ -75,62 +85,42 @@
   </div>
 
   <main id="main">
-    <section class="page-hero">
-      <div class="container">
-        <h1 class="page-hero__title">About Ulix</h1>
-        <p class="page-hero__subtitle">Precision Tools for Modern Odysseys</p>
+    <div class="doc">
+      <div class="doc-hero">
+        <h1 class="doc-hero__title">About Ulix</h1>
+        <p class="doc-hero__lede">Precision Tools for Modern Odysseys</p>
       </div>
-    </section>
-
-    <section class="section section--bg">
-      <div class="container prose">
-        <div class="stack stack--lg">
-          <div class="card card--lg">
-            <h3 class="card__title card__title--lg">Privacy First</h3>
-            <p class="card__text card__text--base">
-              We believe your data should remain yours. That’s why every Ulix app is built local-first: they run on your device, work offline, and don’t depend on cloud services.
-              We don’t run ads, track behavior, or ask for intrusive permissions. If an account isn’t essential, we don’t require one. Privacy isn’t an extra feature; it’s one of the foundations of what we do.
-            </p>
-          </div>
-
-          <div class="card card--lg">
-            <h3 class="card__title card__title--lg">Curated by Design</h3>
-            <p class="card__text card__text--base">
-              Ulix apps are not generic utilities. They are shaped by our founder’s particular aesthetic vision. If you share that vision, you’ll feel at home.
-              We design for a specific taste: apps that feel good to use, not because they’re flashy, but because they are intuitive, elegant, and intentional.
-            </p>
-          </div>
-
-          <div class="card card--lg">
-            <h3 class="card__title card__title--lg">Focused Tools</h3>
-            <p class="card__text card__text--base">
-              Software should help you get back to your real life, not trap you on a screen. Each Ulix app has a clear purpose and a clean interface.
-              No bloat, no noisy notifications, no attention-grabs. Ulix apps are built to be lightweight companions that extend your abilities and then step aside, so you can focus on what actually matters.
-            </p>
-          </div>
-
-          <div class="card card--lg">
-            <h3 class="card__title card__title--lg">Built on Products, Not Data</h3>
-            <p class="card__text card__text--base">
-              Most modern apps are free because you’re the product. Ulix takes the harder road: we sell our apps, not our customers.
+      <div class="prose-card">
+        <h2>Privacy First</h2>
+        <p>We believe your data should remain yours. That’s why every Ulix app is built local-first: they run on your device, work offline, and don’t depend on cloud services.
+              We don’t run ads, track behavior, or ask for intrusive permissions. If an account isn’t essential, we don’t require one. Privacy isn’t an extra feature; it’s one of the foundations of what we do.</p>
+      </div>
+      <div class="prose-card">
+        <h2>Curated by Design</h2>
+        <p>Ulix apps are not generic utilities. They are shaped by our founder’s particular aesthetic vision. If you share that vision, you’ll feel at home.
+              We design for a specific taste: apps that feel good to use, not because they’re flashy, but because they are intuitive, elegant, and intentional.</p>
+      </div>
+      <div class="prose-card">
+        <h2>Focused Tools</h2>
+        <p>Software should help you get back to your real life, not trap you on a screen. Each Ulix app has a clear purpose and a clean interface.
+              No bloat, no noisy notifications, no attention-grabs. Ulix apps are built to be lightweight companions that extend your abilities and then step aside, so you can focus on what actually matters.</p>
+      </div>
+      <div class="prose-card">
+        <h2>Built on Products, Not Data</h2>
+        <p>Most modern apps are free because you’re the product. Ulix takes the harder road: we sell our apps, not our customers.
               That choice costs us revenue opportunities, but it keeps us aligned with you. Our business model is simple: you pay us for good tools, and we build good tools.
-              No hidden agendas, no monetizing of you.
-            </p>
-          </div>
-        </div>
+              No hidden agendas, no monetizing of you.</p>
       </div>
-    </section>
+    </div>
   </main>
 
+  <!-- Footer (shared site chrome) -->
   <footer class="site-footer">
     <div class="container">
+      <p class="footer-credo">Find the <b>book</b> <span class="sep">·</span> Save the <b>passage</b> <span class="sep">·</span> Read the <b>classic</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p>
       <div class="site-footer__grid">
         <div class="site-footer__brand">
-          <img src="./icons/favicon.png" alt="" width="32" height="32" style="border-radius:0.5rem" />
-          <div>
-            <div class="site-footer__brand-name">ULIX</div>
-            <p class="site-footer__tag">Precision tools for modern odysseys.</p>
-          </div>
+          <img src="./icons/ulixwordmarkclear.png" alt="Ulix — Precision tools for modern odysseys" class="footer-wordmark" />
         </div>
         <div class="site-footer__links">
           <a href="./apps.html">Apps</a>
@@ -149,7 +139,7 @@
               <button class="btn btn--secondary">Subscribe</button>
             </div>
           </form>
-          <div class="site-footer__copyright">© 2025 Ulix LLC. All rights reserved.</div>
+          <div class="site-footer__copyright">© 2026 Ulix LLC. All rights reserved.</div>
         </div>
       </div>
     </div>
