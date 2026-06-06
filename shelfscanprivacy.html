@@ -6,17 +6,26 @@
   <title>Shelf Scan — Privacy — Ulix</title>
   <meta name="description" content="How Shelf Scan handles your data: local only, no accounts, no analytics, no advertising." />
   <link rel="canonical" href="https://ulix.app/shelfscanprivacy.html" />
-  <meta name="theme-color" content="#00142F" />
+  <meta name="theme-color" content="#0F0E0C" />
   <link rel="icon" href="./icons/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="./icons/favicon.png" />
   <link rel="stylesheet" href="./assets/ulix.css" />
+
+  <!-- Fonts: Geist (self-hosted) + Newsreader (display serif). Matches the homepage. -->
+  <link rel="preload" as="font" type="font/woff2" href="./assets/fonts/geist-latin.woff2" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+  <!-- Shared warm-dark editorial design system (same as the homepage) -->
+  <link rel="stylesheet" href="./assets/home.css" />
 </head>
 
-<body>
+<body class="home-page">
   <a href="#main" class="skip-link">Skip to content</a>
 
+  <!-- Header (shared site chrome) -->
   <header class="site-header">
-    <div class="container site-header__inner">
+    <div class="container container--wide site-header__inner">
       <a href="./index.html" class="site-brand">
         <img src="./icons/favicon.png" alt="" class="site-brand__logo" />
         <span class="site-brand__name">ULIX</span>
@@ -36,11 +45,12 @@
             <line x1="4" y1="17" x2="20" y2="17"/>
           </svg>
         </button>
-        <a href="./apps.html" class="btn btn--primary btn--header">Explore Apps</a>
+        <a href="./apps.html" class="btn btn--primary btn--header">Browse all apps →</a>
       </div>
     </div>
   </header>
 
+  <!-- Mobile drawer -->
   <div id="u-mobile" class="drawer" role="dialog" aria-modal="true" aria-label="Menu" hidden>
     <div class="drawer__backdrop" data-close></div>
     <div class="drawer__panel">
@@ -63,34 +73,32 @@
   </div>
 
   <main id="main">
-    <section class="section section--lg section--bg">
-      <div class="container">
-        <h1 style="font-size:1.875rem;font-weight:600;color:var(--ulix-primary)">Shelf Scan — Privacy</h1>
-        <div class="card" style="margin-top:1.5rem">
-          <p class="card__text card__text--base">Shelf Scan is built to help you search your shelves without compromising your privacy. Here's how your data is handled:</p>
-          <ul class="prose" style="margin-top:0.75rem">
-            <li>Captured images and recognized text are saved locally on your device in the app’s private storage.</li>
-            <li>No personal data is collected or transmitted. The app functions entirely offline.</li>
-            <li>There are no analytics, advertising, or third-party integrations.</li>
-            <li>You may choose to export or share your saved library using Android’s standard share features. This is completely optional and controlled by you.</li>
-            <li>The app requests access to your camera (to take photos for OCR) and uses vibration (for haptic feedback when scanning).</li>
-            <li>Your data stays on your device unless you decide to share it. Android's built-in backup system may back up the local database to your Google account, depending on your device settings.</li>
-          </ul>
-          <p class="card__text card__text--base" style="margin-top:0.75rem">Shelf Scan is designed to work powerfully without ever needing an internet connection.</p>
-        </div>
+    <div class="doc">
+      <div class="doc-hero">
+        <h1 class="doc-hero__title">Shelf Scan — Privacy</h1>
       </div>
-    </section>
+      <div class="prose-card">
+        <p class="lead">Shelf Scan is built to help you search your shelves without compromising your privacy. Here's how your data is handled:</p>
+        <ul>
+          <li>Captured images and recognized text are saved locally on your device in the app’s private storage.</li>
+          <li>No personal data is collected or transmitted. The app functions entirely offline.</li>
+          <li>There are no analytics, advertising, or third-party integrations.</li>
+          <li>You may choose to export or share your saved library using Android’s standard share features. This is completely optional and controlled by you.</li>
+          <li>The app requests access to your camera (to take photos for OCR) and uses vibration (for haptic feedback when scanning).</li>
+          <li>Your data stays on your device unless you decide to share it. Android's built-in backup system may back up the local database to your Google account, depending on your device settings.</li>
+        </ul>
+        <p>Shelf Scan is designed to work powerfully without ever needing an internet connection.</p>
+      </div>
+    </div>
   </main>
 
+  <!-- Footer (shared site chrome) -->
   <footer class="site-footer">
     <div class="container">
+      <p class="footer-credo">Find the <b>book</b> <span class="sep">·</span> Save the <b>passage</b> <span class="sep">·</span> Read the <b>classic</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p>
       <div class="site-footer__grid">
         <div class="site-footer__brand">
-          <img src="./icons/favicon.png" alt="" width="32" height="32" style="border-radius:0.5rem" />
-          <div>
-            <div class="site-footer__brand-name">ULIX</div>
-            <p class="site-footer__tag">Precision tools for modern odysseys.</p>
-          </div>
+          <img src="./icons/ulixwordmarkclear.png" alt="Ulix — Precision tools for modern odysseys" class="footer-wordmark" />
         </div>
         <div class="site-footer__links">
           <a href="./apps.html">Apps</a>
@@ -109,7 +117,7 @@
               <button class="btn btn--secondary">Subscribe</button>
             </div>
           </form>
-          <div class="site-footer__copyright">© 2025 Ulix LLC. All rights reserved.</div>
+          <div class="site-footer__copyright">© 2026 Ulix LLC. All rights reserved.</div>
         </div>
       </div>
     </div>

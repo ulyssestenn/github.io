@@ -6,7 +6,7 @@
   <title>Privacy — Ulix</title>
   <meta name="description" content="Ulix privacy overview and links to app-specific policies." />
   <link rel="canonical" href="https://ulix.app/privacy.html" />
-  <meta name="theme-color" content="#00142F" />
+  <meta name="theme-color" content="#0F0E0C" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ulix" />
@@ -22,13 +22,22 @@
   <link rel="icon" href="./icons/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="./icons/favicon.png" />
   <link rel="stylesheet" href="./assets/ulix.css" />
+
+  <!-- Fonts: Geist (self-hosted) + Newsreader (display serif). Matches the homepage. -->
+  <link rel="preload" as="font" type="font/woff2" href="./assets/fonts/geist-latin.woff2" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+  <!-- Shared warm-dark editorial design system (same as the homepage) -->
+  <link rel="stylesheet" href="./assets/home.css" />
 </head>
 
-<body>
+<body class="home-page">
   <a href="#main" class="skip-link">Skip to content</a>
 
+  <!-- Header (shared site chrome) -->
   <header class="site-header">
-    <div class="container site-header__inner">
+    <div class="container container--wide site-header__inner">
       <a href="./index.html" class="site-brand">
         <img src="./icons/favicon.png" alt="" class="site-brand__logo" />
         <span class="site-brand__name">ULIX</span>
@@ -48,11 +57,12 @@
             <line x1="4" y1="17" x2="20" y2="17"/>
           </svg>
         </button>
-        <a href="./apps.html" class="btn btn--primary btn--header">Explore Apps</a>
+        <a href="./apps.html" class="btn btn--primary btn--header">Browse all apps →</a>
       </div>
     </div>
   </header>
 
+  <!-- Mobile drawer -->
   <div id="u-mobile" class="drawer" role="dialog" aria-modal="true" aria-label="Menu" hidden>
     <div class="drawer__backdrop" data-close></div>
     <div class="drawer__panel">
@@ -75,41 +85,32 @@
   </div>
 
   <main id="main">
-    <section class="page-hero">
-      <div class="container">
-        <h1 class="page-hero__title">Privacy at Ulix</h1>
-        <p class="page-hero__subtitle">
-          Ulix is privacy-first. We don’t run ads or sell personal data, and many apps do not require an account.
+    <div class="doc">
+      <div class="doc-hero">
+        <h1 class="doc-hero__title">Privacy at Ulix</h1>
+        <p class="doc-hero__lede">Ulix is privacy-first. We don’t run ads or sell personal data, and many apps do not require an account.
           Some apps may use limited third-party services for core functionality or reliability diagnostics as described in each app-specific policy.
-          For details, see the app-specific policies below.
-        </p>
+          For details, see the app-specific policies below.</p>
       </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="card">
-          <h2 class="card__title card__title--lg">App-Specific Privacy Policies</h2>
-          <ul class="prose" style="margin-top:0.75rem">
-            <li><a class="underline-accent" href="./gutenprivacy.html">Guten Privacy Policy</a></li>
-            <li><a class="underline-accent" href="./shelfscanprivacy.html">Shelf Scan Privacy Policy</a></li>
-            <li><a class="underline-accent" href="./keepclipprivacypolicy.html">Keep Clip Privacy Policy</a></li>
-            <li><a class="underline-accent" href="./trackanalysisprivacy.html">Track Analysis Privacy Policy</a></li>
-          </ul>
-        </div>
+      <div class="prose-card">
+        <h2>App-Specific Privacy Policies</h2>
+        <ul>
+          <li><a href="./gutenprivacy.html">Guten Privacy Policy</a></li>
+          <li><a href="./shelfscanprivacy.html">Shelf Scan Privacy Policy</a></li>
+          <li><a href="./keepclipprivacypolicy.html">Keep Clip Privacy Policy</a></li>
+          <li><a href="./trackanalysisprivacy.html">Track Analysis Privacy Policy</a></li>
+        </ul>
       </div>
-    </section>
+    </div>
   </main>
 
+  <!-- Footer (shared site chrome) -->
   <footer class="site-footer">
     <div class="container">
+      <p class="footer-credo">Find the <b>book</b> <span class="sep">·</span> Save the <b>passage</b> <span class="sep">·</span> Read the <b>classic</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p>
       <div class="site-footer__grid">
         <div class="site-footer__brand">
-          <img src="./icons/favicon.png" alt="" width="32" height="32" style="border-radius:0.5rem" />
-          <div>
-            <div class="site-footer__brand-name">ULIX</div>
-            <p class="site-footer__tag">Precision tools for modern odysseys.</p>
-          </div>
+          <img src="./icons/ulixwordmarkclear.png" alt="Ulix — Precision tools for modern odysseys" class="footer-wordmark" />
         </div>
         <div class="site-footer__links">
           <a href="./apps.html">Apps</a>
@@ -128,7 +129,7 @@
               <button class="btn btn--secondary">Subscribe</button>
             </div>
           </form>
-          <div class="site-footer__copyright">© 2025 Ulix LLC. All rights reserved.</div>
+          <div class="site-footer__copyright">© 2026 Ulix LLC. All rights reserved.</div>
         </div>
       </div>
     </div>
