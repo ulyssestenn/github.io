@@ -40,11 +40,35 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Ulix LLC",
-    "url": "https://ulix.app/",
-    "logo": "https://ulix.app/icons/favicon.png",
-    "sameAs": []
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://ulix.app/#org",
+        "name": "Ulix LLC",
+        "alternateName": "Ulix",
+        "url": "https://ulix.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ulix.app/icons/ulixlogomark.png",
+          "width": 128,
+          "height": 128
+        },
+        "slogan": "Precision tools for modern odysseys",
+        "description": "Ulix LLC builds privacy-first Android apps for readers, collectors, and researchers. No accounts, no ads, no tracking.",
+        "sameAs": [
+          "https://play.google.com/store/apps/developer?id=Ulix+LLC"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://ulix.app/#website",
+        "url": "https://ulix.app/",
+        "name": "Ulix",
+        "description": "Privacy-first Android apps from Ulix LLC. No accounts, no ads, no tracking.",
+        "publisher": { "@id": "https://ulix.app/#org" },
+        "inLanguage": "en-US"
+      }
+    ]
   }
   </script>
 

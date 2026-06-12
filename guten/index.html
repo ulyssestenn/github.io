@@ -49,59 +49,72 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": ["SoftwareApplication", "MobileApplication"],
-  "@id": "https://ulix.app/guten/#app",
-  "name": "Guten",
-  "alternateName": "Guten Ereader",
-  "description": "Guten is a free Android EPUB reader for 70,000+ public-domain books from Project Gutenberg. Search, import, read offline, highlight, annotate, and export notes. No account. No ads.",
-  "url": "https://ulix.app/guten/",
-  "downloadUrl": "https://play.google.com/store/apps/details?id=com.bhunt.guten",
-  "installUrl": "https://play.google.com/store/apps/details?id=com.bhunt.guten",
-  "operatingSystem": "Android",
-  "applicationCategory": "BookApplication",
-  "applicationSubCategory": "Ebook reader",
-  "isAccessibleForFree": true,
-  "inLanguage": "en",
-  "datePublished": "2026-05-06",
-  "dateModified": "2026-05-06",
-  "screenshot": [
-    "https://ulix.app/assets/screenshots/guten/library.png",
-    "https://ulix.app/assets/screenshots/guten/home.png",
-    "https://ulix.app/assets/screenshots/guten/reading_sepia.png",
-    "https://ulix.app/assets/screenshots/guten/reading_dark.png",
-    "https://ulix.app/assets/screenshots/guten/export.png"
-  ],
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "featureList": [
-    "Search the Project Gutenberg catalog",
-    "Import Project Gutenberg books",
-    "Read EPUB books offline",
-    "Highlight passages",
-    "Add notes",
-    "Create bookmarks",
-    "Search within books",
-    "Export notes and highlights",
-    "Text-to-speech read-aloud",
-    "Reading timer"
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Ulix LLC",
-    "url": "https://ulix.app/"
-  },
-  "keywords": [
-    "Guten",
-    "Android EPUB reader",
-    "Project Gutenberg reader",
-    "public domain books",
-    "free ebook reader",
-    "offline ebook reader",
-    "EPUB highlights",
-    "Markdown export"
+  "@graph": [
+    {
+      "@type": ["SoftwareApplication", "MobileApplication"],
+      "@id": "https://ulix.app/guten/#app",
+      "name": "Guten",
+      "alternateName": "Guten Ereader",
+      "description": "Guten is a free Android EPUB reader for 70,000+ public-domain books from Project Gutenberg. Search, import, read offline, highlight, annotate, and export notes. No account. No ads.",
+      "url": "https://ulix.app/guten/",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.bhunt.guten",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.bhunt.guten",
+      "operatingSystem": "Android",
+      "applicationCategory": "BookApplication",
+      "applicationSubCategory": "Ebook reader",
+      "isAccessibleForFree": true,
+      "inLanguage": "en",
+      "datePublished": "2026-05-06",
+      "dateModified": "2026-05-06",
+      "image": "https://ulix.app/icons/guten.png",
+      "screenshot": [
+        "https://ulix.app/assets/screenshots/guten/library.png",
+        "https://ulix.app/assets/screenshots/guten/home.png",
+        "https://ulix.app/assets/screenshots/guten/reading_sepia.png",
+        "https://ulix.app/assets/screenshots/guten/reading_dark.png",
+        "https://ulix.app/assets/screenshots/guten/export.png"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Search the Project Gutenberg catalog",
+        "Import Project Gutenberg books",
+        "Read EPUB books offline",
+        "Highlight passages",
+        "Add notes",
+        "Create bookmarks",
+        "Search within books",
+        "Export notes and highlights",
+        "Text-to-speech read-aloud",
+        "Reading timer"
+      ],
+      "publisher": { "@id": "https://ulix.app/#org" },
+      "author": { "@id": "https://ulix.app/#org" },
+      "keywords": [
+        "Guten",
+        "Android EPUB reader",
+        "Project Gutenberg reader",
+        "public domain books",
+        "free ebook reader",
+        "offline ebook reader",
+        "EPUB highlights",
+        "Markdown export"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://ulix.app/#org",
+      "name": "Ulix LLC",
+      "alternateName": "Ulix",
+      "url": "https://ulix.app/",
+      "logo": "https://ulix.app/icons/ulixlogomark.png",
+      "sameAs": [
+        "https://play.google.com/store/apps/developer?id=Ulix+LLC"
+      ]
+    }
   ]
 }
 </script>
