@@ -13,11 +13,13 @@
   <meta property="og:title" content="Apps — Ulix" />
   <meta property="og:description" content="Privacy-first Android apps. No accounts, no ads, no tracking." />
   <meta property="og:url" content="https://ulix.app/apps.html" />
-  <meta property="og:image" content="https://ulix.app/icons/favicon.png" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://ulix.app/assets/ulixsocialshare1.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="633" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Apps — Ulix" />
   <meta name="twitter:description" content="Privacy-first Android apps. No accounts, no ads, no tracking." />
-  <meta name="twitter:image" content="https://ulix.app/icons/favicon.png" />
+  <meta name="twitter:image" content="https://ulix.app/assets/ulixsocialshare1.jpg" />
 
   <link rel="icon" href="./icons/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="./icons/favicon.png" />
@@ -30,6 +32,155 @@
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
   <!-- Shared warm-dark editorial design system (same as the homepage) -->
   <link rel="stylesheet" href="./assets/home.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://ulix.app/#org",
+        "name": "Ulix LLC",
+        "alternateName": "Ulix",
+        "url": "https://ulix.app/",
+        "logo": "https://ulix.app/icons/ulixlogomark.png",
+        "sameAs": [
+          "https://play.google.com/store/apps/developer?id=Ulix+LLC"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://ulix.app/#website",
+        "url": "https://ulix.app/",
+        "name": "Ulix",
+        "description": "Privacy-first Android apps from Ulix LLC. No accounts, no ads, no tracking.",
+        "publisher": { "@id": "https://ulix.app/#org" },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://ulix.app/apps.html#webpage",
+        "url": "https://ulix.app/apps.html",
+        "name": "Apps — Ulix",
+        "description": "Privacy-first Android apps from Ulix: Shelf Scan, Keep Clip, Track Analysis, Guten, and more. No accounts, no ads, no tracking.",
+        "isPartOf": { "@id": "https://ulix.app/#website" },
+        "breadcrumb": { "@id": "https://ulix.app/apps.html#breadcrumb" },
+        "mainEntity": { "@id": "https://ulix.app/apps.html#applist" },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://ulix.app/apps.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ulix.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Apps", "item": "https://ulix.app/apps.html" }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://ulix.app/apps.html#applist",
+        "name": "Ulix Android apps",
+        "numberOfItems": 6,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": ["SoftwareApplication", "MobileApplication"],
+              "@id": "https://ulix.app/shelfscan/#app",
+              "name": "Shelf Scan",
+              "description": "Find books, movies, and games on physical shelves using your phone's camera. On-device OCR works fully offline. No accounts, no data collection.",
+              "url": "https://ulix.app/shelfscan/",
+              "image": "https://ulix.app/icons/shelfscan.png",
+              "operatingSystem": "Android",
+              "applicationCategory": "UtilitiesApplication",
+              "offers": { "@type": "Offer", "price": "2.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://play.google.com/store/apps/details?id=com.ulix.shelfscan" },
+              "publisher": { "@id": "https://ulix.app/#org" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": ["SoftwareApplication", "MobileApplication"],
+              "@id": "https://ulix.app/keepclip/#app",
+              "name": "Keep Clip",
+              "description": "Save notes, quotes, highlights, excerpts, and links from almost any app. Works offline. No accounts. No ads. Export to Markdown, CSV, TXT, RTF, or HTML.",
+              "url": "https://ulix.app/keepclip/",
+              "image": "https://ulix.app/icons/keepclip.png",
+              "operatingSystem": "Android",
+              "applicationCategory": "ProductivityApplication",
+              "offers": { "@type": "Offer", "price": "1.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://play.google.com/store/apps/details?id=com.bhunt.keepclip" },
+              "publisher": { "@id": "https://ulix.app/#org" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": ["SoftwareApplication", "MobileApplication"],
+              "@id": "https://ulix.app/trackanalysis/#app",
+              "name": "Track Analysis",
+              "description": "Freeform wellness logging in plain English — food, symptoms, supplements, sleep, activity, and energy. Export clean CSV for your favorite LLM. Offline-first.",
+              "url": "https://ulix.app/trackanalysis/",
+              "image": "https://ulix.app/icons/trackanalysis.png",
+              "operatingSystem": "Android",
+              "applicationCategory": "HealthApplication",
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://play.google.com/store/apps/details?id=com.ulix.trackanalysis" },
+              "publisher": { "@id": "https://ulix.app/#org" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": ["SoftwareApplication", "MobileApplication"],
+              "@id": "https://ulix.app/guten/#app",
+              "name": "Guten",
+              "description": "A free Android EPUB reader for 70,000+ public-domain books from Project Gutenberg. Read offline, highlight, annotate, and export notes. No account. No ads.",
+              "url": "https://ulix.app/guten/",
+              "image": "https://ulix.app/icons/guten.png",
+              "operatingSystem": "Android",
+              "applicationCategory": "BookApplication",
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://play.google.com/store/apps/details?id=com.bhunt.guten" },
+              "publisher": { "@id": "https://ulix.app/#org" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@type": ["SoftwareApplication", "MobileApplication"],
+              "@id": "https://ulix.app/apps.html#loanit",
+              "name": "Loan It",
+              "description": "Track what you lent, who has it, and when it needs to come back. Add photos, contacts, and reminders. Coming soon.",
+              "url": "https://ulix.app/apps.html",
+              "image": "https://ulix.app/icons/loanit.png",
+              "operatingSystem": "Android",
+              "applicationCategory": "UtilitiesApplication",
+              "publisher": { "@id": "https://ulix.app/#org" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": ["SoftwareApplication", "MobileApplication"],
+              "@id": "https://ulix.app/apps.html#curiousair",
+              "name": "Curious Air",
+              "description": "Explore the signals in the air around you — Wi-Fi, Cellular, Bluetooth, satellites, and more. Local CSV export. Coming soon.",
+              "url": "https://ulix.app/apps.html",
+              "image": "https://ulix.app/icons/curiousair.png",
+              "operatingSystem": "Android",
+              "applicationCategory": "UtilitiesApplication",
+              "publisher": { "@id": "https://ulix.app/#org" }
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body class="home-page">
