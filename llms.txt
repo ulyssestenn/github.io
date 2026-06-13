@@ -1,0 +1,26 @@
+# Ulix
+
+> Ulix makes privacy-first Android apps and services for information people: readers, collectors, and researchers. The apps run on the device, work offline, and require no accounts, ads, or tracking. The apps are the product, not user data.
+
+Ulix is a small, independent software company founded by Bethany Hunt (registered as Ulix LLC). Every app starts as something worth using every day; the ones that earn their keep get finished and shipped. Data exports to ordinary, portable formats you can take anywhere.
+
+## Apps
+
+- [Guten](https://ulix.app/guten/): Android ereader for 70,000+ public-domain classics from Project Gutenberg. Read offline, highlight, annotate, and export notes. Free, with optional Pro features.
+- [Shelf Scan](https://ulix.app/shelfscan/): Search physical shelves with your phone's camera using on-device OCR. Finds books, movies, and games. Fully offline, nothing leaves the device. $2.99 one-time.
+- [Keep Clip](https://ulix.app/keepclip/): Save text, quotes, highlights, and links from almost any app via the Share menu. Tag, search, favorite, and export to Markdown, CSV, TXT, RTF, or HTML. $1.99 one-time.
+- [Track Analysis](https://ulix.app/trackanalysis/): Freeform plain-English logging for food, symptoms, supplements, sleep, activity, and energy. Export a clean CSV for analysis with the LLM of your choice. Free, with a one-time Pro unlock.
+- Loan It and Curious Air: Android utilities, coming this year.
+
+## Services
+
+- [Ulix Cortex](https://ulix.app/about.html#cortex) (coming soon): A custom service that turns scattered outputs (videos, journals, memos, notes, records, and more) into structured, searchable, AI-queryable archives, surfacing the topics, themes, patterns, and source-backed insights needed to create books, courses, talks, articles, and other work.
+
+## Pages
+
+- [Apps](https://ulix.app/apps.html): Overview of all Ulix apps.
+- [About](https://ulix.app/about.html): The company, the apps, and the approach.
+- [Support](https://ulix.app/support.html): Get help with a Ulix app.
+- [Contact](https://ulix.app/contact.html): Get in touch.
+- [Privacy](https://ulix.app/privacy.html): Privacy overview and links to per-app policies.
+- [Terms](https://ulix.app/terms.html): Terms of Service.
