@@ -86,6 +86,17 @@
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ulix.app/" },
           { "@type": "ListItem", "position": 2, "name": "About", "item": "https://ulix.app/about.html" }
         ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://ulix.app/#cortex",
+        "name": "Ulix Cortex",
+        "serviceType": "Custom archive and insight service",
+        "description": "A custom service that turns scattered outputs (videos, journals, memos, notes, records, and more) into structured, searchable, AI-queryable archives, surfacing the topics, themes, patterns, and source-backed insights needed to create books, courses, talks, articles, and other work.",
+        "category": "Coming soon",
+        "url": "https://ulix.app/about.html#cortex",
+        "provider": { "@id": "https://ulix.app/#org" },
+        "areaServed": "Worldwide"
       }
     ]
   }
@@ -102,6 +113,12 @@
     .about-app__name { font-weight: 600; }
     .about-app__price { color: var(--subtle, rgba(244,239,230,0.45)); }
     .about-cta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 28px; }
+    /* Ulix Cortex coming-soon section */
+    .cortex-card { border-color: rgba(91,163,245,0.4); }
+    .cortex-eyebrow { display: inline-flex; align-items: center; gap: 9px; margin: 0; font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+    .cortex-eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px rgba(91,163,245,0.18); }
+    .cortex-card h2 { margin-top: 14px; }
+    .cortex-link { display: inline-block; margin-top: 22px; font-weight: 600; }
   </style>
 </head>
 
@@ -161,11 +178,11 @@
     <div class="doc">
       <div class="doc-hero">
         <h1 class="doc-hero__title">About Ulix</h1>
-        <p class="doc-hero__lede">Ulix makes Android apps for <em>information</em> people.</p>
+        <p class="doc-hero__lede">Software and services for <em>information</em> people.</p>
       </div>
 
       <div class="prose-card">
-        <p class="lead">For readers, collectors, researchers, and anyone who loves books, text, notes, and records. If your shelves are full, your highlights are scattered, and you keep meaning to track things properly, there's probably an app here for you.</p>
+        <p class="lead">For readers, collectors, researchers, and anyone who loves books, text, notes, and records. If your shelves are full, your highlights are scattered, and you keep meaning to track things properly, there's probably something here for you.</p>
 
         <h2>The apps</h2>
         <div class="about-apps">
@@ -208,6 +225,14 @@
           <a href="./apps.html" class="btn btn--primary">Browse all apps</a>
           <span>Questions? <a href="./contact.html">Get in touch</a>.</span>
         </div>
+      </div>
+
+      <div class="prose-card cortex-card" id="cortex">
+        <p class="cortex-eyebrow">Coming soon</p>
+        <h2>Ulix Cortex</h2>
+        <p>A custom service that turns scattered outputs (videos, journals, memos, notes, records, and more) into structured, searchable, AI-queryable archives. Cortex surfaces the topics, themes, patterns, and source-backed insights needed to create books, courses, talks, articles, and other work.</p>
+        <p>Hands-on, and built around your material, for people sitting on years of it.</p>
+        <a href="./contact.html" class="cortex-link">Register your interest →</a>
       </div>
     </div>
   </main>
