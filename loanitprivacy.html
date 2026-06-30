@@ -3,22 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy — Ulix</title>
-  <meta name="description" content="Ulix privacy overview and links to app-specific policies." />
-  <link rel="canonical" href="https://ulix.app/privacy.html" />
+  <title>Loan It — Privacy — Ulix</title>
+  <meta name="description" content="How Loan It handles your data: local only, no accounts, no ads, no analytics, no tracking." />
+  <link rel="canonical" href="https://ulix.app/loanitprivacy.html" />
   <meta name="theme-color" content="#0F0E0C" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Ulix" />
-  <meta property="og:title" content="Privacy — Ulix" />
-  <meta property="og:description" content="Ulix privacy overview and links to app-specific policies." />
-  <meta property="og:url" content="https://ulix.app/privacy.html" />
-  <meta property="og:image" content="https://ulix.app/icons/favicon.png" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Privacy — Ulix" />
-  <meta name="twitter:description" content="Ulix privacy overview and links to app-specific policies." />
-  <meta name="twitter:image" content="https://ulix.app/icons/favicon.png" />
-
   <link rel="icon" href="/icons/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
@@ -89,20 +77,81 @@
   <main id="main">
     <div class="doc">
       <div class="doc-hero">
-        <h1 class="doc-hero__title">Privacy at Ulix</h1>
-        <p class="doc-hero__lede">Ulix is privacy-first. We don’t run ads or sell personal data, and many apps do not require an account.
-          Some apps may use limited third-party services for core functionality or reliability diagnostics as described in each app-specific policy.
-          For details, see the app-specific policies below.</p>
+        <h1 class="doc-hero__title">Loan It — Privacy Policy</h1>
+        <div class="doc-hero__meta">Last updated: June 30, 2026</div>
       </div>
       <div class="prose-card">
-        <h2>App-Specific Privacy Policies</h2>
+        <p class="lead">Loan It is an app for keeping track of physical items you lend to other people, designed to keep your loan records under your control.</p>
+
+        <h2>What Loan It stores on your device</h2>
+        <p>Loan It stores the information you enter about your loans locally on your device, such as:</p>
         <ul>
-          <li><a href="./gutenprivacy.html">Guten Privacy Policy</a></li>
-          <li><a href="./shelfscanprivacy.html">Shelf Scan Privacy Policy</a></li>
-          <li><a href="./keepclipprivacypolicy.html">Keep Clip Privacy Policy</a></li>
-          <li><a href="./trackanalysisprivacy.html">Track Analysis Privacy Policy</a></li>
-          <li><a href="./loanitprivacy.html">Loan It Privacy Policy</a></li>
+          <li>item descriptions,</li>
+          <li>borrower names,</li>
+          <li>optional contact references,</li>
+          <li>borrowed, due, and returned dates,</li>
+          <li>return status,</li>
+          <li>attached item photos, and</li>
+          <li>app settings such as reminder and import/export preferences.</li>
         </ul>
+        <p>Loan records are stored in the app’s private local database. Photos you attach are stored in the app’s private file storage.</p>
+
+        <h2>What Loan It uses the internet for</h2>
+        <p>Loan It uses network access only for limited app functionality:</p>
+        <ul>
+          <li>looking up public book details from Open Library when you scan or enter an ISBN barcode, and</li>
+          <li>communicating with Google Play Billing for optional Pro purchases and purchase restoration.</li>
+        </ul>
+        <p>When Loan It looks up a book by ISBN, the ISBN is sent to Open Library so the app can retrieve matching book metadata.</p>
+
+        <h2>What Loan It does not do</h2>
+        <ul>
+          <li>No ads</li>
+          <li>No sale of personal data</li>
+          <li>No account required</li>
+          <li>No behavioral marketing</li>
+          <li>No third-party analytics or tracking libraries</li>
+        </ul>
+
+        <h2>Contacts, camera, photos, and reminders</h2>
+        <p>Loan It may request access to device features only when needed for app functionality:</p>
+        <ul>
+          <li>Contacts access is used so you can choose a borrower from your contacts. Loan It reads the selected contact name for your loan record.</li>
+          <li>Camera access is used for taking item photos and scanning book barcodes.</li>
+          <li>Notification permission is used for due date reminders.</li>
+          <li>Exact alarm permission may be requested so reminders can be delivered at the scheduled time.</li>
+          <li>Reboot access is used to reschedule reminders after your device restarts.</li>
+        </ul>
+        <p>These permissions are used for the features you choose to use.</p>
+
+        <h2>When data may leave your device</h2>
+        <p>Your loan data stays on your device unless you take an action that causes it to leave, such as:</p>
+        <ul>
+          <li>exporting your loan records to CSV or JSON,</li>
+          <li>sharing an exported file,</li>
+          <li>importing data from a file you select,</li>
+          <li>scanning or looking up an ISBN, which sends the ISBN to Open Library, or</li>
+          <li>making or restoring a Pro purchase through Google Play Billing.</li>
+        </ul>
+
+        <h2>Backups</h2>
+        <p>Loan It is configured to exclude its local database and private files from Android cloud backup and device-transfer extraction rules. This means your loan records and attached images are not intended to be backed up automatically by Android’s built-in backup system.</p>
+
+        <h2>Premium features</h2>
+        <p>Loan It offers optional Pro features through Google Play Billing. Purchases and purchase restoration are handled by Google Play. Loan It does not see your payment card details. When you buy or restore a purchase, Google Play confirms your purchase status to the app, and Loan It stores purchase-related status locally so Pro features can be unlocked.</p>
+        <p>Google’s handling of payment information and purchase history is governed by Google Play’s own privacy practices.</p>
+
+        <h2>Third-party services</h2>
+        <p>Loan It uses the following third-party services for core functionality:</p>
+        <ul>
+          <li>Open Library, for optional ISBN book metadata lookup.</li>
+          <li>Google Play Billing, for optional Pro purchases and purchase restoration.</li>
+        </ul>
+        <p>These services may receive standard technical request data, such as IP address and request headers, as part of normal internet communication. Their privacy policies apply to that processing.</p>
+
+        <h2>Your controls</h2>
+        <p>You can delete loan records and attached images from within the app. You can also export your data if you want to keep your own backup or move your records.</p>
+        <p>Loan It is designed to help you keep track of what you lend while minimizing data collection and keeping your records under your control.</p>
       </div>
     </div>
   </main>
