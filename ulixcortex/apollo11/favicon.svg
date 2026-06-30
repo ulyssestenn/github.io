@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Apollo 11">
+  <rect width="32" height="32" rx="7" fill="#0a0d13"/>
+  <circle cx="16" cy="16" r="9" fill="#e8b04b"/>
+  <circle cx="12.5" cy="12.5" r="1.7" fill="#0a0d13" opacity=".25"/>
+  <circle cx="19" cy="18" r="2.3" fill="#0a0d13" opacity=".22"/>
+  <circle cx="15" cy="20.5" r="1.2" fill="#0a0d13" opacity=".22"/>
+</svg>

@@ -1,0 +1,482 @@
+<!DOCTYPE html><html lang="en" dir="ltr" data-theme="dark" data-has-toc data-has-sidebar class="astro-bguv2lll"> <head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Plan vs. actual: where Apollo 11 diverged from the script | Apollo 11</title><link rel="canonical" href="https://ulix.app/ulixcortex/apollo11/analyses/2026-06-10-plan-vs-actual/"/><link rel="sitemap" href="/ulixcortex/apollo11/sitemap-index.xml"/><link rel="shortcut icon" href="/ulixcortex/apollo11/favicon.svg" type="image/svg+xml"/><meta name="generator" content="Astro v6.4.8"/><meta name="generator" content="Starlight v0.40.0"/><meta property="og:title" content="Plan vs. actual: where Apollo 11 diverged from the script"/><meta property="og:type" content="article"/><meta property="og:url" content="https://ulix.app/ulixcortex/apollo11/analyses/2026-06-10-plan-vs-actual/"/><meta property="og:locale" content="en"/><meta property="og:description" content="A curated, cited knowledge base of the Apollo 11 lunar-surface mission — NASA primary sources, an interlinked wiki, and original analyses."/><meta property="og:site_name" content="Apollo 11"/><meta name="twitter:card" content="summary_large_image"/><meta name="description" content="A curated, cited knowledge base of the Apollo 11 lunar-surface mission — NASA primary sources, an interlinked wiki, and original analyses."/><script>
+	window.StarlightThemeProvider = (() => {
+		const storedTheme =
+			typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
+		const theme =
+			storedTheme ||
+			(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+		document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+		return {
+			updatePickers(theme = storedTheme || 'auto') {
+				document.querySelectorAll('starlight-theme-select').forEach((picker) => {
+					const select = picker.querySelector('select');
+					if (select) select.value = theme;
+					/** @type {HTMLTemplateElement | null} */
+					const tmpl = document.querySelector(`#theme-icons`);
+					const newIcon = tmpl && tmpl.content.querySelector('.' + theme);
+					if (newIcon) {
+						const oldIcon = picker.querySelector('svg.label-icon');
+						if (oldIcon) {
+							oldIcon.replaceChildren(...newIcon.cloneNode(true).childNodes);
+						}
+					}
+				});
+			},
+		};
+	})();
+</script><template id="theme-icons"><svg aria-hidden="true" class="light astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/></svg><svg aria-hidden="true" class="dark astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/></svg><svg aria-hidden="true" class="auto astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg></template><link rel="stylesheet" href="/ulixcortex/apollo11/_astro/print.DNXP8c50.css" media="print"><link rel="stylesheet" href="/ulixcortex/apollo11/_astro/common.DtDg52fN.css"><link rel="stylesheet" href="/ulixcortex/apollo11/_astro/Code.BcHZMqfA.css"><script type="module" src="/ulixcortex/apollo11/_astro/page.B_tncCx8.js"></script></head> <body class="astro-bguv2lll"> <a href="#_top" class="astro-7q3lir66">Skip to content</a> <div class="page sl-flex astro-vrdttmbt"> <header class="header astro-vrdttmbt"><div class="header astro-kmkmnagf"> <div class="title-wrapper sl-flex astro-kmkmnagf"> <a href="/ulixcortex/apollo11/" class="site-title sl-flex astro-m46x6ez3">  <span class="astro-m46x6ez3" translate="no"> Apollo 11 </span> </a> </div> <div class="sl-flex print:hidden astro-kmkmnagf"> <site-search class="astro-kmkmnagf astro-v37mnknz" data-translations="{&quot;placeholder&quot;:&quot;Search&quot;}"> <button data-open-modal disabled aria-label="Search" aria-keyshortcuts="Control+K" class="astro-v37mnknz"> <svg aria-hidden="true" class="astro-v37mnknz astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg> <span class="sl-hidden md:sl-block astro-v37mnknz" aria-hidden="true">Search</span> <kbd class="sl-hidden md:sl-flex astro-v37mnknz" style="display: none;"> <kbd class="astro-v37mnknz">Ctrl</kbd><kbd class="astro-v37mnknz">K</kbd> </kbd> </button> <dialog style="padding:0" aria-label="Search" class="astro-v37mnknz"> <div class="dialog-frame sl-flex astro-v37mnknz">  <button data-close-modal class="sl-flex md:sl-hidden astro-v37mnknz"> Cancel </button> <div class="search-container astro-v37mnknz"> <div id="starlight__search" class="astro-v37mnknz"></div> </div> </div> </dialog> </site-search>  <script>
+	(() => {
+		const openBtn = document.querySelector('button[data-open-modal]');
+		const shortcut = openBtn?.querySelector('kbd');
+		if (!openBtn || !(shortcut instanceof HTMLElement)) return;
+		const platformKey = shortcut.querySelector('kbd');
+		if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+			platformKey.textContent = '⌘';
+			openBtn.setAttribute('aria-keyshortcuts', 'Meta+K');
+		}
+		shortcut.style.display = '';
+	})();
+</script> <script type="module" src="/ulixcortex/apollo11/_astro/Search.astro_astro_type_script_index_0_lang.4-YWvwnL.js"></script>  </div> <div class="sl-hidden md:sl-flex print:hidden right-group astro-kmkmnagf"> <div class="sl-flex social-icons astro-kmkmnagf"> <a class="navclock" href="/ulixcortex/apollo11/clock/" aria-label="Apollo 11 mission clock" title="Apollo 11 mission clock" data-navclock> <span class="nc-dot" aria-hidden="true"></span> <span class="nc-text mono" aria-hidden="true">102:45:40 GET</span> </a> <script type="application/json" data-navclock-data>{"liftoffUTC":"1969-07-16T13:32:00Z","maxSec":703098}</script> <script type="module">const a=document.querySelector("[data-navclock]"),T=document.querySelector("[data-navclock-data]");if(a&&T){let c=function(){const t=d();t>=0&&t<=g?(a.classList.add("live"),a.title="Following Apollo 11 in real time — open the full mission clock",s.textContent=`LIVE ${U(t)}`):(a.classList.remove("live"),a.title="Countdown to the Apollo 11 liftoff anniversary — open the full mission clock",s.textContent=`${m(h())} to liftoff`)};const{liftoffUTC:C,maxSec:u}=JSON.parse(T.textContent),r=Date.parse(C),g=u,l=new Date(r),s=a.querySelector(".nc-text"),e=t=>String(t).padStart(2,"0"),d=()=>{const t=new Date;return(Date.UTC(1969,t.getUTCMonth(),t.getUTCDate(),t.getUTCHours(),t.getUTCMinutes(),t.getUTCSeconds())-r)/1e3},U=t=>(t=Math.max(0,Math.floor(t)),`T+${String(Math.floor(t/3600)).padStart(3,"0")}:${e(Math.floor(t%3600/60))}:${e(t%60)}`),h=()=>{const t=new Date,o=[l.getUTCMonth(),l.getUTCDate(),l.getUTCHours(),l.getUTCMinutes(),l.getUTCSeconds()];let n=Date.UTC(t.getUTCFullYear(),...o);return n<=t.getTime()&&(n=Date.UTC(t.getUTCFullYear()+1,...o)),(n-t.getTime())/1e3},m=t=>{t=Math.max(0,Math.floor(t));const o=Math.floor(t/86400),n=Math.floor(t%86400/3600),i=Math.floor(t%3600/60),f=t%60;return o>0?`T− ${o}d ${e(n)}:${e(i)}:${e(f)}`:`T− ${e(n)}:${e(i)}:${e(f)}`};c(),setInterval(c,1e3)}</script> </div> <starlight-theme-select>  <label style="--sl-select-width: 6.25em" class="astro-4yphtoen"> <span class="sr-only astro-4yphtoen">Select theme</span> <svg aria-hidden="true" class="icon label-icon astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg> <select autocomplete="off" class="astro-4yphtoen"> <option value="dark" class="astro-4yphtoen">Dark</option><option value="light" class="astro-4yphtoen">Light</option><option value="auto" selected class="astro-4yphtoen">Auto</option> </select> <svg aria-hidden="true" class="icon caret astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg> </label> </starlight-theme-select>  <script>
+	StarlightThemeProvider.updatePickers();
+</script> <script type="module">const r="starlight-theme",o=e=>e==="auto"||e==="dark"||e==="light"?e:"auto",c=()=>o(typeof localStorage<"u"&&localStorage.getItem(r));function n(e){typeof localStorage<"u"&&localStorage.setItem(r,e==="light"||e==="dark"?e:"")}const l=()=>matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";function t(e){StarlightThemeProvider.updatePickers(e),document.documentElement.dataset.theme=e==="auto"?l():e,n(e)}matchMedia("(prefers-color-scheme: light)").addEventListener("change",()=>{c()==="auto"&&t("auto")});class s extends HTMLElement{constructor(){super(),t(c()),this.querySelector("select")?.addEventListener("change",a=>{a.currentTarget instanceof HTMLSelectElement&&t(o(a.currentTarget.value))})}}customElements.define("starlight-theme-select",s);</script> <script type="module">class s extends HTMLElement{constructor(){super();const e=this.querySelector("select");e&&(e.addEventListener("change",t=>{t.currentTarget instanceof HTMLSelectElement&&(window.location.pathname=t.currentTarget.value)}),window.addEventListener("pageshow",t=>{if(!t.persisted)return;const n=e.querySelector("option[selected]")?.index;n!==e.selectedIndex&&(e.selectedIndex=n??0)}))}}customElements.define("starlight-lang-select",s);</script> </div> </div></header> <nav class="sidebar print:hidden astro-vrdttmbt" aria-label="Main"> <starlight-menu-button class="print:hidden astro-jif73yzw"> <button aria-expanded="false" aria-label="Menu" aria-controls="starlight__sidebar" class="sl-flex md:sl-hidden astro-jif73yzw"> <svg aria-hidden="true" class="open-menu astro-jif73yzw astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M3 8h18a1 1 0 1 0 0-2H3a1 1 0 0 0 0 2Zm18 8H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z"/></svg> <svg aria-hidden="true" class="close-menu astro-jif73yzw astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="m13.41 12 6.3-6.29a1.004 1.004 0 1 0-1.42-1.42L12 10.59l-6.29-6.3a1.004 1.004 0 0 0-1.42 1.42l6.3 6.29-6.3 6.29a1 1 0 0 0 0 1.42.998.998 0 0 0 1.42 0l6.29-6.3 6.29 6.3a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.42L13.41 12Z"/></svg> </button> </starlight-menu-button> <script type="module">class s extends HTMLElement{constructor(){super(),this.btn=this.querySelector("button"),this.btn.addEventListener("click",()=>this.toggleExpanded());const t=this.closest("nav");t&&t.addEventListener("keyup",e=>this.closeOnEscape(e))}setExpanded(t){this.setAttribute("aria-expanded",String(t)),document.body.toggleAttribute("data-mobile-menu-expanded",t)}toggleExpanded(){this.setExpanded(this.getAttribute("aria-expanded")!=="true")}closeOnEscape(t){t.code==="Escape"&&(this.setExpanded(!1),this.btn.focus())}}customElements.define("starlight-menu-button",s);</script>  <div id="starlight__sidebar" class="sidebar-pane astro-vrdttmbt"> <div class="sidebar-content sl-flex astro-vrdttmbt"> <sl-sidebar-state-persist data-hash="1de5z3g" class="astro-kku4brbg"> <script aria-hidden="true">
+		(() => {
+			try {
+				if (!matchMedia('(min-width: 50em)').matches) return;
+				/** @type {HTMLElement | null} */
+				const target = document.querySelector('sl-sidebar-state-persist');
+				const state = JSON.parse(sessionStorage.getItem('sl-sidebar-state') || '0');
+				if (!target || !state || target.dataset.hash !== state.hash) return;
+				window._starlightScrollRestore = state.scroll;
+				customElements.define(
+					'sl-sidebar-restore',
+					class SidebarRestore extends HTMLElement {
+						connectedCallback() {
+							try {
+								const idx = parseInt(this.dataset.index || '');
+								const details = this.closest('details');
+								if (details && typeof state.open[idx] === 'boolean') details.open = state.open[idx];
+							} catch {}
+						}
+					}
+				);
+			} catch {}
+		})();
+	</script>  <ul class="top-level astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/" class="large astro-3ii7xxms"> <span class="astro-3ii7xxms">Overview</span>  </a> </li><li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <summary class="astro-3ii7xxms"> <span class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">Explore</span>  </span> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg> </summary> <sl-sidebar-restore data-index="0"></sl-sidebar-restore> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/descent/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">The last three minutes</span> <span class="sl-badge success small  astro-3ii7xxms astro-avdet4wd">new</span> </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/samples/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Sample explorer</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/clock/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Mission clock</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/transcripts/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Transcript reader</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/map/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Interactive photo-map</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/link-map/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">The link map</span> <span class="sl-badge success small  astro-3ii7xxms astro-avdet4wd">new</span> </a> </li> </ul> </details> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/" class="large astro-3ii7xxms"> <span class="astro-3ii7xxms">The wiki</span>  </a> </li><li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <summary class="astro-3ii7xxms"> <span class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">Topics</span>  </span> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg> </summary> <sl-sidebar-restore data-index="1"></sl-sidebar-restore> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/topics/apollo-11/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/topics/apollo-lunar-surface-experiments/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo lunar surface experiments</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/topics/communications-and-public-record/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Communications and the public record</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/topics/eva-and-surface-operations/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">EVA and surface operations</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/topics/lunar-geology-and-samples/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar geology and samples</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/topics/planning-procedures-and-training/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Planning, procedures, and training</span>  </a> </li> </ul> </details> </li><li class="astro-3ii7xxms"> <details class="astro-3ii7xxms"> <summary class="astro-3ii7xxms"> <span class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">Concepts</span>  </span> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg> </summary> <sl-sidebar-restore data-index="2"></sl-sidebar-restore> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-basalt-suites/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 basalt suites (high-K and low-K)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-crew-health-and-biomedical/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Crew health and biomedical performance on Apollo 11</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-eva/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 EVA (first moonwalk)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-eva-equipment/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 EVA life-support and mobility equipment</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-eva-planned-vs-actual/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 EVA planned vs. actual timeline</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-first-order-results/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">First-order results of Apollo 11</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-glossary/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 glossary</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-lm-onboard-checklists/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 LM onboard checklists</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-lunar-sample-types/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 lunar sample types</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-mission/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 mission</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-nominal-mission-timeline/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 nominal mission timeline</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-photographic-index/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 photographic index</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-sample-inventory/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 sample inventory</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-sampling-tools/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 sampling tools and containers</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-surface-photography/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 surface photography</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-training-and-simulations/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 training and simulations</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/ceremonial-surface-activities/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Ceremonial and symbolic surface activities</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/command-and-service-module-columbia/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Command and Service Module Columbia</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/contingency-eva-procedures/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 contingency EVA procedures</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/early-apollo-scientific-experiments-package/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Early Apollo Scientific Experiments Package (EASEP)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/goss-net-1-air-to-ground-communications/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">GOSS NET 1 air-to-ground communications</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/high-titanium-mare-basalt/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">High-titanium mare basalt</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/laser-ranging-retroreflector/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Laser Ranging Retroreflector (S-078)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/lroc-imaging-of-apollo-11-landing-site/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">LROC imaging of the Apollo 11 landing site</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/lunar-ascent-and-rendezvous/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar ascent and rendezvous</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/lunar-dust-operations/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar dust as an operational problem</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/lunar-field-geology/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar field geology (Experiment S-059)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/lunar-laser-ranging-results/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar laser ranging: results and legacy</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/lunar-module-eagle/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar Module Eagle</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/lunar-quarantine-and-back-contamination/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar quarantine and back-contamination</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/lunar-regolith-and-soil-mechanics/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar regolith and soil mechanics</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/lunar-sample-collection-and-containers/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar sample collection and containers</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/lunar-sample-numbering-and-curation/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar sample numbering and curation</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/lunar-seismic-results/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar seismicity and interior structure (PSE results)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/lunar-surface-mobility/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar surface mobility in one-sixth gravity</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/minerals-first-identified-in-apollo-11-samples/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Minerals first identified in Apollo 11 samples</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/passive-seismic-experiment/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Passive Seismic Experiment (S-031)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/powered-descent-and-landing/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Powered descent and landing</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/solar-wind-composition-experiment/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Solar Wind Composition experiment (S-080)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/surface-exposure-and-space-weathering/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Surface exposure and space weathering (Apollo 11 samples)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/television-broadcast-and-communications/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Television broadcast and surface communications</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/tranquility-base/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Tranquility Base (Landing Site 2)</span>  </a> </li> </ul> </details> </li><li class="astro-3ii7xxms"> <details class="astro-3ii7xxms"> <summary class="astro-3ii7xxms"> <span class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">Source notes</span>  </span> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg> </summary> <sl-sidebar-restore data-index="3"></sl-sidebar-restore> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-final-eva-procedures/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 EVA Procedures (Final)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-flight-plan/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Flight Plan (Final, AS-506)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-lm-lunar-surface-checklist/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 LM Lunar Surface Checklist (LM-5)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-lm-systems-activation-checklist/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 LM Systems Activation Checklist</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-lunar-sample-compendium/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Lunar Sample Compendium (sample entries)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-lunar-sample-information-catalogue/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Lunar Sample Information Catalogue (JSC 12522, Revised)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-lunar-surface-operations-plan/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Lunar Surface Operations Plan (Final Edition)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-mission-report/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Mission Report (MSC-00171)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-onboard-voice-transcription-cm/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Onboard Voice Transcription (CM DSE)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-photography-index/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Photography Index (70mm and 16mm)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-preliminary-science-report/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Preliminary Science Report (NASA SP-214)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-press-kit/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Press Kit (Release 69-83K)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-sampling-tools-catalog/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Catalog of Apollo Lunar Surface Geological Sampling Tools and Containers (JSC-23454)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-spacecraft-commentary-pao/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Spacecraft Commentary (PAO Mission Commentary)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-technical-air-to-ground-voice-transcription/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Technical Air-to-Ground Voice Transcription (GOSS NET 1)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-technical-crew-debriefing-vol1/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Technical Crew Debriefing — Volume 1 (Sections 1–10)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-technical-crew-debriefing-vol2/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Technical Crew Debriefing — Volume 2 (Sections 11–27)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/bender-lunar-laser-ranging-experiment/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">The Lunar Laser Ranging Experiment (Bender et al., 1973)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/biomedical-results-of-apollo/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Biomedical Results of Apollo (NASA SP-368)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/dickey-lunar-laser-ranging-continuing-legacy/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar Laser Ranging: A Continuing Legacy of the Apollo Program (Dickey et al., 1994)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/easep-handbook-for-apollo-11-flight-crew/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">EASEP Handbook for Apollo 11 Flight Crew</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/latham-apollo-passive-seismic-results/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Results from the Apollo Passive Seismic Experiment (Latham et al., 1977)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/lroc-apollo-11-landing-site-imagery/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">LROC NAC imagery of the Apollo 11 landing site</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/neil-armstrong-jsc-oral-history/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Neil A. Armstrong — JSC Oral History (September 19, 2001)</span>  </a> </li> </ul> </details> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/sources/" class="large astro-3ii7xxms"> <span class="astro-3ii7xxms">Primary sources</span>  </a> </li><li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <summary class="astro-3ii7xxms"> <span class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">Analyses</span>  </span> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg> </summary> <sl-sidebar-restore data-index="4"></sl-sidebar-restore> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Analyses</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-09-apollo-11-eva-timeline/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 EVA — annotated master timeline</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-09-apollo-11-sample-table/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 returned samples — master table</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-09-what-apollo-11-established/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">What did Apollo 11 actually establish about the Moon?</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-10-plan-vs-actual/" aria-current="page" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Plan vs. actual: where Apollo 11 diverged from the script</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-10-tranquility-base-photomap/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Tranquility Base photo-map — where the samples were taken</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-11-anomalies-register/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 anomalies and malfunctions register — Mission Report §16, transcribed</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-11-eva-prep-four-layers/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">One hour, four layers: the EVA-prep overrun traced through the full procedural chain</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-11-follow-apollo-11-in-real-time/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Follow Apollo 11 in real time — a day-by-day anniversary companion (July 16–24)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-11-memory-vs-record/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Memory vs. record: Armstrong 2001 against the 1969 documents, on four episodes</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-11-one-moment-three-records/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">One moment, three records: the landing and the first step, side by side</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-11-source-reading-plan/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Reading the library: three guided paths through all 24 sources</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-11-wiki-glossary/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Glossary: the acronyms and terms of art of the lunar-surface wiki</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-12-discrepancy-ledger/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">The discrepancy ledger — where the Apollo 11 primary record disagrees with itself</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-12-sample-provenance-reconstruction/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Where did each rock actually come from? — a provenance reconstruction of the 53 Apollo 11 samples</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-12-the-last-three-minutes/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">The last three minutes: Eagle&#39;s final approach, reconstructed — then measured against the 2011 ground truth</span>  </a> </li> </ul> </details> </li> </ul>  <script aria-hidden="true">
+		(() => {
+			const scroller = document.getElementById('starlight__sidebar');
+			if (!window._starlightScrollRestore || !scroller) return;
+			scroller.scrollTop = window._starlightScrollRestore;
+			delete window._starlightScrollRestore;
+		})();
+	</script> </sl-sidebar-state-persist> <div class="md:sl-hidden"> <div class="mobile-preferences sl-flex astro-wu23bvmt"> <div class="social-icons astro-wu23bvmt"> <a class="navclock" href="/ulixcortex/apollo11/clock/" aria-label="Apollo 11 mission clock" title="Apollo 11 mission clock" data-navclock> <span class="nc-dot" aria-hidden="true"></span> <span class="nc-text mono" aria-hidden="true">102:45:40 GET</span> </a> <script type="application/json" data-navclock-data>{"liftoffUTC":"1969-07-16T13:32:00Z","maxSec":703098}</script>  </div> <starlight-theme-select>  <label style="--sl-select-width: 6.25em" class="astro-4yphtoen"> <span class="sr-only astro-4yphtoen">Select theme</span> <svg aria-hidden="true" class="icon label-icon astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg> <select autocomplete="off" class="astro-4yphtoen"> <option value="dark" class="astro-4yphtoen">Dark</option><option value="light" class="astro-4yphtoen">Light</option><option value="auto" selected class="astro-4yphtoen">Auto</option> </select> <svg aria-hidden="true" class="icon caret astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg> </label> </starlight-theme-select>  <script>
+	StarlightThemeProvider.updatePickers();
+</script>   </div> </div> </div> </div> </nav> <div class="main-frame astro-vrdttmbt">  <script type="module">const a=document.getElementById("starlight__sidebar"),n=a?.querySelector("sl-sidebar-state-persist"),o="sl-sidebar-state",i=()=>{let t=[];const e=n?.dataset.hash||"";try{const s=sessionStorage.getItem(o),r=JSON.parse(s||"{}");Array.isArray(r.open)&&r.hash===e&&(t=r.open)}catch{}return{hash:e,open:t,scroll:a?.scrollTop||0}},c=t=>{try{sessionStorage.setItem(o,JSON.stringify(t))}catch{}},d=()=>c(i()),l=(t,e)=>{const s=i();s.open[e]=t,c(s)};n?.addEventListener("click",t=>{if(!(t.target instanceof Element))return;const e=t.target.closest("summary")?.closest("details");if(!e)return;const s=e.querySelector("sl-sidebar-restore"),r=parseInt(s?.dataset.index||"");isNaN(r)||l(!e.open,r)});addEventListener("visibilitychange",()=>{document.visibilityState==="hidden"&&d()});addEventListener("pageHide",d);</script> <div class="lg:sl-flex astro-67yu43on"> <aside class="right-sidebar-container print:hidden astro-67yu43on"> <div class="right-sidebar astro-67yu43on"> <div class="lg:sl-hidden astro-pb3aqygn"><mobile-starlight-toc data-min-h="2" data-max-h="3" class="astro-doynk5tl"><nav aria-labelledby="starlight__on-this-page--mobile" class="astro-doynk5tl"><details id="starlight__mobile-toc" class="astro-doynk5tl"><summary id="starlight__on-this-page--mobile" class="sl-flex astro-doynk5tl"><span class="toggle sl-flex astro-doynk5tl">On this page<svg aria-hidden="true" class="caret astro-doynk5tl astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></span><span class="display-current astro-doynk5tl"></span></summary><div class="dropdown astro-doynk5tl"><ul class="isMobile astro-gnoq344e" style="--depth: 0;"> <li class="astro-gnoq344e" style="--depth: 0;"> <a href="#_top" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">Overview</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#tldr" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">TL;DR</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#1-the-script" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">1. The script</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#2-before-the-surface-script-the-landing-went-off-book-first" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">2. Before the surface script: the landing went off-book first</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#3-divergence-1--task-order-at-stay-level-eva-before-rest" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">3. Divergence #1 — task order at stay level: EVA before rest</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#4-divergence-2--the-hour-long-eva-prep" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">4. Divergence #2 — the hour-long EVA prep</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#5-task-order-on-the-surface-the-science-spine-held-with-a-ceremonial-wedge" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">5. Task order on the surface: the science spine held, with a ceremonial wedge</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#6-durations-mission-report-table-11-i-planned-vs-actual" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">6. Durations: Mission Report Table 11-I, planned vs. actual</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#7-the-surprises-the-plan-couldnt-have-scripted" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">7. The surprises the plan couldn’t have scripted</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#8-what-held-the-plans-architecture-absorbed-its-own-failure" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">8. What held: the plan’s architecture absorbed its own failure</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#sources" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">Sources</span> </a>  </li> </ul></div></details></nav></mobile-starlight-toc><script type="module" src="/ulixcortex/apollo11/_astro/MobileTableOfContents.astro_astro_type_script_index_0_lang.hwBsy0Mo.js"></script></div><div class="right-sidebar-panel sl-hidden lg:sl-block astro-pb3aqygn"><div class="sl-container astro-pb3aqygn"><starlight-toc data-min-h="2" data-max-h="3"><nav aria-labelledby="starlight__on-this-page"><h2 id="starlight__on-this-page">On this page</h2><ul class="astro-gnoq344e" style="--depth: 0;"> <li class="astro-gnoq344e" style="--depth: 0;"> <a href="#_top" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">Overview</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#tldr" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">TL;DR</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#1-the-script" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">1. The script</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#2-before-the-surface-script-the-landing-went-off-book-first" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">2. Before the surface script: the landing went off-book first</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#3-divergence-1--task-order-at-stay-level-eva-before-rest" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">3. Divergence #1 — task order at stay level: EVA before rest</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#4-divergence-2--the-hour-long-eva-prep" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">4. Divergence #2 — the hour-long EVA prep</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#5-task-order-on-the-surface-the-science-spine-held-with-a-ceremonial-wedge" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">5. Task order on the surface: the science spine held, with a ceremonial wedge</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#6-durations-mission-report-table-11-i-planned-vs-actual" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">6. Durations: Mission Report Table 11-I, planned vs. actual</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#7-the-surprises-the-plan-couldnt-have-scripted" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">7. The surprises the plan couldn’t have scripted</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#8-what-held-the-plans-architecture-absorbed-its-own-failure" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">8. What held: the plan’s architecture absorbed its own failure</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#sources" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">Sources</span> </a>  </li> </ul></nav></starlight-toc><script type="module" src="/ulixcortex/apollo11/_astro/TableOfContents.astro_astro_type_script_index_0_lang.FuRcXuRY.js"></script></div></div> </div> </aside> <div class="main-pane astro-67yu43on">  <main data-pagefind-body class="astro-bguv2lll" lang="en" dir="ltr">    <div class="content-panel astro-7nkwcw3z"> <div class="sl-container astro-7nkwcw3z"> <h1 id="_top" class="astro-j6tvhyss">Plan vs. actual: where Apollo 11 diverged from the script</h1> </div> </div> <div class="content-panel astro-7nkwcw3z"> <div class="sl-container astro-7nkwcw3z"> <div class="sl-markdown-content"> <p><em>A task-order and duration comparison between the pre-flight
+script — the <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-lunar-surface-operations-plan/">Lunar Surface Operations Plan</a>
+(<abbr class="gloss" title="The Lunar Surface Operations Plan — the pre-flight surface/EVA script whose priority-ordered task ladder governed the moonwalk." data-def="The Lunar Surface Operations Plan — the pre-flight surface/EVA script whose priority-ordered task ladder governed the moonwalk.">LSOP</abbr>, Final Edition, June 13 1969; nominal timeline sheets revised June 27) and the
+<a href="/ulixcortex/apollo11/wiki/sources/apollo-11-final-eva-procedures/">EVA Procedures (Final)</a> — and the
+mission as flown, reconstructed from the
+<a href="/ulixcortex/apollo11/wiki/sources/apollo-11-mission-report/">Mission Report</a> (§4.12 Lunar Surface
+Operations and <strong>Table 11-I, “Comparative times for planned lunar surface events,”</strong>
+p. 11-27 of the raw PDF), the
+<a href="/ulixcortex/apollo11/wiki/sources/apollo-11-technical-crew-debriefing-vol1/">Technical Crew Debriefing</a> (§10),
+and the <abbr class="gloss" title="Ground elapsed time — the mission stopwatch (hours:minutes:seconds since liftoff) that tags every Flight Plan sheet and transcript line." data-def="Ground elapsed time — the mission stopwatch (hours:minutes:seconds since liftoff) that tags every Flight Plan sheet and transcript line.">GET</abbr> anchors in the
+<a href="/ulixcortex/apollo11/analyses/2026-06-09-apollo-11-eva-timeline/">annotated EVA timeline</a> built from the
+<a href="/ulixcortex/apollo11/wiki/sources/apollo-11-technical-air-to-ground-voice-transcription/">air-to-ground transcript</a>.</em></p>
+<div class="sl-heading-wrapper level-h2"><h2 id="tldr">TL;DR</h2><a class="sl-anchor-link" href="#tldr"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “TL;DR”</span></a></div>
+<p>The crew did essentially <strong>everything the script called for, in nearly the scripted
+order — but almost nothing took the scripted time, and the whole moonwalk happened
+about 3½ hours earlier than the timeline page said it would.</strong> The three big
+divergences were (1) swapping the EVA ahead of the planned pre-EVA rest period,
+(2) an EVA prep that overran its simulation-derived estimate by about an hour, and
+(3) an unscripted ceremonial wedge — plaque, flag, presidential phone call — inserted
+into the middle of the timeline. Every task in the first two hours on the surface ran
+<em>over</em> plan; the schedule was recovered by sacrificing the lowest-priority item, the
+documented sample, exactly as the plan’s priority architecture intended. Total EVA
+still came in at the allotted ~2½ hours.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="1-the-script">1. The script</h2><a class="sl-anchor-link" href="#1-the-script"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “1. The script”</span></a></div>
+<p>The <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-lunar-surface-operations-plan/">LSOP</a> (§3) laid out a
+<strong>~22-hour stay</strong> structured as: post-landing checks → <strong>rest period</strong> → eat → EVA prep
+→ a <strong>single two-man EVA of 2 h 40 min</strong> (cabin depress to repress) → post-EVA →
+a second 4 h 40 min rest → liftoff prep. Its nominal-timeline sheets put the EVA at
+<strong>112:30–115:18 GET</strong> for the July 16 launch. The rationale section is explicit about
+the design philosophy: an early rest “before the strenuous pre-EVA, EVA, and post-EVA
+activities,” then a “slow, methodical” EVA with a <strong>gradual increase in task
+complexity</strong>, so that “should the EVA be terminated at any point in the timeline, the
+maximum data return for the time spent on the surface will be assured.”</p>
+<p>That termination-proofing is the priority order: <strong>cabin-window photography →
+contingency sample → EVA evaluation → <abbr class="gloss" title="The Lunar Module — Eagle, the two-stage lander that flew the descent, the surface stay, and the one-engine-no-backup ascent." data-def="The Lunar Module — Eagle, the two-stage lander that flew the descent, the surface stay, and the one-engine-no-backup ascent.">LM</abbr> inspection → bulk sample → deploy
+experiments (<abbr class="gloss" title="The Early Apollo Scientific Experiments Package — Apollo 11&#x27;s two-package science suite (PSEP + LRRR), the descoped precursor of ALSEP." data-def="The Early Apollo Scientific Experiments Package — Apollo 11&#x27;s two-package science suite (PSEP + LRRR), the descoped precursor of ALSEP.">EASEP</abbr> + SWC) → documented sample.</strong> The companion
+<a href="/ulixcortex/apollo11/wiki/sources/apollo-11-final-eva-procedures/">EVA Procedures</a> scripted only the
+cabin-side mechanics; its surface section just reads “EVA — Reference Lunar Surface
+Operations Plan.”</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="2-before-the-surface-script-the-landing-went-off-book-first">2. Before the surface script: the landing went off-book first</h2><a class="sl-anchor-link" href="#2-before-the-surface-script-the-landing-went-off-book-first"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “2. Before the surface script: the landing went off-book first”</span></a></div>
+<p>Context for everything that followed — covered in detail in
+<a href="/ulixcortex/apollo11/wiki/concepts/powered-descent-and-landing/">powered descent and landing</a>: the
+1202/1201 program alarms pulled the crew’s attention inside the cockpit, Armstrong
+took manual control below ~1500 ft and flew <strong>~1100 ft downrange</strong> of the aim point to
+clear West crater’s boulder field, touching down near the abort fuel limit. Two
+immediate surface consequences: the ground could not pinpoint Tranquility Base during
+the stay (the site was identified by matching the crew’s description of the avoided
+crater), and the LM came to rest with the <strong><abbr class="gloss" title="The Modular Equipment Stowage Assembly — the descent-stage fold-down bay carrying the TV camera, tools, and sample containers." data-def="The Modular Equipment Stowage Assembly — the descent-stage fold-down bay carrying the TV camera, tools, and sample containers.">MESA</abbr> work table in deep shadow</strong>, which
+later taxed the bulk-sample collection. The Mission Report’s §4.12 also logs a
+post-landing surprise: the <strong>mission timer failed</strong> and was shut down 11 hours to cool
+(it recovered for ascent), and the descent-oxidizer venting had to be redone at ground
+request.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="3-divergence-1--task-order-at-stay-level-eva-before-rest">3. Divergence #1 — task order at stay level: EVA before rest</h2><a class="sl-anchor-link" href="#3-divergence-1--task-order-at-stay-level-eva-before-rest"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “3. Divergence #1 — task order at stay level: EVA before rest”</span></a></div>
+<p>The single largest departure from the script was a deliberate one. The flight plan
+had the moonwalk <em>between two rest periods</em>; the crew had “given considerable thought”
+pre-flight to going early, and the conditions for it materialized: post-landing
+activities went cleanly, the crew wasn’t tired, and adaptation to 1/6 g was — per the
+<a href="/ulixcortex/apollo11/wiki/sources/apollo-11-technical-crew-debriefing-vol1/">debriefing</a> — “very rapid
+and very pleasant.” The Mission Report (§4.12.2) records the decision time precisely:
+<strong>at 104:40:00 GET</strong> (about two hours after landing) the crew and ground agreed to
+proceed with the EVA before the first rest period.</p>
+<p>Net effect on the clock: despite the prep overrun below, Armstrong was on the porch at
+<strong>109:19:16 GET</strong> — roughly <strong>3½ hours ahead</strong> of the LSOP timeline slot (depress
+scheduled at 112:30). The displaced rest period, taken <em>after</em> the EVA, was per the
+Mission Report “almost a complete loss” — cold suits, glycol-pump noise, light leaking
+through the shades; Aldrin slept fitfully for perhaps 2 hours, Armstrong not at all.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="4-divergence-2--the-hour-long-eva-prep">4. Divergence #2 — the hour-long EVA prep</h2><a class="sl-anchor-link" href="#4-divergence-2--the-hour-long-eva-prep"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “4. Divergence #2 — the hour-long EVA prep”</span></a></div>
+<p>Preparation for the EVA began at <strong>106:11:00 GET</strong> (Mission Report §4.12.2).
+Simulations had established <strong>2 hours</strong> as a reasonable allocation; from prep start to
+Armstrong on the porch took about <strong>3 hours 8 minutes</strong>. The overrun had three
+distinct causes, none of them the checklist itself (the crew: “we did, in fact, follow
+it pretty much to the letter”):</p>
+<ul>
+<li><strong>A real, cluttered cockpit.</strong> The simulator had only EVA gear, laid out in order.
+The flown cabin had “checklists, food packets, monoculars, and other miscellaneous
+items” — each forcing a small real-time decision about stowage or interference.
+The Mission Report’s verdict: prep “was conducted slowly, carefully, and
+deliberately, and future missions should be planned and conducted with the same
+philosophy.”</li>
+<li><strong>A known-bad connector.</strong> The <strong>RCU-to-PLSS 50-pin Bendix connector</strong> took at least
+<strong>10 minutes per unit</strong> to mate — a problem “occasionally encountered using the same
+equipment before flight” (debriefing: a years-old, unfixed issue); at one point the
+crew doubted it would connect at all.</li>
+<li><strong>Depressurization through the bacteria filter</strong> — never fully rehearsed end-to-end
+on the ground — “took much longer than had been anticipated” (~30 minutes per the
+debriefing). Cabin pressure never indicated below 0.1 psi, and the hatch visibly
+bent as it was pulled open against the residual pressure. Table 11-I’s first row
+quantifies the tail end: <strong>“final preparation for egress” planned 10:00, actual
+20:45</strong>, with ~8½ minutes spent between a 0.2-psia cabin reading and hatch opening.</li>
+</ul>
+<div class="sl-heading-wrapper level-h2"><h2 id="5-task-order-on-the-surface-the-science-spine-held-with-a-ceremonial-wedge">5. Task order on the surface: the science spine held, with a ceremonial wedge</h2><a class="sl-anchor-link" href="#5-task-order-on-the-surface-the-science-spine-held-with-a-ceremonial-wedge"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “5. Task order on the surface: the science spine held, with a ceremonial wedge”</span></a></div>
+<p>Side by side, scripted sequence vs. the flown one (actual GETs from the
+<a href="/ulixcortex/apollo11/analyses/2026-06-09-apollo-11-eva-timeline/">EVA timeline</a>):</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>#</th><th>LSOP nominal sequence</th><th>As flown</th><th>Divergence</th></tr></thead><tbody><tr><td>1</td><td>Depress, <abbr class="gloss" title="The crew positions as transcript speaker codes: Commander (Armstrong), Command Module Pilot (Collins), Lunar Module Pilot (Aldrin)." data-def="The crew positions as transcript speaker codes: Commander (Armstrong), Command Module Pilot (Collins), Lunar Module Pilot (Aldrin).">CDR</abbr> egress</td><td>Porch 109:19, first step <strong>109:24:48</strong></td><td>~3½ h early (rest skipped), prep long</td></tr><tr><td>2</td><td>CDR environmental familiarization</td><td>Done, faster than planned</td><td>—</td></tr><tr><td>3</td><td>Contingency sample</td><td>Bagged 109:37</td><td>Table 11-I: “performed <strong>out of sequence</strong> with planned timeline” (interleaved with photography)</td></tr><tr><td>4</td><td>Preliminary LM checks</td><td>Done</td><td>”Out of sequence”</td></tr><tr><td>5</td><td><abbr class="gloss" title="The crew positions as transcript speaker codes: Commander (Armstrong), Command Module Pilot (Collins), Lunar Module Pilot (Aldrin)." data-def="The crew positions as transcript speaker codes: Commander (Armstrong), Command Module Pilot (Collins), Lunar Module Pilot (Aldrin).">LMP</abbr> egress</td><td>Aldrin on surface 109:43</td><td>On time (7:00 planned = 7:00 actual)</td></tr><tr><td>—</td><td><em>(not in nominal timeline)</em></td><td><strong>Plaque unveiling 109:52</strong></td><td>Unscripted insertion; interrupted TV deployment</td></tr><tr><td>6</td><td>CDR redeploys TV to tripod site</td><td>Partial deploy interrupted, completed late</td><td>+0:50 / +4:50 on the two phases</td></tr><tr><td>7</td><td>LMP deploys Solar Wind Composition</td><td>Deployed 109:58</td><td>Right slot, +2:20</td></tr><tr><td>—</td><td><em>(not in nominal timeline)</em></td><td><strong>Flag raised 110:09; President Nixon’s call 110:16</strong></td><td>Wholly unscripted; ~9 min absorbed into “LMP environmental familiarization”</td></tr><tr><td>8</td><td>Bulk sample (CDR) + <abbr class="gloss" title="The extravehicular mobility unit — the integrated suit-plus-life-support ensemble whose performance the Mission Report grades in §10." data-def="The extravehicular mobility unit — the integrated suit-plus-life-support ensemble whose performance the Mission Report grades in §10.">EMU</abbr> evaluation</td><td>Sealed 110:35</td><td>+4:15; scooping itself “about double the planned time”</td></tr><tr><td>9</td><td>LM inspection (LMP, then CDR joins)</td><td>Done</td><td>+4:15 / +1:40; no abnormal conditions found</td></tr><tr><td>10</td><td>EASEP offload + deploy (PSE, <abbr class="gloss" title="The Laser Ranging Retroreflector — 100 corner cubes still returning laser pulses today." data-def="The Laser Ranging Retroreflector — 100 corner cubes still returning laser pulses today.">LRRR</abbr>)</td><td>Offload fast; deployed 111:02–111:12</td><td>Offload −1:40, deploy +4:00 (leveling trouble)</td></tr><tr><td>11</td><td>Documented sample, incl. core tubes</td><td>111:16–111:26, cut to a grab-variety collection + 2 cores</td><td><strong>−16:10, “partially completed”</strong></td></tr><tr><td>12</td><td>SWC retrieval, pack/seal SRCs</td><td>Foil rolled up 111:26</td><td>Per plan</td></tr><tr><td>13</td><td>LMP ingress → <abbr class="gloss" title="Sample Return Container — the two sealed boxes (~130 lb capacity together) that carried the samples home." data-def="Sample Return Container — the two sealed boxes (~130 lb capacity together) that carried the samples home.">SRC</abbr> transfer → CDR ingress</td><td>Hatch closed <strong>111:39:13</strong></td><td>All under plan (0:00 / −5:00 / −3:16)</td></tr></tbody></table>
+<p>Two things stand out. The <strong>science spine ran in scripted order</strong> — contingency →
+bulk → experiments → documented, exactly the LSOP priority ladder. And the
+<strong>ceremonial block is invisible in the plan</strong>: neither the plaque nor the flag appears
+anywhere on the LSOP nominal-timeline sheets (even the June 27 revision), and the
+presidential call was a real-time insertion; Table 11-I books their cost as
+interruptions to the TV deployment and a +9:00 overrun on Aldrin’s “environmental
+familiarization” (“includes assisting Commander with plaque and television camera
+deployment”). See <a href="/ulixcortex/apollo11/wiki/concepts/ceremonial-surface-activities/">ceremonial surface activities</a>.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="6-durations-mission-report-table-11-i-planned-vs-actual">6. Durations: Mission Report Table 11-I, planned vs. actual</h2><a class="sl-anchor-link" href="#6-durations-mission-report-table-11-i-planned-vs-actual"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “6. Durations: Mission Report Table 11-I, planned vs. actual”</span></a></div>
+<p>Transcribed from the raw scan (MSC-00171, p. 11-27); times are min:sec.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Event</th><th>Planned</th><th>Actual</th><th>Δ</th><th>Table’s remarks</th></tr></thead><tbody><tr><td>Final preparation for egress</td><td>10:00</td><td>20:45</td><td><strong>+10:45</strong></td><td>~8 min 30 s from 0.2-psia cabin reading to hatch opening</td></tr><tr><td>Commander egress to surface</td><td>10:00</td><td>8:00</td><td>−2:00</td><td></td></tr><tr><td>Commander environmental familiarization</td><td>5:00</td><td>2:05</td><td>−2:55*</td><td></td></tr><tr><td>Contingency sample collection</td><td>4:30</td><td>3:36</td><td>−0:55</td><td>Performed out of sequence with planned timeline</td></tr><tr><td>Preliminary spacecraft checks</td><td>6:30</td><td>6:35</td><td>+0:05</td><td>Out of sequence</td></tr><tr><td>LMP egress to surface</td><td>7:00</td><td>7:00</td><td>0:00</td><td>~2 min 10 s for <abbr class="gloss" title="The Portable Life Support System — the backpack supplying oxygen, cooling water, and communications for the moonwalk." data-def="The Portable Life Support System — the backpack supplying oxygen, cooling water, and communications for the moonwalk.">PLSS</abbr> checks</td></tr><tr><td>Commander photography and observation</td><td>—</td><td>2:40</td><td>+2:40</td><td>(no discrete planned slot)</td></tr><tr><td>TV camera deployment (partial)</td><td>4:00</td><td>4:50</td><td>+0:50</td><td>Deployment interrupted for activity with plaque</td></tr><tr><td>LMP environmental familiarization</td><td>6:00</td><td>15:00</td><td><strong>+9:00</strong></td><td>Includes assisting Commander with plaque and TV camera deployment</td></tr><tr><td>TV camera deployment (complete)</td><td>7:00</td><td>11:50</td><td>+4:50</td><td>Includes photography of SWC and comments on surface characteristics</td></tr><tr><td>Solar wind composition deployment</td><td>4:00</td><td>6:20</td><td>+2:20</td><td></td></tr><tr><td>Bulk sample + EMU evaluation (complete)</td><td>14:30</td><td>18:45</td><td>+4:15</td><td></td></tr><tr><td>LM inspection by LMP</td><td>14:00</td><td>18:15</td><td>+4:15</td><td></td></tr><tr><td>LM inspection by Commander</td><td>15:30</td><td>17:10</td><td>+1:40</td><td>Includes closeup (<abbr class="gloss" title="The Apollo Lunar Surface Close-up Camera — the stereo macro camera for centimeter-scale soil pictures." data-def="The Apollo Lunar Surface Close-up Camera — the stereo macro camera for centimeter-scale soil pictures.">ALSCC</abbr>) photographs</td></tr><tr><td>Off-load experiment package</td><td>7:00</td><td>5:20</td><td>−1:40</td><td>From SEQ-bay door open to door closed</td></tr><tr><td>Deploy experiment package</td><td>9:00</td><td>13:00</td><td>+4:00</td><td>Site selection to end of photography; trouble leveling the equipment</td></tr><tr><td>Documented sample collection</td><td><strong>34:00</strong></td><td><strong>17:50</strong></td><td><strong>−16:10</strong></td><td><strong>Partially completed</strong></td></tr><tr><td>LMP ingress</td><td>4:00</td><td>4:00</td><td>0:00</td><td></td></tr><tr><td>Transfer sample return containers</td><td>14:00</td><td>9:00</td><td>−5:00</td><td></td></tr><tr><td>Commander ingress</td><td>9:30</td><td>6:14</td><td>−3:16</td><td>Includes cabin repressurization</td></tr></tbody></table>
+<p>* <em>The scan prints −2:00; −2:55 is the arithmetic of the planned/actual cells. The
+scan is rough; values were cross-checked planned + Δ = actual where legible.</em></p>
+<p><strong>The pattern:</strong> essentially everything from hatch-open through experiment deployment
+ran <em>over</em> — small overruns from deliberateness and dust, large ones from the
+unscripted ceremonies (+9:00) and the EASEP leveling fight (+4:00; no horizon
+reference, ineffective 1/6-g balance cues, scraping soil to change an instrument’s
+slope). The whole deficit was then repaid in one place: the <strong>documented sample</strong>, the
+plan’s own lowest-priority item, cut from 34 to ~18 minutes. Per §4.12:
+“Insufficient time remained to take the documented sample, although as wide a variety
+of rocks was selected as remaining time permitted” — plus two core tubes that could
+only be driven ~6 inches into unexpectedly hard subsurface (the hammer missed several
+times). Closeout, by contrast, beat the plan across the board. From porch to
+hatch-close took ~2 h 20 min; the Mission Report books the surface exploration as
+completed within the allotted <strong>~2½ hours</strong>.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="7-the-surprises-the-plan-couldnt-have-scripted">7. The surprises the plan couldn’t have scripted</h2><a class="sl-anchor-link" href="#7-the-surprises-the-plan-couldnt-have-scripted"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “7. The surprises the plan couldn’t have scripted”</span></a></div>
+<ul>
+<li><strong>Dust as a system problem.</strong> The “graphite-like” powder coated the <abbr class="gloss" title="The Lunar Equipment Conveyor — the pulley &#x22;clothesline&#x22; that moved cameras and rock boxes through the hatch (and rained dust into the cabin)." data-def="The Lunar Equipment Conveyor — the pulley &#x22;clothesline&#x22; that moved cameras and rock boxes through the hatch (and rained dust into the cabin).">LEC</abbr> straps until
+the conveyor bound and rained dust into the cabin (“we all looked like chimney
+sweeps”), made the ladder slippery, hid the white TV cable (which kept snaring
+Armstrong’s feet), and forced ~20 sunlit trips for the bulk sample because the MESA
+sat in deep shadow — see <a href="/ulixcortex/apollo11/wiki/concepts/lunar-regolith-and-soil-mechanics/">regolith and soil mechanics</a>.</li>
+<li><strong>A two-layer surface.</strong> Soft fines over a hard substrate: core tubes stopped at
+~6 in, the SWC staff and flagstaff penetrated only 4–5 in, and the
+<a href="/ulixcortex/apollo11/wiki/concepts/passive-seismic-experiment/">PSE</a> bubble level wouldn’t settle.</li>
+<li><strong>The body worked better than predicted.</strong> Metabolic rates ran <em>lower</em> than
+expected (§10); gravity subjectively “felt closer to one-tenth”; the natural gait
+was an unplanned lope. The crew’s recommendation: future crews can take on more.</li>
+<li><strong>An accidental first seismic calibration.</strong> The jettisoned PLSS backpacks hit the
+surface and the just-deployed seismometer registered the shocks — an unplanned
+end-to-end test of the instrument.</li>
+<li><strong>Small breakages.</strong> A cockpit circuit breaker snapped off against a PLSS during
+post-EVA movement (§16.2.11); the sample boxes took “great force” to seal; voice
+dropouts inside the cabin pre- and post-EVA never recurred outside.</li>
+</ul>
+<div class="sl-heading-wrapper level-h2"><h2 id="8-what-held-the-plans-architecture-absorbed-its-own-failure">8. What held: the plan’s architecture absorbed its own failure</h2><a class="sl-anchor-link" href="#8-what-held-the-plans-architecture-absorbed-its-own-failure"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “8. What held: the plan’s architecture absorbed its own failure”</span></a></div>
+<p>The deepest finding is that the LSOP diverged everywhere in detail and nowhere in
+structure. Its two governing ideas — <strong>priority-ordered tasks</strong> (“maximum data return
+for the time spent”) and a <strong>conservative, buildup-paced timeline</strong> — are precisely
+what let a late prep, an early start, a presidential phone call, and a dozen small
+overruns end with: all five priority-list items above the documented sample fully
+accomplished, all three experiments deployed and working, ~21 kg of samples sealed and
+transferred, hatch closed at 111:39:13, and liftoff on schedule at 124:22 GET after a
+<strong>21.6-hour stay against the ~22 planned</strong>. The only casualties were the full
+documented-sample protocol — and a night’s sleep.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="sources">Sources</h2><a class="sl-anchor-link" href="#sources"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “Sources”</span></a></div>
+<ul>
+<li><a href="/ulixcortex/apollo11/wiki/sources/apollo-11-lunar-surface-operations-plan/">Apollo 11 Lunar Surface Operations Plan</a> — §3.1 timeline rationale, §3.4 nominal timeline sheets (112:30–115:18 GET; 0+00→2+40)</li>
+<li><a href="/ulixcortex/apollo11/wiki/sources/apollo-11-mission-report/">Apollo 11 Mission Report (MSC-00171)</a> — §4.12, §12 (rest period), Table 11-I</li>
+<li><a href="/ulixcortex/apollo11/wiki/sources/apollo-11-technical-crew-debriefing-vol1/">Apollo 11 Technical Crew Debriefing, Vol. 1</a> — §9–10</li>
+<li><a href="/ulixcortex/apollo11/wiki/sources/apollo-11-final-eva-procedures/">Apollo 11 EVA Procedures (Final)</a></li>
+<li><a href="/ulixcortex/apollo11/wiki/sources/apollo-11-technical-air-to-ground-voice-transcription/">Air-to-ground transcript</a> via the <a href="/ulixcortex/apollo11/analyses/2026-06-09-apollo-11-eva-timeline/">annotated EVA timeline</a></li>
+</ul> </div> <aside class="connections" aria-label="Connections"><h2 class="cx-title">Connections</h2><p class="cx-sub">4 pages link to this article</p><ul class="cx-list"><li><a href="/ulixcortex/apollo11/analyses/2026-06-11-anomalies-register/">Apollo 11 anomalies and malfunctions register — Mission Report §16, transcribed</a></li><li><a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-eva-planned-vs-actual/">Apollo 11 EVA planned vs. actual timeline</a></li><li><a href="/ulixcortex/apollo11/wiki/topics/planning-procedures-and-training/">Planning, procedures, and training</a></li><li><a href="/ulixcortex/apollo11/analyses/2026-06-12-sample-provenance-reconstruction/">Where did each rock actually come from? — a provenance reconstruction of the 53 Apollo 11 samples</a></li></ul></aside><footer class="sl-flex astro-3yyafb3n"> <div class="meta sl-flex astro-3yyafb3n">   </div> <div class="pagination-links print:hidden astro-u2l5gyhi" dir="ltr">   </div>  </footer> </div> </div>  </main> </div> </div> </div> </div> </body></html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html><html lang="en" dir="ltr" data-theme="dark" data-has-toc data-has-sidebar class="astro-bguv2lll"> <head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>The last three minutes: Eagle's final approach, reconstructed — then measured against the 2011 ground truth | Apollo 11</title><link rel="canonical" href="https://ulix.app/ulixcortex/apollo11/analyses/2026-06-12-the-last-three-minutes/"/><link rel="sitemap" href="/ulixcortex/apollo11/sitemap-index.xml"/><link rel="shortcut icon" href="/ulixcortex/apollo11/favicon.svg" type="image/svg+xml"/><meta name="generator" content="Astro v6.4.8"/><meta name="generator" content="Starlight v0.40.0"/><meta property="og:title" content="The last three minutes: Eagle's final approach, reconstructed — then measured against the 2011 ground truth"/><meta property="og:type" content="article"/><meta property="og:url" content="https://ulix.app/ulixcortex/apollo11/analyses/2026-06-12-the-last-three-minutes/"/><meta property="og:locale" content="en"/><meta property="og:description" content="A curated, cited knowledge base of the Apollo 11 lunar-surface mission — NASA primary sources, an interlinked wiki, and original analyses."/><meta property="og:site_name" content="Apollo 11"/><meta name="twitter:card" content="summary_large_image"/><meta name="description" content="A curated, cited knowledge base of the Apollo 11 lunar-surface mission — NASA primary sources, an interlinked wiki, and original analyses."/><script>
+	window.StarlightThemeProvider = (() => {
+		const storedTheme =
+			typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
+		const theme =
+			storedTheme ||
+			(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+		document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+		return {
+			updatePickers(theme = storedTheme || 'auto') {
+				document.querySelectorAll('starlight-theme-select').forEach((picker) => {
+					const select = picker.querySelector('select');
+					if (select) select.value = theme;
+					/** @type {HTMLTemplateElement | null} */
+					const tmpl = document.querySelector(`#theme-icons`);
+					const newIcon = tmpl && tmpl.content.querySelector('.' + theme);
+					if (newIcon) {
+						const oldIcon = picker.querySelector('svg.label-icon');
+						if (oldIcon) {
+							oldIcon.replaceChildren(...newIcon.cloneNode(true).childNodes);
+						}
+					}
+				});
+			},
+		};
+	})();
+</script><template id="theme-icons"><svg aria-hidden="true" class="light astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/></svg><svg aria-hidden="true" class="dark astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/></svg><svg aria-hidden="true" class="auto astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg></template><link rel="stylesheet" href="/ulixcortex/apollo11/_astro/print.DNXP8c50.css" media="print"><link rel="stylesheet" href="/ulixcortex/apollo11/_astro/common.DtDg52fN.css"><link rel="stylesheet" href="/ulixcortex/apollo11/_astro/Code.BcHZMqfA.css"><script type="module" src="/ulixcortex/apollo11/_astro/page.B_tncCx8.js"></script></head> <body class="astro-bguv2lll"> <a href="#_top" class="astro-7q3lir66">Skip to content</a> <div class="page sl-flex astro-vrdttmbt"> <header class="header astro-vrdttmbt"><div class="header astro-kmkmnagf"> <div class="title-wrapper sl-flex astro-kmkmnagf"> <a href="/ulixcortex/apollo11/" class="site-title sl-flex astro-m46x6ez3">  <span class="astro-m46x6ez3" translate="no"> Apollo 11 </span> </a> </div> <div class="sl-flex print:hidden astro-kmkmnagf"> <site-search class="astro-kmkmnagf astro-v37mnknz" data-translations="{&quot;placeholder&quot;:&quot;Search&quot;}"> <button data-open-modal disabled aria-label="Search" aria-keyshortcuts="Control+K" class="astro-v37mnknz"> <svg aria-hidden="true" class="astro-v37mnknz astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg> <span class="sl-hidden md:sl-block astro-v37mnknz" aria-hidden="true">Search</span> <kbd class="sl-hidden md:sl-flex astro-v37mnknz" style="display: none;"> <kbd class="astro-v37mnknz">Ctrl</kbd><kbd class="astro-v37mnknz">K</kbd> </kbd> </button> <dialog style="padding:0" aria-label="Search" class="astro-v37mnknz"> <div class="dialog-frame sl-flex astro-v37mnknz">  <button data-close-modal class="sl-flex md:sl-hidden astro-v37mnknz"> Cancel </button> <div class="search-container astro-v37mnknz"> <div id="starlight__search" class="astro-v37mnknz"></div> </div> </div> </dialog> </site-search>  <script>
+	(() => {
+		const openBtn = document.querySelector('button[data-open-modal]');
+		const shortcut = openBtn?.querySelector('kbd');
+		if (!openBtn || !(shortcut instanceof HTMLElement)) return;
+		const platformKey = shortcut.querySelector('kbd');
+		if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+			platformKey.textContent = '⌘';
+			openBtn.setAttribute('aria-keyshortcuts', 'Meta+K');
+		}
+		shortcut.style.display = '';
+	})();
+</script> <script type="module" src="/ulixcortex/apollo11/_astro/Search.astro_astro_type_script_index_0_lang.4-YWvwnL.js"></script>  </div> <div class="sl-hidden md:sl-flex print:hidden right-group astro-kmkmnagf"> <div class="sl-flex social-icons astro-kmkmnagf"> <a class="navclock" href="/ulixcortex/apollo11/clock/" aria-label="Apollo 11 mission clock" title="Apollo 11 mission clock" data-navclock> <span class="nc-dot" aria-hidden="true"></span> <span class="nc-text mono" aria-hidden="true">102:45:40 GET</span> </a> <script type="application/json" data-navclock-data>{"liftoffUTC":"1969-07-16T13:32:00Z","maxSec":703098}</script> <script type="module">const a=document.querySelector("[data-navclock]"),T=document.querySelector("[data-navclock-data]");if(a&&T){let c=function(){const t=d();t>=0&&t<=g?(a.classList.add("live"),a.title="Following Apollo 11 in real time — open the full mission clock",s.textContent=`LIVE ${U(t)}`):(a.classList.remove("live"),a.title="Countdown to the Apollo 11 liftoff anniversary — open the full mission clock",s.textContent=`${m(h())} to liftoff`)};const{liftoffUTC:C,maxSec:u}=JSON.parse(T.textContent),r=Date.parse(C),g=u,l=new Date(r),s=a.querySelector(".nc-text"),e=t=>String(t).padStart(2,"0"),d=()=>{const t=new Date;return(Date.UTC(1969,t.getUTCMonth(),t.getUTCDate(),t.getUTCHours(),t.getUTCMinutes(),t.getUTCSeconds())-r)/1e3},U=t=>(t=Math.max(0,Math.floor(t)),`T+${String(Math.floor(t/3600)).padStart(3,"0")}:${e(Math.floor(t%3600/60))}:${e(t%60)}`),h=()=>{const t=new Date,o=[l.getUTCMonth(),l.getUTCDate(),l.getUTCHours(),l.getUTCMinutes(),l.getUTCSeconds()];let n=Date.UTC(t.getUTCFullYear(),...o);return n<=t.getTime()&&(n=Date.UTC(t.getUTCFullYear()+1,...o)),(n-t.getTime())/1e3},m=t=>{t=Math.max(0,Math.floor(t));const o=Math.floor(t/86400),n=Math.floor(t%86400/3600),i=Math.floor(t%3600/60),f=t%60;return o>0?`T− ${o}d ${e(n)}:${e(i)}:${e(f)}`:`T− ${e(n)}:${e(i)}:${e(f)}`};c(),setInterval(c,1e3)}</script> </div> <starlight-theme-select>  <label style="--sl-select-width: 6.25em" class="astro-4yphtoen"> <span class="sr-only astro-4yphtoen">Select theme</span> <svg aria-hidden="true" class="icon label-icon astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg> <select autocomplete="off" class="astro-4yphtoen"> <option value="dark" class="astro-4yphtoen">Dark</option><option value="light" class="astro-4yphtoen">Light</option><option value="auto" selected class="astro-4yphtoen">Auto</option> </select> <svg aria-hidden="true" class="icon caret astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg> </label> </starlight-theme-select>  <script>
+	StarlightThemeProvider.updatePickers();
+</script> <script type="module">const r="starlight-theme",o=e=>e==="auto"||e==="dark"||e==="light"?e:"auto",c=()=>o(typeof localStorage<"u"&&localStorage.getItem(r));function n(e){typeof localStorage<"u"&&localStorage.setItem(r,e==="light"||e==="dark"?e:"")}const l=()=>matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";function t(e){StarlightThemeProvider.updatePickers(e),document.documentElement.dataset.theme=e==="auto"?l():e,n(e)}matchMedia("(prefers-color-scheme: light)").addEventListener("change",()=>{c()==="auto"&&t("auto")});class s extends HTMLElement{constructor(){super(),t(c()),this.querySelector("select")?.addEventListener("change",a=>{a.currentTarget instanceof HTMLSelectElement&&t(o(a.currentTarget.value))})}}customElements.define("starlight-theme-select",s);</script> <script type="module">class s extends HTMLElement{constructor(){super();const e=this.querySelector("select");e&&(e.addEventListener("change",t=>{t.currentTarget instanceof HTMLSelectElement&&(window.location.pathname=t.currentTarget.value)}),window.addEventListener("pageshow",t=>{if(!t.persisted)return;const n=e.querySelector("option[selected]")?.index;n!==e.selectedIndex&&(e.selectedIndex=n??0)}))}}customElements.define("starlight-lang-select",s);</script> </div> </div></header> <nav class="sidebar print:hidden astro-vrdttmbt" aria-label="Main"> <starlight-menu-button class="print:hidden astro-jif73yzw"> <button aria-expanded="false" aria-label="Menu" aria-controls="starlight__sidebar" class="sl-flex md:sl-hidden astro-jif73yzw"> <svg aria-hidden="true" class="open-menu astro-jif73yzw astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M3 8h18a1 1 0 1 0 0-2H3a1 1 0 0 0 0 2Zm18 8H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z"/></svg> <svg aria-hidden="true" class="close-menu astro-jif73yzw astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="m13.41 12 6.3-6.29a1.004 1.004 0 1 0-1.42-1.42L12 10.59l-6.29-6.3a1.004 1.004 0 0 0-1.42 1.42l6.3 6.29-6.3 6.29a1 1 0 0 0 0 1.42.998.998 0 0 0 1.42 0l6.29-6.3 6.29 6.3a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.42L13.41 12Z"/></svg> </button> </starlight-menu-button> <script type="module">class s extends HTMLElement{constructor(){super(),this.btn=this.querySelector("button"),this.btn.addEventListener("click",()=>this.toggleExpanded());const t=this.closest("nav");t&&t.addEventListener("keyup",e=>this.closeOnEscape(e))}setExpanded(t){this.setAttribute("aria-expanded",String(t)),document.body.toggleAttribute("data-mobile-menu-expanded",t)}toggleExpanded(){this.setExpanded(this.getAttribute("aria-expanded")!=="true")}closeOnEscape(t){t.code==="Escape"&&(this.setExpanded(!1),this.btn.focus())}}customElements.define("starlight-menu-button",s);</script>  <div id="starlight__sidebar" class="sidebar-pane astro-vrdttmbt"> <div class="sidebar-content sl-flex astro-vrdttmbt"> <sl-sidebar-state-persist data-hash="1de5z3g" class="astro-kku4brbg"> <script aria-hidden="true">
+		(() => {
+			try {
+				if (!matchMedia('(min-width: 50em)').matches) return;
+				/** @type {HTMLElement | null} */
+				const target = document.querySelector('sl-sidebar-state-persist');
+				const state = JSON.parse(sessionStorage.getItem('sl-sidebar-state') || '0');
+				if (!target || !state || target.dataset.hash !== state.hash) return;
+				window._starlightScrollRestore = state.scroll;
+				customElements.define(
+					'sl-sidebar-restore',
+					class SidebarRestore extends HTMLElement {
+						connectedCallback() {
+							try {
+								const idx = parseInt(this.dataset.index || '');
+								const details = this.closest('details');
+								if (details && typeof state.open[idx] === 'boolean') details.open = state.open[idx];
+							} catch {}
+						}
+					}
+				);
+			} catch {}
+		})();
+	</script>  <ul class="top-level astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/" class="large astro-3ii7xxms"> <span class="astro-3ii7xxms">Overview</span>  </a> </li><li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <summary class="astro-3ii7xxms"> <span class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">Explore</span>  </span> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg> </summary> <sl-sidebar-restore data-index="0"></sl-sidebar-restore> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/descent/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">The last three minutes</span> <span class="sl-badge success small  astro-3ii7xxms astro-avdet4wd">new</span> </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/samples/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Sample explorer</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/clock/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Mission clock</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/transcripts/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Transcript reader</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/map/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Interactive photo-map</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/link-map/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">The link map</span> <span class="sl-badge success small  astro-3ii7xxms astro-avdet4wd">new</span> </a> </li> </ul> </details> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/" class="large astro-3ii7xxms"> <span class="astro-3ii7xxms">The wiki</span>  </a> </li><li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <summary class="astro-3ii7xxms"> <span class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">Topics</span>  </span> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg> </summary> <sl-sidebar-restore data-index="1"></sl-sidebar-restore> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/topics/apollo-11/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/topics/apollo-lunar-surface-experiments/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo lunar surface experiments</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/topics/communications-and-public-record/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Communications and the public record</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/topics/eva-and-surface-operations/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">EVA and surface operations</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/topics/lunar-geology-and-samples/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar geology and samples</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/topics/planning-procedures-and-training/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Planning, procedures, and training</span>  </a> </li> </ul> </details> </li><li class="astro-3ii7xxms"> <details class="astro-3ii7xxms"> <summary class="astro-3ii7xxms"> <span class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">Concepts</span>  </span> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg> </summary> <sl-sidebar-restore data-index="2"></sl-sidebar-restore> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-basalt-suites/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 basalt suites (high-K and low-K)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-crew-health-and-biomedical/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Crew health and biomedical performance on Apollo 11</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-eva/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 EVA (first moonwalk)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-eva-equipment/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 EVA life-support and mobility equipment</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-eva-planned-vs-actual/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 EVA planned vs. actual timeline</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-first-order-results/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">First-order results of Apollo 11</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-glossary/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 glossary</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-lm-onboard-checklists/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 LM onboard checklists</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-lunar-sample-types/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 lunar sample types</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-mission/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 mission</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-nominal-mission-timeline/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 nominal mission timeline</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-photographic-index/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 photographic index</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-sample-inventory/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 sample inventory</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-sampling-tools/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 sampling tools and containers</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-surface-photography/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 surface photography</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/apollo-11-training-and-simulations/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 training and simulations</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/ceremonial-surface-activities/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Ceremonial and symbolic surface activities</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/command-and-service-module-columbia/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Command and Service Module Columbia</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/contingency-eva-procedures/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 contingency EVA procedures</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/early-apollo-scientific-experiments-package/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Early Apollo Scientific Experiments Package (EASEP)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/goss-net-1-air-to-ground-communications/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">GOSS NET 1 air-to-ground communications</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/high-titanium-mare-basalt/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">High-titanium mare basalt</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/laser-ranging-retroreflector/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Laser Ranging Retroreflector (S-078)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/lroc-imaging-of-apollo-11-landing-site/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">LROC imaging of the Apollo 11 landing site</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/lunar-ascent-and-rendezvous/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar ascent and rendezvous</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/lunar-dust-operations/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar dust as an operational problem</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/lunar-field-geology/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar field geology (Experiment S-059)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/lunar-laser-ranging-results/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar laser ranging: results and legacy</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/lunar-module-eagle/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar Module Eagle</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/lunar-quarantine-and-back-contamination/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar quarantine and back-contamination</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/lunar-regolith-and-soil-mechanics/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar regolith and soil mechanics</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/lunar-sample-collection-and-containers/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar sample collection and containers</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/lunar-sample-numbering-and-curation/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar sample numbering and curation</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/lunar-seismic-results/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar seismicity and interior structure (PSE results)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/lunar-surface-mobility/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar surface mobility in one-sixth gravity</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/minerals-first-identified-in-apollo-11-samples/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Minerals first identified in Apollo 11 samples</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/passive-seismic-experiment/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Passive Seismic Experiment (S-031)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/powered-descent-and-landing/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Powered descent and landing</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/solar-wind-composition-experiment/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Solar Wind Composition experiment (S-080)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/surface-exposure-and-space-weathering/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Surface exposure and space weathering (Apollo 11 samples)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/television-broadcast-and-communications/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Television broadcast and surface communications</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/concepts/tranquility-base/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Tranquility Base (Landing Site 2)</span>  </a> </li> </ul> </details> </li><li class="astro-3ii7xxms"> <details class="astro-3ii7xxms"> <summary class="astro-3ii7xxms"> <span class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">Source notes</span>  </span> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg> </summary> <sl-sidebar-restore data-index="3"></sl-sidebar-restore> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-final-eva-procedures/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 EVA Procedures (Final)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-flight-plan/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Flight Plan (Final, AS-506)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-lm-lunar-surface-checklist/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 LM Lunar Surface Checklist (LM-5)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-lm-systems-activation-checklist/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 LM Systems Activation Checklist</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-lunar-sample-compendium/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Lunar Sample Compendium (sample entries)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-lunar-sample-information-catalogue/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Lunar Sample Information Catalogue (JSC 12522, Revised)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-lunar-surface-operations-plan/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Lunar Surface Operations Plan (Final Edition)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-mission-report/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Mission Report (MSC-00171)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-onboard-voice-transcription-cm/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Onboard Voice Transcription (CM DSE)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-photography-index/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Photography Index (70mm and 16mm)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-preliminary-science-report/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Preliminary Science Report (NASA SP-214)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-press-kit/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Press Kit (Release 69-83K)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-sampling-tools-catalog/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Catalog of Apollo Lunar Surface Geological Sampling Tools and Containers (JSC-23454)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-spacecraft-commentary-pao/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Spacecraft Commentary (PAO Mission Commentary)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-technical-air-to-ground-voice-transcription/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Technical Air-to-Ground Voice Transcription (GOSS NET 1)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-technical-crew-debriefing-vol1/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Technical Crew Debriefing — Volume 1 (Sections 1–10)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/apollo-11-technical-crew-debriefing-vol2/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 Technical Crew Debriefing — Volume 2 (Sections 11–27)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/bender-lunar-laser-ranging-experiment/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">The Lunar Laser Ranging Experiment (Bender et al., 1973)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/biomedical-results-of-apollo/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Biomedical Results of Apollo (NASA SP-368)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/dickey-lunar-laser-ranging-continuing-legacy/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Lunar Laser Ranging: A Continuing Legacy of the Apollo Program (Dickey et al., 1994)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/easep-handbook-for-apollo-11-flight-crew/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">EASEP Handbook for Apollo 11 Flight Crew</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/latham-apollo-passive-seismic-results/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Results from the Apollo Passive Seismic Experiment (Latham et al., 1977)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/lroc-apollo-11-landing-site-imagery/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">LROC NAC imagery of the Apollo 11 landing site</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/wiki/sources/neil-armstrong-jsc-oral-history/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Neil A. Armstrong — JSC Oral History (September 19, 2001)</span>  </a> </li> </ul> </details> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/sources/" class="large astro-3ii7xxms"> <span class="astro-3ii7xxms">Primary sources</span>  </a> </li><li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <summary class="astro-3ii7xxms"> <span class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">Analyses</span>  </span> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg> </summary> <sl-sidebar-restore data-index="4"></sl-sidebar-restore> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Analyses</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-09-apollo-11-eva-timeline/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 EVA — annotated master timeline</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-09-apollo-11-sample-table/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 returned samples — master table</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-09-what-apollo-11-established/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">What did Apollo 11 actually establish about the Moon?</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-10-plan-vs-actual/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Plan vs. actual: where Apollo 11 diverged from the script</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-10-tranquility-base-photomap/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Tranquility Base photo-map — where the samples were taken</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-11-anomalies-register/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Apollo 11 anomalies and malfunctions register — Mission Report §16, transcribed</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-11-eva-prep-four-layers/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">One hour, four layers: the EVA-prep overrun traced through the full procedural chain</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-11-follow-apollo-11-in-real-time/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Follow Apollo 11 in real time — a day-by-day anniversary companion (July 16–24)</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-11-memory-vs-record/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Memory vs. record: Armstrong 2001 against the 1969 documents, on four episodes</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-11-one-moment-three-records/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">One moment, three records: the landing and the first step, side by side</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-11-source-reading-plan/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Reading the library: three guided paths through all 24 sources</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-11-wiki-glossary/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Glossary: the acronyms and terms of art of the lunar-surface wiki</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-12-discrepancy-ledger/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">The discrepancy ledger — where the Apollo 11 primary record disagrees with itself</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-12-sample-provenance-reconstruction/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Where did each rock actually come from? — a provenance reconstruction of the 53 Apollo 11 samples</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/ulixcortex/apollo11/analyses/2026-06-12-the-last-three-minutes/" aria-current="page" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">The last three minutes: Eagle&#39;s final approach, reconstructed — then measured against the 2011 ground truth</span>  </a> </li> </ul> </details> </li> </ul>  <script aria-hidden="true">
+		(() => {
+			const scroller = document.getElementById('starlight__sidebar');
+			if (!window._starlightScrollRestore || !scroller) return;
+			scroller.scrollTop = window._starlightScrollRestore;
+			delete window._starlightScrollRestore;
+		})();
+	</script> </sl-sidebar-state-persist> <div class="md:sl-hidden"> <div class="mobile-preferences sl-flex astro-wu23bvmt"> <div class="social-icons astro-wu23bvmt"> <a class="navclock" href="/ulixcortex/apollo11/clock/" aria-label="Apollo 11 mission clock" title="Apollo 11 mission clock" data-navclock> <span class="nc-dot" aria-hidden="true"></span> <span class="nc-text mono" aria-hidden="true">102:45:40 GET</span> </a> <script type="application/json" data-navclock-data>{"liftoffUTC":"1969-07-16T13:32:00Z","maxSec":703098}</script>  </div> <starlight-theme-select>  <label style="--sl-select-width: 6.25em" class="astro-4yphtoen"> <span class="sr-only astro-4yphtoen">Select theme</span> <svg aria-hidden="true" class="icon label-icon astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg> <select autocomplete="off" class="astro-4yphtoen"> <option value="dark" class="astro-4yphtoen">Dark</option><option value="light" class="astro-4yphtoen">Light</option><option value="auto" selected class="astro-4yphtoen">Auto</option> </select> <svg aria-hidden="true" class="icon caret astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg> </label> </starlight-theme-select>  <script>
+	StarlightThemeProvider.updatePickers();
+</script>   </div> </div> </div> </div> </nav> <div class="main-frame astro-vrdttmbt">  <script type="module">const a=document.getElementById("starlight__sidebar"),n=a?.querySelector("sl-sidebar-state-persist"),o="sl-sidebar-state",i=()=>{let t=[];const e=n?.dataset.hash||"";try{const s=sessionStorage.getItem(o),r=JSON.parse(s||"{}");Array.isArray(r.open)&&r.hash===e&&(t=r.open)}catch{}return{hash:e,open:t,scroll:a?.scrollTop||0}},c=t=>{try{sessionStorage.setItem(o,JSON.stringify(t))}catch{}},d=()=>c(i()),l=(t,e)=>{const s=i();s.open[e]=t,c(s)};n?.addEventListener("click",t=>{if(!(t.target instanceof Element))return;const e=t.target.closest("summary")?.closest("details");if(!e)return;const s=e.querySelector("sl-sidebar-restore"),r=parseInt(s?.dataset.index||"");isNaN(r)||l(!e.open,r)});addEventListener("visibilitychange",()=>{document.visibilityState==="hidden"&&d()});addEventListener("pageHide",d);</script> <div class="lg:sl-flex astro-67yu43on"> <aside class="right-sidebar-container print:hidden astro-67yu43on"> <div class="right-sidebar astro-67yu43on"> <div class="lg:sl-hidden astro-pb3aqygn"><mobile-starlight-toc data-min-h="2" data-max-h="3" class="astro-doynk5tl"><nav aria-labelledby="starlight__on-this-page--mobile" class="astro-doynk5tl"><details id="starlight__mobile-toc" class="astro-doynk5tl"><summary id="starlight__on-this-page--mobile" class="sl-flex astro-doynk5tl"><span class="toggle sl-flex astro-doynk5tl">On this page<svg aria-hidden="true" class="caret astro-doynk5tl astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></span><span class="display-current astro-doynk5tl"></span></summary><div class="dropdown astro-doynk5tl"><ul class="isMobile astro-gnoq344e" style="--depth: 0;"> <li class="astro-gnoq344e" style="--depth: 0;"> <a href="#_top" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">Overview</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#the-shape-of-the-problem" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">The shape of the problem</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#the-braided-timeline--p64-to-engine-stop" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">The braided timeline — P64 to engine stop</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#the-fuel-ledger" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">The fuel ledger</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#the-ground-truth-42-years-later" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">The ground truth, 42 years later</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#method-and-verification" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">Method and verification</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#sources" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">Sources</span> </a>  </li> </ul></div></details></nav></mobile-starlight-toc><script type="module" src="/ulixcortex/apollo11/_astro/MobileTableOfContents.astro_astro_type_script_index_0_lang.hwBsy0Mo.js"></script></div><div class="right-sidebar-panel sl-hidden lg:sl-block astro-pb3aqygn"><div class="sl-container astro-pb3aqygn"><starlight-toc data-min-h="2" data-max-h="3"><nav aria-labelledby="starlight__on-this-page"><h2 id="starlight__on-this-page">On this page</h2><ul class="astro-gnoq344e" style="--depth: 0;"> <li class="astro-gnoq344e" style="--depth: 0;"> <a href="#_top" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">Overview</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#the-shape-of-the-problem" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">The shape of the problem</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#the-braided-timeline--p64-to-engine-stop" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">The braided timeline — P64 to engine stop</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#the-fuel-ledger" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">The fuel ledger</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#the-ground-truth-42-years-later" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">The ground truth, 42 years later</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#method-and-verification" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">Method and verification</span> </a>  </li><li class="astro-gnoq344e" style="--depth: 0;"> <a href="#sources" class="astro-gnoq344e" style="--depth: 0;"> <span class="astro-gnoq344e" style="--depth: 0;">Sources</span> </a>  </li> </ul></nav></starlight-toc><script type="module" src="/ulixcortex/apollo11/_astro/TableOfContents.astro_astro_type_script_index_0_lang.FuRcXuRY.js"></script></div></div> </div> </aside> <div class="main-pane astro-67yu43on">  <main data-pagefind-body class="astro-bguv2lll" lang="en" dir="ltr">    <div class="content-panel astro-7nkwcw3z"> <div class="sl-container astro-7nkwcw3z"> <h1 id="_top" class="astro-j6tvhyss">The last three minutes: Eagle&#39;s final approach, reconstructed — then measured against the 2011 ground truth</h1> </div> </div> <div class="content-panel astro-7nkwcw3z"> <div class="sl-container astro-7nkwcw3z"> <div class="sl-markdown-content"> <p><em>The mission’s defining episode — program P64 pitchover to
+engine stop, 102:41:32 → 102:45:40 <abbr class="gloss" title="Ground elapsed time — the mission stopwatch (hours:minutes:seconds since liftoff) that tags every Flight Plan sheet and transcript line." data-def="Ground elapsed time — the mission stopwatch (hours:minutes:seconds since liftoff) that tags every Flight Plan sheet and transcript line.">GET</abbr> — braided from the three independent 1969
+records the library holds: the
+<a href="/ulixcortex/apollo11/wiki/sources/apollo-11-mission-report/">Mission Report</a>’s telemetry-derived
+event log (Table 5-I) and descent narrative (§5.3–5.4), the
+<a href="/ulixcortex/apollo11/wiki/sources/apollo-11-technical-air-to-ground-voice-transcription/">GOSS NET 1 air-to-ground transcript</a>
+(the loop), and the
+<a href="/ulixcortex/apollo11/wiki/sources/apollo-11-onboard-voice-transcription-cm/">CM onboard (DSE) transcription</a>
+(<em>Columbia</em>’s recorder, taping the <abbr class="gloss" title="The Lunar Module — Eagle, the two-stage lander that flew the descent, the surface stay, and the one-engine-no-backup ascent." data-def="The Lunar Module — Eagle, the two-stage lander that flew the descent, the surface stay, and the one-engine-no-backup ascent.">LM</abbr> crew’s voices as received). Then the loop is
+closed forty-two years forward: the geometry the 1969 documents describe —
+West crater, the range extension, the landing point — is <strong>measured directly on
+the library’s <a href="/ulixcortex/apollo11/wiki/sources/lroc-apollo-11-landing-site-imagery/">2011 LROC NAC frame</a></strong>
+(M175124932R, 25 cm/px), extending the pixel work of the
+<a href="/ulixcortex/apollo11/analyses/2026-06-10-tranquility-base-photomap/">Tranquility Base photo-map</a>. Every
+quotation below was re-verified against the raw files (the transcript HTML, the
+<abbr class="gloss" title="The command module&#x27;s Data Storage Equipment — Columbia&#x27;s onboard voice recorder, the tape leg of the record." data-def="The command module&#x27;s Data Storage Equipment — Columbia&#x27;s onboard voice recorder, the tape leg of the record.">DSE</abbr> text edition with its garbles checked against page renders of the original
+typescript, the Mission Report’s text layer with the propellant table and
+Table 5-I read from page renders). GETs are the sources’ own tags
+(<code dir="auto">04 06 45 40</code> → 4×24+6 = <strong>102:45:40</strong>).</em></p>
+<blockquote>
+<p><strong>Addendum (2026-06-12, later the same day):</strong> the
+<a href="/ulixcortex/apollo11/analyses/2026-06-12-discrepancy-ledger/">discrepancy ledger</a> (entry A1) found
+that the measured stand-off was in the 1969 record all along — PSR ch. 4
+(soil mechanics, printed p. 102) places the LM “approximately 130 m north and
+600 m west of West Crater,” matching this analysis’s measurement (113 m N,
+564 m W) within ~40 m. The “about 400 meters” of the geology chapter and the
+Mission Report is therefore not just imprecise but one side of an internal
+1969 conflict that the <abbr class="gloss" title="The LRO Camera and its Narrow Angle Camera — frame NAC M175124932R (~25 cm/px) is the library&#x27;s picture of Tranquility Base today." data-def="The LRO Camera and its Narrow Angle Camera — frame NAC M175124932R (~25 cm/px) is the library&#x27;s picture of Tranquility Base today.">LROC</abbr> measurement adjudicates.</p>
+</blockquote>
+<div class="sl-heading-wrapper level-h2"><h2 id="the-shape-of-the-problem">The shape of the problem</h2><a class="sl-anchor-link" href="#the-shape-of-the-problem"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “The shape of the problem”</span></a></div>
+<p>Three things were already wrong, or about to be, when <em>Eagle</em> pitched over for
+the final approach
+(<a href="/ulixcortex/apollo11/wiki/concepts/powered-descent-and-landing/">powered descent and landing</a>):</p>
+<ol>
+<li><strong>The ship wasn’t where its computer thought it was.</strong> The onboard state
+vector was about <strong>21 000 feet up-range of truth</strong> at powered descent
+initiation, detected as a growing Doppler residual on the ground and by
+Armstrong’s own mark — the landing-point-designator sighting on crater
+Maskelyne W came “approximately 3 seconds early, confirming the suspected
+downrange error” (<a href="/ulixcortex/apollo11/wiki/sources/apollo-11-mission-report/">Mission Report</a>
+§5.2–5.3, pp. 5-3 – 5-4). <em>Eagle</em> was going to land long, into terrain nobody
+had certified.</li>
+<li><strong>The computer kept crying out.</strong> Five program alarms (1202 at 102:38:22 and
+102:39:02; 1201 at 102:42:18; 1202 at 102:42:43 and 102:42:58 — Table 5-I)
+“did not degrade the performance of any primary guidance or control function,
+but they did interfere with an early assessment by the crew of the landing
+approach” (§5.3). In the
+<a href="/ulixcortex/apollo11/wiki/sources/apollo-11-technical-crew-debriefing-vol1/">crew debriefing</a>
+(§9) Armstrong is blunter: the concern was “whether we could continue at all,”
+and attention was forced inside the cockpit until below ~2000 feet.</li>
+<li><strong>The aim point was bad.</strong> When Armstrong finally looked out, the
+landing-point designator “indicated that the approach path was leading into a
+large crater” — the sharp-rimmed, blocky, ~180 m ray crater afterward
+unofficially named <strong>West crater</strong> (§5.3; §11, p. 11-3).</li>
+</ol>
+<p>What followed — redesignation, manual takeover at ~600 feet, a low-level fuel
+light, and touchdown 72 seconds later — is below, second by second, in all three
+records at once.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="the-braided-timeline--p64-to-engine-stop">The braided timeline — P64 to engine stop</h2><a class="sl-anchor-link" href="#the-braided-timeline--p64-to-engine-stop"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “The braided timeline — P64 to engine stop”</span></a></div>
+<p>Columns: the Mission Report’s telemetry event log (Table 5-I, p. 5-13); the
+air-to-ground loop (<a href="/ulixcortex/apollo11/wiki/concepts/goss-net-1-air-to-ground-communications/">GOSS NET 1</a>);
+and the cabin as <em>Columbia</em>’s recorder caught it (DSE — LM voices as received
+aboard the <abbr class="gloss" title="The Command and Service Module Columbia: the CM crew cabin (the only part to return) plus the SM propulsion/service section jettisoned before entry." data-def="The Command and Service Module Columbia: the CM crew cabin (the only part to return) plus the SM propulsion/service section jettisoned before entry.">CSM</abbr>, with Houston’s uplink essentially absent). Ellipses are the
+transcripts’ own garble marks.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>GET</th><th>Telemetry (Table 5-I)</th><th>The loop (GOSS NET 1)</th><th>The cabin (<abbr class="gloss" title="The Command and Service Module Columbia: the CM crew cabin (the only part to return) plus the SM propulsion/service section jettisoned before entry." data-def="The Command and Service Module Columbia: the CM crew cabin (the only part to return) plus the SM propulsion/service section jettisoned before entry.">CM</abbr> DSE)</th></tr></thead><tbody><tr><td>102:41:32</td><td><strong>Enter program P64</strong> (pitchover, landing radar to position 2 at :37)</td><td>102:41:35 <abbr class="gloss" title="The crew positions as transcript speaker codes: Commander (Armstrong), Command Module Pilot (Collins), Lunar Module Pilot (Aldrin)." data-def="The crew positions as transcript speaker codes: Commander (Armstrong), Command Module Pilot (Collins), Lunar Module Pilot (Aldrin).">LMP</abbr>: “P64.”</td><td></td></tr><tr><td>102:41:53</td><td>Attitude-hold — handling-qualities check</td><td>102:42:05 <abbr class="gloss" title="The crew positions as transcript speaker codes: Commander (Armstrong), Command Module Pilot (Collins), Lunar Module Pilot (Aldrin)." data-def="The crew positions as transcript speaker codes: Commander (Armstrong), Command Module Pilot (Collins), Lunar Module Pilot (Aldrin).">CDR</abbr>: “Manual attitude control is good.”</td><td>102:42:01 CDR: “Attitude control is good — manual attitude control is good. Okay, 3070.”</td></tr><tr><td>102:42:03</td><td>Back to automatic guidance</td><td></td><td></td></tr><tr><td>102:42:10</td><td></td><td><abbr class="gloss" title="The Capsule Communicator — the single Mission Control voice that talks to the crew." data-def="The Capsule Communicator — the single Mission Control voice that talks to the crew.">CC</abbr>: “Eagle, Houston. You’re GO for landing. Over.”</td><td></td></tr><tr><td>102:42:17–18</td><td><strong>1201 alarm</strong></td><td>LMP: “Roger. Understand. GO for landing. 3000 feet. PROGRAM ALARM.” … LMP/CDR: “1201” / “1201.”</td><td>LMP: “Roger; understand. Go for landing, 3000 feet. Program alarm — 1201.” CDR: “1201. Okay. 2050.”</td></tr><tr><td>102:42:25</td><td></td><td>CC: “Roger. 1201 alarm. We’re GO. Same type. We’re GO.”</td><td></td></tr><tr><td>102:42:30–37</td><td></td><td>LMP: “2000 feet. 2000 feet. Into the <abbr class="gloss" title="The abort guidance system — the LM&#x27;s backup computer, monitored in parallel through ascent (its DEDA display lost a digit segment, §16.2.7)." data-def="The abort guidance system — the LM&#x27;s backup computer, monitored in parallel through ascent (its DEDA display lost a digit segment, §16.2.7).">AGS</abbr>, 47 degrees.”</td><td><strong>CDR: “Give me an LPD.” … CDR: “Give me an LPD.”</strong> LMP: “47 degrees.” CDR: “47.”</td></tr><tr><td>102:42:38</td><td></td><td></td><td><strong>CDR: “That’s not a bad-looking area. Okay.”</strong></td></tr><tr><td>102:42:43, :58</td><td>1202 alarms (computer-determined)</td><td>102:42:58 CC: “Roger. 1202. We copy it.”</td><td>102:42:55 CDR: “What’s LPD?“</td></tr><tr><td>102:43:01–07</td><td></td><td>LMP: “35 degrees. 35 degrees. 750. Coming down to 23.” … “700 feet, 21 down, 33 degrees.”</td><td>LMP: “35 degrees, 35 degrees; 750, … coming down to 23.”</td></tr><tr><td>102:43:08</td><td></td><td></td><td><strong>CDR: “Pretty rocky area.”</strong></td></tr><tr><td>102:43:09</td><td><strong>Landing point redesignation</strong></td><td></td><td></td></tr><tr><td>102:43:13</td><td><strong>Attitude-hold — manual takeover</strong> (~600 ft)</td><td>102:43:11 LMP: “600 feet, down at 19.”</td><td>LMP: “600 feet, down to 19; 540 feet, down to 30, down to 15.”</td></tr><tr><td>102:43:22</td><td><strong>Enter P66</strong> — rate-of-descent mode (~400 ft)</td><td>102:43:26 LMP: “At 400 feet, down at 9.” … :29: ”… forward.”</td><td>LMP: “Okay, 400 feet, down to 9, 58 forward.”</td></tr><tr><td>102:43:46–52</td><td></td><td>LMP: “300 feet, down 3½, 47 forward.” … “On 1 a minute, 1½ down.”</td><td>LMP: “300 feet down, 3½, 47 forward. Coming up — 1 a minute, 1½ down. <strong>Moving out.</strong>”</td></tr><tr><td>102:43:57</td><td></td><td>102:43:57 CDR: “70.”</td><td><strong>CDR: “Okay, how’s the fuel?” LMP: “Wait just a minute.”</strong></td></tr><tr><td>102:44:00</td><td></td><td>102:44:04 LMP: “Watch your shadow out there.”</td><td>**CDR: “Okay, Ed, this looks like a good area here.”**¹ LMP: “I got the shadow out there.”</td></tr><tr><td>102:44:07–26</td><td>(102:44:11 landing radar data drop, good again :21)</td><td>LMP: “50, down at 2½, 19 forward.” … “220 feet, 13 forward.” … “200 feet, 4½ down.”</td><td>LMP: “Altitude velocity light, 3½ down, 220 feet; 13 forward, 11 forward, coming down nicely. 200 feet.”</td></tr><tr><td><strong>102:44:28</strong></td><td><strong>Red-line low-level sensor light</strong> — 72 s of propellant questions begin</td><td></td><td></td></tr><tr><td>102:44:40–54</td><td></td><td>LMP: “120 feet.” … “100 feet, 3½ down, 9 forward. Five percent.” … “Okay. 75 feet. There’s looking good.”</td><td>LMP: “100 feet, 3½ down, 9 forward. 5 percent —.” … “Okay, 75 feet. And it’s looking good; down a half … <strong>light’s on</strong>.”</td></tr><tr><td>102:45:02</td><td></td><td><strong>CC: “60 seconds.”</strong></td><td></td></tr><tr><td>102:45:17–21</td><td></td><td>LMP: “40 feet, down 2½. <strong>Kicking up some dust</strong>.” … “30 feet, 2½ down. <strong>Faint shadow</strong>.”</td><td>LMP: “Looks good, 40 feet down, 2½. <strong>Picking up some dust.</strong> 30 feet, 2½ down — straight down.”</td></tr><tr><td>102:45:26</td><td></td><td>LMP: “4 forward. 4 forward. Drifting to the right a little. Okay. Down a half.”</td><td>LMP: “<strong>20 feet, down a half</strong>; drifting forward just a little bit. Good. Okay.”</td></tr><tr><td>102:45:31</td><td></td><td><strong>CC: “30 seconds.”</strong> CDR: “Forward drift?” LMP: “Yes.”</td><td></td></tr><tr><td>102:45:40</td><td><strong>LANDING / engine off</strong> (102:45:39.9)</td><td>LMP: “<strong>CONTACT LIGHT</strong>.”</td><td>102:45:41 <strong>CDR: “SHUTDOWN.”</strong></td></tr><tr><td>102:45:43–47</td><td></td><td>LMP: “Okay. ENGINE STOP.” … “ACA — out of DETENT.” CDR: “Out of DETENT.”</td><td>LMP: “Okay. ENGINE STOP; ACA out of DETENT.” CDR: “Out of DETENT.”</td></tr><tr><td>102:45:57</td><td></td><td>CC: “<strong>We copy you down, Eagle.</strong>”</td><td></td></tr><tr><td>102:45:59</td><td></td><td>CDR (now tagged TRANQ): “Houston, Tranquility Base here. <strong>THE EAGLE HAS LANDED</strong>.”</td><td>102:45:58 CDR: “Houston — Tranquility Base here. THE EAGLE HAS LANDED.”</td></tr></tbody></table>
+<p>¹ As printed in the 1969 typescript (verified on a page render of the original,
+p. 177): <em>“Okay, Ed, this looks like a good area here.”</em> No “Ed” was aboard —
+a transcriber’s artifact in the official record (the transcribers, working from
+the tape, most plausibly misrendered a muffled “Buzz” or a clipped word). The
+<a href="/ulixcortex/apollo11/analyses/2026-06-11-one-moment-three-records/">three-records comparison</a> catalogs
+sibling divergences (“Kicking”/“Picking”); this one is new to the register.</p>
+<p><strong>What only the cabin record carries.</strong> The loop’s version of these minutes is
+Aldrin’s data stream with Houston’s two fuel calls. The DSE preserves the
+<em>decision</em> layer the loop never heard: Armstrong twice demanding a
+landing-point-designator angle (“Give me an LPD”) seconds after the 1201 alarm,
+his terrain verdicts in real time (“That’s not a bad-looking area” → “Pretty
+rocky area” → “this looks like a good area here”), and the only spoken fuel
+worry of the descent — “Okay, how’s the fuel?” — at 102:43:57, half a minute
+<em>before</em> the low-level light. It also carries a final altitude callout (“20
+feet, down a half”) below the loop’s last (“30 feet”), and Armstrong’s own
+“SHUTDOWN” — the cabin-side twin of the loop’s “CONTACT LIGHT,” as already noted
+in <a href="/ulixcortex/apollo11/analyses/2026-06-11-one-moment-three-records/">the three-records study</a>.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="the-fuel-ledger">The fuel ledger</h2><a class="sl-anchor-link" href="#the-fuel-ledger"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “The fuel ledger”</span></a></div>
+<p>The drama’s currency was descent propellant. The Mission Report settles the
+account exactly (§9.13.1, table p. 9-32, read from a page render):</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Quantity (fuel + oxidizer)</th><th>Pounds</th></tr></thead><tbody><tr><td>Loaded</td><td>18 184</td></tr><tr><td>Consumed — preflight <em>nominal</em> plan</td><td>17 010</td></tr><tr><td>Preflight allowance for redesignation</td><td>103</td></tr><tr><td>Preflight allowance for manual hover</td><td>114</td></tr><tr><td><strong>Actually consumed</strong></td><td><strong>17 414</strong></td></tr><tr><td><strong>Remaining at engine cutoff</strong></td><td><strong>770</strong> (vs. 957 planned)</td></tr></tbody></table>
+<p>So the preflight budget had set aside <strong>217 lb</strong> for exactly the maneuver
+Armstrong flew — and the flying consumed that <em>plus</em> the 187-lb margin
+difference. The report’s verdict: “propellant usage was greater than predicted
+because of the additional time required for the landing site redesignation…
+Allowance for manual hover and landing point redesignation was in the preflight
+budget but was not considered part of the nominal usage” (§9.13.1). The
+hand-flying was also rate-expensive: reaction-control usage in manual descent
+ran “approximately 1½ times greater than that for the automatic mode,” ~95 lb
+against 40 predicted (§5.3, p. 5-6).</p>
+<p>The clock side of the ledger: the <strong>red-line low-level sensor light at
+102:44:28</strong> (Table 5-I) — the event behind Aldrin’s “light’s on” and the DSE’s
+“5 percent” — came <strong>72 seconds before touchdown</strong>, bracketed by the only two
+things Houston said in the final two minutes: “60 seconds” and “30 seconds.”
+Armstrong, <a href="/ulixcortex/apollo11/wiki/sources/neil-armstrong-jsc-oral-history/">in 2001</a>, kept
+the margin in proportion: with rates stabilized the LM could drop “perhaps maybe
+forty feet or more in the low lunar gravity… So I was perhaps probably less
+concerned about it than a lot of people watching down here on Earth.”</p>
+<p>And the landing itself, from telemetry (§5.4, p. 5-6): touchdown at
+<strong>102:45:39.9</strong>, “negligible forward velocity, approximately 2.1 ft/sec to the
+crew’s left and 1.7 ft/sec vertically”; maximum post-contact rock-up about
+2 degrees; footpads in 2.5–3.5 inches; the gear struts stroked less than an
+inch — about 10 percent of one cartridge’s energy absorption. After four
+program alarms, a boulder field, and a fuel light, <em>Eagle</em> set down using a
+tenth of its landing gear.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="the-ground-truth-42-years-later">The ground truth, 42 years later</h2><a class="sl-anchor-link" href="#the-ground-truth-42-years-later"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “The ground truth, 42 years later”</span></a></div>
+<p>Everything above is the 1969 record describing a place. The library also holds
+the place itself: the
+<a href="/ulixcortex/apollo11/wiki/concepts/lroc-imaging-of-apollo-11-landing-site/">2011 LROC NAC frame</a>
+resolves the descent stage, the crater Armstrong refused, and the ground between
+them at 25 cm/px. Measuring that geometry directly on the raw image — the same
+saturated-pixel method as the
+<a href="/ulixcortex/apollo11/analyses/2026-06-10-tranquility-base-photomap/">photo-map</a> — closes the loop:</p>
+<p><img src="/ulixcortex/apollo11/img/2026-06-12-last-three-minutes-groundtrack.png" alt="Annotated LROC strip: the Eagle descent stage at left, Little West crater beside it, and the measured 490 m / 575 m baseline east-southeast to the rim and center of West crater, with the onset of its bright ejecta apron marked." srcset="/ulixcortex/apollo11/img/2026-06-12-last-three-minutes-groundtrack-400.png 400w, /ulixcortex/apollo11/img/2026-06-12-last-three-minutes-groundtrack-800.png 800w, /ulixcortex/apollo11/img/2026-06-12-last-three-minutes-groundtrack-1200.png 1200w, /ulixcortex/apollo11/img/2026-06-12-last-three-minutes-groundtrack.png 1450w" sizes="(min-width: 1180px) 720px, 100vw"></p>
+<p>Measured on the frame (descent stage located at pixel (669, 897) by saturation
+centroid; West crater’s bowl fitted from its high-contrast boulder-and-shadow
+interior, center pixel ≈ (2927, 1349); uncertainties ≈ ±20 m on the crater
+figures):</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Quantity</th><th>1969 record</th><th>Measured on the 2011 frame</th></tr></thead><tbody><tr><td>West crater diameter</td><td>”approximately 180 meters… 30 meters deep” (§11, p. 11-3)</td><td>rim-to-rim ≈ 160–190 m ✓</td></tr><tr><td>Little West crater</td><td>33 m diameter, “about 50 meters east of the lunar module” (§11, pp. 11-6 – 11-7)</td><td>center 64 m east ⇒ near rim ≈ 47 m ✓ (also the scale check: 256 px × 0.25 m = 64 m)</td></tr><tr><td>Blocky ejecta</td><td>apron “extends… about 250 meters from the rim crest”; the LM “landed between these rays” (§11, p. 11-3)</td><td>distinct albedo brightening from ≈ 440 m out from the LM along the baseline; boulder-resolved roughness from ≈ 500 m</td></tr><tr><td><strong>West crater stand-off</strong></td><td><strong>”About 400 meters east of the landing point” (§11, pp. 11-3, 11-7)</strong></td><td><strong>≈ 490 m to the near rim crest; ≈ 575 m (1 890 ft) to the bowl center, bearing east-southeast</strong></td></tr></tbody></table>
+<p>Three of the four 1969 numbers survive contact with the orbital photograph
+unchanged. The fourth is the interesting one:</p>
+<p><strong>The report’s “about 400 meters” understates the stand-off.</strong> Whichever
+referent the geologists meant, the measured figure is larger — the rim crest is
+~490 m from the descent stage, the crater center ~575 m. The 1969 number was a
+round estimate made from descent film and crew description before the site had
+ever been surveyed from orbit at this resolution; the same section locates the
+landing point “to within about 8 meters” <em>relative to local features</em>, which is
+exactly what lets a 2011 photograph re-measure the baseline. (The figure
+Armstrong actually flew — “approximately 1100 feet [335 m] downrange from the
+initial aim point,” §5.3 — is a different quantity, measured from the
+computer’s aim point rather than from the crater, and is not contradicted; the
+measurement here cannot resolve where that aim point sat within the ejecta
+field.) Worth noting: this is a <em>new</em> entry for the cross-source ledger, not a
+correction to the wiki’s own arithmetic — the
+<a href="/ulixcortex/apollo11/wiki/concepts/lroc-imaging-of-apollo-11-landing-site/">LROC concept</a> and
+<a href="/ulixcortex/apollo11/wiki/concepts/powered-descent-and-landing/">powered-descent concept</a>
+currently repeat the report’s ~400 m and should carry the measured value
+alongside it.</p>
+<p>Read against the timeline above, the strip image is the last 90 seconds laid on
+the ground: the bright apron edge at ~440 m is roughly the terrain under
+<em>Eagle</em> around the “100 feet… 5 percent” call; the clean gray mare between the
+rays — “this looks like a good area here” — is where the dust started flying at
+40 feet; and the trail to Little West at the left edge is
+<a href="/ulixcortex/apollo11/wiki/concepts/lunar-field-geology/">Armstrong’s late-EVA jog</a> back out to
+photograph the kind of crater he had spent the descent avoiding, 33 m instead
+of 180.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="method-and-verification">Method and verification</h2><a class="sl-anchor-link" href="#method-and-verification"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “Method and verification”</span></a></div>
+<ul>
+<li><strong>Voice records:</strong> GOSS NET 1 quotes read from the raw transcript HTML (Tape
+66/5–66/13, pp. 310–318); DSE quotes from the raw <code dir="auto">_djvu.txt</code> edition with
+OCR-suspect lines (the “Ed” line, “20 feet, down a half,” “Picking up some
+dust,” “SHUTDOWN”) verified against 160–300 dpi renders of the original
+typescript pages (pp. 176–178 of the PDF).</li>
+<li><strong>Telemetry and tables:</strong> Table 5-I (p. 5-13), the propellant table (p. 9-32),
+and the touchdown-dynamics figures read from page renders where the text layer
+garbled digits; narrative quotes from the text layer of §5.2–5.4, §9.13, §11.</li>
+<li><strong>Image measurement:</strong> raw LROC GeoTIFF (4000×2400 px, 25 cm/px, north up —
+untouched). Descent stage = centroid of the saturated-pixel cluster at
+(660–680, 890–910). West crater bowl = median center of pixels with extreme
+local contrast (7×7 σ > 35) over the eastern quadrant, cross-checked against
+the saturated shadow band of its eastern inner wall and a brightness/roughness
+profile along the LM–crater line (mare flat to ~430 m; albedo step ≈ 440 m;
+boulder roughness from ≈ 500–530 m; bowl ≈ 530–670 m on that line). Scale
+independently confirmed by Little West (measured 64 m vs. the report’s
+~50 m-to-rim + 33 m diameter) and the photo-map’s <abbr class="gloss" title="The Early Apollo Scientific Experiments Package — Apollo 11&#x27;s two-package science suite (PSEP + LRRR), the descoped precursor of ALSEP." data-def="The Early Apollo Scientific Experiments Package — Apollo 11&#x27;s two-package science suite (PSEP + LRRR), the descoped precursor of ALSEP.">EASEP</abbr> baseline (~24 m vs.
+“~70 ft”). Annotated strip built with Pillow from a crop of the raw frame.</li>
+</ul>
+<div class="sl-heading-wrapper level-h2"><h2 id="sources">Sources</h2><a class="sl-anchor-link" href="#sources"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentcolor" d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 0 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 1 0-1.42-1.42Zm8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 0 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 1 0 1.42 1.42l3.88-3.89a4.49 4.49 0 0 0 0-6.33ZM8.83 15.17a1 1 0 0 0 1.1.22 1 1 0 0 0 .32-.22l4.92-4.92a1 1 0 0 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42Z"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “Sources”</span></a></div>
+<ul>
+<li><a href="/ulixcortex/apollo11/wiki/sources/apollo-11-mission-report/">Apollo 11 Mission Report (MSC-00171)</a> — Table 5-I event times; §5.2–5.4 descent narrative and landing dynamics; §9.13.1 propellant; §11 site geology and landing-point determination</li>
+<li><a href="/ulixcortex/apollo11/wiki/sources/apollo-11-technical-air-to-ground-voice-transcription/">Apollo 11 Technical Air-to-Ground Voice Transcription</a> — the loop, verbatim</li>
+<li><a href="/ulixcortex/apollo11/wiki/sources/apollo-11-onboard-voice-transcription-cm/">Apollo 11 Onboard Voice Transcription (CM DSE)</a> — the cabin as received aboard <em>Columbia</em>, verbatim</li>
+<li><a href="/ulixcortex/apollo11/wiki/sources/apollo-11-technical-crew-debriefing-vol1/">Apollo 11 Technical Crew Debriefing — Vol. 1</a> — §9, the crew’s eleven-days-later account</li>
+<li><a href="/ulixcortex/apollo11/wiki/sources/neil-armstrong-jsc-oral-history/">Neil A. Armstrong — JSC Oral History (2001)</a> — the 32-years-later recollection (<a href="/ulixcortex/apollo11/analyses/2026-06-11-memory-vs-record/">memory-vs-record context</a>)</li>
+<li><a href="/ulixcortex/apollo11/wiki/sources/lroc-apollo-11-landing-site-imagery/">LROC NAC imagery of the Apollo 11 landing site</a> — the measured frame; method per the <a href="/ulixcortex/apollo11/analyses/2026-06-10-tranquility-base-photomap/">photo-map</a></li>
+<li>Wiki concepts as linked throughout, especially <a href="/ulixcortex/apollo11/wiki/concepts/powered-descent-and-landing/">powered descent and landing</a></li>
+</ul> </div> <aside class="connections" aria-label="Connections"><h2 class="cx-title">Connections</h2><p class="cx-sub">5 pages link to this article</p><ul class="cx-list"><li><a href="/ulixcortex/apollo11/wiki/sources/apollo-11-onboard-voice-transcription-cm/">Apollo 11 Onboard Voice Transcription (CM DSE)</a></li><li><a href="/ulixcortex/apollo11/wiki/concepts/lroc-imaging-of-apollo-11-landing-site/">LROC imaging of the Apollo 11 landing site</a></li><li><a href="/ulixcortex/apollo11/wiki/concepts/powered-descent-and-landing/">Powered descent and landing</a></li><li><a href="/ulixcortex/apollo11/analyses/2026-06-12-discrepancy-ledger/">The discrepancy ledger — where the Apollo 11 primary record disagrees with itself</a></li><li><a href="/ulixcortex/apollo11/analyses/2026-06-12-sample-provenance-reconstruction/">Where did each rock actually come from? — a provenance reconstruction of the 53 Apollo 11 samples</a></li></ul></aside><footer class="sl-flex astro-3yyafb3n"> <div class="meta sl-flex astro-3yyafb3n">   </div> <div class="pagination-links print:hidden astro-u2l5gyhi" dir="ltr">   </div>  </footer> </div> </div>  </main> </div> </div> </div> </div> </body></html>
