@@ -16,9 +16,9 @@
 }
 
 :root {
-  --navy: #0A1430;          /* page background */
-  --navy-2: #0D1937;        /* raised panels */
-  --navy-3: #071026;        /* recessed panels */
+  --navy: #010C24;          /* page background — matches the logo art */
+  --navy-2: #071231;        /* raised panels */
+  --navy-3: #030B1E;        /* recessed panels */
   --gold: #D9A85C;          /* primary gold */
   --gold-bright: #E8B45A;   /* artwork gold */
   --gold-dim: rgba(217, 168, 92, 0.55);
@@ -202,9 +202,10 @@ img { max-width: 100%; display: block; }
 }
 .hero-art { position: relative; }
 .hero-art img {
-  width: 118%;
-  max-width: none;
-  margin: -40px -6% -60px;
+  width: 100%;
+  height: auto;
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 /* ==========================================================================
