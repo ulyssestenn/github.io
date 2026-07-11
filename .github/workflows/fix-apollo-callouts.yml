@@ -1,0 +1,36 @@
+name: Fix Apollo callout colors
+
+on:
+  push:
+    branches: [new]
+    paths:
+      - '.github/workflows/fix-apollo-callouts.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: new
+      - name: Patch shared Apollo stylesheet
+        shell: bash
+        run: |
+          set -euo pipefail
+          css='ulixcortex/apollo11/_astro/common.CQw15mqb.css'
+          marker='apollo-callout-unify-v1'
+          if ! grep -q "$marker" "$css"; then
+            cat >> "$css" <<'CSS'
+
+/* apollo-callout-unify-v1 */
+.starlight-aside{--sl-color-asides-text-accent:var(--sl-color-accent-high);--sl-color-asides-border:var(--sl-color-accent);background:var(--sl-color-bg-sidebar);border:1px solid var(--sl-color-hairline);border-inline-start:.25rem solid var(--sl-color-accent);border-radius:10px}:root[data-theme=light] .starlight-aside{--sl-color-asides-text-accent:var(--sl-color-accent);background:#fbf7ed}
+CSS
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$css"
+          git diff --cached --quiet || git commit -m 'Deploy unified Apollo callout colors'
+          git push origin HEAD:new
