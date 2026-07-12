@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scepter — Privacy Policy — Ulix</title>
+  <meta name="description" content="How Scepter handles screenshots, OCR text, on-device AI processing, exports, backups, diagnostics, and subscriptions." />
+  <link rel="canonical" href="https://ulix.app/scepterprivacy.html" />
+  <meta name="theme-color" content="#0F0E0C" />
+  <link rel="icon" href="/icons/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="./assets/ulix.css" />
+
+  <!-- Fonts: Geist (self-hosted) + Newsreader (display serif). Matches the homepage. -->
+  <link rel="preload" as="font" type="font/woff2" href="./assets/fonts/geist-latin.woff2" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+  <!-- Shared warm-dark editorial design system (same as the homepage) -->
+  <link rel="stylesheet" href="./assets/home.css" />
+</head>
+
+<body class="home-page">
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Header (shared site chrome) -->
+  <header class="site-header">
+    <div class="container container--wide site-header__inner">
+      <a href="./index.html" class="site-brand">
+        <img src="./icons/favicon.png" alt="" class="site-brand__logo" width="64" height="64" />
+        <span class="site-brand__name">ULIX</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="./index.html" class="site-nav__link">Home</a>
+        <a href="./apps.html" class="site-nav__link">Apps</a>
+        <a href="./blog.html" class="site-nav__link">Blog</a>
+        <a href="./about.html" class="site-nav__link">About</a>
+        <a href="./contact.html" class="site-nav__link">Contact</a>
+      </nav>
+      <div class="site-header__actions">
+        <button id="u-menu-btn" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="u-mobile">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="4" y1="7" x2="20" y2="7"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="17" x2="20" y2="17"/>
+          </svg>
+        </button>
+        <a href="./apps.html" class="btn btn--primary btn--header">Browse all apps →</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div id="u-mobile" class="drawer" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+    <div class="drawer__backdrop" data-close></div>
+    <div class="drawer__panel">
+      <div class="drawer__header">
+        <span class="drawer__title">Menu</span>
+        <button class="drawer__close" aria-label="Close menu" data-close>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <ul class="drawer__list">
+        <li><a class="drawer__link" href="./index.html" data-close>Home</a></li>
+        <li><a class="drawer__link" href="./apps.html" data-close>Apps</a></li>
+        <li><a class="drawer__link" href="./blog.html" data-close>Blog</a></li>
+        <li><a class="drawer__link" href="./about.html" data-close>About</a></li>
+        <li><a class="drawer__link" href="./contact.html" data-close>Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="main">
+    <div class="doc">
+      <div class="doc-hero">
+        <h1 class="doc-hero__title">Scepter — Privacy Policy</h1>
+        <div class="doc-hero__meta">Last updated: July 12, 2026</div>
+      </div>
+      <div class="prose-card">
+        <p class="lead">Scepter is a local-first Android app that turns screenshots into a searchable, organized library. Screenshot content is processed on your device and is not sent to Ulix.</p>
+
+        <h2>What Scepter receives</h2>
+        <p>Scepter processes images only when you deliberately send or select them:</p>
+        <ul>
+          <li>images you share to Scepter through Android’s share sheet, and</li>
+          <li>images you select through Android’s system photo picker.</li>
+        </ul>
+        <p>When another app shares an image, Android may also provide accompanying information such as shared text, a subject, URL hints, the source app’s package name, the intent action, and the image’s MIME type. Scepter stores available share metadata with the corresponding card to preserve useful source context.</p>
+
+        <h2>What Scepter stores on your device</h2>
+        <p>Scepter copies imported images into its private app storage. It also stores information used to organize and process your library, including:</p>
+        <ul>
+          <li>the original imported screenshot copy;</li>
+          <li>raw and cleaned OCR text;</li>
+          <li>generated titles, summaries, categories, tags, and Markdown;</li>
+          <li>manual edits and edit-protection metadata;</li>
+          <li>processing status, retry information, error information, and timestamps;</li>
+          <li>image hashes used for possible-duplicate detection;</li>
+          <li>archive and duplicate-review status;</li>
+          <li>app settings and onboarding status; and</li>
+          <li>a locally cached status indicating whether Scepter Pro is active.</li>
+        </ul>
+        <p>Card text is stored in a local database and full-text search index. Images are stored as private app files.</p>
+
+        <h2>On-device OCR and AI processing</h2>
+        <p>Scepter uses Google ML Kit Text Recognition to extract text from screenshots. The text-recognition model used by Scepter is bundled with the app, and recognition runs on the device.</p>
+        <p>On compatible devices, Scepter uses Gemini Nano through Google’s ML Kit GenAI Prompt API and Android AICore to generate card metadata and Markdown from the OCR text. This generation runs on the device. If the required Gemini Nano model is available for download but not yet installed, Google’s system service may download it. If Gemini Nano is unavailable, Scepter uses a simpler on-device heuristic formatter.</p>
+        <p>Scepter does not send screenshots, recognized text, prompts, or generated cards to an Ulix server or to a cloud AI model.</p>
+
+        <h2>What Scepter does not do</h2>
+        <ul>
+          <li>No account required</li>
+          <li>No advertising</li>
+          <li>No sale of personal data</li>
+          <li>No behavioral marketing or content profiling</li>
+          <li>No upload of your screenshot library to Ulix</li>
+          <li>No Ulix-operated analytics or tracking service</li>
+        </ul>
+
+        <h2>Photo access and permissions</h2>
+        <p>Scepter uses Android’s share sheet and system photo picker rather than requesting broad access to your photo library. Scepter receives only the images you explicitly share or select.</p>
+        <p>The current app does not request access to your camera, location, microphone, contacts, or notifications.</p>
+
+        <h2>When information may leave your device</h2>
+        <p>Information may leave Scepter’s private app storage in the following circumstances:</p>
+        <ul>
+          <li>when you export cards as Markdown and image attachments;</li>
+          <li>when you move, open, or share exported files with another app or service;</li>
+          <li>when Android performs cloud backup or device-to-device transfer;</li>
+          <li>when Google Play processes or restores a Scepter Pro subscription;</li>
+          <li>when Google’s system services download an on-device Gemini Nano model; and</li>
+          <li>when Google ML Kit transmits limited technical and diagnostic information described below.</li>
+        </ul>
+        <p>Exports are initiated by you. Once an exported file is outside Scepter’s private storage, its handling is controlled by you and by any app, storage provider, or service you use with it.</p>
+
+        <h2>Android backup and device transfer</h2>
+        <p>Scepter currently participates in Android’s built-in backup and device-transfer systems. Depending on your device, Android version, Google Account, backup settings, backup quota, and manufacturer, a backup or transfer may include Scepter’s local database, settings, OCR and generated text, and private screenshot files.</p>
+        <p>Android backup and transfer are controlled by the operating system and your device or Google Account settings. Ulix does not receive or control those backups.</p>
+
+        <h2>Scepter Pro subscriptions</h2>
+        <p>Scepter offers optional monthly and annual Pro subscriptions through Google Play Billing. Google Play handles purchase processing, subscription management, restoration, and payment information. Scepter does not receive or store your full payment-card information.</p>
+        <p>Google Play reports subscription-entitlement status to the app. Scepter stores the last known entitlement status locally so Pro features can remain available when the billing service is temporarily unavailable.</p>
+
+        <h2>Google ML Kit diagnostics</h2>
+        <p>Scepter includes Google ML Kit for OCR and on-device generative-AI features. Google states that ML Kit Android SDKs may collect limited technical information for diagnostics and usage analytics, including device and app information, identifiers, performance metrics, API configuration, feature input and output sizes, feature versions, model-download and other event types, and error codes. Google also states that this diagnostic information is encrypted in transit and is not transferred to third parties.</p>
+        <p>Google’s current disclosure does not list screenshot contents, OCR text, prompts, or generated text as data collected by these ML Kit features. For details, see <a href="https://developers.google.com/ml-kit/android-data-disclosure">Google’s ML Kit Android data-disclosure documentation</a>.</p>
+
+        <h2>Other third-party services</h2>
+        <p>Scepter uses the following third-party services for core functionality:</p>
+        <ul>
+          <li>Google ML Kit Text Recognition for on-device OCR;</li>
+          <li>Google ML Kit GenAI Prompt API and Android AICore for supported on-device Gemini Nano processing and model delivery;</li>
+          <li>Google Play Billing for optional subscriptions; and</li>
+          <li>Android backup and device-transfer services when enabled on your device.</li>
+        </ul>
+        <p>These services are governed by Google’s and Android’s applicable terms and privacy practices.</p>
+
+        <h2>Your controls</h2>
+        <ul>
+          <li>You can delete an entire card, which removes its database record, search-index entry, and private screenshot file.</li>
+          <li>You can delete a screenshot while retaining the card’s text.</li>
+          <li>Archiving a card hides it but does not delete it.</li>
+          <li>You can delete exported files from their export location.</li>
+          <li>You can clear Scepter’s app storage or uninstall the app to remove local app data, subject to Android backup and restore behavior.</li>
+          <li>You can manage or disable Android backup through your device settings.</li>
+          <li>You can manage or cancel a Pro subscription through Google Play.</li>
+        </ul>
+        <p>Because Scepter has no account and Ulix does not receive your screenshot library, Ulix has no associated cloud screenshot library to delete.</p>
+
+        <h2>Contact</h2>
+        <p>For privacy questions or requests, contact Ulix LLC through the <a href="./contact.html">Ulix contact page</a>.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (shared site chrome) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-credo">Find the <b>book</b> <span class="sep">·</span> Save the <b>passage</b> <span class="sep">·</span> Read the <b>classic</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p>
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="./icons/ulixwordmarkclear.png" alt="Ulix — Precision tools for modern odysseys" class="footer-wordmark" width="1754" height="717" />
+        </div>
+        <div class="site-footer__links">
+          <a href="./apps.html">Apps</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./support.html">Support</a>
+          <a href="./about.html">About</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./terms.html">Terms</a>
+          <a href="./privacy.html">Privacy</a>
+        </div>
+        <div>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/ulix" method="post" target="bd-subscribe" class="newsletter" aria-label="Email signup">
+            <label for="nl-email" class="newsletter__label">Get product updates</label>
+            <div class="newsletter__row">
+              <input id="nl-email" class="newsletter__input" type="email" name="email" placeholder="you@example.com" />
+              <button class="btn btn--secondary">Subscribe</button>
+            </div>
+          </form>
+          <div class="site-footer__copyright">© 2026 Ulix LLC. All rights reserved.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/ulix.js" defer></script>
+</body>
+</html>
