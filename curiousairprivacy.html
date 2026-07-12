@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Curious Air — Privacy Policy — Ulix</title>
+  <meta name="description" content="How Curious Air handles nearby signal data, sensor readings, permissions, exports, and purchases." />
+  <link rel="canonical" href="https://ulix.app/curiousairprivacy.html" />
+  <meta name="theme-color" content="#0F0E0C" />
+  <link rel="icon" href="/icons/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="./assets/ulix.css" />
+
+  <!-- Fonts: Geist (self-hosted) + Newsreader (display serif). Matches the homepage. -->
+  <link rel="preload" as="font" type="font/woff2" href="./assets/fonts/geist-latin.woff2" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+  <!-- Shared warm-dark editorial design system (same as the homepage) -->
+  <link rel="stylesheet" href="./assets/home.css" />
+</head>
+
+<body class="home-page">
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Header (shared site chrome) -->
+  <header class="site-header">
+    <div class="container container--wide site-header__inner">
+      <a href="./index.html" class="site-brand">
+        <img src="./icons/favicon.png" alt="" class="site-brand__logo" width="64" height="64" />
+        <span class="site-brand__name">ULIX</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="./index.html" class="site-nav__link">Home</a>
+        <a href="./apps.html" class="site-nav__link">Apps</a>
+        <a href="./blog.html" class="site-nav__link">Blog</a>
+        <a href="./about.html" class="site-nav__link">About</a>
+        <a href="./contact.html" class="site-nav__link">Contact</a>
+      </nav>
+      <div class="site-header__actions">
+        <button id="u-menu-btn" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="u-mobile">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="4" y1="7" x2="20" y2="7"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="17" x2="20" y2="17"/>
+          </svg>
+        </button>
+        <a href="./apps.html" class="btn btn--primary btn--header">Browse all apps →</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div id="u-mobile" class="drawer" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+    <div class="drawer__backdrop" data-close></div>
+    <div class="drawer__panel">
+      <div class="drawer__header">
+        <span class="drawer__title">Menu</span>
+        <button class="drawer__close" aria-label="Close menu" data-close>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <ul class="drawer__list">
+        <li><a class="drawer__link" href="./index.html" data-close>Home</a></li>
+        <li><a class="drawer__link" href="./apps.html" data-close>Apps</a></li>
+        <li><a class="drawer__link" href="./blog.html" data-close>Blog</a></li>
+        <li><a class="drawer__link" href="./about.html" data-close>About</a></li>
+        <li><a class="drawer__link" href="./contact.html" data-close>Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="main">
+    <div class="doc">
+      <div class="doc-hero">
+        <h1 class="doc-hero__title">Curious Air — Privacy Policy</h1>
+      </div>
+      <div class="prose-card">
+        <p class="lead">Curious Air is a privacy-first Android signal explorer from Ulix LLC. It examines signals and sensor readings on your device without sending them to Ulix.</p>
+        <p><strong>Last updated:</strong> July 12, 2026</p>
+
+        <h2>Data Curious Air accesses</h2>
+        <p>When you choose to use the relevant features, Curious Air may access:</p>
+        <ul>
+          <li>Nearby Wi-Fi network information, including network names, hardware addresses, signal strength, frequency, and security capabilities.</li>
+          <li>Nearby Bluetooth and Bluetooth Low Energy device information, including advertised names, hardware addresses, signal strength, and broadcast data.</li>
+          <li>Precise location and GNSS information for satellite displays and because Android requires location access for certain Wi-Fi and Bluetooth scans.</li>
+          <li>Cellular network information, where supported by the device and Android version.</li>
+          <li>NFC tag contents when you deliberately scan a tag.</li>
+          <li>Camera input for experimental camera-based signal tools.</li>
+          <li>Microphone amplitude for live sound-level and ultrasonic tools. Curious Air analyzes amplitude on-device and does not save audio recordings.</li>
+          <li>Readings from built-in sensors such as the magnetometer, accelerometer, orientation sensors, barometer, and ambient-light sensor.</li>
+        </ul>
+        <p>These readings are used only to provide the feature you selected. Curious Air does not use them for advertising, analytics, profiling, or tracking.</p>
+
+        <h2>Collection, transmission, and sharing</h2>
+        <ul>
+          <li>Curious Air does not require an account.</li>
+          <li>Ulix does not collect, receive, sell, or share your sensor readings, location, nearby network identifiers, nearby device identifiers, NFC contents, camera input, or microphone input.</li>
+          <li>The app contains no advertising SDK, analytics SDK, or third-party tracking SDK.</li>
+          <li>Live scans and readings are processed on your device. They are not uploaded to an Ulix server.</li>
+        </ul>
+
+        <h2>Local storage and exports</h2>
+        <ul>
+          <li>The app stores your feature and appearance preferences locally on your device.</li>
+          <li>The app stores a local cache indicating whether Curious Air Pro is unlocked so paid features can remain available offline.</li>
+          <li>If you choose to export a CSV file, it is saved to your device’s Downloads folder. Depending on the export, the file may include timestamps, Wi-Fi names and hardware addresses, Bluetooth names and hardware addresses, cellular identifiers, or GNSS satellite information.</li>
+          <li>Exporting and sharing are optional and initiated by you. After a file is exported or shared, its handling is controlled by you and by any app or service you send it to.</li>
+        </ul>
+
+        <h2>Permissions</h2>
+        <p>Curious Air may request location, nearby-device/Bluetooth, camera, microphone, NFC, Wi-Fi-state, and, on older Android versions, storage permissions. These permissions support the features described above. Runtime permissions are optional, and features that depend on a denied permission will be unavailable or limited. You can revoke permissions at any time in Android settings.</p>
+
+        <h2>Google Play Billing and internet access</h2>
+        <p>Curious Air uses Google Play Billing for an optional one-time Pro purchase and for purchase-entitlement checks. Payment processing is handled by Google Play. Curious Air does not receive or store your full payment-card information. The app’s internet access is used for Google Play purchase and entitlement functions; sensor and signal data is not transmitted to Ulix.</p>
+
+        <h2>Android backup</h2>
+        <p>Android’s built-in backup or device-transfer system may back up local app preferences and the cached Pro entitlement to your Google account, depending on your device and backup settings. CSV files saved in Downloads are managed as user files rather than as Curious Air’s private app data.</p>
+
+        <h2>Retention and deletion</h2>
+        <ul>
+          <li>Live readings are retained only as needed to display the current feature unless you choose to export them.</li>
+          <li>Local preferences and the cached Pro entitlement remain until you clear the app’s storage or uninstall the app, subject to Android backup and restore settings.</li>
+          <li>Exported CSV files remain until you delete them from your device or from any service to which you shared them.</li>
+          <li>Because Curious Air has no account and Ulix does not receive your signal or sensor data, Ulix has no associated cloud profile or sensor-data record to delete.</li>
+        </ul>
+
+        <h2>Security</h2>
+        <p>Curious Air relies on Android’s application sandbox and permission system to protect app data. Data you export to Downloads or share with another app is no longer confined to Curious Air’s private app storage.</p>
+
+        <h2>Contact</h2>
+        <p>For privacy questions or requests, contact Ulix LLC through the <a href="./contact.html">Ulix contact page</a>.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (shared site chrome) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-credo">Find the <b>book</b> <span class="sep">·</span> Save the <b>passage</b> <span class="sep">·</span> Read the <b>classic</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p>
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="./icons/ulixwordmarkclear.png" alt="Ulix — Precision tools for modern odysseys" class="footer-wordmark" width="1754" height="717" />
+        </div>
+        <div class="site-footer__links">
+          <a href="./apps.html">Apps</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./support.html">Support</a>
+          <a href="./about.html">About</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./terms.html">Terms</a>
+          <a href="./privacy.html">Privacy</a>
+        </div>
+        <div>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/ulix" method="post" target="bd-subscribe" class="newsletter" aria-label="Email signup">
+            <label for="nl-email" class="newsletter__label">Get product updates</label>
+            <div class="newsletter__row">
+              <input id="nl-email" class="newsletter__input" type="email" name="email" placeholder="you@example.com" />
+              <button class="btn btn--secondary">Subscribe</button>
+            </div>
+          </form>
+          <div class="site-footer__copyright">© 2026 Ulix LLC. All rights reserved.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/ulix.js" defer></script>
+</body>
+</html>
