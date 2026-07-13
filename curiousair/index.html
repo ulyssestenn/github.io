@@ -1,0 +1,1219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Curious Air: See What's Broadcasting</title>
+  <meta name="description" content="Curious Air turns your Android phone into a signal console — Wi-Fi, Bluetooth LE, GNSS satellites, cellular, NFC, and sensors — fully on-device with no data collection. Free on Google Play." />
+  <link rel="canonical" href="https://ulix.app/curiousair/" />
+  <meta name="theme-color" content="#04070F" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ulix" />
+  <meta property="og:title" content="Curious Air: See What's Broadcasting" />
+  <meta property="og:description" content="Explore the signals in the air around you — Wi-Fi, Bluetooth, satellites, cellular, and more. On-device, private, free." />
+  <meta property="og:url" content="https://ulix.app/curiousair/" />
+  <meta property="og:image" content="https://ulix.app/icons/curiousair.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Curious Air: See What's Broadcasting" />
+  <meta name="twitter:description" content="Explore the signals in the air around you — Wi-Fi, Bluetooth, satellites, cellular, and more. On-device, private, free." />
+  <meta name="twitter:image" content="https://ulix.app/icons/curiousair.png" />
+
+  <link rel="icon" href="/icons/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="../assets/ulix.css" />
+
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/geist-latin.woff2" crossorigin />
+  <style>
+    @font-face {
+      font-family: 'Geist';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url('../assets/fonts/geist-latin.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+      font-family: 'Geist';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url('../assets/fonts/geist-latin-ext.woff2') format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+  </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["SoftwareApplication", "MobileApplication"],
+      "@id": "https://ulix.app/curiousair/#app",
+      "name": "Curious Air",
+      "description": "Curious Air is a privacy-first signal explorer for Android. Scan Wi-Fi networks, decode Bluetooth LE advertisements, map GNSS satellites, inspect cellular info, read NFC tags, and watch live device sensors — all on-device, with no data collection.",
+      "url": "https://ulix.app/curiousair/",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.bhunt.curiousair",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.bhunt.curiousair",
+      "operatingSystem": "Android 8.0+",
+      "applicationCategory": "UtilitiesApplication",
+      "applicationSubCategory": "Signal explorer",
+      "isAccessibleForFree": true,
+      "inLanguage": "en",
+      "permissions": "Location, Bluetooth, Wi-Fi state; Camera, Microphone, and NFC optional",
+      "datePublished": "2026-07-13",
+      "dateModified": "2026-07-13",
+      "image": "https://ulix.app/icons/curiousair.png",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Curious Air (free download)",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://play.google.com/store/apps/details?id=com.bhunt.curiousair"
+        }
+      ],
+      "featureList": [
+        "Wi-Fi network scanner with strength, channel, and security",
+        "Bluetooth LE radar with decoded advertisements and GATT values",
+        "GNSS sky map of satellites overhead",
+        "Cellular network info on supported devices",
+        "NFC tag reader with NDEF payloads",
+        "Magnetometer, barometer, light, motion, and orientation sensors",
+        "Live sound level and audio spectrum",
+        "CSV export to Downloads (Pro)",
+        "Fully on-device — no data collection"
+      ],
+      "keywords": [
+        "signal explorer",
+        "wifi scanner",
+        "bluetooth le scanner",
+        "BLE sniffer",
+        "GNSS satellite map",
+        "cell signal info",
+        "NFC reader",
+        "magnetometer",
+        "privacy-first Android app"
+      ],
+      "publisher": { "@id": "https://ulix.app/#org" },
+      "author": { "@id": "https://ulix.app/#org" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://ulix.app/#org",
+      "name": "Ulix",
+      "legalName": "Ulix LLC",
+      "url": "https://ulix.app/",
+      "logo": "https://ulix.app/icons/ulixlogomark.png",
+      "sameAs": [
+        "https://play.google.com/store/apps/developer?id=Ulix+LLC"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ulix.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Apps", "item": "https://ulix.app/apps.html" },
+        { "@type": "ListItem", "position": 3, "name": "Curious Air", "item": "https://ulix.app/curiousair/" }
+      ]
+    }
+  ]
+}
+</script>
+
+  <style>
+  /* ==========================================================================
+     Curious Air landing page — scoped to .air-page
+     Loaded after ulix.css so these rules win on specificity within the wrapper.
+     ========================================================================== */
+
+  .air-page {
+    --bg: #04070F;
+    --bg-2: #070D1C;
+    --fg: #EEF6FB;
+    --muted: rgba(238,246,251,0.7);
+    --subtle: rgba(238,246,251,0.45);
+    --card-bg: #0A1322;
+    --card-bg-2: #0E1A30;
+    --rule: rgba(238,246,251,0.1);
+    --accent: #22D3EE;
+    --accent-deep: #0EA5E9;
+    --accent-soft: rgba(34,211,238,0.16);
+    --amber: #FBBF24;
+    --sans: Geist, system-ui, sans-serif;
+    --mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+
+    --ulix-primary: #04070F;
+    --ulix-primary-dark: #04070F;
+    --ulix-accent: #22D3EE;
+    --ulix-bg: #04070F;
+    --ulix-ink: #EEF6FB;
+
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .air-page .site-header { border-bottom-color: rgba(238,246,251,0.08); background: var(--bg); }
+  .air-page .btn--primary { background: var(--accent-deep); color: #fff; }
+  .air-page .site-footer { border-top-color: rgba(238,246,251,0.1); color: rgba(238,246,251,0.7); background: var(--bg); }
+  .air-page .site-footer__tag,
+  .air-page .site-footer__copyright,
+  .air-page .site-footer__links a { color: rgba(238,246,251,0.7); }
+  .air-page .site-footer__brand-name,
+  .air-page .site-footer__links a:hover { color: var(--fg); }
+
+  .air-page a { color: inherit; text-decoration: none; }
+  .air-page img { display: block; user-select: none; -webkit-user-drag: none; }
+  .air-page h1, .air-page h2, .air-page h3 { margin: 0; color: var(--fg); }
+  .air-page p, .air-page ul, .air-page figure { margin: 0; }
+  .air-page ul { list-style: none; padding: 0; }
+
+  .air-page .page { max-width: 1240px; margin: 0 auto; }
+
+  /* ---------- Phone frame ---------- */
+  .air-page .phone {
+    width: calc(280px * var(--s, 1));
+    height: calc(580px * var(--s, 1));
+    border-radius: calc(40px * var(--s, 1));
+    padding: calc(8px * var(--s, 1));
+    background: linear-gradient(180deg, #16233b 0%, #030710 100%);
+    box-shadow:
+      0 calc(30px * var(--s, 1)) calc(80px * var(--s, 1)) rgba(0,0,0,0.45),
+      0 calc(4px * var(--s, 1)) calc(12px * var(--s, 1)) rgba(0,0,0,0.25),
+      inset 0 0 0 1px rgba(255,255,255,0.06);
+    transform: rotate(var(--r, 0deg));
+    flex-shrink: 0;
+    position: relative;
+  }
+  .air-page .phone-screen {
+    width: 100%;
+    height: 100%;
+    border-radius: calc(32px * var(--s, 1));
+    overflow: hidden;
+    background: #02040A;
+  }
+
+  /* ---------- Signal console mock (CSS-drawn app UI) ---------- */
+  .air-page .console {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    background:
+      linear-gradient(rgba(34,211,238,0.035) 1px, transparent 1px) 0 0 / 100% 28px,
+      #02040A;
+    padding: 22px 16px 16px;
+  }
+  .air-page .console__bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 0.14em;
+    font-size: 10px;
+    color: rgba(34,211,238,0.85);
+    border-bottom: 1px solid rgba(34,211,238,0.25);
+    padding-bottom: 10px;
+  }
+  .air-page .console__scan { display: inline-flex; align-items: center; gap: 6px; color: #4ADE80; }
+  .air-page .console__scan::before {
+    content: "";
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #4ADE80;
+    animation: air-pulse 1.6s ease-in-out infinite;
+  }
+  .air-page .console__radar {
+    position: relative;
+    width: 176px;
+    height: 176px;
+    margin: 22px auto;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle, transparent 0, transparent 29%, rgba(34,211,238,0.28) 30%, transparent 31%,
+        transparent 59%, rgba(34,211,238,0.28) 60%, transparent 61%,
+        transparent 97%, rgba(34,211,238,0.4) 98%, transparent 100%),
+      radial-gradient(circle at center, rgba(34,211,238,0.08), transparent 70%);
+  }
+  .air-page .console__radar::before,
+  .air-page .console__radar::after {
+    content: "";
+    position: absolute;
+    background: rgba(34,211,238,0.18);
+  }
+  .air-page .console__radar::before { left: 50%; top: 0; width: 1px; height: 100%; }
+  .air-page .console__radar::after { top: 50%; left: 0; height: 1px; width: 100%; }
+  .air-page .radar__sweep {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, rgba(34,211,238,0.35), transparent 70deg, transparent 360deg);
+    animation: air-sweep 4s linear infinite;
+  }
+  .air-page .radar__blip {
+    position: absolute;
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 10px rgba(34,211,238,0.9);
+    animation: air-pulse 2.4s ease-in-out infinite;
+  }
+  .air-page .radar__blip--amber { background: var(--amber); box-shadow: 0 0 10px rgba(251,191,36,0.8); }
+  .air-page .console__rows { display: flex; flex-direction: column; gap: 11px; margin-top: 4px; }
+  .air-page .crow { line-height: 1.35; }
+  .air-page .crow__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    white-space: nowrap;
+  }
+  .air-page .crow__name { color: #D9F6FC; overflow: hidden; text-overflow: ellipsis; }
+  .air-page .crow__name b { color: var(--accent); font-weight: 600; margin-right: 7px; }
+  .air-page .crow__db { color: rgba(238,246,251,0.65); flex-shrink: 0; }
+  .air-page .crow__bar {
+    display: block;
+    height: 3px;
+    margin-top: 5px;
+    border-radius: 2px;
+    background: rgba(34,211,238,0.14);
+    overflow: hidden;
+  }
+  .air-page .crow__bar i {
+    display: block;
+    height: 100%;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--accent-deep), var(--accent));
+  }
+  @keyframes air-sweep { to { transform: rotate(360deg); } }
+  @keyframes air-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+  @media (prefers-reduced-motion: reduce) {
+    .air-page .radar__sweep, .air-page .radar__blip, .air-page .console__scan::before { animation: none; }
+  }
+
+  /* Console mock: detail-screen variant (BLE + CSV) */
+  .air-page .console--detail { justify-content: flex-start; gap: 0; }
+  .air-page .console__title {
+    color: #D9F6FC;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .air-page .console__title span { color: rgba(238,246,251,0.6); font-size: 11px; }
+  .air-page .kv { margin-top: 14px; display: flex; flex-direction: column; gap: 9px; }
+  .air-page .kv div { display: flex; justify-content: space-between; gap: 10px; }
+  .air-page .kv dt { color: rgba(238,246,251,0.55); }
+  .air-page .kv dd { color: #D9F6FC; margin: 0; text-align: right; }
+  .air-page .console__rule {
+    margin: 14px 0 0;
+    color: rgba(34,211,238,0.6);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    border-bottom: 1px solid rgba(34,211,238,0.25);
+    padding-bottom: 6px;
+  }
+  .air-page .console__csv {
+    margin-top: 14px;
+    color: rgba(238,246,251,0.75);
+    font-size: 10px;
+    line-height: 1.9;
+    white-space: pre;
+    overflow: hidden;
+  }
+  .air-page .console__csv b { color: var(--accent); font-weight: 600; }
+  .air-page .console__ok { margin-top: 14px; color: #4ADE80; font-size: 11px; }
+
+  /* ---------- Eyebrow ---------- */
+  .air-page .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(238,246,251,0.6);
+    font-weight: 500;
+  }
+  .air-page .eyebrow::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+    opacity: 0.9;
+    flex-shrink: 0;
+  }
+
+  /* ---------- Section divider ---------- */
+  .air-page .divider {
+    height: 1px;
+    background: var(--rule);
+    margin: 0 80px;
+  }
+
+  /* ---------- Play badge ---------- */
+  .air-page .play-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--accent-deep);
+    color: #fff;
+    padding: 14px 22px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 8px 24px rgba(14,165,233,0.28);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .air-page .play-badge:hover { transform: translateY(-1px); box-shadow: 0 12px 32px rgba(14,165,233,0.36); }
+  .air-page .play-badge--lg { padding: 16px 26px; gap: 14px; font-size: 17px; }
+  .air-page .play-badge__text { display: flex; flex-direction: column; line-height: 1.1; text-align: left; }
+  .air-page .play-badge__sub { font-size: 10px; opacity: 0.85; letter-spacing: 0.08em; text-transform: uppercase; }
+  .air-page .play-badge__main { font-size: 17px; font-weight: 600; letter-spacing: -0.02em; }
+  .air-page .play-badge--lg .play-badge__sub { font-size: 11px; }
+  .air-page .play-badge--lg .play-badge__main { font-size: 19px; }
+
+  /* ---------- Secondary CTA ---------- */
+  .air-page .ghost-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 20px;
+    border-radius: 999px;
+    border: 1px solid rgba(238,246,251,0.18);
+    color: var(--fg);
+    font-size: 15px;
+    font-weight: 500;
+    background: transparent;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .air-page .ghost-btn:hover { background: rgba(238,246,251,0.06); border-color: rgba(238,246,251,0.32); }
+
+  /* ---------- Hero ---------- */
+  .air-page .a-hero {
+    padding: 56px 80px 96px;
+    position: relative;
+    overflow: hidden;
+  }
+  .air-page .a-hero__grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .air-page .a-hero__title {
+    font-size: 84px;
+    font-weight: 600;
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+    color: var(--fg);
+  }
+  .air-page .a-hero__title em {
+    font-style: normal;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .air-page .a-hero__lede {
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--muted);
+    margin-top: 24px;
+    max-width: 520px;
+    font-weight: 400;
+  }
+  .air-page .a-hero__ctas {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .air-page .a-hero__art {
+    position: relative;
+    height: 660px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .air-page .a-hero__glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(50% 50% at 50% 40%, rgba(34,211,238,0.22), transparent 70%);
+    filter: blur(40px);
+    pointer-events: none;
+  }
+  .air-page .a-hero__phone { position: relative; z-index: 1; }
+
+  /* ---------- Benefits strip ---------- */
+  .air-page .benefits {
+    margin: 0 80px 24px;
+    border: 1px solid var(--rule);
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(14,26,48,0.55), rgba(7,13,28,0.55));
+    padding: 36px 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+  .air-page .benefit { text-align: center; }
+  .air-page .benefit__icon {
+    width: 34px;
+    height: 34px;
+    color: var(--accent);
+    margin: 0 auto 14px;
+  }
+  .air-page .benefit__title {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--fg);
+  }
+  .air-page .benefit__body {
+    margin-top: 8px;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+
+  /* ---------- Section titles ---------- */
+  .air-page .section-title {
+    font-size: 44px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    color: var(--fg);
+    text-wrap: balance;
+  }
+  .air-page .section-title em { color: var(--accent); font-style: normal; }
+  .air-page .section-lede {
+    margin: 16px auto 0;
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--muted);
+    max-width: 620px;
+  }
+
+  /* ---------- Signals grid ---------- */
+  .air-page .signals {
+    padding: 96px 80px 32px;
+    text-align: center;
+  }
+  .air-page .signals__grid {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .air-page .sig {
+    background: var(--card-bg);
+    border: 1px solid var(--rule);
+    border-radius: 18px;
+    padding: 26px 22px;
+    text-align: left;
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .air-page .sig:hover { border-color: rgba(34,211,238,0.35); transform: translateY(-2px); }
+  .air-page .sig__icon {
+    width: 30px;
+    height: 30px;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .air-page .sig__title {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--fg);
+  }
+  .air-page .sig__body {
+    margin-top: 8px;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+  .air-page .signals__note {
+    margin-top: 36px;
+    font-size: 14px;
+    color: var(--subtle);
+  }
+
+  /* ---------- Feature blocks ---------- */
+  .air-page .feature-blocks {
+    padding: 64px 80px 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+  .air-page .fb {
+    background: var(--card-bg);
+    border: 1px solid var(--rule);
+    border-radius: 24px;
+    padding: 36px 36px 0;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 20px;
+    align-items: end;
+    overflow: hidden;
+    min-height: 460px;
+  }
+  .air-page .fb__head { padding-bottom: 36px; }
+  .air-page .fb__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--fg);
+    margin-bottom: 18px;
+  }
+  .air-page .fb__pill .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: inline-block;
+  }
+  .air-page .fb__pill .dot--amber { background: var(--amber); }
+  .air-page .fb__title {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--fg);
+  }
+  .air-page .fb__body {
+    margin-top: 14px;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+  .air-page .fb__list {
+    margin-top: 22px;
+    font-size: 14.5px;
+    line-height: 1.9;
+    color: var(--fg);
+  }
+  .air-page .fb__list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .air-page .fb__list svg {
+    width: 18px;
+    height: 18px;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+  .air-page .fb__art {
+    align-self: end;
+    display: flex;
+    justify-content: center;
+  }
+  .air-page .fb__art .phone { margin-bottom: -140px; }
+
+  /* ---------- Skins strip ---------- */
+  .air-page .skins {
+    padding: 96px 80px 32px;
+    text-align: center;
+  }
+  .air-page .skins__grid {
+    margin: 48px auto 0;
+    max-width: 860px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .air-page .skin {
+    border: 1px solid var(--rule);
+    border-radius: 20px;
+    overflow: hidden;
+    background: var(--card-bg);
+    text-align: left;
+  }
+  .air-page .skin__screen {
+    font-family: var(--mono);
+    font-size: 12px;
+    line-height: 2.1;
+    padding: 24px 26px;
+    background: #02040A;
+    border-bottom: 1px solid var(--rule);
+    white-space: pre;
+    overflow: hidden;
+  }
+  .air-page .skin__screen--console { color: var(--accent); }
+  .air-page .skin__screen--hud { color: var(--amber); background: #0A0702; }
+  .air-page .skin__screen--hud .dim { color: rgba(251,191,36,0.5); }
+  .air-page .skin__screen--console .dim { color: rgba(34,211,238,0.5); }
+  .air-page .skin__label { padding: 18px 26px 20px; }
+  .air-page .skin__name { font-size: 16px; font-weight: 600; color: var(--fg); }
+  .air-page .skin__desc { margin-top: 4px; font-size: 13.5px; color: var(--muted); line-height: 1.5; }
+
+  /* ---------- Privacy block ---------- */
+  .air-page .privacy {
+    margin: 64px 80px 32px;
+    padding: 48px 56px;
+    background: linear-gradient(180deg, rgba(14,26,48,0.7), rgba(7,13,28,0.7));
+    border: 1px solid var(--rule);
+    border-radius: 24px;
+    display: grid;
+    grid-template-columns: auto 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .air-page .privacy__shield {
+    width: 90px;
+    height: 90px;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+  .air-page .privacy__title {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--fg);
+  }
+  .air-page .privacy__body {
+    margin-top: 12px;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+  .air-page .privacy__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 24px;
+    font-size: 14px;
+    color: var(--fg);
+  }
+  .air-page .privacy__list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .air-page .privacy__list svg {
+    width: 18px;
+    height: 18px;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  /* ---------- Bottom CTA ---------- */
+  .air-page .a-cta {
+    padding: 112px 80px;
+    text-align: center;
+  }
+  .air-page .a-cta__title {
+    font-size: 56px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    text-wrap: balance;
+    color: var(--fg);
+  }
+  .air-page .a-cta__title em { color: var(--accent); font-style: normal; }
+  .air-page .a-cta__body {
+    font-size: 17px;
+    color: var(--muted);
+    margin: 20px auto 0;
+    max-width: 560px;
+    line-height: 1.55;
+  }
+  .air-page .a-cta__action {
+    margin-top: 36px;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 960px) {
+    .air-page .divider { margin: 0 24px; }
+    .air-page .a-hero { padding: 32px 24px 56px; }
+    .air-page .a-hero__grid { grid-template-columns: 1fr; gap: 40px; }
+    .air-page .a-hero__title { font-size: 48px; }
+    .air-page .a-hero__lede { font-size: 17px; }
+    .air-page .a-hero__art { height: 540px; }
+
+    .air-page .benefits {
+      margin: 0 24px 16px;
+      padding: 24px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .air-page .signals { padding: 64px 24px 16px; }
+    .air-page .section-title { font-size: 32px; }
+    .air-page .signals__grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+
+    .air-page .feature-blocks { padding: 40px 24px 16px; grid-template-columns: 1fr; gap: 20px; }
+    .air-page .fb { grid-template-columns: 1fr; min-height: 0; padding: 28px 28px 0; }
+    .air-page .fb__head { padding-bottom: 8px; }
+    .air-page .fb__art .phone { margin-bottom: -90px; }
+
+    .air-page .skins { padding: 64px 24px 16px; }
+    .air-page .skins__grid { grid-template-columns: 1fr; }
+
+    .air-page .privacy {
+      margin: 40px 24px 16px;
+      padding: 32px 24px;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      text-align: center;
+    }
+    .air-page .privacy__shield { margin: 0 auto; width: 64px; height: 64px; }
+    .air-page .privacy__list { grid-template-columns: 1fr; justify-items: start; max-width: 280px; margin: 0 auto; }
+  }
+  @media (max-width: 600px) {
+    .air-page .signals__grid { grid-template-columns: 1fr; }
+
+    .air-page .a-cta { padding: 72px 24px; }
+    .air-page .a-cta__title { font-size: 36px; }
+    .air-page .a-cta__body { font-size: 15px; }
+  }
+  </style>
+</head>
+
+<body class="air-page">
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container container--wide site-header__inner">
+      <a href="../index.html" class="site-brand">
+        <img src="../icons/favicon.png" alt="" class="site-brand__logo" width="64" height="64" />
+        <span class="site-brand__name">ULIX</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../index.html" class="site-nav__link">Home</a>
+        <a href="../apps.html" class="site-nav__link" aria-current="page">Apps</a>
+        <a href="../blog.html" class="site-nav__link">Blog</a>
+        <a href="../about.html" class="site-nav__link">About</a>
+        <a href="../contact.html" class="site-nav__link">Contact</a>
+      </nav>
+      <div class="site-header__actions">
+        <button id="u-menu-btn" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="u-mobile">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="4" y1="7"  x2="20" y2="7"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="17" x2="20" y2="17"/>
+          </svg>
+        </button>
+        <a href="https://play.google.com/store/apps/details?id=com.bhunt.curiousair" target="_blank" rel="noopener" class="btn btn--primary btn--header">Get Curious Air</a>
+      </div>
+    </div>
+  </header>
+
+  <div id="u-mobile" class="drawer" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+    <div class="drawer__backdrop" data-close></div>
+    <div class="drawer__panel">
+      <div class="drawer__header">
+        <span class="drawer__title">Menu</span>
+        <button class="drawer__close" aria-label="Close menu" data-close>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <ul class="drawer__list">
+        <li><a class="drawer__link" href="../index.html" data-close>Home</a></li>
+        <li><a class="drawer__link" href="../apps.html" data-close>Apps</a></li>
+        <li><a class="drawer__link" href="../blog.html" data-close>Blog</a></li>
+        <li><a class="drawer__link" href="../about.html" data-close>About</a></li>
+        <li><a class="drawer__link" href="../contact.html" data-close>Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="main">
+    <div class="page">
+
+      <!-- ============ HERO ============ -->
+      <section class="a-hero">
+        <div class="a-hero__grid">
+          <div>
+            <span class="eyebrow" style="margin-bottom:24px; display:inline-flex;">Free to explore · No accounts · Local-only</span>
+            <h1 class="a-hero__title" style="margin-top:18px;">
+              See what's<br>
+              <em>broadcasting.</em>
+            </h1>
+            <p class="a-hero__lede">
+              The air around you is full of signals: Wi-Fi, Bluetooth, satellites, cellular, magnetic fields, and more. Curious Air turns your Android phone into a signal console that reveals all of it, without sending a single byte off your device.
+            </p>
+            <div class="a-hero__ctas">
+              <a href="https://play.google.com/store/apps/details?id=com.bhunt.curiousair" target="_blank" rel="noopener" class="play-badge">
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" aria-hidden="true">
+                  <path d="M1 1.5v19l10-9.5L1 1.5z" fill="#fff" opacity="0.95"/>
+                  <path d="M1 1.5l10 9.5 3-3L2.5 1 1 1.5z" fill="#fff" opacity="0.75"/>
+                  <path d="M1 20.5l10-9.5 3 3L2.5 21 1 20.5z" fill="#fff" opacity="0.6"/>
+                  <path d="M11 11l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 3v16l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 11z" fill="#fff" opacity="0.45"/>
+                </svg>
+                <span class="play-badge__text">
+                  <span class="play-badge__sub">Get it on</span>
+                  <span class="play-badge__main">Google Play</span>
+                </span>
+              </a>
+              <a href="#signals" class="ghost-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 20v-8"/>
+                  <path d="M8.5 16.5a5 5 0 0 1 7 0"/>
+                  <path d="M5 13a10 10 0 0 1 14 0"/>
+                </svg>
+                Explore the signals
+              </a>
+            </div>
+          </div>
+          <div class="a-hero__art">
+            <div class="a-hero__glow"></div>
+            <div class="a-hero__phone">
+              <div class="phone" style="--s:1.05">
+                <div class="phone-screen">
+                  <div class="console" role="img" aria-label="Curious Air signal console showing a radar sweep and live Wi-Fi, Bluetooth, satellite, and cellular readings">
+                    <div class="console__bar"><span>CURIOUS AIR</span><span class="console__scan">SCANNING</span></div>
+                    <div class="console__radar">
+                      <div class="radar__sweep"></div>
+                      <span class="radar__blip" style="top:26%; left:60%;"></span>
+                      <span class="radar__blip" style="top:58%; left:30%; animation-delay:0.8s;"></span>
+                      <span class="radar__blip radar__blip--amber" style="top:70%; left:66%; animation-delay:1.4s;"></span>
+                    </div>
+                    <div class="console__rows">
+                      <div class="crow">
+                        <div class="crow__top"><span class="crow__name"><b>WIFI</b>HOME-NET-5G</span><span class="crow__db">−42 dBm</span></div>
+                        <span class="crow__bar"><i style="width:88%"></i></span>
+                      </div>
+                      <div class="crow">
+                        <div class="crow__top"><span class="crow__name"><b>BLE</b>Pixel Buds Pro</span><span class="crow__db">−58 dBm</span></div>
+                        <span class="crow__bar"><i style="width:66%"></i></span>
+                      </div>
+                      <div class="crow">
+                        <div class="crow__top"><span class="crow__name"><b>GNSS</b>23 satellites</span><span class="crow__db">fix 3.1 m</span></div>
+                        <span class="crow__bar"><i style="width:76%"></i></span>
+                      </div>
+                      <div class="crow">
+                        <div class="crow__top"><span class="crow__name"><b>LTE</b>Band 66</span><span class="crow__db">−97 dBm</span></div>
+                        <span class="crow__bar"><i style="width:34%"></i></span>
+                      </div>
+                      <div class="crow">
+                        <div class="crow__top"><span class="crow__name"><b>MAG</b>48.2 µT</span><span class="crow__db">N 12°</span></div>
+                        <span class="crow__bar"><i style="width:52%"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ BENEFITS STRIP ============ -->
+      <section class="benefits" aria-label="Key benefits">
+        <div class="benefit">
+          <svg class="benefit__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="4" y="11" width="16" height="10" rx="2"/>
+            <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+          </svg>
+          <h3 class="benefit__title">Local-only</h3>
+          <div class="benefit__body">Scans and readings never leave your device.</div>
+        </div>
+        <div class="benefit">
+          <svg class="benefit__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/>
+            <line x1="3" y1="3" x2="21" y2="21"/>
+          </svg>
+          <h3 class="benefit__title">No accounts or ads</h3>
+          <div class="benefit__body">No sign-ins, no tracking, no analytics.</div>
+        </div>
+        <div class="benefit">
+          <svg class="benefit__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 20v-8"/>
+            <path d="M8.5 16.5a5 5 0 0 1 7 0"/>
+            <path d="M5 13a10 10 0 0 1 14 0"/>
+            <path d="M1.5 9.5a15 15 0 0 1 21 0"/>
+          </svg>
+          <h3 class="benefit__title">Free to explore</h3>
+          <div class="benefit__body">Every scanner and sensor tool is free.</div>
+        </div>
+        <div class="benefit">
+          <svg class="benefit__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 2v13"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <path d="M4 19h16"/>
+          </svg>
+          <h3 class="benefit__title">Pay once for Pro</h3>
+          <div class="benefit__body">One-time unlock adds CSV export. No subscription.</div>
+        </div>
+      </section>
+
+      <!-- ============ SIGNALS GRID ============ -->
+      <section id="signals" class="signals">
+        <span class="eyebrow" style="justify-content:center;">The invisible world, on one screen</span>
+        <h2 class="section-title" style="margin-top:16px;">One console. <em>Every signal.</em></h2>
+        <p class="section-lede">Curious Air is a set of live instruments built on the radios and sensors already in your phone.</p>
+        <div class="signals__grid">
+          <div class="sig">
+            <svg class="sig__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 13a10 10 0 0 1 14 0"/>
+              <path d="M8.5 16.5a5 5 0 0 1 7 0"/>
+              <path d="M1.5 9.5a15 15 0 0 1 21 0"/>
+              <circle cx="12" cy="20" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+            <h3 class="sig__title">Wi-Fi Explorer</h3>
+            <p class="sig__body">Every network in range, with live signal strength, channel, frequency, and security details.</p>
+          </div>
+          <div class="sig">
+            <svg class="sig__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 7l10 10-5 5V2l5 5L7 17"/>
+            </svg>
+            <h3 class="sig__title">Bluetooth Radar</h3>
+            <p class="sig__body">Nearby BLE and classic devices with decoded advertisements and manufacturer names.</p>
+          </div>
+          <div class="sig">
+            <svg class="sig__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="12" r="5.5"/>
+              <circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/>
+              <circle cx="16.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/>
+              <circle cx="6" cy="14" r="1.2" fill="currentColor" stroke="none"/>
+            </svg>
+            <h3 class="sig__title">GNSS Sky Map</h3>
+            <p class="sig__body">The satellites overhead right now — constellation, signal, and your live position accuracy.</p>
+          </div>
+          <div class="sig">
+            <svg class="sig__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 20h.01M7 20v-4M12 20v-8M17 20V8M22 20V4"/>
+            </svg>
+            <h3 class="sig__title">Cellular</h3>
+            <p class="sig__body">Cell identity, band, and signal readings, where your device and Android version allow.</p>
+          </div>
+          <div class="sig">
+            <svg class="sig__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="4"/>
+              <path d="M8 8v8M8 8c4 0 8 2 8 8"/>
+            </svg>
+            <h3 class="sig__title">NFC Reader</h3>
+            <p class="sig__body">Tap a tag to inspect it: tag type, technology, and decoded NDEF payloads.</p>
+          </div>
+          <div class="sig">
+            <svg class="sig__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"/>
+              <polygon points="14.5 9.5 10.5 11 9.5 14.5 13.5 13 14.5 9.5" fill="currentColor" stroke="none"/>
+            </svg>
+            <h3 class="sig__title">Magnetic Field</h3>
+            <p class="sig__body">Live magnetometer readings and compass heading. Hunt for anomalies and hidden magnets.</p>
+          </div>
+          <div class="sig">
+            <svg class="sig__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 12h3l2-7 4 14 3-10 2 3h6"/>
+            </svg>
+            <h3 class="sig__title">Sound &amp; Spectrum</h3>
+            <p class="sig__body">Live sound levels and an audio spectrum view, up into the ultrasonic range.</p>
+          </div>
+          <div class="sig">
+            <svg class="sig__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M8 21l4-14 4 14"/>
+              <path d="M5 9l7-6 7 6"/>
+            </svg>
+            <h3 class="sig__title">Motion &amp; Environment</h3>
+            <p class="sig__body">Accelerometer, orientation and tilt, barometric altitude, and ambient light — all live.</p>
+          </div>
+        </div>
+        <p class="signals__note">Plus experimental instruments: inferred signals like 60&nbsp;Hz AC-power fields, and camera-based signal tools.</p>
+      </section>
+
+      <!-- ============ FEATURE BLOCKS ============ -->
+      <section class="feature-blocks">
+        <div class="fb">
+          <div class="fb__head">
+            <div class="fb__pill"><span class="dot"></span> Bluetooth Radar</div>
+            <h3 class="fb__title">Bluetooth, actually decoded.</h3>
+            <p class="fb__body">Most scanners show you hex. Curious Air decodes BLE advertisements field by field, names manufacturers from the official Bluetooth SIG database, and lets you connect to read live GATT values in plain language.</p>
+            <ul class="fb__list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Decoded advertisement breakdown</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Manufacturer &amp; service names</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Connect &amp; read GATT values</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Live RSSI as you move</li>
+            </ul>
+          </div>
+          <div class="fb__art">
+            <div class="phone" style="--s:0.78">
+              <div class="phone-screen">
+                <div class="console console--detail" role="img" aria-label="Curious Air Bluetooth device detail screen showing decoded advertisement fields and GATT values">
+                  <div class="console__bar"><span>◂ BLUETOOTH</span><span class="console__scan">LIVE</span></div>
+                  <div class="console__title">Pixel Buds Pro <span>−58 dBm</span></div>
+                  <dl class="kv">
+                    <div><dt>Manufacturer</dt><dd>Google LLC</dd></div>
+                    <div><dt>Service</dt><dd>0xFE2C Fast Pair</dd></div>
+                    <div><dt>TX Power</dt><dd>−21 dBm</dd></div>
+                    <div><dt>Address</dt><dd>F4:2B:…:9E</dd></div>
+                  </dl>
+                  <p class="console__rule">GATT · CONNECTED</p>
+                  <dl class="kv">
+                    <div><dt>Battery Level</dt><dd>85%</dd></div>
+                    <div><dt>PnP ID</dt><dd>vendor 0x00E0</dd></div>
+                    <div><dt>Firmware</dt><dd>4.66</dd></div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fb">
+          <div class="fb__head">
+            <div class="fb__pill"><span class="dot dot--amber"></span> CSV Export · Pro</div>
+            <h3 class="fb__title">Your data, in plain CSV.</h3>
+            <p class="fb__body">Unlock Pro once and export Wi-Fi, Bluetooth, GNSS, and cellular scans straight to your Downloads folder as ordinary CSV files. No cloud, no lock-in — open them in any spreadsheet or script.</p>
+            <ul class="fb__list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Wi-Fi · Bluetooth · GNSS · Cellular</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Saved locally to Downloads</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> One-time purchase, no subscription</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Everything else stays free</li>
+            </ul>
+          </div>
+          <div class="fb__art">
+            <div class="phone" style="--s:0.78">
+              <div class="phone-screen">
+                <div class="console console--detail" role="img" aria-label="Curious Air CSV export screen showing a Wi-Fi scan saved to the Downloads folder">
+                  <div class="console__bar"><span>◂ EXPORT</span><span class="console__scan">PRO</span></div>
+                  <div class="console__title">wifi_scan.csv <span>4.2 KB</span></div>
+                  <div class="console__csv"><b>ssid,bssid,rssi,freq,sec</b>
+HOME-NET-5G,9C:…,−42,5745,WPA3
+HOME-NET,9C:…,−47,2437,WPA3
+CAFE-GUEST,D8:…,−63,5220,WPA2
+PRINTER-X2,44:…,−71,2412,WPA2
+IOT-HUB,B0:…,−78,2462,WPA3
+…</div>
+                  <p class="console__ok">✓ Saved to Downloads</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SKINS ============ -->
+      <section class="skins">
+        <span class="eyebrow" style="justify-content:center;">Pick your instrument panel</span>
+        <h2 class="section-title" style="margin-top:16px;">Two <em>instrument skins</em>.</h2>
+        <p class="section-lede">One setting reskins every screen — from the Wi-Fi console to the GNSS sky map.</p>
+        <div class="skins__grid">
+          <div class="skin">
+            <div class="skin__screen skin__screen--console" aria-hidden="true">CURIOUS AIR <span class="dim">// CONSOLE</span>
+WIFI  [####·]  −42 dBm
+GNSS  ● ● ●    23 sats
+<span class="dim">──────────────────</span></div>
+            <div class="skin__label">
+              <div class="skin__name">Console</div>
+              <p class="skin__desc">The default: crisp cyan-on-black, built for readability.</p>
+            </div>
+          </div>
+          <div class="skin">
+            <div class="skin__screen skin__screen--hud" aria-hidden="true">CURIOUS AIR <span class="dim">// HUD</span>
+WIFI  [####·]  −42 dBm
+GNSS  ● ● ●    23 sats
+<span class="dim">──────────────────</span></div>
+            <div class="skin__label">
+              <div class="skin__name">HUD</div>
+              <p class="skin__desc">A warm amber-and-green retro heads-up-display look.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PRIVACY ============ -->
+      <section class="privacy">
+        <svg class="privacy__shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <polyline points="9 12 11 14 15 10"/>
+        </svg>
+        <div>
+          <h2 class="privacy__title">It watches signals. Not you.</h2>
+          <p class="privacy__body">
+            Every scan and sensor reading is processed on your device. Curious Air never uploads your location, nearby networks, device identifiers, or readings anywhere. Data only leaves your phone when you choose to export or share a CSV.
+          </p>
+          <p class="privacy__body" style="margin-top:8px;">
+            <a href="../curiousairprivacy.html" style="color:var(--accent); border-bottom:1px solid var(--accent-soft);">Read the full privacy policy →</a>
+          </p>
+        </div>
+        <ul class="privacy__list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> No data collection</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> No ads or tracking</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> No accounts or sign-ins</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Permissions all optional</li>
+        </ul>
+      </section>
+
+      <!-- ============ BOTTOM CTA ============ -->
+      <section class="a-cta">
+        <span class="eyebrow" style="margin-bottom:24px; justify-content:center;">Free to explore · No accounts · Local-only</span>
+        <h2 class="a-cta__title" style="margin-top:16px;">
+          The air is full of signals.<br><em>Start listening.</em>
+        </h2>
+        <p class="a-cta__body">
+          Curious Air is free on Google Play. A one-time Pro unlock adds CSV export — no subscription, ever.
+        </p>
+        <div class="a-cta__action">
+          <a href="https://play.google.com/store/apps/details?id=com.bhunt.curiousair" target="_blank" rel="noopener" class="play-badge play-badge--lg">
+            <svg width="22" height="24" viewBox="0 0 20 22" fill="none" aria-hidden="true">
+              <path d="M1 1.5v19l10-9.5L1 1.5z" fill="#fff" opacity="0.95"/>
+              <path d="M1 1.5l10 9.5 3-3L2.5 1 1 1.5z" fill="#fff" opacity="0.75"/>
+              <path d="M1 20.5l10-9.5 3 3L2.5 21 1 20.5z" fill="#fff" opacity="0.6"/>
+              <path d="M11 11l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 3v16l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 11z" fill="#fff" opacity="0.45"/>
+            </svg>
+            <span class="play-badge__text">
+              <span class="play-badge__sub">Get it on</span>
+              <span class="play-badge__main">Google Play</span>
+            </span>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="../icons/favicon.png" alt="" width="32" height="32" style="border-radius:0.5rem" loading="lazy" decoding="async" />
+          <div>
+            <div class="site-footer__brand-name">ULIX</div>
+            <p class="site-footer__tag">Precision tools for modern odysseys.</p>
+          </div>
+        </div>
+        <div class="site-footer__links">
+          <a href="../apps.html">Apps</a>
+          <a href="../blog.html">Blog</a>
+          <a href="../support.html">Support</a>
+          <a href="../about.html">About</a>
+          <a href="../contact.html">Contact</a>
+          <a href="../terms.html">Terms</a>
+          <a href="../privacy.html">Privacy</a>
+          <a href="../curiousairprivacy.html">Curious Air Privacy</a>
+        </div>
+        <div>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/ulix" method="post" target="bd-subscribe" class="newsletter" aria-label="Email signup">
+            <label for="nl-email" class="newsletter__label">Get product updates</label>
+            <div class="newsletter__row">
+              <input id="nl-email" class="newsletter__input" type="email" name="email" placeholder="you@example.com" />
+              <button class="btn btn--secondary">Subscribe</button>
+            </div>
+          </form>
+          <div class="site-footer__copyright">© 2026 Ulix LLC.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/ulix.js" defer></script>
+</body>
+</html>

@@ -10,7 +10,8 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 - [Shelf Scan](https://ulix.app/shelfscan/): Search physical shelves with your phone's camera using on-device OCR. Finds books, movies, and games. Fully offline, nothing leaves the device. $2.99 one-time.
 - [Keep Clip](https://ulix.app/keepclip/): Save text, quotes, highlights, and links from almost any app via the Share menu. Tag, search, favorite, and export to Markdown, CSV, TXT, RTF, or HTML. $1.99 one-time.
 - [Track Analysis](https://ulix.app/trackanalysis/): Freeform plain-English logging for food, symptoms, supplements, sleep, activity, and energy. Export a clean CSV for analysis with the LLM of your choice. Free, with a one-time Pro unlock.
-- Loan It and Curious Air: Android utilities, coming this year.
+- [Curious Air](https://ulix.app/curiousair/): Signal explorer that reveals the Wi-Fi, Bluetooth LE, GNSS satellites, cellular, NFC, and sensor signals around you — fully on-device, no data collection. Free, with a one-time Pro unlock for CSV export.
+- Loan It: Android utility, coming this year.
 
 ## Services
 
