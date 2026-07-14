@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Breaker of Horses — Privacy Policy — Ulix</title>
+  <meta name="description" content="How Breaker of Horses handles reading progress, bookmarks, on-device search, sharing, saved images, and Android backups." />
+  <link rel="canonical" href="https://ulix.app/breakerofhorsesprivacy.html" />
+  <meta name="theme-color" content="#0F0E0C" />
+  <link rel="icon" href="/icons/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="./assets/ulix.css" />
+
+  <!-- Fonts: Geist (self-hosted) + Newsreader (display serif). Matches the homepage. -->
+  <link rel="preload" as="font" type="font/woff2" href="./assets/fonts/geist-latin.woff2" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+  <!-- Shared warm-dark editorial design system (same as the homepage) -->
+  <link rel="stylesheet" href="./assets/home.css" />
+</head>
+
+<body class="home-page">
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Header (shared site chrome) -->
+  <header class="site-header">
+    <div class="container container--wide site-header__inner">
+      <a href="./index.html" class="site-brand">
+        <img src="./icons/favicon.png" alt="" class="site-brand__logo" width="64" height="64" />
+        <span class="site-brand__name">ULIX</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="./index.html" class="site-nav__link">Home</a>
+        <a href="./apps.html" class="site-nav__link">Apps</a>
+        <a href="./blog.html" class="site-nav__link">Blog</a>
+        <a href="./about.html" class="site-nav__link">About</a>
+        <a href="./contact.html" class="site-nav__link">Contact</a>
+      </nav>
+      <div class="site-header__actions">
+        <button id="u-menu-btn" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="u-mobile">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="4" y1="7" x2="20" y2="7"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="17" x2="20" y2="17"/>
+          </svg>
+        </button>
+        <a href="./apps.html" class="btn btn--primary btn--header">Browse all apps →</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div id="u-mobile" class="drawer" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+    <div class="drawer__backdrop" data-close></div>
+    <div class="drawer__panel">
+      <div class="drawer__header">
+        <span class="drawer__title">Menu</span>
+        <button class="drawer__close" aria-label="Close menu" data-close>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <ul class="drawer__list">
+        <li><a class="drawer__link" href="./index.html" data-close>Home</a></li>
+        <li><a class="drawer__link" href="./apps.html" data-close>Apps</a></li>
+        <li><a class="drawer__link" href="./blog.html" data-close>Blog</a></li>
+        <li><a class="drawer__link" href="./about.html" data-close>About</a></li>
+        <li><a class="drawer__link" href="./contact.html" data-close>Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="main">
+    <div class="doc">
+      <div class="doc-hero">
+        <h1 class="doc-hero__title">Breaker of Horses — Privacy Policy</h1>
+        <div class="doc-hero__meta">Last updated: July 14, 2026</div>
+      </div>
+      <div class="prose-card">
+        <p class="lead">Breaker of Horses is a fully offline Android reader for Homer’s <cite>Iliad</cite> and <cite>Odyssey</cite>. The app keeps reading data on your device and does not send it to Ulix.</p>
+
+        <h2>Internet access</h2>
+        <p>The installed app does not request Android’s Internet permission. The Greek and English texts, fonts, and other reading resources are bundled with the app, so reading and searching do not require a network connection.</p>
+        <p>The app’s build process obtains public-domain texts, fonts, and license materials before the app is distributed. Those build-time downloads do not occur on your device and do not transmit your reading activity.</p>
+
+        <h2>What Breaker of Horses stores on your device</h2>
+        <p>Breaker of Horses stores information needed to restore and personalize your reading experience, including:</p>
+        <ul>
+          <li>the last epic you opened;</li>
+          <li>your current book and scroll position;</li>
+          <li>your selected Greek or English editions;</li>
+          <li>whether one or two reading panes are visible and whether they follow together;</li>
+          <li>text size, line spacing, page margins, color mode, Greek line-number visibility, and screen-awake preference; and</li>
+          <li>bookmarks, including the epic, book, edition, passage location, excerpt, optional title, and creation time.</li>
+        </ul>
+        <p>This information is stored in the app’s private local storage. The app also creates temporary PNG files in its private cache when you choose to share a bookmarked passage as an image. Old cached share images are automatically pruned.</p>
+
+        <h2>On-device search</h2>
+        <p>Search runs on your device against the texts bundled with the app. Search queries and results are not sent to Ulix or to a third-party search service.</p>
+
+        <h2>What Breaker of Horses does not do</h2>
+        <ul>
+          <li>No account required</li>
+          <li>No advertising</li>
+          <li>No sale of personal data</li>
+          <li>No behavioral tracking or profiling</li>
+          <li>No analytics or crash-reporting service</li>
+          <li>No Ulix server receiving your reading activity, bookmarks, searches, or settings</li>
+        </ul>
+
+        <h2>Permissions and device access</h2>
+        <p>The current app does not request access to your location, camera, microphone, contacts, notifications, or broad file storage.</p>
+        <p>When you share a passage image, the app gives the destination you select temporary read access to that specific cached image through Android’s secure file-sharing system. When you save a passage image, Android’s system document picker lets you choose the destination and filename without granting the app broad storage access.</p>
+
+        <h2>When information may leave your device</h2>
+        <p>Information may leave the app’s private storage only when:</p>
+        <ul>
+          <li>you share a passage or passage image through Android’s system share sheet;</li>
+          <li>you save a passage image to a location you select; or</li>
+          <li>Android performs cloud backup or device-to-device transfer, depending on your device and settings.</li>
+        </ul>
+        <p>Sharing and saving are initiated by you. After content is sent to another app, person, storage provider, or service, its handling is governed by that recipient or service.</p>
+
+        <h2>Android backup and device transfer</h2>
+        <p>Breaker of Horses currently participates in Android’s built-in backup and device-transfer systems. Depending on your Android version, device manufacturer, Google Account, backup settings, and available backup quota, Android may include local reading settings, progress, and bookmarks in a cloud backup or device transfer.</p>
+        <p>Android backup and transfer are controlled by the operating system and your device or Google Account settings. Ulix does not receive or control those backups.</p>
+
+        <h2>Third-party services</h2>
+        <p>Breaker of Horses does not include an advertising, analytics, crash-reporting, cloud-storage, or cloud-AI service. It relies on Android system services for sharing, saving files, and optional backup or device transfer. Those system services operate under their providers’ applicable privacy practices.</p>
+
+        <h2>Your controls</h2>
+        <ul>
+          <li>You can remove individual bookmarks inside the app.</li>
+          <li>You can delete images you saved from the location where you placed them.</li>
+          <li>You can clear the app’s storage or uninstall the app to remove its local data, subject to Android backup and restore behavior.</li>
+          <li>You can manage or disable Android backup through your device or Google Account settings.</li>
+        </ul>
+        <p>Because Breaker of Horses has no account and Ulix does not receive your reading data, Ulix has no associated cloud reading library to delete.</p>
+
+        <h2>Contact</h2>
+        <p>For privacy questions or requests, contact Ulix LLC through the <a href="./contact.html">Ulix contact page</a>.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (shared site chrome) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-credo">Find the <b>book</b> <span class="sep">·</span> Save the <b>passage</b> <span class="sep">·</span> Read the <b>classic</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p>
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="./icons/ulixwordmarkclear.png" alt="Ulix — Precision tools for modern odysseys" class="footer-wordmark" width="1754" height="717" />
+        </div>
+        <div class="site-footer__links">
+          <a href="./apps.html">Apps</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./support.html">Support</a>
+          <a href="./about.html">About</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./terms.html">Terms</a>
+          <a href="./privacy.html">Privacy</a>
+        </div>
+        <div>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/ulix" method="post" target="bd-subscribe" class="newsletter" aria-label="Email signup">
+            <label for="nl-email" class="newsletter__label">Get product updates</label>
+            <div class="newsletter__row">
+              <input id="nl-email" class="newsletter__input" type="email" name="email" placeholder="you@example.com" />
+              <button class="btn btn--secondary">Subscribe</button>
+            </div>
+          </form>
+          <div class="site-footer__copyright">© 2026 Ulix LLC. All rights reserved.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/ulix.js" defer></script>
+</body>
+</html>
