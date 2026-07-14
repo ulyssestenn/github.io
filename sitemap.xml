@@ -32,7 +32,7 @@
   </url>
   <url>
     <loc>https://ulix.app/privacy.html</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -63,6 +63,12 @@
   <url>
     <loc>https://ulix.app/gutenprivacy.html</loc>
     <lastmod>2026-06-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ulix.app/breakerofhorsesprivacy.html</loc>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
