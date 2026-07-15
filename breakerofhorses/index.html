@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Breaker of Horses | Homer’s Iliad and Odyssey for Android</title>
   <meta name="description" content="Read the complete Iliad and Odyssey in Homeric Greek or three classic English translations. Compare synchronized editions, bookmark passages, and share them as striking images." />
+  <meta name="application-name" content="Breaker of Horses" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
   <link rel="canonical" href="https://ulix.app/breakerofhorses/" />
   <meta name="theme-color" content="#111943" />
 
@@ -14,10 +16,12 @@
   <meta property="og:description" content="The Iliad and Odyssey in Homeric Greek and three classic English translations. Read one edition or compare two side by side." />
   <meta property="og:url" content="https://ulix.app/breakerofhorses/" />
   <meta property="og:image" content="https://ulix.app/assets/screenshots/breaker_of_horses/breaker-of-horses-iliad-book-1.png" />
+  <meta property="og:image:alt" content="A passage from the Iliad formatted as a shareable image by Breaker of Horses" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Breaker of Horses | Read the epics that shaped the West" />
   <meta name="twitter:description" content="A focused Android reader for Homer’s Iliad and Odyssey, with synchronized Greek and English editions." />
   <meta name="twitter:image" content="https://ulix.app/assets/screenshots/breaker_of_horses/breaker-of-horses-iliad-book-1.png" />
+  <meta name="twitter:image:alt" content="A passage from the Iliad formatted as a shareable image by Breaker of Horses" />
 
   <link rel="icon" href="/icons/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
@@ -38,17 +42,21 @@
         "@type": ["SoftwareApplication", "MobileApplication"],
         "@id": "https://ulix.app/breakerofhorses/#app",
         "name": "Breaker of Horses",
+        "identifier": "com.bhunt.breakerofhorses",
         "description": "A focused Android reader for the complete Iliad and Odyssey in Homeric Greek and three classic English translations. Read one edition or compare synchronized texts side by side, bookmark passages, and share them as formatted images.",
         "url": "https://ulix.app/breakerofhorses/",
+        "sameAs": "https://play.google.com/store/apps/details?id=com.bhunt.breakerofhorses",
         "downloadUrl": "https://play.google.com/store/apps/details?id=com.bhunt.breakerofhorses",
         "installUrl": "https://play.google.com/store/apps/details?id=com.bhunt.breakerofhorses",
-        "operatingSystem": "Android",
-        "applicationCategory": "BookApplication",
+        "operatingSystem": "Android 7.0 or later",
+        "softwareVersion": "2.1.0",
+        "applicationCategory": "ReferenceApplication",
         "applicationSubCategory": "Classics reader",
         "isAccessibleForFree": true,
         "inLanguage": ["en", "grc"],
         "datePublished": "2026-07-15",
         "dateModified": "2026-07-15",
+        "image": "https://ulix.app/assets/screenshots/breaker_of_horses/breaker-of-horses-iliad-book-1.png",
         "screenshot": [
           "https://ulix.app/assets/screenshots/breaker_of_horses/Screenshot_20260714-161331.png",
           "https://ulix.app/assets/screenshots/breaker_of_horses/boh_readerscreen_iliad_dual.png",
@@ -78,6 +86,15 @@
           "Adjustable text size, spacing, and margins",
           "Dark and parchment themes",
           "Fully offline reading"
+        ],
+        "keywords": [
+          "Homer",
+          "Iliad",
+          "Odyssey",
+          "Homeric Greek",
+          "classics reader",
+          "parallel text",
+          "Greek and English reader"
         ],
         "publisher": { "@id": "https://ulix.app/#org" },
         "author": { "@id": "https://ulix.app/#org" }
@@ -109,6 +126,10 @@
         "about": { "@id": "https://ulix.app/breakerofhorses/#app" },
         "mainEntity": { "@id": "https://ulix.app/breakerofhorses/#app" },
         "breadcrumb": { "@id": "https://ulix.app/breakerofhorses/#breadcrumb" },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://ulix.app/assets/screenshots/breaker_of_horses/breaker-of-horses-iliad-book-1.png"
+        },
         "inLanguage": "en-US",
         "datePublished": "2026-07-15",
         "dateModified": "2026-07-15"
@@ -127,7 +148,13 @@
   </script>
 
   <link rel="stylesheet" href="./styles.css" />
-
+  <style>
+    .boh-eyebrow--spaced {
+      display: flex;
+      width: max-content;
+      margin-bottom: 18px;
+    }
+  </style>
 </head>
 
 <body class="boh-page">
@@ -193,7 +220,7 @@
             <a class="boh-button boh-button--gold" href="https://play.google.com/store/apps/details?id=com.bhunt.breakerofhorses" target="_blank" rel="noopener">Get it free on Google Play</a>
             <a class="boh-button boh-button--ghost" href="#reader">See the reader</a>
           </div>
-          <p class="boh-hero__note">All 24 books of both epics included</p>
+          <p class="boh-hero__note">The complete <i>Iliad</i> and <i>Odyssey</i> included</p>
         </div>
 
         <div class="boh-hero__art" aria-label="Breaker of Horses app screens">
@@ -210,7 +237,7 @@
 
     <section class="boh-facts" aria-label="App facts">
       <div class="boh-shell boh-facts__grid">
-        <div class="boh-fact"><strong>48</strong><span>Books included</span></div>
+        <div class="boh-fact"><strong>2</strong><span>Complete epics</span></div>
         <div class="boh-fact"><strong>4</strong><span>Complete editions</span></div>
         <div class="boh-fact"><strong>2</strong><span>Synchronized panes</span></div>
         <div class="boh-fact"><strong>0</strong><span>Accounts required</span></div>
@@ -222,7 +249,7 @@
         <div class="boh-section__head">
           <span class="boh-eyebrow">The whole of Homer</span>
           <div>
-            <h2>Two epics. Forty-eight books. One focused reader.</h2>
+            <h2>Two epics. One focused reader.</h2>
             <p class="boh-section__intro">Begin with rage beneath the walls of Troy. Continue through shipwreck, temptation, recognition, and homecoming. Your place is saved separately in each work.</p>
           </div>
         </div>
@@ -232,7 +259,7 @@
             <div class="boh-epic__copy">
               <span class="boh-epic__number">I · The Iliad</span>
               <h3>War, honor, anger.</h3>
-              <p>All 24 books, from the quarrel of Achilles and Agamemnon to the ransom of Hector.</p>
+              <p>From the quarrel of Achilles and Agamemnon to the ransom of Hector.</p>
             </div>
             <div class="boh-epic__image">
               <img src="../assets/screenshots/breaker_of_horses/boh_readerscreen_iliad_dual.png" alt="The Iliad in synchronized Greek and English panes" loading="lazy" decoding="async" />
@@ -243,7 +270,7 @@
             <div class="boh-epic__copy">
               <span class="boh-epic__number">II · The Odyssey</span>
               <h3>Wandering, cunning, return.</h3>
-              <p>All 24 books, from Telemachus setting out to Odysseus reclaiming his home.</p>
+              <p>From Telemachus setting out to Odysseus reclaiming his home.</p>
             </div>
             <div class="boh-epic__image">
               <img src="../assets/screenshots/breaker_of_horses/boh_readerscreen_odyssey_single.png" alt="The Odyssey in a focused single-pane reading view" loading="lazy" decoding="async" />
@@ -260,7 +287,7 @@
         </figure>
 
         <div class="boh-reader-copy">
-          <span class="boh-eyebrow">Synchronized reading</span>
+          <span class="boh-eyebrow boh-eyebrow--spaced">Synchronized reading</span>
           <h2>Read one text. Or set two in conversation.</h2>
           <p>Keep Greek beside English, or compare the choices of two translators. The panes remain roughly aligned as you move through the poem.</p>
 
@@ -320,8 +347,8 @@
     <section class="boh-section boh-section--green">
       <div class="boh-shell boh-share-grid">
         <div class="boh-share-copy">
-          <span class="boh-eyebrow">Keep what matters</span>
-          <h2>Turn the lines that endure into images worth sharing.</h2>
+          <span class="boh-eyebrow boh-eyebrow--spaced">Keep what matters</span>
+          <h2>Turn your favorite passages into images worth sharing.</h2>
           <p>Bookmark a passage, choose a visual treatment and format, then share it through your favorite app or save it directly to your device.</p>
           <div class="boh-share-list" aria-label="Passage sharing features">
             <span>Multiple styles</span>
@@ -350,7 +377,7 @@
         </div>
 
         <div class="boh-settings-copy">
-          <span class="boh-eyebrow">A reader made for reading</span>
+          <span class="boh-eyebrow boh-eyebrow--spaced">A reader made for reading</span>
           <h2>Set the page. Then let the page disappear.</h2>
           <p>Adjust the typography and layout to the way you read. Search the current text, switch themes, show Greek line numbers, and return exactly where you stopped.</p>
 
