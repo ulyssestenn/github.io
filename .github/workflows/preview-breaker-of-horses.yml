@@ -1,0 +1,72 @@
+name: Breaker of Horses preview
+
+on:
+  pull_request:
+    paths:
+      - 'breakerofhorses/**'
+      - 'assets/screenshots/breaker_of_horses/**'
+      - '.github/workflows/preview-breaker-of-horses.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Playwright
+        run: |
+          npm init -y
+          npm install playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Render screenshots
+        run: |
+          mkdir -p preview
+          python3 -m http.server 8000 --bind 127.0.0.1 > /tmp/boh-preview-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID' EXIT
+          sleep 2
+          cat > /tmp/render-preview.js <<'EOF'
+          const { chromium } = require('playwright');
+
+          (async () => {
+            const browser = await chromium.launch({ headless: true });
+            const url = 'http://127.0.0.1:8000/breakerofhorses/';
+
+            const desktop = await browser.newPage({
+              viewport: { width: 1440, height: 1000 },
+              deviceScaleFactor: 1,
+            });
+            await desktop.goto(url, { waitUntil: 'networkidle' });
+            await desktop.screenshot({ path: 'preview/breaker-desktop-top.png' });
+            await desktop.screenshot({ path: 'preview/breaker-desktop-full.png', fullPage: true });
+
+            const mobile = await browser.newPage({
+              viewport: { width: 412, height: 915 },
+              deviceScaleFactor: 1,
+              isMobile: true,
+              hasTouch: true,
+            });
+            await mobile.goto(url, { waitUntil: 'networkidle' });
+            await mobile.screenshot({ path: 'preview/breaker-mobile-top.png' });
+            await mobile.screenshot({ path: 'preview/breaker-mobile-full.png', fullPage: true });
+
+            await browser.close();
+          })();
+          EOF
+          node /tmp/render-preview.js
+
+      - name: Upload preview screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: breaker-of-horses-preview
+          path: preview/*.png
+          if-no-files-found: error
+          retention-days: 7
