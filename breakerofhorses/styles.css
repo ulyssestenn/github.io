@@ -48,6 +48,10 @@
 .boh-page p,
 .boh-page figure { margin: 0; }
 
+.boh-page h1,
+.boh-page h2,
+.boh-page h3 { color: inherit; }
+
 .boh-page .site-header {
   background: rgba(17, 25, 67, 0.96);
   border-bottom-color: rgba(242, 234, 216, 0.12);
