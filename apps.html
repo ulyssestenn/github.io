@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Apps — Ulix</title>
-  <meta name="description" content="Privacy-first Android apps from Ulix: Shelf Scan, Keep Clip, Track Analysis, Guten, and more. No accounts, no ads, no tracking." />
+  <meta name="description" content="Privacy-first Android apps from Ulix: Shelf Scan, Keep Clip, Track Analysis, Guten, Breaker of Horses, and more. No accounts, no ads, no tracking." />
   <link rel="canonical" href="https://ulix.app/apps.html" />
   <meta name="theme-color" content="#0F0E0C" />
 
@@ -64,7 +64,7 @@
         "@id": "https://ulix.app/apps.html#webpage",
         "url": "https://ulix.app/apps.html",
         "name": "Apps — Ulix",
-        "description": "Privacy-first Android apps from Ulix: Shelf Scan, Keep Clip, Track Analysis, Guten, and more. No accounts, no ads, no tracking.",
+        "description": "Privacy-first Android apps from Ulix: Shelf Scan, Keep Clip, Track Analysis, Guten, Breaker of Horses, and more. No accounts, no ads, no tracking.",
         "isPartOf": { "@id": "https://ulix.app/#website" },
         "breadcrumb": { "@id": "https://ulix.app/apps.html#breadcrumb" },
         "mainEntity": { "@id": "https://ulix.app/apps.html#applist" },
@@ -82,7 +82,7 @@
         "@type": "ItemList",
         "@id": "https://ulix.app/apps.html#applist",
         "name": "Ulix Android apps",
-        "numberOfItems": 6,
+        "numberOfItems": 8,
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -153,6 +153,22 @@
             "position": 5,
             "item": {
               "@type": ["SoftwareApplication", "MobileApplication"],
+              "@id": "https://ulix.app/breakerofhorses/#app",
+              "name": "Breaker of Horses",
+              "description": "Read the complete Iliad and Odyssey in Homeric Greek and three classic English translations. Compare synchronized editions, bookmark passages, and share them as styled images.",
+              "url": "https://ulix.app/breakerofhorses/",
+              "image": "https://ulix.app/assets/breaker_of_horses/breaker_of_horses_icon.png",
+              "operatingSystem": "Android",
+              "applicationCategory": "ReferenceApplication",
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://play.google.com/store/apps/details?id=com.bhunt.breakerofhorses" },
+              "publisher": { "@id": "https://ulix.app/#org" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": ["SoftwareApplication", "MobileApplication"],
               "@id": "https://ulix.app/apps.html#loanit",
               "name": "Loan It",
               "description": "Track what you lent, who has it, and when it needs to come back. Add photos, contacts, and reminders. Coming soon.",
@@ -165,7 +181,7 @@
           },
           {
             "@type": "ListItem",
-            "position": 6,
+            "position": 7,
             "item": {
               "@type": ["SoftwareApplication", "MobileApplication"],
               "@id": "https://ulix.app/apps.html#curiousair",
@@ -175,6 +191,21 @@
               "image": "https://ulix.app/icons/curiousair.png",
               "operatingSystem": "Android",
               "applicationCategory": "UtilitiesApplication",
+              "publisher": { "@id": "https://ulix.app/#org" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "item": {
+              "@type": ["SoftwareApplication", "MobileApplication"],
+              "@id": "https://ulix.app/apps.html#scepter",
+              "name": "Scepter",
+              "description": "Turn screenshots into clean, tagged, searchable cards automatically, on-device. Coming soon.",
+              "url": "https://ulix.app/apps.html#scepter",
+              "image": "https://ulix.app/icons/scepter.webp",
+              "operatingSystem": "Android",
+              "applicationCategory": "ProductivityApplication",
               "publisher": { "@id": "https://ulix.app/#org" }
             }
           }
@@ -317,6 +348,22 @@
             </div>
           </article>
 
+          <!-- Breaker of Horses -->
+          <article class="app-card">
+            <div class="app-card__head">
+              <img src="./assets/breaker_of_horses/breaker_of_horses_icon.png" alt="" class="app-card__icon" width="128" height="128" loading="lazy" decoding="async" />
+              <div><h2 class="app-card__name">Breaker of Horses</h2></div>
+            </div>
+            <p class="app-card__body">
+              Read the complete <i>Iliad</i> and <i>Odyssey</i> in Homeric Greek or three classic English
+              translations. Compare synchronized editions side by side, bookmark favorite passages,
+              and share them as styled images. Free, fully offline, and no account required.
+            </p>
+            <div class="app-card__foot">
+              <a href="./breakerofhorses/" class="more-link">Learn more →</a>
+            </div>
+          </article>
+
           <!-- Loan It -->
           <article class="app-card">
             <div class="app-card__head">
@@ -339,6 +386,20 @@
             </div>
             <p class="app-card__body">
               Explore nearby Bluetooth, Wi-Fi, and device signals with a clean, privacy-first UI.
+            </p>
+            <div class="app-card__foot">
+              <span class="coming-chip">Coming soon</span>
+            </div>
+          </article>
+
+          <!-- Scepter -->
+          <article class="app-card" id="scepter">
+            <div class="app-card__head">
+              <img src="./icons/scepter.webp" alt="" class="app-card__icon" width="48" height="48" loading="lazy" decoding="async" />
+              <div><h2 class="app-card__name">Scepter</h2></div>
+            </div>
+            <p class="app-card__body">
+              Turn screenshots into clean, tagged, searchable cards automatically, on-device.
             </p>
             <div class="app-card__foot">
               <span class="coming-chip">Coming soon</span>
