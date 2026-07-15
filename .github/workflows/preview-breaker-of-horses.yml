@@ -33,7 +33,7 @@ jobs:
           SERVER_PID=$!
           trap 'kill $SERVER_PID' EXIT
           sleep 2
-          cat > /tmp/render-preview.js <<'EOF'
+          cat > render-preview.js <<'EOF'
           const { chromium } = require('playwright');
 
           (async () => {
@@ -61,7 +61,7 @@ jobs:
             await browser.close();
           })();
           EOF
-          node /tmp/render-preview.js
+          node render-preview.js
 
       - name: Upload preview screenshots
         uses: actions/upload-artifact@v4
