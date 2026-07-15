@@ -3,23 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Ulix — Android Apps for Information People</title>
-  <meta name="description" content="Ulix makes privacy-first Android apps for readers, collectors, and researchers: Guten, Shelf Scan, Keep Clip, and Track Analysis. Simple tools that do one job and stay out of the way." />
+  <title>About Ulix | Software for Information People</title>
+  <meta name="description" content="Ulix is an independent software company founded and run by Bethany Hunt, making focused applications for readers, collectors, researchers, and other information people." />
   <link rel="canonical" href="https://ulix.app/about.html" />
   <meta name="theme-color" content="#0F0E0C" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ulix" />
-  <meta property="og:title" content="About Ulix — Android Apps for Information People" />
-  <meta property="og:description" content="Ulix makes privacy-first Android apps for readers, collectors, and researchers: Guten, Shelf Scan, Keep Clip, and Track Analysis." />
+  <meta property="og:title" content="About Ulix | Software for Information People" />
+  <meta property="og:description" content="Ulix is an independent software company making focused applications for readers, collectors, researchers, and other information people." />
   <meta property="og:url" content="https://ulix.app/about.html" />
   <meta property="og:image" content="https://ulix.app/assets/ulixsocialshare1.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="633" />
-  <meta property="og:image:alt" content="Ulix — Apps for information people. Android apps for readers, collectors, and researchers." />
+  <meta property="og:image:alt" content="Ulix. Apps for information people." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About Ulix — Android Apps for Information People" />
-  <meta name="twitter:description" content="Ulix makes privacy-first Android apps for readers, collectors, and researchers: Guten, Shelf Scan, Keep Clip, and Track Analysis." />
+  <meta name="twitter:title" content="About Ulix | Software for Information People" />
+  <meta name="twitter:description" content="Ulix is an independent software company making focused applications for readers, collectors, researchers, and other information people." />
   <meta name="twitter:image" content="https://ulix.app/assets/ulixsocialshare1.jpg" />
 
   <link rel="icon" href="/icons/favicon.ico" sizes="any" />
@@ -53,7 +53,7 @@
           "height": 128
         },
         "slogan": "Precision tools for modern odysseys",
-        "description": "Ulix makes privacy-first Android apps for readers, collectors, and researchers. No accounts, no ads, no tracking.",
+        "description": "Ulix makes focused applications for readers, collectors, researchers, and other people who work with books, text, notes, and records.",
         "founder": { "@type": "Person", "name": "Bethany Hunt" },
         "sameAs": [
           "https://play.google.com/store/apps/developer?id=Ulix+LLC"
@@ -64,7 +64,7 @@
         "@id": "https://ulix.app/#website",
         "url": "https://ulix.app/",
         "name": "Ulix",
-        "description": "Privacy-first Android apps from Ulix. No accounts, no ads, no tracking.",
+        "description": "Focused applications for readers, collectors, researchers, and other information people.",
         "publisher": { "@id": "https://ulix.app/#org" },
         "inLanguage": "en-US"
       },
@@ -72,14 +72,14 @@
         "@type": "AboutPage",
         "@id": "https://ulix.app/about.html#webpage",
         "url": "https://ulix.app/about.html",
-        "name": "About Ulix — Android Apps for Information People",
-        "description": "Ulix makes privacy-first Android apps for readers, collectors, and researchers: Guten, Shelf Scan, Keep Clip, and Track Analysis. Simple tools that do one job and stay out of the way.",
+        "name": "About Ulix | Software for Information People",
+        "description": "Ulix is an independent software company founded and run by Bethany Hunt, making focused applications for readers, collectors, researchers, and other information people.",
         "isPartOf": { "@id": "https://ulix.app/#website" },
         "about": { "@id": "https://ulix.app/#org" },
         "mainEntity": { "@id": "https://ulix.app/#org" },
         "breadcrumb": { "@id": "https://ulix.app/about.html#breadcrumb" },
         "inLanguage": "en-US",
-        "dateModified": "2026-06-12"
+        "dateModified": "2026-07-15"
       },
       {
         "@type": "BreadcrumbList",
@@ -94,7 +94,7 @@
         "@id": "https://ulix.app/#cortex",
         "name": "Ulix Cortex",
         "serviceType": "Custom archive and insight service",
-        "description": "A custom service that turns scattered outputs (videos, journals, memos, notes, records, and more) into structured, searchable, AI-queryable archives, surfacing the topics, themes, patterns, and source-backed insights needed to create books, courses, talks, articles, and other works.",
+        "description": "A custom service that turns scattered outputs (videos, journals, memos, notes, records, and more) into structured, searchable, AI-queryable archives. Cortex surfaces the topics, themes, patterns, and source-backed insights needed to create books, courses, talks, articles, and other works.",
         "category": "Coming soon",
         "url": "https://ulix.app/about.html#cortex",
         "provider": { "@id": "https://ulix.app/#org" },
@@ -105,22 +105,85 @@
   </script>
 
   <style>
-    /* About page app list + CTA, scoped to the shared doc/prose-card layout */
-    .about-apps { margin-top: 18px; display: flex; flex-direction: column; gap: 16px; }
-    .about-app { display: flex; align-items: flex-start; gap: 14px; }
-    .about-app__icon { width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0; }
-    .about-app__icon--sm { width: 32px; height: 32px; border-radius: 8px; }
-    .about-app__icons { display: flex; align-items: center; gap: 8px; flex-shrink: 0; min-width: 44px; }
-    .about-app p { margin: 2px 0 0; }
-    .about-app__name { font-weight: 600; }
-    .about-app__price { color: var(--subtle, rgba(244,239,230,0.45)); }
-    .about-cta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 28px; }
-    /* Ulix Cortex coming-soon section */
+    .about-hero__copy {
+      max-width: 760px;
+      margin: 26px auto 0;
+      font-family: var(--sans);
+      font-size: clamp(18px, 2vw, 21px);
+      line-height: 1.65;
+      color: var(--muted, rgba(244,239,230,0.72));
+    }
+    .about-hero__copy p { margin: 0; }
+    .about-hero__copy p + p { margin-top: 12px; }
+
+    .about-apps {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1px;
+      margin-top: 20px;
+      overflow: hidden;
+      border: 1px solid var(--line, rgba(244,239,230,0.12));
+      border-radius: 14px;
+      background: var(--line, rgba(244,239,230,0.12));
+    }
+    .about-app {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      min-width: 0;
+      padding: 18px 20px;
+      background: var(--panel, #171512);
+      color: inherit;
+      text-decoration: none;
+      transition: background-color 160ms ease;
+    }
+    .about-app:hover,
+    .about-app:focus-visible { background: rgba(244,239,230,0.055); }
+    .about-app__name {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 650;
+      color: var(--text, #F4EFE6);
+    }
+    .about-app__description {
+      display: block;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--subtle, rgba(244,239,230,0.58));
+    }
+    .about-app__arrow {
+      flex: 0 0 auto;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
     .cortex-card { border-color: rgba(91,163,245,0.4); }
-    .cortex-eyebrow { display: inline-flex; align-items: center; gap: 9px; margin: 0; font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
-    .cortex-eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px rgba(91,163,245,0.18); }
+    .cortex-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0;
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .cortex-eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(91,163,245,0.18);
+    }
     .cortex-card h2 { margin-top: 14px; }
     .cortex-link { display: inline-block; margin-top: 22px; font-weight: 600; }
+
+    @media (max-width: 700px) {
+      .about-apps { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 
@@ -178,54 +241,73 @@
 
   <main id="main">
     <div class="doc">
-      <div class="doc-hero">
+      <div class="doc-hero about-hero">
         <h1 class="doc-hero__title">About Ulix</h1>
-        <p class="doc-hero__lede">Software and services for <em>information</em> people.</p>
-      </div>
-
-      <div class="prose-card">
-        <p class="lead">For readers, collectors, researchers, and anyone who loves books, text, notes, and records. If your shelves are full, your highlights are scattered, and you keep meaning to track things properly, there's probably something here for you.</p>
-
-        <h2>The apps</h2>
-        <div class="about-apps">
-          <div class="about-app">
-            <img src="./icons/guten.png" alt="" class="about-app__icon" width="128" height="128" />
-            <p><a href="./guten/" class="about-app__name">Guten</a> &nbsp;Read 70,000+ public-domain classics offline. <span class="about-app__price">Free, with optional Pro features.</span></p>
-          </div>
-          <div class="about-app">
-            <img src="./icons/shelfscan.png" alt="" class="about-app__icon" width="128" height="128" />
-            <p><a href="./shelfscan/" class="about-app__name">Shelf Scan</a> &nbsp;Search your shelves with the camera. <span class="about-app__price">$2.99.</span></p>
-          </div>
-          <div class="about-app">
-            <img src="./icons/keepclip.png" alt="" class="about-app__icon" width="128" height="128" loading="lazy" decoding="async" />
-            <p><a href="./keepclip/" class="about-app__name">Keep Clip</a> &nbsp;Save text and links from any app. Export to your format of choice. <span class="about-app__price">$1.99.</span></p>
-          </div>
-          <div class="about-app">
-            <img src="./icons/trackanalysis.png" alt="" class="about-app__icon" width="128" height="128" loading="lazy" decoding="async" />
-            <p><a href="./trackanalysis/" class="about-app__name">Track Analysis</a> &nbsp;Log anything in plain English, export CSV. <span class="about-app__price">Free, with a one-time Pro unlock.</span></p>
-          </div>
-          <div class="about-app">
-            <span class="about-app__icons">
-              <img src="./icons/loanit.png" alt="" class="about-app__icon about-app__icon--sm" width="128" height="128" loading="lazy" decoding="async" />
-              <img src="./icons/curiousair.png" alt="" class="about-app__icon about-app__icon--sm" width="128" height="128" loading="lazy" decoding="async" />
-            </span>
-            <p><a href="./apps.html" class="about-app__name">Loan It</a> · <a href="./apps.html" class="about-app__name">Curious Air</a> &nbsp;<span class="about-app__price">Coming this year.</span></p>
-          </div>
+        <div class="about-hero__copy">
+          <p>Ulix is an independent software company founded and run by Bethany Hunt.</p>
+          <p>It makes focused applications for readers, collectors, researchers, and other people who work with books, text, notes, and records.</p>
         </div>
       </div>
 
       <div class="prose-card">
-        <h2>The idea</h2>
-        <p>Ulix apps are simple on purpose. Each one does a specific job: finding a book, saving a passage, keeping a log. Then it gets out of the way. They're built to be quick to learn, pleasant to use, and easy to leave. Your data exports to ordinary formats you can take anywhere.</p>
-        <p>The business model is old-fashioned: the apps are the product. Buy a good tool, own a good tool. No ads to distract or track you, no engagement farming, no reason for the software to want anything from you beyond doing its job well.</p>
-      </div>
-
-      <div class="prose-card">
-        <h2>Behind Ulix</h2>
-        <p>Ulix is a small, independent software company founded by Bethany Hunt. Every app starts the same way: as something worth using every day. The ones that earn their keep get finished and shipped.</p>
-        <div class="about-cta">
-          <a href="./apps.html" class="btn btn--primary">Browse all apps</a>
-          <span>Questions? <a href="./contact.html">Get in touch</a>.</span>
+        <h2>Apps</h2>
+        <div class="about-apps">
+          <a class="about-app" href="./guten/">
+            <span>
+              <span class="about-app__name">Guten</span>
+              <span class="about-app__description">Read public-domain books offline, with highlights, notes, and export tools.</span>
+            </span>
+            <span class="about-app__arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="about-app" href="./shelfscan/">
+            <span>
+              <span class="about-app__name">Shelf Scan</span>
+              <span class="about-app__description">Search your physical bookshelves with the camera.</span>
+            </span>
+            <span class="about-app__arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="about-app" href="./keepclip/">
+            <span>
+              <span class="about-app__name">Keep Clip</span>
+              <span class="about-app__description">Save text and links from almost any app, then search, organize, and export them.</span>
+            </span>
+            <span class="about-app__arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="about-app" href="./breakerofhorses/">
+            <span>
+              <span class="about-app__name">Breaker of Horses</span>
+              <span class="about-app__description">Read the Iliad and Odyssey in Greek and English, separately or side by side.</span>
+            </span>
+            <span class="about-app__arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="about-app" href="./trackanalysis/">
+            <span>
+              <span class="about-app__name">Track Analysis</span>
+              <span class="about-app__description">Log observations in plain English and export the results as structured data.</span>
+            </span>
+            <span class="about-app__arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="about-app" href="./apps.html">
+            <span>
+              <span class="about-app__name">Loan It</span>
+              <span class="about-app__description">Keep track of what you have lent, who has it, and when it should come back.</span>
+            </span>
+            <span class="about-app__arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="about-app" href="./apps.html">
+            <span>
+              <span class="about-app__name">Curious Air</span>
+              <span class="about-app__description">Examine the wireless, network, and device signals in the world around you.</span>
+            </span>
+            <span class="about-app__arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="about-app" href="./apps.html">
+            <span>
+              <span class="about-app__name">Scepter</span>
+              <span class="about-app__description">Turn screenshots into clean, tagged, searchable cards automatically, on-device.</span>
+            </span>
+            <span class="about-app__arrow" aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
 
@@ -233,7 +315,6 @@
         <p class="cortex-eyebrow">Coming soon</p>
         <h2>Ulix Cortex</h2>
         <p>A custom service that turns scattered outputs (videos, journals, memos, notes, records, and more) into structured, searchable, AI-queryable archives. Cortex surfaces the topics, themes, patterns, and source-backed insights needed to create books, courses, talks, articles, and other works.</p>
-        <p>Hands-on, because your thoughts of years deserve more than a drawer or a stream of online ephemera.</p>
         <a href="./contact.html" class="cortex-link">Register your interest →</a>
       </div>
     </div>
