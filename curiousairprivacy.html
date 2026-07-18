@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Curious Air — Privacy Policy — Ulix</title>
-  <meta name="description" content="How Curious Air handles nearby signal data, sensor readings, permissions, exports, and purchases." />
+  <meta name="description" content="How Curious Air handles nearby signal data, sensor readings, permissions, exports, saved logs, and purchases." />
   <link rel="canonical" href="https://ulix.app/curiousairprivacy.html" />
   <meta name="theme-color" content="#0F0E0C" />
   <link rel="icon" href="/icons/favicon.ico" sizes="any" />
@@ -78,10 +78,10 @@
     <div class="doc">
       <div class="doc-hero">
         <h1 class="doc-hero__title">Curious Air — Privacy Policy</h1>
-        <div class="doc-hero__meta">Last updated: July 12, 2026</div>
+        <div class="doc-hero__meta">Last updated: July 18, 2026</div>
       </div>
       <div class="prose-card">
-        <p class="lead">Curious Air is a privacy-first Android signal explorer designed to reveal nearby signals and device-sensor readings without sending that information to Ulix.</p>
+        <p class="lead">Curious Air is a privacy-first Android signal explorer designed to reveal nearby signals and device-sensor readings without sending that information to Ulix unless you choose to export or share it.</p>
 
         <h2>What Curious Air accesses</h2>
         <p>When you choose to use the relevant features, Curious Air may access:</p>
@@ -93,9 +93,9 @@
           <li>NFC tag contents when you deliberately scan a tag;</li>
           <li>camera input for experimental camera-based signal tools;</li>
           <li>microphone amplitude for live sound-level and ultrasonic tools; and</li>
-          <li>readings from built-in sensors such as the magnetometer, accelerometer, orientation sensors, barometer, and ambient-light sensor.</li>
+          <li>readings from built-in sensors such as the magnetometer, accelerometer, gyroscope, orientation sensors, barometer, ambient-light sensor, step sensors, and other sensors reported by the device.</li>
         </ul>
-        <p>These readings are used to provide the feature you selected. Microphone input is analyzed on-device, and Curious Air does not save audio recordings.</p>
+        <p>These readings are used to provide the feature you selected. Microphone input is analyzed on-device, and Curious Air does not save audio recordings. Camera-based tools do not save camera images or video.</p>
 
         <h2>What Curious Air does not do</h2>
         <ul>
@@ -108,39 +108,43 @@
         </ul>
 
         <h2>What Curious Air stores on your device</h2>
-        <p>Live scans and sensor readings are processed on your device. Curious Air stores only limited app information in its private local storage:</p>
+        <p>Live scans and sensor readings are processed on your device. Curious Air may store the following in its private local storage:</p>
         <ul>
-          <li>feature and appearance preferences, and</li>
-          <li>a cached status indicating whether Curious Air Pro is unlocked, so paid features can remain available offline.</li>
+          <li>feature and appearance preferences;</li>
+          <li>a cached status indicating whether Curious Air Pro is unlocked, so paid features can remain available offline; and</li>
+          <li>timed signal-log CSV files that you deliberately create.</li>
         </ul>
+        <p>Depending on the sources you select, a timed log may contain timestamps, device-sensor readings, Bluetooth names and hardware addresses, Bluetooth signal strength, and related session information. Saved logs remain in Curious Air’s private storage until you export them, share them, delete them, clear the app’s storage, or uninstall the app.</p>
+        <p>Every timed logging session has a user-selected hard size limit of 25, 50, 100, 250, or 500 MiB. Curious Air also keeps a protected free-space reserve and stops logging if the next complete batch would cross the selected limit or if device storage reaches the protected reserve.</p>
 
         <h2>Permissions</h2>
-        <p>Curious Air may request location, nearby-device/Bluetooth, camera, microphone, NFC, Wi-Fi-state, and, on older Android versions, storage permissions. These permissions support the features described above.</p>
-        <p>Runtime permissions are optional. Features that depend on a denied permission will be unavailable or limited, and you can revoke permissions at any time in Android settings.</p>
+        <p>Curious Air may request location, nearby-device and Bluetooth, activity-recognition, camera, microphone, and notification permissions. It also uses NFC, Wi-Fi-state, internet, foreground-service, wake-lock, and high-sampling-rate sensor capabilities where required for selected features.</p>
+        <p>Runtime permissions are optional. Features that depend on a denied permission will be unavailable or limited, and you can revoke permissions at any time in Android settings. CSV export uses Android’s system document picker and does not require storage permission.</p>
 
-        <h2>When data may leave your device</h2>
-        <p>Signal and sensor data stays on your device unless you take an action that causes it to leave, such as:</p>
+        <h2>When data or network traffic may leave your device</h2>
+        <p>Curious Air does not send your signal or sensor data to Ulix. Data or network traffic may nevertheless leave the device when you take or enable one of these actions:</p>
         <ul>
-          <li>exporting a CSV file to your device’s Downloads folder,</li>
-          <li>sharing an exported file through another app or service, or</li>
-          <li>making or restoring a Pro purchase through Google Play Billing.</li>
+          <li>Local-network discovery sends mDNS, SSDP, and WS-Discovery probes to devices on your current local network.</li>
+          <li>Exporting a CSV uses Android’s system document picker to save the file to a location you choose.</li>
+          <li>Sharing an exported file sends it to the app or service you select.</li>
+          <li>Making, restoring, or verifying a Pro purchase communicates with Google Play Billing.</li>
         </ul>
-        <p>Depending on the export, a CSV file may include timestamps, Wi-Fi names and hardware addresses, Bluetooth names and hardware addresses, cellular identifiers, or GNSS satellite information. Exporting and sharing are optional and controlled by you.</p>
+        <p>Depending on the export, a CSV file may include timestamps, Wi-Fi names and hardware addresses, Bluetooth names and hardware addresses, cellular identifiers, GNSS satellite information, or device-sensor readings. Exporting and sharing are optional and controlled by you.</p>
 
         <h2>Premium features</h2>
-        <p>Curious Air offers optional Pro features through a one-time in-app purchase. Purchases, purchase restoration, and entitlement checks are handled by Google Play Billing. Curious Air does not receive or store your full payment-card information.</p>
-        <p>When you buy or restore a purchase, Google Play confirms the purchase status to the app, and Curious Air stores that status locally so Pro features can be unlocked.</p>
+        <p>Curious Air offers optional Pro features through a one-time in-app purchase. Pro includes CSV export and timed multi-signal logging with per-source intervals. Purchases, purchase restoration, and entitlement checks are handled by Google Play Billing. Curious Air does not receive or store your full payment-card information.</p>
+        <p>When you buy or restore a purchase, Google Play confirms the purchase status to the app, and Curious Air stores that status locally so Pro features can remain unlocked offline.</p>
 
-        <h2>Backups</h2>
+        <h2>Backups and device transfer</h2>
         <p>Android’s built-in backup or device-transfer system may back up local app preferences and the cached Pro status to your Google account, depending on your device and backup settings.</p>
-        <p>CSV files saved in Downloads are managed as user files rather than as Curious Air’s private app data.</p>
+        <p>Saved timed signal logs are explicitly excluded from Android cloud backup and device transfer. Files you export through the system document picker are user-managed files and may be backed up or transferred by the destination app, storage provider, or device settings you choose.</p>
 
         <h2>Third-party services</h2>
         <p>Curious Air uses Google Play Billing for optional Pro purchases and purchase restoration. Google may receive standard technical request data and handles payment information and purchase history under its own privacy practices.</p>
         <p>Curious Air does not use advertising, analytics, crash-reporting, or tracking services.</p>
 
         <h2>Your controls</h2>
-        <p>You can revoke app permissions in Android settings, delete exported CSV files from your device, clear Curious Air’s app storage, or uninstall the app.</p>
+        <p>You can revoke app permissions in Android settings, stop an active logging session, delete saved logs inside Curious Air, delete exported CSV files from their chosen destination, clear Curious Air’s app storage, or uninstall the app.</p>
         <p>Because Curious Air has no account and Ulix does not receive your signal or sensor data, Ulix has no associated cloud profile or sensor-data record to delete.</p>
       </div>
     </div>
