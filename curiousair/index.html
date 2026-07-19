@@ -3,27 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Curious Air — See What’s Broadcasting Around You</title>
-  <meta name="description" content="Curious Air turns your Android phone into a set of instruments for the signals around you: Wi-Fi, Bluetooth, cellular, satellites, sensors, NFC, and audio. No account, and your readings stay on your device. Now in Google Play testing." />
+  <title>Curious Air — Explore the Invisible Signals Around You</title>
+  <meta name="description" content="Curious Air turns your Android phone into a friendly explorer for the invisible signals around you: Wi-Fi, Bluetooth, GNSS satellites, and device sensors. Free to explore, with timed multi-signal logging in Curious Air Pro." />
   <link rel="canonical" href="https://ulix.app/curiousair/" />
-  <meta name="theme-color" content="#050d13" />
+  <meta name="theme-color" content="#00142F" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ulix" />
-  <meta property="og:title" content="Curious Air — See What’s Broadcasting" />
-  <meta property="og:description" content="A signal explorer for Android: Wi-Fi, Bluetooth, cellular, satellites, sensors, NFC, and audio. No account — readings stay on your device." />
+  <meta property="og:title" content="Curious Air — Explore the Invisible Signals Around You" />
+  <meta property="og:description" content="A friendly signal explorer for Android: Wi-Fi, Bluetooth, GNSS, and sensors. Free to explore — timed logging with Curious Air Pro." />
   <meta property="og:url" content="https://ulix.app/curiousair/" />
   <meta property="og:image" content="https://ulix.app/assets/curiousair/curious-air-feature-image.png" />
   <meta property="og:image:alt" content="Curious Air signal explorer for Android" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Curious Air — See What’s Broadcasting" />
-  <meta name="twitter:description" content="Turn your Android phone into a set of instruments for the signals around you." />
+  <meta name="twitter:title" content="Curious Air — Explore the Invisible Signals Around You" />
+  <meta name="twitter:description" content="A friendly signal explorer for Android: Wi-Fi, Bluetooth, GNSS, and sensors." />
   <meta name="twitter:image" content="https://ulix.app/assets/curiousair/curious-air-feature-image.png" />
   <link rel="icon" href="/icons/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
   <link rel="stylesheet" href="../assets/ulix.css" />
-  <link rel="stylesheet" href="../assets/curiousair/landing.css?v=2" />
+  <link rel="stylesheet" href="../assets/curiousair/landing.css?v=3" />
   <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/geist-latin.woff2" crossorigin />
   <script type="application/ld+json">
   {
@@ -52,7 +52,7 @@
           "https://ulix.app/assets/screenshots/curiousair/curious-air-timed-logging.png"
         ],
         "offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://play.google.com/store/apps/details?id=com.bhunt.curiousair"},
-        "featureList":["Wi-Fi spectrum and signal history","Bluetooth LE radar and advertisement decoding","Cellular signal inspection","GPS and GNSS sky map","Device sensor console","NFC tag reading","Local network service discovery","Audio spectrum and experimental signal labs","Optional one-time Pro unlock for timed logs and CSV export"],
+        "featureList":["Wi-Fi network explorer","Bluetooth device scanner","GNSS satellite and position view","Device sensor console","NFC tag reading","Local network service discovery","Optional one-time Pro unlock for timed multi-signal logs and CSV export"],
         "publisher":{"@id":"https://ulix.app/#org"},
         "author":{"@id":"https://ulix.app/#org"}
       },
@@ -77,7 +77,7 @@
   }
   </script>
 </head>
-<body class="air-page">
+<body class="ca-page">
   <a href="#main" class="skip-link">Skip to content</a>
   <header class="site-header">
     <div class="container container--wide site-header__inner">
@@ -117,209 +117,252 @@
   <main id="main">
 
     <!-- Hero -->
-    <section class="air-hero">
-      <div class="air-grid" aria-hidden="true"></div>
-      <div class="air-wrap air-hero__inner">
+    <section class="ca-hero">
+      <div class="ca-wrap ca-hero__inner">
         <div>
-          <div class="air-brand">
+          <div class="ca-title">
             <img src="../icons/curiousair.png" alt="Curious Air app icon" width="1024" height="1024" />
-            <div>
-              <div class="air-brand__name">Curious Air</div>
-              <div class="air-brand__status">Now testing on Google Play</div>
-            </div>
+            <h1>Curious Air</h1>
           </div>
-          <h1>See what’s <em>broadcasting</em> around you.</h1>
-          <p class="air-hero__lede">Your phone already hears more than it shows you — Wi-Fi, Bluetooth, satellites, magnetic fields, even the hum of AC power. Curious Air turns it into a set of instruments for looking. No account, and your readings stay on your device.</p>
-          <div class="air-actions">
-            <a href="https://play.google.com/store/apps/details?id=com.bhunt.curiousair" target="_blank" rel="noopener" class="air-play">
-              <svg viewBox="0 0 20 22" fill="none" aria-hidden="true"><path d="M1 1.5v19l10-9.5L1 1.5z" fill="currentColor"/><path d="M11 11l5-3c1.2-.7 1.2-2.3 0-3L11 2.1V19.9l5-2.9c1.2-.7 1.2-2.3 0-3L11 11z" fill="currentColor" opacity=".45"/></svg>
-              Join the Google Play test
+          <p class="ca-hero__lede">Explore the invisible signals around&nbsp;you.</p>
+          <div class="ca-hero__actions">
+            <a href="https://play.google.com/store/apps/details?id=com.bhunt.curiousair" target="_blank" rel="noopener" class="ca-gplay">
+              <span class="ca-gplay__logo" aria-hidden="true">
+                <svg viewBox="0 0 28 30">
+                  <path fill="#00C4FF" d="M4 2.9v24.2L17.1 15z"/>
+                  <path fill="#00E96E" d="M4 2.9c.5-1.3 2-1.9 3.3-1.1l14.4 8.4-4.6 4.8z"/>
+                  <path fill="#FFD500" d="M17.1 15l4.6-4.8 3.5 2c1.5.9 1.5 3.1 0 4l-3.5 2z"/>
+                  <path fill="#FF3A44" d="M4 27.1c.5 1.3 2 1.9 3.3 1.1l14.4-8.4-4.6-4.8z"/>
+                </svg>
+              </span>
+              <span class="ca-gplay__text"><small>GET IT ON</small><strong>Google Play</strong></span>
             </a>
-            <a href="#instruments" class="air-secondary">See the instruments ↓</a>
+            <a href="#features" class="ca-more">Learn more <svg viewBox="0 0 14 9" aria-hidden="true"><path d="M1 1l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
-          <p class="hero-readout" aria-hidden="true">Live · <b>166 signals</b> · 114 Wi-Fi · 52 BLE · 23 sats</p>
+          <p class="ca-hero__note">Wi-Fi · Bluetooth · Cellular · GNSS · NFC · Sensors · Audio<br />Free to explore — now in open testing on Google Play</p>
         </div>
-        <div class="air-hero__visual">
-          <div class="air-ring air-ring--1" aria-hidden="true"></div>
-          <div class="air-ring air-ring--2" aria-hidden="true"></div>
-          <div class="readout readout--wifi" aria-hidden="true">
-            <div class="readout__label">Wi-Fi</div>
-            <div class="readout__value">−54 dBm</div>
-            <svg viewBox="0 0 120 22" preserveAspectRatio="none"><polyline points="0,14 18,13 34,15 48,9 62,11 78,6 94,10 108,5 120,8" fill="none" stroke="#f0a868" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <div class="readout readout--gnss" aria-hidden="true">
-            <div class="readout__label">GNSS</div>
-            <div class="readout__value">23 sats</div>
-          </div>
-          <figure class="air-phone"><img src="../assets/screenshots/curiousair/curious-air-mainscreen-1.png" alt="Curious Air home screen showing radio, position, environment, and labs instruments" width="1080" height="2124" /></figure>
+
+        <div class="ca-hero__art" aria-hidden="true">
+          <svg viewBox="0 0 560 500" role="img" aria-label="">
+            <!-- signal ripples -->
+            <circle cx="285" cy="245" r="212" fill="none" stroke="#bcdcf3" stroke-width="2" opacity=".55"/>
+            <circle cx="285" cy="245" r="162" fill="none" stroke="#aed4f0" stroke-width="2" opacity=".7"/>
+            <circle cx="285" cy="245" r="112" fill="#dbeefb" opacity=".5"/>
+            <!-- sparkles -->
+            <g fill="#fff" opacity=".9">
+              <path d="M112 52l2.4 6 6 2.4-6 2.4-2.4 6-2.4-6-6-2.4 6-2.4z"/>
+              <path d="M430 34l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+              <path d="M540 176l1.8 4.5 4.5 1.8-4.5 1.8-1.8 4.5-1.8-4.5-4.5-1.8 4.5-1.8z"/>
+              <path d="M52 236l1.8 4.5 4.5 1.8-4.5 1.8-1.8 4.5-1.8-4.5-4.5-1.8 4.5-1.8z"/>
+            </g>
+            <!-- clouds -->
+            <g fill="#ffffff" opacity=".95">
+              <g transform="translate(34 96)">
+                <ellipse cx="30" cy="18" rx="30" ry="16"/><ellipse cx="62" cy="12" rx="24" ry="14"/><ellipse cx="88" cy="20" rx="26" ry="13"/>
+              </g>
+              <g transform="translate(432 348)" opacity=".9">
+                <ellipse cx="28" cy="16" rx="28" ry="14"/><ellipse cx="58" cy="10" rx="22" ry="13"/><ellipse cx="82" cy="18" rx="24" ry="12"/>
+              </g>
+            </g>
+            <!-- motion trails -->
+            <g fill="none" stroke="#a8cdec" stroke-width="9" stroke-linecap="round" opacity=".85">
+              <path d="M84 348q36-6 66-24"/>
+              <path d="M106 392q42-8 76-28"/>
+              <path d="M148 428q30-4 56-18"/>
+            </g>
+            <!-- mascot phone, matching the app icon's line-art character, tilted in flight -->
+            <g transform="translate(292 252) rotate(17) scale(1.32) translate(-55 -85)">
+              <!-- signal arcs, three per side as in the logo -->
+              <g fill="none" stroke="#2f7fe0" stroke-width="10" stroke-linecap="round">
+                <path d="M-16 62a32 32 0 0 0 0 50"/>
+                <path d="M-33 46a55 55 0 0 0 0 82"/>
+                <path d="M-50 30a80 80 0 0 0 0 114"/>
+                <path d="M126 62a32 32 0 0 1 0 50"/>
+                <path d="M143 46a55 55 0 0 1 0 82"/>
+                <path d="M160 30a80 80 0 0 1 0 114"/>
+              </g>
+              <!-- body -->
+              <rect x="0" y="0" width="110" height="170" rx="24" fill="#fff" stroke="#2f7fe0" stroke-width="12"/>
+              <!-- screen -->
+              <rect x="17" y="19" width="76" height="114" rx="12" fill="none" stroke="#2f7fe0" stroke-width="8"/>
+              <!-- face -->
+              <circle cx="40" cy="62" r="6.5" fill="#2f7fe0"/>
+              <circle cx="70" cy="62" r="6.5" fill="#2f7fe0"/>
+              <path d="M38 82q17 16 34 0" fill="none" stroke="#2f7fe0" stroke-width="8" stroke-linecap="round"/>
+              <!-- home button -->
+              <rect x="41" y="144" width="28" height="11" rx="5.5" fill="#2f7fe0"/>
+              <!-- magnifying glass over the top-left corner -->
+              <line x1="43" y1="-29" x2="82" y2="-50" stroke="#2f7fe0" stroke-width="11" stroke-linecap="round"/>
+              <circle cx="18" cy="-12" r="30" fill="#eaf4fe" fill-opacity=".85" stroke="#2f7fe0" stroke-width="11"/>
+            </g>
+            <!-- floating badges -->
+            <g>
+              <circle cx="468" cy="86" r="40" fill="#57c08a"/>
+              <g transform="translate(468 90)" fill="none" stroke="#fff" stroke-width="4.8" stroke-linecap="round">
+                <path d="M-20 -4a28 28 0 0 1 40 0"/>
+                <path d="M-12 5a17 17 0 0 1 24 0"/>
+              </g>
+              <circle cx="468" cy="104" r="3.8" fill="#fff"/>
+            </g>
+            <g>
+              <circle cx="514" cy="266" r="37" fill="#3b82e0"/>
+              <path d="M505 253l20 15.5-11 8.5V245l11 8.5-20 15.5" fill="none" stroke="#fff" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 9)"/>
+            </g>
+            <g transform="translate(72 314)">
+              <circle r="39" fill="#8b7fe0"/>
+              <g transform="rotate(-38)" fill="#fff">
+                <rect x="-9" y="-7" width="18" height="14" rx="3"/>
+                <rect x="-27" y="-5" width="14" height="10" rx="2"/>
+                <rect x="13" y="-5" width="14" height="10" rx="2"/>
+              </g>
+            </g>
+            <g transform="translate(460 424)">
+              <circle r="37" fill="#4fc2b4"/>
+              <g fill="none" stroke="#fff" stroke-width="4.4" stroke-linecap="round">
+                <path d="M-8 -18a5.5 5.5 0 0 1 11 0v22a9.5 9.5 0 1 1 -11 0z"/>
+              </g>
+              <circle cx="-2.5" cy="12" r="4.6" fill="#fff"/>
+              <path d="M14 -12c4 4.8 4 8.2 0 10.4s-8-1.4-5.6-6.6c1.4-2.6 3.4-3.8 5.6-3.8z" fill="#fff"/>
+            </g>
+          </svg>
         </div>
+      </div>
+
+      <svg class="ca-hero__ground" viewBox="0 0 1440 130" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 78 Q240 96 480 84 T 960 88 T 1440 74 V130 H0 Z" fill="#c9dff2" opacity=".55"/>
+        <path d="M0 84 Q360 30 720 68 T 1440 58 V130 H0 Z" fill="#cde9c6"/>
+        <path d="M0 108 Q480 66 960 100 T 1440 90 V130 H0 Z" fill="#b9dfb0"/>
+      </svg>
+    </section>
+
+    <!-- Feature cards -->
+    <section class="ca-features" id="features">
+      <div class="ca-wrap ca-features__grid">
+        <article class="ca-card">
+          <div class="ca-card__icon ca-card__icon--wifi" aria-hidden="true">
+            <svg viewBox="0 0 34 34"><g fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round"><path d="M5 14a17.5 17.5 0 0 1 24 0"/><path d="M10 19.5a10.5 10.5 0 0 1 14 0"/></g><circle cx="17" cy="25.5" r="2.6" fill="currentColor"/></svg>
+          </div>
+          <h3>Wi-Fi</h3>
+          <p>Discover nearby Wi-Fi networks, signal strength, channels, and more.</p>
+        </article>
+        <article class="ca-card">
+          <div class="ca-card__icon ca-card__icon--bt" aria-hidden="true">
+            <svg viewBox="0 0 34 34"><path d="M10 11l14 11-7 5.5V6.5L24 12 10 23" fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Bluetooth</h3>
+          <p>Scan for nearby Bluetooth devices and monitor signal strength and details.</p>
+        </article>
+        <article class="ca-card">
+          <div class="ca-card__icon ca-card__icon--gnss" aria-hidden="true">
+            <svg viewBox="0 0 34 34"><g transform="rotate(-38 17 17)" fill="currentColor"><rect x="12" y="13.5" width="10" height="7" rx="1.6"/><rect x="3" y="14.5" width="7" height="5" rx="1.2"/><rect x="24" y="14.5" width="7" height="5" rx="1.2"/></g></svg>
+          </div>
+          <h3>GNSS</h3>
+          <p>View satellite information, position accuracy, and real-time location data.</p>
+        </article>
+        <article class="ca-card">
+          <div class="ca-card__icon ca-card__icon--sensors" aria-hidden="true">
+            <svg viewBox="0 0 34 34"><path d="M14 7a3.2 3.2 0 0 1 6.4 0v12a5.8 5.8 0 1 1-6.4 0z" fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round"/><circle cx="17.2" cy="24.5" r="2.7" fill="currentColor"/></svg>
+          </div>
+          <h3>Sensors</h3>
+          <p>Explore device sensors like motion, light, pressure, magnetic field, and more.</p>
+        </article>
       </div>
     </section>
 
-    <!-- Principles -->
-    <section class="air-principles" aria-label="Product principles">
-      <div class="air-wrap principles-grid">
-        <article class="principle"><span class="principle__code">01 · Local-first</span><h3>Readings stay on your phone.</h3><p>Nothing you scan is uploaded to Ulix. Data leaves your device only when you export a file yourself.</p></article>
-        <article class="principle"><span class="principle__code">02 · Permission-aware</span><h3>Every instrument asks first.</h3><p>Grant only the radio and sensor access you want. Deny a permission and the rest of the app keeps working.</p></article>
-        <article class="principle"><span class="principle__code">03 · No account</span><h3>Open it and start looking.</h3><p>No sign-up, no profile, no ads, no cloud dashboard. Just the instruments.</p></article>
-        <article class="principle"><span class="principle__code">04 · Pay once, optional</span><h3>Everything live is free.</h3><p>A one-time Pro unlock adds timed logging and CSV export. No subscription.</p></article>
-      </div>
-    </section>
-
-    <!-- Instruments -->
-    <section class="air-section" id="instruments">
-      <div class="air-wrap">
-        <div class="section-head">
-          <span class="eyebrow">The instruments</span>
-          <h2>One console per signal.</h2>
-          <p class="section-intro">Curious Air doesn’t blend everything into a single mysterious score. Each radio and sensor gets its own screen, its own units, and a plain note about what it can — and can’t — tell you.</p>
-        </div>
-        <div class="instrument-grid">
-          <article class="instrument-card">
-            <div class="instrument-card__top"><span class="instrument-card__code">01 · Radio</span><span class="tag-live">Live</span></div>
-            <h3>Networks nearby</h3>
-            <p>Watch Wi-Fi channels, Bluetooth broadcasts, and cellular cells in real time, and discover the services announcing themselves on your local network.</p>
-            <ul class="pill-row"><li>Wi-Fi</li><li>BLE</li><li>Cellular</li><li>mDNS · SSDP</li><li>Trackers</li></ul>
-          </article>
-          <article class="instrument-card instrument-card--position">
-            <div class="instrument-card__top"><span class="instrument-card__code">02 · Position</span><span class="tag-live">Live</span></div>
-            <h3>Sky and position</h3>
-            <p>Follow your GPS fix and explore the GNSS sky — every satellite your phone can hear, by constellation, elevation, azimuth, and signal strength.</p>
-            <ul class="pill-row"><li>GPS</li><li>GNSS sky map</li><li>Altitude</li><li>Bearing</li></ul>
-          </article>
-          <article class="instrument-card instrument-card--environment">
-            <div class="instrument-card__top"><span class="instrument-card__code">03 · Environment</span><span class="tag-live">Live</span></div>
-            <h3>Fields and motion</h3>
-            <p>Read the magnetic field, motion, light, proximity, pressure, and a live audio spectrum — every sensor your phone actually has.</p>
-            <ul class="pill-row"><li>Magnetic</li><li>Motion</li><li>Light</li><li>Barometer</li><li>Audio</li></ul>
-          </article>
-          <article class="instrument-card instrument-card--labs">
-            <div class="instrument-card__top"><span class="instrument-card__code">04 · Labs</span><span class="tag-labs">Experimental</span></div>
-            <h3>Inferred signals</h3>
-            <p>Try the experiments: the 60&nbsp;Hz hum of AC power read from the magnetometer, camera-based indicators, and tracker-pattern matching. Labelled experimental, because they are.</p>
-            <ul class="pill-row"><li>Field sniffer</li><li>Camera labs</li><li>Tracker patterns</li></ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Showcase -->
-    <section class="air-section">
-      <div class="air-wrap">
-        <div class="section-head">
-          <span class="eyebrow">Field notes</span>
-          <h2>Instruments you can actually read.</h2>
-          <p class="section-intro">The design borrows from field equipment: stable lists, clear units, live plots, and enough context to know what a number means.</p>
-        </div>
-        <div class="showcase">
-          <article class="showcase-row">
-            <div class="showcase-copy">
-              <div class="showcase-label">Wi-Fi spectrum</div>
-              <h3>The whole band, at a glance.</h3>
-              <p>Watch 2.4 and 5&nbsp;GHz as live spectrum curves. Tap a peak for its channel, width, security, and signal history — or hold the results when you want the list to sit still.</p>
-              <ul>
-                <li>Spectrum view with per-network signal history</li>
-                <li>Stable scanning — rows don’t jump while you read</li>
-                <li>Everything on-device, no account required</li>
-              </ul>
+    <!-- Timed logging / Pro -->
+    <section class="ca-logging">
+      <div class="ca-wrap">
+        <div class="ca-logging__panel">
+          <div class="ca-logging__copy">
+            <div class="ca-logging__head">
+              <span class="ca-logging__badge" aria-hidden="true">
+                <svg viewBox="0 0 30 30"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="15" cy="17" r="10"/><path d="M15 17v-6M12 3h6M15 3v4"/></g></svg>
+              </span>
+              <h2>Timed Multi-Signal Logging</h2>
             </div>
-            <div class="showcase-art"><img class="shot shot--rear" src="../assets/screenshots/curiousair/curious-air-mainscreen-2.png" alt="Curious Air signal console home screen" width="1080" height="2124" loading="lazy" decoding="async" /><img class="shot shot--front" src="../assets/screenshots/curiousair/curious-air-wifi.png" alt="Curious Air Wi-Fi spectrum screen" width="1080" height="2124" loading="lazy" decoding="async" /></div>
-          </article>
-          <article class="showcase-row">
-            <div class="showcase-copy">
-              <div class="showcase-label">Bluetooth radar · Cellular</div>
-              <h3>Nearby devices, ranked and decoded.</h3>
-              <p>The radar places BLE devices by relative signal strength. Open one to decode its advertisements, manufacturer data, and GATT services — or switch consoles and inspect the cellular cells your phone can hear.</p>
-              <ul>
-                <li>Radar view plus a stable device list</li>
-                <li>Advertisement and GATT decoding, free for everyone</li>
-                <li>Distance is an estimate — the app says so on screen</li>
-              </ul>
-            </div>
-            <div class="showcase-art"><img class="shot shot--rear" src="../assets/screenshots/curiousair/curious-air-cellular.png" alt="Curious Air cellular signal screen" width="1080" height="2124" loading="lazy" decoding="async" /><img class="shot shot--front" src="../assets/screenshots/curiousair/curious-air-bluetooth.png" alt="Curious Air Bluetooth radar screen" width="1080" height="2124" loading="lazy" decoding="async" /></div>
-          </article>
-          <article class="showcase-row">
-            <div class="showcase-copy">
-              <div class="showcase-label">Sensors &amp; environment</div>
-              <h3>A toolbox of small instruments.</h3>
-              <p>Heading, pitch and roll, acceleration, magnetic field, light, proximity, pressure, and a live audio spectrum — analyzed in the moment, never recorded.</p>
-              <ul>
-                <li>Clean attitude and field readouts</li>
-                <li>NFC tag reading and local service discovery</li>
-                <li>Missing hardware is shown as missing, not faked</li>
-              </ul>
-            </div>
-            <div class="showcase-art"><img class="shot shot--rear" src="../assets/screenshots/curiousair/curious-air-other-sensors.png" alt="Curious Air additional sensor readings" width="1080" height="2124" loading="lazy" decoding="async" /><img class="shot shot--front" src="../assets/screenshots/curiousair/curious-air-sensors.png" alt="Curious Air sensor console" width="1080" height="2124" loading="lazy" decoding="async" /></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Capability -->
-    <section class="air-section">
-      <div class="air-wrap">
-        <div class="capability">
-          <div>
-            <span class="eyebrow">Capability check</span>
-            <h3>Built for the phone you actually have.</h3>
-            <p>Phones ship with different radios and sensors. Curious Air checks yours and shows the honest list — anything your device can’t do is marked unavailable, instead of quietly showing zeros.</p>
-            <ul class="pill-row"><li>Wi-Fi</li><li>Bluetooth</li><li>Cellular</li><li>GPS</li><li>GNSS</li><li>NFC</li><li>Magnetometer</li><li>Accelerometer</li><li>Light</li><li>Barometer</li><li>Microphone</li><li>Camera labs</li></ul>
+            <p class="ca-pro-flag"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 7V5a4 4 0 0 1 8 0v2m-9 0h10v7H3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Requires Curious Air Pro — a one-time unlock, not a subscription</p>
+            <p>Record Wi-Fi, Bluetooth, GNSS, and cellular readings together over time. Perfect for debugging, research, and field analysis.</p>
+            <ul class="ca-checks">
+              <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#3fa857"/><path d="M6 10.5l2.6 2.6L14 7.5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Custom log durations and intervals</li>
+              <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#3fa857"/><path d="M6 10.5l2.6 2.6L14 7.5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Export ordinary CSV through Android’s document picker</li>
+              <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#3fa857"/><path d="M6 10.5l2.6 2.6L14 7.5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything live stays free — Pro only unlocks the record</li>
+            </ul>
+            <a href="https://play.google.com/store/apps/details?id=com.bhunt.curiousair" target="_blank" rel="noopener" class="ca-logging__cta">Get Curious Air on Google Play</a>
+            <p class="ca-logging__fine">Pro is an optional one-time purchase inside the app, handled by Google Play.</p>
           </div>
-          <figure class="cap-image"><img src="../assets/screenshots/curiousair/curious-air-capabilities.png" alt="Curious Air device capabilities screen showing available radios and sensors" width="1080" height="2124" loading="lazy" decoding="async" /></figure>
-        </div>
-      </div>
-    </section>
 
-    <!-- Pro -->
-    <section class="air-section">
-      <div class="air-wrap">
-        <div class="section-head">
-          <span class="eyebrow">Curious Air Pro</span>
-          <h2>Explore free. Pay once for the record.</h2>
-          <p class="section-intro">Every live console is free — no trial timers, no locked basics. Pro exists for one job: keeping records you can take elsewhere.</p>
-        </div>
-        <div class="pro-block">
-          <div class="pro-copy">
-            <span class="eyebrow">One-time purchase · No subscription</span>
-            <h3>Timed logs, exported as plain CSV.</h3>
-            <p>Choose an interval and a duration, and Curious Air logs Wi-Fi, Bluetooth, GNSS, or cellular readings while you work. Files save through Android’s own document picker and open in any spreadsheet tool.</p>
-            <div class="pill-row"><span>Wi-Fi logs</span><span>Bluetooth logs</span><span>GNSS logs</span><span>Cellular logs</span><span>One Google Play purchase</span></div>
+          <div class="ca-dash" aria-hidden="true">
+            <div class="ca-dash__top">
+              <span class="ca-dash__app"><img src="../icons/curiousair.png" alt="" /> Curious Air</span>
+              <span class="ca-dash__rec">Logging 02:15</span>
+            </div>
+            <div class="ca-dash__body">
+              <ul class="ca-dash__side">
+                <li class="is-active">Dashboard</li>
+                <li>Wi-Fi</li>
+                <li>Bluetooth</li>
+                <li>GNSS</li>
+                <li>Sensors</li>
+                <li>Logging</li>
+                <li>History</li>
+                <li>Settings</li>
+              </ul>
+              <div class="ca-dash__main">
+                <div class="ca-dash__label">Live Overview</div>
+                <div class="ca-stats">
+                  <div class="ca-stat ca-stat--wifi"><b>23</b><span>Wi-Fi networks</span></div>
+                  <div class="ca-stat ca-stat--bt"><b>8</b><span>BT devices</span></div>
+                  <div class="ca-stat ca-stat--gnss"><b>12</b><span>Satellites</span></div>
+                  <div class="ca-stat ca-stat--sensors"><b>15</b><span>Sensors active</span></div>
+                </div>
+                <div class="ca-dash__chart">
+                  <svg viewBox="0 0 460 150">
+                    <g stroke="#e7eef6" stroke-width="1"><line x1="8" y1="30" x2="452" y2="30"/><line x1="8" y1="65" x2="452" y2="65"/><line x1="8" y1="100" x2="452" y2="100"/><line x1="8" y1="135" x2="452" y2="135"/></g>
+                    <g fill="none" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round">
+                      <polyline stroke="#57c08a" points="10,92 65,78 120,86 175,68 230,76 285,60 340,70 395,56 450,64"/>
+                      <polyline stroke="#3b82e0" points="10,110 65,104 120,112 175,100 230,108 285,96 340,104 395,92 450,100"/>
+                      <polyline stroke="#8b7fe0" points="10,126 65,121 120,128 175,118 230,124 285,114 340,120 395,110 450,116"/>
+                      <polyline stroke="#4fc2b4" points="10,68 65,58 120,70 175,50 230,62 285,44 340,56 395,38 450,48"/>
+                    </g>
+                    <g fill="#57c08a"><circle cx="175" cy="68" r="2.6"/><circle cx="340" cy="70" r="2.6"/></g>
+                    <g fill="#3b82e0"><circle cx="120" cy="112" r="2.6"/><circle cx="285" cy="96" r="2.6"/></g>
+                    <g fill="#8b7fe0"><circle cx="230" cy="124" r="2.6"/><circle cx="395" cy="110" r="2.6"/></g>
+                    <g fill="#4fc2b4"><circle cx="65" cy="58" r="2.6"/><circle cx="285" cy="44" r="2.6"/></g>
+                    <g fill="#8aa0b8" font-size="9" font-family="inherit"><text x="10" y="148">00:00</text><text x="118" y="148">00:30</text><text x="226" y="148">01:00</text><text x="334" y="148">01:30</text><text x="434" y="148">02:00</text></g>
+                  </svg>
+                </div>
+                <div class="ca-dash__legend">
+                  <span><i style="background:#57c08a"></i>Wi-Fi</span>
+                  <span><i style="background:#3b82e0"></i>Bluetooth</span>
+                  <span><i style="background:#8b7fe0"></i>GNSS</span>
+                  <span><i style="background:#4fc2b4"></i>Sensors</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <figure class="pro-image"><img src="../assets/screenshots/curiousair/curious-air-timed-logging.png" alt="Curious Air timed logging screen with interval and duration controls" width="1080" height="2124" loading="lazy" decoding="async" /></figure>
         </div>
       </div>
     </section>
 
-    <!-- Honest limits -->
-    <section class="air-section">
-      <div class="air-wrap">
-        <div class="section-head">
-          <span class="eyebrow">Honest limits</span>
-          <h2>A curious tool should be an honest one.</h2>
-          <p class="section-intro">Signal strength moves. Hardware varies. Experiments can be wrong. Curious Air says so in the interface, not in fine print.</p>
+    <!-- Values strip -->
+    <section class="ca-values">
+      <div class="ca-wrap ca-values__band">
+        <div class="ca-value">
+          <svg viewBox="0 0 26 26" aria-hidden="true"><path d="M13 2l9 3.5v6.2c0 5.6-3.8 9.7-9 12.3-5.2-2.6-9-6.7-9-12.3V5.5z" fill="none" stroke="#3fa857" stroke-width="2" stroke-linejoin="round"/><path d="M9 12.6l2.8 2.8L17.4 10" fill="none" stroke="#3fa857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><h3>Privacy first</h3><p>All data stays on your device.</p></div>
         </div>
-        <div class="trust-grid">
-          <article class="trust-card">
-            <div class="trust-label">Privacy</div>
-            <h3>Your readings stay on your phone.</h3>
-            <p>Nothing you scan is sent to Ulix. The only network traffic the app creates: local discovery probes on the network you’re already connected to, and Google Play handling the optional Pro purchase. That’s the whole list.</p>
-          </article>
-          <article class="trust-card trust-card--labs">
-            <div class="trust-label">Labs</div>
-            <h3>Experimental means experimental.</h3>
-            <p>Camera indicators, inferred signals, and tracker-pattern matches are clues, not proof. They can miss real devices or flag harmless ones — never rely on them for safety-critical decisions.</p>
-          </article>
+        <div class="ca-value">
+          <svg viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="11" fill="none" stroke="#3b82e0" stroke-width="2"/><circle cx="9.5" cy="11" r="1.4" fill="#3b82e0"/><circle cx="16.5" cy="11" r="1.4" fill="#3b82e0"/><path d="M8.5 15.5q4.5 4 9 0" fill="none" stroke="#3b82e0" stroke-width="2" stroke-linecap="round"/></svg>
+          <div><h3>No ads</h3><p>Focused experience, no distractions.</p></div>
         </div>
-      </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="air-final">
-      <div class="air-wrap">
-        <span class="eyebrow">Now testing on Google Play</span>
-        <h2>The air is full of information.</h2>
-        <p>Curious Air is a local-first, no-account way to look. Join the test and see what your phone can hear.</p>
-        <a href="https://play.google.com/store/apps/details?id=com.bhunt.curiousair" target="_blank" rel="noopener" class="air-play">Join the Google Play test</a>
+        <div class="ca-value">
+          <svg viewBox="0 0 26 26" aria-hidden="true"><path d="M13 22S3.5 16.6 3.5 9.9A5.4 5.4 0 0 1 13 6.6a5.4 5.4 0 0 1 9.5 3.3C22.5 16.6 13 22 13 22z" fill="none" stroke="#8b7fe0" stroke-width="2" stroke-linejoin="round"/></svg>
+          <div><h3>Made for curious minds</h3><p>Powerful tools, playful design.</p></div>
+        </div>
+        <div class="ca-value">
+          <img src="../icons/favicon.png" alt="" width="26" height="26" style="border-radius:6px" />
+          <div><h3>By Ulix</h3><p>Quality apps that help you explore more.</p></div>
+        </div>
       </div>
     </section>
   </main>
