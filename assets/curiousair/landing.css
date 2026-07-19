@@ -163,12 +163,49 @@
 .ca-hero__art > svg { width: 100%; height: auto; }
 
 
+/* 2b. Principles strip
+   ========================================================================== */
+.ca-principles { padding: 56px 0 0; }
+.ca-principles__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px;
+}
+.ca-principle { display: flex; align-items: flex-start; gap: 14px; }
+.ca-principle__num {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: #e4effc;
+  color: var(--blue);
+  font-size: 13.5px;
+  font-weight: 680;
+}
+.ca-principle h3 { color: var(--navy); font-size: 16.5px; font-weight: 650; }
+.ca-principle p { margin-top: 6px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+
+
+/* Shared section heading */
+.ca-sechead { max-width: 640px; margin: 0 auto 44px; text-align: center; }
+.ca-sechead h2 {
+  color: var(--navy);
+  font-size: clamp(28px, 3.6vw, 40px);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  font-weight: 670;
+}
+.ca-sechead p { margin-top: 14px; color: var(--muted); font-size: 17px; line-height: 1.6; }
+
+
 /* 3. Feature cards
    ========================================================================== */
-.ca-features { padding: 64px 0 8px; }
+.ca-features { padding: 72px 0 8px; }
 .ca-features__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
 }
 .ca-card {
@@ -189,15 +226,111 @@
 .ca-card__icon svg { width: 34px; height: 34px; }
 .ca-card__icon--wifi { background: #e3f4e4; color: var(--green); }
 .ca-card__icon--bt { background: #e4effc; color: var(--blue); }
+.ca-card__icon--cell { background: #fceee0; color: #d98a3d; }
 .ca-card__icon--gnss { background: #ece8fb; color: var(--purple); }
 .ca-card__icon--sensors { background: #dff3f2; color: var(--teal); }
+.ca-card__icon--nfc { background: #e8ecfa; color: #5b76d8; }
 .ca-card h3 { color: var(--navy); font-size: 22px; font-weight: 650; }
 .ca-card p { margin-top: 10px; color: var(--muted); font-size: 15px; line-height: 1.55; }
 
 
+/* 3b. Screenshot showcase
+   ========================================================================== */
+.ca-shots { padding: 72px 0 8px; }
+.ca-showcase { display: grid; gap: 24px; }
+.ca-showcase__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(380px, 0.95fr);
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.ca-showcase__row:nth-child(even) { grid-template-columns: minmax(380px, 0.95fr) minmax(0, 1fr); }
+.ca-showcase__row:nth-child(even) .ca-showcase__copy { order: 2; }
+.ca-showcase__row:nth-child(even) .ca-showcase__art { order: 1; }
+.ca-showcase__copy { padding: 48px 52px; }
+.ca-showcase__copy h3 {
+  color: var(--navy);
+  font-size: clamp(24px, 2.6vw, 31px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 660;
+}
+.ca-showcase__copy > p { margin-top: 14px; color: var(--muted); font-size: 16px; line-height: 1.6; }
+.ca-showcase__art {
+  position: relative;
+  min-height: 460px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 44px 30px 0;
+  background: radial-gradient(circle at 50% 60%, rgba(47, 127, 224, 0.12), transparent 55%), #eef5fb;
+  overflow: hidden;
+}
+.ca-shot {
+  position: relative;
+  width: 215px;
+  border: 7px solid #16283a;
+  border-bottom: 0;
+  border-radius: 30px 30px 0 0;
+  box-shadow: 0 20px 48px rgba(23, 44, 76, 0.28);
+  background: #0a1520;
+}
+.ca-shot--rear { z-index: 1; margin-right: -34px; transform: translateY(42px) rotate(-4deg); opacity: 0.85; }
+.ca-shot--front { z-index: 2; transform: rotate(2deg); }
+
+
+/* 3c. Capability panel
+   ========================================================================== */
+.ca-capability { padding: 72px 0 8px; }
+.ca-capability__panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 56px;
+  align-items: center;
+  padding: 52px 54px 0;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.ca-capability__panel h2 {
+  color: var(--navy);
+  font-size: clamp(26px, 3.2vw, 36px);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  font-weight: 670;
+}
+.ca-capability__panel > div > p { margin-top: 16px; max-width: 560px; color: var(--muted); font-size: 16.5px; line-height: 1.6; }
+.ca-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; padding-bottom: 52px; }
+.ca-pills li {
+  padding: 7px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #f2f7fc;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 560;
+  white-space: nowrap;
+}
+.ca-capability__img {
+  align-self: end;
+  width: 265px;
+  margin: 0 auto -95px;
+  border: 8px solid #16283a;
+  border-radius: 34px;
+  box-shadow: 0 24px 60px rgba(23, 44, 76, 0.3);
+  overflow: hidden;
+}
+
+
 /* 4. Logging / Pro band
    ========================================================================== */
-.ca-logging { padding: 56px 0; }
+.ca-logging { padding: 72px 0 8px; }
 .ca-logging__panel {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(400px, 1.1fr);
@@ -311,23 +444,41 @@
 .ca-dash__legend i { display: inline-block; width: 14px; height: 3px; border-radius: 2px; margin-right: 5px; vertical-align: middle; }
 
 
-/* 5. Values strip
+/* 5. Trust cards + final CTA
    ========================================================================== */
-.ca-values { padding: 26px 0 72px; }
-.ca-values__band {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 26px;
-  padding: 30px 36px;
+.ca-trust { padding: 72px 0 8px; }
+.ca-trust__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.ca-trust__card {
+  padding: 36px 38px;
   border: 1px solid var(--line);
   border-radius: 18px;
   background: var(--card);
   box-shadow: var(--shadow);
 }
-.ca-value { display: flex; align-items: flex-start; gap: 13px; }
-.ca-value svg { flex: 0 0 auto; width: 26px; height: 26px; margin-top: 2px; }
-.ca-value h3 { color: var(--navy); font-size: 15.5px; font-weight: 650; }
-.ca-value p { margin-top: 4px; color: var(--muted); font-size: 13.5px; line-height: 1.45; }
+.ca-trust__label {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 680;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.ca-trust__label--privacy { background: #e3f4e4; color: #23703a; }
+.ca-trust__label--honesty { background: #e4effc; color: #1d5cad; }
+.ca-trust__card h3 { margin-top: 18px; color: var(--navy); font-size: 22px; font-weight: 650; }
+.ca-trust__card p { margin-top: 12px; color: var(--muted); font-size: 15px; line-height: 1.65; }
+
+.ca-final { padding: 88px 0 96px; text-align: center; }
+.ca-final h2 {
+  color: var(--navy);
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 680;
+}
+.ca-final p { max-width: 520px; margin: 16px auto 0; color: var(--muted); font-size: 17px; line-height: 1.6; }
+.ca-final .ca-gplay { margin-top: 30px; }
 
 
 /* 6. Footer credo (footer itself is the standard navy one from ulix.css) */
@@ -358,9 +509,14 @@
   .ca-hero__inner { grid-template-columns: 1fr; padding: 56px 0 110px; gap: 48px; }
   .ca-hero__art { max-width: 520px; margin: 0 auto; min-height: 0; }
   .ca-title h1 { font-size: clamp(44px, 10vw, 64px); }
+  .ca-principles__grid { grid-template-columns: 1fr 1fr; }
   .ca-features__grid { grid-template-columns: 1fr 1fr; }
+  .ca-showcase__row, .ca-showcase__row:nth-child(even) { grid-template-columns: 1fr; }
+  .ca-showcase__row:nth-child(even) .ca-showcase__copy,
+  .ca-showcase__row:nth-child(even) .ca-showcase__art { order: initial; }
+  .ca-capability__panel { grid-template-columns: 1fr; padding: 40px 34px 0; gap: 36px; }
   .ca-logging__panel { grid-template-columns: 1fr; padding: 40px 34px; }
-  .ca-values__band { grid-template-columns: 1fr 1fr; }
+  .ca-trust__grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
@@ -368,8 +524,15 @@
   .ca-title { gap: 16px; }
   .ca-title img { width: 64px; height: 64px; border-radius: 16px; }
   .ca-title h1 { font-size: clamp(32px, 11vw, 52px); }
+  .ca-principles__grid { grid-template-columns: 1fr; gap: 22px; }
   .ca-features__grid { grid-template-columns: 1fr; }
-  .ca-features { padding-top: 48px; }
+  .ca-features, .ca-shots, .ca-capability, .ca-logging, .ca-trust { padding-top: 52px; }
+  .ca-showcase__copy { padding: 32px 24px; }
+  .ca-showcase__art { min-height: 400px; padding: 36px 12px 0; }
+  .ca-shot { width: 180px; }
+  .ca-shot--rear { margin-right: -58px; }
+  .ca-capability__panel { padding: 32px 24px 0; }
+  .ca-capability__img { width: 225px; margin-bottom: -80px; }
   .ca-logging__panel { padding: 30px 22px; }
   .ca-dash__body { grid-template-columns: 1fr; }
   .ca-dash__side { display: flex; flex-wrap: wrap; gap: 2px; padding: 8px; border-right: 0; border-bottom: 1px solid var(--line); }
