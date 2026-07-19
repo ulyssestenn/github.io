@@ -4,26 +4,26 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Curious Air — See What’s Broadcasting Around You</title>
-  <meta name="description" content="Curious Air turns your Android phone into a privacy-first signal console for Wi-Fi, Bluetooth, cellular, satellites, sensors, NFC, audio, and more. Now in Google Play testing." />
+  <meta name="description" content="Curious Air turns your Android phone into a set of instruments for the signals around you: Wi-Fi, Bluetooth, cellular, satellites, sensors, NFC, and audio. No account, and your readings stay on your device. Now in Google Play testing." />
   <link rel="canonical" href="https://ulix.app/curiousair/" />
-  <meta name="theme-color" content="#061419" />
+  <meta name="theme-color" content="#050d13" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ulix" />
   <meta property="og:title" content="Curious Air — See What’s Broadcasting" />
-  <meta property="og:description" content="A privacy-first signal explorer for Wi-Fi, Bluetooth, cellular, satellites, sensors, NFC, audio, and more." />
+  <meta property="og:description" content="A signal explorer for Android: Wi-Fi, Bluetooth, cellular, satellites, sensors, NFC, and audio. No account — readings stay on your device." />
   <meta property="og:url" content="https://ulix.app/curiousair/" />
   <meta property="og:image" content="https://ulix.app/assets/curiousair/curious-air-feature-image.png" />
   <meta property="og:image:alt" content="Curious Air signal explorer for Android" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Curious Air — See What’s Broadcasting" />
-  <meta name="twitter:description" content="Turn your Android phone into a privacy-first signal console." />
+  <meta name="twitter:description" content="Turn your Android phone into a set of instruments for the signals around you." />
   <meta name="twitter:image" content="https://ulix.app/assets/curiousair/curious-air-feature-image.png" />
   <link rel="icon" href="/icons/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
   <link rel="stylesheet" href="../assets/ulix.css" />
-  <link rel="stylesheet" href="../assets/curiousair/landing.css" />
+  <link rel="stylesheet" href="../assets/curiousair/landing.css?v=2" />
   <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/geist-latin.woff2" crossorigin />
   <script type="application/ld+json">
   {
@@ -115,122 +115,218 @@
   </div>
 
   <main id="main">
+
+    <!-- Hero -->
     <section class="air-hero">
-      <div class="air-grid"></div>
+      <div class="air-grid" aria-hidden="true"></div>
       <div class="air-wrap air-hero__inner">
         <div>
           <div class="air-brand">
             <img src="../icons/curiousair.png" alt="Curious Air app icon" width="1024" height="1024" />
-            <div><div class="air-brand__name">Curious Air</div><div class="air-brand__status">Now in Google Play testing</div></div>
+            <div>
+              <div class="air-brand__name">Curious Air</div>
+              <div class="air-brand__status">Now testing on Google Play</div>
+            </div>
           </div>
-          <span class="eyebrow">Privacy-first signal explorer</span>
-          <h1>See what’s <em>broadcasting.</em></h1>
-          <p class="air-hero__lede">Turn your Android phone into a field console for the signals and sensors already around you: Wi-Fi, Bluetooth, cellular, satellites, NFC, light, motion, magnetic fields, audio, and more.</p>
+          <h1>See what’s <em>broadcasting</em> around you.</h1>
+          <p class="air-hero__lede">Your phone already hears more than it shows you — Wi-Fi, Bluetooth, satellites, magnetic fields, even the hum of AC power. Curious Air turns it into a set of instruments for looking. No account, and your readings stay on your device.</p>
           <div class="air-actions">
             <a href="https://play.google.com/store/apps/details?id=com.bhunt.curiousair" target="_blank" rel="noopener" class="air-play">
               <svg viewBox="0 0 20 22" fill="none" aria-hidden="true"><path d="M1 1.5v19l10-9.5L1 1.5z" fill="currentColor"/><path d="M11 11l5-3c1.2-.7 1.2-2.3 0-3L11 2.1V19.9l5-2.9c1.2-.7 1.2-2.3 0-3L11 11z" fill="currentColor" opacity=".45"/></svg>
               Join the Google Play test
             </a>
-            <a href="#instruments" class="air-secondary">Explore the instruments ↓</a>
+            <a href="#instruments" class="air-secondary">See the instruments ↓</a>
           </div>
+          <p class="hero-readout" aria-hidden="true">Live · <b>166 signals</b> · 114 Wi-Fi · 52 BLE · 23 sats</p>
         </div>
-        <div class="air-hero__visual" aria-label="Curious Air app preview">
-          <div class="orbit orbit--1"></div><div class="orbit orbit--2"></div><div class="orbit orbit--3"></div>
-          <div class="blip blip--wifi">Wi-Fi spectrum</div><div class="blip blip--ble">BLE radar</div><div class="blip blip--gnss">GNSS sky map</div>
+        <div class="air-hero__visual">
+          <div class="air-ring air-ring--1" aria-hidden="true"></div>
+          <div class="air-ring air-ring--2" aria-hidden="true"></div>
+          <div class="readout readout--wifi" aria-hidden="true">
+            <div class="readout__label">Wi-Fi</div>
+            <div class="readout__value">−54 dBm</div>
+            <svg viewBox="0 0 120 22" preserveAspectRatio="none"><polyline points="0,14 18,13 34,15 48,9 62,11 78,6 94,10 108,5 120,8" fill="none" stroke="#f0a868" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="readout readout--gnss" aria-hidden="true">
+            <div class="readout__label">GNSS</div>
+            <div class="readout__value">23 sats</div>
+          </div>
           <figure class="air-phone"><img src="../assets/screenshots/curiousair/curious-air-mainscreen-1.png" alt="Curious Air home screen showing radio, position, environment, and labs instruments" width="1080" height="2124" /></figure>
         </div>
       </div>
     </section>
 
+    <!-- Principles -->
     <section class="air-principles" aria-label="Product principles">
       <div class="air-wrap principles-grid">
-        <article class="principle"><span class="principle__code">01 · Local first</span><h3>Your phone does the looking.</h3><p>Signal data is not sent to Ulix unless you export or share it.</p></article>
-        <article class="principle"><span class="principle__code">02 · Permission aware</span><h3>You choose every instrument.</h3><p>Grant only the radio and sensor access you want to use.</p></article>
-        <article class="principle"><span class="principle__code">03 · No account</span><h3>Open it and explore.</h3><p>No Curious Air login, profile, feed, or cloud dashboard.</p></article>
-        <article class="principle"><span class="principle__code">04 · Free + Pro</span><h3>Pay once for logging.</h3><p>Core exploration is free. Pro adds timed CSV observations.</p></article>
+        <article class="principle"><span class="principle__code">01 · Local-first</span><h3>Readings stay on your phone.</h3><p>Nothing you scan is uploaded to Ulix. Data leaves your device only when you export a file yourself.</p></article>
+        <article class="principle"><span class="principle__code">02 · Permission-aware</span><h3>Every instrument asks first.</h3><p>Grant only the radio and sensor access you want. Deny a permission and the rest of the app keeps working.</p></article>
+        <article class="principle"><span class="principle__code">03 · No account</span><h3>Open it and start looking.</h3><p>No sign-up, no profile, no ads, no cloud dashboard. Just the instruments.</p></article>
+        <article class="principle"><span class="principle__code">04 · Pay once, optional</span><h3>Everything live is free.</h3><p>A one-time Pro unlock adds timed logging and CSV export. No subscription.</p></article>
       </div>
     </section>
 
+    <!-- Instruments -->
     <section class="air-section" id="instruments">
       <div class="air-wrap">
         <div class="section-head">
-          <div><span class="eyebrow">A pocket field console</span><h2>The invisible world, arranged into instruments.</h2></div>
-          <p class="section-intro">Curious Air does not collapse every reading into one mysterious score. Each radio, sensor, and experimental method gets its own console, its own units, and its own limits.</p>
+          <span class="eyebrow">The instruments</span>
+          <h2>One console per signal.</h2>
+          <p class="section-intro">Curious Air doesn’t blend everything into a single mysterious score. Each radio and sensor gets its own screen, its own units, and a plain note about what it can — and can’t — tell you.</p>
         </div>
         <div class="instrument-grid">
-          <article class="instrument-card"><div class="instrument-card__top"><span class="instrument-card__code">// Radio</span><span class="live">Live</span></div><h3>Networks nearby</h3><p>Inspect Wi-Fi channels, Bluetooth broadcasts, cellular cells, tracker-pattern signals, and discoverable services on your local network.</p><ul><li>Wi-Fi</li><li>BLE</li><li>Cellular</li><li>mDNS</li></ul></article>
-          <article class="instrument-card"><div class="instrument-card__top"><span class="instrument-card__code">// Position</span><span class="live">Live</span></div><h3>Sky and position</h3><p>Read GPS fixes and explore the GNSS sky by constellation, elevation, azimuth, signal strength, and reported accuracy.</p><ul><li>GPS fix</li><li>GNSS</li><li>Altitude</li><li>Bearing</li></ul></article>
-          <article class="instrument-card"><div class="instrument-card__top"><span class="instrument-card__code">// Environment</span><span class="live">Live</span></div><h3>Fields and motion</h3><p>Use the sensors your device actually has for heading, tilt, acceleration, magnetic field, light, proximity, audio, and more.</p><ul><li>Magnetic</li><li>Motion</li><li>Light</li><li>Audio</li></ul></article>
+          <article class="instrument-card">
+            <div class="instrument-card__top"><span class="instrument-card__code">01 · Radio</span><span class="tag-live">Live</span></div>
+            <h3>Networks nearby</h3>
+            <p>Watch Wi-Fi channels, Bluetooth broadcasts, and cellular cells in real time, and discover the services announcing themselves on your local network.</p>
+            <ul class="pill-row"><li>Wi-Fi</li><li>BLE</li><li>Cellular</li><li>mDNS · SSDP</li><li>Trackers</li></ul>
+          </article>
+          <article class="instrument-card instrument-card--position">
+            <div class="instrument-card__top"><span class="instrument-card__code">02 · Position</span><span class="tag-live">Live</span></div>
+            <h3>Sky and position</h3>
+            <p>Follow your GPS fix and explore the GNSS sky — every satellite your phone can hear, by constellation, elevation, azimuth, and signal strength.</p>
+            <ul class="pill-row"><li>GPS</li><li>GNSS sky map</li><li>Altitude</li><li>Bearing</li></ul>
+          </article>
+          <article class="instrument-card instrument-card--environment">
+            <div class="instrument-card__top"><span class="instrument-card__code">03 · Environment</span><span class="tag-live">Live</span></div>
+            <h3>Fields and motion</h3>
+            <p>Read the magnetic field, motion, light, proximity, pressure, and a live audio spectrum — every sensor your phone actually has.</p>
+            <ul class="pill-row"><li>Magnetic</li><li>Motion</li><li>Light</li><li>Barometer</li><li>Audio</li></ul>
+          </article>
+          <article class="instrument-card instrument-card--labs">
+            <div class="instrument-card__top"><span class="instrument-card__code">04 · Labs</span><span class="tag-labs">Experimental</span></div>
+            <h3>Inferred signals</h3>
+            <p>Try the experiments: the 60&nbsp;Hz hum of AC power read from the magnetometer, camera-based indicators, and tracker-pattern matching. Labelled experimental, because they are.</p>
+            <ul class="pill-row"><li>Field sniffer</li><li>Camera labs</li><li>Tracker patterns</li></ul>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- Showcase -->
     <section class="air-section">
       <div class="air-wrap">
         <div class="section-head">
-          <div><span class="eyebrow">The signal console</span><h2>Readings designed to be read.</h2></div>
-          <p class="section-intro">The visual language borrows from field instruments: clear labels, stable lists, live plots, and enough context to understand what a number can and cannot tell you.</p>
+          <span class="eyebrow">Field notes</span>
+          <h2>Instruments you can actually read.</h2>
+          <p class="section-intro">The design borrows from field equipment: stable lists, clear units, live plots, and enough context to know what a number means.</p>
         </div>
         <div class="showcase">
           <article class="showcase-row">
-            <div class="showcase-copy"><div class="showcase-label">Wi-Fi spectrum</div><h3>See networks by channel and strength.</h3><p>Inspect SSIDs, frequency, security, signal history, and channel placement. Filter the list when the air gets crowded.</p><ul><li>Spectrum view and live signal history</li><li>Stable scanning keeps existing results in place</li><li>On-device details without a Curious Air account</li></ul></div>
+            <div class="showcase-copy">
+              <div class="showcase-label">Wi-Fi spectrum</div>
+              <h3>The whole band, at a glance.</h3>
+              <p>Watch 2.4 and 5&nbsp;GHz as live spectrum curves. Tap a peak for its channel, width, security, and signal history — or hold the results when you want the list to sit still.</p>
+              <ul>
+                <li>Spectrum view with per-network signal history</li>
+                <li>Stable scanning — rows don’t jump while you read</li>
+                <li>Everything on-device, no account required</li>
+              </ul>
+            </div>
             <div class="showcase-art"><img class="shot shot--rear" src="../assets/screenshots/curiousair/curious-air-mainscreen-2.png" alt="Curious Air signal console home screen" width="1080" height="2124" loading="lazy" decoding="async" /><img class="shot shot--front" src="../assets/screenshots/curiousair/curious-air-wifi.png" alt="Curious Air Wi-Fi spectrum screen" width="1080" height="2124" loading="lazy" decoding="async" /></div>
           </article>
           <article class="showcase-row">
-            <div class="showcase-copy"><div class="showcase-label">Bluetooth radar</div><h3>Turn nearby broadcasts into something legible.</h3><p>Explore BLE devices by relative signal strength, inspect advertisements, decode manufacturer and service data, and connect to compatible GATT services.</p><ul><li>Radar and stable device list</li><li>Advertisement and GATT decoding free for everyone</li><li>Relative tracking with clear accuracy caveats</li></ul></div>
+            <div class="showcase-copy">
+              <div class="showcase-label">Bluetooth radar · Cellular</div>
+              <h3>Nearby devices, ranked and decoded.</h3>
+              <p>The radar places BLE devices by relative signal strength. Open one to decode its advertisements, manufacturer data, and GATT services — or switch consoles and inspect the cellular cells your phone can hear.</p>
+              <ul>
+                <li>Radar view plus a stable device list</li>
+                <li>Advertisement and GATT decoding, free for everyone</li>
+                <li>Distance is an estimate — the app says so on screen</li>
+              </ul>
+            </div>
             <div class="showcase-art"><img class="shot shot--rear" src="../assets/screenshots/curiousair/curious-air-cellular.png" alt="Curious Air cellular signal screen" width="1080" height="2124" loading="lazy" decoding="async" /><img class="shot shot--front" src="../assets/screenshots/curiousair/curious-air-bluetooth.png" alt="Curious Air Bluetooth radar screen" width="1080" height="2124" loading="lazy" decoding="async" /></div>
           </article>
           <article class="showcase-row">
-            <div class="showcase-copy"><div class="showcase-label">Sensors and environment</div><h3>Carry a pocketful of instruments.</h3><p>Read heading, pitch, roll, acceleration, magnetic field, light, proximity, relative audio level, and altitude when the hardware is available.</p><ul><li>Clean attitude and field readouts</li><li>Live audio spectrum analyzed without recording</li><li>NFC tag reading and local service discovery</li></ul></div>
+            <div class="showcase-copy">
+              <div class="showcase-label">Sensors &amp; environment</div>
+              <h3>A toolbox of small instruments.</h3>
+              <p>Heading, pitch and roll, acceleration, magnetic field, light, proximity, pressure, and a live audio spectrum — analyzed in the moment, never recorded.</p>
+              <ul>
+                <li>Clean attitude and field readouts</li>
+                <li>NFC tag reading and local service discovery</li>
+                <li>Missing hardware is shown as missing, not faked</li>
+              </ul>
+            </div>
             <div class="showcase-art"><img class="shot shot--rear" src="../assets/screenshots/curiousair/curious-air-other-sensors.png" alt="Curious Air additional sensor readings" width="1080" height="2124" loading="lazy" decoding="async" /><img class="shot shot--front" src="../assets/screenshots/curiousair/curious-air-sensors.png" alt="Curious Air sensor console" width="1080" height="2124" loading="lazy" decoding="async" /></div>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- Capability -->
     <section class="air-section">
       <div class="air-wrap">
         <div class="capability">
-          <div><span class="eyebrow">Capability aware</span><h3>Every phone brings different instruments.</h3><p>Curious Air checks the hardware and Android access available on your device, then tells you what it can actually use. Unsupported sensors stay honest instead of becoming empty promises.</p><ul class="cap-pills"><li>Wi-Fi</li><li>Bluetooth</li><li>Cellular</li><li>GPS</li><li>GNSS</li><li>NFC</li><li>Magnetometer</li><li>Accelerometer</li><li>Light</li><li>Barometer</li><li>Microphone</li><li>Camera Labs</li></ul></div>
+          <div>
+            <span class="eyebrow">Capability check</span>
+            <h3>Built for the phone you actually have.</h3>
+            <p>Phones ship with different radios and sensors. Curious Air checks yours and shows the honest list — anything your device can’t do is marked unavailable, instead of quietly showing zeros.</p>
+            <ul class="pill-row"><li>Wi-Fi</li><li>Bluetooth</li><li>Cellular</li><li>GPS</li><li>GNSS</li><li>NFC</li><li>Magnetometer</li><li>Accelerometer</li><li>Light</li><li>Barometer</li><li>Microphone</li><li>Camera labs</li></ul>
+          </div>
           <figure class="cap-image"><img src="../assets/screenshots/curiousair/curious-air-capabilities.png" alt="Curious Air device capabilities screen showing available radios and sensors" width="1080" height="2124" loading="lazy" decoding="async" /></figure>
         </div>
       </div>
     </section>
 
+    <!-- Pro -->
     <section class="air-section">
       <div class="air-wrap">
         <div class="section-head">
-          <div><span class="eyebrow">Curious Air Pro</span><h2>Explore free. Pay once when you need a record.</h2></div>
-          <p class="section-intro">The app’s consoles and Bluetooth decoding remain useful without a purchase. Pro is for people who want timed observations they can take elsewhere.</p>
+          <span class="eyebrow">Curious Air Pro</span>
+          <h2>Explore free. Pay once for the record.</h2>
+          <p class="section-intro">Every live console is free — no trial timers, no locked basics. Pro exists for one job: keeping records you can take elsewhere.</p>
         </div>
         <div class="pro-block">
-          <div class="pro-copy"><span class="eyebrow">One-time unlock · No subscription</span><h3>Log signals over time. Export ordinary CSV.</h3><p>Curious Air Pro unlocks timed logging and CSV export for Wi-Fi, Bluetooth, GNSS, and cellular observations. Choose an interval and duration, save through Android’s document picker, and analyze the file in the tool you prefer.</p><div class="pro-facts"><span>Wi-Fi logs</span><span>Bluetooth logs</span><span>GNSS logs</span><span>Cellular logs</span><span>Google Play purchase</span></div></div>
+          <div class="pro-copy">
+            <span class="eyebrow">One-time purchase · No subscription</span>
+            <h3>Timed logs, exported as plain CSV.</h3>
+            <p>Choose an interval and a duration, and Curious Air logs Wi-Fi, Bluetooth, GNSS, or cellular readings while you work. Files save through Android’s own document picker and open in any spreadsheet tool.</p>
+            <div class="pill-row"><span>Wi-Fi logs</span><span>Bluetooth logs</span><span>GNSS logs</span><span>Cellular logs</span><span>One Google Play purchase</span></div>
+          </div>
           <figure class="pro-image"><img src="../assets/screenshots/curiousair/curious-air-timed-logging.png" alt="Curious Air timed logging screen with interval and duration controls" width="1080" height="2124" loading="lazy" decoding="async" /></figure>
         </div>
       </div>
     </section>
 
+    <!-- Honest limits -->
     <section class="air-section">
       <div class="air-wrap">
         <div class="section-head">
-          <div><span class="eyebrow">Clear limits, not magic claims</span><h2>A curious tool should also be an honest one.</h2></div>
-          <p class="section-intro">Signal strength moves. Phone hardware varies. Experimental indicators can be wrong. Curious Air explains those limits in the interface instead of hiding them in fine print.</p>
+          <span class="eyebrow">Honest limits</span>
+          <h2>A curious tool should be an honest one.</h2>
+          <p class="section-intro">Signal strength moves. Hardware varies. Experiments can be wrong. Curious Air says so in the interface, not in fine print.</p>
         </div>
         <div class="trust-grid">
-          <article class="trust-card"><div class="trust-label">Privacy</div><h3>Signal data is not sent to Ulix.</h3><p>Data remains on your device unless you export or share it. Local network discovery necessarily sends discovery probes on the network you are connected to, and Google Play communicates with Google to handle the optional Pro entitlement.</p></article>
-          <article class="trust-card trust-card--labs"><div class="trust-label">Labs</div><h3>Experimental means experimental.</h3><p>Camera indicators, inferred signals, tracker-pattern matches, and other Labs features are clues, not proof. They can miss real devices or flag harmless ones and should never be used for safety-critical decisions.</p></article>
+          <article class="trust-card">
+            <div class="trust-label">Privacy</div>
+            <h3>Your readings stay on your phone.</h3>
+            <p>Nothing you scan is sent to Ulix. The only network traffic the app creates: local discovery probes on the network you’re already connected to, and Google Play handling the optional Pro purchase. That’s the whole list.</p>
+          </article>
+          <article class="trust-card trust-card--labs">
+            <div class="trust-label">Labs</div>
+            <h3>Experimental means experimental.</h3>
+            <p>Camera indicators, inferred signals, and tracker-pattern matches are clues, not proof. They can miss real devices or flag harmless ones — never rely on them for safety-critical decisions.</p>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- Final CTA -->
     <section class="air-final">
-      <div class="air-wrap"><span class="eyebrow">Curiosity, instrumented</span><h2>The air around you is full of information.</h2><p>Curious Air gives you a respectful, local-first way to look.</p><a href="https://play.google.com/store/apps/details?id=com.bhunt.curiousair" target="_blank" rel="noopener" class="air-play">Join the Google Play test</a></div>
+      <div class="air-wrap">
+        <span class="eyebrow">Now testing on Google Play</span>
+        <h2>The air is full of information.</h2>
+        <p>Curious Air is a local-first, no-account way to look. Join the test and see what your phone can hear.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.bhunt.curiousair" target="_blank" rel="noopener" class="air-play">Join the Google Play test</a>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p class="footer-credo">Find the <b>book</b> <span class="sep">·</span> Save the <b>passage</b> <span class="sep">·</span> Read the <b>classic</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p>
+      <p class="footer-credo">Scan the <b>air</b> <span class="sep">·</span> Read the <b>sky</b> <span class="sep">·</span> Sense the <b>field</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p>
       <div class="site-footer__grid">
         <div class="site-footer__brand"><img src="../icons/ulixwordmarkclear.png" alt="Ulix — Precision tools for modern odysseys" class="footer-wordmark" width="1754" height="717" loading="lazy" decoding="async" /></div>
         <div class="site-footer__links"><a href="../apps.html">Apps</a><a href="../blog.html">Blog</a><a href="../support.html">Support</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../terms.html">Terms</a><a href="../curiousairprivacy.html">Privacy</a></div>
