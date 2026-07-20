@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your notes should outlive your apps — Ulix (mockup: post)</title>
+  <meta name="description" content="Design mockup for a Ulix blog post page." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#0F0E0C" />
+
+  <!-- MOCKUP — blog post template.
+       Sample content throughout; shows every element a post can use
+       (lead, h2/h3, list, blockquote, figure, code block, section break,
+       tags, prev/next, subscribe card). When approved, real posts live at
+       /blog/<slug>/index.html with canonical + OG + BlogPosting JSON-LD. -->
+
+  <link rel="icon" href="/icons/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="../assets/ulix.css" />
+
+  <!-- Fonts: Geist (self-hosted) + Newsreader (display serif). Matches the homepage. -->
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/geist-latin.woff2" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+  <!-- Shared warm-dark editorial design system (same as the homepage) -->
+  <link rel="stylesheet" href="../assets/home.css" />
+  <!-- Blog styles (mockup location; ships as assets/blog.css) -->
+  <link rel="stylesheet" href="./blog.css" />
+</head>
+
+<body class="home-page">
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Header (shared site chrome) -->
+  <header class="site-header">
+    <div class="container container--wide site-header__inner">
+      <a href="../index.html" class="site-brand">
+        <img src="../icons/favicon.png" alt="" class="site-brand__logo" width="64" height="64" />
+        <span class="site-brand__name">ULIX</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../index.html" class="site-nav__link">Home</a>
+        <a href="../apps.html" class="site-nav__link">Apps</a>
+        <a href="./blog-index.html" class="site-nav__link" aria-current="page">Blog</a>
+        <a href="../about.html" class="site-nav__link">About</a>
+        <a href="../contact.html" class="site-nav__link">Contact</a>
+      </nav>
+      <div class="site-header__actions">
+        <button id="u-menu-btn" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="u-mobile">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="4" y1="7"  x2="20" y2="7"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="17" x2="20" y2="17"/>
+          </svg>
+        </button>
+        <a href="../apps.html" class="btn btn--primary btn--header">Browse all apps →</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div id="u-mobile" class="drawer" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+    <div class="drawer__backdrop" data-close></div>
+    <div class="drawer__panel">
+      <div class="drawer__header">
+        <span class="drawer__title">Menu</span>
+        <button class="drawer__close" aria-label="Close menu" data-close>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <ul class="drawer__list">
+        <li><a class="drawer__link" href="../index.html" data-close>Home</a></li>
+        <li><a class="drawer__link" href="../apps.html" data-close>Apps</a></li>
+        <li><a class="drawer__link" href="./blog-index.html" data-close>Blog</a></li>
+        <li><a class="drawer__link" href="../about.html" data-close>About</a></li>
+        <li><a class="drawer__link" href="../contact.html" data-close>Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="main">
+    <div class="doc doc--post">
+
+      <p class="post-crumb">
+        <a class="more-link" href="./blog-index.html"><span aria-hidden="true">←</span> All signals</a>
+      </p>
+
+      <!-- Post hero -->
+      <header class="doc-hero">
+        <p class="post-meta">
+          <span class="tag--accent">Essay</span>
+          <span class="dot" aria-hidden="true"></span>
+          <time datetime="2026-07-20">July 20, 2026</time>
+          <span class="dot" aria-hidden="true"></span>
+          <span>6 min read</span>
+        </p>
+        <h1 class="doc-hero__title">Your notes should <em>outlive</em> your apps</h1>
+        <p class="doc-hero__lede">Every Ulix app exports to plain, portable formats — Markdown, CSV, TXT. That's not a feature on a checklist. It's the contract.</p>
+        <p class="doc-hero__byline">By <b>Bethany Hunt</b> · Founder, Ulix</p>
+      </header>
+
+      <!-- Post body -->
+      <article class="prose-card post-body">
+        <p class="lead">Somewhere on an old hard drive, you probably have notes trapped in a format only one dead program could read. We've all paid that tax once. The apps we build start from the promise that you'll never pay it again.</p>
+
+        <p>When you highlight a passage in <a href="../guten/">Guten</a>, save a quote with <a href="../keepclip/">Keep Clip</a>, or log a symptom in <a href="../trackanalysis/">Track Analysis</a>, that record belongs to you — not to us, and not to the app. It lives on your device, and it leaves whenever you ask it to, in a format any text editor, spreadsheet, or LLM can read.</p>
+
+        <h2>The test every feature has to pass</h2>
+        <p>Before anything ships, it answers one question:</p>
+
+        <blockquote>
+          <p>If Ulix disappeared tomorrow, would your data still be useful? If the answer is no, the feature doesn't ship.</p>
+        </blockquote>
+
+        <p>That rule sounds simple, but it quietly decides a lot:</p>
+        <ul>
+          <li><strong>Plain formats only.</strong> Markdown, CSV, TXT, RTF, HTML — never a proprietary blob with our logo on it.</li>
+          <li><strong>Export is a first-class screen,</strong> not a buried setting. If it takes more than two taps, it's a bug.</li>
+          <li><strong>No accounts</strong> means there's no server-side copy to lose, leak, or hold hostage.</li>
+          <li><strong>Structure survives the trip.</strong> Tags, dates, and sources ride along with the text.</li>
+        </ul>
+
+        <h2>What an export actually looks like</h2>
+        <p>Here's a Keep Clip export, verbatim. Notice there's nothing to decode — it's just Markdown you could paste into Obsidian, a Git repo, or a prompt:</p>
+
+        <pre><code># The Odyssey — Emily Wilson translation
+> "Tell me about a complicated man."
+Saved: 2026-07-14 · Tags: openers, translation
+Source: Guten · Book I, line 1</code></pre>
+
+        <figure class="figure--phone">
+          <img src="../assets/screenshots/guten/export.png" alt="Guten's export screen showing Markdown, CSV, TXT, RTF, and HTML options" width="280" loading="lazy" />
+          <figcaption>Guten's export screen: five formats, zero lock-in.</figcaption>
+        </figure>
+
+        <div class="post-break" aria-hidden="true"><span></span><span></span><span></span></div>
+
+        <h2>Why we're writing this down</h2>
+        <p>"Own the data" is easy to say and cheap to print on a landing page. Publishing the rule — and the test behind it — makes it something you can hold us to. When a future release note claims a new export format, this essay is the standard it gets measured against.</p>
+
+        <p>Your reading, your clippings, your logs: they're a record of your attention. Records are meant to outlast their tools. Ours are built to.</p>
+      </article>
+
+      <!-- Tags -->
+      <div class="post-foot">
+        <span class="post-foot__label">Filed under</span>
+        <ul class="tag-pills">
+          <li>Essays</li>
+          <li>Data ownership</li>
+        </ul>
+      </div>
+
+      <!-- Prev / next -->
+      <nav class="post-pager" aria-label="More posts">
+        <a href="#">
+          <span class="post-pager__label">← Older</span>
+          <span class="post-pager__title">Shelf Scan 2.4: find duplicates before you buy</span>
+        </a>
+        <a class="post-pager__next" href="./blog-index.html">
+          <span class="post-pager__label">Index →</span>
+          <span class="post-pager__title">All signals from Ulix</span>
+        </a>
+      </nav>
+
+      <!-- Subscribe -->
+      <section class="blog-subscribe" aria-label="Email signup">
+        <div>
+          <h2 class="blog-subscribe__title">A few <em>signals</em> a year. No noise.</h2>
+          <p class="blog-subscribe__body">New posts land in your inbox the day they publish. Unsubscribe any time — it's your inbox, like it's your data.</p>
+        </div>
+        <form action="https://buttondown.com/api/emails/embed-subscribe/ulix" method="post" target="bd-subscribe" class="newsletter">
+          <label for="bl-email" class="newsletter__label">Get new posts by email</label>
+          <div class="newsletter__row">
+            <input id="bl-email" class="newsletter__input" type="email" name="email" placeholder="you@example.com" />
+            <button class="btn btn--secondary">Subscribe</button>
+          </div>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer (shared site chrome) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-credo">Find the <b>book</b> <span class="sep">·</span> Save the <b>passage</b> <span class="sep">·</span> Read the <b>classic</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p>
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="../icons/ulixwordmarkclear.png" alt="Ulix — Precision tools for modern odysseys" class="footer-wordmark" width="1754" height="717" />
+        </div>
+        <div class="site-footer__links">
+          <a href="../apps.html">Apps</a>
+          <a href="./blog-index.html">Blog</a>
+          <a href="../support.html">Support</a>
+          <a href="../about.html">About</a>
+          <a href="../contact.html">Contact</a>
+          <a href="../terms.html">Terms</a>
+          <a href="../privacy.html">Privacy</a>
+        </div>
+        <div>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/ulix" method="post" target="bd-subscribe" class="newsletter" aria-label="Email signup">
+            <label for="nl-email" class="newsletter__label">Get product updates</label>
+            <div class="newsletter__row">
+              <input id="nl-email" class="newsletter__input" type="email" name="email" placeholder="you@example.com" />
+              <button class="btn btn--secondary">Subscribe</button>
+            </div>
+          </form>
+          <div class="site-footer__copyright">© 2026 Ulix LLC. All rights reserved.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/ulix.js" defer></script>
+</body>
+</html>

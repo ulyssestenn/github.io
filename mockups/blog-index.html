@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog — Ulix (mockup: index)</title>
+  <meta name="description" content="Design mockup for the Ulix blog index." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#0F0E0C" />
+
+  <!-- MOCKUP — blog index ("Signals from Ulix").
+       Sample content throughout. When approved, this becomes blog.html
+       (with real posts, real hrefs, canonical + OG tags, and blog.css
+       moved to assets/blog.css). -->
+
+  <link rel="icon" href="/icons/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="../assets/ulix.css" />
+
+  <!-- Fonts: Geist (self-hosted) + Newsreader (display serif). Matches the homepage. -->
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/geist-latin.woff2" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+  <!-- Shared warm-dark editorial design system (same as the homepage) -->
+  <link rel="stylesheet" href="../assets/home.css" />
+  <!-- Blog styles (mockup location; ships as assets/blog.css) -->
+  <link rel="stylesheet" href="./blog.css" />
+</head>
+
+<body class="home-page">
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Header (shared site chrome) -->
+  <header class="site-header">
+    <div class="container container--wide site-header__inner">
+      <a href="../index.html" class="site-brand">
+        <img src="../icons/favicon.png" alt="" class="site-brand__logo" width="64" height="64" />
+        <span class="site-brand__name">ULIX</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../index.html" class="site-nav__link">Home</a>
+        <a href="../apps.html" class="site-nav__link">Apps</a>
+        <a href="./blog-index.html" class="site-nav__link" aria-current="page">Blog</a>
+        <a href="../about.html" class="site-nav__link">About</a>
+        <a href="../contact.html" class="site-nav__link">Contact</a>
+      </nav>
+      <div class="site-header__actions">
+        <button id="u-menu-btn" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="u-mobile">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="4" y1="7"  x2="20" y2="7"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="17" x2="20" y2="17"/>
+          </svg>
+        </button>
+        <a href="../apps.html" class="btn btn--primary btn--header">Browse all apps →</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div id="u-mobile" class="drawer" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+    <div class="drawer__backdrop" data-close></div>
+    <div class="drawer__panel">
+      <div class="drawer__header">
+        <span class="drawer__title">Menu</span>
+        <button class="drawer__close" aria-label="Close menu" data-close>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <ul class="drawer__list">
+        <li><a class="drawer__link" href="../index.html" data-close>Home</a></li>
+        <li><a class="drawer__link" href="../apps.html" data-close>Apps</a></li>
+        <li><a class="drawer__link" href="./blog-index.html" data-close>Blog</a></li>
+        <li><a class="drawer__link" href="../about.html" data-close>About</a></li>
+        <li><a class="drawer__link" href="../contact.html" data-close>Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="main">
+    <div class="doc doc--blog">
+
+      <!-- Hero -->
+      <div class="doc-hero">
+        <h1 class="doc-hero__title"><em>Signals</em> from Ulix</h1>
+        <p class="doc-hero__lede">New apps, new updates, and the occasional interesting idea for those who believe tools should serve.</p>
+        <div class="blog-hero-meta">
+          <a href="#" title="RSS feed">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1" fill="currentColor"/>
+            </svg>
+            RSS feed
+          </a>
+          <a href="#subscribe">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>
+            </svg>
+            Posts by email
+          </a>
+        </div>
+      </div>
+
+      <!-- Featured: the latest post -->
+      <a class="blog-featured" href="./blog-post.html">
+        <p class="post-meta">
+          <span class="tag--accent">Latest</span>
+          <span class="dot" aria-hidden="true"></span>
+          <span>Essay</span>
+          <span class="dot" aria-hidden="true"></span>
+          <time datetime="2026-07-20">July 20, 2026</time>
+        </p>
+        <h2 class="blog-featured__title">Your notes should <em>outlive</em> your apps</h2>
+        <p class="blog-featured__deck">Every Ulix app exports to plain, portable formats — Markdown, CSV, TXT. That's not a feature on a checklist. It's the contract.</p>
+        <span class="blog-featured__link">Read the post <span aria-hidden="true">→</span></span>
+      </a>
+
+      <!-- Archive -->
+      <section class="post-index" aria-label="All posts">
+        <h2 class="post-index__year">2026</h2>
+        <ol>
+          <li>
+            <a class="post-row" href="#">
+              <span class="post-row__date"><time datetime="2026-06-28">Jun 28</time></span>
+              <span class="post-row__main">
+                <span class="post-row__title">Shelf Scan 2.4: find duplicates before you buy</span>
+                <span class="post-row__deck">On-device matching now flags the box set you already own — in the store aisle, with no connection.</span>
+              </span>
+              <span class="post-row__side">
+                <span class="post-row__tag">Release notes</span>
+                <span class="post-row__arrow" aria-hidden="true">→</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="post-row" href="#">
+              <span class="post-row__date"><time datetime="2026-06-14">Jun 14</time></span>
+              <span class="post-row__main">
+                <span class="post-row__title">Track Analysis + the LLM of your choice</span>
+                <span class="post-row__deck">A practical workflow: log in plain English, export a clean CSV, and ask the model that already knows you nothing.</span>
+              </span>
+              <span class="post-row__side">
+                <span class="post-row__tag">Guide</span>
+                <span class="post-row__arrow" aria-hidden="true">→</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="post-row" href="#">
+              <span class="post-row__date"><time datetime="2026-05-30">May 30</time></span>
+              <span class="post-row__main">
+                <span class="post-row__title">Guten 1.9: a notes manager worth the name</span>
+                <span class="post-row__deck">Highlights and annotations get their own home — searchable, filterable, and exportable to five formats.</span>
+              </span>
+              <span class="post-row__side">
+                <span class="post-row__tag">Release notes</span>
+                <span class="post-row__arrow" aria-hidden="true">→</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="post-row" href="#">
+              <span class="post-row__date"><time datetime="2026-05-09">May 9</time></span>
+              <span class="post-row__main">
+                <span class="post-row__title">No accounts. No ads. On purpose.</span>
+                <span class="post-row__deck">Why every Ulix app runs on your device, works offline, and never asks who you are.</span>
+              </span>
+              <span class="post-row__side">
+                <span class="post-row__tag">Essay</span>
+                <span class="post-row__arrow" aria-hidden="true">→</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="post-row" href="#">
+              <span class="post-row__date"><time datetime="2026-04-22">Apr 22</time></span>
+              <span class="post-row__main">
+                <span class="post-row__title">Coming this year: Loan It and Curious Air</span>
+                <span class="post-row__deck">Two small utilities in the works — one remembers what you lent out, one answers what that plane overhead is.</span>
+              </span>
+              <span class="post-row__side">
+                <span class="post-row__tag post-row__tag--gold">Coming soon</span>
+                <span class="post-row__arrow" aria-hidden="true">→</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="post-row" href="#">
+              <span class="post-row__date"><time datetime="2026-04-03">Apr 3</time></span>
+              <span class="post-row__main">
+                <span class="post-row__title">Keep Clip 1.6: tag as you save</span>
+                <span class="post-row__deck">The share sheet now takes tags inline, so clips land organized instead of waiting in a pile.</span>
+              </span>
+              <span class="post-row__side">
+                <span class="post-row__tag">Release notes</span>
+                <span class="post-row__arrow" aria-hidden="true">→</span>
+              </span>
+            </a>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Subscribe -->
+      <section class="blog-subscribe" id="subscribe" aria-label="Email signup">
+        <div>
+          <h2 class="blog-subscribe__title">A few <em>signals</em> a year. No noise.</h2>
+          <p class="blog-subscribe__body">New posts land in your inbox the day they publish. Unsubscribe any time — it's your inbox, like it's your data.</p>
+        </div>
+        <form action="https://buttondown.com/api/emails/embed-subscribe/ulix" method="post" target="bd-subscribe" class="newsletter">
+          <label for="bl-email" class="newsletter__label">Get new posts by email</label>
+          <div class="newsletter__row">
+            <input id="bl-email" class="newsletter__input" type="email" name="email" placeholder="you@example.com" />
+            <button class="btn btn--secondary">Subscribe</button>
+          </div>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer (shared site chrome) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-credo">Find the <b>book</b> <span class="sep">·</span> Save the <b>passage</b> <span class="sep">·</span> Read the <b>classic</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p>
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="../icons/ulixwordmarkclear.png" alt="Ulix — Precision tools for modern odysseys" class="footer-wordmark" width="1754" height="717" />
+        </div>
+        <div class="site-footer__links">
+          <a href="../apps.html">Apps</a>
+          <a href="./blog-index.html">Blog</a>
+          <a href="../support.html">Support</a>
+          <a href="../about.html">About</a>
+          <a href="../contact.html">Contact</a>
+          <a href="../terms.html">Terms</a>
+          <a href="../privacy.html">Privacy</a>
+        </div>
+        <div>
+          <form action="https://buttondown.com/api/emails/embed-subscribe/ulix" method="post" target="bd-subscribe" class="newsletter" aria-label="Email signup">
+            <label for="nl-email" class="newsletter__label">Get product updates</label>
+            <div class="newsletter__row">
+              <input id="nl-email" class="newsletter__input" type="email" name="email" placeholder="you@example.com" />
+              <button class="btn btn--secondary">Subscribe</button>
+            </div>
+          </form>
+          <div class="site-footer__copyright">© 2026 Ulix LLC. All rights reserved.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/ulix.js" defer></script>
+</body>
+</html>

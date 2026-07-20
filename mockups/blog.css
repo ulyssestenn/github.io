@@ -1,0 +1,392 @@
+/* ==========================================================================
+   Ulix — blog styles ("Signals")
+   --------------------------------------------------------------------------
+   Extends the warm-dark editorial system in home.css. Scoped to .home-page
+   and loaded AFTER home.css. Used by the blog index (blog.html) and post
+   pages (/blog/<slug>/).
+
+   MOCKUP NOTE: when this design is approved, move this file to
+   assets/blog.css unchanged — every rule is path-independent.
+   ========================================================================== */
+
+
+/* ---------- Page widths ---------- */
+.home-page .doc--blog { max-width: 920px; }
+.home-page .doc--post { max-width: 780px; }
+
+
+/* ---------- Meta line (kicker): tag · date · read time ----------
+   The uppercase letterspaced label from the design system, with the site's
+   rotated-square motif as separators. Used in heroes, cards, and rows.     */
+.home-page .post-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--subtle);
+}
+.home-page .post-meta--left { justify-content: flex-start; }
+.home-page .post-meta .dot {
+  width: 4px;
+  height: 4px;
+  background: var(--accent);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+.home-page .post-meta .tag--accent { color: var(--accent); }
+.home-page .post-meta .tag--gold   { color: var(--gold); }
+
+
+/* ---------- Index hero extras: RSS + email links ---------- */
+.home-page .blog-hero-meta {
+  margin-top: 20px;
+  display: flex;
+  gap: 26px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.home-page .blog-hero-meta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+}
+.home-page .blog-hero-meta a:hover { color: var(--fg); }
+.home-page .blog-hero-meta svg { width: 14px; height: 14px; }
+
+
+/* ---------- Featured (latest) post ---------- */
+.home-page .blog-featured {
+  display: block;
+  border: 1px solid var(--rule);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.035), transparent 55%), var(--card-bg);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.38), 0 2px 6px rgba(0,0,0,0.22);
+  padding: clamp(26px, 4.2vw, 44px);
+  margin-bottom: 60px;
+  text-align: center;
+}
+.home-page .blog-featured:hover { border-color: rgba(244,239,230,0.22); }
+.home-page .blog-featured__title {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(28px, 4.2vw, 44px);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  color: var(--fg);
+  max-width: 21ch;
+  margin: 18px auto 0;
+}
+.home-page .blog-featured__title em { font-style: italic; color: var(--accent); }
+.home-page .blog-featured__deck {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(16px, 1.9vw, 19px);
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 560px;
+  margin: 16px auto 0;
+}
+.home-page .blog-featured__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 24px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--fg);
+}
+.home-page .blog-featured:hover .blog-featured__link { gap: 11px; color: #fff; }
+
+
+/* ---------- Post index (the archive list) ---------- */
+.home-page .post-index__year {
+  font-family: var(--serif);
+  font-size: 15px;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  margin: 40px 0 4px;
+}
+.home-page .post-index__year:first-child { margin-top: 0; }
+.home-page .post-index ol { list-style: none; margin: 0; padding: 0; }
+.home-page .post-index li + li .post-row { border-top: 1px solid var(--rule); }
+
+.home-page .post-row {
+  display: grid;
+  grid-template-columns: 118px minmax(0, 1fr) auto;
+  gap: 24px;
+  padding: 24px 6px;
+  align-items: start;
+}
+.home-page .post-row__date {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--subtle);
+  padding-top: 5px;
+  white-space: nowrap;
+}
+.home-page .post-row__title {
+  display: block;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+  transition: color 0.15s;
+}
+.home-page .post-row__deck {
+  display: block;
+  margin-top: 7px;
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 520px;
+}
+.home-page .post-row__side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px;
+  align-self: stretch;
+  padding-top: 6px;
+}
+.home-page .post-row__tag {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--subtle);
+  white-space: nowrap;
+}
+.home-page .post-row__tag--gold { color: var(--gold); }
+.home-page .post-row__arrow {
+  font-family: var(--sans);
+  font-size: 15px;
+  color: var(--subtle);
+  transition: color 0.15s, transform 0.15s;
+}
+.home-page .post-row:hover .post-row__title { color: #fff; }
+.home-page .post-row:hover .post-row__arrow { color: var(--accent); transform: translateX(4px); }
+
+
+/* ---------- Subscribe card (index footer + post footer) ---------- */
+.home-page .blog-subscribe {
+  margin-top: 64px;
+  border: 1px solid var(--rule);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), transparent 55%), var(--card-bg);
+  padding: clamp(26px, 4vw, 40px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+}
+.home-page .blog-subscribe__title {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(22px, 2.8vw, 30px);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  color: var(--fg);
+}
+.home-page .blog-subscribe__title em { font-style: italic; color: var(--accent); }
+.home-page .blog-subscribe__body {
+  margin-top: 12px;
+  font-family: var(--sans);
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+
+/* ---------- Post page: hero extras ---------- */
+.home-page .post-crumb { margin-bottom: 30px; }
+.home-page .doc-hero .post-meta { margin-bottom: 20px; }
+.home-page .doc-hero__byline {
+  margin-top: 18px;
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--subtle);
+}
+.home-page .doc-hero__byline b { color: var(--muted); font-weight: 500; }
+
+
+/* ---------- Post body: prose elements home.css doesn't cover ----------
+   The body reuses .prose-card (p, h2, ul, li, a). These rules add the rest
+   of the long-form vocabulary a blog needs.                                */
+.home-page .post-body h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--fg);
+  margin-top: 28px;
+}
+.home-page .post-body blockquote {
+  margin: 28px 0 0;
+  padding: 4px 0 4px 24px;
+  border-left: 2px solid var(--accent);
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 19.5px;
+  line-height: 1.55;
+  color: var(--fg);
+}
+.home-page .post-body blockquote p {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin-top: 12px;
+}
+.home-page .post-body blockquote p:first-child { margin-top: 0; }
+.home-page .post-body figure { margin: 32px 0 0; }
+.home-page .post-body figure img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--rule);
+}
+.home-page .post-body .figure--phone img {
+  max-width: 280px;
+  margin: 0 auto;
+}
+.home-page .post-body figcaption {
+  margin-top: 12px;
+  text-align: center;
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--subtle);
+}
+.home-page .post-break {
+  margin: 38px auto 0;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+.home-page .post-break span {
+  width: 5px;
+  height: 5px;
+  background: var(--accent);
+  transform: rotate(45deg);
+  opacity: 0.75;
+}
+.home-page .post-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.88em;
+  color: var(--fg);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(244,239,230,0.09);
+  border-radius: 6px;
+  padding: 1px 6px;
+}
+.home-page .post-body pre {
+  margin: 28px 0 0;
+  padding: 18px 22px;
+  background: #0B0A09;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  overflow-x: auto;
+}
+.home-page .post-body pre code {
+  display: block;
+  background: none;
+  border: 0;
+  padding: 0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+.home-page .post-body strong { color: var(--fg); font-weight: 600; }
+
+
+/* ---------- Post footer: tags, pager ---------- */
+.home-page .post-foot {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.home-page .post-foot__label {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--subtle);
+}
+.home-page .post-foot .tag-pills a { display: inline-flex; }
+
+.home-page .post-pager {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.home-page .post-pager a {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 18px 20px;
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent 60%);
+}
+.home-page .post-pager a:hover { border-color: rgba(244,239,230,0.22); }
+.home-page .post-pager__label {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--subtle);
+}
+.home-page .post-pager__title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.3;
+  color: var(--fg);
+}
+.home-page .post-pager__next { text-align: right; align-items: flex-end; }
+
+
+/* ---------- Responsive ---------- */
+@media (max-width: 760px) {
+  .home-page .post-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 22px 2px;
+  }
+  .home-page .post-row__date { padding: 0 0 8px; }
+  .home-page .post-row__deck { margin-top: 6px; }
+  .home-page .post-row__side {
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 0 0;
+    align-self: auto;
+  }
+  .home-page .blog-featured { margin-bottom: 44px; }
+  .home-page .blog-subscribe { grid-template-columns: 1fr; gap: 20px; margin-top: 48px; }
+  .home-page .post-pager { grid-template-columns: 1fr; }
+  .home-page .post-pager__next { text-align: left; align-items: flex-start; }
+}
