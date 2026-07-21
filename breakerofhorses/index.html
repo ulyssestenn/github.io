@@ -160,6 +160,27 @@
       width: max-content;
       margin-bottom: 18px;
     }
+
+    .boh-epic,
+    .boh-epic__copy,
+    .boh-epic__image {
+      min-width: 0;
+    }
+
+    .boh-epic__image {
+      overflow: hidden;
+    }
+
+    .boh-epic__image img {
+      object-position: top center;
+    }
+
+    @media (min-width: 1081px) {
+      .boh-epic,
+      .boh-epic__image {
+        height: 480px;
+      }
+    }
   </style>
 </head>
 
