@@ -1,14 +1,29 @@
-/* ==========================================================================
+/* ========================================================================== 
    Ulix — shared site scripts
    --------------------------------------------------------------------------
-   Two independent modules, each self-contained in an IIFE:
-     1. Mobile drawer  — opens/closes with focus management and aria-expanded
-     2. Product carousel (home page only) — dots, prev/next, pause, keyboard
-   Both modules bail out quietly if their DOM elements aren't on the page.
+   Three independent modules, each self-contained in an IIFE:
+     1. Cloudflare Web Analytics
+     2. Mobile drawer  — opens/closes with focus management and aria-expanded
+     3. Product carousel (home page only) — dots, prev/next, pause, keyboard
+   Modules bail out quietly when their DOM elements aren't on the page.
    ========================================================================== */
 
 
-/* 1. Mobile drawer
+/* 1. Cloudflare Web Analytics
+   ========================================================================== */
+(function () {
+  var beacon = document.createElement('script');
+  beacon.type = 'module';
+  beacon.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  beacon.setAttribute(
+    'data-cf-beacon',
+    '{"token": "362151289ee3452e903249d42510afe6"}'
+  );
+  document.head.appendChild(beacon);
+})();
+
+
+/* 2. Mobile drawer
    ========================================================================== */
 (function () {
   var toggle = document.getElementById('u-menu-btn');
@@ -71,7 +86,7 @@
 })();
 
 
-/* 2. Product carousel (home page)
+/* 3. Product carousel (home page)
    ========================================================================== */
 (function () {
   var track = document.getElementById('product-carousel-track');
@@ -231,7 +246,7 @@
 })();
 
 
-/* 3. Featured apps on the home page
+/* 4. Featured apps on the home page
    ========================================================================== */
 (function () {
   var grid = document.getElementById('featured-apps');
