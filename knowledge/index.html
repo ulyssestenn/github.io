@@ -4,235 +4,48 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ulix Knowledge — Practical Notes for Information People</title>
-  <meta name="description" content="Practical notes from Ulix on books, private libraries, personal knowledge systems, lending, reading, personal data, and information tools." />
+  <meta name="description" content="Practical notes from Ulix on books, private libraries, personal knowledge systems, lending, reading, classics, personal data, and information tools." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
   <link rel="canonical" href="https://ulix.app/knowledge/" />
   <meta name="theme-color" content="#0F0E0C" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Ulix" />
-  <meta property="og:title" content="Ulix Knowledge" />
-  <meta property="og:description" content="Practical notes for readers, collectors, researchers, and people who keep things." />
-  <meta property="og:url" content="https://ulix.app/knowledge/" />
-  <meta property="og:image" content="https://ulix.app/icons/favicon.png" />
-  <meta name="twitter:card" content="summary" />
-  <link rel="icon" href="/icons/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
-  <link rel="stylesheet" href="../assets/ulix.css" />
-  <link rel="stylesheet" href="../assets/home.css" />
-  <link rel="stylesheet" href="./knowledge.css" />
-  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/geist-latin.woff2" crossorigin />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Ulix Knowledge",
-    "url": "https://ulix.app/knowledge/",
-    "description": "Practical notes from Ulix on books, private libraries, personal knowledge systems, lending, reading, personal data, and information tools.",
-    "publisher": { "@type": "Organization", "name": "Ulix LLC", "url": "https://ulix.app/" }
-  }
-  </script>
+  <meta property="og:type" content="website" /><meta property="og:site_name" content="Ulix" /><meta property="og:title" content="Ulix Knowledge" /><meta property="og:description" content="Practical notes for readers, collectors, researchers, and people who keep things." /><meta property="og:url" content="https://ulix.app/knowledge/" /><meta property="og:image" content="https://ulix.app/icons/favicon.png" /><meta name="twitter:card" content="summary" />
+  <link rel="icon" href="/icons/favicon.ico" sizes="any" /><link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+  <link rel="stylesheet" href="../assets/ulix.css" /><link rel="stylesheet" href="../assets/home.css" /><link rel="stylesheet" href="./knowledge.css" /><link rel="preload" as="font" type="font/woff2" href="../assets/fonts/geist-latin.woff2" crossorigin /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Ulix Knowledge","url":"https://ulix.app/knowledge/","description":"Practical notes from Ulix on books, private libraries, personal knowledge systems, lending, reading, classics, personal data, and information tools.","publisher":{"@type":"Organization","name":"Ulix LLC","url":"https://ulix.app/"}}</script>
 </head>
-<body class="home-page knowledge-page">
-  <a href="#main" class="skip-link">Skip to content</a>
-  <header class="site-header">
-    <div class="container container--wide site-header__inner">
-      <a href="../index.html" class="site-brand">
-        <img src="../icons/favicon.png" alt="" class="site-brand__logo" width="64" height="64" />
-        <span class="site-brand__name">ULIX</span>
-      </a>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="../index.html" class="site-nav__link">Home</a>
-        <a href="../apps.html" class="site-nav__link">Apps</a>
-        <a href="../blog.html" class="site-nav__link">Blog</a>
-        <a href="../about.html" class="site-nav__link">About</a>
-        <a href="../contact.html" class="site-nav__link">Contact</a>
-      </nav>
-      <div class="site-header__actions">
-        <button id="u-menu-btn" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="u-mobile">
-          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
-        </button>
-        <a href="../apps.html" class="btn btn--primary btn--header">Browse all apps →</a>
-      </div>
-    </div>
-  </header>
-  <div id="u-mobile" class="drawer" role="dialog" aria-modal="true" aria-label="Menu" hidden>
-    <div class="drawer__backdrop" data-close></div>
-    <div class="drawer__panel">
-      <div class="drawer__header"><span class="drawer__title">Menu</span><button class="drawer__close" aria-label="Close menu" data-close>×</button></div>
-      <ul class="drawer__list">
-        <li><a class="drawer__link" href="../index.html" data-close>Home</a></li>
-        <li><a class="drawer__link" href="../apps.html" data-close>Apps</a></li>
-        <li><a class="drawer__link" href="../blog.html" data-close>Blog</a></li>
-        <li><a class="drawer__link" href="../about.html" data-close>About</a></li>
-        <li><a class="drawer__link" href="../contact.html" data-close>Contact</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <main id="main">
-    <div class="knowledge-shell">
-      <section class="knowledge-home-hero">
-        <p class="knowledge-kicker">Ulix Knowledge</p>
-        <h1>Useful answers for people who keep information.</h1>
-        <p>Books, private libraries, reading, personal knowledge systems, lending, personal data, and the practical problem of finding things again. These notes begin with the problem, not the product.</p>
-      </section>
-      <div class="knowledge-rule"></div>
-
-      <section class="knowledge-section" aria-labelledby="knowledge-notes-heading">
-        <div class="knowledge-section__head">
-          <h2 id="knowledge-notes-heading">Knowledge notes</h2>
-          <p>Evergreen notes from Ulix</p>
-        </div>
-        <div class="knowledge-grid">
-          <a class="knowledge-card" href="./read-instead-of-scroll-guten/">
-            <div class="knowledge-card__meta"><span>Donald</span><span>Reading</span></div>
-            <h3>Reading Instead of Scrolling: How to Turn Spare Phone Time Into Book Time</h3>
-            <p>Replace some automatic feed time with sustained reading, without pretending that every kind of social-media use is the same.</p>
-          </a>
-          <a class="knowledge-card" href="./symptom-food-diary-for-doctor-track-analysis/">
-            <div class="knowledge-card__meta"><span>Annie</span><span>Personal data</span></div>
-            <h3>How to Keep a Symptom or Food Diary for Your Doctor Without Making It a Second Job</h3>
-            <p>Use quick timestamped entries for the events that happen between appointments, then export a record that is easier to review.</p>
-          </a>
-          <a class="knowledge-card" href="./small-lending-closet-tools-games-equipment/">
-            <div class="knowledge-card__meta"><span>Annie</span><span>Lending</span></div>
-            <h3>How to Run a Small Lending Closet for Tools, Games, or Equipment</h3>
-            <p>Track the checkout rather than building a full asset-management system around a modest shared collection.</p>
-          </a>
-          <a class="knowledge-card" href="./find-book-without-exact-title/">
-            <div class="knowledge-card__meta"><span>Sasha</span><span>Books &amp; libraries</span></div>
-            <h3>How to Find a Book When You Can’t Remember the Exact Title</h3>
-            <p>Use the author, one unusual word, a series name, or the visual context of a searchable shelf.</p>
-          </a>
-          <a class="knowledge-card" href="./digital-commonplace-book-android/">
-            <div class="knowledge-card__meta"><span>Donald</span><span>PKM</span></div>
-            <h3>How to Build a Digital Commonplace Book on Android</h3>
-            <p>Capture passages worth encountering again without turning reading into a metadata-maintenance project.</p>
-          </a>
-          <a class="knowledge-card" href="./pkm-without-cloud/">
-            <div class="knowledge-card__meta"><span>Donald</span><span>PKM</span></div>
-            <h3>How to Keep a Personal Knowledge System Without Putting It in the Cloud</h3>
-            <p>Keep the durable copy local, use portable formats at the boundaries, and make exitability part of the design.</p>
-          </a>
-          <a class="knowledge-card" href="./family-library-several-rooms/">
-            <div class="knowledge-card__meta"><span>Sasha</span><span>Private libraries</span></div>
-            <h3>How to Manage a Family Library Spread Across Several Rooms</h3>
-            <p>Use stable locations and searchable shelf photos when the collection no longer fits in one physical library.</p>
-          </a>
-          <a class="knowledge-card" href="./lend-books-without-cataloging-library/">
-            <div class="knowledge-card__meta"><span>Sasha</span><span>Private libraries</span></div>
-            <h3>How to Keep Track of Books You Lend Without Cataloging Your Entire Library</h3>
-            <p>Treat finding books at home and tracking books outside the house as two different retrieval problems.</p>
-          </a>
-          <a class="knowledge-card" href="./offline-classics-library-travel/">
-            <div class="knowledge-card__meta"><span>Nico</span><span>Reading</span></div>
-            <h3>How to Build an Offline Library of Classic Books for Travel</h3>
-            <p>Download the books before departure and make connectivity irrelevant to the reading part of the trip.</p>
-          </a>
-          <a class="knowledge-card" href="./public-domain-meaning-for-readers/">
-            <div class="knowledge-card__meta"><span>Nico</span><span>Reading</span></div>
-            <h3>What Does “Public Domain” Actually Mean for a Reader?</h3>
-            <p>The work, translation, edition, and jurisdiction can each have a different copyright story.</p>
-          </a>
-          <a class="knowledge-card" href="./personal-log-ai-patterns/">
-            <div class="knowledge-card__meta"><span>Donald</span><span>Personal data</span></div>
-            <h3>How to Use a Personal Log and AI to Look for Patterns in Your Own Data</h3>
-            <p>Use AI to inspect timing, counts, co-occurrence, and hypotheses without turning correlation into certainty.</p>
-          </a>
-          <a class="knowledge-card" href="./what-to-track-useful-personal-data/">
-            <div class="knowledge-card__meta"><span>Donald</span><span>Personal data</span></div>
-            <h3>What Should You Track If You Want Your Personal Data to Tell You Something Useful?</h3>
-            <p>Start with the question, then record the outcome, plausible influences, timing, and only the context that earns its place.</p>
-          </a>
-          <a class="knowledge-card" href="./manage-tiny-library-android-phone/">
-            <div class="knowledge-card__meta"><span>Sasha</span><span>Lending</span></div>
-            <h3>How to Manage a Tiny Lending Library with Just an Android Phone</h3>
-            <p>For a small collection, one phone can be enough to run the circulation side without installing a full library system.</p>
-          </a>
-          <a class="knowledge-card" href="./check-home-library-from-bookstore-shelf-scan/">
-            <div class="knowledge-card__meta"><span>Sasha</span><span>Books &amp; libraries</span></div>
-            <h3>How to Check Your Home Library from a Bookstore with Shelf Scan</h3>
-            <p>Photograph the shelves once, then search the saved images when a suspiciously familiar book appears in a store.</p>
-          </a>
-          <a class="knowledge-card" href="./keep-clip-pkm-capture-inbox/">
-            <div class="knowledge-card__meta"><span>Donald</span><span>PKM</span></div>
-            <h3>Using Keep Clip as the Capture Inbox for a Larger PKM System</h3>
-            <p>Separate low-friction mobile capture from the slower work of organizing a permanent knowledge base.</p>
-          </a>
-          <a class="knowledge-card" href="./analyze-keep-clip-export-with-ai/">
-            <div class="knowledge-card__meta"><span>Donald</span><span>PKM</span></div>
-            <h3>How to Analyze a Keep Clip Export with AI</h3>
-            <p>Use a CSV export to cluster topics, clean up tags, build research outlines, identify gaps, and find worthwhile new sources.</p>
-          </a>
-          <a class="knowledge-card" href="./search-large-home-library-without-cataloging/">
-            <div class="knowledge-card__meta"><span>Sasha</span><span>Books &amp; libraries</span></div>
-            <h3>How Can I Search a Large Home Library Without Cataloging Every Book?</h3>
-            <p>When the real problem is retrieval, a full catalog may be more work than the library needs.</p>
-          </a>
-          <a class="knowledge-card" href="./sending-links-to-yourself/">
-            <div class="knowledge-card__meta"><span>Donald</span><span>PKM</span></div>
-            <h3>What’s a Better System Than Sending Links to Yourself?</h3>
-            <p>A capture system should make saving easy and finding later unsurprising.</p>
-          </a>
-          <a class="knowledge-card" href="./keep-track-of-things-you-lend/">
-            <div class="knowledge-card__meta"><span>Annie</span><span>Lending</span></div>
-            <h3>How Do I Keep Track of Things I Lend to People?</h3>
-            <p>The useful record is smaller than most inventory systems make it.</p>
-          </a>
-          <a class="knowledge-card" href="./read-classic-books-free/">
-            <div class="knowledge-card__meta"><span>Nico</span><span>Reading</span></div>
-            <h3>Where Can I Read Classic Books for Free?</h3>
-            <p>Public-domain libraries make an enormous part of literary history available without a subscription.</p>
-          </a>
-          <a class="knowledge-card" href="./do-you-need-a-second-brain/">
-            <div class="knowledge-card__meta"><span>Donald</span><span>PKM</span></div>
-            <h3>Do You Really Need a Second Brain?</h3>
-            <p>Probably not in the elaborate sense. A useful knowledge system can be much smaller.</p>
-          </a>
-          <a class="knowledge-card" href="./avoid-buying-books-you-own/">
-            <div class="knowledge-card__meta"><span>Sasha</span><span>Books &amp; libraries</span></div>
-            <h3>How to Avoid Buying a Book You Already Own</h3>
-            <p>Large libraries eventually exceed memory. The answer does not have to be a perfect catalog.</p>
-          </a>
-          <a class="knowledge-card" href="./paper-list-spreadsheet-or-app-lending/">
-            <div class="knowledge-card__meta"><span>Annie</span><span>Comparison</span></div>
-            <h3>Paper List, Spreadsheet, or App: What’s Best for Tracking Things You’ve Lent?</h3>
-            <p>Choose based on capture friction, reminders, search, and how often things actually leave the house.</p>
-          </a>
-          <a class="knowledge-card" href="./old-android-tablet-ereader/">
-            <div class="knowledge-card__meta"><span>Donald</span><span>Reading systems</span></div>
-            <h3>How to Turn an Old Android Tablet Into a Dedicated E-Reader</h3>
-            <p>A quiet reading device can be made from hardware already sitting in a drawer.</p>
-          </a>
-          <a class="knowledge-card" href="./manage-1000-book-home-library/">
-            <div class="knowledge-card__meta"><span>Sasha</span><span>Private libraries</span></div>
-            <h3>How to Manage a 1,000-Book Home Library Without Turning It Into a Project</h3>
-            <p>Organize for retrieval and stability, not for the pleasure of maintaining metadata.</p>
-          </a>
-          <a class="knowledge-card" href="./read-classics-without-kindle/">
-            <div class="knowledge-card__meta"><span>Nico</span><span>Reading</span></div>
-            <h3>How Can I Read Classic Literature Without Amazon or Kindle?</h3>
-            <p>Ebooks are files and texts before they are storefronts. There are several ways to build an independent classics library.</p>
-          </a>
-        </div>
-      </section>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p class="footer-credo">Find the <b>book</b> <span class="sep">·</span> Save the <b>passage</b> <span class="sep">·</span> Read the <b>classic</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p>
-      <div class="site-footer__grid">
-        <div class="site-footer__brand"><img src="../icons/ulixwordmarkclear.png" alt="Ulix — Precision tools for modern odysseys" class="footer-wordmark" width="1754" height="717" /></div>
-        <div class="site-footer__links">
-          <a href="../apps.html">Apps</a><a href="./">Knowledge</a><a href="../blog.html">Blog</a><a href="../support.html">Support</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a>
-        </div>
-        <div><div class="site-footer__copyright">© 2026 Ulix LLC. All rights reserved.</div></div>
-      </div>
-    </div>
-  </footer>
-  <script src="../assets/ulix.js" defer></script>
-</body>
-</html>
+<body class="home-page knowledge-page"><a href="#main" class="skip-link">Skip to content</a>
+<header class="site-header"><div class="container container--wide site-header__inner"><a href="../index.html" class="site-brand"><img src="../icons/favicon.png" alt="" class="site-brand__logo" width="64" height="64" /><span class="site-brand__name">ULIX</span></a><nav class="site-nav" aria-label="Primary"><a href="../index.html" class="site-nav__link">Home</a><a href="../apps.html" class="site-nav__link">Apps</a><a href="../blog.html" class="site-nav__link">Blog</a><a href="../about.html" class="site-nav__link">About</a><a href="../contact.html" class="site-nav__link">Contact</a></nav><div class="site-header__actions"><button id="u-menu-btn" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="u-mobile"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button><a href="../apps.html" class="btn btn--primary btn--header">Browse all apps →</a></div></div></header>
+<div id="u-mobile" class="drawer" role="dialog" aria-modal="true" aria-label="Menu" hidden><div class="drawer__backdrop" data-close></div><div class="drawer__panel"><div class="drawer__header"><span class="drawer__title">Menu</span><button class="drawer__close" aria-label="Close menu" data-close>×</button></div><ul class="drawer__list"><li><a class="drawer__link" href="../index.html" data-close>Home</a></li><li><a class="drawer__link" href="../apps.html" data-close>Apps</a></li><li><a class="drawer__link" href="../blog.html" data-close>Blog</a></li><li><a class="drawer__link" href="../about.html" data-close>About</a></li><li><a class="drawer__link" href="../contact.html" data-close>Contact</a></li></ul></div></div>
+<main id="main"><div class="knowledge-shell"><section class="knowledge-home-hero"><p class="knowledge-kicker">Ulix Knowledge</p><h1>Useful answers for people who keep information.</h1><p>Books, private libraries, reading, classics, personal knowledge systems, lending, personal data, and the practical problem of finding things again. These notes begin with the problem, not the product.</p></section><div class="knowledge-rule"></div>
+<section class="knowledge-section" aria-labelledby="knowledge-notes-heading"><div class="knowledge-section__head"><h2 id="knowledge-notes-heading">Knowledge notes</h2><p>Evergreen notes from Ulix</p></div><div class="knowledge-grid">
+<a class="knowledge-card" href="./guten-school-academic-research/"><div class="knowledge-card__meta"><span>Sasha</span><span>Research</span></div><h3>How to Use Guten for School and Academic Research</h3><p>Highlight primary-text evidence, annotate why it matters, gather it in Notes Manager, and export it into the research workflow where the paper will be written.</p></a>
+<a class="knowledge-card" href="./share-favorite-quotes-guten/"><div class="knowledge-card__meta"><span>Sasha</span><span>Reading</span></div><h3>The Fun of Sharing Favorite Lines From What You’re Reading</h3><p>A favorite line can be a recommendation, a conversation, or a tiny public commonplace note, and Guten can turn it into a shareable image.</p></a>
+<a class="knowledge-card" href="./read-homeric-greek-english-side-by-side/"><div class="knowledge-card__meta"><span>Nico</span><span>Classics</span></div><h3>How to Read Homeric Greek Beside an English Translation</h3><p>Keep Perseus-sourced Greek beside Butler, Pope, or Chapman and the translation becomes visibly what it is: an interpretation.</p></a>
+<a class="knowledge-card" href="./read-instead-of-scroll-guten/"><div class="knowledge-card__meta"><span>Donald</span><span>Reading</span></div><h3>Reading Instead of Scrolling: How to Turn Spare Phone Time Into Book Time</h3><p>Replace some automatic feed time with sustained reading, without pretending that every kind of social-media use is the same.</p></a>
+<a class="knowledge-card" href="./symptom-food-diary-for-doctor-track-analysis/"><div class="knowledge-card__meta"><span>Annie</span><span>Personal data</span></div><h3>How to Keep a Symptom or Food Diary for Your Doctor Without Making It a Second Job</h3><p>Use quick timestamped entries for the events that happen between appointments, then export a record that is easier to review.</p></a>
+<a class="knowledge-card" href="./small-lending-closet-tools-games-equipment/"><div class="knowledge-card__meta"><span>Annie</span><span>Lending</span></div><h3>How to Run a Small Lending Closet for Tools, Games, or Equipment</h3><p>Track the checkout rather than building a full asset-management system around a modest shared collection.</p></a>
+<a class="knowledge-card" href="./find-book-without-exact-title/"><div class="knowledge-card__meta"><span>Sasha</span><span>Books &amp; libraries</span></div><h3>How to Find a Book When You Can’t Remember the Exact Title</h3><p>Use the author, one unusual word, a series name, or the visual context of a searchable shelf.</p></a>
+<a class="knowledge-card" href="./digital-commonplace-book-android/"><div class="knowledge-card__meta"><span>Donald</span><span>PKM</span></div><h3>How to Build a Digital Commonplace Book on Android</h3><p>Capture passages worth encountering again without turning reading into a metadata-maintenance project.</p></a>
+<a class="knowledge-card" href="./pkm-without-cloud/"><div class="knowledge-card__meta"><span>Donald</span><span>PKM</span></div><h3>How to Keep a Personal Knowledge System Without Putting It in the Cloud</h3><p>Keep the durable copy local, use portable formats at the boundaries, and make exitability part of the design.</p></a>
+<a class="knowledge-card" href="./family-library-several-rooms/"><div class="knowledge-card__meta"><span>Sasha</span><span>Private libraries</span></div><h3>How to Manage a Family Library Spread Across Several Rooms</h3><p>Use stable locations and searchable shelf photos when the collection no longer fits in one physical library.</p></a>
+<a class="knowledge-card" href="./lend-books-without-cataloging-library/"><div class="knowledge-card__meta"><span>Sasha</span><span>Private libraries</span></div><h3>How to Keep Track of Books You Lend Without Cataloging Your Entire Library</h3><p>Treat finding books at home and tracking books outside the house as two different retrieval problems.</p></a>
+<a class="knowledge-card" href="./offline-classics-library-travel/"><div class="knowledge-card__meta"><span>Nico</span><span>Reading</span></div><h3>How to Build an Offline Library of Classic Books for Travel</h3><p>Download the books before departure and make connectivity irrelevant to the reading part of the trip.</p></a>
+<a class="knowledge-card" href="./public-domain-meaning-for-readers/"><div class="knowledge-card__meta"><span>Nico</span><span>Reading</span></div><h3>What Does “Public Domain” Actually Mean for a Reader?</h3><p>The work, translation, edition, and jurisdiction can each have a different copyright story.</p></a>
+<a class="knowledge-card" href="./personal-log-ai-patterns/"><div class="knowledge-card__meta"><span>Donald</span><span>Personal data</span></div><h3>How to Use a Personal Log and AI to Look for Patterns in Your Own Data</h3><p>Use AI to inspect timing, counts, co-occurrence, and hypotheses without turning correlation into certainty.</p></a>
+<a class="knowledge-card" href="./what-to-track-useful-personal-data/"><div class="knowledge-card__meta"><span>Donald</span><span>Personal data</span></div><h3>What Should You Track If You Want Your Personal Data to Tell You Something Useful?</h3><p>Start with the question, then record the outcome, plausible influences, timing, and only the context that earns its place.</p></a>
+<a class="knowledge-card" href="./manage-tiny-library-android-phone/"><div class="knowledge-card__meta"><span>Sasha</span><span>Lending</span></div><h3>How to Manage a Tiny Lending Library with Just an Android Phone</h3><p>For a small collection, one phone can be enough to run the circulation side without installing a full library system.</p></a>
+<a class="knowledge-card" href="./check-home-library-from-bookstore-shelf-scan/"><div class="knowledge-card__meta"><span>Sasha</span><span>Books &amp; libraries</span></div><h3>How to Check Your Home Library from a Bookstore with Shelf Scan</h3><p>Photograph the shelves once, then search the saved images when a suspiciously familiar book appears in a store.</p></a>
+<a class="knowledge-card" href="./keep-clip-pkm-capture-inbox/"><div class="knowledge-card__meta"><span>Donald</span><span>PKM</span></div><h3>Using Keep Clip as the Capture Inbox for a Larger PKM System</h3><p>Separate low-friction mobile capture from the slower work of organizing a permanent knowledge base.</p></a>
+<a class="knowledge-card" href="./analyze-keep-clip-export-with-ai/"><div class="knowledge-card__meta"><span>Donald</span><span>PKM</span></div><h3>How to Analyze a Keep Clip Export with AI</h3><p>Use a CSV export to cluster topics, clean up tags, build research outlines, identify gaps, and find worthwhile new sources.</p></a>
+<a class="knowledge-card" href="./search-large-home-library-without-cataloging/"><div class="knowledge-card__meta"><span>Sasha</span><span>Books &amp; libraries</span></div><h3>How Can I Search a Large Home Library Without Cataloging Every Book?</h3><p>When the real problem is retrieval, a full catalog may be more work than the library needs.</p></a>
+<a class="knowledge-card" href="./sending-links-to-yourself/"><div class="knowledge-card__meta"><span>Donald</span><span>PKM</span></div><h3>What’s a Better System Than Sending Links to Yourself?</h3><p>A capture system should make saving easy and finding later unsurprising.</p></a>
+<a class="knowledge-card" href="./keep-track-of-things-you-lend/"><div class="knowledge-card__meta"><span>Annie</span><span>Lending</span></div><h3>How Do I Keep Track of Things I Lend to People?</h3><p>The useful record is smaller than most inventory systems make it.</p></a>
+<a class="knowledge-card" href="./read-classic-books-free/"><div class="knowledge-card__meta"><span>Nico</span><span>Reading</span></div><h3>Where Can I Read Classic Books for Free?</h3><p>Public-domain libraries make an enormous part of literary history available without a subscription.</p></a>
+<a class="knowledge-card" href="./do-you-need-a-second-brain/"><div class="knowledge-card__meta"><span>Donald</span><span>PKM</span></div><h3>Do You Really Need a Second Brain?</h3><p>Probably not in the elaborate sense. A useful knowledge system can be much smaller.</p></a>
+<a class="knowledge-card" href="./avoid-buying-books-you-own/"><div class="knowledge-card__meta"><span>Sasha</span><span>Books &amp; libraries</span></div><h3>How to Avoid Buying a Book You Already Own</h3><p>Large libraries eventually exceed memory. The answer does not have to be a perfect catalog.</p></a>
+<a class="knowledge-card" href="./paper-list-spreadsheet-or-app-lending/"><div class="knowledge-card__meta"><span>Annie</span><span>Comparison</span></div><h3>Paper List, Spreadsheet, or App: What’s Best for Tracking Things You’ve Lent?</h3><p>Choose based on capture friction, reminders, search, and how often things actually leave the house.</p></a>
+<a class="knowledge-card" href="./old-android-tablet-ereader/"><div class="knowledge-card__meta"><span>Donald</span><span>Reading systems</span></div><h3>How to Turn an Old Android Tablet Into a Dedicated E-Reader</h3><p>A quiet reading device can be made from hardware already sitting in a drawer.</p></a>
+<a class="knowledge-card" href="./manage-1000-book-home-library/"><div class="knowledge-card__meta"><span>Sasha</span><span>Private libraries</span></div><h3>How to Manage a 1,000-Book Home Library Without Turning It Into a Project</h3><p>Organize for retrieval and stability, not for the pleasure of maintaining metadata.</p></a>
+<a class="knowledge-card" href="./read-classics-without-kindle/"><div class="knowledge-card__meta"><span>Nico</span><span>Reading</span></div><h3>How Can I Read Classic Literature Without Amazon or Kindle?</h3><p>Ebooks are files and texts before they are storefronts. There are several ways to build an independent classics library.</p></a>
+</div></section></div></main>
+<footer class="site-footer"><div class="container"><p class="footer-credo">Find the <b>book</b> <span class="sep">·</span> Save the <b>passage</b> <span class="sep">·</span> Read the <b>classic</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p><div class="site-footer__grid"><div class="site-footer__brand"><img src="../icons/ulixwordmarkclear.png" alt="Ulix — Precision tools for modern odysseys" class="footer-wordmark" width="1754" height="717" /></div><div class="site-footer__links"><a href="../apps.html">Apps</a><a href="./">Knowledge</a><a href="../blog.html">Blog</a><a href="../support.html">Support</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../terms.html">Terms</a><a href="../privacy.html">Privacy</a></div><div><div class="site-footer__copyright">© 2026 Ulix LLC. All rights reserved.</div></div></div></div></footer><script src="../assets/ulix.js" defer></script></body></html>
