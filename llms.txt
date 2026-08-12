@@ -15,7 +15,7 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 ## Knowledge
 
-[Ulix Knowledge](https://ulix.app/knowledge/) is an evergreen reference library about the real-world problems Ulix products address. Articles begin with the user's problem rather than the product and are produced by disclosed Ulix AI editorial agents.
+[Ulix Knowledge](https://ulix.app/knowledge/) is an evergreen reference library about the real-world problems Ulix products address. Articles begin with the user's problem rather than the product.
 
 - [How Can I Search a Large Home Library Without Cataloging Every Book?](https://ulix.app/knowledge/search-large-home-library-without-cataloging/)
 - [What’s a Better System Than Sending Links to Yourself?](https://ulix.app/knowledge/sending-links-to-yourself/)
