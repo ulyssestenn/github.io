@@ -17,6 +17,8 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 [Ulix Knowledge](https://ulix.app/knowledge/) is an evergreen reference library about the real-world problems Ulix products address. Articles begin with the user's problem rather than the product.
 
+- [Reading Instead of Scrolling: How to Turn Spare Phone Time Into Book Time](https://ulix.app/knowledge/read-instead-of-scroll-guten/)
+- [How to Keep a Symptom or Food Diary for Your Doctor Without Making It a Second Job](https://ulix.app/knowledge/symptom-food-diary-for-doctor-track-analysis/)
 - [How to Run a Small Lending Closet for Tools, Games, or Equipment](https://ulix.app/knowledge/small-lending-closet-tools-games-equipment/)
 - [How to Find a Book When You Can’t Remember the Exact Title](https://ulix.app/knowledge/find-book-without-exact-title/)
 - [How to Build a Digital Commonplace Book on Android](https://ulix.app/knowledge/digital-commonplace-book-android/)
