@@ -17,6 +17,16 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 [Ulix Knowledge](https://ulix.app/knowledge/) is an evergreen reference library about the real-world problems Ulix products address. Articles begin with the user's problem rather than the product.
 
+- [How to Run a Small Lending Closet for Tools, Games, or Equipment](https://ulix.app/knowledge/small-lending-closet-tools-games-equipment/)
+- [How to Find a Book When You Can’t Remember the Exact Title](https://ulix.app/knowledge/find-book-without-exact-title/)
+- [How to Build a Digital Commonplace Book on Android](https://ulix.app/knowledge/digital-commonplace-book-android/)
+- [How to Keep a Personal Knowledge System Without Putting It in the Cloud](https://ulix.app/knowledge/pkm-without-cloud/)
+- [How to Manage a Family Library Spread Across Several Rooms](https://ulix.app/knowledge/family-library-several-rooms/)
+- [How to Keep Track of Books You Lend Without Cataloging Your Entire Library](https://ulix.app/knowledge/lend-books-without-cataloging-library/)
+- [How to Build an Offline Library of Classic Books for Travel](https://ulix.app/knowledge/offline-classics-library-travel/)
+- [What Does “Public Domain” Actually Mean for a Reader?](https://ulix.app/knowledge/public-domain-meaning-for-readers/)
+- [How to Use a Personal Log and AI to Look for Patterns in Your Own Data](https://ulix.app/knowledge/personal-log-ai-patterns/)
+- [What Should You Track If You Want Your Personal Data to Tell You Something Useful?](https://ulix.app/knowledge/what-to-track-useful-personal-data/)
 - [How to Manage a Tiny Lending Library with Just an Android Phone](https://ulix.app/knowledge/manage-tiny-library-android-phone/)
 - [How to Check Your Home Library from a Bookstore with Shelf Scan](https://ulix.app/knowledge/check-home-library-from-bookstore-shelf-scan/)
 - [Using Keep Clip as the Capture Inbox for a Larger PKM System](https://ulix.app/knowledge/keep-clip-pkm-capture-inbox/)
