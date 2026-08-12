@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How to Keep a Personal Knowledge System Without Putting It in the Cloud — Ulix Knowledge</title>
+  <meta name="description" content="Build a local-first personal knowledge workflow with on-device capture, ordinary export files, local storage, and tools that do not require a cloud account." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://ulix.app/knowledge/pkm-without-cloud/" /><meta name="theme-color" content="#0F0E0C" />
+  <meta property="og:type" content="article" /><meta property="og:site_name" content="Ulix" /><meta property="og:title" content="How to Keep a Personal Knowledge System Without Putting It in the Cloud" /><meta property="og:description" content="Local-first PKM is less about rejecting the internet than about keeping the durable copy under your control." /><meta property="og:url" content="https://ulix.app/knowledge/pkm-without-cloud/" /><meta property="og:image" content="https://ulix.app/assets/keepclip/keepclipshare.jpg" /><meta property="article:section" content="Personal knowledge management" /><meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/icons/favicon.ico" sizes="any" /><link rel="stylesheet" href="../../assets/ulix.css" /><link rel="stylesheet" href="../../assets/home.css" /><link rel="stylesheet" href="../knowledge.css" /><link rel="preload" as="font" type="font/woff2" href="../../assets/fonts/geist-latin.woff2" crossorigin /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"How to Keep a Personal Knowledge System Without Putting It in the Cloud","description":"A practical local-first architecture for personal knowledge capture, storage, export, and backup.","mainEntityOfPage":"https://ulix.app/knowledge/pkm-without-cloud/","articleSection":"Personal knowledge management","about":[{"@type":"Thing","name":"Local-first software"},{"@type":"Thing","name":"Personal knowledge management"},{"@type":"SoftwareApplication","name":"Keep Clip","operatingSystem":"Android","url":"https://ulix.app/keepclip/"}],"publisher":{"@type":"Organization","name":"Ulix LLC","url":"https://ulix.app/"},"isPartOf":{"@type":"CollectionPage","name":"Ulix Knowledge","url":"https://ulix.app/knowledge/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Ulix Knowledge","item":"https://ulix.app/knowledge/"},{"@type":"ListItem","position":2,"name":"PKM without the cloud","item":"https://ulix.app/knowledge/pkm-without-cloud/"}]}]}</script>
+</head>
+<body class="home-page knowledge-page"><a href="#main" class="skip-link">Skip to content</a>
+<header class="site-header"><div class="container container--wide site-header__inner"><a href="../../index.html" class="site-brand"><img src="../../icons/favicon.png" alt="" class="site-brand__logo" width="64" height="64" /><span class="site-brand__name">ULIX</span></a><nav class="site-nav" aria-label="Primary"><a href="../../index.html" class="site-nav__link">Home</a><a href="../../apps.html" class="site-nav__link">Apps</a><a href="../../blog.html" class="site-nav__link">Blog</a><a href="../../about.html" class="site-nav__link">About</a><a href="../../contact.html" class="site-nav__link">Contact</a></nav><div class="site-header__actions"><a href="../" class="btn btn--primary btn--header">Knowledge →</a></div></div></header>
+<main id="main"><div class="article-shell"><p class="article-breadcrumbs"><a href="../">Ulix Knowledge</a> / Personal knowledge</p>
+<header class="article-header"><p class="article-header__meta">Personal knowledge · Keep Clip</p><h1>How to Keep a Personal Knowledge System Without Putting It in the Cloud</h1><p class="article-deck">A local-first knowledge system does not have to reject networked tools. It simply keeps the durable copy of the information somewhere the user controls.</p><p class="article-byline">Donald</p></header>
+<article class="article-body">
+<p><strong>A personal knowledge system can remain local if capture happens on the device, the archive is stored in ordinary files or local databases, and every important stage has an export path.</strong> Cloud services can still be used selectively, but they do not need to become the only place where the knowledge exists.</p>
+<p>This is less a philosophy than an architecture decision. The practical question is: if an account disappears, a subscription changes, or a service shuts down, what part of the system remains usable?</p>
+
+<h2>Start with the durable copy</h2>
+<p>Every knowledge system has a place where the authoritative copy lives. In a cloud-first system, that may be a vendor's database. In a local-first system, the durable copy lives on a device or in files controlled by the user.</p>
+<p>That does not guarantee safety. A laptop can fail and a phone can be lost. Local ownership makes backup more important, not less. The advantage is that backup can be designed independently of the software vendor.</p>
+
+<h2>Separate capture from permanent storage</h2>
+<p>Mobile capture is often the hardest part of a local workflow. The main archive may live on a computer, while useful passages and links arrive on a phone.</p>
+<p><a href="../../keepclip/">Keep Clip</a> can act as a local Android inbox. It saves text, quotations, highlights, excerpts, links, notes, tags, and source context on the device. No account is required. Material can later be exported to Markdown, CSV, TXT, RTF, or HTML.</p>
+<p>That creates a clean boundary: the phone captures; files move; the main PKM environment organizes.</p>
+
+<h2>Use ordinary formats at the boundaries</h2>
+<p>The more tools a workflow contains, the more important the handoffs become.</p>
+<p>Markdown is useful for file-based note systems. CSV works for tabular analysis and bulk transformation. TXT is almost universally readable. RTF can move into conventional document software. HTML is useful for browser-readable archives and web-oriented systems.</p>
+<p>None of these formats is magical. Their advantage is that many unrelated tools understand them. A proprietary database can be excellent internally while still being a poor interchange format.</p>
+
+<h2>Local-first does not mean one device forever</h2>
+<p>A local system can span several devices. The important distinction is whether synchronization is the only copy or merely a transport layer.</p>
+<p>Files can be moved by cable, local network transfer, removable storage, a synchronization tool, or even a cloud drive if that is acceptable. The architecture remains relatively resilient when the files themselves stay readable outside the sync service.</p>
+<p>Cloud storage can therefore be part of a local-first workflow without becoming the owner of the workflow.</p>
+
+<h2>Backup is part of the system</h2>
+<p>A local archive without backups is not sovereign. It is fragile.</p>
+<p>The minimum sensible plan is to keep more than one copy, with at least one copy on a different device or storage medium. A larger or more valuable archive may justify versioned backups and an off-site copy.</p>
+<p>The exact method matters less than a simple test: if the primary phone or computer disappeared tonight, could the archive be restored without pleading with a vendor?</p>
+
+<h2>Keep cloud-only features optional</h2>
+<p>Some services provide excellent search, collaboration, transcription, or language-model analysis. They can still be useful.</p>
+<p>A robust pattern is to export or upload a copy for a specific task rather than moving the only durable copy into the service. For example, a CSV of clips can be analyzed by an external AI system while the original collection remains on the device.</p>
+<p>This also creates a clearer privacy boundary. The local archive and the uploaded subset are different things with different exposure.</p>
+
+<h2>Know what “offline” actually solves</h2>
+<p>Offline operation removes several dependencies at once: network availability, account authentication, server uptime, and remote API access. It can also reduce the number of places where private material is automatically transmitted.</p>
+<p>It does not solve backup, device security, file corruption, or bad organization. Those remain local responsibilities.</p>
+<p>Local-first software is therefore not automatically better. It is better when control, longevity, privacy, or independence from a service is important enough to justify those responsibilities.</p>
+
+<h2>A modest local PKM architecture</h2>
+<ol><li>Capture useful material locally on the phone.</li><li>Review it periodically instead of organizing everything at intake.</li><li>Export in a portable format.</li><li>Store the long-term archive in a local PKM system or ordinary folders.</li><li>Back up the archive separately from the application.</li><li>Send copies to cloud or AI services only when a specific task benefits from them.</li></ol>
+<p>This is not the only way to build a private knowledge system. It is simply one that fails relatively gracefully.</p>
+<p>The valuable property is not ideological purity. It is <strong>exitability</strong>: useful information should remain usable even when one component of the stack changes.</p>
+
+<section class="product-note"><p class="product-note__label">A relevant Ulix tool</p><h2>Keep Clip</h2><p>Keep Clip stores clips locally on Android, requires no account, works offline, and exports to Markdown, CSV, TXT, RTF, or HTML. That makes it useful as a local capture layer in a larger knowledge system whose permanent archive lives elsewhere.</p><p><a href="../../keepclip/">See Keep Clip</a>.</p></section>
+</article>
+<aside class="related"><h2>Related</h2><a href="../keep-clip-pkm-capture-inbox/">Using Keep Clip as the Capture Inbox for a Larger PKM System</a><a href="../analyze-keep-clip-export-with-ai/">How to Analyze a Keep Clip Export with AI</a></aside></div></main>
+<footer class="site-footer"><div class="container"><p class="footer-credo">Find the <b>book</b> <span class="sep">·</span> Save the <b>passage</b> <span class="sep">·</span> Read the <b>classic</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p><div class="site-footer__grid"><div class="site-footer__brand"><img src="../../icons/ulixwordmarkclear.png" alt="Ulix — Precision tools for modern odysseys" class="footer-wordmark" width="1754" height="717" /></div><div class="site-footer__links"><a href="../../apps.html">Apps</a><a href="../">Knowledge</a><a href="../../about.html">About</a><a href="../../privacy.html">Privacy</a></div><div><div class="site-footer__copyright">© 2026 Ulix LLC. All rights reserved.</div></div></div></div></footer><script src="../../assets/ulix.js" defer></script></body></html>
