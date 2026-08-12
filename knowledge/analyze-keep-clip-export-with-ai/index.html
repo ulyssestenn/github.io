@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How to Analyze a Keep Clip Export with AI — Ulix Knowledge</title>
+  <meta name="description" content="Export Keep Clip data to CSV and use an AI system to cluster topics, clean up tags, build research outlines, identify gaps, and suggest new sources." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://ulix.app/knowledge/analyze-keep-clip-export-with-ai/" />
+  <meta name="theme-color" content="#0F0E0C" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Ulix" />
+  <meta property="og:title" content="How to Analyze a Keep Clip Export with AI" />
+  <meta property="og:description" content="Treat a saved-link collection as a dataset instead of a pile of bookmarks." />
+  <meta property="og:url" content="https://ulix.app/knowledge/analyze-keep-clip-export-with-ai/" />
+  <meta property="og:image" content="https://ulix.app/assets/keepclip/keepclipshare.jpg" />
+  <meta property="article:section" content="Personal knowledge management" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/icons/favicon.ico" sizes="any" />
+  <link rel="stylesheet" href="../../assets/ulix.css" />
+  <link rel="stylesheet" href="../../assets/home.css" />
+  <link rel="stylesheet" href="../knowledge.css" />
+  <link rel="preload" as="font" type="font/woff2" href="../../assets/fonts/geist-latin.woff2" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "How to Analyze a Keep Clip Export with AI",
+        "description": "A practical workflow for using a Keep Clip CSV export as structured input for classification, organization, synthesis, and further research.",
+        "mainEntityOfPage": "https://ulix.app/knowledge/analyze-keep-clip-export-with-ai/",
+        "articleSection": "Personal knowledge management",
+        "about": [
+          {"@type":"Thing","name":"Personal knowledge management"},
+          {"@type":"Thing","name":"AI-assisted research"},
+          {"@type":"SoftwareApplication","name":"Keep Clip","operatingSystem":"Android","url":"https://ulix.app/keepclip/"}
+        ],
+        "publisher": {"@type":"Organization","name":"Ulix LLC","url":"https://ulix.app/"},
+        "isPartOf": {"@type":"CollectionPage","name":"Ulix Knowledge","url":"https://ulix.app/knowledge/"}
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Ulix Knowledge","item":"https://ulix.app/knowledge/"},
+          {"@type":"ListItem","position":2,"name":"Analyze a Keep Clip export with AI","item":"https://ulix.app/knowledge/analyze-keep-clip-export-with-ai/"}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="home-page knowledge-page">
+<a href="#main" class="skip-link">Skip to content</a>
+<header class="site-header"><div class="container container--wide site-header__inner"><a href="../../index.html" class="site-brand"><img src="../../icons/favicon.png" alt="" class="site-brand__logo" width="64" height="64" /><span class="site-brand__name">ULIX</span></a><nav class="site-nav" aria-label="Primary"><a href="../../index.html" class="site-nav__link">Home</a><a href="../../apps.html" class="site-nav__link">Apps</a><a href="../../blog.html" class="site-nav__link">Blog</a><a href="../../about.html" class="site-nav__link">About</a><a href="../../contact.html" class="site-nav__link">Contact</a></nav><div class="site-header__actions"><a href="../" class="btn btn--primary btn--header">Knowledge →</a></div></div></header>
+<main id="main"><div class="article-shell">
+<p class="article-breadcrumbs"><a href="../">Ulix Knowledge</a> / Personal knowledge</p>
+<header class="article-header"><p class="article-header__meta">Personal knowledge · Keep Clip</p><h1>How to Analyze a Keep Clip Export with AI</h1><p class="article-deck">A large collection of saved links and excerpts becomes more useful when it can be examined as structured data rather than only browsed one item at a time.</p><p class="article-byline">Donald</p></header>
+<article class="article-body">
+<p><strong>Export Keep Clip as CSV when the goal is analysis rather than simple reading.</strong> The file turns a clipping library into rows and fields that an AI system can classify, compare, reorganize, and use as the starting point for further research.</p>
+
+<p>The important advantage is context. Instead of asking for generic suggestions about a subject, the analysis begins with the material already collected: the links, excerpts, titles, authors, tags, notes, sources, and timestamps that make up the actual research set.</p>
+
+<h2>What is in a Keep Clip CSV export?</h2>
+<p><a href="../../keepclip/">Keep Clip</a> exports a fixed set of fields for each clip:</p>
+<ul>
+<li>Clip Text</li>
+<li>Title</li>
+<li>Author</li>
+<li>Clip Name</li>
+<li>Source App</li>
+<li>Source URL</li>
+<li>Tags</li>
+<li>Notes</li>
+<li>Timestamp</li>
+</ul>
+<p>That structure gives an analysis system more to work with than a bare bookmark list. A title and URL may indicate what something is; the captured text and notes can indicate why it mattered.</p>
+
+<h2>Start with description, not interpretation</h2>
+<p>A useful first pass is to ask the model to map the collection before drawing conclusions from it. For example:</p>
+<blockquote><p>Analyze this CSV of saved clips. Group the records into coherent topics using their titles, text, tags, notes, and URLs. Do not force every item into a category. For each proposed category, show the number of clips, representative records, and any items that could reasonably belong to more than one group.</p></blockquote>
+<p>This produces a view of the collection that can be checked. It also exposes messy classification before a new taxonomy is imposed on top of it.</p>
+
+<h2>Clean up tags without flattening the collection</h2>
+<p>Tags tend to accumulate historically. One month uses <code>AI</code>, another uses <code>artificial-intelligence</code>, and a third uses a project name that has quietly become a subject area.</p>
+<p>An AI system can propose consolidation without requiring an automatic rewrite of the data:</p>
+<blockquote><p>Examine the existing tags and propose a simpler taxonomy. Identify tags that appear synonymous, overly broad, overly narrow, or inconsistent. Preserve distinctions that are genuinely useful. Return the proposed tag set and a mapping from existing tags to proposed tags.</p></blockquote>
+<p>The mapping is the useful output. It can be reviewed before anything in the archive changes.</p>
+
+<h2>Turn a link collection into a research outline</h2>
+<p>A set of clips gathered for a paper, article, talk, product idea, sermon, or research project can be reorganized around an argument rather than around capture order.</p>
+<p>Ask the model to produce an outline and identify which records support each section. Better still, ask it to distinguish between strong evidence, background context, examples, and material that does not yet have an obvious place.</p>
+<p>This is more valuable than a generic summary because it preserves the relationship between the proposed structure and the source material.</p>
+
+<h2>Look for concentration and gaps</h2>
+<p>A research collection often reveals its blind spots only when viewed in aggregate. A model can count recurring sources, authors, domains, subjects, or assumptions and then point out what is missing.</p>
+<p>A careful prompt might ask:</p>
+<blockquote><p>Identify the subjects that are heavily represented in this collection and adjacent subjects that appear underrepresented. Separate gaps that can be inferred from the collection from topics that are merely general suggestions.</p></blockquote>
+<p>That last sentence matters. Without it, plausible-sounding additions can be mistaken for conclusions grounded in the actual export.</p>
+
+<h2>Ask what the collection is good enough to answer</h2>
+<p>Another productive use is to reverse the usual question. Instead of asking the model to summarize everything, ask what research questions the current material can support with reasonable depth.</p>
+<p>This can surface several useful distinctions:</p>
+<ul>
+<li>questions already well supported by the saved material;</li>
+<li>questions that need one or two missing sources;</li>
+<li>questions the collection is poorly suited to answer;</li>
+<li>areas where the source base is too narrow.</li>
+</ul>
+<p>That is often a better guide to the next hour of research than another batch of summaries.</p>
+
+<h2>Use the export as a starting point for finding new links</h2>
+<p>If the AI system has current web access, the existing collection can become the baseline for expansion. The prompt can explicitly ask for sources that add something not already represented:</p>
+<blockquote><p>Review these saved links and identify five important perspectives, primary sources, or subtopics that are missing. Search for high-quality additions. For each suggested source, explain what it adds that is not already present in the collection. Avoid material that merely duplicates an existing source.</p></blockquote>
+<p>For a more formal project, ask the model to separate primary sources, academic research, practical guides, and dissenting perspectives.</p>
+<p>Useful discoveries can then be saved back into Keep Clip through Android's normal sharing workflow.</p>
+
+<h2>Use a focused export when the question is focused</h2>
+<p>Uploading the entire archive is not always the best approach. Keep Clip can be searched and filtered before export, so a project-specific set can be analyzed on its own.</p>
+<p>A focused export usually produces clearer clustering and fewer irrelevant suggestions. The full archive is more appropriate for periodic reviews such as: <em>What subjects have accumulated here over the last year?</em></p>
+
+<h2>The privacy boundary changes when the file leaves the device</h2>
+<p>Keep Clip stores clips locally on the Android device and does not require an account. Exporting the file is what makes it portable.</p>
+<p>Uploading that export to a remote AI service is a separate decision. The file may contain private notes, unpublished ideas, sensitive URLs, personal information, or confidential research. Once uploaded, the privacy and retention terms of that service apply to the copy it receives.</p>
+<p>For sensitive material, a local model can perform many classification, tagging, summarization, and organization tasks without sending the export to a remote service. Current web research still requires network access somewhere in the workflow, but the initial analysis does not have to.</p>
+
+<h2>Ask for an output that can leave the conversation</h2>
+<p>The strongest result is not merely an interesting chat. It is an artifact that can re-enter the knowledge system.</p>
+<p>Useful outputs include a proposed tag taxonomy, a Markdown research outline, a table of links and categories, a cleanup list, a bibliography of additional sources, or a CSV with suggested classifications.</p>
+<p>That closes the loop: <strong>capture on the phone, export the collection, analyze it, and turn the analysis back into usable knowledge structure.</strong></p>
+
+<section class="product-note"><p class="product-note__label">The tool used in this workflow</p><h2>Keep Clip</h2><p>Keep Clip captures text, links, quotations, highlights, notes, and source context on Android. It exports to CSV as well as Markdown, TXT, RTF, and HTML, making the clipping library portable for analysis and downstream PKM work.</p><p><a href="../../keepclip/">See Keep Clip</a>.</p></section>
+</article>
+<aside class="related"><h2>Related</h2><a href="../keep-clip-pkm-capture-inbox/">Using Keep Clip as the Capture Inbox for a Larger PKM System</a><a href="../do-you-need-a-second-brain/">Do You Really Need a Second Brain?</a></aside>
+</div></main>
+<footer class="site-footer"><div class="container"><p class="footer-credo">Find the <b>book</b> <span class="sep">·</span> Save the <b>passage</b> <span class="sep">·</span> Read the <b>classic</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p><div class="site-footer__grid"><div class="site-footer__brand"><img src="../../icons/ulixwordmarkclear.png" alt="Ulix — Precision tools for modern odysseys" class="footer-wordmark" width="1754" height="717" /></div><div class="site-footer__links"><a href="../../apps.html">Apps</a><a href="../">Knowledge</a><a href="../../about.html">About</a><a href="../../privacy.html">Privacy</a></div><div><div class="site-footer__copyright">© 2026 Ulix LLC. All rights reserved.</div></div></div></div></footer><script src="../../assets/ulix.js" defer></script>
+</body></html>

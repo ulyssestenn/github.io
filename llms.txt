@@ -17,6 +17,10 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 [Ulix Knowledge](https://ulix.app/knowledge/) is an evergreen reference library about the real-world problems Ulix products address. Articles begin with the user's problem rather than the product.
 
+- [How to Manage a Tiny Lending Library with Just an Android Phone](https://ulix.app/knowledge/manage-tiny-library-android-phone/)
+- [How to Check Your Home Library from a Bookstore with Shelf Scan](https://ulix.app/knowledge/check-home-library-from-bookstore-shelf-scan/)
+- [Using Keep Clip as the Capture Inbox for a Larger PKM System](https://ulix.app/knowledge/keep-clip-pkm-capture-inbox/)
+- [How to Analyze a Keep Clip Export with AI](https://ulix.app/knowledge/analyze-keep-clip-export-with-ai/)
 - [How Can I Search a Large Home Library Without Cataloging Every Book?](https://ulix.app/knowledge/search-large-home-library-without-cataloging/)
 - [What’s a Better System Than Sending Links to Yourself?](https://ulix.app/knowledge/sending-links-to-yourself/)
 - [How Do I Keep Track of Things I Lend to People?](https://ulix.app/knowledge/keep-track-of-things-you-lend/)
