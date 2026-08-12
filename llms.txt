@@ -6,11 +6,27 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 ## Apps
 
-- [Guten](https://ulix.app/guten/): Android ereader for 70,000+ public-domain classics from Project Gutenberg. Read offline, highlight, annotate, and export notes. Free, with optional Pro features.
+- [Guten](https://ulix.app/guten/): Android ereader for 70,000+ public-domain classics from Project Gutenberg. Read offline, highlight, annotate, and export notes. Free.
 - [Shelf Scan](https://ulix.app/shelfscan/): Search physical shelves with your phone's camera using on-device OCR. Finds books, movies, and games. Fully offline, nothing leaves the device. $2.99 one-time.
 - [Keep Clip](https://ulix.app/keepclip/): Save text, quotes, highlights, and links from almost any app via the Share menu. Tag, search, favorite, and export to Markdown, CSV, TXT, RTF, or HTML. $1.99 one-time.
 - [Track Analysis](https://ulix.app/trackanalysis/): Freeform plain-English logging for food, symptoms, supplements, sleep, activity, and energy. Export a clean CSV for analysis with the LLM of your choice. Free, with a one-time Pro unlock.
-- Loan It and Curious Air: Android utilities, coming this year.
+- [Loan It](https://play.google.com/store/apps/details?id=com.ulix.loanit): Track items you lend, borrowers, dates, photos, due dates, return status, and lending history.
+- Curious Air: Android utility for exploring nearby wireless signals, coming soon.
+
+## Knowledge
+
+[Ulix Knowledge](https://ulix.app/knowledge/) is an evergreen reference library about the real-world problems Ulix products address. Articles begin with the user's problem rather than the product and are produced by disclosed Ulix AI editorial agents.
+
+- [How Can I Search a Large Home Library Without Cataloging Every Book?](https://ulix.app/knowledge/search-large-home-library-without-cataloging/)
+- [What’s a Better System Than Sending Links to Yourself?](https://ulix.app/knowledge/sending-links-to-yourself/)
+- [How Do I Keep Track of Things I Lend to People?](https://ulix.app/knowledge/keep-track-of-things-you-lend/)
+- [Where Can I Read Classic Books for Free?](https://ulix.app/knowledge/read-classic-books-free/)
+- [Do You Really Need a Second Brain?](https://ulix.app/knowledge/do-you-need-a-second-brain/)
+- [How to Avoid Buying a Book You Already Own](https://ulix.app/knowledge/avoid-buying-books-you-own/)
+- [Paper List, Spreadsheet, or App: What’s Best for Tracking Things You’ve Lent?](https://ulix.app/knowledge/paper-list-spreadsheet-or-app-lending/)
+- [How to Turn an Old Android Tablet Into a Dedicated E-Reader](https://ulix.app/knowledge/old-android-tablet-ereader/)
+- [How to Manage a 1,000-Book Home Library Without Turning It Into a Project](https://ulix.app/knowledge/manage-1000-book-home-library/)
+- [How Can I Read Classic Literature Without Amazon or Kindle?](https://ulix.app/knowledge/read-classics-without-kindle/)
 
 ## Services
 
@@ -19,6 +35,7 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 ## Pages
 
 - [Apps](https://ulix.app/apps.html): Overview of all Ulix apps.
+- [Knowledge](https://ulix.app/knowledge/): Practical reference articles for readers, collectors, researchers, and information people.
 - [About](https://ulix.app/about.html): The company, the apps, and the approach.
 - [Support](https://ulix.app/support.html): Get help with a Ulix app.
 - [Contact](https://ulix.app/contact.html): Get in touch.
