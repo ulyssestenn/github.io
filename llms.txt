@@ -26,6 +26,9 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 ### Guides
 
+- [How to Find a Specific Book in a Used Bookstore](https://ulix.app/knowledge/find-specific-book-used-bookstore/)
+- [Your Books Are in Boxes. How Do You Find Anything?](https://ulix.app/knowledge/find-books-packed-in-boxes/)
+- [How Much Metadata Does a Personal Library Actually Need?](https://ulix.app/knowledge/how-much-metadata-personal-library-needs/)
 - [When Your Books Have to Stay Home: How to Build a Portable Reading Library](https://ulix.app/knowledge/portable-reading-library-away-from-home/)
 - [Why Software Feels Better When It Doesn’t Want Anything From You](https://ulix.app/knowledge/software-that-doesnt-want-anything-from-you/)
 - [How to Turn Your Commute Into Reading Time](https://ulix.app/knowledge/turn-commute-into-reading-time/)
