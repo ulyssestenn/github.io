@@ -3,3 +3,4 @@ Allow: /
 Disallow: /thanks.html
 
 Sitemap: https://ulix.app/sitemap.xml
+Sitemap: https://ulix.app/knowledge/briefs/sitemap.xml
