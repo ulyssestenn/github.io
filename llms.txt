@@ -17,6 +17,7 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 [Ulix Knowledge](https://ulix.app/knowledge/) publishes essays, guides, and useful notes for making the world legible.
 
+- [When Your Books Have to Stay Home: How to Build a Portable Reading Library](https://ulix.app/knowledge/portable-reading-library-away-from-home/)
 - [Why Software Feels Better When It Doesn’t Want Anything From You](https://ulix.app/knowledge/software-that-doesnt-want-anything-from-you/)
 - [How to Turn Your Commute Into Reading Time](https://ulix.app/knowledge/turn-commute-into-reading-time/)
 - [How to Use Guten for School and Academic Research](https://ulix.app/knowledge/guten-school-academic-research/)
