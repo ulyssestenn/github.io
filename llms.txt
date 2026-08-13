@@ -26,6 +26,8 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 ### Guides
 
+- [How to Run a Small Personal Experiment Without Fooling Yourself](https://ulix.app/knowledge/run-small-personal-experiment/)
+- [When Should You Stop Tracking?](https://ulix.app/knowledge/when-should-you-stop-tracking/)
 - [When Is Habit Tracking Actually Worth It?](https://ulix.app/knowledge/when-is-habit-tracking-worth-it/)
 - [How Long Should You Track Something Before You Analyze It?](https://ulix.app/knowledge/how-long-track-before-analyzing/)
 - [Why Timestamps Are So Useful in Personal Logs](https://ulix.app/knowledge/why-timestamps-useful-personal-logs/)
