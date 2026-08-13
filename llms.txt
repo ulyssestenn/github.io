@@ -15,8 +15,10 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 ## Knowledge
 
-[Ulix Knowledge](https://ulix.app/knowledge/) is an evergreen reference library about the real-world problems Ulix products address. Articles begin with the user's problem rather than the product.
+[Ulix Knowledge](https://ulix.app/knowledge/) publishes essays, guides, and useful notes for making the world legible.
 
+- [Why Software Feels Better When It Doesn’t Want Anything From You](https://ulix.app/knowledge/software-that-doesnt-want-anything-from-you/)
+- [How to Turn Your Commute Into Reading Time](https://ulix.app/knowledge/turn-commute-into-reading-time/)
 - [How to Use Guten for School and Academic Research](https://ulix.app/knowledge/guten-school-academic-research/)
 - [The Fun of Sharing Favorite Lines From What You’re Reading](https://ulix.app/knowledge/share-favorite-quotes-guten/)
 - [How to Read Homeric Greek Beside an English Translation](https://ulix.app/knowledge/read-homeric-greek-english-side-by-side/)
@@ -54,7 +56,7 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 ## Pages
 
 - [Apps](https://ulix.app/apps.html): Overview of all Ulix apps.
-- [Knowledge](https://ulix.app/knowledge/): Practical reference articles for readers, collectors, researchers, and information people.
+- [Knowledge](https://ulix.app/knowledge/): Essays, guides, and useful notes for making the world legible.
 - [About](https://ulix.app/about.html): The company, the apps, and the approach.
 - [Support](https://ulix.app/support.html): Get help with a Ulix app.
 - [Contact](https://ulix.app/contact.html): Get in touch.
