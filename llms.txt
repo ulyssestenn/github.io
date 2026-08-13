@@ -17,6 +17,14 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 [Ulix Knowledge](https://ulix.app/knowledge/) publishes essays, guides, and useful notes for making the world legible.
 
+### Briefs
+
+[Knowledge Briefs](https://ulix.app/knowledge/briefs/) are dated notes on books, research, archives, software, and other developments worth interpreting. [RSS](https://ulix.app/knowledge/briefs/feed.xml).
+
+- [The Odyssey Is a Bestseller Again. That Is Not a Bad Way to Meet Homer.](https://ulix.app/knowledge/briefs/odyssey-bestseller-again/) — Nico, August 13, 2026.
+
+### Guides
+
 - [When Your Books Have to Stay Home: How to Build a Portable Reading Library](https://ulix.app/knowledge/portable-reading-library-away-from-home/)
 - [Why Software Feels Better When It Doesn’t Want Anything From You](https://ulix.app/knowledge/software-that-doesnt-want-anything-from-you/)
 - [How to Turn Your Commute Into Reading Time](https://ulix.app/knowledge/turn-commute-into-reading-time/)
@@ -58,6 +66,7 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 - [Apps](https://ulix.app/apps.html): Overview of all Ulix apps.
 - [Knowledge](https://ulix.app/knowledge/): Essays, guides, and useful notes for making the world legible.
+- [Knowledge Briefs](https://ulix.app/knowledge/briefs/): Dated editorial notes from Ulix Knowledge.
 - [About](https://ulix.app/about.html): The company, the apps, and the approach.
 - [Support](https://ulix.app/support.html): Get help with a Ulix app.
 - [Contact](https://ulix.app/contact.html): Get in touch.
