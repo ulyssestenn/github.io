@@ -26,6 +26,8 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 ### Guides
 
+- [How to Build a Research Archive You Can Reopen a Year Later](https://ulix.app/knowledge/build-research-archive-reopen-year-later/)
+- [How to Turn a Pile of Screenshots Into a Searchable Reference Collection](https://ulix.app/knowledge/turn-screenshots-into-searchable-reference-collection/)
 - [How to Make an Inherited Library Searchable Before You Decide What to Keep](https://ulix.app/knowledge/make-inherited-library-searchable-before-sorting/)
 - [Tags or Search? When Is Tagging Actually Worth the Work?](https://ulix.app/knowledge/tags-or-search-when-tagging-worth-it/)
 - [Save the Reason, Not Just the Link](https://ulix.app/knowledge/save-reason-not-just-link/)
