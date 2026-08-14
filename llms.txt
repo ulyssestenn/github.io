@@ -26,6 +26,8 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 ### Guides
 
+- [How to Read a Difficult Book in 15-Minute Sessions Without Losing the Thread](https://ulix.app/knowledge/read-difficult-book-15-minute-sessions/)
+- [How Can You Tell Whether a Productivity System Is Actually Working?](https://ulix.app/knowledge/tell-productivity-system-working/)
 - [How to Run a Small Personal Experiment Without Fooling Yourself](https://ulix.app/knowledge/run-small-personal-experiment/)
 - [When Should You Stop Tracking?](https://ulix.app/knowledge/when-should-you-stop-tracking/)
 - [When Is Habit Tracking Actually Worth It?](https://ulix.app/knowledge/when-is-habit-tracking-worth-it/)
