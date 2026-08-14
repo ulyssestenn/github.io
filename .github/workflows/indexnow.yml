@@ -1,0 +1,137 @@
+name: Notify IndexNow
+
+on:
+  push:
+    branches:
+      - new
+    paths:
+      - '**/*.html'
+      - 'fc07d3e4cc67452bbb46e01b65538a9d.txt'
+      - '.github/workflows/indexnow.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out site
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Notify IndexNow
+        env:
+          BEFORE: ${{ github.event.before }}
+          SHA: ${{ github.sha }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import subprocess
+          import time
+          import urllib.error
+          import urllib.request
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+
+          HOST = "ulix.app"
+          BASE = f"https://{HOST}/"
+          KEY_FILE = "fc07d3e4cc67452bbb46e01b65538a9d.txt"
+          KEY = Path(KEY_FILE).read_text(encoding="utf-8").strip()
+          KEY_LOCATION = BASE + KEY_FILE
+          WORKFLOW_FILE = ".github/workflows/indexnow.yml"
+
+          def changed_files():
+              before = os.environ.get("BEFORE", "")
+              sha = os.environ.get("SHA", "HEAD")
+              if not before or set(before) == {"0"}:
+                  cmd = ["git", "diff-tree", "--root", "--no-commit-id", "--name-only", "-r", sha]
+              else:
+                  cmd = ["git", "diff", "--name-only", "--diff-filter=ACDMRT", before, sha]
+              return [p for p in subprocess.check_output(cmd, text=True).splitlines() if p]
+
+          def url_for_html(path):
+              if path == "index.html":
+                  return BASE
+              if path.endswith("/index.html"):
+                  return BASE + path[:-len("index.html")]
+              if path.endswith(".html"):
+                  return BASE + path
+              return None
+
+          def sitemap_urls():
+              urls = []
+              ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+              for filename in ("sitemap.xml", "knowledge/briefs/sitemap.xml"):
+                  path = Path(filename)
+                  if not path.exists():
+                      continue
+                  root = ET.parse(path).getroot()
+                  for loc in root.findall("sm:url/sm:loc", ns):
+                      if loc.text and loc.text.startswith(BASE):
+                          urls.append(loc.text.strip())
+              return urls
+
+          changed = changed_files() if os.environ.get("EVENT_NAME") == "push" else []
+          bootstrap = (
+              os.environ.get("EVENT_NAME") == "workflow_dispatch"
+              or KEY_FILE in changed
+              or WORKFLOW_FILE in changed
+          )
+
+          if bootstrap:
+              urls = sitemap_urls()
+          else:
+              urls = [u for u in (url_for_html(p) for p in changed) if u]
+
+          urls = list(dict.fromkeys(urls))
+          if not urls:
+              print("No public HTML URLs changed; nothing to submit.")
+              raise SystemExit(0)
+
+          # GitHub Pages can take a short time to publish a commit. Wait until
+          # IndexNow's public verification file is actually reachable.
+          for attempt in range(30):
+              try:
+                  with urllib.request.urlopen(KEY_LOCATION, timeout=15) as response:
+                      body = response.read().decode("utf-8").strip()
+                  if body == KEY:
+                      break
+              except Exception:
+                  pass
+              if attempt == 29:
+                  raise RuntimeError(f"IndexNow key file was not reachable at {KEY_LOCATION}")
+              time.sleep(10)
+
+          endpoint = "https://api.indexnow.org/indexnow"
+          for start in range(0, len(urls), 10000):
+              batch = urls[start:start + 10000]
+              payload = {
+                  "host": HOST,
+                  "key": KEY,
+                  "keyLocation": KEY_LOCATION,
+                  "urlList": batch,
+              }
+              request = urllib.request.Request(
+                  endpoint,
+                  data=json.dumps(payload).encode("utf-8"),
+                  headers={"Content-Type": "application/json; charset=utf-8"},
+                  method="POST",
+              )
+              try:
+                  with urllib.request.urlopen(request, timeout=30) as response:
+                      status = response.status
+                      body = response.read().decode("utf-8", errors="replace")
+              except urllib.error.HTTPError as exc:
+                  status = exc.code
+                  body = exc.read().decode("utf-8", errors="replace")
+
+              print(f"IndexNow response: {status} {body}".strip())
+              if status not in (200, 202):
+                  raise RuntimeError(f"IndexNow rejected the submission with HTTP {status}")
+              print(f"Submitted {len(batch)} URL(s) to IndexNow.")
+          PY
