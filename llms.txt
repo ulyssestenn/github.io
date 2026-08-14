@@ -26,6 +26,8 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 ### Guides
 
+- [Why Does Homer Keep Repeating Himself?](https://ulix.app/knowledge/why-homer-keeps-repeating-himself/)
+- [Why Do Greek Names Change Between Translations?](https://ulix.app/knowledge/why-greek-names-change-between-translations/)
 - [Why Is the Trojan Horse Not in the Iliad?](https://ulix.app/knowledge/why-trojan-horse-not-in-iliad/)
 - [Should You Read the Iliad or the Odyssey First?](https://ulix.app/knowledge/iliad-or-odyssey-first/)
 - [The Iliad Begins in the Tenth Year of the War. What Happened Before Book 1?](https://ulix.app/knowledge/what-happened-before-iliad-book-1/)
