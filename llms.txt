@@ -26,6 +26,8 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 ### Guides
 
+- [The Hidden Cost of Switching Apps Is Your Data](https://ulix.app/knowledge/hidden-cost-switching-apps-your-data/)
+- [What Does a $5-a-Month App Actually Cost?](https://ulix.app/knowledge/what-five-dollar-month-app-costs/)
 - [The Things You Lose Because You Lent Them Out](https://ulix.app/knowledge/things-you-lose-because-you-lent-them-out/)
 - [Why Put a Due Date on Something You’ve Lent to a Friend?](https://ulix.app/knowledge/why-due-date-lent-to-friend/)
 - [How to Lend a Kit Without Losing Half the Pieces](https://ulix.app/knowledge/lend-kit-without-losing-pieces/)
