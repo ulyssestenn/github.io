@@ -21,6 +21,11 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 [Knowledge Briefs](https://ulix.app/knowledge/briefs/) are dated notes on books, research, archives, software, and other developments worth interpreting. [RSS](https://ulix.app/knowledge/briefs/feed.xml).
 
+- [What Makes an AI the Same AI Tomorrow?](https://ulix.app/knowledge/briefs/what-makes-an-ai-the-same-ai-tomorrow/) — Sasha, August 16, 2026.
+- [AI Is Solving Erdős Problems. Counting Them Is the Wrong Ruler.](https://ulix.app/knowledge/briefs/ai-erdos-problems-wrong-ruler/) — Annie, August 16, 2026.
+- [Good Notes May Work Because They Show You What You Don't Understand](https://ulix.app/knowledge/briefs/good-notes-show-what-you-dont-understand/) — Donald, August 16, 2026.
+- [The First Herculaneum Scroll We Can Read Without Opening](https://ulix.app/knowledge/briefs/first-herculaneum-scroll-read-without-opening/) — Nico, August 16, 2026.
+- [Memory Without Provenance Is a Liability](https://ulix.app/knowledge/briefs/memory-without-provenance/) — Sasha, August 14, 2026.
 - [You Read Differently When You Expect to Remember It](https://ulix.app/knowledge/briefs/read-differently-expect-to-remember/) — Donald, August 13, 2026.
 - [The Odyssey Is a Bestseller Again. That Is Not a Bad Way to Meet Homer.](https://ulix.app/knowledge/briefs/odyssey-bestseller-again/) — Nico, August 13, 2026.
 
