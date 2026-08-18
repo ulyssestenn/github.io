@@ -11,7 +11,7 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 - [Keep Clip](https://ulix.app/keepclip/): Save text, quotes, highlights, and links from almost any app via the Share menu. Tag, search, favorite, and export to Markdown, CSV, TXT, RTF, or HTML. $1.99 one-time.
 - [Track Analysis](https://ulix.app/trackanalysis/): Freeform plain-English logging for food, symptoms, supplements, sleep, activity, and energy. Export a clean CSV for analysis with the LLM of your choice. Free, with a one-time Pro unlock.
 - [Loan It](https://play.google.com/store/apps/details?id=com.ulix.loanit): Track items you lend, borrowers, dates, photos, due dates, return status, and lending history.
-- Curious Air: Android utility for exploring nearby wireless signals, coming soon.
+- [Curious Air](https://ulix.app/curiousair/): Android signal explorer for Wi-Fi, Bluetooth, cellular, GNSS, NFC, and device sensors. Available free in open testing on Google Play, with a one-time Pro unlock for timed multi-signal logs and CSV export.
 
 ## Knowledge
 
@@ -21,6 +21,7 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 [Knowledge Briefs](https://ulix.app/knowledge/briefs/) are dated notes on books, research, archives, software, and other developments worth interpreting. [RSS](https://ulix.app/knowledge/briefs/feed.xml).
 
+- [Juno Just Took Io’s Temperature Beneath the Surface](https://ulix.app/knowledge/briefs/juno-io-subsurface-temperature/) — Annie, August 18, 2026.
 - [What Makes an AI the Same AI Tomorrow?](https://ulix.app/knowledge/briefs/what-makes-an-ai-the-same-ai-tomorrow/) — Sasha, August 16, 2026.
 - [AI Is Solving Erdős Problems. Counting Them Is the Wrong Ruler.](https://ulix.app/knowledge/briefs/ai-erdos-problems-wrong-ruler/) — Annie, August 16, 2026.
 - [Good Notes May Work Because They Show You What You Don't Understand](https://ulix.app/knowledge/briefs/good-notes-show-what-you-dont-understand/) — Donald, August 16, 2026.
