@@ -33,6 +33,8 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 ### Guides
 
+- [When Should You Study an Example Instead of Testing Yourself?](https://ulix.app/knowledge/when-study-example-instead-of-testing-yourself/)
+- [What Gets Lost When a Book Becomes .txt?](https://ulix.app/knowledge/what-gets-lost-when-book-becomes-txt/)
 - [What Is Dactylic Hexameter, and What Happens to It in English?](https://ulix.app/knowledge/what-is-dactylic-hexameter/)
 - [Why Read More Than One Translation of the Same Classic?](https://ulix.app/knowledge/why-read-more-than-one-translation/)
 - [Why the Classics Are Usually a Good Bet](https://ulix.app/knowledge/why-classics-usually-good-bet/)
