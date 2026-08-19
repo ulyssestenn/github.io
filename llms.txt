@@ -33,6 +33,10 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 ### Guides
 
+- [How to Make a Dense Classic Easier to Read on a Phone Screen](https://ulix.app/knowledge/make-dense-classic-easier-to-read-phone/)
+- [How to Build a Searchable Shelf-Photo Library in Ten Minutes](https://ulix.app/knowledge/searchable-shelf-photo-library-ten-minutes/)
+- [How to Photograph What You Lend So You Know What Should Come Back](https://ulix.app/knowledge/photograph-what-you-lend/)
+- [How to Save an Article Excerpt and Keep the Page Title and URL With It](https://ulix.app/knowledge/save-article-excerpt-title-url/)
 - [I Can't Find My Books](https://ulix.app/knowledge/i-cant-find-my-books/)
 - [How to Search Inside a Long Classic Without Flipping Through Chapters](https://ulix.app/knowledge/search-inside-long-classic-guten/)
 - [How to Search a Double-Shelved Bookcase Without Cataloging Both Rows](https://ulix.app/knowledge/search-double-shelved-bookcase/)
