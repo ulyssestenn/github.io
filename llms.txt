@@ -33,6 +33,10 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 ### Guides
 
+- [How to Open a Project Gutenberg Link Directly in Guten](https://ulix.app/knowledge/open-project-gutenberg-link-in-guten/)
+- [How to Search a DVD or Blu-ray Collection by Spine Text](https://ulix.app/knowledge/search-dvd-bluray-collection-by-spine-text/)
+- [How to Pick a Borrower From Contacts Without Giving an App Your Whole Address Book](https://ulix.app/knowledge/pick-borrower-without-address-book-access/)
+- [How to Use Tag Autocomplete to Keep a Large Archive Consistent](https://ulix.app/knowledge/use-tag-autocomplete-keep-archive-consistent/)
 - [How to Download a Weekend Reading Stack Before Going Offline](https://ulix.app/knowledge/download-weekend-reading-stack-offline/)
 - [How to Import Shelf Photos You Already Took Into Shelf Scan](https://ulix.app/knowledge/import-existing-shelf-photos-shelf-scan/)
 - [How to Scan a Book's ISBN Instead of Typing the Details](https://ulix.app/knowledge/scan-book-isbn-loan-it/)
