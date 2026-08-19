@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How to Find Clips You Saved From a Particular Source App — Ulix Knowledge</title>
+  <meta name="description" content="Keep Clip's global search includes the stored source-app field, so an app name can help retrieve clips that came from Chrome, Firefox, Guten, and other sources." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://ulix.app/knowledge/find-clips-by-source-app/" />
+  <meta name="theme-color" content="#0F0E0C" />
+  <meta property="og:type" content="article" /><meta property="og:site_name" content="Ulix" /><meta property="og:title" content="How to Find Clips You Saved From a Particular Source App" /><meta property="og:description" content="Search for the source app name when you remember where a clip came from but not the exact words you saved." /><meta property="og:url" content="https://ulix.app/knowledge/find-clips-by-source-app/" /><meta property="og:image" content="https://ulix.app/icons/keepclip.png" /><meta property="article:section" content="PKM" /><meta name="twitter:card" content="summary" />
+  <link rel="icon" href="/icons/favicon.ico" sizes="any" /><link rel="stylesheet" href="../../assets/ulix.css" /><link rel="stylesheet" href="../../assets/home.css" /><link rel="stylesheet" href="../knowledge.css" /><link rel="preload" as="font" type="font/woff2" href="../../assets/fonts/geist-latin.woff2" crossorigin /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Find Clips You Saved From a Particular Source App","mainEntityOfPage":"https://ulix.app/knowledge/find-clips-by-source-app/","articleSection":"PKM","author":{"@type":"Person","name":"Donald"},"about":{"@type":"SoftwareApplication","name":"Keep Clip","operatingSystem":"Android","url":"https://ulix.app/keepclip/"},"publisher":{"@type":"Organization","name":"Ulix LLC","url":"https://ulix.app/"}}</script>
+</head>
+<body class="home-page knowledge-page"><a href="#main" class="skip-link">Skip to content</a>
+<header class="site-header"><div class="container container--wide site-header__inner"><a href="../../index.html" class="site-brand"><img src="../../icons/favicon.png" alt="" class="site-brand__logo" width="64" height="64" /><span class="site-brand__name">ULIX</span></a><nav class="site-nav" aria-label="Primary"><a href="../../index.html" class="site-nav__link">Home</a><a href="../../apps.html" class="site-nav__link">Apps</a><a href="../../blog.html" class="site-nav__link">Blog</a><a href="../../about.html" class="site-nav__link">About</a><a href="../../contact.html" class="site-nav__link">Contact</a></nav><div class="site-header__actions"><a href="../" class="btn btn--primary btn--header">Knowledge →</a></div></div></header>
+<main id="main"><div class="article-shell"><p class="article-breadcrumbs"><a href="../">Ulix Knowledge</a> / PKM</p>
+<header class="article-header"><p class="article-header__meta">PKM · Keep Clip</p><h1>How to Find Clips You Saved From a Particular Source App</h1><p class="article-deck">Sometimes you do not remember the quotation. You remember that it came from Chrome, Firefox, Guten, or another app.</p><p class="article-byline">Donald</p></header>
+<article class="article-body">
+<p>A saved passage can be hard to retrieve when memory preserves the context better than the wording. You may remember reading it in a browser, copying it from Guten, or saving it from another app, while the actual sentence has become vague.</p>
+<p>Keep Clip stores a source-app field when it can identify the app that shared the content. Its normal search query includes that field, so typing the app name can retrieve clips associated with that source.</p>
+
+<h2>Search the app name you remember</h2>
+<p>If you remember that a clip came from Chrome, search <code>Chrome</code>. If it came from Guten, search <code>Guten</code>. Keep Clip's search checks the stored source-app name along with the clip text, title, URL, notes, tags, author, and other searchable fields.</p>
+<p>This is useful when provenance is the strongest clue you still have. The question becomes “where did I save it from?” rather than “what exact words did it contain?”</p>
+
+<h2>This is global search, not a dedicated source filter</h2>
+<p>There is an important distinction. Keep Clip does not currently expose a source-only filter. The search box looks across multiple fields at once.</p>
+<p>That means a search for <code>Chrome</code> can find a clip because its source app is Chrome, but it could also find a clip whose text, title, note, URL, or tag happens to contain the word Chrome. For common app names, most results may still be obvious, but the search is not an exact database filter on one field.</p>
+
+<h2>Source detection is best effort</h2>
+<p>Android apps do not all share content in the same way. Keep Clip tries several ways to identify the sending app, including calling activity, referrer information, intent metadata, recognizable patterns, and package resolution.</p>
+<p>Sometimes the source app cannot be identified correctly. If a particular clip has no useful source-app value, searching the app name will not recover it through that field. The title, URL, text, tags, or notes may still make it findable.</p>
+
+<h2>Use source search as one retrieval path, not the whole organization system</h2>
+<p>There is no need to tag every clip with the app it came from if Keep Clip has already recorded that information. Search can reuse metadata that was captured at the moment of saving.</p>
+<p>Tags are more valuable for distinctions the source itself does not provide: a project, research question, person, course, or topic that cuts across many apps.</p>
+
+<h2>Combine source memory with another clue</h2>
+<p>Because the search is global, a distinctive second word can narrow the result set naturally. If you remember a Chrome clip about Augustine, search for the clue that is most selective first and then refine based on what appears.</p>
+<p>The larger lesson is that provenance is useful metadata. Remembering where something came from can be enough to get back to it even when the quotation itself has faded.</p>
+
+<section class="product-note"><p class="product-note__label">The tool used in this workflow</p><h2>Keep Clip</h2><p>Keep Clip saves text and links shared from Android apps and records source context when available. Its global search includes clip text, clip name, source app, URL, title, context, author, notes, and tags, with additional date, tag, and favorites filters.</p><p><a href="../../keepclip/">See Keep Clip</a>.</p></section>
+</article>
+<aside class="related"><h2>Related</h2><a href="../save-article-excerpt-title-url/">How to Save an Article Excerpt and Keep the Page Title and URL With It</a><a href="../save-passage-without-opening-notes/">How to Save a Passage From Any Android App Without Opening a Notes App First</a><a href="../tags-or-search-when-tagging-worth-it/">Tags or Search? When Is Tagging Actually Worth the Work?</a></aside>
+</div></main>
+<footer class="site-footer"><div class="container"><p class="footer-credo">Find the <b>book</b> <span class="sep">·</span> Save the <b>passage</b> <span class="sep">·</span> Read the <b>classic</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p><div class="site-footer__grid"><div class="site-footer__brand"><img src="../../icons/ulixwordmarkclear.png" alt="Ulix — Precision tools for modern odysseys" class="footer-wordmark" width="1754" height="717" /></div><div class="site-footer__links"><a href="../../apps.html">Apps</a><a href="../">Knowledge</a><a href="../../about.html">About</a><a href="../../privacy.html">Privacy</a></div><div><div class="site-footer__copyright">© 2026 Ulix LLC. All rights reserved.</div></div></div></div></footer><script src="../../assets/ulix.js" defer></script></body></html>

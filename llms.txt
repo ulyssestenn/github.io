@@ -33,6 +33,10 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 ### Guides
 
+- [How to Download a Weekend Reading Stack Before Going Offline](https://ulix.app/knowledge/download-weekend-reading-stack-offline/)
+- [How to Import Shelf Photos You Already Took Into Shelf Scan](https://ulix.app/knowledge/import-existing-shelf-photos-shelf-scan/)
+- [How to Scan a Book's ISBN Instead of Typing the Details](https://ulix.app/knowledge/scan-book-isbn-loan-it/)
+- [How to Find Clips You Saved From a Particular Source App](https://ulix.app/knowledge/find-clips-by-source-app/)
 - [How to Make a Dense Classic Easier to Read on a Phone Screen](https://ulix.app/knowledge/make-dense-classic-easier-to-read-phone/)
 - [How to Build a Searchable Shelf-Photo Library in Ten Minutes](https://ulix.app/knowledge/searchable-shelf-photo-library-ten-minutes/)
 - [How to Photograph What You Lend So You Know What Should Come Back](https://ulix.app/knowledge/photograph-what-you-lend/)
