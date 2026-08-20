@@ -1,0 +1,35 @@
+@import url("./knowledge.css?v=20260820-2");
+
+/* Navigation-specific responsive refinements. The versioned import also
+   ensures newly introduced Knowledge components are not served with a stale
+   pre-navigation stylesheet after a deploy. */
+
+@media (max-width: 760px) {
+  .knowledge-section { margin-top: 48px; }
+  .knowledge-search { flex-direction: row; align-items: stretch; }
+  .knowledge-search button { min-height: 0; padding-inline: 16px; }
+}
+
+@media (max-width: 560px) {
+  .knowledge-home-hero { padding-bottom: 46px; }
+  .knowledge-section__head { display: block; margin-bottom: 18px; }
+  .knowledge-section__head p { margin-top: 7px; }
+
+  .browse-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .browse-card { min-height: 0; padding: 18px 16px; }
+  .browse-card__label { margin-bottom: 10px; font-size: 9px; }
+  .browse-card h3 { font-size: 21px; line-height: 1.08; }
+  .browse-card p { display: none; }
+
+  .app-links { flex-wrap: nowrap; overflow-x: auto; padding: 2px 0 6px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .app-links::-webkit-scrollbar { display: none; }
+  .app-link { flex: 0 0 auto; }
+}
+
+@media (max-width: 390px) {
+  .knowledge-search { gap: 8px; }
+  .knowledge-search input { padding-inline: 13px; }
+  .knowledge-search button { padding-inline: 13px; }
+  .browse-card { padding: 16px 14px; }
+  .browse-card h3 { font-size: 20px; }
+}
