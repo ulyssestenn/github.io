@@ -1,4 +1,12 @@
 (() => {
+  if (!document.querySelector('link[data-knowledge-navigation]')) {
+    const navigationStyles = document.createElement('link');
+    navigationStyles.rel = 'stylesheet';
+    navigationStyles.href = '../knowledge-navigation.css?v=20260820-2';
+    navigationStyles.dataset.knowledgeNavigation = 'true';
+    document.head.appendChild(navigationStyles);
+  }
+
   const cards = Array.from(document.querySelectorAll('[data-guide-card]'));
   const search = document.querySelector('#guide-search');
   const count = document.querySelector('#guide-results-count');
