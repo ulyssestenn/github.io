@@ -2,6 +2,7 @@
   const cards = Array.from(document.querySelectorAll('[data-guide-card]'));
   const search = document.querySelector('#guide-search');
   const count = document.querySelector('#guide-results-count');
+  const empty = document.querySelector('.guide-index-empty');
   const topicButtons = Array.from(document.querySelectorAll('[data-topic-filter]'));
   const appButtons = Array.from(document.querySelectorAll('[data-app-filter]'));
 
@@ -101,6 +102,7 @@
       if (show) visible += 1;
     });
     if (count) count.textContent = `${visible} guide${visible === 1 ? '' : 's'}`;
+    if (empty) empty.hidden = visible !== 0;
     setPressed();
     syncUrl();
   };
