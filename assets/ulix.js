@@ -1,10 +1,8 @@
 /* ========================================================================== 
    Ulix — shared site scripts
    --------------------------------------------------------------------------
-   Three independent modules, each self-contained in an IIFE:
-     1. Cloudflare Web Analytics
-     2. Mobile drawer  — opens/closes with focus management and aria-expanded
-     3. Product carousel (home page only) — dots, prev/next, pause, keyboard
+   Shared modules for analytics, global navigation, the mobile drawer,
+   and home-page interactive components.
    Modules bail out quietly when their DOM elements aren't on the page.
    ========================================================================== */
 
@@ -23,7 +21,29 @@
 })();
 
 
-/* 2. Mobile drawer
+/* 2. Global primary navigation
+   ========================================================================== */
+(function () {
+  var knowledgeHref = '/knowledge/';
+  var knowledgeGuidesHref = '/knowledge/guides/';
+
+  document.querySelectorAll('.site-nav .site-nav__link, #u-mobile .drawer__link').forEach(function (link) {
+    if ((link.textContent || '').trim().toLowerCase() !== 'blog') return;
+    link.textContent = 'Knowledge';
+    link.setAttribute('href', knowledgeHref);
+  });
+
+  if (window.location.pathname.indexOf('/knowledge/') === 0) {
+    var action = document.querySelector('.site-header__actions .btn--header');
+    if (action && (action.textContent || '').trim().toLowerCase().indexOf('knowledge') === 0) {
+      action.textContent = 'Browse guides →';
+      action.setAttribute('href', knowledgeGuidesHref);
+    }
+  }
+})();
+
+
+/* 3. Mobile drawer
    ========================================================================== */
 (function () {
   var toggle = document.getElementById('u-menu-btn');
@@ -86,7 +106,7 @@
 })();
 
 
-/* 3. Product carousel (home page)
+/* 4. Product carousel (home page)
    ========================================================================== */
 (function () {
   var track = document.getElementById('product-carousel-track');
@@ -246,7 +266,7 @@
 })();
 
 
-/* 4. Featured apps on the home page
+/* 5. Featured apps on the home page
    ========================================================================== */
 (function () {
   var grid = document.getElementById('featured-apps');
