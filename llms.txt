@@ -33,6 +33,8 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 ### Guides
 
+[All Knowledge Guides](https://ulix.app/knowledge/guides/) is the searchable evergreen index, with topic and app filters.
+
 - [How to Open a Project Gutenberg Link Directly in Guten](https://ulix.app/knowledge/open-project-gutenberg-link-in-guten/)
 - [How to Search a DVD or Blu-ray Collection by Spine Text](https://ulix.app/knowledge/search-dvd-bluray-collection-by-spine-text/)
 - [How to Pick a Borrower From Contacts Without Giving an App Your Whole Address Book](https://ulix.app/knowledge/pick-borrower-without-address-book-access/)
@@ -123,6 +125,7 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 - [Apps](https://ulix.app/apps.html): Overview of all Ulix apps.
 - [Knowledge](https://ulix.app/knowledge/): Essays, guides, and useful notes for making the world legible.
+- [Knowledge Guides](https://ulix.app/knowledge/guides/): Search and browse the evergreen guide library by topic or app.
 - [Knowledge Briefs](https://ulix.app/knowledge/briefs/): Dated editorial notes from Ulix Knowledge.
 - [About](https://ulix.app/about.html): The company, the apps, and the approach.
 - [Support](https://ulix.app/support.html): Get help with a Ulix app.
