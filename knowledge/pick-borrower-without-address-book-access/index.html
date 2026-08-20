@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How to Pick a Borrower From Contacts Without Giving an App Your Whole Address Book — Ulix Knowledge</title>
+  <meta name="description" content="Use Loan It's Android contact picker to choose one borrower without granting the app broad access to your address book." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://ulix.app/knowledge/pick-borrower-without-address-book-access/" />
+  <meta name="theme-color" content="#0F0E0C" />
+  <meta property="og:type" content="article" /><meta property="og:site_name" content="Ulix" /><meta property="og:title" content="How to Pick a Borrower From Contacts Without Giving an App Your Whole Address Book" /><meta property="og:description" content="Choose the person you need for the loan record without handing over the entire contacts database." /><meta property="og:url" content="https://ulix.app/knowledge/pick-borrower-without-address-book-access/" /><meta property="og:image" content="https://ulix.app/icons/loanit.png" /><meta property="article:section" content="Lending" /><meta name="twitter:card" content="summary" />
+  <link rel="icon" href="/icons/favicon.ico" sizes="any" /><link rel="stylesheet" href="../../assets/ulix.css" /><link rel="stylesheet" href="../../assets/home.css" /><link rel="stylesheet" href="../knowledge.css" /><link rel="preload" as="font" type="font/woff2" href="../../assets/fonts/geist-latin.woff2" crossorigin /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Pick a Borrower From Contacts Without Giving an App Your Whole Address Book","mainEntityOfPage":"https://ulix.app/knowledge/pick-borrower-without-address-book-access/","articleSection":"Lending","author":{"@type":"Person","name":"Annie"},"about":{"@type":"SoftwareApplication","name":"Loan It","operatingSystem":"Android","url":"https://play.google.com/store/apps/details?id=com.ulix.loanit"},"publisher":{"@type":"Organization","name":"Ulix LLC","url":"https://ulix.app/"}}</script>
+</head>
+<body class="home-page knowledge-page"><a href="#main" class="skip-link">Skip to content</a>
+<header class="site-header"><div class="container container--wide site-header__inner"><a href="../../index.html" class="site-brand"><img src="../../icons/favicon.png" alt="" class="site-brand__logo" width="64" height="64" /><span class="site-brand__name">ULIX</span></a><nav class="site-nav" aria-label="Primary"><a href="../../index.html" class="site-nav__link">Home</a><a href="../../apps.html" class="site-nav__link">Apps</a><a href="../../blog.html" class="site-nav__link">Blog</a><a href="../../about.html" class="site-nav__link">About</a><a href="../../contact.html" class="site-nav__link">Contact</a></nav><div class="site-header__actions"><a href="../" class="btn btn--primary btn--header">Knowledge →</a></div></div></header>
+<main id="main"><div class="article-shell"><p class="article-breadcrumbs"><a href="../">Ulix Knowledge</a> / Lending</p>
+<header class="article-header"><p class="article-header__meta">Lending · Loan It</p><h1>How to Pick a Borrower From Contacts Without Giving an App Your Whole Address Book</h1><p class="article-deck">A lending record needs one person's name. It does not need unrestricted access to everyone you know.</p><p class="article-byline">Annie</p></header>
+<article class="article-body">
+<p>Contact access is a good example of permissions getting larger than the task. If you are recording that Maya borrowed the drill, the app needs a way to identify Maya. That does not automatically justify reading every contact stored on the phone.</p>
+<p>Loan It uses Android's scoped contact picker for this job. You choose the contact through the system picker, and Loan It receives the selected contact for the loan record rather than getting general access to browse the address book.</p>
+<h2>Tap the borrower contact button</h2>
+<p>When you create or edit a loan, the borrower field can be filled manually or through the contact picker. Choosing the contact option opens Android's own contact-selection interface.</p>
+<p>Select the person you want. Loan It resolves the chosen contact's name and uses that person in the loan record.</p>
+<h2>The permission matches the task</h2>
+<p>This is different from asking for broad contacts permission and then reading the whole database inside the app. The system picker mediates the choice. You decide which contact is handed over.</p>
+<p>For a lending tracker, that narrower scope makes sense. The app needs the borrower attached to this record. It does not need a social graph.</p>
+<h2>You can still type a name</h2>
+<p>The contact picker is a convenience, not a requirement. If the borrower is not in your contacts, or if you simply prefer not to use the picker, enter the name directly.</p>
+<p>That flexibility matters because a borrower record is not supposed to become a miniature CRM. The useful information is usually just enough to answer who has the item and to group that person's lending history.</p>
+<h2>Why keep a link to the chosen contact?</h2>
+<p>When you select a saved contact, Loan It can retain a device-specific reference to that chosen contact along with the borrower name. That helps preserve the association on the device without turning the app into a copy of the whole address book.</p>
+<p>Device-specific contact links are not treated as portable data. Loan It's export and import system deliberately discards contact references that cannot be restored safely on another device, while preserving the borrower name in the portable loan record.</p>
+<h2>This is a useful model for privacy-sensitive app design</h2>
+<p>Permissions are often discussed as all-or-nothing choices: either an app gets contacts access or it does not. Modern Android can support a better pattern for some tasks: let the operating system expose the one thing the user deliberately selected.</p>
+<p>The question is not whether contact information is useful. It plainly is. The question is how much access the task actually requires.</p>
+<section class="product-note"><p class="product-note__label">The tool used in this workflow</p><h2>Loan It</h2><p>Loan It tracks physical items you lend, including the borrower, borrowed and due dates, photos, return status, search, and lending history. Its borrower picker uses Android's scoped contact picker so you can select a person without granting broad address-book access.</p><p><a href="https://play.google.com/store/apps/details?id=com.ulix.loanit">See Loan It on Google Play</a>.</p></section>
+</article>
+<aside class="related"><h2>Related</h2><a href="../who-has-my-tools/">How to Answer “Who Has My Tools Right Now?”</a><a href="../keep-track-of-things-you-lend/">How Do I Keep Track of Things I Lend to People?</a><a href="../hidden-cost-switching-apps-your-data/">The Hidden Cost of Switching Apps Is Your Data</a></aside>
+</div></main>
+<footer class="site-footer"><div class="container"><p class="footer-credo">Find the <b>book</b> <span class="sep">·</span> Save the <b>passage</b> <span class="sep">·</span> Read the <b>classic</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p><div class="site-footer__grid"><div class="site-footer__brand"><img src="../../icons/ulixwordmarkclear.png" alt="Ulix — Precision tools for modern odysseys" class="footer-wordmark" width="1754" height="717" /></div><div class="site-footer__links"><a href="../../apps.html">Apps</a><a href="../">Knowledge</a><a href="../../about.html">About</a><a href="../../privacy.html">Privacy</a></div><div><div class="site-footer__copyright">© 2026 Ulix LLC. All rights reserved.</div></div></div></div></footer><script src="../../assets/ulix.js" defer></script></body></html>
