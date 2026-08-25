@@ -37,6 +37,13 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 [All Knowledge Guides](https://ulix.app/knowledge/guides/) is the searchable evergreen index, with topic and app filters.
 
+- [How to Make a Homer Quotation Image Without Stripping Away Its Context](https://ulix.app/knowledge/homer-quotation-image-context/)
+- [How to Design a Multi-Sensor Logging Session Without Creating Useless Data](https://ulix.app/knowledge/design-multi-sensor-logging-session/)
+- [Save the Quote and the Link Together: What Context Should Travel With a Clip?](https://ulix.app/knowledge/save-quote-and-link-together-context/)
+- [Prose First or Poetry First? A Practical Way Into Homer](https://ulix.app/knowledge/prose-first-or-poetry-first-homer/)
+- [How to Build a Reading Collection Around a Question Instead of a Genre](https://ulix.app/knowledge/reading-collection-around-question/)
+- [How to Search Inside a Classic When You Remember the Idea but Not the Page](https://ulix.app/knowledge/search-inside-classic-remember-idea-not-page/)
+- [Live Mode or Library Mode: Which Kind of Shelf Search Are You Actually Doing?](https://ulix.app/knowledge/shelf-scan-live-mode-or-library-mode/)
 - [How Many Shelf Photos Do You Need for a Searchable Home Library?](https://ulix.app/knowledge/how-many-shelf-photos-searchable-library/)
 - [How to Capture Something Now Without Deciding Where It Belongs Yet](https://ulix.app/knowledge/capture-now-decide-where-later/)
 - [When Should a Saved Link Become a Note?](https://ulix.app/knowledge/when-saved-link-becomes-note/)
