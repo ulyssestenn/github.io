@@ -1,0 +1,71 @@
+{
+  "lastmod": "2026-08-24",
+  "guides": [
+    {
+      "slug": "build-daily-reading-goal-survives-bad-week",
+      "author": "Donald",
+      "section": "Reading & learning",
+      "app_slug": "guten",
+      "related": [
+        {"slug": "read-difficult-book-15-minute-sessions", "title": "How to Read a Difficult Book in 15-Minute Sessions Without Losing the Thread"},
+        {"slug": "download-weekend-reading-stack-offline", "title": "How to Download a Weekend Reading Stack Before Going Offline"},
+        {"slug": "make-dense-classic-easier-to-read-phone", "title": "How to Make a Dense Classic Easier to Read on a Phone Screen"}
+      ]
+    },
+    {
+      "slug": "use-reading-timer-without-productivity-contest",
+      "author": "Donald",
+      "section": "Reading & learning",
+      "app_slug": "guten",
+      "related": [
+        {"slug": "read-difficult-book-15-minute-sessions", "title": "How to Read a Difficult Book in 15-Minute Sessions Without Losing the Thread"},
+        {"slug": "tell-productivity-system-working", "title": "How Can You Tell Whether a Productivity System Is Actually Working?"},
+        {"slug": "download-weekend-reading-stack-offline", "title": "How to Download a Weekend Reading Stack Before Going Offline"}
+      ]
+    },
+    {
+      "slug": "use-read-aloud-without-background-noise",
+      "author": "Donald",
+      "section": "Reading & learning",
+      "app_slug": "guten",
+      "related": [
+        {"slug": "turn-commute-into-reading-time", "title": "How to Turn Your Commute Into Reading Time"},
+        {"slug": "make-dense-classic-easier-to-read-phone", "title": "How to Make a Dense Classic Easier to Read on a Phone Screen"},
+        {"slug": "read-difficult-book-15-minute-sessions", "title": "How to Read a Difficult Book in 15-Minute Sessions Without Losing the Thread"}
+      ]
+    },
+    {
+      "slug": "back-up-shelf-scan-library-before-changing-phones",
+      "author": "Sasha",
+      "section": "Books & libraries",
+      "app_slug": "shelf-scan",
+      "related": [
+        {"slug": "searchable-shelf-photo-library-ten-minutes", "title": "How to Build a Searchable Shelf-Photo Library in Ten Minutes"},
+        {"slug": "import-existing-shelf-photos-shelf-scan", "title": "How to Import Shelf Photos You Already Took Into Shelf Scan"},
+        {"slug": "i-cant-find-my-books", "title": "I Can't Find My Books"}
+      ]
+    },
+    {
+      "slug": "keep-bookmark-archive-local",
+      "author": "Sasha",
+      "section": "PKM",
+      "app_slug": "keep-clip",
+      "related": [
+        {"slug": "save-reason-not-just-link", "title": "Save the Reason, Not Just the Link"},
+        {"slug": "digital-commonplace-book-android", "title": "How to Build a Digital Commonplace Book on Android"},
+        {"slug": "pkm-without-cloud", "title": "How to Build a Personal Knowledge System Without Putting It in the Cloud"}
+      ]
+    },
+    {
+      "slug": "recurring-events-one-tap-stacks",
+      "author": "Annie",
+      "section": "Personal data",
+      "app_slug": "track-analysis",
+      "related": [
+        {"slug": "why-timestamps-useful-personal-logs", "title": "Why Timestamps Are So Useful in Personal Logs"},
+        {"slug": "how-long-track-before-analyzing", "title": "How Long Should You Track Something Before You Analyze It?"},
+        {"slug": "run-small-personal-experiment", "title": "How to Run a Small Personal Experiment Without Fooling Yourself"}
+      ]
+    }
+  ]
+}
