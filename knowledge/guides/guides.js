@@ -64,11 +64,8 @@
       'pick-borrower-without-address-book-access','scan-book-isbn-loan-it','photograph-what-you-lend','who-has-my-tools','things-you-lose-because-you-lent-them-out','why-due-date-lent-to-friend','lend-kit-without-losing-pieces','small-lending-closet-tools-games-equipment','manage-tiny-library-android-phone','lend-books-without-cataloging-library','keep-track-of-things-you-lend','paper-list-spreadsheet-or-app-lending'
     ]),
     'track-analysis': new Set([
-      'tell-productivity-system-working','run-small-personal-experiment','when-should-you-stop-tracking','when-is-habit-tracking-worth-it','how-long-track-before-analyzing','why-timestamps-useful-personal-logs','symptom-food-diary-for-doctor-track-analysis','personal-log-ai-patterns','what-to-track-useful-personal-data'
+      'tell-productivity-system-working','run-small-personal-experiment','when-should-you-stop-tracking','when-is-habit-tracking-worth-it','how-long-track-before-analyzing','why-timestamps-useful-personal-logs','symptom-food-diary-for-doctor-track-analysis','personal-log-ai-patterns','what-to-track-useful-personal-data','recurring-events-one-tap-stacks'
     ])
-    'track-analysis': new Set([
-      'recurring-events-one-tap-stacks'
-    ]),
   };
 
   const params = new URLSearchParams(window.location.search);
