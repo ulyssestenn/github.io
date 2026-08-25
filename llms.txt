@@ -37,6 +37,12 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 [All Knowledge Guides](https://ulix.app/knowledge/guides/) is the searchable evergreen index, with topic and app filters.
 
+- [How Many Shelf Photos Do You Need for a Searchable Home Library?](https://ulix.app/knowledge/how-many-shelf-photos-searchable-library/)
+- [How to Capture Something Now Without Deciding Where It Belongs Yet](https://ulix.app/knowledge/capture-now-decide-where-later/)
+- [When Should a Saved Link Become a Note?](https://ulix.app/knowledge/when-saved-link-becomes-note/)
+- [How to Review a Week's Captures Without Turning Review Into Maintenance](https://ulix.app/knowledge/review-week-captures-without-maintenance/)
+- [How to Preserve Highlights Before Removing an Ebook From Your Phone](https://ulix.app/knowledge/preserve-highlights-before-removing-ebook/)
+- [How to Move Highlights and Notes Out of Your Ebook Reader](https://ulix.app/knowledge/move-highlights-notes-out-of-ebook-reader/)
 - [When Should Recurring Events Become One-Tap Stacks Instead of Free Text?](https://ulix.app/knowledge/recurring-events-one-tap-stacks/)
 - [How to Keep a Bookmark Archive Local Instead of Tying It to One Browser](https://ulix.app/knowledge/keep-bookmark-archive-local/)
 - [How to Back Up a Shelf Scan Library Before Changing Phones](https://ulix.app/knowledge/back-up-shelf-scan-library-before-changing-phones/)
