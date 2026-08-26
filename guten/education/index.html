@@ -3,21 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Guten for Education | Free Classic Books & Study Tools for Students</title>
-  <meta name="description" content="Guten helps students discover, download, read offline, highlight, annotate, and study thousands of public-domain books from Project Gutenberg on Android. Core reading and study tools are free." />
+  <title>Guten for Education | Free Classic Books for Students</title>
+  <meta name="description" content="Guten gives students free Android access to Project Gutenberg books with offline reading, highlights, notes, search, bookmarks, reading goals, and more." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="canonical" href="https://ulix.app/guten/education/" />
   <meta name="theme-color" content="#0F0E0C" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ulix" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="Guten for Education | Classic books, ready for students" />
   <meta property="og:description" content="Read, highlight, take notes, and study thousands of classic books at no cost. Offline reading, no account required, and no advertising." />
   <meta property="og:url" content="https://ulix.app/guten/education/" />
-  <meta property="og:image" content="https://ulix.app/assets/guten/gutenshare.jpg" />
+  <meta property="og:image" content="https://ulix.app/assets/guten/education/guten-education-share.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Guten for Education: thousands of classic books free for students, shown with real Guten app screens" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Guten for Education" />
   <meta name="twitter:description" content="Free core reading and study tools for thousands of Project Gutenberg books on Android." />
-  <meta name="twitter:image" content="https://ulix.app/assets/guten/gutenshare.jpg" />
+  <meta name="twitter:image" content="https://ulix.app/assets/guten/education/guten-education-share.jpg" />
+  <meta name="twitter:image:alt" content="Guten for Education: thousands of classic books free for students, shown with real Guten app screens" />
 
   <link rel="icon" href="/icons/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
@@ -32,20 +38,59 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Guten for Education",
-    "url": "https://ulix.app/guten/education/",
-    "description": "A guide for schools, libraries, ministries, universities, and literacy programs that want to recommend Guten, an Android reader for public-domain books from Project Gutenberg with a free core reading and study experience.",
-    "isPartOf": {"@type": "WebSite", "name": "Ulix", "url": "https://ulix.app/"},
-    "about": {
-      "@type": "SoftwareApplication",
-      "name": "Guten",
-      "operatingSystem": "Android",
-      "applicationCategory": "BookApplication",
-      "isAccessibleForFree": true,
-      "url": "https://ulix.app/guten/",
-      "downloadUrl": "https://play.google.com/store/apps/details?id=com.bhunt.guten"
-    }
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://ulix.app/guten/education/#webpage",
+        "url": "https://ulix.app/guten/education/",
+        "name": "Guten for Education | Free Classic Books for Students",
+        "description": "Guten gives students free Android access to Project Gutenberg books with offline reading, highlights, notes, search, bookmarks, reading goals, and more.",
+        "inLanguage": "en",
+        "dateModified": "2026-08-26",
+        "isPartOf": {"@type": "WebSite", "@id": "https://ulix.app/#website", "name": "Ulix", "url": "https://ulix.app/"},
+        "about": {"@id": "https://ulix.app/guten/#software"},
+        "audience": [
+          {"@type": "EducationalAudience", "educationalRole": "student"},
+          {"@type": "EducationalAudience", "educationalRole": "teacher"}
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://ulix.app/guten/#software",
+        "name": "Guten",
+        "url": "https://ulix.app/guten/",
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.bhunt.guten",
+        "operatingSystem": "Android",
+        "applicationCategory": "BookApplication",
+        "isAccessibleForFree": true,
+        "description": "An Android reader for Project Gutenberg books with free offline reading, bookmarks, highlights, notes, in-book search, reading goals, backup and Basic Share Studio.",
+        "featureList": [
+          "Browse and download Project Gutenberg books",
+          "Offline reading",
+          "Bookmarks, highlights and notes",
+          "Per-book annotation review and search",
+          "Search within books and definition lookup",
+          "Customizable typography and reader themes",
+          "Reading goals, streaks and statistics",
+          "Backup and restore",
+          "Basic Share Studio quote cards"
+        ],
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Core reading and study features are free. Optional Premium is a one-time in-app purchase for additional tools."},
+        "publisher": {"@type": "Organization", "name": "Ulix LLC", "url": "https://ulix.app/"}
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ulix.app/guten/education/#faq",
+        "mainEntity": [
+          {"@type": "Question", "name": "Is Guten free?", "acceptedAnswer": {"@type": "Answer", "text": "Core reading and study features are free. Students can browse, download, read, bookmark, highlight, take notes, search, set reading goals, use Basic Share Studio, back up their data, and read offline without buying Premium."}},
+          {"@type": "Question", "name": "Can students highlight and take notes for free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Highlighting and note-taking are free, as is reviewing notes and highlights within an individual book. Premium adds the cross-library Notes Manager and dedicated annotation-export formats."}},
+          {"@type": "Question", "name": "Do students need an account?", "acceptedAnswer": {"@type": "Answer", "text": "No account is required to use Guten. Downloading the app through Google Play uses the student's normal Google Play environment."}},
+          {"@type": "Question", "name": "Does Guten contain advertising?", "acceptedAnswer": {"@type": "Answer", "text": "No. Guten has no advertising network and does not use reading behavior for advertising or behavioral marketing."}},
+          {"@type": "Question", "name": "Does Guten work offline?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. After a book has been downloaded, it can be read without a continuous internet connection."}},
+          {"@type": "Question", "name": "Does a school need a license or institutional account?", "acceptedAnswer": {"@type": "Answer", "text": "No. A school, library, university, ministry, or literacy program can simply recommend Guten's Google Play listing to students. There is no institutional setup required for the free reading experience."}}
+        ]
+      }
+    ]
   }
   </script>
 
@@ -62,13 +107,13 @@
     .cover-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:16px;margin-top:38px}.cover-card{text-decoration:none;min-width:0}.cover-frame{aspect-ratio:2/3;overflow:hidden;border-radius:10px;background:#e9e1d2;border:1px solid var(--rule);box-shadow:0 12px 26px rgba(55,46,31,.12)}.cover-frame img{width:100%;height:100%;object-fit:cover}.cover-meta{padding-top:12px}.cover-age{font-size:10px;font-weight:850;text-transform:uppercase;letter-spacing:.08em;color:var(--blue)}.cover-title{font-size:14px;font-weight:800;line-height:1.25;margin-top:4px}.cover-author{font-size:12px;color:var(--muted);line-height:1.3;margin-top:3px}.cover-note{margin-top:16px!important;color:var(--muted);font-size:12px}.boh{margin-top:28px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 20px;border-radius:16px;background:var(--warm);border:1px solid #e6d4b3}.boh p{color:#594c36;font-size:14px;line-height:1.48}.boh a{color:var(--blue-dark);font-weight:800;white-space:nowrap}.legal-note{margin-top:20px!important;color:var(--muted);font-size:12px;line-height:1.5}
     .lowdata{display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:center}.lowdata__visual{min-height:380px;border-radius:26px;background:linear-gradient(135deg,#dcecf1,#f2e4c4);position:relative;overflow:hidden;border:1px solid rgba(23,23,19,.08)}.lowdata__visual .shot{width:190px;left:12%;top:40px;right:auto;transform:rotate(-3deg)}.download-mark{position:absolute;right:14%;top:34%;width:122px;height:122px;border-radius:50%;background:var(--paper);display:grid;place-items:center;font-size:42px;color:var(--blue-dark);box-shadow:0 15px 40px rgba(23,23,19,.12)}.stats{display:flex;gap:28px;flex-wrap:wrap;margin-top:26px}.stat{border-left:3px solid var(--gold);padding-left:13px}.stat strong{display:block;font-family:var(--serif);font-size:28px;font-weight:500}.stat span{display:block;color:var(--muted);font-size:12px;margin-top:2px}
     .privacy{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:36px}.privacy-card{padding:28px;border-radius:20px;border:1px solid #cfded6;background:rgba(255,255,255,.65)}.privacy-card h3{font-family:var(--serif);font-size:28px;font-weight:500;margin-bottom:8px}.privacy-card p{color:var(--muted);line-height:1.55;font-size:15px}.privacy-card a{display:inline-block;margin-top:14px;color:var(--blue-dark);font-size:14px;font-weight:800}
-    .compare{display:grid;grid-template-columns:1.7fr .68fr;gap:18px;margin-top:38px;align-items:stretch}.compare__side{border-radius:24px;border:1px solid var(--rule);padding:30px;background:var(--paper)}.compare__side--premium{background:#1b1915;color:#fff;border-color:#1b1915}.compare__side--premium .compare__title h3{color:#fff!important}.compare__title{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:22px}.compare__title h3{font-family:var(--serif);font-size:34px;font-weight:500}.pill{font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:850;color:var(--green);background:var(--green-pale);border-radius:999px;padding:7px 10px}.compare__side--premium .pill{color:#f4d67c;background:rgba(244,214,124,.12)}.checks{display:grid;grid-template-columns:repeat(3,1fr);gap:10px 16px}.checks li{display:flex;gap:8px;align-items:flex-start;font-size:13px;line-height:1.4}.checks li::before{content:'✓';color:var(--green);font-weight:900}.premium-list{display:grid;gap:14px}.premium-list li{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.4;color:rgba(255,255,255,.83)}.premium-list li::before{content:'◇';color:#f0c852;font-weight:900}.premium-note{margin-top:24px!important;color:rgba(255,255,255,.78);font-size:12px;line-height:1.5}
+    .compare{display:grid;grid-template-columns:1.7fr .68fr;gap:18px;margin-top:38px;align-items:stretch}.compare__side{border-radius:24px;border:1px solid var(--rule);padding:30px;background:var(--paper)}.compare__side--premium{background:#1b1915;color:#fff;border-color:#1b1915}.compare__side--premium .compare__title h3{color:#fff!important}.compare__title{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:22px}.compare__title h3{font-family:var(--serif);font-size:34px;font-weight:500}.pill{font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:850;color:var(--green);background:var(--green-pale);border-radius:999px;padding:7px 10px}.compare__side--premium .pill{color:#f4d67c;background:rgba(244,214,124,.12)}.checks{columns:3;column-gap:28px}.checks li{display:flex;gap:8px;align-items:flex-start;font-size:13px;line-height:1.4;break-inside:avoid;margin-bottom:10px}.checks li::before{content:'✓';color:var(--green);font-weight:900}.premium-list{display:grid;gap:14px}.premium-list li{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.4;color:rgba(255,255,255,.83)}.premium-list li::before{content:'◇';color:#f0c852;font-weight:900}.premium-note{margin-top:24px!important;color:rgba(255,255,255,.78);font-size:12px;line-height:1.5}
     .screens{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}.screen{border-radius:24px;background:#171713;overflow:hidden;position:relative;padding:34px 34px 88px;min-height:550px;display:flex;align-items:flex-start;justify-content:center}.screen img{width:min(230px,80%);border-radius:18px;box-shadow:0 18px 46px rgba(0,0,0,.34)}.screen figcaption{position:absolute;left:26px;right:26px;bottom:24px;color:#fff}.screen figcaption strong{display:block;font-size:15px;margin-bottom:4px}.screen figcaption span{color:rgba(255,255,255,.65);font-size:12px;line-height:1.4}
     .faq{margin-top:34px;border-top:1px solid var(--rule)}.faq details{border-bottom:1px solid var(--rule);padding:0}.faq summary{cursor:pointer;font-weight:760;font-size:16px;padding:20px 2px;list-style:none}.faq summary::-webkit-details-marker{display:none}.faq details p{padding:0 2px 20px;max-width:820px;color:var(--muted);line-height:1.58}.faq details a{color:var(--blue-dark);font-weight:750}
     .final{padding:84px 0;text-align:center;background:#171713;color:#fff}.final h2{font-family:var(--serif);font-size:clamp(44px,5vw,70px);font-weight:500;line-height:1;max-width:850px;margin:0 auto;color:#fff!important}.final p{max-width:720px;margin:18px auto 0;color:rgba(255,255,255,.82);font-size:17px;line-height:1.55}.final .button{margin-top:28px;background:#e5b83a;color:#171713!important;border-color:#e5b83a}.final__ios{font-size:12px!important;margin-top:12px!important}
     .edu-page .site-footer{background:#0f0e0c;color:rgba(244,239,230,.72);border-top-color:rgba(244,239,230,.12)}.edu-page .site-footer__brand-name,.edu-page .site-footer__links a{color:#f4efe6}.edu-page .site-footer__tag,.edu-page .site-footer__copyright{color:rgba(244,239,230,.78)}.edu-page .newsletter__label{color:#f4efe6}
-    @media(max-width:1080px){.hero__grid{grid-template-columns:1fr}.hero__art{min-height:520px;max-width:620px;width:100%;margin:0 auto}.trust__grid{grid-template-columns:repeat(3,1fr)}.trust__item:nth-child(3){border-right:0}.institutions{grid-template-columns:repeat(2,1fr)}.cover-grid{grid-template-columns:repeat(4,1fr)}.compare{grid-template-columns:1fr}.checks{grid-template-columns:repeat(2,1fr)}.screens{grid-template-columns:repeat(3,1fr)}.lowdata{grid-template-columns:1fr}.highlights{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:720px){.edu-shell{width:min(100% - 28px,1180px)}.hero{padding:56px 0 44px}.hero h1{font-size:52px}.hero__lead{font-size:17px}.hero__art{min-height:390px}.shot{width:205px;border-radius:20px}.shot--back{left:0;top:55px}.shot--front{right:0}.trust__grid{grid-template-columns:1fr 1fr}.trust__item{min-height:86px;border-bottom:1px solid var(--rule)}.trust__item:nth-child(odd){border-right:1px solid var(--rule)}.trust__item:nth-child(even){border-right:0}.trust__item:last-child{grid-column:1/-1}.section{padding:62px 0}.highlights,.institutions,.privacy,.screens{grid-template-columns:1fr}.cover-grid{grid-template-columns:repeat(2,1fr)}.checks{grid-template-columns:1fr}.compare__side{padding:22px}.boh{align-items:flex-start;flex-direction:column}.screen{min-height:500px}.download-mark{width:90px;height:90px;font-size:32px}.edu-page .site-footer__grid{grid-template-columns:1fr}}
+    @media(max-width:1080px){.hero__grid{grid-template-columns:1fr}.hero__art{min-height:520px;max-width:620px;width:100%;margin:0 auto}.trust__grid{grid-template-columns:repeat(3,1fr)}.trust__item:nth-child(3){border-right:0}.institutions{grid-template-columns:repeat(2,1fr)}.cover-grid{grid-template-columns:repeat(4,1fr)}.compare{grid-template-columns:1fr}.checks{columns:2}.screens{grid-template-columns:repeat(3,1fr)}.lowdata{grid-template-columns:1fr}.highlights{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:720px){.edu-shell{width:min(100% - 28px,1180px)}.hero{padding:56px 0 44px}.hero h1{font-size:52px}.hero__lead{font-size:17px}.hero__art{min-height:390px}.shot{width:205px;border-radius:20px}.shot--back{left:0;top:55px}.shot--front{right:0}.trust__grid{grid-template-columns:1fr 1fr}.trust__item{min-height:86px;border-bottom:1px solid var(--rule)}.trust__item:nth-child(odd){border-right:1px solid var(--rule)}.trust__item:nth-child(even){border-right:0}.trust__item:last-child{grid-column:1/-1}.section{padding:62px 0}.highlights,.institutions,.privacy,.screens{grid-template-columns:1fr}.cover-grid{grid-template-columns:repeat(2,1fr)}.checks{columns:1}.compare__side{padding:22px}.boh{align-items:flex-start;flex-direction:column}.screen{min-height:500px}.download-mark{width:90px;height:90px;font-size:32px}.edu-page .site-footer__grid{grid-template-columns:1fr}}
   </style>
 </head>
 
