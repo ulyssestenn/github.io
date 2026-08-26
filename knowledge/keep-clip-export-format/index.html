@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Markdown, CSV, HTML, RTF, or Plain Text: Which Keep Clip Export Should You Use? — Ulix Knowledge</title><meta name="description" content="There is no best export format. There is only a best format for what you plan to do next." /><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" /><link rel="canonical" href="https://ulix.app/knowledge/keep-clip-export-format/" /><meta name="theme-color" content="#0F0E0C" />
+<meta property="og:type" content="article" /><meta property="og:site_name" content="Ulix" /><meta property="og:title" content="Markdown, CSV, HTML, RTF, or Plain Text: Which Keep Clip Export Should You Use?" /><meta property="og:description" content="There is no best export format. There is only a best format for what you plan to do next." /><meta property="og:url" content="https://ulix.app/knowledge/keep-clip-export-format/" /><meta property="og:image" content="https://ulix.app/icons/keepclip.png" /><meta property="article:section" content="PKM" /><meta name="twitter:card" content="summary" />
+<link rel="icon" href="/icons/favicon.ico" sizes="any" /><link rel="stylesheet" href="../../assets/ulix.css" /><link rel="stylesheet" href="../../assets/home.css" /><link rel="stylesheet" href="../knowledge.css" /><link rel="preload" as="font" type="font/woff2" href="../../assets/fonts/geist-latin.woff2" crossorigin /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" /><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Markdown, CSV, HTML, RTF, or Plain Text: Which Keep Clip Export Should You Use?", "description": "There is no best export format. There is only a best format for what you plan to do next.", "mainEntityOfPage": "https://ulix.app/knowledge/keep-clip-export-format/", "articleSection": "PKM", "author": {"@type": "Person", "name": "Sasha"}, "about": {"@type": "SoftwareApplication", "name": "Keep Clip", "operatingSystem": "Android", "url": "https://ulix.app/keepclip/"}, "publisher": {"@type": "Organization", "name": "Ulix LLC", "url": "https://ulix.app/"}, "isPartOf": {"@type": "CollectionPage", "name": "Ulix Knowledge", "url": "https://ulix.app/knowledge/"}}</script></head>
+<body class="home-page knowledge-page"><a href="#main" class="skip-link">Skip to content</a><header class="site-header"><div class="container container--wide site-header__inner"><a href="../../index.html" class="site-brand"><img src="../../icons/favicon.png" alt="" class="site-brand__logo" width="64" height="64" /><span class="site-brand__name">ULIX</span></a><nav class="site-nav" aria-label="Primary"><a href="../../index.html" class="site-nav__link">Home</a><a href="../../apps.html" class="site-nav__link">Apps</a><a href="../../blog.html" class="site-nav__link">Blog</a><a href="../../about.html" class="site-nav__link">About</a><a href="../../contact.html" class="site-nav__link">Contact</a></nav><div class="site-header__actions"><a href="../" class="btn btn--primary btn--header">Knowledge →</a></div></div></header>
+<main id="main"><div class="article-shell"><p class="article-breadcrumbs"><a href="../">Ulix Knowledge</a> / PKM</p><header class="article-header"><p class="article-header__meta">PKM · Keep Clip</p><h1>Markdown, CSV, HTML, RTF, or Plain Text: Which Keep Clip Export Should You Use?</h1><p class="article-deck">There is no best export format. There is only a best format for what you plan to do next.</p><p class="article-byline">Sasha</p></header><article class="article-body"><p>There is no best export format. There is only a best format for what you plan to do next.</p>
+<p>Keep Clip can export saved material as Markdown, CSV, HTML, RTF, or plain text. Those formats overlap enough that choosing among them can look arbitrary. It is not. Each preserves a different balance of structure, readability, formatting, and ease of import.</p>
+<p>A useful rule is to choose the receiving system first, then choose the file format.</p>
+<h2>Choose Markdown for a portable working archive</h2>
+<p>Markdown is usually the strongest default when the clips are going into a text-based personal knowledge system, source repository, or folder of notes meant to remain readable without special software.</p>
+<p>It works especially well for:</p>
+<ul>
+<li>Obsidian and other Markdown-based PKM tools</li>
+<li>Git repositories</li>
+<li>long-term note archives</li>
+<li>material you expect to edit as ordinary text</li>
+<li>workflows where links and light formatting should survive</li>
+</ul>
+<p>Markdown's advantage is that the markup remains legible even when no Markdown renderer is available. A heading written as <code>## Heading</code> is still understandable in a plain text editor.</p>
+<p>The tradeoff is that Markdown is deliberately modest. Complex document layout, spreadsheet-style analysis, and precise visual formatting are not its strengths.</p>
+<p>If the next step is <code>put these clips into my notes and keep working with them</code>, Markdown is often the most natural choice.</p>
+<h2>Choose CSV when the clips are becoming data</h2>
+<p>CSV is the useful choice when you care less about reading the export from top to bottom and more about rows, columns, filtering, sorting, or analysis.</p>
+<p>Typical destinations include:</p>
+<ul>
+<li>Excel</li>
+<li>Google Sheets</li>
+<li>LibreOffice Calc</li>
+<li>Python or R</li>
+<li>database import tools</li>
+<li>an LLM that you want to reason over structured fields</li>
+</ul>
+<p>CSV is good at keeping repeated fields aligned across many records. A column can hold clip text, another the title, another a URL, another tags, and so on.</p>
+<p>That makes questions such as <code>Which domains appear most often?</code> or <code>Show all clips with this tag</code> much easier than they would be in a prose document.</p>
+<p>The tradeoff is readability. Long quotations and notes can make a CSV unpleasant to inspect as raw text, especially because commas, quotation marks, and line breaks have to be escaped according to CSV conventions.</p>
+<p>Use CSV when the archive is about to be <em>processed</em>.</p>
+<h2>Choose HTML when you want a readable archive in a browser</h2>
+<p>HTML is useful when you want the export to open as a formatted document almost anywhere a web browser exists.</p>
+<p>Good uses include:</p>
+<ul>
+<li>a browsable snapshot of clips</li>
+<li>sharing a readable export with someone who should not need Keep Clip</li>
+<li>preserving links as clickable links</li>
+<li>keeping headings and formatting visible without a word processor</li>
+</ul>
+<p>HTML is also an established, widely understood format. The file can be inspected as source text if necessary, but most people will simply open it in a browser.</p>
+<p>The weakness is that HTML is a document representation, not a convenient analysis table or a particularly pleasant format for hand editing. It can also contain much more markup than Markdown or plain text.</p>
+<p>Choose it when <code>open and read this nicely</code> matters more than <code>edit this as notes</code> or <code>analyze these rows</code>.</p>
+<h2>Choose RTF when the destination is a conventional document editor</h2>
+<p>Rich Text Format sits in an older but still useful middle ground between plain text and a full word-processing file format.</p>
+<p>It can preserve more visible formatting than TXT while remaining readable by many word processors and document applications.</p>
+<p>RTF is a sensible choice when:</p>
+<ul>
+<li>the next stop is Word or another word processor</li>
+<li>you want a document that looks more finished than plain text</li>
+<li>the recipient is not using Markdown tools</li>
+<li>you expect to copy, edit, or print the material as a conventional document</li>
+</ul>
+<p>Its disadvantage is that raw RTF is not pleasant to read or edit by hand. It contains control syntax intended for software rather than humans.</p>
+<p>If you are building a durable text archive for yourself, Markdown or TXT will often be cleaner. If you are handing the material to a word-processing workflow, RTF can be convenient.</p>
+<h2>Choose plain text when you want the fewest assumptions</h2>
+<p>TXT is the least ambitious format in the list, which is sometimes exactly what you want.</p>
+<p>Plain text is useful for:</p>
+<ul>
+<li>simple archival copies</li>
+<li>moving material between systems with unknown import capabilities</li>
+<li>scripts or tools that need unformatted text</li>
+<li>keeping a fallback representation that almost any computer can open</li>
+</ul>
+<p>It carries very little presentation. That is both the strength and the cost.</p>
+<p>If formatting, clickable links, field boundaries, or richer structure matter, plain text may discard too much. If the important thing is <code>these words should remain readable</code>, the simplicity is hard to beat.</p>
+<h2>If you are leaving Keep Clip, export two ways when the archive matters</h2>
+<p>When an export is part of a serious migration rather than a temporary handoff, there is no rule saying you must pick exactly one representation.</p>
+<p>For example:</p>
+<ul>
+<li>Markdown as the readable working archive</li>
+<li>CSV as the structured analysis/import copy</li>
+</ul>
+<p>or:</p>
+<ul>
+<li>HTML as a browsable snapshot</li>
+<li>TXT as the minimal fallback</li>
+</ul>
+<p>The two files serve different recovery paths. Storage is cheap; reconstructing lost structure or context may not be.</p>
+<p>This is particularly sensible before deleting the original app data or moving a long-lived research archive to a different system.</p>
+<h2>Choose by the next question</h2>
+<p>A compact decision table:</p>
+<table>
+<thead>
+<tr>
+<th>If you want to...</th>
+<th>Start with...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>move clips into Obsidian or a text-based PKM system</td>
+<td>Markdown</td>
+</tr>
+<tr>
+<td>sort, filter, calculate, or analyze</td>
+<td>CSV</td>
+</tr>
+<tr>
+<td>open a formatted archive in a browser</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>edit as a conventional formatted document</td>
+<td>RTF</td>
+</tr>
+<tr>
+<td>preserve the words with minimal formatting assumptions</td>
+<td>TXT</td>
+</tr>
+</tbody>
+</table>
+<p>Do not choose a format because it sounds more archival or technical. Choose the one the next tool can use without forcing you to repair the export first.</p>
+<p>Portability is not merely the existence of an Export button. It is the ability to get the information out in a form that remains useful after it leaves.</p>
+<h2>Sources</h2>
+<ul>
+<li>John Gruber and the CommonMark project, <a href="https://spec.commonmark.org/">CommonMark specification</a>, documenting a widely used standardized interpretation of Markdown syntax.</li>
+<li>Y. Shafranovich, <a href="https://www.rfc-editor.org/rfc/rfc4180">RFC 4180: Common Format and MIME Type for Comma-Separated Values (CSV) Files</a>, describing the common CSV interchange format and <code>text/csv</code> media type.</li>
+</ul><section class="product-note"><p class="product-note__label">The tool used in this workflow</p><h2>Keep Clip</h2><p>Keep Clip exports saved clips as Markdown, CSV, HTML, RTF, or plain text. The formats are alternatives, not tiers: use the one that best matches the system receiving the archive.</p><p><a href="../../keepclip/">See Keep Clip</a>.</p></section></article><aside class="related"><h2>Related</h2><a href="../hidden-cost-switching-apps-your-data/">The Hidden Cost of Switching Apps Is Your Data</a><a href="../keep-bookmark-archive-local/">How to Keep a Bookmark Archive Local Instead of Tying It to One Browser</a><a href="../capture-now-decide-where-later/">How to Capture Something Now Without Deciding Where It Belongs Yet</a></aside></div></main>
+<footer class="site-footer"><div class="container"><p class="footer-credo">Find the <b>book</b> <span class="sep">·</span> Save the <b>passage</b> <span class="sep">·</span> Read the <b>classic</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p><div class="site-footer__grid"><div class="site-footer__brand"><img src="../../icons/ulixwordmarkclear.png" alt="Ulix — Precision tools for modern odysseys" class="footer-wordmark" width="1754" height="717" /></div><div class="site-footer__links"><a href="../../apps.html">Apps</a><a href="../">Knowledge</a><a href="../../about.html">About</a><a href="../../privacy.html">Privacy</a></div><div><div class="site-footer__copyright">© 2026 Ulix LLC. All rights reserved.</div></div></div></div></footer><script src="../../assets/ulix.js" defer></script></body></html>

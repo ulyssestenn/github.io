@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>How to Ask an LLM a Useful Question About Your Own Tracking Data — Ulix Knowledge</title><meta name="description" content="An LLM can read a CSV full of personal log entries and produce an explanation almost immediately. That is exactly why the first prompt matters." /><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" /><link rel="canonical" href="https://ulix.app/knowledge/ask-llm-useful-question-tracking-data/" /><meta name="theme-color" content="#0F0E0C" />
+<meta property="og:type" content="article" /><meta property="og:site_name" content="Ulix" /><meta property="og:title" content="How to Ask an LLM a Useful Question About Your Own Tracking Data" /><meta property="og:description" content="An LLM can read a CSV full of personal log entries and produce an explanation almost immediately. That is exactly why the first prompt matters." /><meta property="og:url" content="https://ulix.app/knowledge/ask-llm-useful-question-tracking-data/" /><meta property="og:image" content="https://ulix.app/icons/trackanalysis.png" /><meta property="article:section" content="Personal data" /><meta name="twitter:card" content="summary" />
+<link rel="icon" href="/icons/favicon.ico" sizes="any" /><link rel="stylesheet" href="../../assets/ulix.css" /><link rel="stylesheet" href="../../assets/home.css" /><link rel="stylesheet" href="../knowledge.css" /><link rel="preload" as="font" type="font/woff2" href="../../assets/fonts/geist-latin.woff2" crossorigin /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" /><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to Ask an LLM a Useful Question About Your Own Tracking Data", "description": "An LLM can read a CSV full of personal log entries and produce an explanation almost immediately. That is exactly why the first prompt matters.", "mainEntityOfPage": "https://ulix.app/knowledge/ask-llm-useful-question-tracking-data/", "articleSection": "Personal data", "author": {"@type": "Person", "name": "Donald"}, "about": {"@type": "SoftwareApplication", "name": "Track Analysis", "operatingSystem": "Android", "url": "https://ulix.app/trackanalysis/"}, "publisher": {"@type": "Organization", "name": "Ulix LLC", "url": "https://ulix.app/"}, "isPartOf": {"@type": "CollectionPage", "name": "Ulix Knowledge", "url": "https://ulix.app/knowledge/"}}</script></head>
+<body class="home-page knowledge-page"><a href="#main" class="skip-link">Skip to content</a><header class="site-header"><div class="container container--wide site-header__inner"><a href="../../index.html" class="site-brand"><img src="../../icons/favicon.png" alt="" class="site-brand__logo" width="64" height="64" /><span class="site-brand__name">ULIX</span></a><nav class="site-nav" aria-label="Primary"><a href="../../index.html" class="site-nav__link">Home</a><a href="../../apps.html" class="site-nav__link">Apps</a><a href="../../blog.html" class="site-nav__link">Blog</a><a href="../../about.html" class="site-nav__link">About</a><a href="../../contact.html" class="site-nav__link">Contact</a></nav><div class="site-header__actions"><a href="../" class="btn btn--primary btn--header">Knowledge →</a></div></div></header>
+<main id="main"><div class="article-shell"><p class="article-breadcrumbs"><a href="../">Ulix Knowledge</a> / Personal data</p><header class="article-header"><p class="article-header__meta">Personal data · Track Analysis</p><h1>How to Ask an LLM a Useful Question About Your Own Tracking Data</h1><p class="article-deck">An LLM can read a CSV full of personal log entries and produce an explanation almost immediately. That is exactly why the first prompt matters.</p><p class="article-byline">Donald</p></header><article class="article-body"><p>An LLM can read a CSV full of personal log entries and produce an explanation almost immediately. That is exactly why the first prompt matters.</p>
+<p>If you ask <code>What do you notice?</code>, the model is rewarded for noticing <em>something</em>. It may find a useful pattern. It may also turn ordinary coincidence, inconsistent logging, or a handful of anecdotes into a polished story.</p>
+<p>A better workflow makes the model do boring work before interpretive work.</p>
+<p>Track Analysis Pro exports a timestamped freeform log as CSV. Once you choose an external LLM and decide to share that export with it, begin by making the model understand the dataset before asking it to explain your life.</p>
+<h2>First ask the model to describe what it received</h2>
+<p>A good opening prompt is procedural:</p>
+<blockquote>
+<p>Read this CSV and describe its structure. Tell me the date range, number of entries, fields present, and the major recurring kinds of events you can identify. Do not infer causes or give health advice yet. Flag ambiguous abbreviations or entries you are not sure how to interpret.</p>
+</blockquote>
+<p>This catches obvious misunderstandings. If the model thinks <code>Mg</code> means milligrams when you meant magnesium, or treats an edited note as a separate event, fix that before analysis.</p>
+<p>It also reveals how complete the data actually is. A six-month file may contain only four sleep entries. That is important to know before asking for a sleep pattern.</p>
+<h2>Define the outcome in observable terms</h2>
+<p>Avoid questions such as:</p>
+<p><code>What improves my health?</code></p>
+<p><code>Why am I tired?</code></p>
+<p><code>Which supplement works best?</code></p>
+<p>Those require definitions, causal assumptions, and often medical judgment the log cannot supply.</p>
+<p>Ask about something the CSV actually records:</p>
+<ul>
+<li><code>Compare days where I logged energy 8/10 or higher with days at 4/10 or lower.</code></li>
+<li><code>For each headache entry, list events logged in the previous 24 hours.</code></li>
+<li><code>Compare sleep duration on days with coffee after 2 pm versus other days where coffee timing is known.</code></li>
+<li><code>How often did I log exercise on the same day as high energy?</code></li>
+</ul>
+<p>You can move from those observations to a better hypothesis later.</p>
+<h2>Ask for counts and examples before conclusions</h2>
+<p>A sentence like <code>late caffeine appears linked to worse sleep</code> should never arrive without the numbers behind it.</p>
+<p>Ask the model to show:</p>
+<ul>
+<li>number of relevant days or events</li>
+<li>dates included in each group</li>
+<li>missing data</li>
+<li>averages or medians when the variable supports them</li>
+<li>representative examples</li>
+<li>counterexamples</li>
+</ul>
+<p>For example:</p>
+<blockquote>
+<p>Before interpreting anything, show how many days had coffee after 2 pm, how many comparison days had known coffee timing, the sleep outcome for each group, and at least three days that do not fit the apparent pattern.</p>
+</blockquote>
+<p>This is not formal statistical analysis merely because it contains counts. It does make the model's reasoning inspectable.</p>
+<h2>Tell it what missing data means — or does not mean</h2>
+<p>Event logs have an awkward property: absence of an entry may mean the event did not happen, or it may mean you forgot to log it.</p>
+<p>If you did not record <code>no coffee</code>, the model should not automatically treat a day without a coffee entry as caffeine-free.</p>
+<p>Say so explicitly:</p>
+<blockquote>
+<p>Treat missing entries as unknown unless the log explicitly states that an event did not occur.</p>
+</blockquote>
+<p>The same rule can apply to exercise, symptoms, medications, supplements, food, and sleep.</p>
+<p>If your logging practice was consistent enough that missingness has a different meaning, explain that. The model cannot know your recording habits from the CSV alone.</p>
+<h2>Separate exploration from testing</h2>
+<p>There are two legitimate modes of personal-data analysis.</p>
+<p><strong>Exploration:</strong> <code>What recurring variables appear near my low-energy entries?</code></p>
+<p>This is useful for generating hypotheses. It is also vulnerable to finding accidental patterns because the search space is large.</p>
+<p><strong>Testing a specific question:</strong> <code>Are low-energy entries more common on days after fewer than six hours of logged sleep?</code></p>
+<p>This is narrower and easier to audit.</p>
+<p>Do not let an exploratory result quietly become a confirmed explanation.</p>
+<p>If the model discovers that headaches often follow a particular food, treat that as a reason to inspect the records and perhaps track the relationship more deliberately. It is not evidence that the food caused the headaches.</p>
+<h2>Ask what the data cannot answer</h2>
+<p>One of the most useful prompts is:</p>
+<blockquote>
+<p>What important uncertainty or missing information prevents a stronger conclusion here?</p>
+</blockquote>
+<p>A good answer may identify very few relevant observations, inconsistent terminology, missing comparison days, several variables changing together, delayed logging that makes timestamps unreliable, outcomes recorded only when unusually bad, or lack of a meaningful baseline.</p>
+<p>This turns the model from an explanation generator into a critic of the dataset.</p>
+<h2>Ask for counterexamples explicitly</h2>
+<p>Models are very good at compressing a messy record into a coherent narrative. Counterexamples resist that compression.</p>
+<p>If the model says <code>exercise is associated with higher energy</code>, ask:</p>
+<ul>
+<li>Which exercise days had low energy?</li>
+<li>Which high-energy days had no exercise?</li>
+<li>Were exercise entries more likely to be logged on good days?</li>
+<li>Does the apparent relationship survive if we look only at weeks with complete energy ratings?</li>
+</ul>
+<p>An explanation that becomes much weaker after one counterexample query was probably too strong to begin with.</p>
+<h2>Keep medical interpretation outside the prompt's authority</h2>
+<p>Track Analysis can be used to record symptoms, medications, supplements, sleep, food, activity, and other personal observations. That does not make the exported dataset diagnostic.</p>
+<p>An LLM may confidently name conditions, mechanisms, drug interactions, or treatment changes. Do not treat fluency as clinical authority.</p>
+<p>A safer prompt boundary is:</p>
+<blockquote>
+<p>Identify patterns and questions worth discussing. Do not diagnose, recommend changing medication, or claim that correlations establish causation.</p>
+</blockquote>
+<p>For healthcare decisions, bring the relevant record and questions to a qualified clinician.</p>
+<h2>A reusable analysis prompt</h2>
+<p>A strong general prompt might be:</p>
+<blockquote>
+<p>I am attaching a personal tracking CSV. First describe the dataset: date range, entry count, fields, recurring event types, missingness, and any ambiguous terms. Then answer this question: <strong>[specific question]</strong>. Define the comparison groups explicitly. Show counts, dates, and counterexamples before interpretation. Do not treat missing entries as negative events unless I explicitly logged the absence. Distinguish observation from causation. Tell me what the data cannot establish and what one change in future logging would make the question easier to answer.</p>
+</blockquote>
+<p>That prompt is deliberately less exciting than <code>Analyze my life.</code></p>
+<p>It is also much more likely to produce something you can inspect, challenge, and use.</p><section class="product-note"><p class="product-note__label">The tool used in this workflow</p><h2>Track Analysis</h2><p>Track Analysis Pro exports local freeform logs as CSV so users can deliberately share them with an external LLM of their choice. The app does not upload the data automatically or perform the LLM analysis itself, leaving the user in control of when and where the export is analyzed.</p><p><a href="../../trackanalysis/">See Track Analysis</a>.</p></section></article><aside class="related"><h2>Related</h2><a href="../vague-self-tracking-question-csv-analysis/">How to Turn a Vague Self-Tracking Question Into Useful CSV Analysis</a><a href="../freeform-log-entries-ai-can-analyze/">How to Write Freeform Log Entries That an AI Can Actually Analyze Later</a><a href="../personal-log-ai-patterns/">How to Use AI to Look for Patterns in a Personal Log</a></aside></div></main>
+<footer class="site-footer"><div class="container"><p class="footer-credo">Find the <b>book</b> <span class="sep">·</span> Save the <b>passage</b> <span class="sep">·</span> Read the <b>classic</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p><div class="site-footer__grid"><div class="site-footer__brand"><img src="../../icons/ulixwordmarkclear.png" alt="Ulix — Precision tools for modern odysseys" class="footer-wordmark" width="1754" height="717" /></div><div class="site-footer__links"><a href="../../apps.html">Apps</a><a href="../">Knowledge</a><a href="../../about.html">About</a><a href="../../privacy.html">Privacy</a></div><div><div class="site-footer__copyright">© 2026 Ulix LLC. All rights reserved.</div></div></div></div></footer><script src="../../assets/ulix.js" defer></script></body></html>

@@ -37,6 +37,13 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 [All Knowledge Guides](https://ulix.app/knowledge/guides/) is the searchable evergreen index, with topic and app filters.
 
+- [How to Photograph a Bookshelf So OCR Can Actually Read the Spines](https://ulix.app/knowledge/photograph-bookshelf-for-ocr/)
+- [Markdown, CSV, HTML, RTF, or Plain Text: Which Keep Clip Export Should You Use?](https://ulix.app/knowledge/keep-clip-export-format/)
+- [How to Ask an LLM a Useful Question About Your Own Tracking Data](https://ulix.app/knowledge/ask-llm-useful-question-tracking-data/)
+- [How to Write Freeform Log Entries That an AI Can Actually Analyze Later](https://ulix.app/knowledge/freeform-log-entries-ai-can-analyze/)
+- [How to Turn a Vague Self-Tracking Question Into Useful CSV Analysis](https://ulix.app/knowledge/vague-self-tracking-question-csv-analysis/)
+- [How to Save a Kindle Passage Without Building a Second Note System Inside Kindle](https://ulix.app/knowledge/save-kindle-passage-without-second-note-system/)
+- [What Should You Do With Highlights From Five Different Books on the Same Topic?](https://ulix.app/knowledge/highlights-from-five-books-same-topic/)
 - [How to Make a Homer Quotation Image Without Stripping Away Its Context](https://ulix.app/knowledge/homer-quotation-image-context/)
 - [How to Design a Multi-Sensor Logging Session Without Creating Useless Data](https://ulix.app/knowledge/design-multi-sensor-logging-session/)
 - [Save the Quote and the Link Together: What Context Should Travel With a Clip?](https://ulix.app/knowledge/save-quote-and-link-together-context/)
