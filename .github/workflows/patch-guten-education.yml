@@ -1,0 +1,66 @@
+name: Patch Guten education page
+
+on:
+  push:
+    branches:
+      - fix/guten-education-contrast-covers
+    paths:
+      - '.github/workflows/patch-guten-education.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/guten-education-contrast-covers
+      - name: Fix contrast, hero art, and local cover paths
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('guten/education/index.html')
+          text = path.read_text()
+
+          replacements = {
+            ".hero{padding:82px 0 58px;overflow:hidden}": ".hero{padding:82px 0 58px;overflow:hidden;background:var(--blue-dark);color:#f8fbfc}",
+            ".kicker{margin-bottom:18px!important}": ".kicker{margin-bottom:18px!important}.hero .kicker{color:#9bc5d9}",
+            "letter-spacing:-.035em;color:var(--blue-dark)}.hero__lead": "letter-spacing:-.035em;color:#f8fbfc}.hero__lead",
+            ".hero__lead{max-width:680px;margin-top:26px!important;color:var(--muted);": ".hero__lead{max-width:680px;margin-top:26px!important;color:rgba(248,251,252,.8);",
+            ".button--primary{background:var(--blue-dark);color:#fff!important;border-color:var(--blue-dark)}": ".button--primary{background:#e5b83a;color:#171713!important;border-color:#e5b83a}.hero .button:not(.button--primary){color:var(--blue-dark)!important;background:var(--paper)}",
+            ".platform{margin-top:13px!important;color:var(--muted);font-size:13px}": ".platform{margin-top:13px!important;color:rgba(248,251,252,.7);font-size:13px}",
+            ".compare__side--premium{background:#1b1915;color:#fff;border-color:#1b1915}": ".compare__side--premium{background:#1b1915;color:#fff;border-color:#1b1915}.compare__side--premium .compare__title h3{color:#fff!important}",
+            ".premium-note{margin-top:24px!important;color:rgba(255,255,255,.62);": ".premium-note{margin-top:24px!important;color:rgba(255,255,255,.78);",
+            ".final h2{font-family:var(--serif);font-size:clamp(44px,5vw,70px);font-weight:500;line-height:1;max-width:850px;margin:0 auto}": ".final h2{font-family:var(--serif);font-size:clamp(44px,5vw,70px);font-weight:500;line-height:1;max-width:850px;margin:0 auto;color:#fff!important}",
+            ".final p{max-width:720px;margin:18px auto 0;color:rgba(255,255,255,.68);": ".final p{max-width:720px;margin:18px auto 0;color:rgba(255,255,255,.82);",
+            ".edu-page .site-footer__tag,.edu-page .site-footer__copyright{color:rgba(244,239,230,.62)}": ".edu-page .site-footer__tag,.edu-page .site-footer__copyright{color:rgba(244,239,230,.78)}.edu-page .newsletter__label{color:#f4efe6}",
+            "../../assets/screenshots/guten/reading_sepia.webp\" alt=\"Guten reading screen in sepia theme\" width=\"1080\" height=\"2153\"": "../../assets/screenshots/guten/browse.webp\" alt=\"Guten Browse screen\" width=\"1080\" height=\"2119\"",
+            "https://www.gutenberg.org/cache/epub/11/pg11.cover.medium.jpg": "../../assets/guten/education/covers/alice.jpg",
+            "https://www.gutenberg.org/cache/epub/17396/pg17396.cover.medium.jpg": "../../assets/guten/education/covers/secret-garden.jpg",
+            "https://www.gutenberg.org/cache/epub/45/pg45.cover.medium.jpg": "../../assets/guten/education/covers/anne-of-green-gables.jpg",
+            "https://www.gutenberg.org/cache/epub/514/pg514.cover.medium.jpg": "../../assets/guten/education/covers/little-women.jpg",
+            "https://www.gutenberg.org/cache/epub/1661/pg1661.cover.medium.jpg": "../../assets/guten/education/covers/sherlock-holmes.jpg",
+            "https://www.gutenberg.org/cache/epub/1342/pg1342.cover.medium.jpg": "../../assets/guten/education/covers/pride-and-prejudice.jpg",
+            "https://www.gutenberg.org/cache/epub/84/pg84.cover.medium.jpg": "../../assets/guten/education/covers/frankenstein.jpg",
+            " loading=\"lazy\" referrerpolicy=\"no-referrer\"": " loading=\"lazy\"",
+            "Cover images above are served by Project Gutenberg. The catalog also includes biography, history, poetry, philosophy, science, and thousands of other works.": "The catalog also includes biography, history, poetry, philosophy, science, and thousands of other works."
+          }
+
+          for old, new in replacements.items():
+              if old not in text:
+                  raise SystemExit(f'Missing expected text: {old[:100]}')
+              text = text.replace(old, new)
+
+          path.write_text(text)
+          PY
+          rm .github/workflows/patch-guten-education.yml
+      - name: Commit final page changes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add guten/education/index.html .github/workflows/patch-guten-education.yml
+          git commit -m 'Fix Guten education contrast and self-host covers'
+          git push origin HEAD:fix/guten-education-contrast-covers
