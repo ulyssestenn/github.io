@@ -13,7 +13,7 @@ One book gives you quotations. Five books on the same question give you comparis
 
 The mistake is to export everything into one giant note called `Highlights` and hope synthesis happens later.
 
-Guten Premium's Notes Manager can search and filter highlights and notes across the library. That makes it possible to gather material by question rather than by book. The useful work begins after retrieval.
+Guten Premium's Notes Manager can search and filter highlights and notes across the library, then export either the current filtered set or the full annotation library. That makes it possible to gather material by question rather than by book and move exactly that working set into the next stage of a project.
 
 ## Start with the question, not the tag
 
@@ -23,7 +23,7 @@ A broad tag such as `politics` may retrieve far too much. A better working quest
 
 > When do these writers think obedience stops being a virtue?
 
-Now search the Notes Manager for relevant terms, author names, or remembered phrases and identify the passages that bear on that question.
+Now search the Notes Manager for relevant terms, author names, or remembered phrases and filter down to the passages that bear on that question.
 
 The difference matters. A topic is a container. A question creates a comparison.
 
@@ -89,13 +89,23 @@ That is a real finding.
 
 Likewise, do not collapse translation differences or edition differences when exact wording is part of the comparison. Keep enough source information to return to the original passage.
 
-## Export when you need to move the material into a project
+## Export the filtered working set
 
-Guten's Notes Manager can bulk-export annotations as Markdown, CSV, JSON, or plain text. Use search and filters to identify the passages relevant to the question, then carry the relevant entries from the export into the project where you will synthesize them.
+Once the Notes Manager view contains the material for the question, use **Export filtered** rather than exporting the entire annotation library and separating it afterward.
 
-For a writing or PKM workflow, Markdown is often convenient because it remains readable and editable. CSV can help when you want to sort or inspect fields. JSON is more appropriate for software workflows.
+The filtered set can be exported as:
 
-The export is not the synthesis. It is simply a way to move the reading record out of the reader. The project still needs you to decide which evidence belongs together and why.
+- one Markdown file
+- individual Markdown files in a ZIP archive
+- CSV
+- JSON
+- plain text
+
+Markdown export can also use Wikilinks for Obsidian/Logseq workflows or standard portable Markdown links.
+
+For a writing or PKM workflow, Markdown is often convenient because it remains readable and editable. CSV can help when you want to sort or inspect fields. JSON is more appropriate for software workflows. Individual Markdown files are useful when each annotation or note needs to enter a file-based system separately.
+
+The export is not the synthesis. It simply lets the project begin with the relevant reading record instead of the entire library. You still have to decide which evidence belongs together and why.
 
 ## Preserve the path back to each book
 
@@ -133,15 +143,15 @@ This is where a reading collection becomes more than a storage category. It begi
 ## A practical workflow
 
 1. Name one question.
-2. Search highlights and notes across the library for passages relevant to it.
-3. Select a small working set.
-4. Group by agreement, disagreement, evidence, definition, or unresolved problem.
-5. Write the relationships in your own words.
-6. Export annotations if the project needs them outside the reader, then carry over the relevant entries.
+2. Search and filter highlights and notes across the library for passages relevant to it.
+3. Reduce the view to a small working set.
+4. Export the filtered set in the format that suits the project.
+5. Group by agreement, disagreement, evidence, definition, or unresolved problem.
+6. Write the relationships in your own words.
 7. Use the gaps to choose what to read next.
 
 The useful thing about having five books' highlights in one system is not that you can admire them all at once. It is that the boundaries between the books stop preventing comparison.
 
 ## Product connection
 
-**Guten.** Guten Premium's Notes Manager can search and filter highlights and notes across the entire library and bulk-export annotations in Markdown, CSV, JSON, or plain text. Custom Collections can also keep the underlying books grouped around a reading question.
+**Guten.** Guten Premium's Notes Manager can search and filter highlights and notes across the entire library, then export either the filtered set or all annotations as Markdown, individual Markdown files in a ZIP, CSV, JSON, or plain text. Markdown exports can use Wikilinks or standard Markdown links. Custom Collections can also keep the underlying books grouped around a reading question.
