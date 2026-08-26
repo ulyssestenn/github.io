@@ -1,0 +1,64 @@
+name: Update Guten education reader screens
+
+on:
+  push:
+    branches:
+      - polish/guten-education-reader-screens
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Convert screenshots and update page
+        run: |
+          python -m pip install --quiet pillow
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+
+          src_dir = Path('assets/screenshots/guten')
+          pairs = {
+              'gutenreadingscreenlight.png': 'gutenreadingscreenlight.webp',
+              'gutenreadingdark20000leagues.png': 'gutenreadingdark20000leagues.webp',
+          }
+
+          for src_name, out_name in pairs.items():
+              src = src_dir / src_name
+              out = src_dir / out_name
+              with Image.open(src) as im:
+                  im = im.convert('RGB')
+                  im.save(out, 'WEBP', quality=82, method=6)
+              print(out_name, out.stat().st_size)
+
+          page = Path('guten/education/index.html')
+          text = page.read_text()
+
+          hero_old = '../../assets/screenshots/guten/reading_light.webp'
+          hero_new = '../../assets/screenshots/guten/gutenreadingscreenlight.webp'
+          if hero_old not in text:
+              raise RuntimeError('Hero reader screenshot reference not found')
+          text = text.replace(hero_old, hero_new, 1)
+          text = text.replace('alt="Guten Reader showing Hesiod’s Works and Days"', 'alt="Guten Reader showing Alice’s Adventures in Wonderland"', 1)
+
+          lower_old = '../../assets/screenshots/guten/reading_dark.webp'
+          lower_new = '../../assets/screenshots/guten/gutenreadingdark20000leagues.webp'
+          if lower_old not in text:
+              raise RuntimeError('Lower reader screenshot reference not found')
+          text = text.replace(lower_old, lower_new, 1)
+          text = text.replace('alt="Guten reading screen in dark mode"', 'alt="Guten Reader showing Twenty Thousand Leagues Under the Seas in dark mode"', 1)
+
+          page.write_text(text)
+          PY
+      - name: Commit optimized screenshots and page update
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/screenshots/guten/gutenreadingscreenlight.webp assets/screenshots/guten/gutenreadingdark20000leagues.webp guten/education/index.html
+          git diff --cached --stat
+          git commit -m 'Update Guten education reader screenshots' || exit 0
+          git push
