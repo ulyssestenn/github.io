@@ -1,4 +1,4 @@
-name: Update Guten education reader screens
+name: Consolidate Guten education free features
 
 on:
   push:
@@ -14,51 +14,51 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Convert screenshots and update page
+      - name: Consolidate free feature list
         run: |
-          python -m pip install --quiet pillow
           python - <<'PY'
           from pathlib import Path
-          from PIL import Image
-
-          src_dir = Path('assets/screenshots/guten')
-          pairs = {
-              'gutenreadingscreenlight.png': 'gutenreadingscreenlight.webp',
-              'gutenreadingdark20000leagues.png': 'gutenreadingdark20000leagues.webp',
-          }
-
-          for src_name, out_name in pairs.items():
-              src = src_dir / src_name
-              out = src_dir / out_name
-              with Image.open(src) as im:
-                  im = im.convert('RGB')
-                  im.save(out, 'WEBP', quality=82, method=6)
-              print(out_name, out.stat().st_size)
+          import re
 
           page = Path('guten/education/index.html')
           text = page.read_text()
 
-          hero_old = '../../assets/screenshots/guten/reading_light.webp'
-          hero_new = '../../assets/screenshots/guten/gutenreadingscreenlight.webp'
-          if hero_old not in text:
-              raise RuntimeError('Hero reader screenshot reference not found')
-          text = text.replace(hero_old, hero_new, 1)
-          text = text.replace('alt="Guten Reader showing Hesiod’s Works and Days"', 'alt="Guten Reader showing Alice’s Adventures in Wonderland"', 1)
+          new_list = '''            <ul class="checks">
+              <li>Browse and search Project Gutenberg</li>
+              <li>Download complete books</li>
+              <li>Read complete books offline</li>
+              <li>Automatic reading progress</li>
+              <li>Bookmarks</li>
+              <li>Highlight passages</li>
+              <li>Add notes to passages</li>
+              <li>Review and search annotations within each book</li>
+              <li>Search within a book</li>
+              <li>Definition lookup</li>
+              <li>Customizable typography: fonts, size, spacing, margins, and justification</li>
+              <li>Reader themes: light, dark, sepia, and system</li>
+              <li>Accessibility support: Atkinson Hyperlegible, TalkBack, and Android font scaling</li>
+              <li>Swipe and chapter/leaf navigation</li>
+              <li>Daily reading goals</li>
+              <li>Reading streaks and statistics</li>
+              <li>Library search and sorting</li>
+              <li>Wi-Fi-only download option</li>
+              <li>Full backup export and restore</li>
+              <li>Basic Share Studio with save/share quote cards</li>
+              <li>Plain-text quote sharing</li>
+            </ul>'''
 
-          lower_old = '../../assets/screenshots/guten/reading_dark.webp'
-          lower_new = '../../assets/screenshots/guten/gutenreadingdark20000leagues.webp'
-          if lower_old not in text:
-              raise RuntimeError('Lower reader screenshot reference not found')
-          text = text.replace(lower_old, lower_new, 1)
-          text = text.replace('alt="Guten reading screen in dark mode"', 'alt="Guten Reader showing Twenty Thousand Leagues Under the Seas in dark mode"', 1)
+          pattern = r'            <ul class="checks">.*?            </ul>'
+          text, count = re.subn(pattern, new_list, text, count=1, flags=re.DOTALL)
+          if count != 1:
+              raise RuntimeError(f'Expected one free-feature list; found {count}')
 
           page.write_text(text)
           PY
-      - name: Commit optimized screenshots and page update
+      - name: Commit free feature editorial pass
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add assets/screenshots/guten/gutenreadingscreenlight.webp assets/screenshots/guten/gutenreadingdark20000leagues.webp guten/education/index.html
+          git add guten/education/index.html
           git diff --cached --stat
-          git commit -m 'Update Guten education reader screenshots' || exit 0
+          git commit -m 'Consolidate Guten free feature list' || exit 0
           git push
