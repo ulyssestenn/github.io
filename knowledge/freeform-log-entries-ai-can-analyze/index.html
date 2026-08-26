@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>How to Write Freeform Log Entries That an AI Can Actually Analyze Later — Ulix Knowledge</title><meta name="description" content="Freeform logging is useful because life does not arrive in dropdown menus. It also creates a predictable problem: six weeks later, the data may be full of..." /><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" /><link rel="canonical" href="https://ulix.app/knowledge/freeform-log-entries-ai-can-analyze/" /><meta name="theme-color" content="#0F0E0C" />
+<meta property="og:type" content="article" /><meta property="og:site_name" content="Ulix" /><meta property="og:title" content="How to Write Freeform Log Entries That an AI Can Actually Analyze Later" /><meta property="og:description" content="Freeform logging is useful because life does not arrive in dropdown menus. It also creates a predictable problem: six weeks later, the data may be full of..." /><meta property="og:url" content="https://ulix.app/knowledge/freeform-log-entries-ai-can-analyze/" /><meta property="og:image" content="https://ulix.app/icons/trackanalysis.png" /><meta property="article:section" content="Personal data" /><meta name="twitter:card" content="summary" />
+<link rel="icon" href="/icons/favicon.ico" sizes="any" /><link rel="stylesheet" href="../../assets/ulix.css" /><link rel="stylesheet" href="../../assets/home.css" /><link rel="stylesheet" href="../knowledge.css" /><link rel="preload" as="font" type="font/woff2" href="../../assets/fonts/geist-latin.woff2" crossorigin /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" /><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to Write Freeform Log Entries That an AI Can Actually Analyze Later", "description": "Freeform logging is useful because life does not arrive in dropdown menus. It also creates a predictable problem: six weeks later, the data may be full of...", "mainEntityOfPage": "https://ulix.app/knowledge/freeform-log-entries-ai-can-analyze/", "articleSection": "Personal data", "author": {"@type": "Person", "name": "Annie"}, "about": {"@type": "SoftwareApplication", "name": "Track Analysis", "operatingSystem": "Android", "url": "https://ulix.app/trackanalysis/"}, "publisher": {"@type": "Organization", "name": "Ulix LLC", "url": "https://ulix.app/"}, "isPartOf": {"@type": "CollectionPage", "name": "Ulix Knowledge", "url": "https://ulix.app/knowledge/"}}</script></head>
+<body class="home-page knowledge-page"><a href="#main" class="skip-link">Skip to content</a><header class="site-header"><div class="container container--wide site-header__inner"><a href="../../index.html" class="site-brand"><img src="../../icons/favicon.png" alt="" class="site-brand__logo" width="64" height="64" /><span class="site-brand__name">ULIX</span></a><nav class="site-nav" aria-label="Primary"><a href="../../index.html" class="site-nav__link">Home</a><a href="../../apps.html" class="site-nav__link">Apps</a><a href="../../blog.html" class="site-nav__link">Blog</a><a href="../../about.html" class="site-nav__link">About</a><a href="../../contact.html" class="site-nav__link">Contact</a></nav><div class="site-header__actions"><a href="../" class="btn btn--primary btn--header">Knowledge →</a></div></div></header>
+<main id="main"><div class="article-shell"><p class="article-breadcrumbs"><a href="../">Ulix Knowledge</a> / Personal data</p><header class="article-header"><p class="article-header__meta">Personal data · Track Analysis</p><h1>How to Write Freeform Log Entries That an AI Can Actually Analyze Later</h1><p class="article-deck">Freeform logging is useful because life does not arrive in dropdown menus. It also creates a predictable problem: six weeks later, the data may be full of entries that made perfect sense at the time and are miserable to analyze in aggregate.</p><p class="article-byline">Annie</p></header><article class="article-body"><p>Freeform logging is useful because life does not arrive in dropdown menus. It also creates a predictable problem: six weeks later, the data may be full of entries that made perfect sense at the time and are miserable to analyze in aggregate.</p>
+<p><code>Coffee. Bad sleep.</code> is understandable to the person who wrote it. It is not very good data.</p>
+<p>The answer is not to turn every observation into a form with 14 required fields. A few small habits make plain-English logs much easier for an LLM, spreadsheet, or future human to interpret without destroying the reason freeform capture was useful in the first place.</p>
+<h2>Use the same words for the same recurring things</h2>
+<p>If one day you write <code>coffee</code>, the next day <code>latte</code>, and the third day <code>caffeine</code>, an LLM may correctly infer that the entries are related. It may also treat them as different categories when the distinction matters.</p>
+<p>Choose stable names for things you expect to compare later.</p>
+<p>If <code>coffee</code> is the useful category, use <code>coffee</code> consistently and add detail afterward:</p>
+<ul>
+<li><code>Coffee, 12 oz, 8:10 am</code></li>
+<li><code>Coffee, 8 oz, 1:45 pm</code></li>
+<li><code>Coffee, decaf, 7:30 pm</code></li>
+</ul>
+<p>If espresso versus brewed coffee matters to the question, preserve that distinction from the beginning. Consistency does not mean stripping away detail. It means giving the repeated thing a repeated name.</p>
+<p>The same applies to workouts, supplements, symptoms, foods, medications, routines, and locations. A model can normalize messy language, but asking it to reconstruct your vocabulary is extra uncertainty you do not need to create.</p>
+<h2>Put quantities next to the thing they describe</h2>
+<p><code>Took magnesium</code> is useful if all you care about is whether magnesium occurred.</p>
+<p><code>Magnesium 200 mg</code> is more useful if the amount might matter later.</p>
+<p>Likewise:</p>
+<ul>
+<li><code>Ran 3.2 miles in 31 minutes</code></li>
+<li><code>Slept 6 h 20 min</code></li>
+<li><code>Headache, 4/10</code></li>
+<li><code>Water, 16 oz</code></li>
+</ul>
+<p>Do not invent precision you did not actually observe. <code>Energy 6.7/10</code> is not better than <code>Energy 7/10</code> merely because it has a decimal place. But where a real quantity exists, include the unit. <code>200</code> without <code>mg</code>, <code>mL</code>, <code>minutes</code>, or some other unit forces later analysis to guess.</p>
+<h2>Let the timestamp do its job, but record time when the event happened earlier</h2>
+<p>Track Analysis timestamps entries automatically. If you log the event when it happens, there is no reason to repeat <code>at 2:03 pm</code> in every entry.</p>
+<p>Delayed logging is different.</p>
+<p>Suppose you remember at 10 pm that you had coffee at 3 pm. If you simply enter <code>Coffee</code>, the recorded timestamp describes when you remembered to log it, not when the coffee occurred. Add the actual event time in the text:</p>
+<p><code>Coffee, 12 oz, around 3 pm.</code></p>
+<p>The same issue matters for sleep, symptoms, meals, exercise, or anything else where sequence may later be part of the analysis.</p>
+<p>Approximate timing is fine when that is all you know. <code>Around 3 pm</code> is more honest and more useful than a fabricated <code>3:00 pm</code>.</p>
+<h2>Separate what happened from what you think caused it</h2>
+<p>A log becomes much easier to analyze when observations and interpretations are distinguishable.</p>
+<p>Compare:</p>
+<p><code>Coffee ruined my sleep.</code></p>
+<p>with:</p>
+<p><code>Coffee, 12 oz, 4:15 pm. Took 55 minutes to fall asleep.</code></p>
+<p>The second entry preserves the events without deciding the causal story in advance.</p>
+<p>That does not mean you cannot record interpretations. They may be useful. Just label them as such:</p>
+<p><code>Headache started 5:30 pm. Possible trigger: skipped lunch.</code></p>
+<p>Now a later analysis can treat <code>headache started</code> as the observation and <code>possible trigger</code> as your hypothesis rather than confusing the two.</p>
+<p>This matters especially for health-related tracking. Patterns in a personal log can generate useful questions, but neither a correlation in the CSV nor an LLM's explanation establishes medical causation.</p>
+<h2>Record absences only when the absence is informative</h2>
+<p>Most logs naturally record events: what you ate, did, felt, or took. Sometimes the absence of an event is itself important.</p>
+<p>If you are investigating whether afternoon caffeine relates to sleep, days with no afternoon caffeine are useful comparison cases. You do not need to write <code>no coffee</code> every hour. One explicit entry such as <code>No caffeine after noon today</code> can make the comparison much easier later.</p>
+<p>Likewise, if a routine usually happens and did not, <code>Skipped usual evening run</code> may carry information that an empty log cannot distinguish from forgetting to record it.</p>
+<p>Do not turn the log into a census of everything that failed to happen. Add negative entries when they create a meaningful comparison group.</p>
+<h2>Prefer one readable sentence to an improvised codebook</h2>
+<p>Short abbreviations feel efficient at capture time:</p>
+<p><code>Mg 2, cof 1, en 5, slp bad.</code></p>
+<p>They also create a private language that may become ambiguous even to its author.</p>
+<p>If you use abbreviations, make them stable and obvious. Otherwise, ordinary language is often the better compression format. LLMs are unusually good at reading ordinary language. There is little reason to disguise the information from them.</p>
+<p>A good entry can be compact without being cryptic:</p>
+<p><code>Magnesium 200 mg. Coffee 12 oz at 1:30 pm. Energy 5/10.</code></p>
+<p>That is still fast to write, and its meaning is far more durable.</p>
+<h2>Do not force structure before you know which distinctions matter</h2>
+<p>The advantage of freeform logging is that you can preserve something you did not anticipate needing.</p>
+<p>Imagine a rigid tracker with a field for <code>coffee: yes/no</code>. Six weeks later you realize the interesting distinction may be <em>time of day</em>. If your entries said only yes or no, that information is gone.</p>
+<p>Freeform capture lets you keep richer context while the question is still forming. Once a pattern becomes important, you can become more consistent about the parts you want to compare.</p>
+<p>This is why a useful freeform log often becomes <em>slightly</em> more structured over time without turning into a form. Stable vocabulary, quantities with units, honest timestamps, and clear observations are enough to make a large difference.</p>
+<h2>Before exporting, read ten random entries</h2>
+<p>A quick quality check is to open entries from different days and ask whether someone who was not present could understand them.</p>
+<p>If <code>felt bad again</code> appears repeatedly, ask what <code>bad</code> meant. Energy? Mood? Pain? Nausea? Sleepiness? If the distinction matters, start naming it.</p>
+<p>If several entries use different words for the same recurring thing, normalize your language going forward. You do not necessarily need to rewrite the entire past. An LLM can help map obvious variants during analysis, as long as you tell it to show the mapping rather than silently assuming equivalence.</p>
+<p>The goal is not a perfect dataset. Personal logs are messy because life is messy. The useful threshold is much lower: preserve enough consistent meaning that later analysis can compare events without inventing the missing context.</p><section class="product-note"><p class="product-note__label">The tool used in this workflow</p><h2>Track Analysis</h2><p>Track Analysis stores timestamped freeform entries locally on Android and lets Pro users export them as CSV for analysis with an external LLM of their choice. The app does not perform medical diagnosis or send the log to an AI service automatically.</p><p><a href="../../trackanalysis/">See Track Analysis</a>.</p></section></article><aside class="related"><h2>Related</h2><a href="../vague-self-tracking-question-csv-analysis/">How to Turn a Vague Self-Tracking Question Into Useful CSV Analysis</a><a href="../ask-llm-useful-question-tracking-data/">How to Ask an LLM a Useful Question About Your Own Tracking Data</a><a href="../why-timestamps-useful-personal-logs/">Why Timestamps Are So Useful in Personal Logs</a></aside></div></main>
+<footer class="site-footer"><div class="container"><p class="footer-credo">Find the <b>book</b> <span class="sep">·</span> Save the <b>passage</b> <span class="sep">·</span> Read the <b>classic</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p><div class="site-footer__grid"><div class="site-footer__brand"><img src="../../icons/ulixwordmarkclear.png" alt="Ulix — Precision tools for modern odysseys" class="footer-wordmark" width="1754" height="717" /></div><div class="site-footer__links"><a href="../../apps.html">Apps</a><a href="../">Knowledge</a><a href="../../about.html">About</a><a href="../../privacy.html">Privacy</a></div><div><div class="site-footer__copyright">© 2026 Ulix LLC. All rights reserved.</div></div></div></div></footer><script src="../../assets/ulix.js" defer></script></body></html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>How to Turn a Vague Self-Tracking Question Into Useful CSV Analysis — Ulix Knowledge</title><meta name="description" content="What affects my energy? is a reasonable human question and a terrible data-analysis request." /><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" /><link rel="canonical" href="https://ulix.app/knowledge/vague-self-tracking-question-csv-analysis/" /><meta name="theme-color" content="#0F0E0C" />
+<meta property="og:type" content="article" /><meta property="og:site_name" content="Ulix" /><meta property="og:title" content="How to Turn a Vague Self-Tracking Question Into Useful CSV Analysis" /><meta property="og:description" content="What affects my energy? is a reasonable human question and a terrible data-analysis request." /><meta property="og:url" content="https://ulix.app/knowledge/vague-self-tracking-question-csv-analysis/" /><meta property="og:image" content="https://ulix.app/icons/trackanalysis.png" /><meta property="article:section" content="Personal data" /><meta name="twitter:card" content="summary" />
+<link rel="icon" href="/icons/favicon.ico" sizes="any" /><link rel="stylesheet" href="../../assets/ulix.css" /><link rel="stylesheet" href="../../assets/home.css" /><link rel="stylesheet" href="../knowledge.css" /><link rel="preload" as="font" type="font/woff2" href="../../assets/fonts/geist-latin.woff2" crossorigin /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" /><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to Turn a Vague Self-Tracking Question Into Useful CSV Analysis", "description": "What affects my energy? is a reasonable human question and a terrible data-analysis request.", "mainEntityOfPage": "https://ulix.app/knowledge/vague-self-tracking-question-csv-analysis/", "articleSection": "Personal data", "author": {"@type": "Person", "name": "Annie"}, "about": {"@type": "SoftwareApplication", "name": "Track Analysis", "operatingSystem": "Android", "url": "https://ulix.app/trackanalysis/"}, "publisher": {"@type": "Organization", "name": "Ulix LLC", "url": "https://ulix.app/"}, "isPartOf": {"@type": "CollectionPage", "name": "Ulix Knowledge", "url": "https://ulix.app/knowledge/"}}</script></head>
+<body class="home-page knowledge-page"><a href="#main" class="skip-link">Skip to content</a><header class="site-header"><div class="container container--wide site-header__inner"><a href="../../index.html" class="site-brand"><img src="../../icons/favicon.png" alt="" class="site-brand__logo" width="64" height="64" /><span class="site-brand__name">ULIX</span></a><nav class="site-nav" aria-label="Primary"><a href="../../index.html" class="site-nav__link">Home</a><a href="../../apps.html" class="site-nav__link">Apps</a><a href="../../blog.html" class="site-nav__link">Blog</a><a href="../../about.html" class="site-nav__link">About</a><a href="../../contact.html" class="site-nav__link">Contact</a></nav><div class="site-header__actions"><a href="../" class="btn btn--primary btn--header">Knowledge →</a></div></div></header>
+<main id="main"><div class="article-shell"><p class="article-breadcrumbs"><a href="../">Ulix Knowledge</a> / Personal data</p><header class="article-header"><p class="article-header__meta">Personal data · Track Analysis</p><h1>How to Turn a Vague Self-Tracking Question Into Useful CSV Analysis</h1><p class="article-deck">What affects my energy? is a reasonable human question and a terrible data-analysis request.</p><p class="article-byline">Annie</p></header><article class="article-body"><p><code>What affects my energy?</code> is a reasonable human question and a terrible data-analysis request.</p>
+<p>It contains no definition of energy, no time window, no candidate factors, no comparison, and no indication of what result would actually change a decision. An LLM can still produce an answer. That is part of the problem. When the question is vague enough, almost any pattern can be made to sound relevant.</p>
+<p>A useful analysis begins before you upload the CSV. Narrow the question until the model has something specific to count, compare, and fail to find.</p>
+<h2>Turn the broad question into one observable outcome</h2>
+<p>Start with the thing you want to explain.</p>
+<p>Instead of <code>What affects my sleep?</code>, try <code>On which logged days did I record fewer than seven hours of sleep?</code> or <code>Which entries mention difficulty falling asleep, and what happened in the preceding six hours?</code></p>
+<p>Instead of <code>What makes my workouts better?</code>, try <code>Compare the days I rated a workout as strong with the days I rated it as poor. What logged differences appear most consistently beforehand?</code></p>
+<p>The outcome does not have to be a perfectly standardized measurement. It does need to be identifiable in the data.</p>
+<p>If the log never records sleep duration, asking the model to calculate sleep duration is not analysis. It is invitation to guess.</p>
+<h2>Choose a plausible comparison rather than asking for every correlation</h2>
+<p>Once the outcome is clear, decide what comparison is worth inspecting.</p>
+<p>Suppose the question is whether late coffee is associated with worse sleep. A reasonable first pass might compare days with coffee logged after 2 pm, days with coffee but none after 2 pm, and days with no coffee entry only if your logging is complete enough for absence to mean anything.</p>
+<p>Then define the sleep outcome you actually have: total hours, sleep rating, time to fall asleep, or some other logged measure.</p>
+<p>This is much better than asking an LLM to <code>find everything correlated with sleep</code>. A personal log may contain food, exercise, stress, travel, supplements, symptoms, and dozens of idiosyncratic events. Search broadly enough and something will look interesting.</p>
+<p>A narrow comparison makes the model show its work.</p>
+<h2>Pick the time window before looking at the result</h2>
+<p>Timing is often the difference between a sensible question and a story assembled after the fact.</p>
+<p>If you are looking at food before a symptom, decide whether <code>before</code> means six hours, 24 hours, or the previous calendar day. If you are looking at exercise and sleep, decide whether same-day exercise, the previous 12 hours, or the preceding 48 hours is the relevant window.</p>
+<p>There is no universal correct window. The right choice depends on the phenomenon and sometimes on domain knowledge you may not have. In that case, analyze a few clearly labeled windows rather than letting the model quietly choose whichever one produces the most interesting result.</p>
+<p>For example:</p>
+<blockquote>
+<p>For each headache entry, summarize foods logged in the preceding 6 hours and 24 hours separately. Do not combine the windows.</p>
+</blockquote>
+<p>That request is far easier to audit than <code>What foods cause my headaches?</code></p>
+<h2>Ask for counts before explanations</h2>
+<p>LLMs are fluent explainers. Make them earn the explanation.</p>
+<p>A useful first request often looks like this:</p>
+<blockquote>
+<p>Identify every day with an energy rating of 8/10 or higher. Count how many there are. For those days, summarize sleep duration, exercise, caffeine timing, and any recurring supplements logged in the previous 24 hours. Then do the same for days rated 4/10 or lower. Show the counts and missing data before interpreting differences.</p>
+</blockquote>
+<p>You want to know which records were included, how many observations there are, what data is missing, what the comparison actually shows, and only then possible interpretations.</p>
+<p>If the model says <code>late coffee appears strongly associated with poor sleep</code>, you should be able to ask: How many late-coffee days? How many comparison days? What counted as poor sleep? Were there exceptions?</p>
+<h2>Make the model look for counterexamples</h2>
+<p>A good personal-data question should be capable of producing an inconvenient result.</p>
+<p>Add requests such as:</p>
+<ul>
+<li>Show days that contradict the apparent pattern.</li>
+<li>List high-energy days that followed poor sleep.</li>
+<li>List good-sleep nights after late caffeine.</li>
+<li>Tell me if the sample is too small for the apparent difference to be persuasive.</li>
+<li>Identify variables that are usually logged only on bad days and therefore may be subject to recording bias.</li>
+</ul>
+<p>Counterexamples matter because a personal log is not a controlled experiment. Behavior changes together. A stressful week may change sleep, exercise, coffee, diet, and logging habits at the same time.</p>
+<p>The CSV can reveal temporal patterns. It cannot magically separate those influences.</p>
+<h2>Distinguish missing from negative</h2>
+<p>If there is no coffee entry on Tuesday, does that mean no coffee was consumed, or that coffee simply was not logged?</p>
+<p>If <code>no coffee</code> days matter to the analysis, the dataset needs a way to distinguish them from unrecorded days. The same problem applies to medications, symptoms, workouts, alcohol, supplements, or almost any event-based log.</p>
+<p>Tell the model explicitly how to interpret absence:</p>
+<blockquote>
+<p>Do not assume that no coffee entry means no coffee unless the day contains an explicit <code>no coffee</code> entry.</p>
+</blockquote>
+<p>That single instruction may prevent a bogus comparison group.</p>
+<h2>Ask a question that could change something</h2>
+<p>A useful analysis ends with a decision boundary.</p>
+<p><code>What patterns are in my data?</code> may be interesting. It is open-ended enough to produce a small horoscope.</p>
+<p>A better question is attached to a possible action: <code>Is there enough evidence in my log to justify testing a two-week no-caffeine-after-noon experiment?</code> or <code>Which recurring variable should I track more consistently next month because the current data is too incomplete to evaluate it?</code></p>
+<p>This keeps the analysis in proportion. The first CSV pass does not need to explain your life. It needs to tell you whether a better question is worth asking next.</p>
+<h2>A reusable prompt structure</h2>
+<p>For many personal datasets, this skeleton works well:</p>
+<blockquote>
+<p><strong>Question:</strong> [one narrow question].<br />
+<strong>Outcome:</strong> Define [the outcome] using [specific entries or threshold].<br />
+<strong>Comparison:</strong> Compare [group A] with [group B].<br />
+<strong>Window:</strong> Look at [time period] before/after each outcome.<br />
+<strong>Missing data:</strong> Do not treat missing entries as negative events unless explicitly logged.<br />
+<strong>First show:</strong> counts, included dates, missingness, and counterexamples.<br />
+<strong>Then:</strong> summarize patterns without claiming causation.<br />
+<strong>Finally:</strong> suggest one follow-up question or low-risk tracking change that would make the evidence clearer.</p>
+</blockquote>
+<p>The important part is not the wording. It is forcing the analysis to have a defined outcome, a comparison, a window, and a way to fail.</p>
+<p>Track Analysis can make the CSV easy to produce. It cannot make an underspecified question precise after the fact. That part still belongs to the person asking it.</p><section class="product-note"><p class="product-note__label">The tool used in this workflow</p><h2>Track Analysis</h2><p>Track Analysis Pro exports timestamped freeform logs as CSV so users can analyze their own data with an external LLM. The app itself does not diagnose conditions or establish causes; exported patterns should be treated as observations to investigate, not medical conclusions.</p><p><a href="../../trackanalysis/">See Track Analysis</a>.</p></section></article><aside class="related"><h2>Related</h2><a href="../ask-llm-useful-question-tracking-data/">How to Ask an LLM a Useful Question About Your Own Tracking Data</a><a href="../freeform-log-entries-ai-can-analyze/">How to Write Freeform Log Entries That an AI Can Actually Analyze Later</a><a href="../run-small-personal-experiment/">How to Run a Small Personal Experiment Without Fooling Yourself</a></aside></div></main>
+<footer class="site-footer"><div class="container"><p class="footer-credo">Find the <b>book</b> <span class="sep">·</span> Save the <b>passage</b> <span class="sep">·</span> Read the <b>classic</b> <span class="sep">·</span> Keep the <b>record</b> <span class="sep">·</span> Own the <b>data</b></p><div class="site-footer__grid"><div class="site-footer__brand"><img src="../../icons/ulixwordmarkclear.png" alt="Ulix — Precision tools for modern odysseys" class="footer-wordmark" width="1754" height="717" /></div><div class="site-footer__links"><a href="../../apps.html">Apps</a><a href="../">Knowledge</a><a href="../../about.html">About</a><a href="../../privacy.html">Privacy</a></div><div><div class="site-footer__copyright">© 2026 Ulix LLC. All rights reserved.</div></div></div></div></footer><script src="../../assets/ulix.js" defer></script></body></html>
