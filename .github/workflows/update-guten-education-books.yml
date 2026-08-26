@@ -21,7 +21,7 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           from urllib.parse import urljoin
-          import io, requests
+          import io, re, requests
           from bs4 import BeautifulSoup
           from PIL import Image
 
@@ -30,10 +30,6 @@ jobs:
           out = Path('assets/guten/education/covers')
           out.mkdir(parents=True, exist_ok=True)
 
-          # Chosen for visual interest as well as educational recognition:
-          # 46 = original 1843 first-edition A Christmas Carol cover
-          # 47960 = illustrated Romeo and Juliet edition
-          # 23 = Frederick Douglass narrative
           books = {
               'a-christmas-carol.jpg': 46,
               'romeo-and-juliet.jpg': 47960,
@@ -49,7 +45,7 @@ jobs:
               for img in soup.find_all('img'):
                   src = img.get('src') or ''
                   alt = img.get('alt') or ''
-                  if 'cover' in src.lower() or 'book cover' in alt.lower() or 'cover' in alt.lower():
+                  if 'cover' in src.lower() or 'cover' in alt.lower():
                       candidates.append(urljoin(page_url, src))
               candidates += [
                   f'https://www.gutenberg.org/cache/epub/{book_id}/pg{book_id}.cover.medium.jpg',
@@ -90,15 +86,17 @@ jobs:
               raise RuntimeError('Hero screenshot target not found')
           text = text.replace(old_hero, new_hero, 1)
 
-          old_cards = '''          <a class="cover-card" href="https://www.gutenberg.org/ebooks/17396" target="_blank" rel="noopener"><div class="cover-frame"><img src="../../assets/guten/education/covers/secret-garden.jpg" alt="Project Gutenberg cover of The Secret Garden" loading="lazy" /></div><div class="cover-meta"><div class="cover-age">Younger</div><div class="cover-title">The Secret Garden</div><div class="cover-author">Frances Hodgson Burnett</div></div></a>
-          <a class="cover-card" href="https://www.gutenberg.org/ebooks/45" target="_blank" rel="noopener"><div class="cover-frame"><img src="../../assets/guten/education/covers/anne-of-green-gables.jpg" alt="Project Gutenberg cover of Anne of Green Gables" loading="lazy" /></div><div class="cover-meta"><div class="cover-age">Younger / teen</div><div class="cover-title">Anne of Green Gables</div><div class="cover-author">L. M. Montgomery</div></div></a>
-          <a class="cover-card" href="https://www.gutenberg.org/ebooks/514" target="_blank" rel="noopener"><div class="cover-frame"><img src="../../assets/guten/education/covers/little-women.jpg" alt="Project Gutenberg cover of Little Women" loading="lazy" /></div><div class="cover-meta"><div class="cover-age">Teen / secondary</div><div class="cover-title">Little Women</div><div class="cover-author">Louisa May Alcott</div></div></a>'''
-          new_cards = '''          <a class="cover-card" href="https://www.gutenberg.org/ebooks/46" target="_blank" rel="noopener"><div class="cover-frame"><img src="../../assets/guten/education/covers/a-christmas-carol.jpg" alt="Project Gutenberg cover of A Christmas Carol" loading="lazy" /></div><div class="cover-meta"><div class="cover-age">Secondary</div><div class="cover-title">A Christmas Carol</div><div class="cover-author">Charles Dickens</div></div></a>
-          <a class="cover-card" href="https://www.gutenberg.org/ebooks/47960" target="_blank" rel="noopener"><div class="cover-frame"><img src="../../assets/guten/education/covers/romeo-and-juliet.jpg" alt="Project Gutenberg cover of Romeo and Juliet" loading="lazy" /></div><div class="cover-meta"><div class="cover-age">Secondary</div><div class="cover-title">Romeo and Juliet</div><div class="cover-author">William Shakespeare</div></div></a>
-          <a class="cover-card" href="https://www.gutenberg.org/ebooks/23" target="_blank" rel="noopener"><div class="cover-frame"><img src="../../assets/guten/education/covers/frederick-douglass.jpg" alt="Project Gutenberg cover of Narrative of the Life of Frederick Douglass" loading="lazy" /></div><div class="cover-meta"><div class="cover-age">Secondary / university</div><div class="cover-title">Narrative of the Life of Frederick Douglass</div><div class="cover-author">Frederick Douglass</div></div></a>'''
-          if old_cards not in text:
-              raise RuntimeError('Old literature cards not found')
-          text = text.replace(old_cards, new_cards, 1)
+          replacements = {
+              17396: '          <a class="cover-card" href="https://www.gutenberg.org/ebooks/46" target="_blank" rel="noopener"><div class="cover-frame"><img src="../../assets/guten/education/covers/a-christmas-carol.jpg" alt="Project Gutenberg cover of A Christmas Carol" loading="lazy" /></div><div class="cover-meta"><div class="cover-age">Secondary</div><div class="cover-title">A Christmas Carol</div><div class="cover-author">Charles Dickens</div></div></a>',
+              45: '          <a class="cover-card" href="https://www.gutenberg.org/ebooks/47960" target="_blank" rel="noopener"><div class="cover-frame"><img src="../../assets/guten/education/covers/romeo-and-juliet.jpg" alt="Project Gutenberg cover of Romeo and Juliet" loading="lazy" /></div><div class="cover-meta"><div class="cover-age">Secondary</div><div class="cover-title">Romeo and Juliet</div><div class="cover-author">William Shakespeare</div></div></a>',
+              514: '          <a class="cover-card" href="https://www.gutenberg.org/ebooks/23" target="_blank" rel="noopener"><div class="cover-frame"><img src="../../assets/guten/education/covers/frederick-douglass.jpg" alt="Project Gutenberg cover of Narrative of the Life of Frederick Douglass" loading="lazy" /></div><div class="cover-meta"><div class="cover-age">Secondary / university</div><div class="cover-title">Narrative of the Life of Frederick Douglass</div><div class="cover-author">Frederick Douglass</div></div></a>',
+          }
+          for ebook_id, replacement in replacements.items():
+              pattern = rf'^\s*<a class="cover-card" href="https://www\.gutenberg\.org/ebooks/{ebook_id}".*?</a>\s*$'
+              text, count = re.subn(pattern, replacement, text, count=1, flags=re.MULTILINE)
+              if count != 1:
+                  raise RuntimeError(f'Expected exactly one literature card for ebook {ebook_id}; found {count}')
+
           path.write_text(text)
           PY
       - name: Commit generated assets and page changes
