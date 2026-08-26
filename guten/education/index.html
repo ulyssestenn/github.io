@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guten for Education — Free Classic Books & Study Tools for Students</title>
+  <meta name="description" content="Guten helps students discover, download, read offline, highlight, annotate, and study thousands of public-domain books from Project Gutenberg on Android. Core reading and study tools are free." />
+  <link rel="canonical" href="https://ulix.app/guten/education/" />
+  <meta name="theme-color" content="#F7F3EA" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ulix" />
+  <meta property="og:title" content="Guten for Education — Classic books, ready for students" />
+  <meta property="og:description" content="Read, highlight, take notes, and study thousands of classic books at no cost. Offline reading, no account required, and no advertising." />
+  <meta property="og:url" content="https://ulix.app/guten/education/" />
+  <meta property="og:image" content="https://ulix.app/assets/guten/gutenshare.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Guten for Education" />
+  <meta name="twitter:description" content="Free core reading and study tools for thousands of Project Gutenberg books on Android." />
+  <meta name="twitter:image" content="https://ulix.app/assets/guten/gutenshare.jpg" />
+
+  <link rel="icon" href="/icons/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="../../assets/ulix.css" />
+  <link rel="preload" as="font" type="font/woff2" href="../../assets/fonts/geist-latin.woff2" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Guten for Education",
+    "url": "https://ulix.app/guten/education/",
+    "description": "A guide for schools, libraries, ministries, universities, and literacy programs that want to recommend Guten, a free-core Android reader for public-domain books from Project Gutenberg.",
+    "isPartOf": {"@type": "WebSite", "name": "Ulix", "url": "https://ulix.app/"},
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "Guten",
+      "operatingSystem": "Android",
+      "applicationCategory": "BookApplication",
+      "isAccessibleForFree": true,
+      "url": "https://ulix.app/guten/",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.bhunt.guten"
+    }
+  }
+  </script>
+
+  <style>
+    @font-face {
+      font-family: 'Geist';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url('../../assets/fonts/geist-latin.woff2') format('woff2');
+    }
+    :root {
+      --bg:#f7f3ea; --paper:#fffdf8; --ink:#171713; --muted:#625f57; --rule:#ded7ca;
+      --gold:#d2a62f; --gold-dark:#8d6812; --blue:#315f7b; --blue-dark:#17394d; --blue-pale:#e8f1f4;
+      --green:#2f6653; --green-pale:#eaf3ee; --warm:#f4ead4; --serif:'Newsreader',Georgia,serif;
+      --sans:'Geist',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body.edu-page{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+    .edu-page a{color:inherit}.edu-page img{display:block;max-width:100%}.edu-page h1,.edu-page h2,.edu-page h3,.edu-page p,.edu-page ul,.edu-page figure{margin:0}.edu-page ul{padding:0;list-style:none}
+    .wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(247,243,234,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(23,23,19,.1)}
+    .topbar__inner{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:850;letter-spacing:.08em}.brand img{width:34px;height:34px;border-radius:8px}
+    .nav{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:650}.nav a{text-decoration:none;color:var(--muted)}.nav a:hover{color:var(--ink)}
+    .play{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:46px;padding:0 19px;border-radius:999px;background:var(--ink);color:#fff!important;text-decoration:none;font-weight:760;box-shadow:0 8px 24px rgba(23,23,19,.12)}
+    .hero{padding:84px 0 58px;overflow:hidden}.hero__grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:58px}.kicker{color:var(--blue);font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.16em;margin-bottom:18px!important}
+    .hero h1{max-width:760px;font-family:var(--serif);font-size:clamp(54px,6vw,88px);line-height:.96;font-weight:500;letter-spacing:-.035em}.hero__lead{max-width:670px;margin-top:26px!important;color:var(--muted);font-size:19px;line-height:1.58}
+    .hero__actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px;align-items:center}.button{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:999px;text-decoration:none;font-weight:760;border:1px solid var(--rule);background:var(--paper)}.button--primary{background:var(--blue-dark);color:#fff!important;border-color:var(--blue-dark)}.platform{margin-top:13px!important;color:var(--muted);font-size:13px}
+    .hero__art{min-height:590px;position:relative}.halo{position:absolute;inset:9% 1% 5% 4%;border-radius:50%;background:radial-gradient(circle,rgba(210,166,47,.22),rgba(49,95,123,.09) 50%,transparent 72%)}
+    .shot{position:absolute;width:276px;border-radius:28px;overflow:hidden;border:1px solid rgba(23,23,19,.13);box-shadow:0 32px 70px rgba(45,39,29,.22);background:#fff}.shot img{width:100%;height:auto}.shot--back{left:3%;top:64px;transform:rotate(-5deg)}.shot--front{right:1%;top:0;transform:rotate(4deg);z-index:2}.shot-note{position:absolute;left:0;bottom:2%;max-width:230px;padding:15px 17px;background:var(--paper);border:1px solid var(--rule);border-radius:16px;box-shadow:0 16px 40px rgba(45,39,29,.1);font-size:13px;line-height:1.4;color:var(--muted);z-index:3}.shot-note strong{color:var(--ink);display:block;margin-bottom:3px}
+    .trust{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:rgba(255,253,248,.68)}.trust__grid{display:grid;grid-template-columns:repeat(5,1fr)}.trust__item{min-height:110px;display:flex;align-items:center;gap:12px;padding:20px 18px;border-right:1px solid var(--rule)}.trust__item:last-child{border-right:0}.icon{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--blue-pale);color:var(--blue-dark);flex:0 0 auto;font-weight:850}.trust__label{font-size:14px;line-height:1.35;font-weight:750}
+    .section{padding:86px 0}.section--paper{background:var(--paper)}.section--blue{background:var(--blue-dark);color:#f8fbfc}.section--green{background:var(--green-pale)}.eyebrow{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px!important}.section--blue .eyebrow{color:#a9cfdf}.section h2{font-family:var(--serif);font-size:clamp(42px,5vw,68px);line-height:1.02;font-weight:500;letter-spacing:-.025em;max-width:900px}.intro{max-width:790px;margin-top:18px!important;color:var(--muted);font-size:18px;line-height:1.58}.section--blue .intro{color:rgba(248,251,252,.72)}
+    .features{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}.card{background:var(--paper);border:1px solid var(--rule);border-radius:18px;padding:23px;min-height:166px}.card__mark{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;margin-bottom:18px;background:var(--warm);color:var(--gold-dark);font-weight:850}.card h3{font-size:16px;line-height:1.25;margin-bottom:7px}.card p{color:var(--muted);font-size:14px;line-height:1.5}
+    .institutions{display:grid;grid-template-columns:repeat(5,1fr);gap:13px;margin-top:38px}.institution{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13);border-radius:18px;padding:22px}.institution__num{color:#e5c35d;font-family:var(--serif);font-size:28px;margin-bottom:22px}.institution h3{color:#fff;font-size:16px;line-height:1.28;margin-bottom:8px}.institution p{color:rgba(248,251,252,.7);font-size:14px;line-height:1.5}
+    .age-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}.age{border:1px solid var(--rule);border-radius:20px;background:var(--paper);overflow:hidden}.age__head{padding:20px 22px;border-bottom:1px solid var(--rule);background:#fbf7ed}.age__head strong{font-family:var(--serif);font-size:26px;font-weight:500}.books{padding:10px 22px 18px}.book{padding:12px 0;border-bottom:1px solid #ece5d9}.book:last-child{border-bottom:0}.book__title{font-weight:760;font-size:14px}.book__author{color:var(--muted);font-size:12px;margin-top:2px}.boh{margin-top:18px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:17px 20px;border-radius:16px;background:var(--warm);border:1px solid #e6d4b3}.boh p{color:#594c36;font-size:14px;line-height:1.45}.boh a{color:var(--blue-dark);font-weight:800;white-space:nowrap}.legal-note{margin-top:22px!important;color:var(--muted);font-size:12px;line-height:1.5}
+    .lowdata{display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:center}.lowdata__visual{min-height:380px;border-radius:26px;background:linear-gradient(135deg,#dcecf1,#f2e4c4);position:relative;overflow:hidden;border:1px solid rgba(23,23,19,.08)}.lowdata__visual .shot{width:190px;left:12%;top:40px;right:auto;transform:rotate(-3deg)}.download-mark{position:absolute;right:14%;top:34%;width:122px;height:122px;border-radius:50%;background:var(--paper);display:grid;place-items:center;font-size:42px;color:var(--blue-dark);box-shadow:0 15px 40px rgba(23,23,19,.12)}.stats{display:flex;gap:28px;flex-wrap:wrap;margin-top:26px}.stat{border-left:3px solid var(--gold);padding-left:13px}.stat strong{display:block;font-family:var(--serif);font-size:28px;font-weight:500}.stat span{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+    .privacy{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:36px}.privacy-card{padding:28px;border-radius:20px;border:1px solid #cfded6;background:rgba(255,255,255,.65)}.privacy-card h3{font-family:var(--serif);font-size:28px;font-weight:500;margin-bottom:8px}.privacy-card p{color:var(--muted);line-height:1.55;font-size:15px}.privacy-card a{display:inline-block;margin-top:14px;color:var(--blue-dark);font-size:14px;font-weight:800}
+    .compare{display:grid;grid-template-columns:1.65fr .72fr;gap:18px;margin-top:38px;align-items:stretch}.compare__side{border-radius:24px;border:1px solid var(--rule);padding:30px;background:var(--paper)}.compare__side--premium{background:#1b1915;color:#fff;border-color:#1b1915}.compare__title{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:22px}.compare__title h3{font-family:var(--serif);font-size:34px;font-weight:500}.pill{font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:850;color:var(--green);background:var(--green-pale);border-radius:999px;padding:7px 10px}.compare__side--premium .pill{color:#f4d67c;background:rgba(244,214,124,.12)}.checks{display:grid;grid-template-columns:repeat(3,1fr);gap:10px 16px}.checks li{display:flex;gap:8px;align-items:flex-start;font-size:13px;line-height:1.4}.checks li::before{content:'✓';color:var(--green);font-weight:900}.premium-list{display:grid;gap:14px}.premium-list li{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.4;color:rgba(255,255,255,.83)}.premium-list li::before{content:'◇';color:#f0c852;font-weight:900}.premium-note{margin-top:24px!important;color:rgba(255,255,255,.62);font-size:12px;line-height:1.5}
+    .real-shots{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}.real-shot{border-radius:24px;background:#171713;overflow:hidden;position:relative;padding:34px 34px 82px;min-height:560px;display:flex;align-items:flex-start;justify-content:center}.real-shot img{height:445px;width:auto;border-radius:18px;box-shadow:0 22px 50px rgba(0,0,0,.28)}.real-shot__caption{position:absolute;left:18px;right:18px;bottom:18px;padding:14px 15px;background:rgba(255,253,248,.96);border-radius:14px}.real-shot__caption strong{display:block;font-size:14px}.real-shot__caption span{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+    .faq{margin-top:34px;border-top:1px solid var(--rule)}.faq details{border-bottom:1px solid var(--rule)}.faq summary{cursor:pointer;list-style:none;padding:21px 0;display:flex;align-items:center;justify-content:space-between;gap:20px;font-weight:760}.faq summary::-webkit-details-marker{display:none}.faq summary::after{content:'+';font-size:24px;font-weight:400;color:var(--blue)}.faq details[open] summary::after{content:'−'}.faq p{max-width:850px;padding:0 0 22px;color:var(--muted);font-size:15px;line-height:1.6}.faq a{color:var(--blue-dark);font-weight:750}
+    .final{padding:78px 0 90px;text-align:center}.final h2{margin:0 auto;font-family:var(--serif);font-size:clamp(46px,6vw,74px);line-height:1;font-weight:500;max-width:780px}.final p{max-width:650px;margin:18px auto 0!important;color:var(--muted);font-size:17px;line-height:1.6}.final .play{margin-top:28px;min-height:54px;padding:0 25px}.final__ios{font-size:13px!important;margin-top:13px!important}.footer{border-top:1px solid var(--rule);padding:34px 0 44px}.footer__inner{display:flex;justify-content:space-between;align-items:center;gap:28px}.footer__brand{display:flex;align-items:center;gap:10px;font-weight:850;letter-spacing:.08em}.footer__brand img{width:32px;height:32px;border-radius:7px}.footer__links{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--muted)}.footer__links a{text-decoration:none}
+    @media(max-width:980px){.nav{display:none}.hero__grid,.lowdata,.compare{grid-template-columns:1fr}.hero__art{min-height:560px;max-width:620px;width:100%;margin:10px auto 0}.trust__grid{grid-template-columns:repeat(2,1fr)}.trust__item{border-bottom:1px solid var(--rule)}.features{grid-template-columns:repeat(2,1fr)}.institutions{grid-template-columns:repeat(2,1fr)}.age-grid{grid-template-columns:1fr}.checks{grid-template-columns:repeat(2,1fr)}.privacy{grid-template-columns:1fr}.real-shots{grid-template-columns:1fr}.real-shot{min-height:520px}}
+    @media(max-width:620px){.wrap{width:min(calc(100% - 26px),1180px)}.topbar__inner{min-height:64px}.topbar .play{padding:0 14px;min-height:42px;font-size:13px}.hero{padding-top:58px}.hero h1{font-size:49px}.hero__lead{font-size:17px}.hero__art{min-height:455px}.shot{width:205px;border-radius:22px}.shot--back{left:0;top:68px}.shot--front{right:0}.shot-note{display:none}.trust__grid{grid-template-columns:1fr 1fr}.trust__item{min-height:96px;padding:14px 10px}.trust__label{font-size:12px}.features,.institutions,.checks{grid-template-columns:1fr}.section{padding:66px 0}.section h2{font-size:44px}.boh{align-items:flex-start;flex-direction:column}.lowdata__visual{min-height:330px}.lowdata__visual .shot{width:160px}.download-mark{width:98px;height:98px;font-size:34px}.footer__inner{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body class="edu-page">
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="../"><img src="../../icons/guten.png" alt="" /> GUTEN <span style="font-weight:500;letter-spacing:0;color:var(--muted)">for Education</span></a>
+      <nav class="nav" aria-label="Education page">
+        <a href="#free">Free features</a><a href="#institutions">For institutions</a><a href="#books">Books</a><a href="#privacy">Privacy</a><a href="#faq">FAQ</a>
+      </nav>
+      <a class="play" href="https://play.google.com/store/apps/details?id=com.bhunt.guten">Get Guten on Google Play</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div>
+          <p class="kicker">Guten for Education</p>
+          <h1>Read, highlight, and take notes in thousands of classic books at no cost.</h1>
+          <p class="hero__lead">Guten makes public-domain literature from Project Gutenberg easy to discover, download, read offline, highlight, and annotate on Android. Schools and libraries can simply recommend it. There is no institutional license or deployment process.</p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="https://play.google.com/store/apps/details?id=com.bhunt.guten">Download Guten</a>
+            <a class="button" href="#free">See what students get free</a>
+          </div>
+          <p class="platform">Android now. iPhone support is in development.</p>
+        </div>
+        <div class="hero__art" aria-label="Actual Guten screenshots">
+          <div class="halo"></div>
+          <figure class="shot shot--back"><img src="../../assets/screenshots/guten/library.webp" alt="Actual Guten Library screen" width="1080" height="2084" /></figure>
+          <figure class="shot shot--front"><img src="../../assets/screenshots/guten/reading_sepia.webp" alt="Actual Guten reading screen in sepia theme" width="1080" height="2153" /></figure>
+          <div class="shot-note"><strong>Real app screens</strong>These are current Guten screenshots, not illustrative UI.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust" aria-label="Key facts">
+      <div class="wrap trust__grid">
+        <div class="trust__item"><span class="icon">○</span><span class="trust__label">No account required</span></div>
+        <div class="trust__item"><span class="icon">×</span><span class="trust__label">No advertising</span></div>
+        <div class="trust__item"><span class="icon">↓</span><span class="trust__label">Offline reading</span></div>
+        <div class="trust__item"><span class="icon">✎</span><span class="trust__label">Notes & highlights free</span></div>
+        <div class="trust__item"><span class="icon">◇</span><span class="trust__label">No school license required</span></div>
+      </div>
+    </section>
+
+    <section id="free" class="section section--paper">
+      <div class="wrap">
+        <p class="eyebrow">Free for reading and study</p>
+        <h2>The core student experience is free.</h2>
+        <p class="intro"><strong>Students do not need Premium to read books, highlight passages, take notes, use bookmarks, share basic quote cards, or read offline.</strong> The free version is a full reading and annotation tool, not a trial.</p>
+        <div class="features">
+          <article class="card"><div class="card__mark">01</div><h3>Browse Project Gutenberg</h3><p>Search and discover thousands of public-domain books by title and author.</p></article>
+          <article class="card"><div class="card__mark">02</div><h3>Download complete books</h3><p>Save books directly to the device for reading whenever they are needed.</p></article>
+          <article class="card"><div class="card__mark">03</div><h3>Read offline</h3><p>Downloaded books remain readable without continuous internet access.</p></article>
+          <article class="card"><div class="card__mark">04</div><h3>Save reading progress</h3><p>Return to the place where the student last stopped reading.</p></article>
+          <article class="card"><div class="card__mark">05</div><h3>Bookmarks</h3><p>Mark useful or important places and jump back to them later.</p></article>
+          <article class="card"><div class="card__mark">06</div><h3>Highlights</h3><p>Select and highlight passages while reading.</p></article>
+          <article class="card"><div class="card__mark">07</div><h3>Notes</h3><p>Add study notes directly to selected passages.</p></article>
+          <article class="card"><div class="card__mark">08</div><h3>Per-book notes & highlights</h3><p>Review and search annotations within each individual book.</p></article>
+          <article class="card"><div class="card__mark">09</div><h3>Search within books</h3><p>Search the current leaf or find matches across the book.</p></article>
+          <article class="card"><div class="card__mark">10</div><h3>Define words</h3><p>Select a word and use Guten's Define action to look it up.</p></article>
+          <article class="card"><div class="card__mark">11</div><h3>Typography controls</h3><p>Adjust font size, font family, line spacing, margins, and justification.</p></article>
+          <article class="card"><div class="card__mark">12</div><h3>Readable fonts</h3><p>Choose options including Literata and Atkinson Hyperlegible.</p></article>
+          <article class="card"><div class="card__mark">13</div><h3>Light, dark & sepia themes</h3><p>Choose a comfortable reading appearance or follow the system theme.</p></article>
+          <article class="card"><div class="card__mark">14</div><h3>Flexible navigation</h3><p>Use leaf lists, previous/next controls, or optional swipe navigation.</p></article>
+          <article class="card"><div class="card__mark">15</div><h3>Daily reading goals</h3><p>Set a target in minutes and see daily progress.</p></article>
+          <article class="card"><div class="card__mark">16</div><h3>Reading streaks</h3><p>Track consistency over time without requiring a school account.</p></article>
+          <article class="card"><div class="card__mark">17</div><h3>Reading statistics</h3><p>See total reading time, books read, and books in the library.</p></article>
+          <article class="card"><div class="card__mark">18</div><h3>Library search & sorting</h3><p>Find downloaded books by title or author and sort the local library.</p></article>
+          <article class="card"><div class="card__mark">19</div><h3>Download controls</h3><p>Use settings such as Wi-Fi-only downloads when data is limited.</p></article>
+          <article class="card"><div class="card__mark">20</div><h3>Backup & restore</h3><p>Export and restore reading progress, bookmarks, highlights, notes, and other Guten data.</p></article>
+          <article class="card"><div class="card__mark">21</div><h3>Basic Share Studio</h3><p>Create and share basic quote cards from highlights. Shared passages can help students recommend books and ideas to one another.</p></article>
+          <article class="card"><div class="card__mark">22</div><h3>Plain-text quote sharing</h3><p>Share a selected passage as text through Android's system share tools.</p></article>
+          <article class="card"><div class="card__mark">23</div><h3>TalkBack support</h3><p>Reader and navigation controls include accessibility labels.</p></article>
+          <article class="card"><div class="card__mark">24</div><h3>Android font scaling</h3><p>Guten respects the device's system text-size preferences.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="institutions" class="section section--blue">
+      <div class="wrap">
+        <p class="eyebrow">Why institutions might choose Guten</p>
+        <h2>A reading resource that does not require an EdTech rollout.</h2>
+        <p class="intro">A school, library, ministry, or literacy program can simply link to Guten on Google Play. Students install the app and begin reading. There are no student rosters, institutional accounts, school licenses, or administrative dashboards to configure.</p>
+        <div class="institutions">
+          <article class="institution"><div class="institution__num">I</div><h3>Uses devices students already have</h3><p>Guten is designed for Android phones and tablets rather than specialized reading hardware.</p></article>
+          <article class="institution"><div class="institution__num">II</div><h3>Download once, read later</h3><p>Students can download books when connectivity is available and continue reading offline.</p></article>
+          <article class="institution"><div class="institution__num">III</div><h3>Study tools stay free</h3><p>Highlighting, notes, bookmarks, search, reading goals, and basic Share Studio do not require Premium.</p></article>
+          <article class="institution"><div class="institution__num">IV</div><h3>No deployment required</h3><p>No institutional license, student account provisioning, or integration is needed to recommend the app.</p></article>
+          <article class="institution"><div class="institution__num">V</div><h3>Student reading data stays local</h3><p>Progress, bookmarks, highlights, and notes are stored on the device. See the privacy policy for details.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="books" class="section">
+      <div class="wrap">
+        <p class="eyebrow">What students can read</p>
+        <h2>Books for a wide range of ages and interests.</h2>
+        <p class="intro">Project Gutenberg contains literature, history, philosophy, poetry, science, adventure stories, children's classics, and more. These examples are meant to show the range; educators can choose the works that fit their students.</p>
+        <div class="age-grid">
+          <article class="age"><div class="age__head"><strong>Younger & family reading</strong></div><div class="books">
+            <div class="book"><div class="book__title">Alice's Adventures in Wonderland</div><div class="book__author">Lewis Carroll</div></div>
+            <div class="book"><div class="book__title">The Secret Garden</div><div class="book__author">Frances Hodgson Burnett</div></div>
+            <div class="book"><div class="book__title">Anne of Green Gables</div><div class="book__author">L. M. Montgomery</div></div>
+            <div class="book"><div class="book__title">The Wind in the Willows</div><div class="book__author">Kenneth Grahame</div></div>
+          </div></article>
+          <article class="age"><div class="age__head"><strong>Teen & secondary reading</strong></div><div class="books">
+            <div class="book"><div class="book__title">Treasure Island</div><div class="book__author">Robert Louis Stevenson</div></div>
+            <div class="book"><div class="book__title">Little Women</div><div class="book__author">Louisa May Alcott</div></div>
+            <div class="book"><div class="book__title">A Christmas Carol</div><div class="book__author">Charles Dickens</div></div>
+            <div class="book"><div class="book__title">The Adventures of Sherlock Holmes</div><div class="book__author">Arthur Conan Doyle</div></div>
+          </div></article>
+          <article class="age"><div class="age__head"><strong>Advanced & university reading</strong></div><div class="books">
+            <div class="book"><div class="book__title">Pride and Prejudice</div><div class="book__author">Jane Austen</div></div>
+            <div class="book"><div class="book__title">Frankenstein</div><div class="book__author">Mary Shelley</div></div>
+            <div class="book"><div class="book__title">Narrative of the Life of Frederick Douglass</div><div class="book__author">Frederick Douglass</div></div>
+            <div class="book"><div class="book__title">Shakespeare, Homer, philosophy, history & more</div><div class="book__author">Across the Project Gutenberg catalog</div></div>
+          </div></article>
+        </div>
+        <div class="boh"><p><strong>Studying Homer?</strong> Ulix also makes <em>Breaker of Horses</em>, a dedicated Iliad and Odyssey reader for students who want a more focused Homer experience.</p><a href="../../breakerofhorses/">See Breaker of Horses →</a></div>
+        <p class="legal-note">Project Gutenberg determines public-domain status under U.S. law. Users and institutions should follow applicable copyright law in their country.</p>
+      </div>
+    </section>
+
+    <section class="section section--paper">
+      <div class="wrap lowdata">
+        <div class="lowdata__visual" aria-label="Actual Guten Browse screenshot and offline-reading symbol"><figure class="shot"><img src="../../assets/screenshots/guten/browse.webp" alt="Actual Guten Browse screen" width="1080" height="2119" loading="lazy" /></figure><div class="download-mark" aria-hidden="true">↓</div></div>
+        <div>
+          <p class="eyebrow">Low-connectivity friendly</p>
+          <h2>Download once. Read anywhere.</h2>
+          <p class="intro">Once a book is downloaded, students can continue reading without a continuous internet connection. Guten also offers a Wi-Fi-only download option for readers on limited data plans.</p>
+          <div class="stats"><div class="stat"><strong>Offline</strong><span>after download</span></div><div class="stat"><strong>&lt; 1 MB</strong><span>most Project Gutenberg EPUBs</span></div><div class="stat"><strong>No login</strong><span>to start reading</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy" class="section section--green">
+      <div class="wrap">
+        <p class="eyebrow">Privacy and simplicity</p>
+        <h2>Reading data stays with the reader.</h2>
+        <p class="intro">Guten does not require an account and does not contain advertising. Downloaded books and reading data such as bookmarks, highlights, notes, and reading progress are stored locally on the device.</p>
+        <div class="privacy">
+          <article class="privacy-card"><h3>Local-first reading data</h3><p>Guten does not automatically sync a student's reading history to a Guten cloud account. Students can export and restore a backup when they want to move their data.</p><a href="../../gutenprivacy.html">Read the Guten Privacy Policy →</a></article>
+          <article class="privacy-card"><h3>Minimal network use</h3><p>Guten connects to Project Gutenberg and related catalog services for book listings and downloads, Google Play for optional Premium billing, and Sentry for scrubbed crash and reliability diagnostics.</p><a href="../../gutenprivacy.html">See exactly what Guten sends and stores →</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <p class="eyebrow">Free vs. optional Premium</p>
+        <h2>The long list is the free list.</h2>
+        <p class="intro">Premium is a one-time purchase for readers who want additional organization and convenience. It is not required to access books or use the core study experience.</p>
+        <div class="compare">
+          <div class="compare__side">
+            <div class="compare__title"><h3>Free</h3><span class="pill">Core reading + study</span></div>
+            <ul class="checks">
+              <li>Browse Project Gutenberg</li><li>Search by title or author</li><li>Download complete books</li>
+              <li>Read complete books</li><li>Read offline</li><li>Reading progress</li>
+              <li>Bookmarks</li><li>Highlights</li><li>Notes on passages</li>
+              <li>Per-book notes & highlights</li><li>Search/filter per-book annotations</li><li>Search within the current leaf</li>
+              <li>Cross-leaf book search</li><li>Definition lookup</li><li>Font-size controls</li>
+              <li>Font-family controls</li><li>Literata font</li><li>Atkinson Hyperlegible</li>
+              <li>Line-spacing controls</li><li>Margin controls</li><li>Text justification</li>
+              <li>Light theme</li><li>Dark theme</li><li>Sepia theme</li>
+              <li>System theme</li><li>Swipe navigation</li><li>Leaf/chapter navigation</li>
+              <li>Daily reading goals</li><li>Reading streaks</li><li>Reading statistics</li>
+              <li>Library search</li><li>Library sorting</li><li>Wi-Fi-only download setting</li>
+              <li>Full backup export</li><li>Backup restore</li><li>Basic Share Studio</li>
+              <li>Save basic quote cards</li><li>Share quote cards</li><li>Plain-text quote sharing</li>
+              <li>TalkBack support</li><li>Android font scaling</li>
+            </ul>
+          </div>
+          <div class="compare__side compare__side--premium">
+            <div class="compare__title"><h3>Optional Premium</h3><span class="pill">One-time purchase</span></div>
+            <ul class="premium-list">
+              <li>Read Aloud / text-to-speech</li>
+              <li>Cross-library Notes Manager</li>
+              <li>Dedicated note & highlight export</li>
+              <li>Collections / shelves</li>
+              <li>Pomodoro reading timer</li>
+              <li>Advanced Share Studio themes, formats, and layouts</li>
+            </ul>
+            <p class="premium-note">Premium adds power-user tools. Reading, highlighting, note-taking, bookmarks, offline access, and basic Share Studio remain free.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--paper">
+      <div class="wrap">
+        <p class="eyebrow">The actual app</p>
+        <h2>Built for reading, not for managing a school account.</h2>
+        <p class="intro">A few current Guten screens show the student experience directly. No invented interface is used here.</p>
+        <div class="real-shots">
+          <figure class="real-shot"><img src="../../assets/screenshots/guten/library.webp" alt="Actual Guten library screen" loading="lazy" /><figcaption class="real-shot__caption"><strong>Library</strong><span>Downloaded books stay ready for offline reading.</span></figcaption></figure>
+          <figure class="real-shot"><img src="../../assets/screenshots/guten/reading_dark.webp" alt="Actual Guten reading screen in dark mode" loading="lazy" /><figcaption class="real-shot__caption"><strong>Reader</strong><span>Adjustable typography, themes, highlights, notes, and bookmarks.</span></figcaption></figure>
+          <figure class="real-shot"><img src="../../assets/screenshots/guten/search.webp" alt="Actual Guten search-within-book screen" loading="lazy" /><figcaption class="real-shot__caption"><strong>Search</strong><span>Find passages inside a leaf or across the book.</span></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="wrap">
+        <p class="eyebrow">FAQ</p>
+        <h2>Questions schools and libraries might have.</h2>
+        <div class="faq">
+          <details><summary>Is Guten free?</summary><p>Core reading and study features are free. Students can browse, download, read, bookmark, highlight, take notes, search, set reading goals, use basic Share Studio, back up their data, and read offline without buying Premium.</p></details>
+          <details><summary>Can students highlight and take notes for free?</summary><p>Yes. Highlighting and note-taking are free, as is reviewing notes and highlights within an individual book. Premium adds the cross-library Notes Manager and dedicated annotation-export formats.</p></details>
+          <details><summary>Do students need an account?</summary><p>No account is required to use Guten. As with other Android apps distributed through Google Play, downloading the app itself uses the student's normal Google Play environment.</p></details>
+          <details><summary>Does Guten contain advertising?</summary><p>No. Guten has no advertising network and does not use reading behavior for advertising or behavioral marketing. <a href="../../gutenprivacy.html">Read the Privacy Policy.</a></p></details>
+          <details><summary>Does Guten work offline?</summary><p>Yes. After a book has been downloaded, it can be read without a continuous internet connection.</p></details>
+          <details><summary>Does a school need a license or institutional account?</summary><p>No. A school, library, university, ministry, or literacy program can simply recommend Guten's Google Play listing to students. There is no institutional setup required for the free reading experience.</p></details>
+          <details><summary>What does Premium add?</summary><p>Premium adds Read Aloud, the cross-library Notes Manager, dedicated note and highlight export, Collections, a Pomodoro reading timer, and advanced Share Studio options. Premium is a one-time purchase.</p></details>
+          <details><summary>Where do the books come from?</summary><p>Guten helps readers discover and read public-domain books available through Project Gutenberg and related catalog services. Guten is an independent app and is not affiliated with, endorsed by, or officially connected to Project Gutenberg or the Project Gutenberg Literary Archive Foundation.</p></details>
+          <details><summary>Is Guten available on iPhone?</summary><p>Not yet. Guten is currently available on Android, and iPhone support is in development.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="wrap">
+        <h2>Put a library of classics in a student's pocket.</h2>
+        <p>No form, sales call, license agreement, or institutional setup is required. Just share the Google Play link and students can start reading.</p>
+        <a class="play" href="https://play.google.com/store/apps/details?id=com.bhunt.guten">Get Guten on Google Play</a>
+        <p class="final__ios">Currently for Android. iPhone support is in development.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand"><img src="../../icons/guten.png" alt="" /> GUTEN</div>
+      <div class="footer__links"><a href="../">Guten</a><a href="../../gutenprivacy.html">Guten Privacy</a><a href="../../apps.html">All Ulix apps</a><a href="../../privacy.html">Ulix Privacy</a></div>
+    </div>
+  </footer>
+</body>
+</html>
