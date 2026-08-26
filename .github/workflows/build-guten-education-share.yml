@@ -1,4 +1,4 @@
-name: Build Guten education share card
+name: Export Guten education share card for review
 
 on:
   push:
@@ -9,185 +9,19 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  export:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build share card from real repo assets
+      - name: Export generated share card as review text
         run: |
-          python -m pip install --quiet pillow
-          python - <<'PY'
-          from PIL import Image, ImageDraw, ImageFont, ImageFilter
-          from pathlib import Path
-          import math
-
-          ROOT = Path('.')
-          OUT = ROOT / 'assets/guten/education/guten-education-share.jpg'
-          OUT.parent.mkdir(parents=True, exist_ok=True)
-
-          W, H = 1200, 630
-          navy = (6, 24, 43)
-          navy2 = (10, 36, 60)
-          cream = (249, 244, 231)
-          gold = (226, 180, 61)
-          muted = (213, 220, 222)
-
-          card = Image.new('RGB', (W, H), navy)
-          draw = ImageDraw.Draw(card)
-
-          # subtle radial glow on the product side
-          glow = Image.new('RGBA', (W, H), (0,0,0,0))
-          gd = ImageDraw.Draw(glow)
-          for r, a in [(360, 14), (280, 18), (205, 22)]:
-              gd.ellipse((755-r, 300-r, 755+r, 300+r), fill=(68, 122, 151, a))
-          glow = glow.filter(ImageFilter.GaussianBlur(60))
-          card = Image.alpha_composite(card.convert('RGBA'), glow)
-
-          # Fonts
-          serif = '/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf'
-          serif_bold = '/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf'
-          sans = '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
-          sans_bold = '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
-          f_brand = ImageFont.truetype(serif_bold, 34)
-          f_label = ImageFont.truetype(sans_bold, 17)
-          f_head = ImageFont.truetype(serif, 55)
-          f_support = ImageFont.truetype(sans, 21)
-          f_ulix = ImageFont.truetype(sans, 18)
-
-          def fit_rgba(path, max_w, max_h):
-              im = Image.open(path).convert('RGBA')
-              s = min(max_w/im.width, max_h/im.height)
-              return im.resize((max(1,int(im.width*s)), max(1,int(im.height*s))), Image.Resampling.LANCZOS)
-
-          def rounded_mask(size, radius):
-              m = Image.new('L', size, 0)
-              d = ImageDraw.Draw(m)
-              d.rounded_rectangle((0,0,size[0]-1,size[1]-1), radius=radius, fill=255)
-              return m
-
-          def phone_from_screenshot(path, target_h, border=9, radius=30):
-              shot = Image.open(path).convert('RGBA')
-              s = target_h / shot.height
-              sw = int(shot.width*s)
-              sh = int(shot.height*s)
-              shot = shot.resize((sw, sh), Image.Resampling.LANCZOS)
-              inner_mask = rounded_mask((sw, sh), max(18, radius-border))
-              shot.putalpha(inner_mask)
-              phone = Image.new('RGBA', (sw+2*border, sh+2*border), (0,0,0,0))
-              pd = ImageDraw.Draw(phone)
-              pd.rounded_rectangle((0,0,phone.width-1,phone.height-1), radius=radius, fill=(18,19,21,255), outline=(102,108,113,255), width=2)
-              phone.alpha_composite(shot, (border,border))
-              return phone
-
-          def paste_shadow(base, im, xy, blur=24, offset=(0,14), alpha=105):
-              x,y = xy
-              sh = Image.new('RGBA', base.size, (0,0,0,0))
-              mask = im.getchannel('A') if im.mode == 'RGBA' else Image.new('L', im.size, 255)
-              black = Image.new('RGBA', im.size, (0,0,0,alpha))
-              black.putalpha(mask.point(lambda p: p*alpha//255))
-              sh.alpha_composite(black, (x+offset[0], y+offset[1]))
-              sh = sh.filter(ImageFilter.GaussianBlur(blur))
-              base = Image.alpha_composite(base, sh)
-              base.alpha_composite(im, (x,y))
-              return base
-
-          # Bottom band: actual local education cover assets, dimmed and partially cropped.
-          covers = [
-              'hamlet.jpg',
-              'great-expectations.jpg',
-              'frederick-douglass.jpg',
-              'pride-and-prejudice.jpg',
-              'frankenstein.jpg',
-          ]
-          x = -10
-          for i, name in enumerate(covers):
-              p = ROOT / 'assets/guten/education/covers' / name
-              im = Image.open(p).convert('RGBA')
-              s = 175 / im.height
-              im = im.resize((int(im.width*s), 175), Image.Resampling.LANCZOS)
-              im = im.rotate([-5,-2,2,-1,4][i], expand=True, resample=Image.Resampling.BICUBIC)
-              # dark/navy veil so covers add texture without competing with headline
-              veil = Image.new('RGBA', im.size, (4,21,38,95))
-              veil.putalpha(im.getchannel('A').point(lambda v: int(v*0.72)))
-              im = Image.alpha_composite(im, veil)
-              card.alpha_composite(im, (x, 500 + [8,0,10,3,12][i]))
-              x += 132
-
-          draw = ImageDraw.Draw(card)
-
-          # Actual Guten app icon.
-          icon = fit_rgba(ROOT / 'icons/guten.png', 72, 72)
-          card.alpha_composite(icon, (48, 42))
-          draw = ImageDraw.Draw(card)
-          draw.text((137, 52), 'GUTEN', font=f_brand, fill=cream)
-          draw.line((300, 48, 300, 90), fill=(179,145,74), width=1)
-          draw.text((326, 60), 'FOR EDUCATION', font=f_label, fill=gold)
-
-          # Headline and support.
-          headline = 'Thousands of\nclassic books.\nFree for students.'
-          draw.multiline_text((48, 148), headline, font=f_head, fill=cream, spacing=3)
-          support_y = 440
-          pieces = [('Read offline', muted), (' · ', gold), ('Highlight', muted), (' · ', gold), ('Take notes', muted), (' · ', gold), ('No ads', muted)]
-          sx = 51
-          for text, color in pieces:
-              draw.text((sx, support_y), text, font=f_support, fill=color)
-              sx += draw.textlength(text, font=f_support)
-
-          # Real screenshots. Library behind, Alice reading screen in front.
-          library = phone_from_screenshot(ROOT / 'assets/screenshots/guten/library.png', 493, border=8, radius=28)
-          alice = phone_from_screenshot(ROOT / 'assets/screenshots/guten/gutenreadingscreenlight.png', 516, border=8, radius=28)
-          library = library.rotate(-4, expand=True, resample=Image.Resampling.BICUBIC)
-          alice = alice.rotate(3, expand=True, resample=Image.Resampling.BICUBIC)
-          card = paste_shadow(card, library, (724, 94), blur=24, offset=(0,13), alpha=105)
-          card = paste_shadow(card, alice, (914, 64), blur=24, offset=(0,13), alpha=115)
-
-          # Actual Ulix wordmark at lower left.
-          ulix_path = ROOT / 'icons/ulixwordmarkclear.png'
-          if ulix_path.exists():
-              ulix = fit_rgba(ulix_path, 98, 36)
-              card.alpha_composite(ulix, (50, 579))
-          else:
-              mark = fit_rgba(ROOT / 'icons/ulixlogomark.png', 28, 28)
-              card.alpha_composite(mark, (50, 582))
-              ImageDraw.Draw(card).text((86, 584), 'Ulix', font=f_ulix, fill=cream)
-
-          # Fine border to keep dark cards crisp in embeds.
-          d = ImageDraw.Draw(card)
-          d.rectangle((0,0,W-1,H-1), outline=(19,48,72), width=2)
-
-          card.convert('RGB').save(OUT, 'JPEG', quality=91, optimize=True, progressive=True)
-          print(f'Wrote {OUT} {OUT.stat().st_size/1024:.1f} KB')
-          PY
-
-          python - <<'PY'
-          from pathlib import Path
-          page = Path('guten/education/index.html')
-          text = page.read_text()
-          old = 'https://ulix.app/assets/guten/gutenshare.jpg'
-          new = 'https://ulix.app/assets/guten/education/guten-education-share.jpg'
-          text = text.replace(old, new)
-          if '<meta property="og:image:width"' not in text:
-              text = text.replace(
-                  f'<meta property="og:image" content="{new}" />',
-                  f'<meta property="og:image" content="{new}" />\n  <meta property="og:image:width" content="1200" />\n  <meta property="og:image:height" content="630" />'
-              )
-          text = text.replace(
-              '<meta property="og:image:alt" content="Guten, an Android reader for Project Gutenberg books" />',
-              '<meta property="og:image:alt" content="Guten for Education: thousands of classic books free for students, shown with real Guten app screens" />'
-          )
-          text = text.replace(
-              '<meta name="twitter:image:alt" content="Guten, an Android reader for Project Gutenberg books" />',
-              '<meta name="twitter:image:alt" content="Guten for Education: thousands of classic books free for students, shown with real Guten app screens" />'
-          )
-          page.write_text(text)
-          PY
-
-      - name: Commit share card
+          mkdir -p .tmp
+          base64 -w0 assets/guten/education/guten-education-share.jpg > .tmp/guten-education-share.b64
+      - name: Commit review export
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add assets/guten/education/guten-education-share.jpg guten/education/index.html
-          git diff --cached --stat
-          git commit -m 'Add Guten education share card with real assets' || exit 0
+          git add .tmp/guten-education-share.b64
+          git commit -m 'Temporarily export Guten education share card' || exit 0
           git push
