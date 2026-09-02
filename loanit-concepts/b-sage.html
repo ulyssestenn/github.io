@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex" />
+<title>Loan It — Sage</title>
+<style>
+  @font-face {
+    font-family: 'Geist';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('../assets/fonts/geist-latin.woff2') format('woff2');
+  }
+
+  /* ==========================================================================
+     Concept B — "Sage"
+     The light counterpart to the house dark pages (Keep Clip does this too).
+     Ground is the app's own light surface, ink is a deep forest green, and the
+     app's black screens sit inside the light page as high-contrast objects.
+     ========================================================================== */
+  .lp {
+    --paper: #F4F7EE;
+    --paper-2: #E9EFDF;
+    --card: #FFFFFF;
+    --ink: #15241A;
+    --muted: #495B4D;
+    --faint: #74846F;
+    --rule: #D6E0C9;
+
+    --forest: #24663A;          /* primary green on light */
+    --forest-deep: #10281A;     /* header, inverted bands */
+    --app-green: #82DB86;       /* the app's green, used on dark only */
+
+    --overdue: #A3231B;
+    --duesoon: #9C5B00;
+
+    --sans: Geist, system-ui, sans-serif;
+    font-family: var(--sans);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body { background: #F4F7EE; margin: 0; }
+  .lp *, .lp *::before, .lp *::after { box-sizing: border-box; }
+  .lp a { color: inherit; text-decoration: none; }
+  .lp img { display: block; user-select: none; -webkit-user-drag: none; }
+  .lp h1, .lp h2, .lp h3 { margin: 0; color: var(--ink); font-weight: 600; letter-spacing: -0.028em; text-wrap: balance; }
+  .lp p, .lp ul, .lp figure { margin: 0; }
+  .lp ul { list-style: none; padding: 0; }
+  .lp :focus-visible { outline: 2px solid var(--forest); outline-offset: 3px; border-radius: 4px; }
+  .lp .num { font-variant-numeric: tabular-nums; }
+
+  .lp .wrap { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
+  .lp .wrap--narrow { max-width: 860px; }
+
+  /* ---------- Chrome ---------- */
+  .lp .site-header { position: sticky; top: 0; z-index: 40; background: var(--forest-deep); border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .lp .site-header__inner {
+    max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; height: 4rem;
+    display: flex; align-items: center; justify-content: space-between; color: #fff;
+  }
+  .lp .site-brand { display: flex; align-items: center; gap: 0.75rem; }
+  .lp .site-brand__logo { height: 2.25rem; width: 2.25rem; border-radius: 0.5rem; }
+  .lp .site-brand__name { font-size: 1.125rem; font-weight: 600; letter-spacing: 0.05em; }
+  .lp .site-nav { display: flex; gap: 1.75rem; }
+  .lp .site-nav__link { font-size: 0.875rem; font-weight: 500; color: rgba(255,255,255,0.78); }
+  .lp .site-nav__link:hover, .lp .site-nav__link[aria-current="page"] { color: #fff; }
+  .lp .btn--header {
+    display: inline-flex; padding: 0.5rem 1rem; border-radius: 0.75rem;
+    font-size: 0.875rem; font-weight: 600; background: var(--app-green); color: #10240F;
+  }
+
+  /* ---------- Phone frame ---------- */
+  .lp .phone {
+    width: calc(280px * var(--s, 1));
+    height: calc(580px * var(--s, 1));
+    border-radius: calc(40px * var(--s, 1));
+    padding: calc(8px * var(--s, 1));
+    background: linear-gradient(180deg, #2B3A2E 0%, #101711 100%);
+    box-shadow: 0 calc(26px * var(--s, 1)) calc(60px * var(--s, 1)) rgba(21,36,26,0.28), inset 0 0 0 1px rgba(255,255,255,0.08);
+    transform: rotate(var(--r, 0deg));
+    flex-shrink: 0;
+  }
+  .lp .phone-screen { width: 100%; height: 100%; border-radius: calc(32px * var(--s, 1)); overflow: hidden; background: #000; }
+  .lp .phone-screen img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+
+  /* ---------- Type + shared ---------- */
+  .lp .eyebrow { display: inline-block; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--forest); font-weight: 600; }
+  .lp .h2 { font-size: 40px; line-height: 1.08; }
+  .lp .lede { margin-top: 16px; font-size: 17px; line-height: 1.65; color: var(--muted); max-width: 62ch; }
+
+  .lp .play-badge {
+    display: inline-flex; align-items: center; gap: 12px;
+    background: var(--forest); color: #fff; padding: 14px 24px; border-radius: 14px;
+    box-shadow: 0 10px 22px rgba(36,102,58,0.22); transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .lp .play-badge:hover { transform: translateY(-1px); box-shadow: 0 14px 28px rgba(36,102,58,0.3); }
+  .lp .play-badge__text { display: flex; flex-direction: column; line-height: 1.15; text-align: left; }
+  .lp .play-badge__sub { font-size: 10px; opacity: 0.82; letter-spacing: 0.08em; text-transform: uppercase; }
+  .lp .play-badge__main { font-size: 18px; font-weight: 600; letter-spacing: -0.02em; }
+  .lp .play-badge--onDark { background: var(--app-green); color: #10240F; box-shadow: none; }
+
+  .lp .text-link { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: var(--forest); font-size: 15px; }
+  .lp .text-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+  /* ---------- Hero ---------- */
+  .lp .hero { padding: 76px 0 0; }
+  .lp .hero__grid { display: grid; grid-template-columns: 1.08fr 0.92fr; gap: 56px; align-items: center; }
+  .lp .hero__title { font-size: 62px; line-height: 1.02; margin-top: 16px; }
+  .lp .hero__title em { font-style: normal; color: var(--forest); }
+  .lp .hero__lede { margin-top: 22px; font-size: 18.5px; line-height: 1.6; color: var(--muted); max-width: 46ch; }
+  .lp .hero__ctas { margin-top: 30px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .lp .hero__meta { margin-top: 20px; font-size: 13.5px; color: var(--faint); }
+  .lp .hero__art { display: flex; justify-content: center; }
+
+  /* ---------- Screens band ---------- */
+  .lp .band { margin-top: 84px; background: var(--paper-2); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 72px 0; }
+  .lp .band__head { text-align: center; }
+  .lp .band__row { margin-top: 52px; display: flex; justify-content: center; align-items: flex-start; gap: 40px; flex-wrap: wrap; }
+  .lp .screen { text-align: center; }
+  .lp .screen figcaption { margin-top: 18px; font-size: 14px; color: var(--muted); }
+  .lp .screen strong { display: block; font-size: 15.5px; color: var(--ink); font-weight: 600; margin-bottom: 4px; }
+
+  /* ---------- Steps ---------- */
+  .lp .steps { padding: 84px 0 0; }
+  .lp .steps__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+  .lp .step { padding-top: 26px; border-top: 2px solid var(--forest); }
+  .lp .step__k { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--forest); font-weight: 600; }
+  .lp .step__title { margin-top: 12px; font-size: 23px; }
+  .lp .step__body { margin-top: 10px; font-size: 15px; line-height: 1.65; color: var(--muted); }
+
+  /* ---------- Alternating feature rows ---------- */
+  .lp .rows { padding: 96px 0 0; display: grid; gap: 88px; }
+  .lp .row { display: grid; grid-template-columns: 1fr auto; gap: 64px; align-items: center; }
+  .lp .row--flip { grid-template-columns: auto 1fr; }
+  .lp .row--flip .row__art { order: -1; }
+  .lp .row__list { margin-top: 24px; display: grid; gap: 12px; font-size: 15px; color: var(--muted); }
+  .lp .row__list li { display: flex; gap: 11px; align-items: flex-start; }
+  .lp .row__list svg { width: 18px; height: 18px; color: var(--forest); flex-shrink: 0; margin-top: 2px; }
+
+  /* ---------- Privacy band ---------- */
+  .lp .privacy { margin-top: 96px; background: var(--forest-deep); color: #E8F2E6; padding: 76px 0; }
+  .lp .privacy h2 { color: #fff; font-size: 38px; line-height: 1.1; }
+  .lp .privacy__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  .lp .privacy__lede { margin-top: 16px; font-size: 16.5px; line-height: 1.65; color: rgba(232,242,230,0.8); }
+  .lp .privacy__list { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 24px; font-size: 14.5px; }
+  .lp .privacy__list li { display: flex; gap: 10px; align-items: flex-start; }
+  .lp .privacy__list svg { width: 17px; height: 17px; color: var(--app-green); flex-shrink: 0; margin-top: 2px; }
+
+  /* ---------- Pricing ---------- */
+  .lp .pricing { padding: 96px 0 0; text-align: center; }
+  .lp .table-wrap { margin-top: 44px; overflow-x: auto; }
+  .lp .table {
+    width: 100%; border-collapse: collapse; text-align: left; min-width: 620px;
+    background: var(--card); border: 1px solid var(--rule); border-radius: 18px; overflow: hidden;
+  }
+  .lp .table th, .lp .table td { padding: 16px 22px; border-bottom: 1px solid var(--rule); font-size: 15px; }
+  .lp .table thead th { font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--faint); background: var(--paper); }
+  .lp .table thead th:last-child { color: var(--forest); }
+  .lp .table td:first-child { color: var(--muted); }
+  .lp .table tr:last-child td { border-bottom: 0; }
+  .lp .table td.yes { color: var(--forest); font-weight: 600; }
+
+  /* ---------- CTA ---------- */
+  .lp .cta { padding: 96px 0 108px; text-align: center; }
+  .lp .cta__title { font-size: 48px; line-height: 1.06; }
+  .lp .cta__title em { font-style: normal; color: var(--forest); }
+  .lp .cta__body { margin: 18px auto 0; max-width: 54ch; font-size: 17px; line-height: 1.65; color: var(--muted); }
+  .lp .cta__action { margin-top: 32px; display: flex; justify-content: center; }
+
+  /* ---------- Footer ---------- */
+  .lp .site-footer { background: var(--forest-deep); color: rgba(255,255,255,0.78); padding: 2.5rem 0; }
+  .lp .site-footer__inner { max-width: 1120px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .lp .site-footer__brand { display: flex; gap: 0.75rem; align-items: flex-start; }
+  .lp .site-footer__brand-name { color: #fff; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
+  .lp .site-footer__tag { font-size: 0.875rem; color: rgba(255,255,255,0.7); }
+  .lp .site-footer__links { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; font-size: 0.875rem; }
+  .lp .site-footer__links a:hover { color: #fff; }
+  .lp .site-footer__copyright { font-size: 0.875rem; color: rgba(255,255,255,0.7); }
+
+  @media (max-width: 940px) {
+    .lp .hero__title { font-size: 40px; }
+    .lp .h2, .lp .cta__title, .lp .privacy h2 { font-size: 30px; }
+    .lp .hero__grid, .lp .steps__grid, .lp .row, .lp .row--flip, .lp .privacy__grid, .lp .privacy__list, .lp .site-footer__inner { grid-template-columns: 1fr; }
+    .lp .row--flip .row__art { order: 0; }
+    .lp .row__art { display: flex; justify-content: center; }
+    .lp .rows { gap: 56px; }
+    .lp .site-nav { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { .lp * { transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="lp">
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="#" class="site-brand">
+        <img src="../icons/loanit.png" alt="" class="site-brand__logo" width="36" height="36" />
+        <span class="site-brand__name">ULIX</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#" class="site-nav__link">Home</a>
+        <a href="#" class="site-nav__link" aria-current="page">Apps</a>
+        <a href="#" class="site-nav__link">Blog</a>
+        <a href="#" class="site-nav__link">About</a>
+        <a href="#" class="site-nav__link">Contact</a>
+      </nav>
+      <a href="#" class="btn--header">Get Loan It</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero__grid">
+          <div>
+            <span class="eyebrow">Loan It for Android</span>
+            <h1 class="hero__title">Lend generously.<br /><em>Remember precisely.</em></h1>
+            <p class="hero__lede">
+              A quiet record of everything you have lent out — who has it, when it left,
+              and when it is due back. No account, no ads, nothing leaves your phone.
+            </p>
+            <div class="hero__ctas">
+              <a href="#" class="play-badge">
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" aria-hidden="true">
+                  <path d="M1 1.5v19l10-9.5L1 1.5z" fill="currentColor" opacity="0.95" />
+                  <path d="M1 1.5l10 9.5 3-3L2.5 1 1 1.5z" fill="currentColor" opacity="0.75" />
+                  <path d="M1 20.5l10-9.5 3 3L2.5 21 1 20.5z" fill="currentColor" opacity="0.6" />
+                  <path d="M11 11l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 3v16l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 11z" fill="currentColor" opacity="0.45" />
+                </svg>
+                <span class="play-badge__text">
+                  <span class="play-badge__sub">Get it free on</span>
+                  <span class="play-badge__main">Google Play</span>
+                </span>
+              </a>
+              <a href="#how" class="text-link">
+                See how it works
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </a>
+            </div>
+            <p class="hero__meta">Free · Android 8.0 and up · Pro is a one-time purchase</p>
+          </div>
+          <div class="hero__art">
+            <div class="phone" style="--s:1">
+              <div class="phone-screen"><img src="../assets/screenshots/loanit/loanitmainscreen.webp" alt="The Loan It home screen listing five loans with borrowers, borrowed and due dates, and status" width="1080" height="2410" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREENS BAND -->
+    <section class="band" aria-label="Screens">
+      <div class="wrap">
+        <div class="band__head">
+          <span class="eyebrow">What it looks like</span>
+          <h2 class="h2" style="margin-top:14px;">Three screens, and you have the whole app</h2>
+        </div>
+        <div class="band__row">
+          <figure class="screen">
+            <div class="phone" style="--s:0.7">
+              <div class="phone-screen"><img src="../assets/screenshots/loanit/loanitaddloanscreen.webp" alt="The Add Loan screen with Gallery, Camera, and Book Barcode buttons, description, borrower, and date fields" width="1080" height="2180" loading="lazy" decoding="async" /></div>
+            </div>
+            <figcaption><strong>Add a loan</strong>Photo, borrower, dates. Done in under a minute.</figcaption>
+          </figure>
+          <figure class="screen">
+            <div class="phone" style="--s:0.7">
+              <div class="phone-screen"><img src="../assets/screenshots/loanit/loanitloppersloan.webp" alt="A Loan It loan for a pair of loppers borrowed by Katy, with dates and a Mark Returned button" width="1080" height="2147" loading="lazy" decoding="async" /></div>
+            </div>
+            <figcaption><strong>Check a loan</strong>Who has it, since when, and one button to close it.</figcaption>
+          </figure>
+          <figure class="screen">
+            <div class="phone" style="--s:0.7">
+              <div class="phone-screen"><img src="../assets/screenshots/loanit/loanitborrowersscreen.webp" alt="The Borrowers screen with a Borrower Insights card ranking the most overdue borrowers" width="1080" height="2159" loading="lazy" decoding="async" /></div>
+            </div>
+            <figcaption><strong>See your borrowers</strong>Who is holding what, and who tends to be late.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEPS -->
+    <section class="steps" id="how">
+      <div class="wrap">
+        <div class="steps__grid">
+          <div class="step">
+            <div class="step__k">When it leaves</div>
+            <h3 class="step__title">Write it down once</h3>
+            <p class="step__body">Item, photo, borrower, and a due date. Pick the borrower through Android's own contact picker — Loan It never reads your whole address book.</p>
+          </div>
+          <div class="step">
+            <div class="step__k">While it is out</div>
+            <h3 class="step__title">Find it in a second</h3>
+            <p class="step__body">Search by item or name. Filter by overdue, due soon, outstanding, or returned. Sort by due date to see what is coming back next.</p>
+          </div>
+          <div class="step">
+            <div class="step__k">When it comes home</div>
+            <h3 class="step__title">One tap, and it is closed</h3>
+            <p class="step__body">Mark it returned from the list, the borrower's page, or the loan itself. Undo is there if you tapped the wrong row.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE ROWS -->
+    <div class="wrap">
+      <div class="rows">
+        <section class="row">
+          <div>
+            <span class="eyebrow">Books</span>
+            <h2 class="h2" style="margin-top:14px;">Scan the barcode and the record writes itself</h2>
+            <p class="lede">Books go out the door faster than anything else. Scan an ISBN and Loan It fills in the title, author, publisher, and page count from Open Library, so there is nothing to type.</p>
+            <ul class="row__list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5" /></svg> Three lookups free, unlimited with Pro</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5" /></svg> Nothing about you is sent — only the ISBN</li>
+            </ul>
+          </div>
+          <div class="row__art">
+            <div class="phone" style="--s:0.78; --r:2deg">
+              <div class="phone-screen"><img src="../assets/screenshots/loanit/loanit13clocksbookloan.webp" alt="A book loan showing title, author, publisher, publication date, pages, and ISBN from Open Library" width="1080" height="2126" loading="lazy" decoding="async" /></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="row row--flip">
+          <div>
+            <span class="eyebrow">Photos</span>
+            <h2 class="h2" style="margin-top:14px;">A picture of what actually went out</h2>
+            <p class="lede">Photograph the item as you hand it over. When a box of parts comes back, you can check it against what left, instead of against what you remember.</p>
+            <ul class="row__list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5" /></svg> One photo free, unlimited with Pro</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5" /></svg> Photos stay in the app's private storage</li>
+            </ul>
+          </div>
+          <div class="row__art">
+            <div class="phone" style="--s:0.78; --r:-2deg">
+              <div class="phone-screen"><img src="../assets/screenshots/loanit/loanittwopicturesloan.webp" alt="A loan for computer parts with two photos of the item, the borrower, and its dates" width="1065" height="2163" loading="lazy" decoding="async" /></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- PRIVACY -->
+    <section class="privacy">
+      <div class="wrap">
+        <div class="privacy__grid">
+          <div>
+            <span class="eyebrow" style="color: var(--app-green);">Privacy</span>
+            <h2 style="margin-top:14px;">Your records stay on your phone</h2>
+            <p class="privacy__lede">Loans and photos live in the app's private storage. There is no account to create and no analytics or tracking SDKs in the app. Loan It touches the network in exactly two places.</p>
+          </div>
+          <ul class="privacy__list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5" /></svg> Open Library, when you scan a barcode</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5" /></svg> Google Play, to buy or restore Pro</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5" /></svg> Export to CSV or JSON any time</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5" /></svg> Works with Android backup and transfer</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing">
+      <div class="wrap">
+        <span class="eyebrow">Pricing</span>
+        <h2 class="h2" style="margin-top:14px;">Free to use. Pro is a one-time purchase.</h2>
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr><th scope="col">What you get</th><th scope="col">Free</th><th scope="col">Pro</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Loans, borrowers, dates, search, filters</td><td class="yes">Included</td><td class="yes">Included</td></tr>
+              <tr><td>Photos per loan</td><td>One</td><td class="yes">Unlimited</td></tr>
+              <tr><td>ISBN barcode lookups</td><td>Three</td><td class="yes">Unlimited</td></tr>
+              <tr><td>Due-date reminders</td><td>—</td><td class="yes">Included</td></tr>
+              <tr><td>CSV and JSON export</td><td class="yes">Included</td><td class="yes">Included</td></tr>
+              <tr><td>Import with validation and conflict resolution</td><td>—</td><td class="yes">Included</td></tr>
+              <tr><td>Borrower insights</td><td>Top three overdue</td><td class="yes">Full insights</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="wrap wrap--narrow">
+        <h2 class="cta__title">Say yes when someone asks.<br /><em>Loan It remembers the rest.</em></h2>
+        <p class="cta__body">Free on Google Play for Android 8.0 and up.</p>
+        <div class="cta__action">
+          <a href="#" class="play-badge">
+            <svg width="20" height="22" viewBox="0 0 20 22" fill="none" aria-hidden="true">
+              <path d="M1 1.5v19l10-9.5L1 1.5z" fill="currentColor" opacity="0.95" />
+              <path d="M1 1.5l10 9.5 3-3L2.5 1 1 1.5z" fill="currentColor" opacity="0.75" />
+              <path d="M1 20.5l10-9.5 3 3L2.5 21 1 20.5z" fill="currentColor" opacity="0.6" />
+              <path d="M11 11l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 3v16l4.5-2.5c1.2-.7 1.2-2.3 0-3L11 11z" fill="currentColor" opacity="0.45" />
+            </svg>
+            <span class="play-badge__text">
+              <span class="play-badge__sub">Get it free on</span>
+              <span class="play-badge__main">Google Play</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <img src="../icons/loanit.png" alt="" width="32" height="32" style="border-radius:0.5rem" />
+        <div>
+          <div class="site-footer__brand-name">ULIX</div>
+          <p class="site-footer__tag">Precision tools for modern odysseys.</p>
+        </div>
+      </div>
+      <div class="site-footer__links">
+        <a href="#">Apps</a><a href="#">Blog</a><a href="#">Support</a><a href="#">About</a>
+        <a href="#">Contact</a><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Loan It Privacy</a>
+      </div>
+      <div>
+        <div class="site-footer__copyright">© 2026 Ulix LLC.</div>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
