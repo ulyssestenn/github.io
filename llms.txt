@@ -43,6 +43,7 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 [All Knowledge Guides](https://ulix.app/knowledge/guides/) is the searchable evergreen index, with topic and app filters.
 
+- [Accuracy, Precision, Resolution, and Sensitivity: What Is the Difference?](https://ulix.app/knowledge/accuracy-precision-resolution-sensitivity/)
 - [How to Photograph a Bookshelf So OCR Can Actually Read the Spines](https://ulix.app/knowledge/photograph-bookshelf-for-ocr/)
 - [Markdown, CSV, HTML, RTF, or Plain Text: Which Keep Clip Export Should You Use?](https://ulix.app/knowledge/keep-clip-export-format/)
 - [How to Ask an LLM a Useful Question About Your Own Tracking Data](https://ulix.app/knowledge/ask-llm-useful-question-tracking-data/)
