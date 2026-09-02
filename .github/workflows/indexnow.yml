@@ -6,6 +6,8 @@ on:
       - new
     paths:
       - '**/*.html'
+      - 'sitemap.xml'
+      - 'knowledge/briefs/sitemap.xml'
       - 'fc07d3e4cc67452bbb46e01b65538a9d.txt'
       - '.github/workflows/indexnow.yml'
   workflow_dispatch:
@@ -44,6 +46,7 @@ jobs:
           KEY = Path(KEY_FILE).read_text(encoding="utf-8").strip()
           KEY_LOCATION = BASE + KEY_FILE
           WORKFLOW_FILE = ".github/workflows/indexnow.yml"
+          SITEMAP_FILES = ("sitemap.xml", "knowledge/briefs/sitemap.xml")
 
           def changed_files():
               before = os.environ.get("BEFORE", "")
@@ -66,7 +69,7 @@ jobs:
           def sitemap_urls():
               urls = []
               ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
-              for filename in ("sitemap.xml", "knowledge/briefs/sitemap.xml"):
+              for filename in SITEMAP_FILES:
                   path = Path(filename)
                   if not path.exists():
                       continue
@@ -81,6 +84,7 @@ jobs:
               os.environ.get("EVENT_NAME") == "workflow_dispatch"
               or KEY_FILE in changed
               or WORKFLOW_FILE in changed
+              or any(filename in changed for filename in SITEMAP_FILES)
           )
 
           if bootstrap:
