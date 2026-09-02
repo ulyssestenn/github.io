@@ -72,7 +72,7 @@
       'prose-first-or-poetry-first-homer','homer-quotation-image-context'
     ]),
     'curious-air': new Set([
-      'design-multi-sensor-logging-session'
+      'design-multi-sensor-logging-session','accuracy-precision-resolution-sensitivity'
     ]),
   };
 
