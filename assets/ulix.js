@@ -143,8 +143,8 @@
     { slug: 'keep-clip',      name: 'Keep Clip',      one: 'Save text from anywhere. Organize. Export.',  tag: 'Your digital commonplace book. Search, filter, tag, export.', playUrl: 'https://play.google.com/store/apps/details?id=com.bhunt.keepclip' },
     { slug: 'track-analysis', name: 'Track Analysis', one: 'Wellness logging for analysis.',              tag: 'Log wellness data. Export in CSV.', playUrl: 'https://play.google.com/store/apps/details?id=com.ulix.trackanalysis' },
     { slug: 'guten',          name: 'Guten',          one: 'Beautiful reading of classics.',              tag: 'Project Gutenberg reader. Now in Google Play testing.', playUrl: 'https://play.google.com/store/apps/details?id=com.bhunt.guten', landingUrl: './guten/' },
-    { slug: 'loan-it',        name: 'Loan It',        one: 'Snap a photo, add a name, never lose track.', tag: 'Track what you loan and to whom.', coming: true },
-    { slug: 'curious-air',    name: 'Curious Air',    one: 'See signals around you.',                     tag: 'Explore the signal and sensor data your phone can detect.', coming: true }
+    { slug: 'loan-it',        name: 'Loan It',        one: 'Snap a photo, add a name, never lose track.', tag: 'Track what you loan and to whom.', playUrl: 'https://play.google.com/store/apps/details?id=com.ulix.loanit', landingUrl: './loanit/' },
+    { slug: 'curious-air',    name: 'Curious Air',    one: 'See signals around you.',                     tag: 'Explore the signal and sensor data your phone can detect. Available in Google Play open testing.', landingUrl: './curiousair/' }
   ];
 
   function slideMarkup(app) {
@@ -155,7 +155,7 @@
     var ctas  = '';
     if (app.playUrl) {
       ctas += '<a href="' + app.playUrl + '" target="_blank" rel="noopener">' + PLAY_BADGE + '</a>';
-    } else {
+    } else if (!app.landingUrl) {
       ctas += '<span class="carousel__coming">Coming soon</span>';
     }
     if (app.landingUrl) {
