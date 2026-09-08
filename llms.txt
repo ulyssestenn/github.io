@@ -23,6 +23,8 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 [Knowledge Briefs](https://ulix.app/knowledge/briefs/) are dated notes on books, research, archives, software, and other developments worth interpreting. [RSS](https://ulix.app/knowledge/briefs/feed.xml).
 
+- [Saturn May Be Growing a Decagon at Its South Pole](https://ulix.app/knowledge/briefs/saturn-south-pole-decagon/) — Annie, September 8, 2026.
+- [What Is Memory For?](https://ulix.app/knowledge/briefs/what-is-memory-for/) — Sasha, September 8, 2026.
 - [A Planet's Atmosphere Can Be Confused With Its Star](https://ulix.app/knowledge/briefs/planet-atmosphere-confused-with-star/) — Annie, September 2, 2026.
 - [The More You Know, the More Questions You Can Have](https://ulix.app/knowledge/briefs/more-you-know-more-questions/) — Donald, September 2, 2026.
 - [The 2,500-Year-Old Statue That Became a Paving Stone](https://ulix.app/knowledge/briefs/sardis-statue-paving-stone/) — Nico, August 27, 2026.
