@@ -1,0 +1,81 @@
+{
+  "lastmod": "2026-09-08",
+  "guides": [
+    {
+      "slug": "search-bookshelf-shelf-scan-live-mode",
+      "author": "Sasha",
+      "section": "Books & libraries",
+      "app_slug": "shelf-scan",
+      "related": [
+        {"slug": "shelf-scan-live-mode-or-library-mode", "title": "Live Mode or Library Mode: Which Kind of Shelf Search Are You Actually Doing?"},
+        {"slug": "photograph-bookshelf-for-ocr", "title": "How to Photograph a Bookshelf So OCR Can Actually Read the Spines"},
+        {"slug": "find-book-without-exact-title", "title": "How to Find a Book When You Can’t Remember the Exact Title"}
+      ]
+    },
+    {
+      "slug": "find-download-project-gutenberg-book-guten",
+      "author": "Donald",
+      "section": "Reading",
+      "app_slug": "guten",
+      "related": [
+        {"slug": "open-project-gutenberg-link-in-guten", "title": "How to Open a Project Gutenberg Link Directly in Guten"},
+        {"slug": "download-weekend-reading-stack-offline", "title": "How to Download a Weekend Reading Stack Before Going Offline"},
+        {"slug": "read-classic-books-free", "title": "Where Can I Read Classic Books for Free?"}
+      ]
+    },
+    {
+      "slug": "save-article-excerpt-title-url",
+      "author": "Donald",
+      "section": "PKM",
+      "app_slug": "keep-clip",
+      "related": [
+        {"slug": "save-passage-without-opening-notes", "title": "How to Save a Passage From Any Android App Without Opening a Notes App First"},
+        {"slug": "save-reason-not-just-link", "title": "Save the Reason, Not Just the Link"},
+        {"slug": "keep-bookmark-archive-local", "title": "How to Keep a Bookmark Archive Local Instead of Tying It to One Browser"}
+      ]
+    },
+    {
+      "slug": "record-first-loan-loan-it",
+      "author": "Annie",
+      "section": "Lending",
+      "app_slug": "loan-it",
+      "related": [
+        {"slug": "scan-book-isbn-loan-it", "title": "How to Scan a Book’s ISBN Instead of Typing the Details"},
+        {"slug": "keep-track-of-things-you-lend", "title": "How Do I Keep Track of Things I Lend to People?"},
+        {"slug": "why-due-date-lent-to-friend", "title": "Why Put a Due Date on Something You’ve Lent to a Friend?"}
+      ]
+    },
+    {
+      "slug": "start-tracking-track-analysis",
+      "author": "Donald",
+      "section": "Personal data",
+      "app_slug": "track-analysis",
+      "related": [
+        {"slug": "freeform-log-entries-ai-can-analyze", "title": "How to Write Freeform Log Entries That an AI Can Actually Analyze Later"},
+        {"slug": "what-to-track-useful-personal-data", "title": "What Should You Track If You Want Your Personal Data to Tell You Something Useful?"},
+        {"slug": "why-timestamps-useful-personal-logs", "title": "Why Timestamps Are So Useful in Personal Logs"}
+      ]
+    },
+    {
+      "slug": "see-wifi-channels-around-you",
+      "author": "Annie",
+      "section": "Measurement & sensors",
+      "app_slug": "curious-air",
+      "related": [
+        {"slug": "accuracy-precision-resolution-sensitivity", "title": "Accuracy, Precision, Resolution, and Sensitivity: What Is the Difference?"},
+        {"slug": "design-multi-sensor-logging-session", "title": "How to Design a Multi-Sensor Logging Session Without Creating Useless Data"}
+      ]
+    },
+    {
+      "slug": "compare-two-homer-translations-side-by-side",
+      "author": "Nico",
+      "section": "Classics & translation",
+      "app_slug": "breaker-of-horses",
+      "related": [
+        {"slug": "read-homeric-greek-english-side-by-side", "title": "How to Read Homeric Greek Beside an English Translation"},
+        {"slug": "why-read-more-than-one-translation", "title": "Why Read More Than One Translation of the Same Classic?"},
+        {"slug": "prose-first-or-poetry-first-homer", "title": "Prose First or Poetry First? A Practical Way Into Homer"}
+      ]
+    }
+  ]
+}
