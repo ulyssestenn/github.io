@@ -48,6 +48,13 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 [All Knowledge Guides](https://ulix.app/knowledge/guides/) is the searchable evergreen index, with topic and app filters.
 
+- [How to Compare Two Homer Translations Side by Side](https://ulix.app/knowledge/compare-two-homer-translations-side-by-side/)
+- [How to See Which Wi-Fi Channels Are Being Used Around You](https://ulix.app/knowledge/see-wifi-channels-around-you/)
+- [How to Start Tracking Something With Track Analysis](https://ulix.app/knowledge/start-tracking-track-analysis/)
+- [How to Record Your First Loan in Loan It](https://ulix.app/knowledge/record-first-loan-loan-it/)
+- [How to Save a Web Article to Keep Clip](https://ulix.app/knowledge/save-article-excerpt-title-url/)
+- [How to Find and Download a Project Gutenberg Book in Guten](https://ulix.app/knowledge/find-download-project-gutenberg-book-guten/)
+- [How to Search a Bookshelf With Shelf Scan Live Mode](https://ulix.app/knowledge/search-bookshelf-shelf-scan-live-mode/)
 - [Accuracy, Precision, Resolution, and Sensitivity: What Is the Difference?](https://ulix.app/knowledge/accuracy-precision-resolution-sensitivity/)
 - [How to Photograph a Bookshelf So OCR Can Actually Read the Spines](https://ulix.app/knowledge/photograph-bookshelf-for-ocr/)
 - [Markdown, CSV, HTML, RTF, or Plain Text: Which Keep Clip Export Should You Use?](https://ulix.app/knowledge/keep-clip-export-format/)
@@ -86,7 +93,6 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 - [How to Make a Dense Classic Easier to Read on a Phone Screen](https://ulix.app/knowledge/make-dense-classic-easier-to-read-phone/)
 - [How to Build a Searchable Shelf-Photo Library in Ten Minutes](https://ulix.app/knowledge/searchable-shelf-photo-library-ten-minutes/)
 - [How to Photograph What You Lend So You Know What Should Come Back](https://ulix.app/knowledge/photograph-what-you-lend/)
-- [How to Save an Article Excerpt and Keep the Page Title and URL With It](https://ulix.app/knowledge/save-article-excerpt-title-url/)
 - [I Can't Find My Books](https://ulix.app/knowledge/i-cant-find-my-books/)
 - [How to Search Inside a Long Classic Without Flipping Through Chapters](https://ulix.app/knowledge/search-inside-long-classic-guten/)
 - [How to Search a Double-Shelved Bookcase Without Cataloging Both Rows](https://ulix.app/knowledge/search-double-shelved-bookcase/)

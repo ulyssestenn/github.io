@@ -54,25 +54,25 @@
 
   const appSlugs = {
     'shelf-scan': new Set([
-      'search-dvd-bluray-collection-by-spine-text','import-existing-shelf-photos-shelf-scan','searchable-shelf-photo-library-ten-minutes','i-cant-find-my-books','search-double-shelved-bookcase','make-inherited-library-searchable-before-sorting','find-specific-book-used-bookstore','find-books-packed-in-boxes','family-library-several-rooms','check-home-library-from-bookstore-shelf-scan','search-large-home-library-without-cataloging','avoid-buying-books-you-own','manage-1000-book-home-library','find-book-without-exact-title','back-up-shelf-scan-library-before-changing-phones','how-many-shelf-photos-searchable-library','shelf-scan-live-mode-or-library-mode','photograph-bookshelf-for-ocr'
+      'search-dvd-bluray-collection-by-spine-text','import-existing-shelf-photos-shelf-scan','searchable-shelf-photo-library-ten-minutes','i-cant-find-my-books','search-double-shelved-bookcase','make-inherited-library-searchable-before-sorting','find-specific-book-used-bookstore','find-books-packed-in-boxes','family-library-several-rooms','check-home-library-from-bookstore-shelf-scan','search-large-home-library-without-cataloging','avoid-buying-books-you-own','manage-1000-book-home-library','find-book-without-exact-title','back-up-shelf-scan-library-before-changing-phones','how-many-shelf-photos-searchable-library','shelf-scan-live-mode-or-library-mode','photograph-bookshelf-for-ocr','search-bookshelf-shelf-scan-live-mode'
     ]),
     'guten': new Set([
-      'open-project-gutenberg-link-in-guten','download-weekend-reading-stack-offline','make-dense-classic-easier-to-read-phone','search-inside-long-classic-guten','portable-reading-library-away-from-home','turn-commute-into-reading-time','guten-school-academic-research','share-favorite-quotes-guten','read-instead-of-scroll-guten','offline-classics-library-travel','read-classic-books-free','read-classics-without-kindle','build-daily-reading-goal-survives-bad-week','use-reading-timer-without-productivity-contest','use-read-aloud-without-background-noise','move-highlights-notes-out-of-ebook-reader','preserve-highlights-before-removing-ebook','search-inside-classic-remember-idea-not-page','reading-collection-around-question','highlights-from-five-books-same-topic'
+      'open-project-gutenberg-link-in-guten','download-weekend-reading-stack-offline','make-dense-classic-easier-to-read-phone','search-inside-long-classic-guten','portable-reading-library-away-from-home','turn-commute-into-reading-time','guten-school-academic-research','share-favorite-quotes-guten','read-instead-of-scroll-guten','offline-classics-library-travel','read-classic-books-free','read-classics-without-kindle','build-daily-reading-goal-survives-bad-week','use-reading-timer-without-productivity-contest','use-read-aloud-without-background-noise','move-highlights-notes-out-of-ebook-reader','preserve-highlights-before-removing-ebook','search-inside-classic-remember-idea-not-page','reading-collection-around-question','highlights-from-five-books-same-topic','find-download-project-gutenberg-book-guten'
     ]),
     'keep-clip': new Set([
       'use-tag-autocomplete-keep-archive-consistent','find-clips-by-source-app','save-article-excerpt-title-url','save-passage-without-opening-notes','what-should-happen-after-a-highlight','tags-or-search-when-tagging-worth-it','save-reason-not-just-link','digital-commonplace-book-android','pkm-without-cloud','keep-clip-pkm-capture-inbox','analyze-keep-clip-export-with-ai','sending-links-to-yourself','do-you-need-a-second-brain','keep-bookmark-archive-local','review-week-captures-without-maintenance','when-saved-link-becomes-note','capture-now-decide-where-later','save-quote-and-link-together-context','save-kindle-passage-without-second-note-system','keep-clip-export-format'
     ]),
     'loan-it': new Set([
-      'pick-borrower-without-address-book-access','scan-book-isbn-loan-it','photograph-what-you-lend','who-has-my-tools','things-you-lose-because-you-lent-them-out','why-due-date-lent-to-friend','lend-kit-without-losing-pieces','small-lending-closet-tools-games-equipment','manage-tiny-library-android-phone','lend-books-without-cataloging-library','keep-track-of-things-you-lend','paper-list-spreadsheet-or-app-lending'
+      'pick-borrower-without-address-book-access','scan-book-isbn-loan-it','photograph-what-you-lend','who-has-my-tools','things-you-lose-because-you-lent-them-out','why-due-date-lent-to-friend','lend-kit-without-losing-pieces','small-lending-closet-tools-games-equipment','manage-tiny-library-android-phone','lend-books-without-cataloging-library','keep-track-of-things-you-lend','paper-list-spreadsheet-or-app-lending','record-first-loan-loan-it'
     ]),
     'track-analysis': new Set([
-      'tell-productivity-system-working','run-small-personal-experiment','when-should-you-stop-tracking','when-is-habit-tracking-worth-it','how-long-track-before-analyzing','why-timestamps-useful-personal-logs','symptom-food-diary-for-doctor-track-analysis','personal-log-ai-patterns','what-to-track-useful-personal-data','recurring-events-one-tap-stacks','vague-self-tracking-question-csv-analysis','freeform-log-entries-ai-can-analyze','ask-llm-useful-question-tracking-data'
+      'tell-productivity-system-working','run-small-personal-experiment','when-should-you-stop-tracking','when-is-habit-tracking-worth-it','how-long-track-before-analyzing','why-timestamps-useful-personal-logs','symptom-food-diary-for-doctor-track-analysis','personal-log-ai-patterns','what-to-track-useful-personal-data','recurring-events-one-tap-stacks','vague-self-tracking-question-csv-analysis','freeform-log-entries-ai-can-analyze','ask-llm-useful-question-tracking-data','start-tracking-track-analysis'
     ]),
     'breaker-of-horses': new Set([
-      'prose-first-or-poetry-first-homer','homer-quotation-image-context'
+      'prose-first-or-poetry-first-homer','homer-quotation-image-context','compare-two-homer-translations-side-by-side'
     ]),
     'curious-air': new Set([
-      'design-multi-sensor-logging-session','accuracy-precision-resolution-sensitivity'
+      'design-multi-sensor-logging-session','accuracy-precision-resolution-sensitivity','see-wifi-channels-around-you'
     ]),
   };
 
