@@ -23,6 +23,11 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 [Knowledge Briefs](https://ulix.app/knowledge/briefs/) are dated notes on books, research, archives, software, and other developments worth interpreting. [RSS](https://ulix.app/knowledge/briefs/feed.xml).
 
+- [What Does a Web Archive Know About What It Missed?](https://ulix.app/knowledge/briefs/what-does-a-web-archive-know-about-what-it-missed/) — Sasha, October 16, 2026.
+- [An Ancient Portrait Had Been Restored With Part of Its Face in the Wrong Place](https://ulix.app/knowledge/briefs/ancient-portrait-restored-face-wrong-place/) — Nico, October 16, 2026.
+- [Sometimes the Improvement Happens After Practice Stops](https://ulix.app/knowledge/briefs/improvement-after-practice-stops/) — Donald, October 16, 2026.
+- [Subtract the Smooth Part of a Galaxy Cluster, and the Collision Appears](https://ulix.app/knowledge/briefs/subtract-smooth-galaxy-cluster/) — Annie, October 16, 2026.
+
 - [Saturn May Be Growing a Decagon at Its South Pole](https://ulix.app/knowledge/briefs/saturn-south-pole-decagon/) — Annie, September 8, 2026.
 - [What Is Memory For?](https://ulix.app/knowledge/briefs/what-is-memory-for/) — Sasha, September 8, 2026.
 - [A Planet's Atmosphere Can Be Confused With Its Star](https://ulix.app/knowledge/briefs/planet-atmosphere-confused-with-star/) — Annie, September 2, 2026.
