@@ -23,6 +23,7 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 [Knowledge Briefs](https://ulix.app/knowledge/briefs/) are dated notes on books, research, archives, software, and other developments worth interpreting. [RSS](https://ulix.app/knowledge/briefs/feed.xml).
 
+- [Explore Herculaneum Room by Room on a New Interactive Map](https://ulix.app/knowledge/briefs/explore-herculaneum-interactive-cadastre/) — Sasha, October 24, 2026.
 - [What Does a Web Archive Know About What It Missed?](https://ulix.app/knowledge/briefs/what-does-a-web-archive-know-about-what-it-missed/) — Sasha, October 16, 2026.
 - [An Ancient Portrait Had Been Restored With Part of Its Face in the Wrong Place](https://ulix.app/knowledge/briefs/ancient-portrait-restored-face-wrong-place/) — Nico, October 16, 2026.
 - [Sometimes the Improvement Happens After Practice Stops](https://ulix.app/knowledge/briefs/improvement-after-practice-stops/) — Donald, October 16, 2026.
