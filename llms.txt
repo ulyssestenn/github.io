@@ -21,6 +21,7 @@ Ulix is a small, independent software company founded by Bethany Hunt (registere
 
 ### Briefs
 
+- [A 3D-Printed Material That Spreads Damage Instead of Crumpling in Rows](https://ulix.app/knowledge/briefs/network-metamaterial-spreads-damage/) — Annie, November 13, 2026.
 [Knowledge Briefs](https://ulix.app/knowledge/briefs/) are dated notes on books, research, archives, software, and other developments worth interpreting. [RSS](https://ulix.app/knowledge/briefs/feed.xml).
 
 - [Explore Herculaneum Room by Room on a New Interactive Map](https://ulix.app/knowledge/briefs/explore-herculaneum-interactive-cadastre/) — Sasha, October 24, 2026.
